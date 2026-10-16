@@ -627,6 +627,14 @@ code.raw {
   padding: .1rem .35rem;
   border-radius: 4px;
 }
+.raw-truncate {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
 
 /* ---------------------------------------------------------------- drawer */
 .drawer { position: fixed; inset: 0; z-index: 50; }
@@ -669,7 +677,7 @@ code.raw {
 }
 .drawer dl { display: grid; grid-template-columns: auto 1fr; gap: .45rem 1.1rem; margin: 0 0 1.25rem; font-size: .9rem; }
 .drawer dt { color: var(--muted); }
-.drawer dd { margin: 0; }
+.drawer dd { margin: 0; min-width: 0; }
 .drawer h3 {
   font-size: .75rem;
   text-transform: uppercase;

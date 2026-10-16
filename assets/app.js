@@ -378,7 +378,7 @@
       row("detail.signature", "<code class=\"raw\">" + esc(r.signature || r.signatureRaw || t("common.none")) + "</code>" +
         (r.signature && r.signatureRaw && r.signature !== r.signatureRaw ? " <span class=\"raw-hint\">" + esc(r.signatureRaw) + "</span>" : "")) +
       (r.collection ? row("detail.collection", esc(r.collection)) : "") +
-      row("detail.source", '<code class="raw">' + esc(r.sourceFile) + ":" + r.sourceLine + "</code>") +
+      row("detail.source", '<code class="raw raw-truncate" title="' + esc(r.sourceFile + ":" + r.sourceLine) + '">' + esc(r.sourceFile) + ":" + r.sourceLine + "</code>") +
       "</dl>" +
       "<h3>" + esc(t("detail.flags")) + "</h3>" + flagItems +
       (related ? '<div class="related"><h3>' + esc(t("detail.related")) + "</h3>" + related + "</div>" : "");
