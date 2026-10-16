@@ -18,8 +18,7 @@
   // The columns that carry a data-sort attribute in index.html.
   var SORT_KEYS = ["title", "performer", "composer", "durationSec", "signature"];
   var facetFilterState = {};
-  var facetOpenState = {};
-  var FACET_DEFAULT_OPEN = { "facet-category": true };
+  var facetOpenState = { "facet-category": true, "facet-performer": true, "facet-duration": true  };
 
   var state = {
     lang: localStorage.getItem("shpato-lang") || "mk",
