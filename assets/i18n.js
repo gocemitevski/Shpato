@@ -42,8 +42,9 @@ window.I18N = {
     "results.empty": "Нема пронајдени дела.",
     "results.showDuplicates": "Прикажи дупликати",
 
-    "export.csv": "Извези CSV",
-    "export.json": "Извези JSON",
+    "export.label": "Извези",
+    "export.optionCsv": "CSV (.csv)",
+    "export.optionJson": "JSON (.json)",
 
     "stats.total": "Вкупно дела",
     "stats.duration": "Вкупно траење",
@@ -167,8 +168,9 @@ window.I18N = {
     "results.empty": "No works found.",
     "results.showDuplicates": "Show duplicates",
 
-    "export.csv": "Export CSV",
-    "export.json": "Export JSON",
+    "export.label": "Export",
+    "export.optionCsv": "CSV (.csv)",
+    "export.optionJson": "JSON (.json)",
 
     "stats.total": "Total works",
     "stats.duration": "Total duration",

@@ -55,9 +55,6 @@
           <input type="checkbox" id="show-duplicates">
           <span id="show-duplicates-label"></span>
         </label>
-        <div class="toolbar-spacer"></div>
-        <button type="button" id="export-csv" class="btn"></button>
-        <button type="button" id="export-json" class="btn"></button>
       </div>
 
       <div class="layout">
@@ -71,6 +68,17 @@
           <div id="facet-composer"></div>
           <div id="facet-performer"></div>
           <div id="facet-duration"></div>
+          <div class="export">
+            <button type="button" id="export-btn" class="btn export-btn"
+                    aria-haspopup="true" aria-expanded="false" aria-controls="export-menu">
+              <span data-i18n="export.label"></span>
+              <span class="chev" aria-hidden="true">›</span>
+            </button>
+            <div class="menu" id="export-menu" role="menu" hidden>
+              <button type="button" role="menuitem" data-export="csv" data-i18n="export.optionCsv"></button>
+              <button type="button" role="menuitem" data-export="json" data-i18n="export.optionJson"></button>
+            </div>
+          </div>
         </aside>
 
         <div class="results">

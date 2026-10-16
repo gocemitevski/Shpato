@@ -143,8 +143,6 @@
     document.getElementById("app-subtitle").textContent = t("app.subtitle");
     document.getElementById("search").placeholder = t("search.placeholder");
     document.getElementById("show-duplicates-label").textContent = t("results.showDuplicates");
-    document.getElementById("export-csv").textContent = t("export.csv");
-    document.getElementById("export-json").textContent = t("export.json");
     document.getElementById("filters-title").textContent = t("filters.title");
     document.getElementById("clear-filters").textContent = t("filters.clear");
     document.getElementById("footer-source").innerHTML =
@@ -557,6 +555,25 @@
     download("shpato-catalog.json", JSON.stringify({ meta: META, records: list }, null, 2), "application/json");
   }
 
+  function closeExportMenu() {
+    var menu = document.getElementById("export-menu");
+    var btn = document.getElementById("export-btn");
+    if (!menu || menu.hidden) return;
+    menu.hidden = true;
+    btn.setAttribute("aria-expanded", "false");
+  }
+  function toggleExportMenu() {
+    var menu = document.getElementById("export-menu");
+    var btn = document.getElementById("export-btn");
+    var willOpen = menu.hidden;
+    menu.hidden = !willOpen;
+    btn.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    if (willOpen) {
+      var first = menu.querySelector('[role="menuitem"]');
+      if (first) first.focus();
+    }
+  }
+
   // ------------------------------------------------------------- deep link
   function serialize() {
     var p = new URLSearchParams();
@@ -660,8 +677,19 @@
       update();
     });
 
-    document.getElementById("export-csv").addEventListener("click", exportCSV);
-    document.getElementById("export-json").addEventListener("click", exportJSON);
+    var exportBtn = document.getElementById("export-btn");
+    exportBtn.addEventListener("click", toggleExportMenu);
+    document.getElementById("export-menu").addEventListener("click", function (e) {
+      var item = e.target.closest("[data-export]");
+      if (!item) return;
+      closeExportMenu();
+      exportBtn.focus();
+      if (item.getAttribute("data-export") === "csv") exportCSV();
+      else exportJSON();
+    });
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".export")) closeExportMenu();
+    });
 
     document.querySelectorAll("th.sortable").forEach(function (th) {
       th.addEventListener("click", function () {
