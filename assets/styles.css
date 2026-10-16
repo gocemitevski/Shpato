@@ -743,24 +743,6 @@ td.sig {
 .intro { color: var(--muted); max-width: 68ch; margin: 0 0 1.5rem; }
 
 /* -------------------------------------------------------------- anomalies */
-.summary { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.75rem; }
-.summary .pill {
-  display: inline-flex;
-  align-items: baseline;
-  gap: .45rem;
-  padding: .5rem 1rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--panel);
-  font-size: .85rem;
-  color: var(--muted);
-  cursor: pointer;
-  transition: border-color .15s ease, color .15s ease;
-}
-.summary .pill b { font-size: 1rem; color: var(--ink); font-variant-numeric: tabular-nums; }
-.summary .pill[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
-.summary .pill[aria-pressed="true"] b { color: var(--accent); }
-
 .field { display: flex; flex-direction: column; gap: .3rem; font-size: .78rem; color: var(--muted); }
 .field select {
   padding: .5rem .7rem;

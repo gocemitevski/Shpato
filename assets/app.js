@@ -196,9 +196,15 @@
       }
     });
 
-    document.querySelector("#anomaly-severity [value='warning']").textContent = t("severity.warning");
-    document.querySelector("#anomaly-severity [value='info']").textContent = t("severity.info");
-    document.querySelector("#anomaly-severity option[value='']").textContent = t("filters.all");
+    // The counts ride in the option labels, so the select carries the summary on
+    // its own: closed, it reads "Сите (420)" rather than a bare "Сите".
+    var sev = severityCounts();
+    document.querySelector("#anomaly-severity option[value='']").textContent =
+      t("filters.all") + " (" + sev.all + ")";
+    document.querySelector("#anomaly-severity [value='warning']").textContent =
+      t("severity.warning") + " (" + sev.warning + ")";
+    document.querySelector("#anomaly-severity [value='info']").textContent =
+      t("severity.info") + " (" + sev.info + ")";
     refreshRuleSelect();
   }
 
@@ -565,23 +571,14 @@
     sel.value = state.anomalyRule;
   }
 
-  function renderAnomalySummary() {
-    var total = ANOMALIES.anomalies.length;
-    var warnings = ANOMALIES.anomalies.filter(function (a) { return a.severity === "warning"; }).length;
-    var info = total - warnings;
-    function pill(value, label, count) {
-      return '<button type="button" class="pill" data-sev="' + value + '" aria-pressed="' +
-        (state.anomalySeverity === value ? "true" : "false") + '">' + esc(label) +
-        " <b>" + count + "</b></button>";
-    }
-    document.getElementById("anomaly-summary").innerHTML =
-      pill("", t("filters.all"), total) +
-      pill("warning", t("severity.warning"), warnings) +
-      pill("info", t("severity.info"), info);
+  // Severity counts, used as the option labels of the severity select.
+  function severityCounts() {
+    var all = ANOMALIES.anomalies.length;
+    var warning = ANOMALIES.anomalies.filter(function (a) { return a.severity === "warning"; }).length;
+    return { all: all, warning: warning, info: all - warning };
   }
 
   function renderAnomalies() {
-    renderAnomalySummary();
     var list = ANOMALIES.anomalies.filter(function (a) {
       if (state.anomalySeverity && a.severity !== state.anomalySeverity) return false;
       if (state.anomalyRule && a.rule !== state.anomalyRule) return false;
@@ -893,14 +890,6 @@
     });
     document.getElementById("anomaly-rule").addEventListener("change", function (e) {
       state.anomalyRule = e.target.value; state.anomalyLimit = 60; renderAnomalies();
-    });
-    document.getElementById("anomaly-summary").addEventListener("click", function (e) {
-      var pill = e.target.closest("button[data-sev]");
-      if (!pill) return;
-      state.anomalySeverity = pill.getAttribute("data-sev");
-      state.anomalyLimit = 60;
-      document.getElementById("anomaly-severity").value = state.anomalySeverity;
-      renderAnomalies();
     });
     document.getElementById("anomaly-more").addEventListener("click", function (e) {
       if (e.target.closest("#anomaly-show-all")) { state.anomalyLimit = Infinity; renderAnomalies(); }
