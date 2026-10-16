@@ -24,6 +24,7 @@ https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija
 Структура:
   index.html                 - страницата на апликацијата
   assets/styles.css          - стилови
+  assets/fonts/*.woff2       - фонтот Geologica (само-вдомен, OFL 1.1)
   assets/i18n.js             - текстови на македонски и англиски
   assets/app.js              - логика (пребарување, филтри, статистика, извоз)
   tools/build.py             - генерирање на нормализираните податоци
@@ -79,3 +80,8 @@ https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija
 
 Вкупен број на записи: 434 (вокални 74, инструментални 56, аранжмани на теми 43,
 аранжмани на вокални творби 261).
+
+## ЛИЦЕНЦИ
+
+- Фонтот Geologica (assets/fonts/*.woff2) е само-вдомен од Google Fonts и е
+  достапен под SIL Open Font License 1.1: https://fonts.google.com/specimen/Geologica
