@@ -200,30 +200,62 @@ a { color: var(--accent-2); }
   .header-actions { margin-left: auto; }
 }
 
+/* One segmented pill shared by the theme and language toggles. The track is
+   inset and the active segment is a thumb with its own radius, instead of a
+   full-bleed fill clipped by the pill's own border. */
 .lang-toggle,
 .theme-toggle {
   display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  overflow: hidden;
-  background: var(--panel);
+  background: var(--panel-2);
 }
 .lang-toggle button,
 .theme-toggle button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
   border: 0;
+  border-radius: 999px;
   background: transparent;
   color: var(--muted);
-  padding: .4rem .7rem;
   font: inherit;
+  font-size: .78rem;
   font-weight: 600;
+  letter-spacing: .04em;
   cursor: pointer;
   transition: background-color .15s ease, color .15s ease;
 }
-.theme-toggle button { font-size: 1rem; line-height: 1.2; }
+.lang-toggle button { min-width: 2rem; padding: 0 .55rem; }
+.theme-toggle button { width: 1.5rem; }
+.lang-toggle button:not([aria-pressed="true"]):hover,
+.theme-toggle button:not([aria-pressed="true"]):hover {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
 .lang-toggle button[aria-pressed="true"],
 .theme-toggle button[aria-pressed="true"] {
   background: var(--accent);
   color: var(--bg);
+}
+.lang-toggle button:focus-visible,
+.theme-toggle button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.toggle-icon {
+  display: block;
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* ------------------------------------------------------------------ tabs */
