@@ -135,6 +135,9 @@ body {
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1, h2, h3 { line-height: 1.2; font-weight: 700; letter-spacing: -.01em; }
@@ -300,8 +303,9 @@ a { color: var(--accent-2); }
   color: var(--muted);
   font: inherit;
   font-weight: 600;
-  font-size: .95rem;
-  padding: .85rem 0;
+  font-size: .9rem;
+  text-transform: uppercase;
+  padding: .8rem 0;
   cursor: pointer;
   border-bottom: 2px solid transparent;
   white-space: nowrap;
@@ -313,7 +317,7 @@ a { color: var(--accent-2); }
   border-bottom-color: var(--accent);
 }
 
-main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; }
+main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; flex-grow: 1; }
 
 .view { width: 100%; }
 
@@ -753,7 +757,7 @@ td.sig {
   border-radius: var(--radius-sm);
 }
 
-.sev { text-transform: capitalize; font-size: .78rem; font-weight: 600; }
+.sev { font-size: .78rem; font-weight: 600; }
 .sev.warning {
   display: inline-block;
   padding: .1rem .5rem;
