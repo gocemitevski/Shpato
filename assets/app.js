@@ -243,7 +243,9 @@
     list.innerHTML = entries.map(function (e) {
       var label = e.value === "__none__" ? noneLabel : (e.label || e.value);
       var checked = selectedSet.has(e.value) ? " checked" : "";
-      return '<label class="facet-item" data-search="' + esc(normalize(label)) + '">' +
+      var cat = e.cat ? ' data-cat="' + esc(e.cat) + '"' : "";
+      var dot = e.cat ? '<span class="facet-dot" aria-hidden="true"></span>' : "";
+      return '<label class="facet-item" data-search="' + esc(normalize(label)) + '"' + cat + ">" + dot +
         '<input type="checkbox" value="' + esc(e.value) + '"' + checked + ">" +
         "<span>" + esc(label) + '</span><span class="count">' + e.count + "</span></label>";
     }).join("");
@@ -278,7 +280,7 @@
     var cats = facetCounts("category");
     checkboxFacet("facet-category", "filters.category",
       CATEGORY_ORDER.filter(function (c) { return cats.get(c); }).map(function (c) {
-        return { value: c, label: categoryShort(c), count: cats.get(c) };
+        return { value: c, label: categoryShort(c), count: cats.get(c), cat: c };
       }), state.categories, "", true);
 
     var cols = facetCounts("collection");
@@ -410,7 +412,7 @@
 
     document.getElementById("drawer-content").innerHTML =
       "<h2 id=\"drawer-title\">" + esc(r.title) + "</h2>" +
-      '<span class="cat-tag">' + esc(categoryLabel(r.category)) + "</span>" +
+      '<span class="cat-tag" data-cat="' + esc(r.category) + '">' + esc(categoryLabel(r.category)) + "</span>" +
       "<dl>" +
       row("detail.performer", esc(r.performer || t("common.none")) +
         (r.performerRole ? ' <span class="raw-hint">(' + esc(r.performerRole) + ")</span>" : "")) +
@@ -465,7 +467,7 @@
     ].join("");
 
     bars("chart-category", CATEGORY_ORDER.map(function (c) {
-      return { label: categoryLabel(c), value: META.counts[c] || 0 };
+      return { label: categoryLabel(c), value: META.counts[c] || 0, cat: c };
     }));
     bars("chart-collection", Array.from(facetCounts("collection").entries())
       .sort(function (a, b) { return b[1] - a[1]; })
@@ -489,7 +491,8 @@
     var max = Math.max.apply(null, [1].concat(entries.map(function (e) { return e.value; })));
     document.getElementById(id).innerHTML = entries.map(function (e) {
       var pct = e.value ? Math.max(2, Math.round((e.value / max) * 100)) : 0;
-      return '<div class="bar-row"><span class="bar-label" title="' + esc(e.label) + '">' + esc(e.label) +
+      var cat = e.cat ? ' data-cat="' + esc(e.cat) + '"' : "";
+      return '<div class="bar-row"' + cat + '><span class="bar-label" title="' + esc(e.label) + '">' + esc(e.label) +
         '</span><span class="bar-track"><span class="bar-fill" style="width:' + pct + '%"></span></span>' +
         '<span class="bar-value">' + e.value + "</span></div>";
     }).join("");

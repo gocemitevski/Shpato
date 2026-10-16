@@ -34,60 +34,71 @@
 }
 
 :root {
-  --bg: #f7f5f0;
+  color-scheme: light;
+  --bg: #f4f6f9;
   --panel: #ffffff;
-  --panel-2: #fbfaf7;
-  --ink: #211d18;
-  --muted: #6f675c;
-  --line: #e8e2d7;
-  --line-strong: #8f8679;
-  --accent: #9a3324;
-  --accent-soft: #f5e8e3;
-  --accent-2: #2f5d57;
-  --warn: #9a5a12;
-  --warn-soft: #f6ecda;
-  --shadow-sm: 0 1px 2px rgba(40, 30, 20, .05);
-  --shadow: 0 8px 28px rgba(40, 30, 20, .07);
-  --radius: 12px;
-  --radius-sm: 8px;
+  --panel-2: #fbfcfd;
+  --ink: #14161c;
+  --muted: #5b6270;
+  --line: #dfe3ec;
+  --line-strong: #8d94a3;
+  --accent: #2b5cf6;
+  --accent-soft: #eaefff;
+  --accent-2: #0f766e;
+  --warn: #a34a08;
+  --warn-soft: #fef3c7;
+
+  /* One hue per category, shared by the drawer tag and the statistics bars. */
+  --cat-vocal: #2b5cf6;
+  --cat-vocal-soft: #eaefff;
+  --cat-instrumental: #0f766e;
+  --cat-instrumental-soft: #e0f2f0;
+  --cat-arrThemes: #9333ea;
+  --cat-arrThemes-soft: #f4ebfe;
+  --cat-arrVocal: #be123c;
+  --cat-arrVocal-soft: #fce8ee;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, .06);
+  --shadow: 0 10px 30px rgba(15, 23, 42, .1);
+  --radius: 10px;
+  --radius-sm: 6px;
 }
 
+/* The inline bootstrap in index.html resolves the OS preference into a
+   data-theme attribute before first paint, so the dark tokens only need to be
+   written once. */
 :root[data-theme="dark"] {
-  --bg: #17150f;
-  --panel: #201d16;
-  --panel-2: #1b1812;
-  --ink: #f0e9dc;
-  --muted: #a79d8c;
-  --line: #352f24;
-  --line-strong: #756d5e;
-  --accent: #e08a72;
-  --accent-soft: #3a251f;
-  --accent-2: #7fc2b6;
-  --warn: #e0a95f;
-  --warn-soft: #3a2f1d;
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .35);
-  --shadow: 0 8px 28px rgba(0, 0, 0, .35);
+  color-scheme: dark;
+  --bg: #0d1117;
+  --panel: #161b22;
+  --panel-2: #12161d;
+  --ink: #e6edf3;
+  --muted: #8b949e;
+  --line: #2b3341;
+  --line-strong: #6e7681;
+  --accent: #7aa2ff;
+  --accent-soft: #16233f;
+  --accent-2: #4fd1c5;
+  --warn: #f0b429;
+  --warn-soft: #3a2c12;
+  --cat-vocal: #7aa2ff;
+  --cat-vocal-soft: #16233f;
+  --cat-instrumental: #4fd1c5;
+  --cat-instrumental-soft: #0f2b28;
+  --cat-arrThemes: #c084fc;
+  --cat-arrThemes-soft: #241a3a;
+  --cat-arrVocal: #fb7185;
+  --cat-arrVocal-soft: #3a1622;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4);
+  --shadow: 0 10px 30px rgba(0, 0, 0, .45);
 }
 
-/* Fallback to the OS preference only when the user has not chosen a theme. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #17150f;
-    --panel: #201d16;
-    --panel-2: #1b1812;
-    --ink: #f0e9dc;
-    --muted: #a79d8c;
-    --line: #352f24;
-    --line-strong: #756d5e;
-    --accent: #e08a72;
-    --accent-soft: #3a251f;
-    --accent-2: #7fc2b6;
-    --warn: #e0a95f;
-    --warn-soft: #3a2f1d;
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, .35);
-    --shadow: 0 8px 28px rgba(0, 0, 0, .35);
-  }
-}
+/* Any element can adopt a category hue by carrying data-cat. The --cat and
+   --cat-soft values inherit, and fall back to the accent when absent. */
+[data-cat="vocal"] { --cat: var(--cat-vocal); --cat-soft: var(--cat-vocal-soft); }
+[data-cat="instrumental"] { --cat: var(--cat-instrumental); --cat-soft: var(--cat-instrumental-soft); }
+[data-cat="arrThemes"] { --cat: var(--cat-arrThemes); --cat-soft: var(--cat-arrThemes-soft); }
+[data-cat="arrVocal"] { --cat: var(--cat-arrVocal); --cat-soft: var(--cat-arrVocal-soft); }
 
 * { box-sizing: border-box; }
 
@@ -114,9 +125,10 @@ body {
   background: var(--bg);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3 { line-height: 1.25; }
+h1, h2, h3 { line-height: 1.2; font-weight: 700; letter-spacing: -.01em; }
 
 a { color: var(--accent-2); }
 
@@ -139,6 +151,9 @@ a { color: var(--accent-2); }
   gap: 1rem;
   padding: 1.1rem clamp(1rem, 4vw, 2.5rem);
   background: var(--panel);
+  /* A solid accent tint: unlike a gradient it resolves to a real colour, so
+     contrast checkers can still verify the header text. */
+  background: color-mix(in srgb, var(--accent) 5%, var(--panel));
   border-bottom: 1px solid var(--line);
 }
 
@@ -165,12 +180,20 @@ a { color: var(--accent-2); }
   font-size: 1.35rem;
   font-weight: 700;
   flex: none;
+  box-shadow: 0 6px 18px -6px var(--accent);
 }
 
-.brand-text h1 { margin: 0; font-size: clamp(1rem, 2.2vw, 1.3rem); }
+.brand-text h1 { margin: 0; font-size: clamp(1rem, 2.2vw, 1.3rem); font-weight: 800; letter-spacing: -.02em; }
 .brand-text p { margin: .1rem 0 0; color: var(--muted); font-size: .82rem; }
 
 .header-actions { display: flex; align-items: center; gap: .6rem; }
+
+/* Narrow screens: give the brand its own row so the title stops wrapping. */
+@media (max-width: 620px) {
+  .site-header { flex-wrap: wrap; }
+  .brand { flex: 1 1 100%; }
+  .header-actions { margin-left: auto; }
+}
 
 .lang-toggle,
 .theme-toggle {
@@ -189,6 +212,7 @@ a { color: var(--accent-2); }
   font: inherit;
   font-weight: 600;
   cursor: pointer;
+  transition: background-color .15s ease, color .15s ease;
 }
 .theme-toggle button { font-size: 1rem; line-height: 1.2; }
 .lang-toggle button[aria-pressed="true"],
@@ -223,6 +247,7 @@ a { color: var(--accent-2); }
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
   white-space: nowrap;
+  transition: color .15s ease, border-color .15s ease;
 }
 .tabs button:hover { color: var(--ink); }
 .tabs button[aria-selected="true"] {
@@ -272,6 +297,7 @@ main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; }
   border: 1px solid var(--line);
   border-radius: 999px;
   cursor: pointer;
+  transition: border-color .15s ease, color .15s ease, background-color .15s ease;
 }
 .btn:hover { border-color: var(--accent); color: var(--accent); }
 
@@ -361,6 +387,7 @@ main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; }
   border: 0;
   border-radius: var(--radius-sm);
   cursor: pointer;
+  transition: background-color .12s ease, color .12s ease;
 }
 .menu button:hover,
 .menu button:focus-visible { background: var(--accent-soft); color: var(--accent); outline: 2px solid var(--accent); outline-offset: -2px; }
@@ -380,6 +407,7 @@ main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; }
   letter-spacing: .06em;
   text-transform: uppercase;
   color: var(--muted);
+  transition: color .15s ease;
 }
 .facet > summary::-webkit-details-marker { display: none; }
 .facet > summary:hover { color: var(--ink); }
@@ -442,8 +470,19 @@ main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; }
   border-radius: var(--radius-sm);
   font-size: .9rem;
   cursor: pointer;
+  transition: background-color .12s ease;
 }
 .facet-item:hover { background: var(--accent-soft); }
+/* A small colour key so the category facets tie back to the chart and tags. */
+.facet-dot {
+  width: .55rem;
+  height: .55rem;
+  border-radius: 50%;
+  background: var(--cat, var(--accent));
+  flex: none;
+}
+/* Checkboxes follow the accent, or the category hue when the item carries one. */
+.facet-item input[type="checkbox"] { accent-color: var(--cat, var(--accent)); }
 .facet-item .count {
   margin-left: auto;
   color: var(--muted);
@@ -493,11 +532,11 @@ main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; }
   text-transform: uppercase;
   letter-spacing: .06em;
   color: var(--muted);
-  font-weight: 700;
+  font-weight: 600;
   z-index: 1;
 }
 .catalog-table tbody tr:last-child td { border-bottom: 0; }
-.catalog-table tbody tr { cursor: pointer; }
+.catalog-table tbody tr { cursor: pointer; transition: background-color .12s ease; }
 .catalog-table tbody tr:hover { background: var(--accent-soft); }
 .catalog-table td.cell-title { font-weight: 500; }
 .row-open {
@@ -576,7 +615,7 @@ td.sig {
   padding: 1.3rem 1.4rem;
   box-shadow: var(--shadow-sm);
 }
-.card .value { font-size: 1.9rem; font-weight: 700; letter-spacing: -.01em; }
+.card .value { font-size: 2.1rem; font-weight: 800; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
 .card .label { color: var(--muted); font-size: .85rem; margin-top: .1rem; }
 .card .sub { color: var(--muted); font-size: .75rem; margin-top: .35rem; }
 
@@ -615,15 +654,21 @@ td.sig {
 .bar-track {
   display: block;
   height: 10px;
-  background: var(--accent-soft);
+  background: var(--cat-soft, var(--accent-soft));
   border-radius: 999px;
   overflow: hidden;
 }
 .bar-fill {
   display: block;
   height: 100%;
-  background: var(--accent);
+  background: var(--cat, var(--accent));
   border-radius: 999px;
+  transform-origin: left center;
+  animation: bar-grow .55s cubic-bezier(.2, .7, .3, 1);
+}
+@keyframes bar-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }
 .bar-value {
   min-width: 3ch;
@@ -649,6 +694,7 @@ td.sig {
   font-size: .85rem;
   color: var(--muted);
   cursor: pointer;
+  transition: border-color .15s ease, color .15s ease;
 }
 .summary .pill b { font-size: 1rem; color: var(--ink); font-variant-numeric: tabular-nums; }
 .summary .pill[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
@@ -665,7 +711,13 @@ td.sig {
 }
 
 .sev { text-transform: capitalize; font-size: .78rem; font-weight: 600; }
-.sev.warning { color: var(--warn); }
+.sev.warning {
+  display: inline-block;
+  padding: .1rem .5rem;
+  border-radius: 999px;
+  background: var(--warn-soft);
+  color: var(--warn);
+}
 .sev.info { color: var(--muted); }
 
 .anomalies-table td.rule { max-width: 34ch; }
@@ -687,7 +739,7 @@ code.raw {
 
 /* ---------------------------------------------------------------- drawer */
 .drawer { position: fixed; inset: 0; z-index: 50; }
-.drawer-backdrop { position: absolute; inset: 0; background: rgba(20, 15, 10, .45); }
+.drawer-backdrop { position: absolute; inset: 0; background: rgba(13, 17, 23, .5); }
 .drawer-panel {
   position: absolute;
   top: 0;
@@ -706,6 +758,7 @@ code.raw {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .drawer-panel { animation: none; }
+  .bar-fill { animation: none; }
 }
 
 .drawer-close {
@@ -723,8 +776,9 @@ code.raw {
 .drawer .cat-tag {
   display: inline-block;
   font-size: .75rem;
-  color: var(--accent);
-  background: var(--accent-soft);
+  font-weight: 600;
+  color: var(--cat, var(--accent));
+  background: var(--cat-soft, var(--accent-soft));
   padding: .15rem .6rem;
   border-radius: 999px;
   margin-bottom: 1.1rem;
