@@ -18,15 +18,9 @@
   <title>Драган Ѓаконовски – Шпато · Cover 1920×1080</title>
   <link rel="stylesheet" href="../assets/styles.css">
   <style>
-    body { overflow: hidden; }
-
-    .cover {
-      width: 1920px;
-      height: 1080px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    body {
+      margin: 0;
+      overflow: hidden;
       background-color: var(--bg);
       /* A soft accent bloom behind the mark, well under full strength so the
          text below it keeps its contrast. Centred on the content rather than
@@ -38,8 +32,20 @@
       );
     }
 
-    /* The brand mark, scaled up from the header's 42px: the ring and the halo
-       keep their proportions to the circle. */
+    .cover {
+      width: 1920px;
+      height: 1080px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* The brand mark, matching .brand-mark in the app: accent ring, the
+       portrait, and the accent halo. Only the scale differs — the ring and the
+       halo are the header's 42px values scaled by 280/42. The portrait is left
+       uncropped so this is the same mark the site shows. */
     .cover-mark {
       width: 280px;
       height: 280px;
@@ -47,67 +53,56 @@
       border-radius: 50%;
       background: var(--accent);
       overflow: hidden;
-      box-shadow: 0 32px 140px -14px color-mix(in srgb, var(--accent) 55%, transparent);
+      flex: none;
+      box-shadow: 0 33px 147px -13px color-mix(in srgb, var(--accent) 50%, transparent);
     }
-    /* The portrait is clipped by its own 254px circle rather than by
-       .cover-mark. Chrome clips a rounded `overflow: hidden` container to the
-       border box's circle, not the padding box's, so a scaled portrait reaches
-       into the accent ring and paints over it — which is exactly what happened
-       when .cover-mark did the clipping. A clipper with no padding has an
-       unambiguous circle, since both boxes coincide. */
-    .cover-mark-crop {
-      display: block;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      overflow: hidden;
-    }
-    .cover-mark-crop img {
+    .cover-mark img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      /* No border-radius: it would clip the img to its own circle, which once
-         scaled about an off-centre origin stops covering the crop box and lets
-         the accent show through as a crescent.
-
-         The source is a wide shot — head, scarf, hand and cigarette all share
-         the square — so the face fills only ~45% of it and reads small in the
-         circle. Scale into the head: this maps the crop window x 24-365,
-         y 3-345 of 512 onto the circle, framing the head with some room. 1.5x
-         is well inside the source's resolution, since the portrait renders at
-         254px from a 512px file. */
-      transform: scale(1.5);
-      transform-origin: 14% 2%;
+      border-radius: 50%;
     }
 
-    .cover-title {
-      margin: 72px 0 0;
-      font-size: 100px;
+    .cover-name {
+      margin: 60px 0 0;
+      font-size: 96px;
       font-weight: 800;
       line-height: 1.1;
       letter-spacing: -.02em;
       color: var(--ink);
-      text-align: center;
     }
-    .cover-sub {
-      margin: 32px 0 0;
-      font-size: 38px;
+    .cover-tagline {
+      margin: 26px 0 0;
+      font-size: 36px;
       line-height: 1.4;
       color: var(--muted);
-      text-align: center;
+    }
+    /* width: fit-content keeps the chip hugging the URL instead of stretching
+       to the width of the block, which is what a block-level <p> would do. */
+    .cover-url {
+      width: fit-content;
+      margin: 44px auto 0;
+      padding: .3em .9em;
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: .01em;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-radius: 999px;
     }
   </style>
 </head>
 <body>
   <div class="cover">
     <span class="cover-mark" aria-hidden="true">
-      <span class="cover-mark-crop">
-        <img src="../assets/images/Dragan-Gjakonovski-Shpato-Icon.webp" alt="">
-      </span>
+      <img src="../assets/images/Dragan-Gjakonovski-Shpato-Icon.webp" alt="">
     </span>
-    <h1 class="cover-title">Драган Ѓаконовски – Шпато</h1>
-    <p class="cover-sub">Дигитален каталог на делата во фонотеката на МРТВ</p>
+    <div class="cover-text">
+      <h1 class="cover-name">Драган Ѓаконовски – Шпато</h1>
+      <p class="cover-tagline">Дигитален каталог на делата во фонотеката на МРТВ</p>
+      <p class="cover-url">shpato.gocemitevski.com</p>
+    </div>
   </div>
 </body>
 </html>
