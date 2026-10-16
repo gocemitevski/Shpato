@@ -726,7 +726,7 @@ td.sig {
   font-variant-numeric: tabular-nums;
 }
 
-.section-title { margin: 0 0 .5rem; font-size: 1.3rem; }
+.section-title { margin: 0 0 1rem; font-size: 1.3rem; }
 .intro { color: var(--muted); max-width: 68ch; margin: 0 0 1.5rem; }
 
 /* -------------------------------------------------------------- anomalies */
