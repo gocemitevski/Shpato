@@ -169,7 +169,7 @@ a { color: var(--accent-2); }
 .brand {
   display: flex;
   align-items: center;
-  gap: .85rem;
+  gap: 1rem;
   color: inherit;
   text-decoration: none;
   border-radius: var(--radius);
@@ -879,7 +879,7 @@ code.raw {
 /* ---------------------------------------------------------------- footer */
 .site-footer {
   border-top: 1px solid var(--line);
-  padding: 2rem clamp(1rem, 4vw, 2.5rem);
+  padding: 1.5rem clamp(1rem, 4vw, 2.5rem);
   color: var(--muted);
   font-size: .82rem;
 }
