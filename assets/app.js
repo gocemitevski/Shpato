@@ -397,7 +397,7 @@
       ? '<ul class="flags">' + flags.map(function (f) {
           return "<li>• " + esc(t("rule." + f)) + "</li>";
         }).join("") + "</ul>"
-      : '<p class="flags-none">' + esc(t("detail.noFlags")) + "</p>";
+      : '<p class="empty-note">' + esc(t("detail.noFlags")) + "</p>";
 
     var related = "";
     related += relatedBlock("detail.sameTitle", RECORDS.filter(function (x) {
@@ -425,7 +425,9 @@
       row("detail.source", '<code class="raw raw-truncate" title="' + esc(r.sourceFile + ":" + r.sourceLine) + '">' + esc(r.sourceFile) + ":" + r.sourceLine + "</code>") +
       "</dl>" +
       "<h3>" + esc(t("detail.flags")) + "</h3>" + flagItems +
-      (related ? '<div class="related"><h3>' + esc(t("detail.related")) + "</h3>" + related + "</div>" : "");
+      '<div class="related"><h3>' + esc(t("detail.related")) + "</h3>" +
+      (related || '<p class="empty-note">' + esc(t("detail.noRelated")) + "</p>") +
+      "</div>";
 
     drawer.querySelectorAll("[data-goto]").forEach(function (btn) {
       btn.addEventListener("click", function () { state.selected = btn.getAttribute("data-goto"); renderDrawer(); });

@@ -83,6 +83,7 @@ window.I18N = {
     "detail.samePerformer": "Ист изведувач",
     "detail.sameComposer": "Ист автор",
     "detail.noFlags": "Нема забелешки",
+    "detail.noRelated": "Нема поврзани дела",
     "detail.close": "Затвори",
     "detail.raw": "во изворот",
 
@@ -219,6 +220,7 @@ window.I18N = {
     "detail.samePerformer": "Same performer",
     "detail.sameComposer": "Same composer",
     "detail.noFlags": "No notes",
+    "detail.noRelated": "No related works",
     "detail.close": "Close",
     "detail.raw": "in source",
 

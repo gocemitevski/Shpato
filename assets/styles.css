@@ -799,7 +799,7 @@ code.raw {
 }
 .drawer .flags { list-style: none; padding: 0; margin: 0; }
 .drawer .flags li { font-size: .85rem; color: var(--muted); padding: .2rem 0; }
-.drawer .flags-none { color: var(--muted); font-size: .85rem; margin: 0; }
+.drawer .empty-note { color: var(--muted); font-size: .85rem; margin: 0; }
 .drawer .related ul { list-style: none; padding: 0; margin: 0; }
 .drawer .related li { padding: .35rem 0; font-size: .88rem; border-bottom: 1px solid var(--line); }
 .chip-link { border: 0; background: none; padding: 0; font: inherit; color: var(--accent-2); cursor: pointer; text-align: left; }
