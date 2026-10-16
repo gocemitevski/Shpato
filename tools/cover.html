@@ -45,17 +45,17 @@
 
     /* The brand mark, matching .brand-mark in the app: accent ring, the
        portrait, and the accent halo. Only the scale differs — the ring and the
-       halo are the header's 42px values scaled by 280/42. The portrait is left
-       uncropped so this is the same mark the site shows. */
+       halo are the header's 56px values scaled by 280/56 = 5. The portrait is
+       left uncropped so this is the same mark the site shows. */
     .cover-mark {
       width: 280px;
       height: 280px;
-      padding: 13px;
+      padding: 10px;
       border-radius: 50%;
       background: var(--accent);
       overflow: hidden;
       flex: none;
-      box-shadow: 0 33px 147px -13px color-mix(in srgb, var(--accent) 50%, transparent);
+      box-shadow: 0 25px 110px -10px color-mix(in srgb, var(--accent) 50%, transparent);
     }
     .cover-mark img {
       display: block;
