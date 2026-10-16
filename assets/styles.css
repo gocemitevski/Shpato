@@ -161,7 +161,7 @@ a { color: var(--accent-2); }
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.1rem clamp(1rem, 4vw, 2.5rem);
+  padding: 1.5rem clamp(1rem, 4vw, 2.5rem);
   background: var(--panel);
   /* A solid accent tint: unlike a gradient it resolves to a real colour, so
      contrast checkers can still verify the header text. */
@@ -305,7 +305,7 @@ a { color: var(--accent-2); }
   font-weight: 600;
   font-size: .9rem;
   text-transform: uppercase;
-  padding: .8rem 0;
+  padding: 1rem 0;
   cursor: pointer;
   border-bottom: 2px solid transparent;
   white-space: nowrap;
