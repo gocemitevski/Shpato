@@ -14,7 +14,6 @@
   Query parameters:
     size  edge length in pixels (default 512)
     ring  ring thickness as a fraction of the edge, overriding the default
-    bg    optional opaque background, e.g. bg=%230d1117 for the iOS tile
 
   Regenerate every asset with:
 
@@ -30,13 +29,14 @@
       --default-background-color=00000000 --force-device-scale-factor=1 \
       --window-size=180,180 --virtual-time-budget=3000 \
       --screenshot=apple-touch-icon.png \
-      "file://$PWD/../../../tools/favicon.html?size=140&bg=%230d1117"
+      "file://$PWD/../../../tools/favicon.html?size=140"
     convert favicon-16.png favicon-32.png favicon-48.png favicon.ico
     rm favicon-48.png
 
-  iOS composites transparency onto black, so the touch icon is rendered with
-  the dark canvas behind it instead of a transparent edge, and with the mark
-  inset so the circle is not clipped by the platform's corner mask.
+  Every asset renders on a transparent background, so the icon can sit on any
+  surface. The touch icon keeps the mark inset rather than full bleed: iOS
+  composites transparency onto black and masks the corners, so the inset gives
+  the circle the same breathing room it has everywhere else.
 -->
 <html lang="mk" data-theme="light">
 <head>
@@ -46,7 +46,7 @@
   <style>
     html, body { margin: 0; background: transparent; }
     /* Centring matters only when the mark is rendered smaller than the window,
-       which is how the iOS tile gets its padding. */
+       which is how the touch icon gets its inset. */
     body { display: grid; place-items: center; min-height: 100vh; }
     .icon {
       display: block;
@@ -79,7 +79,6 @@
     icon.style.width = size + "px";
     icon.style.height = size + "px";
     icon.style.padding = ring + "px";
-    if (q.get("bg")) document.body.style.background = q.get("bg");
   </script>
 </body>
 </html>
