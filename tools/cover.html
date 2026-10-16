@@ -49,12 +49,36 @@
       overflow: hidden;
       box-shadow: 0 32px 140px -14px color-mix(in srgb, var(--accent) 55%, transparent);
     }
-    .cover-mark img {
+    /* The portrait is clipped by its own 254px circle rather than by
+       .cover-mark. Chrome clips a rounded `overflow: hidden` container to the
+       border box's circle, not the padding box's, so a scaled portrait reaches
+       into the accent ring and paints over it — which is exactly what happened
+       when .cover-mark did the clipping. A clipper with no padding has an
+       unambiguous circle, since both boxes coincide. */
+    .cover-mark-crop {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .cover-mark-crop img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 50%;
+      /* No border-radius: it would clip the img to its own circle, which once
+         scaled about an off-centre origin stops covering the crop box and lets
+         the accent show through as a crescent.
+
+         The source is a wide shot — head, scarf, hand and cigarette all share
+         the square — so the face fills only ~45% of it and reads small in the
+         circle. Scale into the head: this maps the crop window x 24-365,
+         y 3-345 of 512 onto the circle, framing the head with some room. 1.5x
+         is well inside the source's resolution, since the portrait renders at
+         254px from a 512px file. */
+      transform: scale(1.5);
+      transform-origin: 14% 2%;
     }
 
     .cover-title {
@@ -78,7 +102,9 @@
 <body>
   <div class="cover">
     <span class="cover-mark" aria-hidden="true">
-      <img src="../assets/images/Dragan-Gjakonovski-Shpato-Icon.webp" alt="">
+      <span class="cover-mark-crop">
+        <img src="../assets/images/Dragan-Gjakonovski-Shpato-Icon.webp" alt="">
+      </span>
     </span>
     <h1 class="cover-title">Драган Ѓаконовски – Шпато</h1>
     <p class="cover-sub">Дигитален каталог на делата во фонотеката на МРТВ</p>
