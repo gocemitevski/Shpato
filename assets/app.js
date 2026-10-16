@@ -37,6 +37,8 @@
     anomalyLimit: 60
   };
 
+  var lastFocused = null;
+
   // ------------------------------------------------------------------ i18n
   function t(key) {
     var table = window.I18N[state.lang] || window.I18N.mk;
@@ -136,9 +138,13 @@
   }
 
   // --------------------------------------------------------------- rendering
+  function updateTitle() {
+    document.title = t("app.title") + " · " + t("tab." + state.tab);
+  }
+
   function renderStatic() {
     document.documentElement.lang = state.lang;
-    document.title = t("app.title") + " · " + t("tab.catalog");
+    updateTitle();
     document.getElementById("app-title").textContent = t("app.title");
     document.getElementById("app-subtitle").textContent = t("app.subtitle");
     document.getElementById("search").placeholder = t("search.placeholder");
@@ -154,6 +160,9 @@
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       el.textContent = t(el.getAttribute("data-i18n"));
     });
+    document.querySelectorAll("[data-i18n-label]").forEach(function (el) {
+      el.setAttribute("aria-label", t(el.getAttribute("data-i18n-label")));
+    });
 
     document.querySelectorAll("#tabs button").forEach(function (btn) {
       var tab = btn.getAttribute("data-tab");
@@ -166,7 +175,6 @@
     });
 
     var themeToggle = document.getElementById("theme-toggle");
-    themeToggle.setAttribute("aria-label", t("theme.label"));
     themeToggle.querySelectorAll("button").forEach(function (btn) {
       var theme = btn.getAttribute("data-theme");
       btn.setAttribute("aria-pressed", theme === state.theme ? "true" : "false");
@@ -176,9 +184,15 @@
 
     document.querySelectorAll("th.sortable").forEach(function (th) {
       var key = th.getAttribute("data-sort");
-      th.textContent = t("col." + (key === "durationSec" ? "duration" : key));
-      if (key === state.sort.key) th.setAttribute("data-dir", state.sort.dir);
-      else th.removeAttribute("data-dir");
+      var label = th.querySelector(".th-label");
+      if (label) label.textContent = t("col." + (key === "durationSec" ? "duration" : key));
+      if (key === state.sort.key) {
+        th.setAttribute("data-dir", state.sort.dir);
+        th.setAttribute("aria-sort", state.sort.dir === "desc" ? "descending" : "ascending");
+      } else {
+        th.removeAttribute("data-dir");
+        th.setAttribute("aria-sort", "none");
+      }
     });
 
     document.querySelector("#anomaly-severity [value='warning']").textContent = t("severity.warning");
@@ -222,7 +236,8 @@
 
     var many = entries.length > 12;
     if (many) body.insertAdjacentHTML("beforeend",
-      '<input class="facet-filter" type="search" placeholder="' + esc(t("filters.filterList")) + '">');
+      '<input class="facet-filter" type="search" placeholder="' + esc(t("filters.filterList")) +
+      '" aria-label="' + esc(t("filters.filterList")) + '">');
     var list = document.createElement("div");
     list.className = "facet-list" + (many ? " facet-list--scroll" : "");
     list.innerHTML = entries.map(function (e) {
@@ -295,20 +310,26 @@
     var body = facetShell(el, "filters.duration", open, durActive ? 1 : 0);
     body.innerHTML =
       '<div class="range-row"><span id="dur-min-label">' + fmt(state.durMin) + '</span>' +
-      '<input type="range" id="dur-min" min="' + DATA_MIN + '" max="' + DATA_MAX + '" step="15" value="' + state.durMin + '">' +
+      '<input type="range" id="dur-min" min="' + DATA_MIN + '" max="' + DATA_MAX + '" step="15" value="' + state.durMin +
+      '" aria-label="' + esc(t("filters.durMin")) + '" aria-valuetext="' + esc(fmt(state.durMin)) + '">' +
       "</div>" +
       '<div class="range-row"><span id="dur-max-label">' + fmt(state.durMax) + '</span>' +
-      '<input type="range" id="dur-max" min="' + DATA_MIN + '" max="' + DATA_MAX + '" step="15" value="' + state.durMax + '">' +
+      '<input type="range" id="dur-max" min="' + DATA_MIN + '" max="' + DATA_MAX + '" step="15" value="' + state.durMax +
+      '" aria-label="' + esc(t("filters.durMax")) + '" aria-valuetext="' + esc(fmt(state.durMax)) + '">' +
       "</div>";
     var min = body.querySelector("#dur-min"), max = body.querySelector("#dur-max");
     min.addEventListener("input", function () {
       state.durMin = Math.min(+min.value, state.durMax);
+      min.value = state.durMin;
+      min.setAttribute("aria-valuetext", fmt(state.durMin));
       document.getElementById("dur-min-label").textContent = fmt(state.durMin);
       updateFacetBadge(el, state.durMin > DATA_MIN || state.durMax < DATA_MAX ? 1 : 0);
       refreshResults();
     });
     max.addEventListener("input", function () {
       state.durMax = Math.max(+max.value, state.durMin);
+      max.value = state.durMax;
+      max.setAttribute("aria-valuetext", fmt(state.durMax));
       document.getElementById("dur-max-label").textContent = fmt(state.durMax);
       updateFacetBadge(el, state.durMin > DATA_MIN || state.durMax < DATA_MAX ? 1 : 0);
       refreshResults();
@@ -326,9 +347,12 @@
     empty.textContent = t("results.empty");
 
     body.innerHTML = list.map(function (r) {
-      var warn = r.warnCount ? '<span class="badge" title="' + esc(t("detail.flags")) + '">' + r.warnCount + "</span>" : "";
-      return '<tr tabindex="0" data-id="' + r.id + '">' +
-        '<td class="cell-title">' + esc(r.title) + warn + "</td>" +
+      var warn = r.warnCount
+        ? '<span class="badge" title="' + esc(t("detail.flags")) + '">' + r.warnCount +
+          '<span class="visually-hidden"> ' + esc(t("detail.flags")) + "</span></span>"
+        : "";
+      return '<tr data-id="' + r.id + '">' +
+        '<td class="cell-title"><button type="button" class="row-open">' + esc(r.title) + "</button>" + warn + "</td>" +
         '<td class="cell-perf">' + esc(r.performer || t("common.none")) + "</td>" +
         '<td class="cell-comp">' + esc(r.composer || "") + "</td>" +
         '<td class="dur">' + fmt(r.durationSec) + "</td>" +
@@ -338,11 +362,29 @@
   }
 
   // ---------------------------------------------------------------- drawer
+  function setPageInert(on) {
+    Array.prototype.forEach.call(document.body.children, function (el) {
+      if (el.id === "drawer") return;
+      if (on) el.setAttribute("inert", "");
+      else el.removeAttribute("inert");
+    });
+  }
+
   function renderDrawer() {
     var drawer = document.getElementById("drawer");
-    if (!state.selected) { drawer.hidden = true; return; }
-    var r = RECORDS.find(function (x) { return x.id === state.selected; });
-    if (!r) { drawer.hidden = true; return; }
+    var wasOpen = !drawer.hidden;
+    var r = state.selected ? RECORDS.find(function (x) { return x.id === state.selected; }) : null;
+
+    if (!r) {
+      state.selected = null;
+      drawer.hidden = true;
+      if (wasOpen) {
+        setPageInert(false);
+        if (lastFocused && document.contains(lastFocused)) lastFocused.focus();
+        lastFocused = null;
+      }
+      return;
+    }
     drawer.hidden = false;
 
     function row(labelKey, value) {
@@ -386,6 +428,13 @@
     drawer.querySelectorAll("[data-goto]").forEach(function (btn) {
       btn.addEventListener("click", function () { state.selected = btn.getAttribute("data-goto"); renderDrawer(); });
     });
+
+    if (!wasOpen) {
+      lastFocused = document.activeElement;
+      setPageInert(true);
+      var closeBtn = drawer.querySelector(".drawer-close");
+      if (closeBtn) closeBtn.focus();
+    }
   }
 
   function relatedBlock(titleKey, items) {
@@ -510,8 +559,8 @@
       if (typeof normalized === "number" && a.rule.indexOf("duration") === 0) normalized = fmt(normalized);
       var ruleLabel = t("rule." + a.rule);
       if (a.field) ruleLabel += " · " + t("col." + a.field);
-      return '<tr tabindex="0" data-id="' + a.id + '">' +
-        "<td>" + esc(a.title) + "</td>" +
+      return '<tr data-id="' + a.id + '">' +
+        '<td class="cell-title"><button type="button" class="row-open">' + esc(a.title) + "</button></td>" +
         '<td class="rule">' + esc(ruleLabel) + "</td>" +
         '<td><span class="sev ' + a.severity + '">' + esc(t("severity." + a.severity)) + "</span></td>" +
         "<td>" + (a.raw ? '<code class="raw">' + esc(a.raw) + "</code>" : "") + "</td>" +
@@ -612,8 +661,11 @@
       document.getElementById("view-" + name).hidden = name !== tab;
     });
     document.querySelectorAll("#tabs button").forEach(function (btn) {
-      btn.setAttribute("aria-selected", btn.getAttribute("data-tab") === tab ? "true" : "false");
+      var active = btn.getAttribute("data-tab") === tab;
+      btn.setAttribute("aria-selected", active ? "true" : "false");
+      btn.tabIndex = active ? 0 : -1;
     });
+    updateTitle();
     if (tab === "stats") renderStats();
     if (tab === "anomalies") renderAnomalies();
   }
@@ -641,6 +693,21 @@
     document.getElementById("tabs").addEventListener("click", function (e) {
       var btn = e.target.closest("button[data-tab]");
       if (btn) { setTab(btn.getAttribute("data-tab")); persist(); }
+    });
+    document.getElementById("tabs").addEventListener("keydown", function (e) {
+      var tabs = Array.prototype.slice.call(document.querySelectorAll('#tabs [role="tab"]'));
+      var i = tabs.indexOf(document.activeElement);
+      if (i === -1) return;
+      var next;
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") next = (i + 1) % tabs.length;
+      else if (e.key === "ArrowLeft" || e.key === "ArrowUp") next = (i - 1 + tabs.length) % tabs.length;
+      else if (e.key === "Home") next = 0;
+      else if (e.key === "End") next = tabs.length - 1;
+      else return;
+      e.preventDefault();
+      tabs[next].focus();
+      setTab(tabs[next].getAttribute("data-tab"));
+      persist();
     });
 
     document.querySelectorAll(".lang-toggle button").forEach(function (btn) {
@@ -690,6 +757,28 @@
     document.addEventListener("click", function (e) {
       if (!e.target.closest(".export")) closeExportMenu();
     });
+    exportBtn.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        if (document.getElementById("export-menu").hidden) toggleExportMenu();
+      }
+    });
+    document.getElementById("export-menu").addEventListener("keydown", function (e) {
+      var items = Array.prototype.slice.call(document.getElementById("export-menu").querySelectorAll('[role="menuitem"]'));
+      var i = items.indexOf(document.activeElement);
+      if (i === -1) return;
+      var next;
+      if (e.key === "ArrowDown") next = (i + 1) % items.length;
+      else if (e.key === "ArrowUp") next = (i - 1 + items.length) % items.length;
+      else if (e.key === "Home") next = 0;
+      else if (e.key === "End") next = items.length - 1;
+      else return;
+      e.preventDefault();
+      items[next].focus();
+    });
+    document.querySelector(".export").addEventListener("focusout", function (e) {
+      if (!e.relatedTarget || !e.currentTarget.contains(e.relatedTarget)) closeExportMenu();
+    });
 
     document.querySelectorAll("th.sortable").forEach(function (th) {
       th.addEventListener("click", function () {
@@ -704,11 +793,6 @@
       var tr = e.target.closest("tr[data-id]");
       if (tr) { state.selected = tr.getAttribute("data-id"); renderDrawer(); }
     });
-    document.getElementById("catalog-body").addEventListener("keydown", function (e) {
-      if (e.key !== "Enter") return;
-      var tr = e.target.closest("tr[data-id]");
-      if (tr) { state.selected = tr.getAttribute("data-id"); renderDrawer(); }
-    });
     document.getElementById("anomaly-body").addEventListener("click", function (e) {
       var tr = e.target.closest("tr[data-id]");
       if (tr) { state.selected = tr.getAttribute("data-id"); renderDrawer(); }
@@ -717,8 +801,21 @@
     document.getElementById("drawer").addEventListener("click", function (e) {
       if (e.target.closest("[data-close]")) { state.selected = null; renderDrawer(); }
     });
+    document.getElementById("drawer").addEventListener("keydown", function (e) {
+      if (e.key !== "Tab") return;
+      var focusables = document.getElementById("drawer").querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      );
+      if (!focusables.length) return;
+      var first = focusables[0], last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && state.selected) { state.selected = null; renderDrawer(); }
+      if (e.key !== "Escape") return;
+      if (state.selected) { state.selected = null; renderDrawer(); return; }
+      var menu = document.getElementById("export-menu");
+      if (menu && !menu.hidden) { closeExportMenu(); exportBtn.focus(); }
     });
 
     document.getElementById("anomaly-severity").addEventListener("change", function (e) {

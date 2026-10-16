@@ -11,6 +11,14 @@ window.I18N = {
     "tab.stats": "Статистика",
     "tab.anomalies": "Забелешки",
 
+    "a11y.skip": "Прескокни до содржината",
+    "a11y.language": "Јазик",
+    "a11y.sections": "Секции",
+    "a11y.close": "Затвори",
+    "search.label": "Пребарување",
+    "catalog.caption": "Каталог на дела",
+    "anom.caption": "Недоследности во податоците",
+
     "search.placeholder": "Пребарај наслов, изведувач или автор…",
     "filters.title": "Филтри",
     "filters.category": "Категорија",
@@ -19,6 +27,8 @@ window.I18N = {
     "filters.collection": "Збирка",
     "filters.duration": "Времетраење",
     "filters.filterList": "Филтрирај список…",
+    "filters.durMin": "Минимално времетраење",
+    "filters.durMax": "Максимално времетраење",
     "filters.clear": "Исчисти сè",
     "filters.all": "Сите",
 
@@ -137,6 +147,14 @@ window.I18N = {
     "tab.stats": "Statistics",
     "tab.anomalies": "Data notes",
 
+    "a11y.skip": "Skip to content",
+    "a11y.language": "Language",
+    "a11y.sections": "Sections",
+    "a11y.close": "Close",
+    "search.label": "Search",
+    "catalog.caption": "Catalogue of works",
+    "anom.caption": "Data inconsistencies",
+
     "search.placeholder": "Search title, performer or composer…",
     "filters.title": "Filters",
     "filters.category": "Category",
@@ -145,6 +163,8 @@ window.I18N = {
     "filters.collection": "Collection",
     "filters.duration": "Duration",
     "filters.filterList": "Filter list…",
+    "filters.durMin": "Minimum duration",
+    "filters.durMax": "Maximum duration",
     "filters.clear": "Clear all",
     "filters.all": "All",
 

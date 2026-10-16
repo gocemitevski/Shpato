@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#view-catalog">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip"></a>
 
   <header class="site-header">
     <a class="brand" href="index.html" id="home-link">
@@ -29,28 +29,30 @@
       </span>
     </a>
     <div class="header-actions">
-      <div class="theme-toggle" id="theme-toggle" role="group">
+      <div class="theme-toggle" id="theme-toggle" role="group" data-i18n-label="theme.label">
         <button type="button" data-theme="light" aria-pressed="false">☀</button>
         <button type="button" data-theme="dark" aria-pressed="false">☾</button>
       </div>
-      <div class="lang-toggle" role="group" aria-label="Language">
+      <div class="lang-toggle" role="group" data-i18n-label="a11y.language">
         <button type="button" data-lang="mk">МК</button>
         <button type="button" data-lang="en">EN</button>
       </div>
     </div>
   </header>
 
-  <nav class="tabs" id="tabs" aria-label="Sections">
-    <button type="button" data-tab="catalog"></button>
-    <button type="button" data-tab="stats"></button>
-    <button type="button" data-tab="anomalies"></button>
+  <nav class="tabs-nav" data-i18n-label="a11y.sections">
+    <div class="tabs" id="tabs" role="tablist">
+      <button type="button" role="tab" id="tab-catalog" data-tab="catalog" aria-controls="view-catalog" aria-selected="true"></button>
+      <button type="button" role="tab" id="tab-stats" data-tab="stats" aria-controls="view-stats" aria-selected="false" tabindex="-1"></button>
+      <button type="button" role="tab" id="tab-anomalies" data-tab="anomalies" aria-controls="view-anomalies" aria-selected="false" tabindex="-1"></button>
+    </div>
   </nav>
 
-  <main>
+  <main id="main" tabindex="-1">
     <!-- Catalogue -->
-    <section id="view-catalog" class="view">
+    <section id="view-catalog" class="view" role="tabpanel" aria-labelledby="tab-catalog">
       <div class="toolbar">
-        <input id="search" class="search" type="search" autocomplete="off">
+        <input id="search" class="search" type="search" autocomplete="off" data-i18n-label="search.label">
         <label class="check">
           <input type="checkbox" id="show-duplicates">
           <span id="show-duplicates-label"></span>
@@ -58,7 +60,7 @@
       </div>
 
       <div class="layout">
-        <aside class="filters" id="filters">
+        <div class="filters" id="filters" role="region" aria-labelledby="filters-title">
           <div class="filters-head">
             <h2 id="filters-title"></h2>
             <button type="button" id="clear-filters" class="link-btn"></button>
@@ -74,24 +76,25 @@
               <span data-i18n="export.label"></span>
               <span class="chev" aria-hidden="true">›</span>
             </button>
-            <div class="menu" id="export-menu" role="menu" hidden>
+            <div class="menu" id="export-menu" role="menu" data-i18n-label="export.label" hidden>
               <button type="button" role="menuitem" data-export="csv" data-i18n="export.optionCsv"></button>
               <button type="button" role="menuitem" data-export="json" data-i18n="export.optionJson"></button>
             </div>
           </div>
-        </aside>
+        </div>
 
         <div class="results">
-          <p class="result-meta" id="result-meta"></p>
+          <p class="result-meta" id="result-meta" role="status"></p>
           <div class="table-wrap">
             <table class="catalog-table">
+              <caption class="visually-hidden" data-i18n="catalog.caption"></caption>
               <thead>
                 <tr>
-                  <th data-sort="title" class="sortable"></th>
-                  <th data-sort="performer" class="sortable"></th>
-                  <th data-sort="composer" class="sortable"></th>
-                  <th data-sort="durationSec" class="sortable"></th>
-                  <th data-sort="signature" class="sortable"></th>
+                  <th scope="col" data-sort="title" class="sortable" aria-sort="ascending"><button type="button" class="th-sort"><span class="th-label"></span><span class="th-arrow" aria-hidden="true"></span></button></th>
+                  <th scope="col" data-sort="performer" class="sortable"><button type="button" class="th-sort"><span class="th-label"></span><span class="th-arrow" aria-hidden="true"></span></button></th>
+                  <th scope="col" data-sort="composer" class="sortable"><button type="button" class="th-sort"><span class="th-label"></span><span class="th-arrow" aria-hidden="true"></span></button></th>
+                  <th scope="col" data-sort="durationSec" class="sortable"><button type="button" class="th-sort"><span class="th-label"></span><span class="th-arrow" aria-hidden="true"></span></button></th>
+                  <th scope="col" data-sort="signature" class="sortable"><button type="button" class="th-sort"><span class="th-label"></span><span class="th-arrow" aria-hidden="true"></span></button></th>
                 </tr>
               </thead>
               <tbody id="catalog-body"></tbody>
@@ -103,7 +106,8 @@
     </section>
 
     <!-- Statistics -->
-    <section id="view-stats" class="view" hidden>
+    <section id="view-stats" class="view" role="tabpanel" aria-labelledby="tab-stats" tabindex="0" hidden>
+      <h2 class="section-title" data-i18n="tab.stats"></h2>
       <div id="stat-cards" class="cards"></div>
       <div class="charts">
         <div class="chart-block">
@@ -130,7 +134,7 @@
     </section>
 
     <!-- Data notes -->
-    <section id="view-anomalies" class="view" hidden>
+    <section id="view-anomalies" class="view" role="tabpanel" aria-labelledby="tab-anomalies" hidden>
       <h2 class="section-title" data-i18n="anom.title"></h2>
       <p class="intro" data-i18n="anom.intro"></p>
       <div id="anomaly-summary" class="summary"></div>
@@ -150,14 +154,15 @@
       </div>
       <div class="table-wrap">
         <table class="catalog-table anomalies-table">
+          <caption class="visually-hidden" data-i18n="anom.caption"></caption>
           <thead>
             <tr>
-              <th data-i18n="anom.record"></th>
-              <th data-i18n="anom.rule"></th>
-              <th data-i18n="anom.severity"></th>
-              <th data-i18n="anom.rawShort"></th>
-              <th data-i18n="anom.normalized"></th>
-              <th data-i18n="anom.source"></th>
+              <th scope="col" data-i18n="anom.record"></th>
+              <th scope="col" data-i18n="anom.rule"></th>
+              <th scope="col" data-i18n="anom.severity"></th>
+              <th scope="col" data-i18n="anom.rawShort"></th>
+              <th scope="col" data-i18n="anom.normalized"></th>
+              <th scope="col" data-i18n="anom.source"></th>
             </tr>
           </thead>
           <tbody id="anomaly-body"></tbody>
@@ -178,10 +183,10 @@
   <!-- Detail drawer -->
   <div id="drawer" class="drawer" hidden>
     <div class="drawer-backdrop" data-close></div>
-    <aside class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
-      <button type="button" class="drawer-close" data-close aria-label="Close">×</button>
+    <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+      <button type="button" class="drawer-close" data-close data-i18n-label="a11y.close">×</button>
       <div id="drawer-content"></div>
-    </aside>
+    </div>
   </div>
 
   <script src="data/catalog.js"></script>
