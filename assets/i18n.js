@@ -9,7 +9,7 @@ window.I18N = {
     "theme.dark": "Темна",
     "tab.catalog": "Каталог",
     "tab.stats": "Статистика",
-    "tab.anomalies": "Забелешки",
+    "tab.notes": "Забелешки",
 
     "a11y.skip": "Прескокни до содржината",
     "a11y.language": "Јазик",
@@ -29,7 +29,7 @@ window.I18N = {
     "filters.durMin": "Минимално времетраење",
     "filters.durMax": "Максимално времетраење",
     "filters.clear": "Исчисти сè",
-    "filters.all": "Сите",
+    "notes.allSeverities": "Сите степени",
 
     "col.title": "Наслов",
     "col.performer": "Изведувач",
@@ -84,16 +84,16 @@ window.I18N = {
     "detail.moreRelated": "…и уште {n}",
     "detail.raw": "во изворот",
 
-    "anom.title": "Забелешки за податоците",
-    "anom.intro": "Сите откриени недоследности во изворните CSV-датотеки и нивните нормализации. Изворните датотеки не се менуваат.",
-    "anom.rule": "Правило",
-    "anom.severity": "Степен",
-    "anom.record": "Дело",
-    "anom.rawShort": "Изворно",
-    "anom.normalized": "Нормализирано",
-    "anom.source": "Извор",
-    "anom.empty": "Нема забелешки.",
-    "anom.allRules": "Сите правила",
+    "notes.title": "Забелешки за податоците",
+    "notes.intro": "Сите откриени недоследности во изворните CSV-датотеки и нивните нормализации. Изворните датотеки не се менуваат.",
+    "notes.rule": "Правило",
+    "notes.severity": "Степен",
+    "notes.record": "Дело",
+    "notes.rawShort": "Изворно",
+    "notes.normalized": "Нормализирано",
+    "notes.source": "Извор",
+    "notes.empty": "Нема забелешки.",
+    "notes.allRules": "Сите правила",
     "severity.info": "информација",
     "severity.warning": "предупредување",
 
@@ -126,7 +126,7 @@ window.I18N = {
     "unit.hour": "ч",
     "unit.min": "м",
     "unit.sec": "с",
-    "anom.showAll": "Прикажи ги сите"
+    "notes.showAll": "Прикажи ги сите"
   },
 
   en: {
@@ -138,7 +138,7 @@ window.I18N = {
     "theme.dark": "Dark",
     "tab.catalog": "Catalogue",
     "tab.stats": "Statistics",
-    "tab.anomalies": "Data notes",
+    "tab.notes": "Data notes",
 
     "a11y.skip": "Skip to content",
     "a11y.language": "Language",
@@ -158,7 +158,7 @@ window.I18N = {
     "filters.durMin": "Minimum duration",
     "filters.durMax": "Maximum duration",
     "filters.clear": "Clear all",
-    "filters.all": "All",
+    "notes.allSeverities": "All severities",
 
     "col.title": "Title",
     "col.performer": "Performer",
@@ -213,16 +213,16 @@ window.I18N = {
     "detail.moreRelated": "…and {n} more",
     "detail.raw": "in source",
 
-    "anom.title": "Data notes",
-    "anom.intro": "Every inconsistency found in the source CSVs and how it was normalized. Source files are left untouched.",
-    "anom.rule": "Rule",
-    "anom.severity": "Severity",
-    "anom.record": "Work",
-    "anom.rawShort": "Raw",
-    "anom.normalized": "Normalized",
-    "anom.source": "Source",
-    "anom.empty": "No notes.",
-    "anom.allRules": "All rules",
+    "notes.title": "Data notes",
+    "notes.intro": "Every inconsistency found in the source CSVs and how it was normalized. Source files are left untouched.",
+    "notes.rule": "Rule",
+    "notes.severity": "Severity",
+    "notes.record": "Work",
+    "notes.rawShort": "Raw",
+    "notes.normalized": "Normalized",
+    "notes.source": "Source",
+    "notes.empty": "No notes.",
+    "notes.allRules": "All rules",
     "severity.info": "info",
     "severity.warning": "warning",
 
@@ -255,6 +255,6 @@ window.I18N = {
     "unit.hour": "h",
     "unit.min": "m",
     "unit.sec": "s",
-    "anom.showAll": "Show all"
+    "notes.showAll": "Show all"
   }
 };

@@ -6,8 +6,8 @@ Reads the four source CSV files (left untouched), normalizes records,
 and writes:
   data/catalog.json    - normalized records + meta
   data/catalog.js      - same, as a global for file:// usage
-  data/anomalies.json  - every fix / flag applied, for transparency
-  data/anomalies.js    - same, as a global
+  data/notes.json      - every fix / flag applied, for transparency
+  data/notes.js        - same, as a global
 
 Only the Python 3 standard library is used.
 """
@@ -431,8 +431,8 @@ def parse_source(source):
 def mark_duplicates(records):
     """Flag exact and possible duplicates in place.
 
-    Returns {record id: id of the record it may duplicate}, so the anomaly
-    report can point at the twin.
+    Returns {record id: id of the record it may duplicate}, so the notes can
+    point at the twin.
     """
     # Keys are transliterated to a single alphabet so a Latin "O" typed into a
     # Cyrillic word (e.g. "ТO на РТС") does not hide a duplicate.
@@ -504,11 +504,11 @@ def main():
     for rec in all_records:
         rec["search"] = build_search(rec)
 
-    # anomaly report
-    anomalies = []
+    # data notes
+    notes = []
     for rec in all_records:
         for fx in rec["textFixes"]:
-            anomalies.append({
+            notes.append({
                 "id": rec["id"],
                 "category": rec["category"],
                 "title": rec["title"],
@@ -546,30 +546,30 @@ def main():
                 "raw": raw,
                 "normalized": normalized,
             }
-            anomalies.append(entry)
+            notes.append(entry)
 
     # No build timestamp: it would make the committed output non-reproducible.
     meta = {
         "total": len(all_records),
         "counts": counters,
-        "anomalies": len(anomalies),
+        "notes": len(notes),
         "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija",
     }
 
     os.makedirs(DATA_DIR, exist_ok=True)
     write_json(os.path.join(DATA_DIR, "catalog.json"),
                {"meta": meta, "records": all_records})
-    write_json(os.path.join(DATA_DIR, "anomalies.json"),
-               {"meta": meta, "anomalies": anomalies})
+    write_json(os.path.join(DATA_DIR, "notes.json"),
+               {"meta": meta, "notes": notes})
     write_js(os.path.join(DATA_DIR, "catalog.js"), "CATALOG",
              {"meta": meta, "records": all_records})
-    write_js(os.path.join(DATA_DIR, "anomalies.js"), "ANOMALIES",
-             {"meta": meta, "anomalies": anomalies})
+    write_js(os.path.join(DATA_DIR, "notes.js"), "NOTES",
+             {"meta": meta, "notes": notes})
 
     expected = {"vocal": 74, "instrumental": 56, "arrThemes": 43, "arrVocal": 261}
     print("Built {} records: {}".format(len(all_records), counters))
     print("Expected:            {}".format(expected))
-    print("Anomalies: {}".format(len(anomalies)))
+    print("Notes: {}".format(len(notes)))
     if counters != expected:
         print("WARNING: counts differ from expectation", file=sys.stderr)
 

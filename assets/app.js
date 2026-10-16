@@ -3,7 +3,7 @@
   "use strict";
 
   var CATALOG = window.CATALOG || { meta: {}, records: [] };
-  var ANOMALIES = window.ANOMALIES || { anomalies: [] };
+  var NOTES = window.NOTES || { notes: [] };
   var RECORDS = CATALOG.records;
   var META = CATALOG.meta;
   var DATA_MIN = 0;
@@ -14,7 +14,7 @@
   })();
 
   var CATEGORY_ORDER = ["vocal", "instrumental", "arrThemes", "arrVocal"];
-  var TABS = ["catalog", "stats", "anomalies"];
+  var TABS = ["catalog", "stats", "notes"];
   // The columns that carry a data-sort attribute in index.html.
   var SORT_KEYS = ["title", "performer", "composer", "durationSec", "signature"];
   var facetFilterState = {};
@@ -35,9 +35,9 @@
     sort: { key: "title", dir: "asc" },
     showDuplicates: false,
     selected: null,
-    anomalySeverity: "",
-    anomalyRule: "",
-    anomalyLimit: 60
+    noteSeverity: "",
+    noteRule: "",
+    noteLimit: 60
   };
 
   var lastFocused = null;
@@ -197,13 +197,13 @@
     });
 
     // The counts ride in the option labels, so the select carries the summary on
-    // its own: closed, it reads "Сите (420)" rather than a bare "Сите".
+    // its own: closed, it reads "Сите степени (420)" rather than a bare "Сите".
     var sev = severityCounts();
-    document.querySelector("#anomaly-severity option[value='']").textContent =
-      t("filters.all") + " (" + sev.all + ")";
-    document.querySelector("#anomaly-severity [value='warning']").textContent =
+    document.querySelector("#note-severity option[value='']").textContent =
+      t("notes.allSeverities") + " (" + sev.all + ")";
+    document.querySelector("#note-severity [value='warning']").textContent =
       t("severity.warning") + " (" + sev.warning + ")";
-    document.querySelector("#anomaly-severity [value='info']").textContent =
+    document.querySelector("#note-severity [value='info']").textContent =
       t("severity.info") + " (" + sev.info + ")";
     refreshRuleSelect();
   }
@@ -560,36 +560,36 @@
     });
   }
 
-  // ------------------------------------------------------------- anomalies
+  // ------------------------------------------------------------- notes
   function refreshRuleSelect() {
-    var sel = document.getElementById("anomaly-rule");
-    var rules = new Set(ANOMALIES.anomalies.map(function (a) { return a.rule; }));
-    sel.innerHTML = '<option value="">' + esc(t("anom.allRules")) + "</option>" +
+    var sel = document.getElementById("note-rule");
+    var rules = new Set(NOTES.notes.map(function (a) { return a.rule; }));
+    sel.innerHTML = '<option value="">' + esc(t("notes.allRules")) + "</option>" +
       Array.from(rules).sort().map(function (r) {
         return '<option value="' + esc(r) + '">' + esc(t("rule." + r)) + "</option>";
       }).join("");
-    sel.value = state.anomalyRule;
+    sel.value = state.noteRule;
   }
 
   // Severity counts, used as the option labels of the severity select.
   function severityCounts() {
-    var all = ANOMALIES.anomalies.length;
-    var warning = ANOMALIES.anomalies.filter(function (a) { return a.severity === "warning"; }).length;
+    var all = NOTES.notes.length;
+    var warning = NOTES.notes.filter(function (a) { return a.severity === "warning"; }).length;
     return { all: all, warning: warning, info: all - warning };
   }
 
-  function renderAnomalies() {
-    var list = ANOMALIES.anomalies.filter(function (a) {
-      if (state.anomalySeverity && a.severity !== state.anomalySeverity) return false;
-      if (state.anomalyRule && a.rule !== state.anomalyRule) return false;
+  function renderNotes() {
+    var list = NOTES.notes.filter(function (a) {
+      if (state.noteSeverity && a.severity !== state.noteSeverity) return false;
+      if (state.noteRule && a.rule !== state.noteRule) return false;
       return true;
     });
-    var body = document.getElementById("anomaly-body");
-    var empty = document.getElementById("anomaly-empty");
+    var body = document.getElementById("note-body");
+    var empty = document.getElementById("note-empty");
     empty.hidden = list.length > 0;
-    empty.textContent = t("anom.empty");
+    empty.textContent = t("notes.empty");
 
-    var shown = list.slice(0, state.anomalyLimit);
+    var shown = list.slice(0, state.noteLimit);
     body.innerHTML = shown.map(function (a) {
       var normalized = a.normalized;
       if (typeof normalized === "number" && a.rule.indexOf("duration") === 0) normalized = fmt(normalized);
@@ -606,8 +606,8 @@
         "</tr>";
     }).join("");
 
-    document.getElementById("anomaly-more").innerHTML = list.length > state.anomalyLimit
-      ? '<button type="button" class="btn" id="anomaly-show-all">' + esc(t("anom.showAll")) +
+    document.getElementById("note-more").innerHTML = list.length > state.noteLimit
+      ? '<button type="button" class="btn" id="note-show-all">' + esc(t("notes.showAll")) +
         " (" + list.length + ")</button>"
       : "";
   }
@@ -724,7 +724,7 @@
     });
     updateTitle();
     if (tab === "stats") renderStats();
-    if (tab === "anomalies") renderAnomalies();
+    if (tab === "notes") renderNotes();
   }
 
   function applyTheme(theme) {
@@ -783,7 +783,7 @@
         localStorage.setItem("shpato-lang", state.lang);
         renderStatic(); renderFacets(); renderResults();
         if (state.tab === "stats") renderStats();
-        if (state.tab === "anomalies") { renderAnomalies(); }
+        if (state.tab === "notes") { renderNotes(); }
         renderDrawerStatic();
         persist();
       });
@@ -860,7 +860,7 @@
       var tr = e.target.closest("tr[data-id]");
       if (tr) selectRecord(tr.getAttribute("data-id"));
     });
-    document.getElementById("anomaly-body").addEventListener("click", function (e) {
+    document.getElementById("note-body").addEventListener("click", function (e) {
       var tr = e.target.closest("tr[data-id]");
       if (tr) selectRecord(tr.getAttribute("data-id"));
     });
@@ -885,14 +885,14 @@
       if (menu && !menu.hidden) { closeExportMenu(); exportBtn.focus(); }
     });
 
-    document.getElementById("anomaly-severity").addEventListener("change", function (e) {
-      state.anomalySeverity = e.target.value; state.anomalyLimit = 60; renderAnomalies();
+    document.getElementById("note-severity").addEventListener("change", function (e) {
+      state.noteSeverity = e.target.value; state.noteLimit = 60; renderNotes();
     });
-    document.getElementById("anomaly-rule").addEventListener("change", function (e) {
-      state.anomalyRule = e.target.value; state.anomalyLimit = 60; renderAnomalies();
+    document.getElementById("note-rule").addEventListener("change", function (e) {
+      state.noteRule = e.target.value; state.noteLimit = 60; renderNotes();
     });
-    document.getElementById("anomaly-more").addEventListener("click", function (e) {
-      if (e.target.closest("#anomaly-show-all")) { state.anomalyLimit = Infinity; renderAnomalies(); }
+    document.getElementById("note-more").addEventListener("click", function (e) {
+      if (e.target.closest("#note-show-all")) { state.noteLimit = Infinity; renderNotes(); }
     });
   }
 

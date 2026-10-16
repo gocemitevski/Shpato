@@ -742,7 +742,7 @@ td.sig {
 .section-title { margin: 0 0 1rem; font-size: 1.3rem; }
 .intro { color: var(--muted); max-width: 68ch; margin: 0 0 1.5rem; }
 
-/* -------------------------------------------------------------- anomalies */
+/* -------------------------------------------------------------- notes */
 .field { display: flex; flex-direction: column; gap: .3rem; font-size: .78rem; color: var(--muted); }
 .field select {
   padding: .5rem .7rem;
@@ -763,7 +763,7 @@ td.sig {
 }
 .sev.info { color: var(--muted); }
 
-.anomalies-table td.rule { max-width: 34ch; }
+.notes-table td.rule { max-width: 34ch; }
 code.raw {
   font-family: ui-monospace, Menlo, monospace;
   font-size: .8rem;

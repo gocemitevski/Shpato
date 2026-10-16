@@ -92,7 +92,7 @@
     <div class="tabs" id="tabs" role="tablist">
       <button type="button" role="tab" id="tab-catalog" data-tab="catalog" aria-controls="view-catalog" aria-selected="true"></button>
       <button type="button" role="tab" id="tab-stats" data-tab="stats" aria-controls="view-stats" aria-selected="false" tabindex="-1"></button>
-      <button type="button" role="tab" id="tab-anomalies" data-tab="anomalies" aria-controls="view-anomalies" aria-selected="false" tabindex="-1"></button>
+      <button type="button" role="tab" id="tab-notes" data-tab="notes" aria-controls="view-notes" aria-selected="false" tabindex="-1"></button>
     </div>
   </nav>
 
@@ -182,41 +182,41 @@
     </section>
 
     <!-- Data notes -->
-    <section id="view-anomalies" class="view" role="tabpanel" aria-labelledby="tab-anomalies" hidden>
-      <h2 class="section-title" data-i18n="anom.title"></h2>
-      <p class="intro" data-i18n="anom.intro"></p>
+    <section id="view-notes" class="view" role="tabpanel" aria-labelledby="tab-notes" hidden>
+      <h2 class="section-title" data-i18n="notes.title"></h2>
+      <p class="intro" data-i18n="notes.intro"></p>
       <div class="toolbar">
         <label class="field">
-          <span data-i18n="anom.severity"></span>
-          <select id="anomaly-severity">
+          <span data-i18n="notes.severity"></span>
+          <select id="note-severity">
             <option value=""></option>
             <option value="warning"></option>
             <option value="info"></option>
           </select>
         </label>
         <label class="field">
-          <span data-i18n="anom.rule"></span>
-          <select id="anomaly-rule"></select>
+          <span data-i18n="notes.rule"></span>
+          <select id="note-rule"></select>
         </label>
       </div>
       <div class="table-wrap">
-        <table class="catalog-table anomalies-table">
-          <caption class="visually-hidden" data-i18n="anom.title"></caption>
+        <table class="catalog-table notes-table">
+          <caption class="visually-hidden" data-i18n="notes.title"></caption>
           <thead>
             <tr>
-              <th scope="col" data-i18n="anom.record"></th>
-              <th scope="col" data-i18n="anom.rule"></th>
-              <th scope="col" data-i18n="anom.severity"></th>
-              <th scope="col" data-i18n="anom.rawShort"></th>
-              <th scope="col" data-i18n="anom.normalized"></th>
-              <th scope="col" data-i18n="anom.source"></th>
+              <th scope="col" data-i18n="notes.record"></th>
+              <th scope="col" data-i18n="notes.rule"></th>
+              <th scope="col" data-i18n="notes.severity"></th>
+              <th scope="col" data-i18n="notes.rawShort"></th>
+              <th scope="col" data-i18n="notes.normalized"></th>
+              <th scope="col" data-i18n="notes.source"></th>
             </tr>
           </thead>
-          <tbody id="anomaly-body"></tbody>
+          <tbody id="note-body"></tbody>
         </table>
       </div>
-      <p class="empty" id="anomaly-empty" hidden></p>
-      <div id="anomaly-more" class="table-more"></div>
+      <p class="empty" id="note-empty" hidden></p>
+      <div id="note-more" class="table-more"></div>
     </section>
   </main>
 
@@ -237,7 +237,7 @@
   </div>
 
   <script src="data/catalog.js"></script>
-  <script src="data/anomalies.js"></script>
+  <script src="data/notes.js"></script>
   <script src="assets/i18n.js"></script>
   <script src="assets/app.js"></script>
 </body>
