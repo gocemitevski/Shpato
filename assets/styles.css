@@ -177,15 +177,16 @@ a { color: var(--accent-2); }
 .brand-mark {
   width: 42px;
   height: 42px;
+  padding: 2px;
   border-radius: 50%;
   background: var(--accent);
   overflow: hidden;
   flex: none;
-  /* A soft accent halo behind the portrait. The original glow used the accent
-     at full opacity; this keeps its shape but dials the colour well back so it
-     reads as a glow rather than a colour cast on the photo. */
+  /* A soft accent halo behind the portrait, sitting outside the accent ring.
+     Spread wider than the mark and blurred, so it reads as light around the
+     ring rather than a colour cast on the photo. */
   box-shadow: var(--shadow-sm);
-  box-shadow: 0 6px 18px -6px color-mix(in srgb, var(--accent) 45%, transparent);
+  box-shadow: 0 5px 22px -2px color-mix(in srgb, var(--accent) 50%, transparent);
 }
 .brand-mark img {
   display: block;
