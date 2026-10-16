@@ -1,0 +1,87 @@
+<!doctype html>
+<!--
+  Social share cover, 1920x1080.
+
+  Render to a PNG with headless Chrome, e.g.
+
+    google-chrome --headless=new --hide-scrollbars \
+      --window-size=1920,1080 --screenshot=cover.png \
+      file:///path/to/tools/cover.html
+
+  This page is a render target only: index.html never loads it. It links the
+  app stylesheet so the palette, the Geologica face and the brand mark stay in
+  step with the site instead of drifting from it.
+-->
+<html lang="mk" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <title>Драган Ѓаконовски – Шпато · Cover 1920×1080</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+    body { overflow: hidden; }
+
+    .cover {
+      width: 1920px;
+      height: 1080px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bg);
+      /* A soft accent bloom behind the mark, well under full strength so the
+         text below it keeps its contrast. Centred on the content rather than
+         the canvas so the composition does not read as top-heavy. */
+      background-image: radial-gradient(
+        72% 62% at 50% 42%,
+        color-mix(in srgb, var(--accent) 13%, transparent),
+        transparent 78%
+      );
+    }
+
+    /* The brand mark, scaled up from the header's 42px: the ring and the halo
+       keep their proportions to the circle. */
+    .cover-mark {
+      width: 280px;
+      height: 280px;
+      padding: 13px;
+      border-radius: 50%;
+      background: var(--accent);
+      overflow: hidden;
+      box-shadow: 0 32px 140px -14px color-mix(in srgb, var(--accent) 55%, transparent);
+    }
+    .cover-mark img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .cover-title {
+      margin: 72px 0 0;
+      font-size: 100px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      color: var(--ink);
+      text-align: center;
+    }
+    .cover-sub {
+      margin: 32px 0 0;
+      font-size: 38px;
+      line-height: 1.4;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <span class="cover-mark" aria-hidden="true">
+      <img src="../assets/images/Dragan-Gjakonovski-Shpato-Icon.webp" alt="">
+    </span>
+    <h1 class="cover-title">Драган Ѓаконовски – Шпато</h1>
+    <p class="cover-sub">Дигитален каталог на делата во фонотеката на МРТВ</p>
+  </div>
+</body>
+</html>
