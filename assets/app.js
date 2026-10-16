@@ -425,7 +425,8 @@
       row("detail.source", '<code class="raw raw-truncate" title="' + esc(r.sourceFile + ":" + r.sourceLine) + '">' + esc(r.sourceFile) + ":" + r.sourceLine + "</code>") +
       "</dl>" +
       "<h3>" + esc(t("detail.flags")) + "</h3>" + flagItems +
-      '<div class="related"><h3>' + esc(t("detail.related")) + "</h3>" +
+      "<h3>" + esc(t("detail.related")) + "</h3>" +
+      '<div class="related">' +
       (related || '<p class="empty-note">' + esc(t("detail.noRelated")) + "</p>") +
       "</div>";
 

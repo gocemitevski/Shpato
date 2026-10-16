@@ -790,12 +790,21 @@ code.raw {
 .drawer dl { display: grid; grid-template-columns: auto 1fr; gap: .45rem 1.1rem; margin: 0 0 1.25rem; font-size: .9rem; }
 .drawer dt { color: var(--muted); }
 .drawer dd { margin: 0; min-width: 0; }
+/* Drawer section headings, plus a lighter sub-heading for the groups inside a
+   section, so "Поврзани дела" reads as the parent of "Ист автор". */
 .drawer h3 {
   font-size: .75rem;
   text-transform: uppercase;
   letter-spacing: .06em;
-  color: var(--muted);
+  color: var(--ink);
   margin: 1.4rem 0 .5rem;
+}
+.drawer .related h3 {
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  color: var(--muted);
+  margin: 1rem 0 .35rem;
 }
 .drawer .flags { list-style: none; padding: 0; margin: 0; }
 .drawer .flags li { font-size: .85rem; color: var(--muted); padding: .2rem 0; }
