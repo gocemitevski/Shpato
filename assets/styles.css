@@ -243,8 +243,13 @@ a { color: var(--accent-2); }
   cursor: pointer;
   transition: background-color .15s ease, color .15s ease;
 }
-.lang-toggle button { min-width: 2rem; padding: 0 .55rem; }
-.theme-toggle button { width: 1.5rem; }
+/* Both pills hold two segments of the same width, so the two switches read as
+   a pair instead of the theme one looking pinched. The language labels are the
+   widest content either pill carries, and a fixed width keeps the segments even
+   whatever the font does to the glyphs — a min-width left "МК" and "EN"
+   slightly different sizes. */
+.lang-toggle button,
+.theme-toggle button { width: 2.4rem; padding: 0; }
 .lang-toggle button:not([aria-pressed="true"]):hover,
 .theme-toggle button:not([aria-pressed="true"]):hover {
   background: var(--accent-soft);
