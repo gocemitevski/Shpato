@@ -3683,7 +3683,7 @@
   {
    "id": "arrVocal-0194",
    "category": "arrVocal",
-   "title": "Srangers in the night",
+   "title": "Strangers in the night",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 200,
    "rule": "missing-duration",
@@ -3694,7 +3694,7 @@
   {
    "id": "arrVocal-0194",
    "category": "arrVocal",
-   "title": "Srangers in the night",
+   "title": "Strangers in the night",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 200,
    "rule": "missing-signature",
