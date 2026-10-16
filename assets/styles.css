@@ -115,6 +115,11 @@
   border: 0;
 }
 
+/* The hidden attribute means "not rendered", so it has to beat any component
+   display rule (.facet-item is display:flex, which would otherwise win over
+   the user agent's [hidden] { display: none }). */
+[hidden] { display: none !important; }
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -376,7 +381,6 @@ main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; }
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow);
 }
-.menu[hidden] { display: none; }
 .menu button {
   width: 100%;
   padding: .5rem .7rem;
