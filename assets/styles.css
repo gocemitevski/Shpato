@@ -550,7 +550,7 @@ main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; }
 
 /* --------------------------------------------------------------- results */
 .results { min-width: 0; }
-.result-meta { margin: 0 0 1rem; color: var(--muted); font-size: .88rem; }
+.result-meta { margin: 0 1rem 1rem; color: var(--muted); font-size: .88rem; }
 
 .table-wrap {
   overflow-x: auto;
@@ -855,6 +855,8 @@ code.raw {
 .drawer .empty-note { color: var(--muted); font-size: .85rem; margin: 0; }
 .drawer .related ul { list-style: none; padding: 0; margin: 0; }
 .drawer .related li { padding: .35rem 0; font-size: .88rem; border-bottom: 1px solid var(--line); }
+/* The related lists are capped, so this is the "and N more" note under one. */
+.drawer .related .empty-note { margin-top: .4rem; }
 .chip-link { border: 0; background: none; padding: 0; font: inherit; color: var(--accent-2); cursor: pointer; text-align: left; }
 .raw-hint { color: var(--muted); font-size: .8rem; }
 

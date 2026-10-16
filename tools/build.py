@@ -419,7 +419,6 @@ def parse_source(source):
             "sourceFile": source["file"],
             "sourceLine": offset,
             "flags": flags,
-            "warnCount": sum(1 for f in flags if SEVERITY.get(f) == "warning"),
             "duplicateOf": None,
             "textFixes": text_fixes,
         })
@@ -430,10 +429,16 @@ def parse_source(source):
 # Duplicates, ids, search
 # ---------------------------------------------------------------------------
 def mark_duplicates(records):
+    """Flag exact and possible duplicates in place.
+
+    Returns {record id: id of the record it may duplicate}, so the anomaly
+    report can point at the twin.
+    """
     # Keys are transliterated to a single alphabet so a Latin "O" typed into a
     # Cyrillic word (e.g. "ТO на РТС") does not hide a duplicate.
     exact = {}
     base = {}
+    possible = {}
     for rec in records:
         key = (rec["category"], to_latin(rec["title"]), to_latin(rec["performer"]),
                to_latin(rec["signature"] or ""))
@@ -446,7 +451,15 @@ def mark_duplicates(records):
         weak = (rec["category"], to_latin(rec["title"]), to_latin(rec["performer"]))
         if weak in base and rec["duplicateOf"] is None:
             rec["flags"].append("possible-duplicate")
+            possible[rec["id"]] = base[weak]
         base.setdefault(weak, rec["id"])
+    return possible
+
+
+def count_warnings(records):
+    """Set warnCount. Has to run after mark_duplicates, which adds flags."""
+    for rec in records:
+        rec["warnCount"] = sum(1 for f in rec["flags"] if SEVERITY.get(f) == "warning")
 
 
 TRANSLIT = {
@@ -486,7 +499,8 @@ def main():
         per_cat[rec["category"]] = n
         rec["id"] = "{}-{:04d}".format(rec["category"], n)
 
-    mark_duplicates(all_records)
+    possible_duplicates = mark_duplicates(all_records)
+    count_warnings(all_records)
     for rec in all_records:
         rec["search"] = build_search(rec)
 
@@ -515,8 +529,10 @@ def main():
                 raw, normalized = rec["durationRaw"], rec["durationSec"]
             elif rule == "composer-placeholder":
                 raw, normalized = "+++", ""
-            elif rule in ("duplicate", "possible-duplicate"):
+            elif rule == "duplicate":
                 raw, normalized = rec["title"], rec["duplicateOf"] or ""
+            elif rule == "possible-duplicate":
+                raw, normalized = rec["title"], possible_duplicates.get(rec["id"]) or ""
             else:
                 raw, normalized = "", ""
             entry = {
@@ -530,8 +546,6 @@ def main():
                 "raw": raw,
                 "normalized": normalized,
             }
-            if rule in ("duplicate", "possible-duplicate") and rec["duplicateOf"]:
-                entry["ref"] = rec["duplicateOf"]
             anomalies.append(entry)
 
     # No build timestamp: it would make the committed output non-reproducible.

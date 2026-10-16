@@ -68,9 +68,7 @@ window.I18N = {
     "stats.byCollection": "По збирка (префикс на сигнатура)",
     "stats.durationDist": "Распределба на времетраењето",
     "stats.over": "над",
-    "stats.others": "други",
 
-    "detail.category": "Категорија",
     "detail.performer": "Изведувач",
     "detail.composer": "Автор",
     "detail.duration": "Времетраење",
@@ -84,7 +82,7 @@ window.I18N = {
     "detail.sameComposer": "Ист автор",
     "detail.noFlags": "Нема забелешки",
     "detail.noRelated": "Нема поврзани дела",
-    "detail.close": "Затвори",
+    "detail.moreRelated": "…и уште {n}",
     "detail.raw": "во изворот",
 
     "anom.title": "Забелешки за податоците",
@@ -99,7 +97,6 @@ window.I18N = {
     "anom.allRules": "Сите правила",
     "severity.info": "информација",
     "severity.warning": "предупредување",
-    "anom.original": "Изворна датотека (непроменета)",
 
     "rule.duration-missing-separator": "Времетраење без децимална точка (405 → 4:05)",
     "rule.duration-ambiguous-seconds": "Двозначно времетраење (3.7 → 3:07)",
@@ -124,17 +121,13 @@ window.I18N = {
     "rule.name-unified": "Обединето име (иницијал → полно име)",
     "rule.performer-split": "Изведувач одделен од улогата/инструментот",
     "rule.ellipsis-normalized": "Нормализиран триточка (…)",
-    "detail.performerRole": "Улога",
 
     "common.unknown": "непознато",
     "common.none": "—",
-    "common.min": "мин",
-    "common.sec": "сек",
     "unit.hour": "ч",
     "unit.min": "м",
     "unit.sec": "с",
-    "anom.showAll": "Прикажи ги сите",
-    "anom.line": "ред"
+    "anom.showAll": "Прикажи ги сите"
   },
 
   en: {
@@ -205,9 +198,7 @@ window.I18N = {
     "stats.byCollection": "By collection (signature prefix)",
     "stats.durationDist": "Duration distribution",
     "stats.over": "over",
-    "stats.others": "others",
 
-    "detail.category": "Category",
     "detail.performer": "Performer",
     "detail.composer": "Composer",
     "detail.duration": "Duration",
@@ -221,7 +212,7 @@ window.I18N = {
     "detail.sameComposer": "Same composer",
     "detail.noFlags": "No notes",
     "detail.noRelated": "No related works",
-    "detail.close": "Close",
+    "detail.moreRelated": "…and {n} more",
     "detail.raw": "in source",
 
     "anom.title": "Data notes",
@@ -236,7 +227,6 @@ window.I18N = {
     "anom.allRules": "All rules",
     "severity.info": "info",
     "severity.warning": "warning",
-    "anom.original": "Source file (unchanged)",
 
     "rule.duration-missing-separator": "Duration without decimal point (405 → 4:05)",
     "rule.duration-ambiguous-seconds": "Ambiguous duration (3.7 → 3:07)",
@@ -261,16 +251,12 @@ window.I18N = {
     "rule.name-unified": "Name unified (initial → full name)",
     "rule.performer-split": "Performer separated from role/instrument",
     "rule.ellipsis-normalized": "Ellipsis normalised (…)",
-    "detail.performerRole": "Role",
 
     "common.unknown": "unknown",
     "common.none": "—",
-    "common.min": "min",
-    "common.sec": "sec",
     "unit.hour": "h",
     "unit.min": "m",
     "unit.sec": "s",
-    "anom.showAll": "Show all",
-    "anom.line": "line"
+    "anom.showAll": "Show all"
   }
 };

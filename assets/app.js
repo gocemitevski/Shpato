@@ -14,6 +14,9 @@
   })();
 
   var CATEGORY_ORDER = ["vocal", "instrumental", "arrThemes", "arrVocal"];
+  var TABS = ["catalog", "stats", "anomalies"];
+  // The columns that carry a data-sort attribute in index.html.
+  var SORT_KEYS = ["title", "performer", "composer", "durationSec", "signature"];
   var facetFilterState = {};
   var facetOpenState = {};
   var FACET_DEFAULT_OPEN = { "facet-category": true };
@@ -81,7 +84,7 @@
   function normalize(s) { return (s || "").toLowerCase().trim(); }
 
   // ------------------------------------------------------------- filtering
-  function isDuplicate(r) { return r.duplicateOf !== null; }
+  function isDuplicate(r) { return r.duplicateOf !== null && r.duplicateOf !== undefined; }
 
   function matchesQuery(r, q) {
     if (!q) return true;
@@ -126,10 +129,13 @@
     });
   }
 
-  function facetCounts(field) {
+  // Counts per facet value. `includeHidden` ignores the "show duplicates"
+  // toggle, which the statistics need: they describe the whole catalogue and
+  // must not shift when that box is ticked.
+  function facetCounts(field, includeHidden) {
     var map = new Map();
     RECORDS.forEach(function (r) {
-      if (!state.showDuplicates && isDuplicate(r)) return;
+      if (!includeHidden && !state.showDuplicates && isDuplicate(r)) return;
       var v = r[field] || (field === "collection" ? "__none__" : "");
       if (!v) return;
       map.set(v, (map.get(v) || 0) + 1);
@@ -372,7 +378,27 @@
     });
   }
 
-  function renderDrawer() {
+  // The table row that opens a record, used as the focus return target. Both
+  // tables carry record ids, and focusing a row inside a hidden view is a
+  // no-op, so only a laid-out row counts.
+  function rowButton(id) {
+    var buttons = document.querySelectorAll('tr[data-id="' + id + '"] .row-open');
+    for (var i = 0; i < buttons.length; i++) {
+      if (buttons[i].offsetParent !== null) return buttons[i];
+    }
+    return null;
+  }
+
+  function selectRecord(id, navigated) {
+    state.selected = id;
+    // Focus returns here when the drawer closes, so it tracks the record on
+    // screen rather than whichever element happened to hold focus — clicking a
+    // row's padding opens the drawer without focusing its title button.
+    lastFocused = rowButton(id) || lastFocused;
+    renderDrawer(navigated);
+  }
+
+  function renderDrawer(navigated) {
     var drawer = document.getElementById("drawer");
     var wasOpen = !drawer.hidden;
     var r = state.selected ? RECORDS.find(function (x) { return x.id === state.selected; }) : null;
@@ -411,7 +437,7 @@
     }) : []);
 
     document.getElementById("drawer-content").innerHTML =
-      "<h2 id=\"drawer-title\">" + esc(r.title) + "</h2>" +
+      "<h2 id=\"drawer-title\" tabindex=\"-1\">" + esc(r.title) + "</h2>" +
       '<span class="cat-tag" data-cat="' + esc(r.category) + '">' + esc(categoryLabel(r.category)) + "</span>" +
       "<dl>" +
       row("detail.performer", esc(r.performer || t("common.none")) +
@@ -431,24 +457,34 @@
       "</div>";
 
     drawer.querySelectorAll("[data-goto]").forEach(function (btn) {
-      btn.addEventListener("click", function () { state.selected = btn.getAttribute("data-goto"); renderDrawer(); });
+      btn.addEventListener("click", function () { selectRecord(btn.getAttribute("data-goto"), true); });
     });
 
     if (!wasOpen) {
-      lastFocused = document.activeElement;
       setPageInert(true);
       var closeBtn = drawer.querySelector(".drawer-close");
       if (closeBtn) closeBtn.focus();
+    } else if (navigated) {
+      // Following a related-work link replaces the drawer's content, which
+      // destroys the focused chip. Move focus to the new heading instead of
+      // letting it fall to <body>, outside this modal.
+      drawer.querySelector("#drawer-title").focus();
     }
   }
 
   function relatedBlock(titleKey, items) {
     if (!items.length) return "";
     var shown = items.slice(0, 15);
+    // The list is capped, so say how many were left out rather than dropping
+    // them silently.
+    var more = items.length > shown.length
+      ? '<p class="empty-note">' +
+        esc(t("detail.moreRelated").replace("{n}", num(items.length - shown.length))) + "</p>"
+      : "";
     return "<h3>" + esc(t(titleKey)) + "</h3><ul>" + shown.map(function (x) {
       return "<li><button class=\"chip-link\" data-goto=\"" + x.id + "\">" + esc(x.title) +
         " — " + esc(x.performer || t("common.none")) + "</button></li>";
-    }).join("") + "</ul>";
+    }).join("") + "</ul>" + more;
   }
 
   // ----------------------------------------------------------------- stats
@@ -472,11 +508,11 @@
     bars("chart-category", CATEGORY_ORDER.map(function (c) {
       return { label: categoryLabel(c), value: META.counts[c] || 0, cat: c };
     }));
-    bars("chart-collection", Array.from(facetCounts("collection").entries())
+    bars("chart-collection", Array.from(facetCounts("collection", true).entries())
       .sort(function (a, b) { return b[1] - a[1]; })
       .map(function (e) { return { label: e[0] === "__none__" ? t("common.unknown") : e[0], value: e[1] }; }));
-    bars("chart-performers", top(facetCounts("performer"), 8));
-    bars("chart-composers", top(facetCounts("composer"), 8));
+    bars("chart-performers", top(facetCounts("performer", true), 8));
+    bars("chart-composers", top(facetCounts("composer", true), 8));
     bars("chart-duration", durationBuckets());
   }
 
@@ -590,7 +626,8 @@
     a.href = url; a.download = filename;
     document.body.appendChild(a); a.click();
     document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    // Revoking in the same task can cancel the download in Firefox.
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
   }
   function csvCell(v) {
     v = v === null || v === undefined ? "" : String(v);
@@ -644,26 +681,46 @@
     if (state.sort.key !== "title" || state.sort.dir !== "asc") { p.set("sort", state.sort.key); p.set("dir", state.sort.dir); }
     return "#" + p.toString();
   }
+  // A shared link is untrusted input, so every value read out of the hash is
+  // validated against the data before it reaches the state.
+  function knownValues(field, values) {
+    var known = facetCounts(field, true);
+    var out = new Set();
+    values.forEach(function (v) { if (known.has(v)) out.add(v); });
+    return out;
+  }
+  function readDuration(value, fallback) {
+    var n = Number(value);
+    if (!isFinite(n)) return fallback;
+    return Math.min(DATA_MAX, Math.max(DATA_MIN, n));
+  }
+
   function deserialize() {
     var raw = location.hash.replace(/^#/, "");
     if (!raw) return;
     var p = new URLSearchParams(raw);
-    if (p.get("tab")) state.tab = p.get("tab");
+    if (TABS.indexOf(p.get("tab")) !== -1) state.tab = p.get("tab");
     if (p.get("q")) state.query = p.get("q");
-    if (p.get("cat")) state.categories = new Set(p.get("cat").split("|"));
-    if (p.get("col")) state.collections = new Set(p.get("col").split("|"));
-    if (p.get("perf")) state.performers = new Set(p.get("perf").split("|"));
-    if (p.get("comp")) state.composers = new Set(p.get("comp").split("|"));
-    if (p.get("dmin")) state.durMin = Math.max(DATA_MIN, +p.get("dmin"));
-    if (p.get("dmax")) state.durMax = Math.min(DATA_MAX, +p.get("dmax"));
+    if (p.get("cat")) state.categories = knownValues("category", p.get("cat").split("|"));
+    if (p.get("col")) state.collections = knownValues("collection", p.get("col").split("|"));
+    if (p.get("perf")) state.performers = knownValues("performer", p.get("perf").split("|"));
+    if (p.get("comp")) state.composers = knownValues("composer", p.get("comp").split("|"));
+    if (p.get("dmin")) state.durMin = readDuration(p.get("dmin"), DATA_MIN);
+    if (p.get("dmax")) state.durMax = readDuration(p.get("dmax"), DATA_MAX);
+    if (state.durMin > state.durMax) {
+      var swap = state.durMin; state.durMin = state.durMax; state.durMax = swap;
+    }
     state.showDuplicates = p.get("dup") === "1";
-    if (p.get("sort")) { state.sort.key = p.get("sort"); state.sort.dir = p.get("dir") || "asc"; }
+    if (SORT_KEYS.indexOf(p.get("sort")) !== -1) {
+      state.sort.key = p.get("sort");
+      state.sort.dir = p.get("dir") === "desc" ? "desc" : "asc";
+    }
   }
 
   // ------------------------------------------------------------------ main
   function setTab(tab) {
     state.tab = tab;
-    ["catalog", "stats", "anomalies"].forEach(function (name) {
+    TABS.forEach(function (name) {
       document.getElementById("view-" + name).hidden = name !== tab;
     });
     document.querySelectorAll("#tabs button").forEach(function (btn) {
@@ -797,11 +854,11 @@
 
     document.getElementById("catalog-body").addEventListener("click", function (e) {
       var tr = e.target.closest("tr[data-id]");
-      if (tr) { state.selected = tr.getAttribute("data-id"); renderDrawer(); }
+      if (tr) selectRecord(tr.getAttribute("data-id"));
     });
     document.getElementById("anomaly-body").addEventListener("click", function (e) {
       var tr = e.target.closest("tr[data-id]");
-      if (tr) { state.selected = tr.getAttribute("data-id"); renderDrawer(); }
+      if (tr) selectRecord(tr.getAttribute("data-id"));
     });
 
     document.getElementById("drawer").addEventListener("click", function (e) {
@@ -841,8 +898,6 @@
     document.getElementById("anomaly-more").addEventListener("click", function (e) {
       if (e.target.closest("#anomaly-show-all")) { state.anomalyLimit = Infinity; renderAnomalies(); }
     });
-
-    window.addEventListener("hashchange", function () { /* keep state authoritative */ });
   }
 
   function renderDrawerStatic() { if (state.selected) renderDrawer(); }

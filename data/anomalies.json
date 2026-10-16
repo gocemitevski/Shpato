@@ -319,8 +319,7 @@
    "rule": "duplicate",
    "severity": "info",
    "raw": "Гарача",
-   "normalized": "instrumental-0005",
-   "ref": "instrumental-0005"
+   "normalized": "instrumental-0005"
   },
   {
    "id": "instrumental-0008",
@@ -1674,7 +1673,7 @@
    "rule": "possible-duplicate",
    "severity": "warning",
    "raw": "Четири такта",
-   "normalized": ""
+   "normalized": "arrThemes-0009"
   },
   {
    "id": "arrVocal-0001",
@@ -2175,7 +2174,7 @@
    "rule": "possible-duplicate",
    "severity": "warning",
    "raw": "Крајот на нашата љубов",
-   "normalized": ""
+   "normalized": "arrVocal-0063"
   },
   {
    "id": "arrVocal-0068",
@@ -2694,7 +2693,7 @@
    "rule": "possible-duplicate",
    "severity": "warning",
    "raw": "Мојот јуни",
-   "normalized": ""
+   "normalized": "arrVocal-0098"
   },
   {
    "id": "arrVocal-0106",
@@ -3143,7 +3142,7 @@
    "rule": "possible-duplicate",
    "severity": "warning",
    "raw": "Празно е без оваа љубов",
-   "normalized": ""
+   "normalized": "arrVocal-0143"
   },
   {
    "id": "arrVocal-0154",
@@ -3465,7 +3464,7 @@
    "rule": "possible-duplicate",
    "severity": "warning",
    "raw": "Сењорита Калипсо",
-   "normalized": ""
+   "normalized": "arrVocal-0170"
   },
   {
    "id": "arrVocal-0179",
@@ -3532,7 +3531,7 @@
    "rule": "possible-duplicate",
    "severity": "warning",
    "raw": "Сеќавање",
-   "normalized": ""
+   "normalized": "arrVocal-0163"
   },
   {
    "id": "arrVocal-0187",
