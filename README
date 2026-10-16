@@ -28,6 +28,8 @@ https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija
   assets/i18n.js             - текстови на македонски и англиски
   assets/app.js              - логика (пребарување, филтри, статистика, извоз)
   tools/build.py             - генерирање на нормализираните податоци
+  tools/cover.html           - шаблон за корицата за споделување (1920×1080)
+  tools/favicon.html         - шаблон за favicon-сликите
   data/catalog.json|.js      - нормализиран каталог (генериран)
   data/anomalies.json|.js    - забелешки за податоците (генерирани)
   sources/*.csv              - изворните датотеки (не се менуваат)

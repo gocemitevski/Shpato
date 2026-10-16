@@ -145,7 +145,7 @@
 
   // --------------------------------------------------------------- rendering
   function updateTitle() {
-    document.title = t("app.title") + " · " + t("tab." + state.tab);
+    document.title = t("app.title") + " - " + t("tab." + state.tab);
   }
 
   function renderStatic() {
@@ -419,8 +419,10 @@
       return "<dt>" + esc(t(labelKey)) + "</dt><dd>" + value + "</dd>";
     }
     var flags = r.flags.filter(function (f) { return f !== "duplicate"; });
+    // The notes turn amber exactly when the row carries the amber badge in the
+    // catalogue, so the same colour means the same thing in both places.
     var flagItems = flags.length
-      ? '<ul class="flags">' + flags.map(function (f) {
+      ? '<ul class="flags' + (r.warnCount ? " flags-warn" : "") + '">' + flags.map(function (f) {
           return "<li>• " + esc(t("rule." + f)) + "</li>";
         }).join("") + "</ul>"
       : '<p class="empty-note">' + esc(t("detail.noFlags")) + "</p>";
@@ -737,6 +739,16 @@
     state.theme = theme;
     document.documentElement.setAttribute("data-theme", theme);
     try { localStorage.setItem("shpato-theme", theme); } catch (e) {}
+    syncThemeColor();
+  }
+
+  // The browser chrome colour lives in the palette as --theme-color, so it
+  // cannot drift from the canvas it is meant to match.
+  function syncThemeColor() {
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (!meta) return;
+    var c = getComputedStyle(document.documentElement).getPropertyValue("--theme-color").trim();
+    if (c) meta.setAttribute("content", c);
   }
 
   function persist() { history.replaceState(null, "", serialize()); }
@@ -902,6 +914,7 @@
 
   function renderDrawerStatic() { if (state.selected) renderDrawer(); }
 
+  syncThemeColor();
   deserialize();
   renderStatic();
   bind();

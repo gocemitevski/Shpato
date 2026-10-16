@@ -1,0 +1,85 @@
+<!doctype html>
+<!--
+  Favicon render target.
+
+  Render one PNG per size with headless Chrome. The page is a render target
+  only: index.html never loads it. It links the app stylesheet so the ring
+  keeps the accent, and it reproduces .brand-mark's geometry at any size — a
+  2px accent ring at the header's 56px, scaled — so the icon is the same mark
+  the site shows rather than a lookalike.
+
+  The accent glow the header mark carries is left out: at icon sizes it is a
+  blur, not a ring.
+
+  Query parameters:
+    size  edge length in pixels (default 512)
+    ring  ring thickness as a fraction of the edge, overriding the default
+    bg    optional opaque background, e.g. bg=%230d1117 for the iOS tile
+
+  Regenerate every asset with:
+
+    cd assets/images
+    for s in 16 32 48 180; do
+      google-chrome --headless=new --hide-scrollbars \
+        --default-background-color=00000000 --force-device-scale-factor=1 \
+        --window-size=$s,$s --virtual-time-budget=3000 \
+        --screenshot=favicon-$s.png \
+        "file://$PWD/../../../tools/favicon.html?size=$s"
+    done
+    google-chrome --headless=new --hide-scrollbars \
+      --default-background-color=00000000 --force-device-scale-factor=1 \
+      --window-size=180,180 --virtual-time-budget=3000 \
+      --screenshot=apple-touch-icon.png \
+      "file://$PWD/../../../tools/favicon.html?size=140&bg=%230d1117"
+    convert favicon-16.png favicon-32.png favicon-48.png favicon.ico
+    rm favicon-48.png
+
+  iOS composites transparency onto black, so the touch icon is rendered with
+  the dark canvas behind it instead of a transparent edge, and with the mark
+  inset so the circle is not clipped by the platform's corner mask.
+-->
+<html lang="mk" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <title>Favicon render target</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+    html, body { margin: 0; background: transparent; }
+    /* Centring matters only when the mark is rendered smaller than the window,
+       which is how the iOS tile gets its padding. */
+    body { display: grid; place-items: center; min-height: 100vh; }
+    .icon {
+      display: block;
+      border-radius: 50%;
+      background: var(--accent);
+      overflow: hidden;
+    }
+    .icon img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <span class="icon" id="icon"><img src="../assets/images/Dragan-Gjakonovski-Shpato-Icon.webp" alt=""></span>
+  <script>
+    var q = new URLSearchParams(location.search);
+    var size = parseInt(q.get("size"), 10) || 512;
+    // .brand-mark's ring is 2px at 56px. Scaled faithfully that is under a
+    // pixel at 16px, where it disappears into the portrait, so the ring is
+    // held to at least 1px at 16 and 2px at 32-48. Above that the faithful
+    // proportion is thick enough to read and wins.
+    var min = size <= 16 ? 1 : size <= 48 ? 2 : 0;
+    var ring = q.get("ring") ? parseFloat(q.get("ring")) * size
+      : Math.max(size * (2 / 56), min);
+    var icon = document.getElementById("icon");
+    icon.style.width = size + "px";
+    icon.style.height = size + "px";
+    icon.style.padding = ring + "px";
+    if (q.get("bg")) document.body.style.background = q.get("bg");
+  </script>
+</body>
+</html>

@@ -47,6 +47,9 @@
   --accent-2: #0f766e;
   --warn: #a34a08;
   --warn-soft: #fef3c7;
+  /* Mirrored into <meta name="theme-color"> so the browser chrome matches the
+     theme that is actually on screen. The meta ships with the dark value. */
+  --theme-color: #f4f6f9;
 
   /* One hue per category, shared by the drawer tag and the statistics bars. */
   --cat-vocal: #2b5cf6;
@@ -81,6 +84,7 @@
   --accent-2: #4fd1c5;
   --warn: #f0b429;
   --warn-soft: #3a2c12;
+  --theme-color: #0d1117;
   --cat-vocal: #7aa2ff;
   --cat-vocal-soft: #16233f;
   --cat-instrumental: #4fd1c5;
@@ -602,6 +606,9 @@ main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; }
 .catalog-table td.cell-comp { color: var(--muted); }
 
 th.sortable { padding: 0; }
+/* A <button> does not inherit text-transform from its parent, so the th's
+   uppercase has to be handed down explicitly. Without this the sortable
+   headers render in sentence case while the plain ones are all caps. */
 .th-sort {
   display: flex;
   align-items: center;
@@ -610,6 +617,7 @@ th.sortable { padding: 0; }
   padding: .85rem 1.1rem;
   font: inherit;
   color: inherit;
+  text-transform: inherit;
   background: none;
   border: 0;
   cursor: pointer;
@@ -852,6 +860,9 @@ code.raw {
 }
 .drawer .flags { list-style: none; padding: 0; margin: 0; }
 .drawer .flags li { font-size: .85rem; color: var(--muted); padding: .2rem 0; }
+/* A record that carries the amber badge in the catalogue shows its notes in the
+   same amber, so the colour means one thing in both places. */
+.drawer .flags-warn li { color: var(--warn); }
 .drawer .empty-note { color: var(--muted); font-size: .85rem; margin: 0; }
 .drawer .related ul { list-style: none; padding: 0; margin: 0; }
 .drawer .related li { padding: .35rem 0; font-size: .88rem; border-bottom: 1px solid var(--line); }
