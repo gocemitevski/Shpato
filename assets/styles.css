@@ -293,10 +293,6 @@ main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; }
   gap: 2rem;
   align-items: start;
 }
-@media (max-width: 860px) {
-  .layout { grid-template-columns: 1fr; }
-}
-
 .filters {
   background: var(--panel);
   border: 1px solid var(--line);
@@ -308,7 +304,8 @@ main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; }
   max-height: calc(100vh - 88px);
   overflow-y: auto;
 }
-@media (max-width: 860px) {
+@media (max-width: 1240px) {
+  .layout { grid-template-columns: 1fr; }
   .filters { position: static; max-height: none; }
 }
 
@@ -426,6 +423,16 @@ main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; }
 .facet-list--scroll {
   max-height: 230px;
   overflow-y: auto;
+}
+/* Stacked layout: the filter panel spans the full width, so let the facet
+   lists flow into columns and keep each label next to its count. */
+@media (max-width: 1240px) {
+  .facet-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: .05rem 2rem;
+  }
+  .facet-list--scroll { max-height: 280px; }
 }
 .facet-item {
   display: flex;
