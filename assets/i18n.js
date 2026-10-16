@@ -3,7 +3,7 @@ window.I18N = {
   mk: {
     "app.title": "Драган Ѓаконовски – Шпато",
     "app.subtitle": "Дигитален каталог на делата во фонотеката на МРТВ",
-    "app.monograph": "Монографија",
+    "app.credit": "Изработено од",
     "theme.label": "Тема",
     "theme.light": "Светла",
     "theme.dark": "Темна",
@@ -133,7 +133,7 @@ window.I18N = {
   en: {
     "app.title": "Dragan Gjakonovski – Shpato",
     "app.subtitle": "Digital catalogue of his works in the MRTV phonotheque",
-    "app.monograph": "Monograph",
+    "app.credit": "Made by",
     "theme.label": "Theme",
     "theme.light": "Light",
     "theme.dark": "Dark",

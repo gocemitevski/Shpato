@@ -157,8 +157,6 @@
     document.getElementById("show-duplicates-label").textContent = t("results.showDuplicates");
     document.getElementById("filters-title").textContent = t("filters.title");
     document.getElementById("clear-filters").textContent = t("filters.clear");
-    document.getElementById("footer-source").innerHTML =
-      '<a href="' + esc(META.source) + '" target="_blank" rel="noopener">' + t("app.monograph") + "</a>";
     document.getElementById("footer-note").textContent =
       "© " + t("app.title") + " · " + num(META.total) + " · " + META.counts.vocal + "/" +
       META.counts.instrumental + "/" + META.counts.arrThemes + "/" + META.counts.arrVocal;
