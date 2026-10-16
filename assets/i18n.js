@@ -94,8 +94,8 @@ window.I18N = {
     "notes.source": "Извор",
     "notes.empty": "Нема забелешки.",
     "notes.allRules": "Сите правила",
-    "severity.info": "информација",
-    "severity.warning": "предупредување",
+    "severity.info": "Информација",
+    "severity.warning": "Предупредување",
 
     "rule.duration-missing-separator": "Времетраење без децимална точка (405 → 4:05)",
     "rule.duration-ambiguous-seconds": "Двозначно времетраење (3.7 → 3:07)",
@@ -223,8 +223,8 @@ window.I18N = {
     "notes.source": "Source",
     "notes.empty": "No notes.",
     "notes.allRules": "All rules",
-    "severity.info": "info",
-    "severity.warning": "warning",
+    "severity.info": "Info",
+    "severity.warning": "Warning",
 
     "rule.duration-missing-separator": "Duration without decimal point (405 → 4:05)",
     "rule.duration-ambiguous-seconds": "Ambiguous duration (3.7 → 3:07)",
