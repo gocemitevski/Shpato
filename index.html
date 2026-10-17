@@ -63,7 +63,7 @@
   </script>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body>
+<body class="app">
   <a class="skip-link" href="#main" data-i18n="a11y.skip"></a>
 
   <header class="site-header">
@@ -267,14 +267,16 @@
         <li><a href="https://js.ugd.edu.mk/index.php/YFMA/article/view/2916" target="_blank" rel="noopener" data-i18n="about.source3"></a></li>
       </ul>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <p class="footer-credit">
-      <span data-i18n="app.credit"></span>
-      <a href="https://www.gocemitevski.com" target="_blank" rel="noopener">Гоце Митевски</a>.
-    </p>
-  </footer>
+    <!-- Inside main on purpose: the shell does not scroll as a document, so
+         the footer rides at the end of the pane that does. -->
+    <footer class="site-footer">
+      <p class="footer-credit">
+        <span data-i18n="app.credit"></span>
+        <a href="https://www.gocemitevski.com" target="_blank" rel="noopener">Гоце Митевски</a>.
+      </p>
+    </footer>
+  </main>
 
   <!-- Detail drawer -->
   <div id="drawer" class="drawer" hidden>

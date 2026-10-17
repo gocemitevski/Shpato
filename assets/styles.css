@@ -317,9 +317,59 @@ a { color: var(--accent-2); }
   border-bottom-color: var(--accent);
 }
 
-main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; flex-grow: 1; }
+main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 0; flex-grow: 1; }
 
-.view { width: 100%; }
+/* ----------------------------------------------------------------- shell */
+/* The app is a shell: the document itself never scrolls, so the header and the
+   tab bar cannot be scrolled out of reach. What scrolls instead are the panes
+   inside the visible view, and the footer, which is the last thing main
+   reaches. The body class scopes all of this to index.html — tools/cover.html
+   and tools/favicon.html link this stylesheet and must keep their own bodies.
+   dvh, not vh: on mobile 100vh is the height with the address bar hidden,
+   which would push the shell's bottom edge underneath it. */
+body.app {
+  display: grid;
+  /* One column, pinned to the viewport. Left to itself the implicit column is
+     sized to content, and the tab strip's min-content is wider than a phone,
+     which would push the last tab out behind the clipped edge. */
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto minmax(0, 1fr);
+  min-height: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+body.app main { min-height: 0; overflow-y: auto; }
+
+.view { width: 100%; padding-bottom: 4rem; }
+
+/* The catalogue and the notes fill their pane rather than growing the page.
+   Their toolbars stay put and the tables scroll inside their own cards, which
+   is also what finally gives .table-wrap's sticky header row something to
+   stick to. */
+#view-catalog {
+  height: 100%;
+  padding-bottom: 0;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+}
+#view-notes {
+  height: 100%;
+  padding-bottom: 0;
+  display: grid;
+  grid-template-rows: auto auto auto minmax(0, 1fr) auto auto;
+}
+
+/* A window too short to hold the shell is worse than a scrolling document:
+   below this the header and the toolbar leave the table almost nothing, so
+   the page goes back to behaving like one. */
+@media (max-height: 600px) {
+  body.app { display: block; min-height: 100vh; height: auto; overflow: visible; }
+  body.app main { overflow: visible; }
+  #view-catalog, #view-notes { display: block; height: auto; padding-bottom: 0; }
+  .layout { display: block; }
+  .results { display: block; }
+}
 
 /* --------------------------------------------------------------- toolbar */
 .toolbar {
@@ -379,7 +429,7 @@ main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; flex-grow: 1; }
   display: grid;
   grid-template-columns: 500px 1fr;
   gap: 2rem;
-  align-items: start;
+  min-height: 0;
 }
 .filters {
   background: var(--panel);
@@ -387,14 +437,17 @@ main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; flex-grow: 1; }
   border-radius: var(--radius);
   padding: .4rem 1.1rem 1rem;
   box-shadow: var(--shadow-sm);
-  position: sticky;
-  top: 68px;
-  max-height: calc(100vh - 88px);
+  min-height: 0;
   overflow-y: auto;
+  /* Reaching the end of a facet list must not carry on into the pane behind
+     it — the two scroll independently. */
+  overscroll-behavior: contain;
 }
+/* Too narrow for two panes: the filters sit above the table, so the pane is
+   split between them by proportion — neither can push the other out of sight,
+   and each scrolls on its own. */
 @media (max-width: 1240px) {
-  .layout { grid-template-columns: 1fr; }
-  .filters { position: static; max-height: none; }
+  .layout { grid-template-columns: 1fr; grid-template-rows: minmax(0, 40%) minmax(0, 1fr); }
 }
 
 .filters-head {
@@ -562,11 +615,19 @@ main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; flex-grow: 1; }
 .range-row input[type="range"] { width: 100%; accent-color: var(--accent); }
 
 /* --------------------------------------------------------------- results */
-.results { min-width: 0; }
+/* Three rows: the count, the scrolling table, the empty message. */
+.results {
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
 .result-meta { margin: 0 1rem 1rem; color: var(--muted); font-size: .88rem; }
 
 .table-wrap {
-  overflow-x: auto;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--panel);
@@ -585,6 +646,9 @@ main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; flex-grow: 1; }
   border-bottom: 1px solid var(--line);
   vertical-align: top;
 }
+/* Sticky against .table-wrap's own scrollport, so the header row stays over the
+   rows as the card scrolls. The opaque background is what keeps the rows from
+   showing through it. */
 .catalog-table thead th {
   position: sticky;
   top: 0;
@@ -1000,11 +1064,17 @@ code.raw {
 .player-close:focus-visible,
 .player-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
 
-/* Keep the last rows reachable while the player is open. */
-body.player-open main { padding-bottom: 18rem; }
+/* Keep the last rows reachable while the player is open. The room is made
+   inside the scrolling table, not by padding main — padding main would make
+   the shell scroll to reveal nothing but itself. */
+body.player-open .table-wrap { padding-bottom: 18rem; }
+body.player-open .view { padding-bottom: 18rem; }
 
 /* ---------------------------------------------------------------- footer */
 .site-footer {
+  /* Inside main, so it bleeds back out through main's padding: the rule spans
+     the page and the credit keeps the indent it had as a body child. */
+  margin: 0 calc(-1 * clamp(1rem, 4vw, 2.5rem));
   border-top: 1px solid var(--line);
   padding: 1.5rem clamp(1rem, 4vw, 2.5rem);
   color: var(--muted);
@@ -1014,6 +1084,12 @@ body.player-open main { padding-bottom: 18rem; }
 
 @media print {
   .tabs, .toolbar, .filters, .lang-toggle, .theme-toggle, .drawer, .player, .site-footer { display: none !important; }
-  .layout { grid-template-columns: 1fr; }
+  /* The shell is a screen layout. Unless it is undone here, the printer gets a
+     single clipped viewport of a scroll pane instead of the whole catalogue. */
+  body.app { display: block; height: auto; min-height: 0; overflow: visible; }
+  body.app main { overflow: visible; }
+  #view-catalog, #view-notes { display: block; height: auto; }
+  .layout { display: block; }
+  .results { display: block; }
   body { background: #fff; }
 }

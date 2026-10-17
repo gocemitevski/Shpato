@@ -125,6 +125,51 @@ the tab states what they collectively support.
   band, taken from slobodnaevropa.mk/a/3537129.html. It is RFE/RL's, so the
   caption carries the credit (`about.credit`); keep the credit with the image.
 
+## The shell
+
+`index.html` is an app shell, not a document: `body.app` is a grid pinned to
+`100dvh` with `overflow: hidden`, and the page itself never scrolls. What
+scrolls is `main`, and the panes inside the visible view. The body class is what
+keeps all of this off `tools/cover.html` and `tools/favicon.html`, which link the
+same stylesheet and must keep their own bodies.
+
+- `#view-catalog` and `#view-notes` fill their pane (`height: 100%`; a grid whose
+  middle row is `minmax(0, 1fr)`) instead of growing the page, so their toolbars
+  stay put and the tables scroll inside their own cards. That is also what
+  finally gives `.catalog-table thead th { position: sticky; top: 0 }` something
+  to stick to: while `.table-wrap` was `overflow-x: auto` only, its `overflow-y`
+  still computed to `auto`, so the card was already a scroll container that
+  never scrolled vertically. Bound the table and the sticky header works for
+  free.
+- The `body.app` column is `minmax(0, 1fr)` on purpose. Left implicit, the column
+  sizes to content and the tab strip's min-content is wider than a phone: the
+  shell grows past the viewport and the last tab ends up behind the clipped
+  edge, with nothing left to scroll it back.
+- `<footer>` lives inside `<main>`. The shell has nowhere else to put it, and
+  this way it is the last thing the pane reaches, in every view. In the
+  catalogue that leaves `main` exactly the footer's height of scroll (76px at a
+  desktop width) — the catalogue is the one place `main` has a scrollbar, and
+  it is the price of keeping the footer out of the panes.
+- `.filters` and `.table-wrap` set `overscroll-behavior: contain`: a wheel that
+  reaches the end of a facet list or of the table stops there instead of
+  carrying on into the shell.
+- Below 1240px the filters sit above the table, so `.layout` splits the pane by
+  proportion instead (40% / 60%): neither can push the other out of sight and
+  each scrolls on its own.
+- Below 600px of *viewport height* the shell stands down
+  (`@media (max-height: 600px)`) and the page scrolls as a document again. A
+  window that short has no room for the header, the toolbar and a table worth
+  reading. The print block undoes the shell for the same kind of reason: a
+  printer wants the whole catalogue, not one clipped viewport of a scroll pane.
+- `setTab()` sets `main.scrollTop = 0`. With the document no longer scrolling,
+  nothing else moves the pane when the tab changes.
+- `body.player-open` reserves the player's room inside `.table-wrap` and `.view`,
+  never by padding `main`: padding `main` would make the shell scroll to reveal
+  nothing but itself.
+
+The check that matters when touching any of this is positional: scroll the table
+to its end and the header, the tab bar and the facet sidebar must not have moved.
+
 ## Conventions
 
 - **All UI text is bilingual.** Adding a key means adding it to *both* `mk` and

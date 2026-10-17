@@ -821,6 +821,10 @@
   // ------------------------------------------------------------------ main
   function setTab(tab) {
     state.tab = tab;
+    // The shell does not scroll as a document, so the pane that does has to be
+    // sent back to the top by hand: otherwise a tab opens part-way down
+    // wherever the previous one was left.
+    document.getElementById("main").scrollTop = 0;
     TABS.forEach(function (name) {
       document.getElementById("view-" + name).hidden = name !== tab;
     });
