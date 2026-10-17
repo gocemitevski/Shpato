@@ -738,10 +738,13 @@ body.app main { min-height: 0; overflow-y: auto; }
    title wide enough to fill the cell broke the line after the icon and left
    it stranded above the text, and the icon's baseline is the bottom edge of
    its <svg> rather than its text, which no vertical-align can line up across
-   fonts and sizes. Centred on the text, the icon needs no magic number. */
+   fonts and sizes. The icon rides the title's first line (see .row-play), so
+   the line starts its items at the top: centring them would centre them on
+   the whole title, which on a phone is a paragraph of two or three lines, and
+   the icon would hang beside its middle. */
 .cell-title-inner {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .row-open {
   font: inherit;
@@ -788,8 +791,12 @@ td.sig {
   color: var(--muted);
 }
 
+/* The warning count trails the title rather than leading it, and a marker
+   after a wrapped paragraph belongs at its end, so this one keeps the
+   centring the flex line no longer gives it. */
 .badge {
   display: inline-flex;
+  align-self: center;
   align-items: center;
   justify-content: center;
   min-width: 1.15rem;
@@ -1068,14 +1075,22 @@ code.raw {
 
 /* --------------------------------------------------------------- playback */
 /* The play button is only rendered where a video is known, so the affordance
-   is itself the answer to "can I hear this one?". */
+   is itself the answer to "can I hear this one?". It rides the title's first
+   line: half the difference between its own box and one line box (`1lh` is
+   the inherited line-height, which `font: inherit` makes the title's own)
+   drops it from the top of the flex line to the centre of that first line. On
+   a one-line title that is exactly where centring the flex line used to put
+   it, so only a title that has wrapped — a phone — changes, and no number
+   here is hand-picked. */
 .row-play {
   display: inline-flex;
   flex-shrink: 0;
+  font: inherit;
   align-items: center;
   justify-content: center;
   width: 1.3rem;
   height: 1.3rem;
+  margin-top: calc((1lh - 1.3rem) / 2);
   margin-right: .5rem;
   padding: 0;
   border: 0;

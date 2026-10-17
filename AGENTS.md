@@ -257,7 +257,14 @@ footer must not have moved.
   the play icon and the title must not be able to break apart, and the icon's
   baseline is the bottom edge of its `<svg>` rather than its text. Returning
   that cell to plain inline flow strands the icon above any title wide enough
-  to fill the column.
+  to fill the column. Its items start at the top of the line and the button
+  then drops by `calc((1lh - 1.3rem) / 2)`, so the icon centres on the title's
+  *first* line: centring it in the line instead centres it on the whole title,
+  which on a phone is two or three lines, and the icon hangs beside the
+  second. `1lh` is derived from the inherited line-height rather than chosen,
+  and `flex-shrink: 0` on the button is not what keeps it round — nothing in a
+  table cell shrinks it. The warning badge keeps the old centring, because it
+  trails the title rather than leading it.
 - `[hidden] { display: none !important }` is the only hide mechanism. Use the
   `hidden` property/attribute, not classes.
 - `* { box-sizing: border-box }` is global, so a fixed `width` includes padding.
