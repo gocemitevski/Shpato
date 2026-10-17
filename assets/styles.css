@@ -981,13 +981,6 @@ code.raw {
 }
 @keyframes slide-in { from { transform: translateX(30px); opacity: .4; } to { transform: none; opacity: 1; } }
 
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .drawer-panel { animation: none; }
-  .player { animation: none; }
-  .bar-fill { animation: none; }
-}
-
 .drawer-close {
   position: absolute;
   top: .7rem;
@@ -1154,6 +1147,16 @@ body.player-open .view { padding-bottom: 18rem; }
 .footer-share a:hover { background: var(--accent-soft); color: var(--accent); }
 .footer-share a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .footer-share svg { width: .95rem; height: .95rem; fill: currentColor; }
+
+/* Animations are declared per component, so this block has to come after all of
+   them. It used to sit up with the drawer, where the player's slide-up --
+   declared further down the file -- quietly outranked it and kept animating. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .drawer-panel { animation: none; }
+  .player { animation: none; }
+  .bar-fill { animation: none; }
+}
 
 @media print {
   .tabs, .toolbar, .filters, .lang-toggle, .theme-toggle, .drawer, .player, .site-footer { display: none !important; }

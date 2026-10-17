@@ -275,6 +275,11 @@ Focus order is keyboard-complete; the catalogue table's row buttons alone are
 434 tab stops, plus one more for each of the 39 play buttons, so avoid adding
 anything focusable per row without thinking about it.
 
+`prefers-reduced-motion` is honoured for the drawer's slide-in, the player's
+slide-up and the stats bars. That block sits at the very end of the stylesheet
+on purpose: the animations are declared per component, so a copy placed with
+any one of them would be outranked by the others declared below it.
+
 ## Assets
 
 `tools/cover.html` and `tools/favicon.html` are standalone pages that link
