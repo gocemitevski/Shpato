@@ -102,6 +102,11 @@ mounting a player that can only fail. Do not "simplify" that branch away.
 - The branded categories are driven by a single `data-cat` attribute that
   resolves to the inheritable `--cat` / `--cat-soft` custom properties. Don't
   special-case a category in JS.
+- A catalogue row's title cell is a flex line (`.cell-title-inner`), because
+  the play icon and the title must not be able to break apart, and the icon's
+  baseline is the bottom edge of its `<svg>` rather than its text. Returning
+  that cell to plain inline flow strands the icon above any title wide enough
+  to fill the column.
 - `[hidden] { display: none !important }` is the only hide mechanism. Use the
   `hidden` property/attribute, not classes.
 - `* { box-sizing: border-box }` is global, so a fixed `width` includes padding.

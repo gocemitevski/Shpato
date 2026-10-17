@@ -600,6 +600,15 @@ main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 4rem; flex-grow: 1; }
 .catalog-table tbody tr { cursor: pointer; transition: background-color .12s ease; }
 .catalog-table tbody tr:hover { background: var(--accent-soft); }
 .catalog-table td.cell-title { font-weight: 500; }
+/* The play icon and the title share one flex line. As plain inline boxes a
+   title wide enough to fill the cell broke the line after the icon and left
+   it stranded above the text, and the icon's baseline is the bottom edge of
+   its <svg> rather than its text, which no vertical-align can line up across
+   fonts and sizes. Centred on the text, the icon needs no magic number. */
+.cell-title-inner {
+  display: inline-flex;
+  align-items: center;
+}
 .row-open {
   font: inherit;
   color: inherit;
@@ -878,7 +887,6 @@ code.raw {
   border-radius: 50%;
   background: var(--accent-soft);
   color: var(--accent);
-  vertical-align: -.2rem;
   cursor: pointer;
   transition: background-color .12s ease, color .12s ease;
 }

@@ -381,8 +381,9 @@
           '<path d="M3.2 1.4 10 6 3.2 10.6Z"/></svg></button>'
         : "";
       return '<tr data-id="' + r.id + '">' +
-        '<td class="cell-title">' + play +
-        '<button type="button" class="row-open">' + esc(r.title) + "</button>" + warn + "</td>" +
+        '<td class="cell-title"><span class="cell-title-inner">' + play +
+        '<button type="button" class="row-open">' + esc(r.title) + "</button>" + warn +
+        "</span></td>" +
         '<td class="cell-perf">' + esc(r.performer || t("common.none")) + "</td>" +
         '<td class="cell-comp">' + esc(r.composer || "") + "</td>" +
         '<td class="dur">' + fmt(r.durationSec) + "</td>" +
