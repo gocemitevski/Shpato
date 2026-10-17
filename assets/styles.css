@@ -320,6 +320,19 @@ a { color: var(--accent-2); }
   color: var(--ink);
   border-bottom-color: var(--accent);
 }
+/* The four tabs need 443px and a phone offers 361 of them, so at the full gap
+   and size the last one hangs off the edge: swipeable, but with nothing showing
+   that it is. Tighter, they fit from 360px up, and tighter again on the smallest
+   screens (a 320px phone, or a window at 200% zoom). The strip's own padding is
+   left where main's is, so the first tab still lines up with the table. */
+@media (max-width: 620px) {
+  .tabs { gap: .75rem; }
+  .tabs button { font-size: .78rem; padding: .9rem 0; }
+}
+@media (max-width: 360px) {
+  .tabs { gap: .4rem; }
+  .tabs button { font-size: .7rem; }
+}
 
 /* The bottom padding is the gap between the pane and the footer rule: flush,
    the card's own border and the rule read as one line. */
@@ -373,15 +386,33 @@ body.app main { min-height: 0; overflow-y: auto; }
   grid-template-rows: auto auto auto minmax(0, 1fr) auto auto;
 }
 
-/* A window too short to hold the shell is worse than a scrolling document:
-   below this the header and the toolbar leave the table almost nothing, so
-   the page goes back to behaving like one. */
-@media (max-height: 600px) {
-  body.app { display: block; min-height: 100vh; height: auto; overflow: visible; }
+/* A shell that leaves the table almost nothing is worse than a scrolling
+   document, so it stands down and the page behaves like one again. Two windows
+   qualify. A short one, where the header and the toolbar crowd the pane off the
+   screen. And a narrow one — a phone — where the same shell costs more than it
+   gives: the table gets about 45% of the height, the browser's address bar can
+   never collapse because the document never scrolls to dismiss it, and the tab
+   bar still sticks to the top (it is the document that scrolls now, so the
+   sticky rule lands on the viewport). What is given up is the sticky column
+   header: with the page scrolling, .table-wrap is no longer a scroll container,
+   so its thead has no scrollport to stick to, and the sort buttons live at the
+   top of the table. That is already the case on a phone in landscape.
+   min-height in dvh as well as vh: the shell's own reason, and here it decides
+   where the footer sits on a short page. */
+@media (max-height: 600px), (max-width: 620px) {
+  body.app { display: block; min-height: 100vh; min-height: 100dvh; height: auto; overflow: visible; }
   body.app main { overflow: visible; }
   #view-catalog, #view-notes { display: block; height: auto; padding-bottom: 0; }
   .layout { display: block; }
   .results { display: block; }
+  /* Both still scroll inside themselves here, but the document is the scroller
+     now, so a drag that runs off either one has to carry on into the page
+     instead of stopping dead: the table is most of a phone screen, and contain
+     made it a dead zone for scrolling. Only the vertical axis is released; the
+     horizontal one still pans the table. Scoped to body.app because the base
+     rule is a shorthand declared further down, which would otherwise reset the
+     axis again. */
+  body.app .table-wrap, body.app .filters { overscroll-behavior-y: auto; }
 }
 
 /* --------------------------------------------------------------- toolbar */

@@ -196,15 +196,35 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   other.
 - Below 620px the mark also shrinks to 40px, and the search gives up its 320px
   basis so the handle shares its row instead of costing a row of its own. The
-  subtitle is *not* dropped there: it wraps to two lines and the header costs the
-  pane 23px for it, which is cheaper than the empty band it looks like without
-  one. It is only the mark that the breakpoint touches, and `text-wrap: balance`
-  keeps the two lines from ending on "МРТВ".
-- Below 600px of *viewport height* the shell stands down
-  (`@media (max-height: 600px)`) and the page scrolls as a document again. A
-  window that short has no room for the header, the toolbar and a table worth
-  reading. The print block undoes the shell for the same kind of reason: a
-  printer wants the whole catalogue, not one clipped viewport of a scroll pane.
+  four tabs need 443px at the default gap and size and a phone offers 361 of
+  them, so the strip tightens too — `.78rem` labels and `.75rem` gaps, and
+  `.7rem` with `.4rem` gaps under 360px (a 320px phone, or a window at 200%
+  zoom). The last tab used to hang off the edge: swipeable, but with nothing
+  showing that it was. The strip's own padding stays where `main`'s is, so the
+  first tab still lines up with the table. The subtitle is *not* dropped there:
+  it wraps to two lines and the header costs the pane 23px for it, which is
+  cheaper than the empty band it looks like without one. It is only the mark
+  that the breakpoint touches, and `text-wrap: balance` keeps the two lines from
+  ending on "МРТВ".
+- The shell stands down in two windows. Below 600px of *viewport height*
+  (`@media (max-height: 600px)`) there is no room for the header, the toolbar
+  and a table worth reading. Below 620px of *width* — a phone — the shell costs
+  more than it gives: at 393x851 the pinned chrome took 356px of 851 and left the
+  table 380px, about seven rows, and with no document to scroll the browser's
+  address bar could never collapse to give any of it back. Stood down, the table
+  has the whole page and the tab bar still sticks to the top (the document is the
+  scrollport now); what is given up is the sticky column header, because the card
+  is no longer a scroll container and its `thead` has nothing to stick to, so the
+  five sort buttons live at the head of the table. The print block undoes the
+  shell for the same kind of reason: a printer wants the whole catalogue, not one
+  clipped viewport of a scroll pane.
+- Stood down, `.table-wrap` and `.filters` release their vertical
+  `overscroll-behavior: contain` (`overscroll-behavior-y: auto`, scoped to
+  `body.app` because the base rule is a shorthand declared later in the file and
+  would otherwise reset the axis). The card cannot scroll vertically there — its
+  box is the whole table — so without the release a drag over it, which is most
+  of a phone screen, scrolls nothing at all. The horizontal containment stays:
+  that axis still pans the table.
 - `setTab()` sends both scrolls back to the top: `main.scrollTop = 0` for the
   pinned shell, and `window.scrollTo(0, 0)` for when it has stood down and the
   document is the scroller. Without both, a tab opens part-way down wherever the
@@ -215,9 +235,9 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   never by padding `main`: padding `main` would make the shell scroll to reveal
   nothing but itself.
 
-The check that matters when touching any of this is positional: scroll the table
-to its end and the header, the tab bar, the facet sidebar and the footer must not
-have moved.
+The check that matters when touching any of this is positional: with the shell up,
+scroll the table to its end and the header, the tab bar, the facet sidebar and the
+footer must not have moved.
 
 ## Conventions
 
