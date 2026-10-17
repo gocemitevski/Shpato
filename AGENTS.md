@@ -51,6 +51,9 @@ edit it by hand. To fix data:
 2. run `python3 tools/build.py`,
 3. commit the CSV **and** the regenerated `data/*` together.
 
+The CSVs are CRLF, like the monograph exports they came from. A tool that
+rewrites one has to write CRLF as well, or the commit is the whole file.
+
 The build is deliberately reproducible: `python3 tools/build.py && git diff
 --exit-code data/` must be silent. That is why there is no build timestamp in
 the payload. If your change makes that command dirty, something in the build is
@@ -79,16 +82,21 @@ The field is present on every record, `null` when unknown.
 search page. It is a convenience, never a build step, and it does not decide:
 every line of `sources/youtube.csv` was read by a human. Video length is
 compared against `durationSec` and marked when it agrees — a useful signal,
-not proof.
+not proof. Check it against the *other* records that share the title too: 38
+catalogue titles name more than one work, and a candidate whose length fits a
+sibling record's `durationSec` better than its own is very likely that
+sibling's recording. (A full pass with this tool over the 411 unlinked works
+found 15 links; the corpus is mostly not on YouTube.)
 
 The finder searches a work by title **and** performer first, and widens to the
 romanised form and only then to the title alone, each step running only while
 nothing found so far shares a real word with the work. That order is measured,
-not taste: against the 23 curated links the strict query reaches 23/23,
-romanised 22/23, title-only 13/23 — YouTube matches across scripts by itself,
+not taste: against the 39 curated links the strict query reaches 39/39,
+romanised 36/39, title-only 30/39 — YouTube matches across scripts by itself,
 and 38 titles are shared by more than one work. So widening mostly shows junk
 for works that are simply not on YouTube; it is a last look, not a routine
-step. The finder reuses `to_latin()` from `build.py` rather than growing a
+step — over the 411 unlinked works the chain averaged 1.07 searches per work.
+The finder reuses `to_latin()` from `build.py` rather than growing a
 third transliteration.
 
 YouTube will not play an embed on a page with no origin: Chrome sends no
@@ -264,7 +272,7 @@ panel and one-character count chips are pre-existing false positives, not
 regressions.
 
 Focus order is keyboard-complete; the catalogue table's row buttons alone are
-434 tab stops, plus one more for each of the 23 play buttons, so avoid adding
+434 tab stops, plus one more for each of the 39 play buttons, so avoid adding
 anything focusable per row without thinking about it.
 
 ## Assets

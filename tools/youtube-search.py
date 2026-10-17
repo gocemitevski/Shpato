@@ -13,12 +13,14 @@ A work is searched with its title and performer. Only when that returns
 nothing that looks like the work does the search widen: the same terms
 romanised, then the title without the performer.
 
-That order is measured, not guessed. Against the 23 links already curated, the
-title+performer query returns the right video for all 23 (twenty of them as the
-top hit), romanising it returns 22, and dropping the performer returns 13 --
-because 38 catalogue titles are shared by more than one work. YouTube matches
-across scripts on its own, so the romanised form is a fallback for the works
-the first query misses, not a routine second search. Which query returned the
+That order is measured, not guessed. Against the 39 links curated so far, the
+title+performer query returns the right video for all 39 (28 of them as the top
+hit), romanising it returns 36, and dropping the performer returns 30 -- because
+38 catalogue titles are shared by more than one work. The set keeps growing from
+this query itself, so read the first figure as a ceiling. YouTube matches across
+scripts on its own, so the romanised form is a fallback for the works the first
+query misses, not a routine second search: over a full pass of the 411 unlinked
+works the chain averaged 1.07 searches per work. Which query returned the
 results is always printed.
 
     python3 tools/youtube-search.py                     # first 25 unlinked works
@@ -179,12 +181,12 @@ def variants_for(title, performer):
     """Query variants for one work, best first, as [(label, query)].
 
     The first is the query this tool has always used, and it is still the best
-    one available: run against the 23 hand-verified links it returns the right
-    video for 23 of 23, twenty of them as the top hit. The rest exist only for
+    one available: run against the 39 hand-verified links it returns the right
+    video for 39 of 39, 28 of them as the top hit. The rest exist only for
     the works it fails on, and they are ordered by what measured as a useful
     fallback -- first the terms again in the Latin script, which some uploads
     are titled in, then without the performer, which measurably costs accuracy
-    (13 of 23) because 38 titles are shared by more than one work.
+    (30 of 39) because 38 titles are shared by more than one work.
 
     Anything that repeats an earlier query is dropped, so a work with no
     performer recorded costs no extra search.
@@ -229,7 +231,7 @@ def collect(wanted, variants, top, exhaustive, delay):
 
     A variant only runs while nothing found so far shares a real word with the
     work, so the common case -- the first query reaching it, which is every one
-    of the 23 links already curated -- costs exactly one search, as before.
+    of the 39 links curated so far -- costs exactly one search, as before.
     `--exhaustive` runs them all regardless.
     """
     tried = []
