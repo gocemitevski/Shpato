@@ -153,9 +153,21 @@ same stylesheet and must keep their own bodies.
 - `.filters` and `.table-wrap` set `overscroll-behavior: contain`: a wheel that
   reaches the end of a facet list or of the table stops there instead of
   carrying on into the shell.
-- Below 1240px the filters sit above the table, so `.layout` splits the pane by
-  proportion instead (40% / 60%): neither can push the other out of sight and
-  each scrolls on its own.
+- From 1024px up the facet panel is a permanent left pane
+  (`clamp(260px, 32vw, 500px)`). Below that it is a disclosure above the table,
+  opened from a handle in the toolbar (`#filters-toggle`, the export menu's
+  `aria-expanded` + `hidden` idiom: no modal, no focus trap). Closed, the table
+  keeps the whole pane; open, `.layout:has(.filters:not([hidden]))` splits it
+  55/45 so neither can push the other out of sight, and the panel scrolls inside
+  its share.
+- The width is the script's business too, through those same two breakpoints:
+  `matchMedia("(min-width: 1024px)")` hands the panel over — wide, it is simply
+  there and the handle is hidden; narrow, the handle shows and the panel starts
+  closed — and `matchMedia("(max-width: 620px)")` hides `#app-subtitle`. The
+  widths are written out in the stylesheet and in `app.js` by hand, so changing
+  one means changing the other.
+- Below 620px the mark also shrinks to 40px, and the search gives up its 320px
+  basis so the handle shares its row instead of costing a row of its own.
 - Below 600px of *viewport height* the shell stands down
   (`@media (max-height: 600px)`) and the page scrolls as a document again. A
   window that short has no room for the header, the toolbar and a table worth
@@ -175,7 +187,7 @@ to its end and the header, the tab bar and the facet sidebar must not have moved
 - **All UI text is bilingual.** Adding a key means adding it to *both* `mk` and
   `en` in `assets/i18n.js`. `t()` falls back to English silently, so a missing
   Macedonian key will not throw — it will just ship English. Keys are currently
-  at parity (145 each).
+  at parity (146 each).
 - **Capitalisation lives in the strings, not in CSS.** A `<select>`'s
   `<option>` does not inherit `text-transform`, so a CSS-capitalised label looks
   right in the table and wrong in a dropdown. Capitalise in `i18n.js`.

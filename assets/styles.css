@@ -208,10 +208,13 @@ a { color: var(--accent-2); }
 
 .header-actions { display: flex; align-items: center; gap: .6rem; }
 
-/* Narrow screens: give the brand its own row so the title stops wrapping. */
+/* Narrow screens: give the brand its own row so the title stops wrapping, drop
+   the subtitle (the script hides it, so it leaves the accessibility tree with
+   the pixels) and shrink the mark. */
 @media (max-width: 620px) {
   .site-header { flex-wrap: wrap; }
-  .brand { flex: 1 1 100%; }
+  .brand { flex: 1 1 100%; gap: .75rem; }
+  .brand-mark { width: 40px; height: 40px; }
   .header-actions { margin-left: auto; }
 }
 
@@ -391,6 +394,18 @@ body.app main { min-height: 0; overflow-y: auto; }
 }
 .search:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
 
+/* The facet panel's handle, shown only below the two-pane width. It borrows the
+   export button's chevron idiom: a chevron that turns over when it opens. */
+.filters-toggle { display: inline-flex; align-items: center; gap: .4rem; }
+.filters-toggle .chev { transition: transform .15s ease; transform: rotate(90deg); }
+.filters-toggle[aria-expanded="true"] .chev { transform: rotate(270deg); }
+.filters-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* On a phone, let the search share its row with the panel's handle instead of
+   taking the width and pushing the handle onto a row of its own. */
+@media (max-width: 620px) {
+  .search { flex: 1 1 160px; min-width: 120px; }
+}
+
 .check {
   display: inline-flex;
   align-items: center;
@@ -427,7 +442,9 @@ body.app main { min-height: 0; overflow-y: auto; }
 /* ---------------------------------------------------------------- layout */
 .layout {
   display: grid;
-  grid-template-columns: 500px 1fr;
+  /* A permanent left pane from 1024px up: wide enough for a performer list,
+     never more than a third of the window. */
+  grid-template-columns: clamp(260px, 32vw, 500px) minmax(0, 1fr);
   gap: 2rem;
   min-height: 0;
 }
@@ -443,11 +460,22 @@ body.app main { min-height: 0; overflow-y: auto; }
      it — the two scroll independently. */
   overscroll-behavior: contain;
 }
-/* Too narrow for two panes: the filters sit above the table, so the pane is
-   split between them by proportion — neither can push the other out of sight,
-   and each scrolls on its own. */
-@media (max-width: 1240px) {
-  .layout { grid-template-columns: 1fr; grid-template-rows: minmax(0, 40%) minmax(0, 1fr); }
+/* Narrower than two panes, the panel becomes a disclosure above the table,
+   opened from the toolbar. Closed it takes no room at all — .results is placed
+   in the second row either way, so the empty first row is nothing but an
+   invisible 0px — and open the two share the pane, so neither can push the
+   other out of sight. */
+@media (max-width: 1023px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    row-gap: 0;
+  }
+  /* The cap is for the short-window fallback, where the pane is a document
+     again and the row split no longer applies. */
+  .filters { grid-row: 1; max-height: 60dvh; margin-bottom: 2rem; }
+  .results { grid-row: 2; }
+  .layout:has(.filters:not([hidden])) { grid-template-rows: minmax(0, 55%) minmax(0, 45%); }
 }
 
 .filters-head {
@@ -566,9 +594,9 @@ body.app main { min-height: 0; overflow-y: auto; }
   max-height: 230px;
   overflow-y: auto;
 }
-/* Stacked layout: the filter panel spans the full width, so let the facet
-   lists flow into columns and keep each label next to its count. */
-@media (max-width: 1240px) {
+/* With the panel open as a full-width disclosure, let the facet lists flow into
+   columns and keep each label next to its count. */
+@media (max-width: 1023px) {
   .facet-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));

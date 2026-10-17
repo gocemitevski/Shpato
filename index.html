@@ -111,6 +111,15 @@
     <section id="view-catalog" class="view" role="tabpanel" aria-labelledby="tab-catalog">
       <div class="toolbar">
         <input id="search" class="search" type="search" autocomplete="off" data-i18n-label="search.label">
+        <!-- Below the two-pane width the facet panel is a disclosure and this is
+             its handle: the script shows it there and hides it where the panel
+             is a permanent pane. Hidden in the markup so a wide window never
+             flashes it. -->
+        <button type="button" id="filters-toggle" class="btn filters-toggle"
+                aria-expanded="true" aria-controls="filters" hidden>
+          <span data-i18n="filters.title"></span>
+          <span class="chev" aria-hidden="true">›</span>
+        </button>
         <label class="check">
           <input type="checkbox" id="show-duplicates">
           <span id="show-duplicates-label"></span>

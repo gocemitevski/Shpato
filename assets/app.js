@@ -867,6 +867,30 @@
     refreshResults();
   }
 
+  // ------------------------------------------------------- responsive chrome
+  // The facet panel is a permanent pane from 1024px up and a disclosure below
+  // that; on a phone the header then drops its subtitle. These widths are the
+  // stylesheet's breakpoints, kept in step by hand.
+  var mqWide = window.matchMedia("(min-width: 1024px)");
+  var mqPhone = window.matchMedia("(max-width: 620px)");
+
+  function setFiltersOpen(open) {
+    document.getElementById("filters").hidden = !open;
+    document.getElementById("filters-toggle").setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  // The width hands the panel over rather than leaving it in whatever state the
+  // other layout left it: wide it is simply there, narrow it starts closed so
+  // the table is what the reader sees first.
+  function syncFiltersHandle() {
+    document.getElementById("filters-toggle").hidden = mqWide.matches;
+    setFiltersOpen(mqWide.matches);
+  }
+
+  function syncSubtitle() {
+    document.getElementById("app-subtitle").hidden = mqPhone.matches;
+  }
+
   function bind() {
     document.getElementById("tabs").addEventListener("click", function (e) {
       var btn = e.target.closest("button[data-tab]");
@@ -927,6 +951,12 @@
       document.getElementById("search").value = "";
       update();
     });
+
+    document.getElementById("filters-toggle").addEventListener("click", function () {
+      setFiltersOpen(document.getElementById("filters").hidden);
+    });
+    mqWide.addEventListener("change", syncFiltersHandle);
+    mqPhone.addEventListener("change", syncSubtitle);
 
     var exportBtn = document.getElementById("export-btn");
     exportBtn.addEventListener("click", toggleExportMenu);
@@ -1021,6 +1051,8 @@
 
   syncThemeColor();
   deserialize();
+  syncFiltersHandle();
+  syncSubtitle();
   renderStatic();
   bind();
   setTab(state.tab);
