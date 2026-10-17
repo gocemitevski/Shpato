@@ -850,10 +850,16 @@
   // ------------------------------------------------------------------ main
   function setTab(tab) {
     state.tab = tab;
-    // The shell does not scroll as a document, so the pane that does has to be
-    // sent back to the top by hand: otherwise a tab opens part-way down
-    // wherever the previous one was left.
+    // Whichever of the two scrolls has to be sent back to the top by hand, or a
+    // tab opens part-way down wherever the previous one was left: the pane when
+    // the shell is pinned, the document when it has stood down (short window).
+    // <html> scrolls smoothly, which is wrong for a jump this size, so the
+    // default behaviour is restored for the call.
     document.getElementById("main").scrollTop = 0;
+    var root = document.documentElement;
+    root.style.scrollBehavior = "auto";
+    window.scrollTo(0, 0);
+    root.style.scrollBehavior = "";
     TABS.forEach(function (name) {
       document.getElementById("view-" + name).hidden = name !== tab;
     });

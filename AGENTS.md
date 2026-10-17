@@ -200,8 +200,12 @@ same stylesheet and must keep their own bodies.
   window that short has no room for the header, the toolbar and a table worth
   reading. The print block undoes the shell for the same kind of reason: a
   printer wants the whole catalogue, not one clipped viewport of a scroll pane.
-- `setTab()` sets `main.scrollTop = 0`. With the document no longer scrolling,
-  nothing else moves the pane when the tab changes.
+- `setTab()` sends both scrolls back to the top: `main.scrollTop = 0` for the
+  pinned shell, and `window.scrollTo(0, 0)` for when it has stood down and the
+  document is the scroller. Without both, a tab opens part-way down wherever the
+  previous one was left — on a phone in landscape that used to mean the About
+  heading landing 206px above the viewport. `<html>` scrolls smoothly, so the
+  jump is made with `scroll-behavior` temporarily `auto`.
 - `body.player-open` reserves the player's room inside `.table-wrap` and `.view`,
   never by padding `main`: padding `main` would make the shell scroll to reveal
   nothing but itself.
