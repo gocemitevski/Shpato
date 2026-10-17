@@ -81,6 +81,16 @@ every line of `sources/youtube.csv` was read by a human. Video length is
 compared against `durationSec` and marked when it agrees — a useful signal,
 not proof.
 
+The finder searches a work by title **and** performer first, and widens to the
+romanised form and only then to the title alone, each step running only while
+nothing found so far shares a real word with the work. That order is measured,
+not taste: against the 23 curated links the strict query reaches 23/23,
+romanised 22/23, title-only 13/23 — YouTube matches across scripts by itself,
+and 38 titles are shared by more than one work. So widening mostly shows junk
+for works that are simply not on YouTube; it is a last look, not a routine
+step. The finder reuses `to_latin()` from `build.py` rather than growing a
+third transliteration.
+
 YouTube will not play an embed on a page with no origin: Chrome sends no
 referrer for `file://`, and the player answers with "configuration error 153"
 for every embed host, `referrerpolicy` and `origin` parameter combination
