@@ -38,6 +38,10 @@
   --bg: #f4f6f9;
   --panel: #ffffff;
   --panel-2: #fbfcfd;
+  /* The table header band. One step away from the rows in each theme — darker
+     in light, lighter in dark — so the header reads as a header rather than as
+     the page showing through the top of the card. */
+  --thead: #eaeef5;
   --ink: #14161c;
   --muted: #5b6270;
   --line: #dfe3ec;
@@ -75,6 +79,7 @@
   --bg: #0d1117;
   --panel: #161b22;
   --panel-2: #12161d;
+  --thead: #1b222c;
   --ink: #e6edf3;
   --muted: #8b949e;
   --line: #2b3341;
@@ -718,11 +723,11 @@ body.app main { min-height: 0; overflow-y: auto; }
 }
 /* Sticky against .table-wrap's own scrollport, so the header row stays over the
    rows as the card scrolls. The opaque background is what keeps the rows from
-   showing through it. */
+   showing through it, and --thead is what separates the header from them. */
 .catalog-table thead th {
   position: sticky;
   top: 0;
-  background: var(--panel);
+  background: var(--thead);
   font-size: .72rem;
   text-transform: uppercase;
   letter-spacing: .06em;
