@@ -2,7 +2,11 @@
 <html lang="mk">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- resizes-content: on a phone the on-screen keyboard shrinks the layout
+       viewport instead of floating over it, so the shell (100dvh) shrinks with
+       it and the results stay visible above the keyboard rather than behind it.
+       Unknown viewport keys are ignored, so browsers without it are unaffected. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
   <title>Драган Ѓаконовски – Шпато - Дигитален каталог</title>
   <meta name="description" content="Дигитален каталог на делата на Драган Ѓаконовски – Шпато во фонотеката на МРТВ.">
   <!-- Google tag (gtag.js) -->

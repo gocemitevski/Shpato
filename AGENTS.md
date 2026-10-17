@@ -143,6 +143,11 @@ scrolls is `main`, and the panes inside the visible view. The body class is what
 keeps all of this off `tools/cover.html` and `tools/favicon.html`, which link the
 same stylesheet and must keep their own bodies.
 
+The viewport carries `interactive-widget=resizes-content` for the opposite
+reason: with a keyboard up, a shell pinned to `dvh` would otherwise keep its
+full height and leave the results behind the keyboard. Resizing the layout
+viewport shrinks the shell with it. Browsers that do not know the key ignore it.
+
 - `#view-catalog` and `#view-notes` fill their pane (`height: 100%`; a grid whose
   middle row is `minmax(0, 1fr)`) instead of growing the page, so their toolbars
   stay put and the tables scroll inside their own cards. That is also what
