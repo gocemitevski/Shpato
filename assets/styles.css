@@ -804,7 +804,7 @@ code.raw {
      in the same order as the markup. The row is capped at the reading measure
      and packed to the left, so the photograph stays beside the text instead of
      drifting to the far margin and leaving a void between the two. */
-  .about { grid-template-columns: minmax(0, 68ch) 220px; justify-content: start; gap: 2.25rem; align-items: start; }
+  .about { grid-template-columns: minmax(0, 68ch) 300px; justify-content: start; gap: 2.25rem; align-items: start; }
 }
 .about-portrait { margin: 0; }
 /* A framed photograph, in the same language as .card and .facts. The brand
@@ -813,7 +813,7 @@ code.raw {
 .about-portrait img {
   display: block;
   width: 100%;
-  max-width: 220px;
+  max-width: 300px;
   height: auto;
   border: 1px solid var(--line);
   border-radius: var(--radius);
