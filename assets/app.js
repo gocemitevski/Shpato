@@ -400,6 +400,18 @@
     return [r.performer, categoryLabel(r.category)].filter(Boolean).join(" · ");
   }
 
+  function watchUrl(r) {
+    return "https://www.youtube.com/watch?v=" + r.video;
+  }
+
+  // YouTube will not play an embed on a page with no origin: Chrome sends no
+  // referrer for file://, and the player answers with "configuration error
+  // 153", for every combination of embed host and referrer policy. Opening
+  // index.html from disk is a supported way to use this app, so there the play
+  // button opens the video on YouTube rather than mounting a player that can
+  // only ever fail.
+  var CAN_EMBED = location.protocol !== "file:";
+
   function youtubeSearchUrl(r) {
     var q = [r.title, r.performer].filter(Boolean).join(" ");
     return "https://www.youtube.com/results?search_query=" + encodeURIComponent(q);
@@ -408,6 +420,10 @@
   function playRecord(id) {
     var r = RECORDS.find(function (x) { return x.id === id; });
     if (!r || !r.video) return;
+    if (!CAN_EMBED) {
+      window.open(watchUrl(r), "_blank", "noopener,noreferrer");
+      return;
+    }
     var player = document.getElementById("player");
     var frame = document.getElementById("player-frame");
     if (playing !== id) {
@@ -425,8 +441,7 @@
     }
     document.getElementById("player-title").textContent = r.title;
     document.getElementById("player-sub").textContent = playerSubtitle(r);
-    document.getElementById("player-link").href =
-      "https://www.youtube.com/watch?v=" + r.video;
+    document.getElementById("player-link").href = watchUrl(r);
     player.hidden = false;
     document.body.classList.add("player-open");
   }

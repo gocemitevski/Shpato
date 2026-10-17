@@ -81,6 +81,13 @@ every line of `sources/youtube.csv` was read by a human. Video length is
 compared against `durationSec` and marked when it agrees — a useful signal,
 not proof.
 
+YouTube will not play an embed on a page with no origin: Chrome sends no
+referrer for `file://`, and the player answers with "configuration error 153"
+for every embed host, `referrerpolicy` and `origin` parameter combination
+tried. `file://` support is a hard requirement here, so `CAN_EMBED` is false
+there and the play button opens the video on YouTube in a new tab instead of
+mounting a player that can only fail. Do not "simplify" that branch away.
+
 ## Conventions
 
 - **All UI text is bilingual.** Adding a key means adding it to *both* `mk` and
