@@ -951,7 +951,7 @@ code.raw {
      in the same order as the markup. The row is capped at the reading measure
      and packed to the left, so the photograph stays beside the text instead of
      drifting to the far margin and leaving a void between the two. */
-  .about { grid-template-columns: minmax(0, 68ch) 300px; justify-content: start; gap: 2.25rem; align-items: start; }
+  .about { grid-template-columns: minmax(0, 68ch) 300px; justify-content: start; column-gap: 2.25rem; row-gap: 1.75rem; align-items: start; }
 }
 .about-portrait { margin: 0; }
 /* A framed photograph, in the same language as .card and .facts. The brand
@@ -973,11 +973,18 @@ code.raw {
 .about-body p:last-child { margin-bottom: 0; }
 .about-lead { font-size: 1.05rem; font-weight: 600; }
 
+/* The facts are a spanning item of .about rather than a sibling of it. A cap of
+   its own would be measured against .facts' font (it is .9rem), because ch
+   resolves on the element it is written on, and would stop short of the
+   photograph's right edge; spanning the two columns it ends where they do, at
+   every width, and the row gap above it is the 1.75rem the sibling margin
+   used to give. */
 .facts {
   display: grid;
+  grid-column: 1 / -1;
   grid-template-columns: auto minmax(0, 1fr);
   gap: .55rem 1.5rem;
-  margin: 0 0 1.75rem;
+  margin: 0;
   padding: 1.3rem 1.5rem;
   background: var(--panel);
   border: 1px solid var(--line);

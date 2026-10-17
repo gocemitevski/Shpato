@@ -114,6 +114,12 @@ mounting a player that can only fail. Do not "simplify" that branch away.
 `data-i18n` hooks; every sentence lives in `assets/i18n.js` under `about.*` in
 both languages, as everywhere else.
 
+The facts list is a spanning item of `.about`, not a sibling that follows it,
+so its right edge lands under the photograph's at every width where the two
+columns exist. A `max-width` on the card cannot do that: `ch` resolves on the
+element it is written on, and `.facts` is `.9rem`, so the cap would come up
+short. Leave it in the grid.
+
 Every biographical claim there is backed by one of the three references linked
 at the foot of the tab (Dimitrov's monograph, Grove Music Online, the FMU
 yearbook). Do not add facts from memory: the sources do not agree in places, so
