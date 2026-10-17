@@ -320,7 +320,9 @@ a { color: var(--accent-2); }
   border-bottom-color: var(--accent);
 }
 
-main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 0; flex-grow: 1; }
+/* The bottom padding is the gap between the pane and the footer rule: flush,
+   the card's own border and the rule read as one line. */
+main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 1.25rem; flex-grow: 1; }
 
 /* ----------------------------------------------------------------- shell */
 /* The app is a shell: the document itself never scrolls, so the header, the tab

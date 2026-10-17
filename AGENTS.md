@@ -149,7 +149,9 @@ same stylesheet and must keep their own bodies.
   therefore never scrolls to reach it, and the catalogue never grows a second
   scrollbar beside the table's own. It is kept short — `.75rem` of vertical
   padding, so about 52px at a desktop width — because every pixel of it is a
-  pixel the catalogue cannot show.
+  pixel the catalogue cannot show, and `main` keeps `1.25rem` of bottom padding
+  of its own so that the last card's border and the footer's rule do not draw
+  the same line.
 - `.filters` and `.table-wrap` set `overscroll-behavior: contain`: a wheel that
   reaches the end of a facet list or of the table stops there instead of
   carrying on into the shell.
