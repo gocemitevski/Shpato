@@ -145,11 +145,11 @@ same stylesheet and must keep their own bodies.
   sizes to content and the tab strip's min-content is wider than a phone: the
   shell grows past the viewport and the last tab ends up behind the clipped
   edge, with nothing left to scroll it back.
-- `<footer>` lives inside `<main>`. The shell has nowhere else to put it, and
-  this way it is the last thing the pane reaches, in every view. In the
-  catalogue that leaves `main` exactly the footer's height of scroll (76px at a
-  desktop width) — the catalogue is the one place `main` has a scrollbar, and
-  it is the price of keeping the footer out of the panes.
+- `<footer>` is the shell's last grid row, not the end of the pane. The pane
+  therefore never scrolls to reach it, and the catalogue never grows a second
+  scrollbar beside the table's own. It is kept short — `.75rem` of vertical
+  padding, so about 52px at a desktop width — because every pixel of it is a
+  pixel the catalogue cannot show.
 - `.filters` and `.table-wrap` set `overscroll-behavior: contain`: a wheel that
   reaches the end of a facet list or of the table stops there instead of
   carrying on into the shell.
@@ -180,7 +180,8 @@ same stylesheet and must keep their own bodies.
   nothing but itself.
 
 The check that matters when touching any of this is positional: scroll the table
-to its end and the header, the tab bar and the facet sidebar must not have moved.
+to its end and the header, the tab bar, the facet sidebar and the footer must not
+have moved.
 
 ## Conventions
 

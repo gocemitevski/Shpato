@@ -323,11 +323,11 @@ a { color: var(--accent-2); }
 main { padding: 2rem clamp(1rem, 4vw, 2.5rem) 0; flex-grow: 1; }
 
 /* ----------------------------------------------------------------- shell */
-/* The app is a shell: the document itself never scrolls, so the header and the
-   tab bar cannot be scrolled out of reach. What scrolls instead are the panes
-   inside the visible view, and the footer, which is the last thing main
-   reaches. The body class scopes all of this to index.html — tools/cover.html
-   and tools/favicon.html link this stylesheet and must keep their own bodies.
+/* The app is a shell: the document itself never scrolls, so the header, the tab
+   bar and the footer cannot be scrolled out of reach. Rows one to three are the
+   chrome and the pane; what scrolls instead is inside that pane. The body class
+   scopes all of this to index.html — tools/cover.html and tools/favicon.html
+   link this stylesheet and must keep their own bodies.
    dvh, not vh: on mobile 100vh is the height with the address bar hidden,
    which would push the shell's bottom edge underneath it. */
 body.app {
@@ -336,7 +336,9 @@ body.app {
      sized to content, and the tab strip's min-content is wider than a phone,
      which would push the last tab out behind the clipped edge. */
   grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: auto auto minmax(0, 1fr);
+  /* header, tab bar, pane, footer: the footer is a row rather than the end of
+     the pane, so the pane never scrolls to reach it. */
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
   min-height: 0;
   height: 100vh;
   height: 100dvh;
@@ -1100,11 +1102,10 @@ body.player-open .view { padding-bottom: 18rem; }
 
 /* ---------------------------------------------------------------- footer */
 .site-footer {
-  /* Inside main, so it bleeds back out through main's padding: the rule spans
-     the page and the credit keeps the indent it had as a body child. */
-  margin: 0 calc(-1 * clamp(1rem, 4vw, 2.5rem));
+  /* A row of the shell, so nothing bleeds and the pane keeps its own height.
+     Short on purpose: every pixel here is a pixel the catalogue cannot show. */
   border-top: 1px solid var(--line);
-  padding: 1.5rem clamp(1rem, 4vw, 2.5rem);
+  padding: .75rem clamp(1rem, 4vw, 2.5rem);
   color: var(--muted);
   font-size: .82rem;
 }

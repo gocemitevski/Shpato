@@ -276,16 +276,17 @@
         <li><a href="https://js.ugd.edu.mk/index.php/YFMA/article/view/2916" target="_blank" rel="noopener" data-i18n="about.source3"></a></li>
       </ul>
     </section>
-
-    <!-- Inside main on purpose: the shell does not scroll as a document, so
-         the footer rides at the end of the pane that does. -->
-    <footer class="site-footer">
-      <p class="footer-credit">
-        <span data-i18n="app.credit"></span>
-        <a href="https://www.gocemitevski.com" target="_blank" rel="noopener">Гоце Митевски</a>.
-      </p>
-    </footer>
   </main>
+
+  <!-- Below the pane on purpose: a row of the shell, so the pane never has to
+       scroll to reach it and the catalogue never grows a second scrollbar for
+       the credit line. -->
+  <footer class="site-footer">
+    <p class="footer-credit">
+      <span data-i18n="app.credit"></span>
+      <a href="https://www.gocemitevski.com" target="_blank" rel="noopener">Гоце Митевски</a>.
+    </p>
+  </footer>
 
   <!-- Detail drawer -->
   <div id="drawer" class="drawer" hidden>
