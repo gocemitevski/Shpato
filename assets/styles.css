@@ -204,13 +204,14 @@ a { color: var(--accent-2); }
 }
 
 .brand-text h1 { margin: 0; font-size: clamp(1rem, 2.2vw, 1.3rem); font-weight: 800; letter-spacing: -.02em; }
-.brand-text p { margin: .1rem 0 0; color: var(--muted); font-size: .82rem; }
+/* balance, so the two lines a phone gives it do not end on one word. */
+.brand-text p { margin: .1rem 0 0; color: var(--muted); font-size: .82rem; text-wrap: balance; }
 
 .header-actions { display: flex; align-items: center; gap: .6rem; }
 
-/* Narrow screens: give the brand its own row so the title stops wrapping, drop
-   the subtitle (the script hides it, so it leaves the accessibility tree with
-   the pixels) and shrink the mark. */
+/* Narrow screens: give the brand its own row so the title stops wrapping, and
+   shrink the mark. The subtitle stays — it is what keeps the header from
+   reading as an empty band. */
 @media (max-width: 620px) {
   .site-header { flex-wrap: wrap; }
   .brand { flex: 1 1 100%; gap: .75rem; }
@@ -473,7 +474,8 @@ body.app main { min-height: 0; overflow-y: auto; }
    opened from the toolbar. Closed it takes no room at all — .results is placed
    in the second row either way, so the empty first row is nothing but an
    invisible 0px — and open the two share the pane, so neither can push the
-   other out of sight. */
+   other out of sight. The table takes the larger share: the panel scrolls
+   inside its half, the table has nowhere else to go. */
 @media (max-width: 1023px) {
   .layout {
     grid-template-columns: minmax(0, 1fr);
@@ -484,7 +486,7 @@ body.app main { min-height: 0; overflow-y: auto; }
      again and the row split no longer applies. */
   .filters { grid-row: 1; max-height: 60dvh; margin-bottom: 2rem; }
   .results { grid-row: 2; }
-  .layout:has(.filters:not([hidden])) { grid-template-rows: minmax(0, 55%) minmax(0, 45%); }
+  .layout:has(.filters:not([hidden])) { grid-template-rows: minmax(0, 45%) minmax(0, 55%); }
 }
 
 .filters-head {

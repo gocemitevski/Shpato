@@ -167,16 +167,19 @@ same stylesheet and must keep their own bodies.
   opened from a handle in the toolbar (`#filters-toggle`, the export menu's
   `aria-expanded` + `hidden` idiom: no modal, no focus trap). Closed, the table
   keeps the whole pane; open, `.layout:has(.filters:not([hidden]))` splits it
-  55/45 so neither can push the other out of sight, and the panel scrolls inside
-  its share.
-- The width is the script's business too, through those same two breakpoints:
-  `matchMedia("(min-width: 1024px)")` hands the panel over — wide, it is simply
-  there and the handle is hidden; narrow, the handle shows and the panel starts
-  closed — and `matchMedia("(max-width: 620px)")` hides `#app-subtitle`. The
-  widths are written out in the stylesheet and in `app.js` by hand, so changing
-  one means changing the other.
+  45/55 so neither can push the other out of sight. The panel takes the smaller
+  share because it scrolls inside its own half and the table does not.
+- The width is the script's business too: `matchMedia("(min-width: 1024px)")`
+  hands the panel over — wide, it is simply there and the handle is hidden;
+  narrow, the handle shows and the panel starts closed. That width is written out
+  in the stylesheet and in `app.js` by hand, so changing one means changing the
+  other.
 - Below 620px the mark also shrinks to 40px, and the search gives up its 320px
-  basis so the handle shares its row instead of costing a row of its own.
+  basis so the handle shares its row instead of costing a row of its own. The
+  subtitle is *not* dropped there: it wraps to two lines and the header costs the
+  pane 23px for it, which is cheaper than the empty band it looks like without
+  one. It is only the mark that the breakpoint touches, and `text-wrap: balance`
+  keeps the two lines from ending on "МРТВ".
 - Below 600px of *viewport height* the shell stands down
   (`@media (max-height: 600px)`) and the page scrolls as a document again. A
   window that short has no room for the header, the toolbar and a table worth

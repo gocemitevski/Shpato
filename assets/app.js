@@ -869,10 +869,8 @@
 
   // ------------------------------------------------------- responsive chrome
   // The facet panel is a permanent pane from 1024px up and a disclosure below
-  // that; on a phone the header then drops its subtitle. These widths are the
-  // stylesheet's breakpoints, kept in step by hand.
+  // that. This width is the stylesheet's breakpoint, kept in step by hand.
   var mqWide = window.matchMedia("(min-width: 1024px)");
-  var mqPhone = window.matchMedia("(max-width: 620px)");
 
   function setFiltersOpen(open) {
     document.getElementById("filters").hidden = !open;
@@ -885,10 +883,6 @@
   function syncFiltersHandle() {
     document.getElementById("filters-toggle").hidden = mqWide.matches;
     setFiltersOpen(mqWide.matches);
-  }
-
-  function syncSubtitle() {
-    document.getElementById("app-subtitle").hidden = mqPhone.matches;
   }
 
   function bind() {
@@ -956,7 +950,6 @@
       setFiltersOpen(document.getElementById("filters").hidden);
     });
     mqWide.addEventListener("change", syncFiltersHandle);
-    mqPhone.addEventListener("change", syncSubtitle);
 
     var exportBtn = document.getElementById("export-btn");
     exportBtn.addEventListener("click", toggleExportMenu);
@@ -1052,7 +1045,6 @@
   syncThemeColor();
   deserialize();
   syncFiltersHandle();
-  syncSubtitle();
   renderStatic();
   bind();
   setTab(state.tab);
