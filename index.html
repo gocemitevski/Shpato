@@ -114,6 +114,10 @@
           <input type="checkbox" id="show-duplicates">
           <span id="show-duplicates-label"></span>
         </label>
+        <label class="check" id="only-video-wrap">
+          <input type="checkbox" id="only-video">
+          <span id="only-video-label"></span>
+        </label>
       </div>
 
       <div class="layout">
@@ -242,6 +246,22 @@
     <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
       <button type="button" class="drawer-close" data-close data-i18n-label="a11y.close">×</button>
       <div id="drawer-content"></div>
+    </div>
+  </div>
+
+  <!-- YouTube mini-player. It sits outside the drawer on purpose: a work keeps
+       playing while its details are open and while the catalogue is filtered. -->
+  <div id="player" class="player" role="region" data-i18n-label="player.label" hidden>
+    <div class="player-frame" id="player-frame"></div>
+    <div class="player-bar">
+      <div class="player-meta">
+        <span class="player-title" id="player-title"></span>
+        <span class="player-sub" id="player-sub"></span>
+        <a class="player-link" id="player-link" href="#" target="_blank" rel="noopener"
+           data-i18n="player.watch"></a>
+      </div>
+      <button type="button" class="player-close" id="player-close"
+              data-i18n-label="player.close">×</button>
     </div>
   </div>
 

@@ -9,6 +9,10 @@ and writes:
   data/notes.json      - every fix / flag applied, for transparency
   data/notes.js        - same, as a global
 
+It also merges sources/youtube.csv, the hand-curated record -> YouTube video
+map (columns `id,title,video`; see the README), into each record's "video"
+field.
+
 Only the Python 3 standard library is used.
 """
 
@@ -416,6 +420,7 @@ def parse_source(source):
             "signature": signature,
             "signatureRaw": values.get("signature", ""),
             "collection": collection,
+            "video": None,
             "sourceFile": source["file"],
             "sourceLine": offset,
             "flags": flags,
@@ -482,6 +487,82 @@ def build_search(rec):
 
 
 # ---------------------------------------------------------------------------
+# YouTube links (sources/youtube.csv)
+# ---------------------------------------------------------------------------
+# A link is stored as the bare 11-character video id. People paste whatever
+# YouTube gave them, so the common URL shapes are accepted and reduced to it.
+VIDEO_ID_RE = re.compile(r"^[A-Za-z0-9_-]{11}$")
+VIDEO_URL_RE = re.compile(
+    r"(?:youtu\.be/|youtube(?:-nocookie)?\.com/(?:watch\?(?:[^#\s]*&)?v=|"
+    r"embed/|shorts/|live/))([A-Za-z0-9_-]{11})")
+YOUTUBE_FILE = "youtube.csv"
+
+
+def extract_video_id(value):
+    """Return the 11-char video id from a bare id or a pasted YouTube URL."""
+    s = clean(value)
+    if not s:
+        return None
+    m = VIDEO_URL_RE.search(s)
+    if m:
+        return m.group(1)
+    return s if VIDEO_ID_RE.match(s) else None
+
+
+def read_videos():
+    """Read the curated `id,title,video` map. Returns ({id: video}, problems).
+
+    `title` is a human-readable guard: it is not used for matching, but a
+    mismatch is reported, because a record's id is positional and would
+    otherwise attach a video to the wrong work silently.
+    """
+    path = os.path.join(SOURCES_DIR, YOUTUBE_FILE)
+    if not os.path.exists(path):
+        return {}, []
+    rows = read_rows(path)
+    videos = {}
+    problems = []
+    for n, row in enumerate(rows, start=1):
+        if n == 1 and row and row[0].strip().lower() == "id":
+            continue  # header
+        if not any(cell.strip() for cell in row):
+            continue
+        row = [clean(c) for c in row]
+        while len(row) < 3:
+            row.append("")
+        rid, title, raw = row[0], row[1], row[2]
+        if not rid:
+            problems.append("line {}: empty record id".format(n))
+            continue
+        video = extract_video_id(raw)
+        if not video:
+            problems.append("line {}: not a YouTube id or URL: {!r}".format(n, raw))
+            continue
+        if rid in videos:
+            problems.append("line {}: duplicate entry for {}".format(n, rid))
+            continue
+        videos[rid] = (title, video)
+    return videos, problems
+
+
+def attach_videos(records, videos, problems):
+    """Fill in rec["video"]. Unmatched ids are reported, never guessed."""
+    by_id = {rec["id"]: rec for rec in records}
+    for rid in sorted(videos):
+        title, video = videos[rid]
+        rec = by_id.get(rid)
+        if rec is None:
+            problems.append("unknown record id: {}".format(rid))
+            continue
+        if title and title != rec["title"]:
+            problems.append(
+                "{}: title in youtube.csv is {!r} but the record says {!r}".format(
+                    rid, title, rec["title"]))
+        rec["video"] = video
+    return sum(1 for rec in records if rec["video"])
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 def main():
@@ -503,6 +584,9 @@ def main():
     count_warnings(all_records)
     for rec in all_records:
         rec["search"] = build_search(rec)
+
+    videos, video_problems = read_videos()
+    video_count = attach_videos(all_records, videos, video_problems)
 
     # data notes
     notes = []
@@ -553,6 +637,7 @@ def main():
         "total": len(all_records),
         "counts": counters,
         "notes": len(notes),
+        "videos": video_count,
         "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija",
     }
 
@@ -570,6 +655,9 @@ def main():
     print("Built {} records: {}".format(len(all_records), counters))
     print("Expected:            {}".format(expected))
     print("Notes: {}".format(len(notes)))
+    print("Videos: {} of {}".format(video_count, len(all_records)))
+    for problem in video_problems:
+        print("WARNING youtube.csv: {}".format(problem), file=sys.stderr)
     if counters != expected:
         print("WARNING: counts differ from expectation", file=sys.stderr)
 

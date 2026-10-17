@@ -50,6 +50,7 @@ window.I18N = {
     "results.count": "прикажани {n} од {total}",
     "results.empty": "Нема пронајдени дела.",
     "results.showDuplicates": "Прикажи дупликати",
+    "results.onlyVideo": "Само со снимка ({n})",
 
     "export.label": "Извези",
     "export.optionCsv": "CSV (.csv)",
@@ -83,6 +84,13 @@ window.I18N = {
     "detail.noRelated": "Нема поврзани дела",
     "detail.moreRelated": "…и уште {n}",
     "detail.raw": "во изворот",
+
+    "player.label": "Плеер",
+    "player.play": "Пушти",
+    "player.playAria": "Пушти „{title}“",
+    "player.watch": "Отвори на YouTube",
+    "player.search": "Барај на YouTube",
+    "player.close": "Затвори го плеерот",
 
     "notes.title": "Забелешки за податоците",
     "notes.intro": "Сите откриени недоследности во изворните CSV-датотеки и нивните нормализации. Изворните датотеки не се менуваат.",
@@ -179,6 +187,7 @@ window.I18N = {
     "results.count": "showing {n} of {total}",
     "results.empty": "No works found.",
     "results.showDuplicates": "Show duplicates",
+    "results.onlyVideo": "With a video ({n})",
 
     "export.label": "Export",
     "export.optionCsv": "CSV (.csv)",
@@ -212,6 +221,13 @@ window.I18N = {
     "detail.noRelated": "No related works",
     "detail.moreRelated": "…and {n} more",
     "detail.raw": "in source",
+
+    "player.label": "Player",
+    "player.play": "Play",
+    "player.playAria": "Play “{title}”",
+    "player.watch": "Open on YouTube",
+    "player.search": "Search on YouTube",
+    "player.close": "Close the player",
 
     "notes.title": "Data notes",
     "notes.intro": "Every inconsistency found in the source CSVs and how it was normalized. Source files are left untouched.",

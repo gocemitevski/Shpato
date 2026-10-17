@@ -33,6 +33,7 @@
     durMax: DATA_MAX,
     sort: { key: "title", dir: "asc" },
     showDuplicates: false,
+    onlyVideo: false,
     selected: null,
     noteSeverity: "",
     noteRule: "",
@@ -40,6 +41,7 @@
   };
 
   var lastFocused = null;
+  var playing = null;  // id of the record in the mini-player, if any
 
   // ------------------------------------------------------------------ i18n
   function t(key) {
@@ -98,6 +100,7 @@
     var durActive = state.durMin > DATA_MIN || state.durMax < DATA_MAX;
     var list = RECORDS.filter(function (r) {
       if (!state.showDuplicates && isDuplicate(r)) return false;
+      if (state.onlyVideo && !r.video) return false;
       if (state.categories.size && !state.categories.has(r.category)) return false;
       if (state.collections.size && !state.collections.has(r.collection || "__none__")) return false;
       if (state.composers.size && !state.composers.has(r.composer || "__none__")) return false;
@@ -154,6 +157,10 @@
     document.getElementById("app-subtitle").textContent = t("app.subtitle");
     document.getElementById("search").placeholder = t("search.placeholder");
     document.getElementById("show-duplicates-label").textContent = t("results.showDuplicates");
+    // The "with a video" filter is only worth showing when something can play.
+    document.getElementById("only-video-wrap").hidden = !META.videos;
+    document.getElementById("only-video-label").textContent =
+      t("results.onlyVideo").replace("{n}", num(META.videos || 0));
     document.getElementById("filters-title").textContent = t("filters.title");
     document.getElementById("clear-filters").textContent = t("filters.clear");
 
@@ -205,6 +212,12 @@
     document.querySelector("#note-severity [value='info']").textContent =
       t("severity.info") + " (" + sev.info + ")";
     refreshRuleSelect();
+    // The player's own labels are static, but its subtitle is built from the
+    // record, so it has to be rebuilt when the language changes.
+    if (playing) {
+      var pr = RECORDS.find(function (x) { return x.id === playing; });
+      if (pr) document.getElementById("player-sub").textContent = playerSubtitle(pr);
+    }
   }
 
   function updateFacetBadge(el, n) {
@@ -359,8 +372,17 @@
         ? '<span class="badge" title="' + esc(t("detail.flags")) + '">' + r.warnCount +
           '<span class="visually-hidden"> ' + esc(t("detail.flags")) + "</span></span>"
         : "";
+      // Only a work with a known video gets a play button, so the affordance
+      // itself tells you what is listenable.
+      var play = r.video
+        ? '<button type="button" class="row-play" data-play="' + r.id + '" aria-label="' +
+          esc(t("player.playAria").replace("{title}", r.title)) + '">' +
+          '<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false">' +
+          '<path d="M3.2 1.4 10 6 3.2 10.6Z"/></svg></button>'
+        : "";
       return '<tr data-id="' + r.id + '">' +
-        '<td class="cell-title"><button type="button" class="row-open">' + esc(r.title) + "</button>" + warn + "</td>" +
+        '<td class="cell-title">' + play +
+        '<button type="button" class="row-open">' + esc(r.title) + "</button>" + warn + "</td>" +
         '<td class="cell-perf">' + esc(r.performer || t("common.none")) + "</td>" +
         '<td class="cell-comp">' + esc(r.composer || "") + "</td>" +
         '<td class="dur">' + fmt(r.durationSec) + "</td>" +
@@ -369,10 +391,61 @@
     }).join("");
   }
 
+  // ------------------------------------------------------------ mini-player
+  // One player for the whole app, docked outside the drawer's modal, so a work
+  // keeps playing while you filter, sort or read its details. The iframe is
+  // built on demand and thrown away on stop — an embed that is merely hidden
+  // goes on playing.
+  function playerSubtitle(r) {
+    return [r.performer, categoryLabel(r.category)].filter(Boolean).join(" · ");
+  }
+
+  function youtubeSearchUrl(r) {
+    var q = [r.title, r.performer].filter(Boolean).join(" ");
+    return "https://www.youtube.com/results?search_query=" + encodeURIComponent(q);
+  }
+
+  function playRecord(id) {
+    var r = RECORDS.find(function (x) { return x.id === id; });
+    if (!r || !r.video) return;
+    var player = document.getElementById("player");
+    var frame = document.getElementById("player-frame");
+    if (playing !== id) {
+      playing = id;
+      frame.innerHTML = "";
+      var iframe = document.createElement("iframe");
+      iframe.src = "https://www.youtube-nocookie.com/embed/" + r.video +
+        "?autoplay=1&rel=0&playsinline=1";
+      iframe.title = r.title;
+      iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; " +
+        "encrypted-media; gyroscope; picture-in-picture; web-share");
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+      frame.appendChild(iframe);
+    }
+    document.getElementById("player-title").textContent = r.title;
+    document.getElementById("player-sub").textContent = playerSubtitle(r);
+    document.getElementById("player-link").href =
+      "https://www.youtube.com/watch?v=" + r.video;
+    player.hidden = false;
+    document.body.classList.add("player-open");
+  }
+
+  function stopPlayer() {
+    if (playing === null) return;
+    playing = null;
+    document.getElementById("player-frame").innerHTML = "";  // this stops the audio
+    document.getElementById("player").hidden = true;
+    document.body.classList.remove("player-open");
+  }
+
   // ---------------------------------------------------------------- drawer
   function setPageInert(on) {
     Array.prototype.forEach.call(document.body.children, function (el) {
-      if (el.id === "drawer") return;
+      // The player stays live under the modal: a work must not go silent just
+      // because its details are open. The drawer's own Tab trap still keeps
+      // keyboard focus inside the dialog.
+      if (el.id === "drawer" || el.id === "player") return;
       if (on) el.setAttribute("inert", "");
       else el.removeAttribute("inert");
     });
@@ -427,6 +500,17 @@
         }).join("") + "</ul>"
       : '<p class="empty-note">' + esc(t("detail.noFlags")) + "</p>";
 
+    // A work with a known video plays from here too, through the same player,
+    // so opening the details never interrupts what is already playing. A work
+    // without one offers the search that would find it — "if they are found to
+    // exist" includes letting the reader go and look.
+    var playback = r.video
+      ? '<div class="drawer-play"><button type="button" class="btn player-start" data-play="' +
+        r.id + '"><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false">' +
+        '<path d="M3.2 1.4 10 6 3.2 10.6Z"/></svg>' + esc(t("player.play")) + "</button></div>"
+      : '<div class="drawer-play"><a class="search-link" href="' + esc(youtubeSearchUrl(r)) +
+        '" target="_blank" rel="noopener">' + esc(t("player.search")) + "</a></div>";
+
     var related = "";
     related += relatedBlock("detail.sameTitle", RECORDS.filter(function (x) {
       return x.id !== r.id && x.title === r.title;
@@ -452,6 +536,7 @@
       (r.collection ? row("detail.collection", esc(r.collection)) : "") +
       row("detail.source", '<code class="raw raw-truncate" title="' + esc(r.sourceFile + ":" + r.sourceLine) + '">' + esc(r.sourceFile) + ":" + r.sourceLine + "</code>") +
       "</dl>" +
+      playback +
       "<h3>" + esc(t("detail.flags")) + "</h3>" + flagItems +
       "<h3>" + esc(t("detail.related")) + "</h3>" +
       '<div class="related">' +
@@ -460,6 +545,9 @@
 
     drawer.querySelectorAll("[data-goto]").forEach(function (btn) {
       btn.addEventListener("click", function () { selectRecord(btn.getAttribute("data-goto"), true); });
+    });
+    drawer.querySelectorAll("[data-play]").forEach(function (btn) {
+      btn.addEventListener("click", function () { playRecord(btn.getAttribute("data-play")); });
     });
 
     if (!wasOpen) {
@@ -671,6 +759,7 @@
     if (state.durMin > DATA_MIN) p.set("dmin", state.durMin);
     if (state.durMax < DATA_MAX) p.set("dmax", state.durMax);
     if (state.showDuplicates) p.set("dup", "1");
+    if (state.onlyVideo) p.set("video", "1");
     if (state.sort.key !== "title" || state.sort.dir !== "asc") { p.set("sort", state.sort.key); p.set("dir", state.sort.dir); }
     return "#" + p.toString();
   }
@@ -704,6 +793,9 @@
       var swap = state.durMin; state.durMin = state.durMax; state.durMax = swap;
     }
     state.showDuplicates = p.get("dup") === "1";
+    // Ignore the flag when nothing in the catalogue has a video, or a stale
+    // link would land on a permanently empty table.
+    state.onlyVideo = p.get("video") === "1" && META.videos > 0;
     if (SORT_KEYS.indexOf(p.get("sort")) !== -1) {
       state.sort.key = p.get("sort");
       state.sort.dir = p.get("dir") === "desc" ? "desc" : "asc";
@@ -802,6 +894,12 @@
       state.showDuplicates = e.target.checked; update();
     });
 
+    document.getElementById("only-video").checked = state.onlyVideo;
+    document.getElementById("only-video").addEventListener("change", function (e) {
+      state.onlyVideo = e.target.checked; refreshResults();
+    });
+    document.getElementById("player-close").addEventListener("click", stopPlayer);
+
     document.getElementById("clear-filters").addEventListener("click", function () {
       state.categories.clear(); state.collections.clear();
       state.composers.clear(); state.performers.clear();
@@ -856,6 +954,10 @@
     });
 
     document.getElementById("catalog-body").addEventListener("click", function (e) {
+      // The play button lives inside the row, so it has to win over the row's
+      // own handler, which opens the drawer.
+      var play = e.target.closest(".row-play");
+      if (play) { playRecord(play.getAttribute("data-play")); return; }
       var tr = e.target.closest("tr[data-id]");
       if (tr) selectRecord(tr.getAttribute("data-id"));
     });
