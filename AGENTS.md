@@ -144,7 +144,14 @@ same stylesheet and must keep their own bodies.
 - The `body.app` column is `minmax(0, 1fr)` on purpose. Left implicit, the column
   sizes to content and the tab strip's min-content is wider than a phone: the
   shell grows past the viewport and the last tab ends up behind the clipped
-  edge, with nothing left to scroll it back.
+  edge, with nothing left to scroll it back. `#view-catalog` and `#view-notes`
+  pin their column the same way for the same reason, and it matters most for
+  the notes toolbar: a `<select>` is as wide as its longest `<option>`, the
+  longest rule name is 377px at the default font size, and an implicit column
+  used to let that widen the whole view — title and intro with it — past the
+  pane, leaving `main` with a horizontal scrollbar. `.field` carries its own
+  `min-width: 0` for the matching flex-item reason; the select then stretches to
+  whatever line it lands on and the rule name ellipsizes.
 - `<footer>` is the shell's last grid row, not the end of the pane. The pane
   therefore never scrolls to reach it, and the catalogue never grows a second
   scrollbar beside the table's own. It is kept short — `.75rem` of vertical

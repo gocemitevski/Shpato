@@ -353,17 +353,22 @@ body.app main { min-height: 0; overflow-y: auto; }
 /* The catalogue and the notes fill their pane rather than growing the page.
    Their toolbars stay put and the tables scroll inside their own cards, which
    is also what finally gives .table-wrap's sticky header row something to
-   stick to. */
+   stick to. The explicit minmax(0, 1fr) column is there for the reason it is
+   on body.app: an implicit column is sized to content, and a toolbar holding a
+   select as wide as its longest option would widen the whole view past the
+   pane. */
 #view-catalog {
   height: 100%;
   padding-bottom: 0;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: auto auto minmax(0, 1fr);
 }
 #view-notes {
   height: 100%;
   padding-bottom: 0;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: auto auto auto minmax(0, 1fr) auto auto;
 }
 
@@ -852,7 +857,10 @@ td.sig {
 .intro { color: var(--muted); max-width: 68ch; margin: 0 0 1.5rem; }
 
 /* -------------------------------------------------------------- notes */
-.field { display: flex; flex-direction: column; gap: .3rem; font-size: .78rem; color: var(--muted); }
+/* min-width matters: a select is as wide as its widest option, and the rules
+   are long, so without it the field refuses to shrink and pushes the toolbar
+   past the pane. Narrow, the select then stretches to the line it is on. */
+.field { display: flex; flex-direction: column; gap: .3rem; font-size: .78rem; color: var(--muted); min-width: 0; }
 .field select {
   padding: .5rem .7rem;
   font: inherit;
@@ -860,6 +868,9 @@ td.sig {
   background: var(--panel);
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-sm);
+  /* Inherited into the control's own text, which already clips: it turns a
+     half-cut rule name into an ellipsis without touching the arrow. */
+  text-overflow: ellipsis;
 }
 
 .sev { font-size: .78rem; font-weight: 600; }
