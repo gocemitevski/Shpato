@@ -1123,8 +1123,37 @@ body.player-open .view { padding-bottom: 18rem; }
   padding: .75rem clamp(1rem, 4vw, 2.5rem);
   color: var(--muted);
   font-size: .82rem;
+  /* Credit on the left, share links at the right end. `margin-left: auto` on the
+     group rather than justify-content: it stays at the right end when it wraps
+     onto a line of its own on a narrow phone. */
+  display: flex;
+  align-items: center;
+  gap: .35rem 1rem;
+  flex-wrap: wrap;
 }
 .site-footer p { margin: .2rem 0; max-width: 80ch; }
+
+.footer-share {
+  display: flex;
+  align-items: center;
+  gap: .125rem;
+  margin-left: auto;
+}
+/* 1.5rem square, the smallest target that still clears the 24px minimum: every
+   pixel of footer height is a pixel the catalogue cannot show. */
+.footer-share a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  transition: background-color .15s ease, color .15s ease;
+}
+.footer-share a:hover { background: var(--accent-soft); color: var(--accent); }
+.footer-share a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.footer-share svg { width: .95rem; height: .95rem; fill: currentColor; }
 
 @media print {
   .tabs, .toolbar, .filters, .lang-toggle, .theme-toggle, .drawer, .player, .site-footer { display: none !important; }

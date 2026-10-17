@@ -158,7 +158,12 @@ same stylesheet and must keep their own bodies.
   padding, so about 52px at a desktop width — because every pixel of it is a
   pixel the catalogue cannot show, and `main` keeps `1.25rem` of bottom padding
   of its own so that the last card's border and the footer's rule do not draw
-  the same line.
+  the same line. The credit sits at its left and a group of four sharing links
+  at its right: 1.5rem targets, the smallest that still clears the 24px minimum,
+  held right by `margin-left: auto` rather than `justify-content`, which would
+  leave a group that wraps onto a line of its own at the *start* of that line.
+  Below about 340px the credit and the group stop fitting side by side and the
+  footer grows a second row; that is the wrap behaving, not a bug.
 - `.filters` and `.table-wrap` set `overscroll-behavior: contain`: a wheel that
   reaches the end of a facet list or of the table stops there instead of
   carrying on into the shell.
@@ -200,7 +205,7 @@ have moved.
 - **All UI text is bilingual.** Adding a key means adding it to *both* `mk` and
   `en` in `assets/i18n.js`. `t()` falls back to English silently, so a missing
   Macedonian key will not throw — it will just ship English. Keys are currently
-  at parity (146 each).
+  at parity (151 each).
 - **Capitalisation lives in the strings, not in CSS.** A `<select>`'s
   `<option>` does not inherit `text-transform`, so a CSS-capitalised label looks
   right in the table and wrong in a dropdown. Capitalise in `i18n.js`.
@@ -239,6 +244,12 @@ have moved.
   serialised non-default (`dup=0`), and `deserialize()` reads the parameter only
   when the hash carries one — reading it unconditionally would send every link
   without a `dup` back to the off state.
+- The four footer sharing links are share *intents*, not profile links: what is
+  passed on is the catalogue. `renderShareLinks()` builds their hrefs from
+  `<link rel="canonical">` rather than `location.href`, so they still name the
+  site when the page was opened from disk, where a `file:` URL would mean
+  nothing to whoever received it. The labels come from `share.*`; the glyphs are
+  inline Simple Icons paths (CC0).
 - Transliteration exists twice on purpose: `toLatin()` in `app.js` normalises
   the *query*, `to_latin()` in `build.py` bakes the *index* (`rec.search`, which
   is built at build time). Change one and check the other, or search breaks.

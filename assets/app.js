@@ -153,6 +153,29 @@
     document.title = t("app.title") + " - " + t("tab." + state.tab);
   }
 
+  // ------------------------------------------------------------- sharing
+  // Share intents rather than profile links: what is worth passing on is the
+  // catalogue itself. They carry the canonical address rather than
+  // location.href, so they still name the site when the page was opened from
+  // disk, where a file: URL would mean nothing to whoever received it.
+  function renderShareLinks() {
+    var canonical = document.querySelector('link[rel="canonical"]');
+    var url = (canonical && canonical.href) || location.href;
+    var u = encodeURIComponent(url);
+    var title = t("app.title");
+    var hrefs = {
+      // x.com still serves the classic intent path, and it redirects either way.
+      "share-x": "https://twitter.com/intent/tweet?text=" + encodeURIComponent(title) + "&url=" + u,
+      "share-facebook": "https://www.facebook.com/sharer/sharer.php?u=" + u,
+      "share-linkedin": "https://www.linkedin.com/sharing/share-offsite/?url=" + u,
+      // Bluesky has no separate url parameter: it has to be in the text.
+      "share-bluesky": "https://bsky.app/intent/compose?text=" + encodeURIComponent(title + " " + url)
+    };
+    Object.keys(hrefs).forEach(function (id) {
+      document.getElementById(id).href = hrefs[id];
+    });
+  }
+
   function renderStatic() {
     document.documentElement.lang = state.lang;
     updateTitle();
@@ -173,6 +196,8 @@
     document.querySelectorAll("[data-i18n-label]").forEach(function (el) {
       el.setAttribute("aria-label", t(el.getAttribute("data-i18n-label")));
     });
+
+    renderShareLinks();
 
     document.querySelectorAll("#tabs button").forEach(function (btn) {
       var tab = btn.getAttribute("data-tab");
