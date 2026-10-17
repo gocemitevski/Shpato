@@ -36,6 +36,8 @@ data/catalog.json|.js   generated, committed
 data/notes.json|.js     generated, committed
 sources/*.csv           monograph exports, the build's input
 sources/youtube.csv     hand-curated record -> YouTube video map, the build's input
+robots.txt              crawl policy (see Deployment)
+sitemap.xml             the one canonical URL (see Deployment)
 ```
 
 Script order in `index.html` is load-bearing: `data/catalog.js`,
@@ -298,3 +300,13 @@ GitHub Pages via `CNAME` (`shpato.gocemitevski.com`). Pushing `master`
 publishes the site. `index.html` carries real OG/Twitter tags and a Google tag
 (`G-Z2QYKW1QNC`); keep the canonical and absolute image URLs in step with the
 domain if either changes.
+
+Pages serves `index.html` at both `/` and `/index.html` with no redirect, so
+there are two URLs for one document. The canonical names the root; `robots.txt`
+keeps crawlers off `/index.html` so no audit has to reconcile the pair, and it
+deliberately does *not* disallow `assets/` or `data/`, which Google fetches to
+render the page. `sitemap.xml` lists the one URL — the tabs and the search live
+in the fragment, and a fragment is not a page. The two `tools/*.html` render
+targets are published like everything else, so each carries
+`<meta name="robots" content="noindex">`; they are not pages and want no
+canonical.

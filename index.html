@@ -29,6 +29,11 @@
        is absolute. These tags are static on purpose: a crawler never runs the
        app's language toggle, so what it sees is the Macedonian default. -->
   <link rel="canonical" href="https://shpato.gocemitevski.com/">
+  <!-- The canonical names the root, not this file: Pages serves this same file
+       at both / and /index.html with no redirect, so the two URLs are one
+       document and this says which one to keep. A self-referential canonical
+       here would ask a search engine to index the duplicate as well. robots.txt
+       keeps crawlers off /index.html for the same reason. -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Драган Ѓаконовски – Шпато">
   <meta property="og:url" content="https://shpato.gocemitevski.com/">

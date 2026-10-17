@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- One URL, because there is one document: the tabs and the search live in the
+     URL fragment, which search engines do not treat as separate pages. No
+     <lastmod>: it would have to be hand-edited or a build timestamp, and the
+     build is deliberately reproducible. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://shpato.gocemitevski.com/</loc>
+  </url>
+</urlset>

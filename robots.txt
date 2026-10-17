@@ -1,0 +1,18 @@
+# The catalogue is one document, served at the root. The state the app keeps in
+# the URL is a fragment (#tab=...&q=...), and a fragment is not a page, so there
+# is nothing else to crawl. /index.html is the same file Pages serves at /, so
+# crawlers are kept off that copy; the page's own canonical names the root.
+#
+# assets/ and data/ are deliberately absent: Google renders the page by fetching
+# its scripts, and blocking either would only cost it the catalogue it is here to
+# index. The paths below are never loaded by the app.
+
+User-agent: *
+Allow: /
+Disallow: /index.html
+Disallow: /tools/
+Disallow: /sources/
+Disallow: /AGENTS.md
+Disallow: /README.md
+
+Sitemap: https://shpato.gocemitevski.com/sitemap.xml
