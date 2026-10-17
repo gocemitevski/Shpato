@@ -32,7 +32,10 @@
     durMin: DATA_MIN,
     durMax: DATA_MAX,
     sort: { key: "title", dir: "asc" },
-    showDuplicates: false,
+    // On by default: the catalogue is a record of what is in the phonotheque,
+    // and a duplicate is one of its records. `dup=0` is what a link carries to
+    // turn it off.
+    showDuplicates: true,
     onlyVideo: false,
     selected: null,
     noteSeverity: "",
@@ -774,7 +777,7 @@
     if (state.composers.size) p.set("comp", Array.from(state.composers).join("|"));
     if (state.durMin > DATA_MIN) p.set("dmin", state.durMin);
     if (state.durMax < DATA_MAX) p.set("dmax", state.durMax);
-    if (state.showDuplicates) p.set("dup", "1");
+    if (!state.showDuplicates) p.set("dup", "0");
     if (state.onlyVideo) p.set("video", "1");
     if (state.sort.key !== "title" || state.sort.dir !== "asc") { p.set("sort", state.sort.key); p.set("dir", state.sort.dir); }
     return "#" + p.toString();
@@ -808,7 +811,8 @@
     if (state.durMin > state.durMax) {
       var swap = state.durMin; state.durMin = state.durMax; state.durMax = swap;
     }
-    state.showDuplicates = p.get("dup") === "1";
+    // Only when the link says so: absent means the default, which is on.
+    if (p.has("dup")) state.showDuplicates = p.get("dup") === "1";
     // Ignore the flag when nothing in the catalogue has a video, or a stale
     // link would land on a permanently empty table.
     state.onlyVideo = p.get("video") === "1" && META.videos > 0;

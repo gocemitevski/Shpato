@@ -234,6 +234,11 @@ have moved.
   keeps playing, and stays controllable, with the details open.
 - `state.onlyVideo` is dropped from a deep link when `meta.videos` is 0, and the
   checkbox is hidden then, so a stale link cannot land on an empty table.
+- `state.showDuplicates` is **on by default**: the catalogue is a record of what
+  the phonotheque holds, and a duplicate is one of its records. Off is the
+  serialised non-default (`dup=0`), and `deserialize()` reads the parameter only
+  when the hash carries one — reading it unconditionally would send every link
+  without a `dup` back to the off state.
 - Transliteration exists twice on purpose: `toLatin()` in `app.js` normalises
   the *query*, `to_latin()` in `build.py` bakes the *index* (`rec.search`, which
   is built at build time). Change one and check the other, or search breaks.
@@ -248,7 +253,7 @@ panel and one-character count chips are pre-existing false positives, not
 regressions.
 
 Focus order is keyboard-complete; the catalogue table's row buttons alone are
-433 tab stops, plus one more for each of the 23 play buttons, so avoid adding
+434 tab stops, plus one more for each of the 23 play buttons, so avoid adding
 anything focusable per row without thinking about it.
 
 ## Assets
