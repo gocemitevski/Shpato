@@ -16,11 +16,15 @@ verified, and a wrong link is worse than a missing one.
     python3 tools/youtube-search.py --query "Нина Спирова Еден бакнеж"
     python3 tools/youtube-search.py --csv --limit 25     # ready-to-paste lines
 
+`--limit` and `--skip` page through the catalogue scan; `--ids` is an explicit
+selection and ignores both.
+
 Review the output, then paste the confirmed lines into `sources/youtube.csv`
 and re-run the build. Only the Python 3 standard library is used.
 """
 
 import argparse
+import csv
 import json
 import os
 import re
@@ -126,11 +130,13 @@ def queries_from_records(records, args):
         missing = wanted - {r["id"] for r in picked}
         if missing:
             sys.exit("unknown ids: {}".format(", ".join(sorted(missing))))
+        # --ids is already an explicit selection, so --limit/--skip (which are
+        # for paging the scan) do not apply to it.
     else:
         picked = [r for r in records if not r.get("video")]
         if args.category:
             picked = [r for r in picked if r["category"] == args.category]
-    picked = picked[args.skip:args.skip + args.limit]
+        picked = picked[args.skip:args.skip + args.limit]
     for r in picked:
         yield r, " ".join(p for p in (r["title"], r["performer"]) if p)
 
@@ -151,6 +157,10 @@ def main():
         jobs = [(None, args.query)]
     else:
         jobs = list(queries_from_records(load_records(), args))
+
+    # Real CSV, so a title containing a comma survives being copied into
+    # sources/youtube.csv.
+    writer = csv.writer(sys.stdout, lineterminator="\n") if args.csv else None
 
     for rec, query in jobs:
         if not query.strip():
@@ -177,9 +187,9 @@ def main():
                 print("      {}".format(c["channel"]))
         print("   catalogue duration: {}".format(
             format_length(want) if want else "unknown"))
-        if args.csv and candidates:
-            print("{},{},{}".format(
-                rec["id"], rec["title"].replace(",", "/"), candidates[0]["id"]))
+        if writer and candidates:
+            writer.writerow([rec["id"] if rec else "", rec["title"] if rec else query,
+                             candidates[0]["id"]])
 
 if __name__ == "__main__":
     main()
