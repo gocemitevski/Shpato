@@ -22,12 +22,12 @@ as plain `<script>` globals.
 ## Repo map
 
 ```
-index.html              the whole app shell (three views + drawer)
+index.html              the whole app shell (four views + drawer)
 assets/styles.css       theme tokens + all styling
 assets/i18n.js          every user-visible string, mk + en
 assets/app.js           all behaviour
 assets/fonts/*.woff2    self-hosted Geologica (the only typeface, OFL 1.1)
-assets/images/          cover, brand icon, favicon set (transparent PNGs)
+assets/images/          cover, brand icon, About photograph, favicon set
 tools/build.py          normalizer: sources -> data
 tools/youtube-search.py candidate finder for the link map (dev-only)
 tools/cover.html        1920x1080 social cover render target (dev-only)
@@ -98,12 +98,39 @@ tried. `file://` support is a hard requirement here, so `CAN_EMBED` is false
 there and the play button opens the video on YouTube in a new tab instead of
 mounting a player that can only fail. Do not "simplify" that branch away.
 
+## The About tab
+
+`#view-about` is static prose. The shell carries only the markup and the
+`data-i18n` hooks; every sentence lives in `assets/i18n.js` under `about.*` in
+both languages, as everywhere else.
+
+Every biographical claim there is backed by one of the three references linked
+at the foot of the tab (Dimitrov's monograph, Grove Music Online, the FMU
+yearbook). Do not add facts from memory: the sources do not agree in places, so
+the tab states what they collectively support.
+
+- The first Macedonian jazz composition is given as "На игранка" (1948), as the
+  monograph and the press have it, not Wikipedia's "Тема I" (1947).
+- Both documented wives are named: Катица Ѓаконовска (the monograph credits her
+  as the singer on four of the arrangements, which is how she also appears in
+  the catalogue) and Марија Ѓаконовска (his last piece, "Марија" from 1986, is
+  dedicated to her). Do not collapse them into a single wife, and do not say
+  which was Martin's mother — the German sources name Катица, the Macedonian
+  ones Марија.
+- The birth date is 11 March 1931 (Makedonska Enciklopedija, mk.wikipedia); the
+  8 July 1931 that SOKOM's member biography prints is the outlier. The opus
+  figure is "над 3.000 аранжмани", against 5,000 in German Wikipedia and
+  "неколку стотини" in SOKOM's own text.
+- The photograph is a Slobodna Evropa (RFE/RL) frame of him conducting a big
+  band, taken from slobodnaevropa.mk/a/3537129.html. It is RFE/RL's, so the
+  caption carries the credit (`about.credit`); keep the credit with the image.
+
 ## Conventions
 
 - **All UI text is bilingual.** Adding a key means adding it to *both* `mk` and
   `en` in `assets/i18n.js`. `t()` falls back to English silently, so a missing
   Macedonian key will not throw — it will just ship English. Keys are currently
-  at parity (122 each).
+  at parity (145 each).
 - **Capitalisation lives in the strings, not in CSS.** A `<select>`'s
   `<option>` does not inherit `text-transform`, so a CSS-capitalised label looks
   right in the table and wrong in a dropdown. Capitalise in `i18n.js`.
@@ -144,7 +171,7 @@ mounting a player that can only fail. Do not "simplify" that branch away.
 
 ## Accessibility
 
-The bar is **zero axe-core violations** in both themes, on all three tabs, with
+The bar is **zero axe-core violations** in both themes, on all four tabs, with
 the drawer open, the export menu open and the player open. Re-check it after any
 markup change. axe's `incomplete` items on `#export-btn`, the scrollable facet
 panel and one-character count chips are pre-existing false positives, not

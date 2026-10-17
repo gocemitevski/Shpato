@@ -14,7 +14,7 @@
   })();
 
   var CATEGORY_ORDER = ["vocal", "instrumental", "arrThemes", "arrVocal"];
-  var TABS = ["catalog", "stats", "notes"];
+  var TABS = ["catalog", "stats", "notes", "about"];
   // The columns that carry a data-sort attribute in index.html.
   var SORT_KEYS = ["title", "performer", "composer", "durationSec", "signature"];
   var facetFilterState = {};

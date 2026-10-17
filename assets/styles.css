@@ -793,6 +793,67 @@ code.raw {
   vertical-align: bottom;
 }
 
+/* ----------------------------------------------------------------- about */
+.about {
+  display: grid;
+  gap: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+@media (min-width: 720px) {
+  /* The biography takes the wide column and the photograph sits to its right,
+     in the same order as the markup. The row is capped at the reading measure
+     and packed to the left, so the photograph stays beside the text instead of
+     drifting to the far margin and leaving a void between the two. */
+  .about { grid-template-columns: minmax(0, 68ch) 220px; justify-content: start; gap: 2.25rem; align-items: start; }
+}
+.about-portrait { margin: 0; }
+/* A framed photograph, in the same language as .card and .facts. The brand
+   mark's circle, accent ring and halo are deliberately not reused: this is a
+   portrait, not the badge. */
+.about-portrait img {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.about-portrait figcaption { color: var(--muted); font-size: .78rem; margin-top: .75rem; }
+.about-portrait .credit { display: block; margin-top: .2rem; font-size: .72rem; }
+.about-body { max-width: 68ch; }
+.about-body p { margin: 0 0 .9rem; }
+.about-body p:last-child { margin-bottom: 0; }
+.about-lead { font-size: 1.05rem; font-weight: 600; }
+
+.facts {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: .55rem 1.5rem;
+  margin: 0 0 1.75rem;
+  padding: 1.3rem 1.5rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  font-size: .9rem;
+}
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; min-width: 0; }
+/* Below this the label column squeezes the values to ~110px, so the pairs
+   stack: the label sits above its value instead of beside it. */
+@media (max-width: 480px) {
+  .facts { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .facts dd { margin-bottom: .7rem; }
+  .facts dd:last-child { margin-bottom: 0; }
+}
+
+.about-sources-title { font-size: .95rem; margin: 0 0 .6rem; }
+.about-sources-note { color: var(--muted); font-size: .85rem; margin: 0 0 .6rem; }
+.sources { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: .85rem; }
+.sources li { margin-bottom: .35rem; }
+.sources li:last-child { margin-bottom: 0; }
+
 /* ---------------------------------------------------------------- drawer */
 .drawer { position: fixed; inset: 0; z-index: 50; }
 .drawer-backdrop { position: absolute; inset: 0; background: rgba(13, 17, 23, .5); }
