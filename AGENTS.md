@@ -361,7 +361,12 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   document is the scroller. Without both, a tab opens part-way down wherever the
   previous one was left — on a phone in landscape that used to mean the About
   heading landing 206px above the viewport. `<html>` scrolls smoothly, so the
-  jump is made with `scroll-behavior` temporarily `auto`.
+  jump is made with `scroll-behavior` temporarily `auto`. It runs on every tab
+  click, not only on a change, which makes the active tab a return-to-top too:
+  on a phone that is the reader's way back to the sort buttons at the head of
+  the table, since the header itself cannot pin there (see the stand-down note
+  above) — an early return for the tab already selected would take that gesture
+  away.
 - `body.player-open` reserves the player's room inside `.table-wrap` and `.view`,
   never by padding `main`: padding `main` would make the shell scroll to reveal
   nothing but itself.
