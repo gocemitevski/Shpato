@@ -320,9 +320,9 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   narrow, the handle shows and the panel starts closed. That width is written out
   in the stylesheet and in `app.js` by hand, so changing one means changing the
   other.
-- Below 620px the mark also shrinks to 48px and takes `order: 1`, so the brand
-  reads text first and portrait after, and the header centres: the brand on its
-  own row, the theme and language toggles on the next. The search gives up its
+- Below 620px the mark takes `order: 1` and keeps its 56px, so the brand reads
+  text first and portrait after, and the header centres: the brand on its own
+  row, the theme and language toggles on the next. The search gives up its
   320px basis there, so the handle shares its row instead of costing a row of its
   own. The four tabs need 443px at the default gap and size and a phone offers
   361 of them, so the strip tightens too — `.78rem` labels that `flex-grow` to

@@ -231,7 +231,7 @@ a { color: var(--accent-2); }
 @media (max-width: 620px) {
   .site-header { flex-wrap: wrap; justify-content: center; }
   .brand { flex: 1 1 100%; gap: .75rem; justify-content: center; }
-  .brand-mark { width: 48px; height: 48px; order: 1; }
+  .brand-mark { order: 1; }
 }
 
 /* One segmented pill shared by the theme and language toggles. The track is
