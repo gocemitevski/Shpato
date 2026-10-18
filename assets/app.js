@@ -415,6 +415,8 @@
         '<td class="sig">' + esc(r.signature || r.signatureRaw || t("common.none")) + "</td>" +
         "</tr>";
     }).join("");
+    // A filter can change how wide the table is, and so whether it can be panned.
+    syncPanCues();
   }
 
   // ------------------------------------------------------------ mini-player
@@ -759,6 +761,7 @@
       ? '<button type="button" class="btn" id="note-show-all">' + esc(t("notes.showAll")) +
         " (" + list.length + ")</button>"
       : "";
+    syncPanCues();
   }
 
   // --------------------------------------------------------------- exports
@@ -925,6 +928,9 @@
   function setFiltersOpen(open) {
     document.getElementById("filters").hidden = !open;
     document.getElementById("filters-toggle").setAttribute("aria-expanded", open ? "true" : "false");
+    // Opening or closing the panel changes how wide the card is, and so whether
+    // the table has anywhere left to pan.
+    syncPanCues();
   }
 
   // The width hands the panel over rather than leaving it in whatever state the
@@ -933,6 +939,29 @@
   function syncFiltersHandle() {
     document.getElementById("filters-toggle").hidden = mqWide.matches;
     setFiltersOpen(mqWide.matches);
+  }
+
+  // --------------------------------------------------------------- pan cue
+  // The cue that a card can be panned sideways is a layer above the card (see
+  // .table-frame), so CSS cannot tell it from the scroll position the way a
+  // background layer of the scroller could: the frame carries which sides still
+  // have table to show, and the stylesheet shows the gradients.
+  function syncPanCue(wrap) {
+    var frame = wrap.closest(".table-frame");
+    if (!frame) return;
+    var max = wrap.scrollWidth - wrap.clientWidth;
+    var sides = [];
+    if (max > 1) {
+      if (wrap.scrollLeft > 0) sides.push("left");
+      if (wrap.scrollLeft < max - 1) sides.push("right");
+    }
+    if (sides.length) frame.setAttribute("data-pan", sides.join(" "));
+    else frame.removeAttribute("data-pan");
+  }
+
+  function syncPanCues() {
+    var wraps = document.querySelectorAll(".table-frame > .table-wrap");
+    for (var i = 0; i < wraps.length; i++) syncPanCue(wraps[i]);
   }
 
   function bind() {
@@ -1083,6 +1112,15 @@
     document.getElementById("note-more").addEventListener("click", function (e) {
       if (e.target.closest("#note-show-all")) { state.noteLimit = Infinity; renderNotes(); }
     });
+
+    var panWraps = document.querySelectorAll(".table-frame > .table-wrap");
+    for (var i = 0; i < panWraps.length; i++) {
+      panWraps[i].addEventListener("scroll", function (e) { syncPanCue(e.currentTarget); });
+    }
+    window.addEventListener("resize", syncPanCues);
+    // How wide the table is comes from the font, which can land after the first
+    // render, so what can be panned is not settled until it has.
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncPanCues);
   }
 
   function renderDrawerStatic() { if (state.selected) renderDrawer(); }

@@ -299,21 +299,34 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   340px — and the footer grows a second row; that is the wrap behaving, not a bug.
 - `.filters` and `.table-wrap` set `overscroll-behavior: contain`: a wheel that
   reaches the end of a facet list or of the table stops there instead of
-  carrying on into the shell. `.table-wrap` also carries the cue that it can be
-  panned sideways — on a phone the table is 706px inside a 361px card and
-  nothing else on screen says so — as two `--shadow-edge` gradients against its
-  own edges, with two panel-coloured covers riding the content (`local`) over
-  them, so a shadow shows only while there is table left in that direction. The
-  covers are opaque across the shadow's own 2rem and fade only after it, or a
-  quarter of the shadow leaks through at the very end it exists to hide. Shade
-  and cover are both 2rem wide on purpose: the cue is meant to read as a wash
-  rather than as a band with an edge, which is why `--shadow-edge` is as weak as
-  it is — widening it lengthens the wash rather than deepening it. The layers
-  are the scroller's own background, which reads through the transparent rows,
-  and for that same reason the cue stops at the header row: a `th` is opaque so
-  that rows cannot show through the sticky band, and nothing a scroller paints
-  into its own background can paint over its children. Print drops the layers,
-  because paper does not pan.
+  carrying on into the shell. Each `.table-wrap` sits in a `.table-frame`, and
+  the frame draws the cue that the card can be panned sideways — on a phone the
+  table is 706px inside a 361px card and nothing else on screen says so. It
+  cannot be a layer of the card's own background: those lie under the card's
+  children, and a `th` has to stay opaque or rows show through the sticky band,
+  so a scroller painting into its own background can never shade the header row.
+  The two gradients are instead two empty `.pan-cue` elements of the frame — a
+  layer above the card, pinned to the frame rather than to the content, which
+  shades the header row too — and one layer per side is what lets one show while
+  the other is hidden. They are elements rather than the frame's
+  `::before`/`::after` because axe cannot settle the contrast of anything an
+  ancestor's pseudo-element might paint over: as elements the catalogue reports
+  no undecided contrast, as pseudos it flags every cell in the table. A layer
+  above the card cannot see the scroll position, so `app.js` puts which sides
+  still have table left on `data-pan` and the stylesheet shows the gradients; the
+  pair cross-fades when the card is panned to an end. The frame is also what
+  gives the card its height: it is the `.results`/`#view-notes` grid item, and
+  the card fills it with `flex: 1`.
+  `.table-wrap` is `position: relative` for a reason worth keeping: an
+  absolutely positioned descendant whose containing block is outside a scroll
+  container is not clipped by it, and every row holds a 1x1 `.visually-hidden`
+  span whose static position, thousands of pixels down the table, then becomes
+  scrollable overflow that reaches the shell — a pane pinned to `100dvh` gets a
+  scrollbar of its own and the positional check below fails. Shade and fade are
+  both 2rem wide and `--shadow-edge` is weak on purpose: the cue is meant to
+  read as a wash rather than as a band with an edge, so widening it lengthens
+  the wash rather than deepening it. Print drops the two gradients, because
+  paper does not pan, and reduced motion drops their cross-fade.
 - From 1024px up the facet panel is a permanent left pane
   (`clamp(260px, 32vw, 500px)`). Below that it is a disclosure above the table,
   opened from a handle in the toolbar (`#filters-toggle`, the export menu's
@@ -379,7 +392,8 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
 
 The check that matters when touching any of this is positional: with the shell up,
 scroll the table to its end and the header, the tab bar, the facet sidebar and the
-footer must not have moved.
+footer must not have moved, and the pane must not have gained a scrollbar of its
+own.
 
 ## Conventions
 

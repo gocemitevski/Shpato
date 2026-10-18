@@ -161,20 +161,25 @@
 
         <div class="results">
           <p class="result-meta" id="result-meta" role="status"></p>
-          <div class="table-wrap">
-            <table class="catalog-table">
-              <caption class="visually-hidden" data-i18n="catalog.caption"></caption>
-              <thead>
-                <tr>
-                  <th scope="col" data-sort="title" class="sortable" aria-sort="ascending"><button type="button" class="th-sort"><span class="th-label"></span><span class="th-arrow" aria-hidden="true"></span></button></th>
-                  <th scope="col" data-sort="performer" class="sortable"><button type="button" class="th-sort"><span class="th-label"></span><span class="th-arrow" aria-hidden="true"></span></button></th>
-                  <th scope="col" data-sort="composer" class="sortable"><button type="button" class="th-sort"><span class="th-label"></span><span class="th-arrow" aria-hidden="true"></span></button></th>
-                  <th scope="col" data-sort="durationSec" class="sortable"><button type="button" class="th-sort"><span class="th-label"></span><span class="th-arrow" aria-hidden="true"></span></button></th>
-                  <th scope="col" data-sort="signature" class="sortable"><button type="button" class="th-sort"><span class="th-label"></span><span class="th-arrow" aria-hidden="true"></span></button></th>
-                </tr>
-              </thead>
-              <tbody id="catalog-body"></tbody>
-            </table>
+          <div class="table-frame">
+            <div class="table-wrap">
+              <table class="catalog-table">
+                <caption class="visually-hidden" data-i18n="catalog.caption"></caption>
+                <thead>
+                  <tr>
+                    <th scope="col" data-sort="title" class="sortable" aria-sort="ascending"><button type="button" class="th-sort"><span class="th-label"></span><span class="th-arrow" aria-hidden="true"></span></button></th>
+                    <th scope="col" data-sort="performer" class="sortable"><button type="button" class="th-sort"><span class="th-label"></span><span class="th-arrow" aria-hidden="true"></span></button></th>
+                    <th scope="col" data-sort="composer" class="sortable"><button type="button" class="th-sort"><span class="th-label"></span><span class="th-arrow" aria-hidden="true"></span></button></th>
+                    <th scope="col" data-sort="durationSec" class="sortable"><button type="button" class="th-sort"><span class="th-label"></span><span class="th-arrow" aria-hidden="true"></span></button></th>
+                    <th scope="col" data-sort="signature" class="sortable"><button type="button" class="th-sort"><span class="th-label"></span><span class="th-arrow" aria-hidden="true"></span></button></th>
+                  </tr>
+                </thead>
+                <tbody id="catalog-body"></tbody>
+              </table>
+            </div>
+            <!-- One layer per side, above the card: see .pan-cue. -->
+            <div class="pan-cue left" aria-hidden="true"></div>
+            <div class="pan-cue right" aria-hidden="true"></div>
           </div>
           <p class="empty" id="catalog-empty" hidden></p>
         </div>
@@ -227,21 +232,26 @@
           <select id="note-rule"></select>
         </label>
       </div>
-      <div class="table-wrap">
-        <table class="catalog-table notes-table">
-          <caption class="visually-hidden" data-i18n="notes.title"></caption>
-          <thead>
-            <tr>
-              <th scope="col" data-i18n="notes.record"></th>
-              <th scope="col" data-i18n="notes.rule"></th>
-              <th scope="col" data-i18n="notes.severity"></th>
-              <th scope="col" data-i18n="notes.rawShort"></th>
-              <th scope="col" data-i18n="notes.normalized"></th>
-              <th scope="col" data-i18n="notes.source"></th>
-            </tr>
-          </thead>
-          <tbody id="note-body"></tbody>
-        </table>
+      <div class="table-frame">
+        <div class="table-wrap">
+          <table class="catalog-table notes-table">
+            <caption class="visually-hidden" data-i18n="notes.title"></caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="notes.record"></th>
+                <th scope="col" data-i18n="notes.rule"></th>
+                <th scope="col" data-i18n="notes.severity"></th>
+                <th scope="col" data-i18n="notes.rawShort"></th>
+                <th scope="col" data-i18n="notes.normalized"></th>
+                <th scope="col" data-i18n="notes.source"></th>
+              </tr>
+            </thead>
+            <tbody id="note-body"></tbody>
+          </table>
+        </div>
+        <!-- One layer per side, above the card: see .pan-cue. -->
+        <div class="pan-cue left" aria-hidden="true"></div>
+        <div class="pan-cue right" aria-hidden="true"></div>
       </div>
       <p class="empty" id="note-empty" hidden></p>
       <div id="note-more" class="table-more"></div>
