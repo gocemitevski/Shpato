@@ -1,40 +1,161 @@
-id,title,video
-vocal-0003,Без повраток,zOrztTuXttE
-vocal-0007,Далечен крај,mPpjbo0tSBg
-vocal-0009,Даниела,7VRhCF2jtUU
-vocal-0011,Ден љубен безповратен,5YBLvWD89AY
-vocal-0013,Дојди есен,1yWXqyBd09E
-vocal-0016,Идила,pY9TzksujZw
-vocal-0018,Идила секогаш што била,z9nAy0PhR6I
-vocal-0019,Илјада проблеми,4NPYDFIcV2Y
-vocal-0024,Индијана,wC49Ytu9EGI
-vocal-0025,Индијана,HbugyIxBrJ4
-vocal-0030,Кога си сама,mBMsiP9UWcg
-vocal-0032,Лени,kFZk5Qo8I5s
-vocal-0036,Младоста е убава,_fn-siexksY
-vocal-0039,Молчи една долина,MNGjrtM4qDA
-vocal-0045,Незаборав,NLx5SMYld_0
-vocal-0046,Носталгија,0FyCv3qltjo
-vocal-0051,Последен ден на разделбата,UJoXlDq69Eg
-vocal-0053,Роден крај,PZnoDyzgyx8
-vocal-0062,Те носам во себе,J4ntcnjaPX8
-vocal-0064,Тој и таа-јас и ти,L3i6AvDuM0c
-vocal-0065,Убава си како музика,zpJlRSA4jKs
-vocal-0067,За нас почнува живот,RDdThnE5YuM
-vocal-0070,Зар вистина е крај,n69xkQTt_LA
-instrumental-0004,Во спомен на старото пријателство,mou1ztGr7vk
-instrumental-0015,Елегија за тромбон,R16qOzW8Aok
-instrumental-0043,На игранка,t80NdEeHDKU
-arrVocal-0010,Бакни ме,JgVkOCBYlP8
-arrVocal-0012,Бегај бегај Марија,AOknZvcBryw
-arrVocal-0014,Благодарам,EEL2MQbf6bk
-arrVocal-0027,Дојди,sb2HWWXgPjE
-arrVocal-0045,Го љубам до најмалите ѕвезди,0D-J--RGujE
-arrVocal-0117,Незнаена сестра,HJwqKT2oSt0
-arrVocal-0145,Планино моја рудино,8ZNpiRc-vJ0
-arrVocal-0146,Почекај ме,dm8oa1UWrdE
-arrVocal-0184,Скопје,MFvfQHS4Cbs
-arrVocal-0185,Скопје младост моја,hkCnH7q6RPw
-arrVocal-0186,Со цвеќе да ме пречекаш,8mXUlZ-6nHk
-arrVocal-0224,Убавице моја,C8Fg-CRoQZk
-arrVocal-0245,Запри,1mUyf5sDygs
+id,title,video,found,lengthSec
+vocal-0003,Без повраток,zOrztTuXttE,human,131
+vocal-0007,Далечен крај,mPpjbo0tSBg,human,151
+vocal-0009,Даниела,7VRhCF2jtUU,human,162
+vocal-0011,Ден љубен безповратен,5YBLvWD89AY,human,170
+vocal-0013,Дојди есен,1yWXqyBd09E,human,198
+vocal-0016,Идила,pY9TzksujZw,human,145
+vocal-0018,Идила секогаш што била,z9nAy0PhR6I,human,154
+vocal-0019,Илјада проблеми,4NPYDFIcV2Y,human,139
+vocal-0024,Индијана,wC49Ytu9EGI,human,157
+vocal-0025,Индијана,HbugyIxBrJ4,human,160
+vocal-0030,Кога си сама,mBMsiP9UWcg,human,172
+vocal-0032,Лени,kFZk5Qo8I5s,human,209
+vocal-0036,Младоста е убава,_fn-siexksY,human,215
+vocal-0039,Молчи една долина,MNGjrtM4qDA,human,148
+vocal-0045,Незаборав,NLx5SMYld_0,human,225
+vocal-0046,Носталгија,0FyCv3qltjo,human,159
+vocal-0051,Последен ден на разделбата,UJoXlDq69Eg,human,180
+vocal-0053,Роден крај,PZnoDyzgyx8,human,167
+vocal-0062,Те носам во себе,J4ntcnjaPX8,human,195
+vocal-0064,Тој и таа-јас и ти,L3i6AvDuM0c,human,177
+vocal-0065,Убава си како музика,zpJlRSA4jKs,human,163
+vocal-0067,За нас почнува живот,RDdThnE5YuM,human,142
+vocal-0070,Зар вистина е крај,n69xkQTt_LA,human,222
+instrumental-0004,Во спомен на старото пријателство,mou1ztGr7vk,human,227
+instrumental-0015,Елегија за тромбон,R16qOzW8Aok,human,169
+instrumental-0043,На игранка,t80NdEeHDKU,human,306
+arrVocal-0010,Бакни ме,JgVkOCBYlP8,human,157
+arrVocal-0012,Бегај бегај Марија,AOknZvcBryw,human,200
+arrVocal-0014,Благодарам,EEL2MQbf6bk,human,164
+arrVocal-0027,Дојди,sb2HWWXgPjE,human,193
+arrVocal-0045,Го љубам до најмалите ѕвезди,0D-J--RGujE,human,165
+arrVocal-0117,Незнаена сестра,HJwqKT2oSt0,human,191
+arrVocal-0145,Планино моја рудино,8ZNpiRc-vJ0,human,180
+arrVocal-0146,Почекај ме,dm8oa1UWrdE,human,188
+arrVocal-0184,Скопје,MFvfQHS4Cbs,human,198
+arrVocal-0185,Скопје младост моја,hkCnH7q6RPw,human,206
+arrVocal-0186,Со цвеќе да ме пречекаш,8mXUlZ-6nHk,human,222
+arrVocal-0224,Убавице моја,C8Fg-CRoQZk,human,277
+arrVocal-0245,Запри,1mUyf5sDygs,human,164
+instrumental-0003,Балада за гитара,D5oEe7IzHWk,search,189
+instrumental-0007,Гарача,b_D0ILHpu8M,search,235
+instrumental-0010,Дојди есен,JeIqhHwl1ic,search,229
+instrumental-0016,Еден бакнеж,JUwTiHyAqH4,search,202
+instrumental-0017,Ехо од далечното минато,YurRHulM3Cw,search,301
+instrumental-0019,Идила,nNTNDmu2DZM,search,144
+instrumental-0022,Идила,DfeW-KngHMg,search,145
+instrumental-0025,Јас не сум ти,sehpKPHkAKk,search,259
+instrumental-0026,Кога си сама,nLT4VOfPqiw,search,176
+instrumental-0032,Лени,sl_2PnefVRc,search,214
+instrumental-0038,Мими,aDIg9yPLJAY,search,221
+instrumental-0039,Мими,vBUyE5_SKKk,search,284
+instrumental-0040,Младоста е убава,SKTR8koEVq4,search,205
+instrumental-0041,Молчи една долина,2GUnaOK6ij4,search,155
+instrumental-0042,Молчи една долина,IUxVcbRp7Vw,search,310
+instrumental-0048,Поздрав до оркестарот,geK0tWTLWXo,search,273
+instrumental-0051,Синтеза,s48DHQzMb5I,search,301
+vocal-0005,Гарача,2k0kD6Mj9vk,search,198
+vocal-0006,Глас од далечината,dAXua0oaXa8,search,130
+vocal-0008,Далечен крај,Q7c7QkQVqRI,search,153
+vocal-0010,Даниела,DmrL8DaENrQ,search,163
+vocal-0020,Играј и пеј калипсо,O-OJ7mVkmSw,search,194
+vocal-0022,Импресија,XqpV5xbNvjs,search,171
+vocal-0027,Калипсо,G3SK6qnXXhk,search,126
+vocal-0029,"Кога пеам, кога љубам",PTIdxNIfPvU,search,152
+vocal-0035,Ми вети ти,8LbUNZ_JFWk,search,189
+vocal-0037,Мојот дом,L9d9ls1rpDw,search,164
+vocal-0038,Молчи една долина,LvG7PtOXf10,search,170
+vocal-0041,Не ме заборавај,6kA5P4j-RUI,search,260
+vocal-0052,Прва љубов,xFHL7EZSjms,search,270
+vocal-0057,Сини очи,n6CIWAUMDuQ,search,157
+vocal-0073,Жолта липа,IG2ksOSMbRI,search,181
+arrThemes-0007,Девојката од Ипанема,JrwBFlKC5s8,search,156
+arrThemes-0008,"Дење, ноќе",rZe-eafI1rQ,search,194
+arrThemes-0010,Еден бакнеж,ccm7teCWQsw,search,181
+arrThemes-0021,Мојата улица,1VjAGtjNgJs,search,235
+arrThemes-0027,Последна солза,NhIeyt6Bfb8,search,209
+arrThemes-0030,Taste of Honey,7oQywfAC31M,search,176
+instrumental-0020,Импресија,Jyg2X8icikk,search,238
+instrumental-0033,Лени,B5Rl7T7hsh8,search,153
+instrumental-0055,Убава си како музика,wcq3ai5UW8Y,search,167
+arrThemes-0033,Виделина,s36iQ9x2-Vw,search,232
+arrThemes-0041,Човекот што го сакам,DGwlpM8cHI0,search,218
+arrThemes-0042,Жалај моме,sWoJ94r2Isw,search,285
+arrVocal-0004,Ако отидеш,3fvsu-yUwzk,search,224
+arrVocal-0007,Андалузија,U0URpThLhDY,search,197
+arrVocal-0009,Адиос,dYk44GTmN_Y,search,178
+arrVocal-0013,Бим бам бум,EVCYU3ykkiY,search,160
+arrVocal-0020,Далеку во далечина,ywdm3q5S4rY,search,183
+arrVocal-0025,Дождот нека плисне,2J0cCxLbcec,search,161
+arrVocal-0028,Дојди ми,TTFiQbfLkIw,search,108
+arrVocal-0032,Друг љубиш,RKaLdlhZzYs,search,211
+arrVocal-0036,Еден бакнеж,PH8sa4Jea3U,search,223
+arrVocal-0042,Фолк соул,cDiZ1BZmsAM,search,229
+arrVocal-0046,И можеби,OAM5b4b7ieM,search,179
+arrVocal-0054,Јужна ѕвезда,qYt_TaG9IWk,search,189
+arrVocal-0055,Кажи зошто ме остави,x-AqPPiYKrA,search,185
+arrVocal-0056,Кај си мајко,J7GAuLtj2_w,search,154
+arrVocal-0057,Ќе наминеш кај мене,KL7tkRTUjdY,search,190
+arrVocal-0059,Кога бев млад,U8S0-8hDgOE,search,110
+arrVocal-0062,Кој да те колне,imFdCshzBxA,search,192
+arrVocal-0063,Крајот на нашата љубов,JDhc_q1gJv4,search,212
+arrVocal-0072,Љубам,ro3-qRE9Yvw,search,217
+arrVocal-0073,Љубов и мотор,3nI2OFKJN6g,search,166
+arrVocal-0074,Љуби ме,D657Yu5503M,search,162
+arrVocal-0078,Љубов ти сладок сон,Ra-FWdn5QVY,search,221
+arrVocal-0080,Љубен си?,5R2VyMdE9LQ,search,151
+arrVocal-0084,Македонка,gJPlb_dL9Z8,search,179
+arrVocal-0085,Македонски кавал,VCX4uYPQsqQ,search,122
+arrVocal-0086,Марина,KQVIqSBVuRQ,search,169
+arrVocal-0092,Мила моја,Fhkw_POjFOQ,search,197
+arrVocal-0094,Млади луди години,km8gdZ415Zw,search,190
+arrVocal-0105,Moon River,wbWNxXsoCJ8,search,143
+arrVocal-0107,"Нани, нуни, нина",5FAuImBPH34,search,161
+arrVocal-0111,Нека е крај,LQd14NdrdVk,search,175
+arrVocal-0112,Нежност кон Мими,OL63eiK3Wmk,search,140
+arrVocal-0118,Незнам кај си сега,ECD2aIgNP7k,search,261
+arrVocal-0122,Ноќеска шумеа брезите,QdyBIDd1u6c,search,241
+arrVocal-0124,О галеби бели,ZiGiurLMn0w,search,173
+arrVocal-0130,Остани,uqw4fCa2rAA,search,167
+arrVocal-0131,Остани мој,aXy5AKqXr1Q,search,198
+arrVocal-0132,Оставам сè,NryzyFVnVtw,search,241
+arrVocal-0136,Пролетно сеќавање,nvEA6G-_SWI,search,227
+arrVocal-0137,Песна на враќањето,e11bOL1tVrI,search,123
+arrVocal-0139,Писмо,d2RBv1fcU9M,search,225
+arrVocal-0140,Прегрни ме,ufL_VPhCbzQ,search,234
+arrVocal-0143,Празно е без оваа љубов,KvfPNzPuNKg,search,214
+arrVocal-0144,Пролетен Бајон,Myx2M0SygMc,search,154
+arrVocal-0148,Последна солза,lJiyxoUYJEg,search,208
+arrVocal-0149,Последна солза,gb2O8wnQsMs,search,204
+arrVocal-0150,Поздрав на Марија,NTxyra9EJSw,search,135
+arrVocal-0151,Празно е без оваа љубов,7tHVdniHJTc,search,212
+arrVocal-0153,Прости ми,0IRrG_jh1VI,search,239
+arrVocal-0154,Прости ми,QVQn3-Js5NI,search,220
+arrVocal-0156,Рубин,0orMWlA7Dow,search,317
+arrVocal-0163,Сеќавање,5YcnD1ahUCc,search,161
+arrVocal-0165,Скитник,kcD_XwDR944,search,174
+arrVocal-0172,Спомен,LqXguiNARto,search,152
+arrVocal-0174,Симона,bHXoKylMQ6k,search,223
+arrVocal-0176,Сино во сино,u4sLj4LnjEo,search,252
+arrVocal-0179,Село мое,7hmR8gifV0Y,search,199
+arrVocal-0182,Сеќавање,T_Od_9-7Hkg,search,160
+arrVocal-0183,Се руши еден свет,XpmbSj6HXBo,search,135
+arrVocal-0190,Спомен,9mAeFyYWvRA,search,160
+arrVocal-0191,Спомен,q8jg4jy9a44,search,143
+arrVocal-0192,Срамежливи,JS4FF1tH3vk,search,206
+arrVocal-0198,Татковино,KkyROqFgrg0,search,219
+arrVocal-0211,Ти и јас,4JGLMLdBHts,search,322
+arrVocal-0214,Ти си тој,7rxzBC160fc,search,297
+arrVocal-0218,Те чекам,tB8uFeLwba8,search,280
+arrVocal-0228,Врати се,dW9I9_C6Vxs,search,214
+arrVocal-0232,Во една пролет,lP_f896o9ng,search,179
+arrVocal-0233,Во ноќта,b4_N0C-wF1U,search,221
+arrVocal-0236,Вљуби се во мене,fIxulSLx7ng,search,137
+arrVocal-0242,За мене сега си сè,hwTzi_hG8jM,search,226
+arrVocal-0248,Здодевно е,l0qF2FuW7_M,search,149
+arrVocal-0249,Златна месечина,bKiiKI5Z3cM,search,244
+arrVocal-0250,Земјо родна,MZn_j1iWjN4,search,205
+arrVocal-0254,Зошто,rubMGVkJM6o,search,138
+arrVocal-0259,Шармен,9bgGfhDcRs8,search,309
+arrVocal-0260,Штом те видам,8R4gP15zm1w,search,130

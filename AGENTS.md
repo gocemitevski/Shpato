@@ -35,7 +35,7 @@ tools/favicon.html      favicon render target (dev-only)
 data/catalog.json|.js   generated, committed
 data/notes.json|.js     generated, committed
 sources/*.csv           monograph exports, the build's input
-sources/youtube.csv     hand-curated record -> YouTube video map, the build's input
+sources/youtube.csv     record -> YouTube video map (checked and machine-found), the build's input
 sources/removals.csv    hand-curated rows the source repeats, the build's input
 robots.txt              crawl policy (see Deployment)
 sitemap.xml             the one canonical URL (see Deployment)
@@ -83,33 +83,134 @@ Never "fix" a title or name silently. A dropped row is recorded there too, under
 
 ## YouTube links
 
-`sources/youtube.csv` (`id,title,video`) is curated by hand, not derived. `id`
-is positional (`vocal-0007`), so `title` is a guard: `attach_videos()` warns
-when it disagrees with the record, because a shifted id would otherwise
-attach a video to the wrong work with no visible symptom. A value that is not
-a valid 11-character id (or a pasted YouTube URL) is dropped with a warning.
-The field is present on every record, `null` when unknown.
+`sources/youtube.csv` (`id,title,video,found,lengthSec`) is the link map, part
+hand-checked and part machine-filled. `id` is positional (`vocal-0007`), so
+`title` is a guard: `attach_videos()` warns when it disagrees with the record,
+because a shifted id would otherwise attach a video to the wrong work with no
+visible symptom. A value that is not a valid 11-character id (or a pasted
+YouTube URL) is dropped with a warning. The field is present on every record,
+`null` when unknown.
 
-`tools/youtube-search.py` proposes candidates by scraping YouTube's public
-search page. It is a convenience, never a build step, and it does not decide:
-every line of `sources/youtube.csv` was read by a human. Video length is
-compared against `durationSec` and marked when it agrees — a useful signal,
-not proof. Check it against the *other* records that share the title too: 38
-catalogue titles name more than one work, and a candidate whose length fits a
-sibling record's `durationSec` better than its own is very likely that
-sibling's recording. (A full pass with this tool over the 411 unlinked works
-found 15 links; the corpus is mostly not on YouTube.)
+`found` says where a link came from: blank or `human` for one a person checked
+(blank is how the first 39 rows read — they predate the column), `search` for
+one `tools/youtube-search.py` accepted and nobody confirmed. `lengthSec` is the
+upload's own duration. A `search` link becomes an approximate match when its
+length is more than `VIDEO_DURATION_TOLERANCE` (5 s) from `durationSec`, or was
+never learned: the record gets `videoApprox` and the `video-approximate` flag,
+so the drawer says "found automatically, may be a different edition" and shows
+the upload's duration with the difference, and Забелешки carries a note under
+that rule (severity info) with both durations. The build decides the mark, not
+the finder, so the threshold lives in one place. A `human` link is never
+marked, whatever its length.
 
-The finder searches a work by title **and** performer first, and widens to the
-romanised form and only then to the title alone, each step running only while
-nothing found so far shares a real word with the work. That order is measured,
-not taste: against the 39 curated links the strict query reaches 39/39,
-romanised 36/39, title-only 30/39 — YouTube matches across scripts by itself,
-and 38 titles are shared by more than one work. So widening mostly shows junk
-for works that are simply not on YouTube; it is a last look, not a routine
-step — over the 411 unlinked works the chain averaged 1.07 searches per work.
-The finder reuses `to_latin()` from `build.py` rather than growing a
-third transliteration.
+What the finder accepts, and why it is loose: the point of a link is that the
+reader can hear the work, not that the phonotheque's copy has been identified,
+so duration never rejects a candidate — "Blagoja Ceslarov - Aranhuez" is 90 s
+off the catalogue's timing and is still the right piece. A candidate is
+accepted when its title carries the work's title and something ties it to the
+performer or arranger: a distinctive word of the performer's name in the video
+title, two of them anywhere on the page, an upload on a channel a hand-verified
+link already came from, or the arranger credited (`CREDIT_WORDS`). `ROLE_WORDS`
+is what stops "ТО на РТС" from matching on "РТС" alone, which is on half the
+archive.
+
+The title test is deliberately the part that does **not** get loosened: an
+artist-only loosening attaches the wrong *recording* of the right song, a
+title-only one attaches a different *song* that shares the name — Serbian "Bez
+tebe", Russian "Чувства", Slovakia's Eurovision "Kristina" — and the "found
+automatically" mark cannot warn about that. `title_hit()` therefore wants every
+significant word of one of the work's names, allowing only for an inflected
+ending (`word_in()`). Half the words was not enough: "Тоше Проески — Сонце во
+твоите руси коси" matched "Да потонам во твоите коси" on "во твоите коси"
+alone, and the word that names the song ("потонам") was the one missing. A title
+with a number in it is covered by the same rule, so "Тема бр. 1" cannot match
+"Тема бр. 2"; so is a title's negation, which `NEGATIONS` keeps in the words to
+match, because "Верувај ми" is not "Не ми верувај". One short word may still be
+missing — an uploader writing "Igraj kalipso" for "Играј и пеј калипсо" is not
+naming a different song — but only in a title of three words or more, so that
+"Мојот дом" is not reduced to "мојот". `compare_word()` folds the transliteration
+variants that stand for one letter (ч romanised as "ch" against an uploader's
+"č", ќ as "kj" against their "k"): "Молчи" arrives as "molchi" against their
+"Molci", "Ќе наминеш" as "kje" against their "Ke", and a whole-title test would
+otherwise lose a song to a spelling difference. The same folding is applied to
+`ROLE_WORDS` and `CREDIT_WORDS`, or the fixed sets would never meet a folded
+page. Where the artist is named inside the video title matters more than where
+it is not: requiring it in the title is what rejected two unrelated videos that
+matched "Балада за гитара — Петар Лукиќ" on "petar" sitting in an uploader's
+channel name.
+
+A work's title can also name the piece twice — "Осаменост (Молчи една долина)"
+is one piece under two names, and an upload carries one of them — so
+`title_forms()` keeps the title without its brackets *and* the contents of any
+bracket that is not a qualifier, and matches on any of them.
+`QUALIFIER_WORDS` is what makes a bracket saying only *how* an edition was made
+("(џез верзија)", "(live)") count for nothing: that is how "Ева — За љубов
+створени (Џез верзија)" had matched "Ми вети ти (џез верзија)".
+
+Three further guards, each measured against what a pass actually attached
+(`--apply` over the first 100 unlinked works attached 36 links, three of them
+wrong):
+
+- `plausible_length()` — an upload may be well off the catalogue's timing and
+  still be the work, so length never confirms a link, but it cannot be
+  arbitrarily longer either: half the length is a clip, and more than
+  `PLAUSIBLE_SLACK_SEC` (120 s) over it is a podcast or a whole album. This is
+  what refused a 71-minute Croatian podcast for a 3:50 song and a 10:51 concert
+  for a 5:36 one.
+- A one-word title is a weak identity, so `accept()` asks for the performer's
+  name in full when the title has a single word — both words of "Зоран
+  Георгиев", so that "Zašto je uspjeh najveća iluzija?" by a host called Zoran
+  cannot become the song "Илузија" — or, when the name is itself one word, that
+  one word ("Импулси"), or a trusted channel. Measured on the selftest, the
+  stricter form cost one hand-checked link (a one-word band name) until it was
+  written this way. Requiring the name *regardless* of the channel was measured
+  over the 122 links a pass had written: it refused 21, and almost all were a
+  different *recording of the right song* on a channel a hand-checked link had
+  come from ("Идила" by Никола Комовски as "Идила - Нина Спирова") — the class
+  this catalogue accepts and marks — so the trusted channel keeps its standing
+  and the two rows such as "Адиос" becoming "Ljupka Dimitrovska - Adios Amor"
+  are the price.
+- `dedupe_picks()` — with 38 titles naming more than one work, one upload can
+  pass the test for two of them; a scan keeps it for one work only.
+
+A *candidate's* duration is still never used to confirm anything: the build
+alone marks, and only within `VIDEO_DURATION_TOLERANCE`.
+
+The chain runs title+performer, its core, both romanised, the title alone, the
+performer alone and title+Шпато, stopping at the first query that yields an
+accepted candidate. `--selftest` replays the hand-verified links as unknown,
+with each work's own channel left out of the trusted set, and measures the
+rule: 38/39 recovered, 33 as the best pick (the miss is an upload titled
+"Indiana" for "Индијана"). Run it before changing the rule, and read the
+measured numbers rather than guessing.
+
+Only `--apply` writes: new rows go in with `found=search`, and a row that
+already has a video is never overwritten or re-searched. The finder reuses
+`to_latin()` from `build.py` rather than growing a third transliteration.
+
+Where the pass over the 361 works that were still unlinked left the catalogue:
+160 of 433 works carry a link, 121 of them machine-found — vocal 38/74,
+instrumental 23/55, arrThemes 9/43, arrVocal 90/261 — with the rest of the
+catalogue offered as a YouTube search from the drawer instead. A machine-found
+link that is not within `VIDEO_DURATION_TOLERANCE` of the catalogue's timing is
+marked, so the reader is told, and the five links a re-audit refused are simply
+not there.
+
+When the rule changes, the rows a pass already wrote down do not have to be
+searched for again: `--verify` asks YouTube for each machine-found upload's own
+title and channel, runs `accept()` over the length the row recorded, and reports
+which rows the rule still stands behind; `--drop` removes the ones it does not.
+Hand-checked rows are never touched, and a row whose upload cannot be asked
+about is kept and reported — a network answer is not a verdict. That is how the
+first pass's three bad links came out (a 71-minute podcast, a concert, and a
+title that shared only its bracketed words) while its 32 good ones stayed, which
+is cheaper and safer than discarding the pass and searching again.
+
+An empty results page is how YouTube answers a query it does not want to answer
+as well as one it has no match for, and a silent zero is indistinguishable from
+"not on YouTube". `search_candidates()` therefore asks a second time, more
+slowly, before it believes a query found nothing, and `--selftest` gives a work
+that yields nothing at all one more go before calling it a miss.
 
 YouTube will not play an embed on a page with no origin: Chrome sends no
 referrer for `file://`, and the player answers with "configuration error 153"

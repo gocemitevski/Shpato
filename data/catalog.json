@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 419,
-  "videos": 39,
+  "notes": 521,
+  "videos": 160,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -73,7 +73,9 @@
    "textFixes": [],
    "id": "vocal-0003",
    "warnCount": 0,
-   "search": "без повраток импулси з-2810/2 bez povratok impulsi z-2810/2"
+   "search": "без повраток импулси з-2810/2 bez povratok impulsi z-2810/2",
+   "videoLengthSec": 131,
+   "videoDeltaSec": 1
   },
   {
    "category": "vocal",
@@ -107,15 +109,20 @@
    "signature": "АЗ-50/5",
    "signatureRaw": "АЗ-50/5",
    "collection": "АЗ",
-   "video": null,
+   "video": "2k0kD6Mj9vk",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 11,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0005",
    "warnCount": 0,
-   "search": "гарача љупка апостолова аз-50/5 garacha ljupka apostolova az-50/5"
+   "search": "гарача љупка апостолова аз-50/5 garacha ljupka apostolova az-50/5",
+   "videoLengthSec": 198,
+   "videoDeltaSec": 26,
+   "videoApprox": true
   },
   {
    "category": "vocal",
@@ -128,17 +135,21 @@
    "signature": "З-3192/4",
    "signatureRaw": "3192/4",
    "collection": "З",
-   "video": null,
+   "video": "dAXua0oaXa8",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 12,
    "flags": [
-    "signature-missing-prefix"
+    "signature-missing-prefix",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0006",
    "warnCount": 0,
-   "search": "глас од далечината импулси з-3192/4 glas od dalechinata impulsi z-3192/4"
+   "search": "глас од далечината импулси з-3192/4 glas od dalechinata impulsi z-3192/4",
+   "videoLengthSec": 130,
+   "videoDeltaSec": 40,
+   "videoApprox": true
   },
   {
    "category": "vocal",
@@ -159,7 +170,9 @@
    "textFixes": [],
    "id": "vocal-0007",
    "warnCount": 0,
-   "search": "далечен крај нина спирова з-3737/2 dalechen kraj nina spirova z-3737/2"
+   "search": "далечен крај нина спирова з-3737/2 dalechen kraj nina spirova z-3737/2",
+   "videoLengthSec": 151,
+   "videoDeltaSec": 2
   },
   {
    "category": "vocal",
@@ -172,15 +185,20 @@
    "signature": "АЗ-50/6",
    "signatureRaw": "АЗ-50/6",
    "collection": "АЗ",
-   "video": null,
+   "video": "Q7c7QkQVqRI",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 14,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0008",
    "warnCount": 0,
-   "search": "далечен крај велко трпчевски аз-50/6 dalechen kraj velko trpchevski az-50/6"
+   "search": "далечен крај велко трпчевски аз-50/6 dalechen kraj velko trpchevski az-50/6",
+   "videoLengthSec": 153,
+   "videoDeltaSec": 67,
+   "videoApprox": true
   },
   {
    "category": "vocal",
@@ -210,7 +228,9 @@
    ],
    "id": "vocal-0009",
    "warnCount": 0,
-   "search": "даниела љупка димитровска з-1558/3 daniela ljupka dimitrovska z-1558/3"
+   "search": "даниела љупка димитровска з-1558/3 daniela ljupka dimitrovska z-1558/3",
+   "videoLengthSec": 162,
+   "videoDeltaSec": 1
   },
   {
    "category": "vocal",
@@ -223,15 +243,20 @@
    "signature": "З-2413/2",
    "signatureRaw": "З-2413/2",
    "collection": "З",
-   "video": null,
+   "video": "DmrL8DaENrQ",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 16,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0010",
    "warnCount": 0,
-   "search": "даниела импулси з-2413/2 daniela impulsi z-2413/2"
+   "search": "даниела импулси з-2413/2 daniela impulsi z-2413/2",
+   "videoLengthSec": 163,
+   "videoDeltaSec": 6,
+   "videoApprox": true
   },
   {
    "category": "vocal",
@@ -252,7 +277,9 @@
    "textFixes": [],
    "id": "vocal-0011",
    "warnCount": 0,
-   "search": "ден љубен безповратен импулси з-4543/2 den ljuben bezpovraten impulsi z-4543/2"
+   "search": "ден љубен безповратен импулси з-4543/2 den ljuben bezpovraten impulsi z-4543/2",
+   "videoLengthSec": 170,
+   "videoDeltaSec": 9
   },
   {
    "category": "vocal",
@@ -294,7 +321,9 @@
    "textFixes": [],
    "id": "vocal-0013",
    "warnCount": 0,
-   "search": "дојди есен импулси з-3880/3 dojdi esen impulsi z-3880/3"
+   "search": "дојди есен импулси з-3880/3 dojdi esen impulsi z-3880/3",
+   "videoLengthSec": 198,
+   "videoDeltaSec": 2
   },
   {
    "category": "vocal",
@@ -357,7 +386,9 @@
    "textFixes": [],
    "id": "vocal-0016",
    "warnCount": 0,
-   "search": "идила нина спирова пк-2223/7 idila nina spirova pk-2223/7"
+   "search": "идила нина спирова пк-2223/7 idila nina spirova pk-2223/7",
+   "videoLengthSec": 145,
+   "videoDeltaSec": 0
   },
   {
    "category": "vocal",
@@ -408,7 +439,9 @@
    "textFixes": [],
    "id": "vocal-0018",
    "warnCount": 0,
-   "search": "идила секогаш што била импулси з-3741/1 idila sekogash shto bila impulsi z-3741/1"
+   "search": "идила секогаш што била импулси з-3741/1 idila sekogash shto bila impulsi z-3741/1",
+   "videoLengthSec": 154,
+   "videoDeltaSec": 1
   },
   {
    "category": "vocal",
@@ -429,7 +462,9 @@
    "textFixes": [],
    "id": "vocal-0019",
    "warnCount": 0,
-   "search": "илјада проблеми импулси з-1441/2 iljada problemi impulsi z-1441/2"
+   "search": "илјада проблеми импулси з-1441/2 iljada problemi impulsi z-1441/2",
+   "videoLengthSec": 139,
+   "videoDeltaSec": 3
   },
   {
    "category": "vocal",
@@ -442,19 +477,22 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "O-OJ7mVkmSw",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 26,
    "flags": [
     "missing-duration",
     "missing-signature",
-    "missing-performer"
+    "missing-performer",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0020",
    "warnCount": 0,
-   "search": "играј и пеј калипсо igraj i pej kalipso"
+   "search": "играј и пеј калипсо igraj i pej kalipso",
+   "videoLengthSec": 194,
+   "videoApprox": true
   },
   {
    "category": "vocal",
@@ -488,15 +526,20 @@
    "signature": "З-4330/1",
    "signatureRaw": "З-4330/1",
    "collection": "З",
-   "video": null,
+   "video": "XqpV5xbNvjs",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 28,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0022",
    "warnCount": 0,
-   "search": "импресија импулси з-4330/1 impresija impulsi z-4330/1"
+   "search": "импресија импулси з-4330/1 impresija impulsi z-4330/1",
+   "videoLengthSec": 171,
+   "videoDeltaSec": 8,
+   "videoApprox": true
   },
   {
    "category": "vocal",
@@ -538,7 +581,9 @@
    "textFixes": [],
    "id": "vocal-0024",
    "warnCount": 0,
-   "search": "индијана томислав маниќ аз-52/10 indijana tomislav manikj az-52/10"
+   "search": "индијана томислав маниќ аз-52/10 indijana tomislav manikj az-52/10",
+   "videoLengthSec": 157,
+   "videoDeltaSec": 0
   },
   {
    "category": "vocal",
@@ -559,7 +604,9 @@
    "textFixes": [],
    "id": "vocal-0025",
    "warnCount": 0,
-   "search": "индијана љупка апостолова аз-55/4 indijana ljupka apostolova az-55/4"
+   "search": "индијана љупка апостолова аз-55/4 indijana ljupka apostolova az-55/4",
+   "videoLengthSec": 160,
+   "videoDeltaSec": 1
   },
   {
    "category": "vocal",
@@ -593,15 +640,20 @@
    "signature": "АЗ-55/8",
    "signatureRaw": "АЗ-55/8",
    "collection": "АЗ",
-   "video": null,
+   "video": "G3SK6qnXXhk",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 33,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0027",
    "warnCount": 0,
-   "search": "калипсо љупка апостолова аз-55/8 kalipso ljupka apostolova az-55/8"
+   "search": "калипсо љупка апостолова аз-55/8 kalipso ljupka apostolova az-55/8",
+   "videoLengthSec": 126,
+   "videoDeltaSec": 66,
+   "videoApprox": true
   },
   {
    "category": "vocal",
@@ -635,11 +687,12 @@
    "signature": "АЗ-7/5",
    "signatureRaw": "АЗ-7/5",
    "collection": "АЗ",
-   "video": null,
+   "video": "PTIdxNIfPvU",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 35,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -652,7 +705,10 @@
    ],
    "id": "vocal-0029",
    "warnCount": 0,
-   "search": "кога пеам, кога љубам диме поповски аз-7/5 koga peam, koga ljubam dime popovski az-7/5"
+   "search": "кога пеам, кога љубам диме поповски аз-7/5 koga peam, koga ljubam dime popovski az-7/5",
+   "videoLengthSec": 152,
+   "videoDeltaSec": 8,
+   "videoApprox": true
   },
   {
    "category": "vocal",
@@ -673,7 +729,9 @@
    "textFixes": [],
    "id": "vocal-0030",
    "warnCount": 0,
-   "search": "кога си сама драган мијалковски з-3372/2 koga si sama dragan mijalkovski z-3372/2"
+   "search": "кога си сама драган мијалковски з-3372/2 koga si sama dragan mijalkovski z-3372/2",
+   "videoLengthSec": 172,
+   "videoDeltaSec": 1
   },
   {
    "category": "vocal",
@@ -724,7 +782,9 @@
    ],
    "id": "vocal-0032",
    "warnCount": 0,
-   "search": "лени диме поповски з-478/1 leni dime popovski z-478/1"
+   "search": "лени диме поповски з-478/1 leni dime popovski z-478/1",
+   "videoLengthSec": 209,
+   "videoDeltaSec": 1
   },
   {
    "category": "vocal",
@@ -779,7 +839,7 @@
    "signature": "З-477/3",
    "signatureRaw": "З-477/3",
    "collection": "З",
-   "video": null,
+   "video": "8LbUNZ_JFWk",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 41,
    "flags": [
@@ -796,7 +856,9 @@
    ],
    "id": "vocal-0035",
    "warnCount": 0,
-   "search": "ми вети ти диме поповски з-477/3 mi veti ti dime popovski z-477/3"
+   "search": "ми вети ти диме поповски з-477/3 mi veti ti dime popovski z-477/3",
+   "videoLengthSec": 189,
+   "videoDeltaSec": 1
   },
   {
    "category": "vocal",
@@ -817,7 +879,9 @@
    "textFixes": [],
    "id": "vocal-0036",
    "warnCount": 0,
-   "search": "младоста е убава даниела панчетовиќ з-4530/2 mladosta e ubava daniela panchetovikj z-4530/2"
+   "search": "младоста е убава даниела панчетовиќ з-4530/2 mladosta e ubava daniela panchetovikj z-4530/2",
+   "videoLengthSec": 215,
+   "videoDeltaSec": 1
   },
   {
    "category": "vocal",
@@ -830,15 +894,20 @@
    "signature": "З-8226/1",
    "signatureRaw": "З-8226/1",
    "collection": "З",
-   "video": null,
+   "video": "L9d9ls1rpDw",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 43,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0037",
    "warnCount": 0,
-   "search": "мојот дом драган мијалковски з-8226/1 mojot dom dragan mijalkovski z-8226/1"
+   "search": "мојот дом драган мијалковски з-8226/1 mojot dom dragan mijalkovski z-8226/1",
+   "videoLengthSec": 164,
+   "videoDeltaSec": 25,
+   "videoApprox": true
   },
   {
    "category": "vocal",
@@ -851,12 +920,13 @@
    "signature": "АЗ-60/12",
    "signatureRaw": "АЗ-60/12",
    "collection": "АЗ",
-   "video": null,
+   "video": "LvG7PtOXf10",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 44,
    "flags": [
     "duration-ambiguous-seconds",
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -869,7 +939,10 @@
    ],
    "id": "vocal-0038",
    "warnCount": 1,
-   "search": "молчи една долина блага видец аз-60/12 molchi edna dolina blaga videc az-60/12"
+   "search": "молчи една долина блага видец аз-60/12 molchi edna dolina blaga videc az-60/12",
+   "videoLengthSec": 170,
+   "videoDeltaSec": 10,
+   "videoApprox": true
   },
   {
    "category": "vocal",
@@ -890,7 +963,9 @@
    "textFixes": [],
    "id": "vocal-0039",
    "warnCount": 0,
-   "search": "молчи една долина зоран милосављевиќ з-3527/2 molchi edna dolina zoran milosavljevikj z-3527/2"
+   "search": "молчи една долина зоран милосављевиќ з-3527/2 molchi edna dolina zoran milosavljevikj z-3527/2",
+   "videoLengthSec": 148,
+   "videoDeltaSec": 1
   },
   {
    "category": "vocal",
@@ -924,15 +999,20 @@
    "signature": "З-6568/1",
    "signatureRaw": "З-6568/1",
    "collection": "З",
-   "video": null,
+   "video": "6kA5P4j-RUI",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 47,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0041",
    "warnCount": 0,
-   "search": "не ме заборавај цветанка ласкова з-6568/1 ne me zaboravaj cvetanka laskova z-6568/1"
+   "search": "не ме заборавај цветанка ласкова з-6568/1 ne me zaboravaj cvetanka laskova z-6568/1",
+   "videoLengthSec": 260,
+   "videoDeltaSec": 80,
+   "videoApprox": true
   },
   {
    "category": "vocal",
@@ -1016,7 +1096,9 @@
    "textFixes": [],
    "id": "vocal-0045",
    "warnCount": 0,
-   "search": "незаборав златко давчевски з-8387/1 nezaborav zlatko davchevski z-8387/1"
+   "search": "незаборав златко давчевски з-8387/1 nezaborav zlatko davchevski z-8387/1",
+   "videoLengthSec": 225,
+   "videoDeltaSec": 1
   },
   {
    "category": "vocal",
@@ -1037,7 +1119,9 @@
    "textFixes": [],
    "id": "vocal-0046",
    "warnCount": 0,
-   "search": "носталгија импулси з-3866/1 nostalgija impulsi z-3866/1"
+   "search": "носталгија импулси з-3866/1 nostalgija impulsi z-3866/1",
+   "videoLengthSec": 159,
+   "videoDeltaSec": 4
   },
   {
    "category": "vocal",
@@ -1146,7 +1230,9 @@
    "textFixes": [],
    "id": "vocal-0051",
    "warnCount": 0,
-   "search": "последен ден на разделбата диме поповски з-2291/2 posleden den na razdelbata dime popovski z-2291/2"
+   "search": "последен ден на разделбата диме поповски з-2291/2 posleden den na razdelbata dime popovski z-2291/2",
+   "videoLengthSec": 180,
+   "videoDeltaSec": 0
   },
   {
    "category": "vocal",
@@ -1159,15 +1245,20 @@
    "signature": "З-3674/3",
    "signatureRaw": "З-3674/3",
    "collection": "З",
-   "video": null,
+   "video": "xFHL7EZSjms",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 58,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0052",
    "warnCount": 0,
-   "search": "прва љубов ванчо тарабунов з-3674/3 prva ljubov vancho tarabunov z-3674/3"
+   "search": "прва љубов ванчо тарабунов з-3674/3 prva ljubov vancho tarabunov z-3674/3",
+   "videoLengthSec": 270,
+   "videoDeltaSec": 30,
+   "videoApprox": true
   },
   {
    "category": "vocal",
@@ -1188,7 +1279,9 @@
    "textFixes": [],
    "id": "vocal-0053",
    "warnCount": 0,
-   "search": "роден крај импулси з-4175/2 roden kraj impulsi z-4175/2"
+   "search": "роден крај импулси з-4175/2 roden kraj impulsi z-4175/2",
+   "videoLengthSec": 167,
+   "videoDeltaSec": 2
   },
   {
    "category": "vocal",
@@ -1264,15 +1357,20 @@
    "signature": "З-6362/1",
    "signatureRaw": "З-6362/1",
    "collection": "З",
-   "video": null,
+   "video": "n6CIWAUMDuQ",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 63,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0057",
    "warnCount": 0,
-   "search": "сини очи веле матевски з-6362/1 sini ochi vele matevski z-6362/1"
+   "search": "сини очи веле матевски з-6362/1 sini ochi vele matevski z-6362/1",
+   "videoLengthSec": 157,
+   "videoDeltaSec": 59,
+   "videoApprox": true
   },
   {
    "category": "vocal",
@@ -1388,7 +1486,9 @@
    "textFixes": [],
    "id": "vocal-0062",
    "warnCount": 0,
-   "search": "те носам во себе виолета томовска з-1360/2 te nosam vo sebe violeta tomovska z-1360/2"
+   "search": "те носам во себе виолета томовска з-1360/2 te nosam vo sebe violeta tomovska z-1360/2",
+   "videoLengthSec": 195,
+   "videoDeltaSec": 0
   },
   {
    "category": "vocal",
@@ -1430,7 +1530,9 @@
    "textFixes": [],
    "id": "vocal-0064",
    "warnCount": 0,
-   "search": "тој и таа-јас и ти група пепел и крв з-6363/2 toj i taa-jas i ti grupa pepel i krv z-6363/2"
+   "search": "тој и таа-јас и ти група пепел и крв з-6363/2 toj i taa-jas i ti grupa pepel i krv z-6363/2",
+   "videoLengthSec": 177,
+   "videoDeltaSec": 12
   },
   {
    "category": "vocal",
@@ -1451,7 +1553,9 @@
    "textFixes": [],
    "id": "vocal-0065",
    "warnCount": 0,
-   "search": "убава си како музика драган мијалковски з-2618/2 ubava si kako muzika dragan mijalkovski z-2618/2"
+   "search": "убава си како музика драган мијалковски з-2618/2 ubava si kako muzika dragan mijalkovski z-2618/2",
+   "videoLengthSec": 163,
+   "videoDeltaSec": 0
   },
   {
    "category": "vocal",
@@ -1497,7 +1601,9 @@
    "textFixes": [],
    "id": "vocal-0067",
    "warnCount": 0,
-   "search": "за нас почнува живот даниела панчетовиќ з-6779/2 za nas pochnuva zhivot daniela panchetovikj z-6779/2"
+   "search": "за нас почнува живот даниела панчетовиќ з-6779/2 za nas pochnuva zhivot daniela panchetovikj z-6779/2",
+   "videoLengthSec": 142,
+   "videoDeltaSec": 0
   },
   {
    "category": "vocal",
@@ -1560,7 +1666,9 @@
    "textFixes": [],
    "id": "vocal-0070",
    "warnCount": 0,
-   "search": "зар вистина е крај веле матевски з-3231/1 zar vistina e kraj vele matevski z-3231/1"
+   "search": "зар вистина е крај веле матевски з-3231/1 zar vistina e kraj vele matevski z-3231/1",
+   "videoLengthSec": 222,
+   "videoDeltaSec": 1
   },
   {
    "category": "vocal",
@@ -1615,7 +1723,7 @@
    "signature": "З-3090/2",
    "signatureRaw": "З-3090/2",
    "collection": "З",
-   "video": null,
+   "video": "IG2ksOSMbRI",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 79,
    "flags": [],
@@ -1623,7 +1731,9 @@
    "textFixes": [],
    "id": "vocal-0073",
    "warnCount": 0,
-   "search": "жолта липа томислав маниќ з-3090/2 zholta lipa tomislav manikj z-3090/2"
+   "search": "жолта липа томислав маниќ з-3090/2 zholta lipa tomislav manikj z-3090/2",
+   "videoLengthSec": 181,
+   "videoDeltaSec": 1
   },
   {
    "category": "vocal",
@@ -1717,11 +1827,12 @@
    "signature": "З-4698/2",
    "signatureRaw": "З-4698/2",
    "collection": "З",
-   "video": null,
+   "video": "D5oEe7IzHWk",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 9,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -1734,7 +1845,10 @@
    ],
    "id": "instrumental-0003",
    "warnCount": 0,
-   "search": "балада за гитара петар лукиќ з-4698/2 balada za gitara petar lukikj z-4698/2"
+   "search": "балада за гитара петар лукиќ з-4698/2 balada za gitara petar lukikj z-4698/2",
+   "videoLengthSec": 189,
+   "videoDeltaSec": 17,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -1764,7 +1878,9 @@
    ],
    "id": "instrumental-0004",
    "warnCount": 0,
-   "search": "во спомен на старото пријателство мики асановиќ з-7206/2 vo spomen na staroto prijatelstvo miki asanovikj z-7206/2"
+   "search": "во спомен на старото пријателство мики асановиќ з-7206/2 vo spomen na staroto prijatelstvo miki asanovikj z-7206/2",
+   "videoLengthSec": 227,
+   "videoDeltaSec": 7
   },
   {
    "category": "instrumental",
@@ -1807,7 +1923,7 @@
    "signature": "З-7700/2",
    "signatureRaw": "З-7700/2",
    "collection": "З",
-   "video": null,
+   "video": "b_D0ILHpu8M",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 13,
    "flags": [],
@@ -1815,7 +1931,9 @@
    "textFixes": [],
    "id": "instrumental-0007",
    "warnCount": 0,
-   "search": "гарача то на ртс з-7700/2 garacha to na rts z-7700/2"
+   "search": "гарача то на ртс з-7700/2 garacha to na rts z-7700/2",
+   "videoLengthSec": 235,
+   "videoDeltaSec": 1
   },
   {
    "category": "instrumental",
@@ -1883,15 +2001,20 @@
    "signature": "З-7608/3",
    "signatureRaw": "З-7608/3",
    "collection": "З",
-   "video": null,
+   "video": "JeIqhHwl1ic",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 16,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "instrumental-0010",
    "warnCount": 0,
-   "search": "дојди есен квартет рибарски з-7608/3 dojdi esen kvartet ribarski z-7608/3"
+   "search": "дојди есен квартет рибарски з-7608/3 dojdi esen kvartet ribarski z-7608/3",
+   "videoLengthSec": 229,
+   "videoDeltaSec": 69,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2023,7 +2146,9 @@
    ],
    "id": "instrumental-0015",
    "warnCount": 0,
-   "search": "елегија за тромбон кирил рибарски з-8605/1 elegija za trombon kiril ribarski z-8605/1"
+   "search": "елегија за тромбон кирил рибарски з-8605/1 elegija za trombon kiril ribarski z-8605/1",
+   "videoLengthSec": 169,
+   "videoDeltaSec": 1
   },
   {
    "category": "instrumental",
@@ -2036,15 +2161,20 @@
    "signature": "З-6057/3",
    "signatureRaw": "З-6057/3",
    "collection": "З",
-   "video": null,
+   "video": "JUwTiHyAqH4",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 22,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "instrumental-0016",
    "warnCount": 0,
-   "search": "еден бакнеж ро на ртљ з-6057/3 eden baknezh ro na rtlj z-6057/3"
+   "search": "еден бакнеж ро на ртљ з-6057/3 eden baknezh ro na rtlj z-6057/3",
+   "videoLengthSec": 202,
+   "videoDeltaSec": 12,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2057,7 +2187,7 @@
    "signature": "З-4701/1",
    "signatureRaw": "З-4701/1",
    "collection": "З",
-   "video": null,
+   "video": "YurRHulM3Cw",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 23,
    "flags": [],
@@ -2065,7 +2195,9 @@
    "textFixes": [],
    "id": "instrumental-0017",
    "warnCount": 0,
-   "search": "ехо од далечното минато то на ртс з-4701/1 eho od dalechnoto minato to na rts z-4701/1"
+   "search": "ехо од далечното минато то на ртс з-4701/1 eho od dalechnoto minato to na rts z-4701/1",
+   "videoLengthSec": 301,
+   "videoDeltaSec": 1
   },
   {
    "category": "instrumental",
@@ -2099,12 +2231,13 @@
    "signature": "З-8189",
    "signatureRaw": "З-8189/",
    "collection": "З",
-   "video": null,
+   "video": "nNTNDmu2DZM",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 25,
    "flags": [
     "signature-trailing-slash",
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2117,7 +2250,10 @@
    ],
    "id": "instrumental-0019",
    "warnCount": 0,
-   "search": "идила никола комовски з-8189 idila nikola komovski z-8189"
+   "search": "идила никола комовски з-8189 idila nikola komovski z-8189",
+   "videoLengthSec": 144,
+   "videoDeltaSec": 36,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2130,11 +2266,12 @@
    "signature": "З-6668/1",
    "signatureRaw": "З-6668/1",
    "collection": "З",
-   "video": null,
+   "video": "Jyg2X8icikk",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 26,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2147,7 +2284,10 @@
    ],
    "id": "instrumental-0020",
    "warnCount": 0,
-   "search": "импресија петар лукиќ з-6668/1 impresija petar lukikj z-6668/1"
+   "search": "импресија петар лукиќ з-6668/1 impresija petar lukikj z-6668/1",
+   "videoLengthSec": 238,
+   "videoDeltaSec": 68,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2190,11 +2330,12 @@
    "signature": "АЗ-49/22",
    "signatureRaw": "АЗ-49/22",
    "collection": "АЗ",
-   "video": null,
+   "video": "DfeW-KngHMg",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 28,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2207,7 +2348,10 @@
    ],
    "id": "instrumental-0022",
    "warnCount": 0,
-   "search": "идила голем забавен оркестар аз-49/22 idila golem zabaven orkestar az-49/22"
+   "search": "идила голем забавен оркестар аз-49/22 idila golem zabaven orkestar az-49/22",
+   "videoLengthSec": 145,
+   "videoDeltaSec": 50,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2280,15 +2424,20 @@
    "signature": "З-3004/2",
    "signatureRaw": "З-3004/2",
    "collection": "З",
-   "video": null,
+   "video": "sehpKPHkAKk",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 31,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "instrumental-0025",
    "warnCount": 0,
-   "search": "јас не сум ти џез ансамбл на ртс з-3004/2 jas ne sum ti djez ansambl na rts z-3004/2"
+   "search": "јас не сум ти џез ансамбл на ртс з-3004/2 jas ne sum ti djez ansambl na rts z-3004/2",
+   "videoLengthSec": 259,
+   "videoDeltaSec": 188,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2301,15 +2450,20 @@
    "signature": "З-8227/1",
    "signatureRaw": "З-8227/1",
    "collection": "З",
-   "video": null,
+   "video": "nLT4VOfPqiw",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 32,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "instrumental-0026",
    "warnCount": 0,
-   "search": "кога си сама ро на ртс з-8227/1 koga si sama ro na rts z-8227/1"
+   "search": "кога си сама ро на ртс з-8227/1 koga si sama ro na rts z-8227/1",
+   "videoLengthSec": 176,
+   "videoDeltaSec": 10,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2454,15 +2608,20 @@
    "signature": "З-7474/1",
    "signatureRaw": "З-7474/1",
    "collection": "З",
-   "video": null,
+   "video": "sl_2PnefVRc",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 38,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "instrumental-0032",
    "warnCount": 0,
-   "search": "лени квартет рибарски з-7474/1 leni kvartet ribarski z-7474/1"
+   "search": "лени квартет рибарски з-7474/1 leni kvartet ribarski z-7474/1",
+   "videoLengthSec": 214,
+   "videoDeltaSec": 12,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2475,15 +2634,20 @@
    "signature": "ПМ-303/1",
    "signatureRaw": "ПМ-303/1",
    "collection": "ПМ",
-   "video": null,
+   "video": "B5Rl7T7hsh8",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 39,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "instrumental-0033",
    "warnCount": 0,
-   "search": "лени то пм-303/1 leni to pm-303/1"
+   "search": "лени то пм-303/1 leni to pm-303/1",
+   "videoLengthSec": 153,
+   "videoDeltaSec": 45,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2616,11 +2780,12 @@
    "signature": "З-7493/2",
    "signatureRaw": "З-7493/2",
    "collection": "З",
-   "video": null,
+   "video": "aDIg9yPLJAY",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 44,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2633,7 +2798,10 @@
    ],
    "id": "instrumental-0038",
    "warnCount": 0,
-   "search": "мими слободан (боби) мицев з-7493/2 mimi slobodan (bobi) micev z-7493/2"
+   "search": "мими слободан (боби) мицев з-7493/2 mimi slobodan (bobi) micev z-7493/2",
+   "videoLengthSec": 221,
+   "videoDeltaSec": 29,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2646,12 +2814,13 @@
    "signature": "З-8638/2",
    "signatureRaw": "З-8638/2",
    "collection": "З",
-   "video": null,
+   "video": "vBUyE5_SKKk",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 45,
    "flags": [
     "duration-missing-separator",
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2664,7 +2833,10 @@
    ],
    "id": "instrumental-0039",
    "warnCount": 1,
-   "search": "мими кирил рибарски з-8638/2 mimi kiril ribarski z-8638/2"
+   "search": "мими кирил рибарски з-8638/2 mimi kiril ribarski z-8638/2",
+   "videoLengthSec": 284,
+   "videoDeltaSec": 39,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2677,11 +2849,12 @@
    "signature": "З-4253/3",
    "signatureRaw": "З-4253/3",
    "collection": "З",
-   "video": null,
+   "video": "SKTR8koEVq4",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 46,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2694,7 +2867,10 @@
    ],
    "id": "instrumental-0040",
    "warnCount": 0,
-   "search": "младоста е убава зоран јовановиќ з-4253/3 mladosta e ubava zoran jovanovikj z-4253/3"
+   "search": "младоста е убава зоран јовановиќ з-4253/3 mladosta e ubava zoran jovanovikj z-4253/3",
+   "videoLengthSec": 205,
+   "videoDeltaSec": 10,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2707,11 +2883,12 @@
    "signature": "АЗ-49/16",
    "signatureRaw": "АЗ-49/16",
    "collection": "АЗ",
-   "video": null,
+   "video": "2GUnaOK6ij4",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 47,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2724,7 +2901,10 @@
    ],
    "id": "instrumental-0041",
    "warnCount": 0,
-   "search": "молчи една долина голем забавен оркестар аз-49/16 molchi edna dolina golem zabaven orkestar az-49/16"
+   "search": "молчи една долина голем забавен оркестар аз-49/16 molchi edna dolina golem zabaven orkestar az-49/16",
+   "videoLengthSec": 155,
+   "videoDeltaSec": 35,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2737,11 +2917,12 @@
    "signature": "ПМ-538/1",
    "signatureRaw": "ПМ-538/1",
    "collection": "ПМ",
-   "video": null,
+   "video": "IUxVcbRp7Vw",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 48,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2754,7 +2935,10 @@
    ],
    "id": "instrumental-0042",
    "warnCount": 0,
-   "search": "молчи една долина христо христовски пм-538/1 molchi edna dolina hristo hristovski pm-538/1"
+   "search": "молчи една долина христо христовски пм-538/1 molchi edna dolina hristo hristovski pm-538/1",
+   "videoLengthSec": 310,
+   "videoDeltaSec": 104,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2791,7 +2975,9 @@
    ],
    "id": "instrumental-0043",
    "warnCount": 0,
-   "search": "на игранка то на ртс з-7638/2 na igranka to na rts z-7638/2"
+   "search": "на игранка то на ртс з-7638/2 na igranka to na rts z-7638/2",
+   "videoLengthSec": 306,
+   "videoDeltaSec": 2
   },
   {
    "category": "instrumental",
@@ -2906,7 +3092,7 @@
    "signature": "З-3783/1",
    "signatureRaw": "З-3783/1",
    "collection": "З",
-   "video": null,
+   "video": "geK0tWTLWXo",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 54,
    "flags": [
@@ -2923,7 +3109,9 @@
    ],
    "id": "instrumental-0048",
    "warnCount": 0,
-   "search": "поздрав до оркестарот то на ртс з-3783/1 pozdrav do orkestarot to na rts z-3783/1"
+   "search": "поздрав до оркестарот то на ртс з-3783/1 pozdrav do orkestarot to na rts z-3783/1",
+   "videoLengthSec": 273,
+   "videoDeltaSec": 3
   },
   {
    "category": "instrumental",
@@ -2978,7 +3166,7 @@
    "signature": "З-8212/1",
    "signatureRaw": "З-8212/1",
    "collection": "З",
-   "video": null,
+   "video": "s48DHQzMb5I",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 57,
    "flags": [
@@ -2995,7 +3183,9 @@
    ],
    "id": "instrumental-0051",
    "warnCount": 0,
-   "search": "синтеза кире костов з-8212/1 sinteza kire kostov z-8212/1"
+   "search": "синтеза кире костов з-8212/1 sinteza kire kostov z-8212/1",
+   "videoLengthSec": 301,
+   "videoDeltaSec": 1
   },
   {
    "category": "instrumental",
@@ -3071,11 +3261,12 @@
    "signature": "ПМ-1002/2",
    "signatureRaw": "ПМ-1002/2",
    "collection": "ПМ",
-   "video": null,
+   "video": "wcq3ai5UW8Y",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 61,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3088,7 +3279,10 @@
    ],
    "id": "instrumental-0055",
    "warnCount": 0,
-   "search": "убава си како музика љупчо мирковски пм-1002/2 ubava si kako muzika ljupcho mirkovski pm-1002/2"
+   "search": "убава си како музика љупчо мирковски пм-1002/2 ubava si kako muzika ljupcho mirkovski pm-1002/2",
+   "videoLengthSec": 167,
+   "videoDeltaSec": 24,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -3285,11 +3479,12 @@
    "signature": "З-1850/2",
    "signatureRaw": "З-1850/2",
    "collection": "З",
-   "video": null,
+   "video": "JrwBFlKC5s8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 13,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3302,7 +3497,10 @@
    ],
    "id": "arrThemes-0007",
    "warnCount": 0,
-   "search": "девојката од ипанема димитар маневски жобим з-1850/2 devojkata od ipanema dimitar manevski zhobim z-1850/2"
+   "search": "девојката од ипанема димитар маневски жобим з-1850/2 devojkata od ipanema dimitar manevski zhobim z-1850/2",
+   "videoLengthSec": 156,
+   "videoDeltaSec": 6,
+   "videoApprox": true
   },
   {
    "category": "arrThemes",
@@ -3315,13 +3513,14 @@
    "signature": "З-7683/2",
    "signatureRaw": "З-З-7683/2",
    "collection": "З",
-   "video": null,
+   "video": "rZe-eafI1rQ",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 14,
    "flags": [
     "signature-double-prefix",
     "composer-placeholder",
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3334,7 +3533,10 @@
    ],
    "id": "arrThemes-0008",
    "warnCount": 1,
-   "search": "дење, ноќе божидар ноев з-7683/2 denje, nokje bozhidar noev z-7683/2"
+   "search": "дење, ноќе божидар ноев з-7683/2 denje, nokje bozhidar noev z-7683/2",
+   "videoLengthSec": 194,
+   "videoDeltaSec": 54,
+   "videoApprox": true
   },
   {
    "category": "arrThemes",
@@ -3377,17 +3579,20 @@
    "signature": "З-2057/3",
    "signatureRaw": "З-2057/3",
    "collection": "З",
-   "video": null,
+   "video": "ccm7teCWQsw",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 16,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrThemes-0010",
    "warnCount": 0,
-   "search": "еден бакнеж ро на ртљ петар пешев з-2057/3 eden baknezh ro na rtlj petar peshev z-2057/3"
+   "search": "еден бакнеж ро на ртљ петар пешев з-2057/3 eden baknezh ro na rtlj petar peshev z-2057/3",
+   "videoLengthSec": 181,
+   "videoApprox": true
   },
   {
    "category": "arrThemes",
@@ -3650,12 +3855,13 @@
    "signature": "З-8189/2",
    "signatureRaw": "З-8189/2",
    "collection": "З",
-   "video": null,
+   "video": "1VjAGtjNgJs",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 27,
    "flags": [
     "performer-split",
-    "name-unified"
+    "name-unified",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3674,7 +3880,10 @@
    ],
    "id": "arrThemes-0021",
    "warnCount": 0,
-   "search": "мојата улица никола комовски александар џамбазов з-8189/2 mojata ulica nikola komovski aleksandar djambazov z-8189/2"
+   "search": "мојата улица никола комовски александар џамбазов з-8189/2 mojata ulica nikola komovski aleksandar djambazov z-8189/2",
+   "videoLengthSec": 235,
+   "videoDeltaSec": 55,
+   "videoApprox": true
   },
   {
    "category": "arrThemes",
@@ -3833,13 +4042,14 @@
    "signature": "З-7256/1",
    "signatureRaw": "З-7256/1",
    "collection": "З",
-   "video": null,
+   "video": "NhIeyt6Bfb8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 33,
    "flags": [
     "missing-duration",
     "performer-split",
-    "name-unified"
+    "name-unified",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3858,7 +4068,9 @@
    ],
    "id": "arrThemes-0027",
    "warnCount": 0,
-   "search": "последна солза кирил рибарски димитар масевски з-7256/1 posledna solza kiril ribarski dimitar masevski z-7256/1"
+   "search": "последна солза кирил рибарски димитар масевски з-7256/1 posledna solza kiril ribarski dimitar masevski z-7256/1",
+   "videoLengthSec": 209,
+   "videoApprox": true
   },
   {
    "category": "arrThemes",
@@ -3938,14 +4150,15 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "7oQywfAC31M",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 36,
    "flags": [
     "missing-duration",
     "missing-signature",
     "punctuation-spacing",
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3964,7 +4177,9 @@
    ],
    "id": "arrThemes-0030",
    "warnCount": 0,
-   "search": "taste of honey импулси w. scott taste of honey impulsi w. scott"
+   "search": "taste of honey импулси w. scott taste of honey impulsi w. scott",
+   "videoLengthSec": 176,
+   "videoApprox": true
   },
   {
    "category": "arrThemes",
@@ -4032,19 +4247,22 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "s36iQ9x2-Vw",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 39,
    "flags": [
     "missing-duration",
     "missing-signature",
-    "missing-performer"
+    "missing-performer",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrThemes-0033",
    "warnCount": 0,
-   "search": "виделина григор копров videlina grigor koprov"
+   "search": "виделина григор копров videlina grigor koprov",
+   "videoLengthSec": 232,
+   "videoApprox": true
   },
   {
    "category": "arrThemes",
@@ -4250,19 +4468,22 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "DGwlpM8cHI0",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 47,
    "flags": [
     "missing-duration",
     "missing-signature",
-    "missing-performer"
+    "missing-performer",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrThemes-0041",
    "warnCount": 0,
-   "search": "човекот што го сакам g. gershwin chovekot shto go sakam g. gershwin"
+   "search": "човекот што го сакам g. gershwin chovekot shto go sakam g. gershwin",
+   "videoLengthSec": 218,
+   "videoApprox": true
   },
   {
    "category": "arrThemes",
@@ -4275,19 +4496,22 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "sWoJ94r2Isw",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 48,
    "flags": [
     "missing-duration",
     "missing-signature",
-    "missing-performer"
+    "missing-performer",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrThemes-0042",
    "warnCount": 0,
-   "search": "жалај моме петар пешев zhalaj mome petar peshev"
+   "search": "жалај моме петар пешев zhalaj mome petar peshev",
+   "videoLengthSec": 285,
+   "videoApprox": true
   },
   {
    "category": "arrThemes",
@@ -4398,12 +4622,13 @@
    "signature": "АЗ-45/20",
    "signatureRaw": "АЗ-45/20",
    "collection": "АЗ",
-   "video": null,
+   "video": "3fvsu-yUwzk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 10,
    "flags": [
     "missing-duration",
-    "punctuation-spacing"
+    "punctuation-spacing",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -4416,7 +4641,9 @@
    ],
    "id": "arrVocal-0004",
    "warnCount": 0,
-   "search": "ако отидеш нина спирова ж. брел аз-45/20 ako otidesh nina spirova zh. brel az-45/20"
+   "search": "ако отидеш нина спирова ж. брел аз-45/20 ako otidesh nina spirova zh. brel az-45/20",
+   "videoLengthSec": 224,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -4471,17 +4698,20 @@
    "signature": "АЗ-51/5",
    "signatureRaw": "АЗ-51/5",
    "collection": "АЗ",
-   "video": null,
+   "video": "U0URpThLhDY",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 13,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0007",
    "warnCount": 0,
-   "search": "андалузија блага видец е. лекуона аз-51/5 andaluzija blaga videc e. lekuona az-51/5"
+   "search": "андалузија блага видец е. лекуона аз-51/5 andaluzija blaga videc e. lekuona az-51/5",
+   "videoLengthSec": 197,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -4517,17 +4747,20 @@
    "signature": "АЗ-53/5",
    "signatureRaw": "АЗ-53/5",
    "collection": "АЗ",
-   "video": null,
+   "video": "dYk44GTmN_Y",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 15,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0009",
    "warnCount": 0,
-   "search": "адиос љупка апостолова е. мадригера аз-53/5 adios ljupka apostolova e. madrigera az-53/5"
+   "search": "адиос љупка апостолова е. мадригера аз-53/5 adios ljupka apostolova e. madrigera az-53/5",
+   "videoLengthSec": 178,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -4548,7 +4781,9 @@
    "textFixes": [],
    "id": "arrVocal-0010",
    "warnCount": 0,
-   "search": "бакни ме драган мијалковски драган мијалковски з-1721/3 bakni me dragan mijalkovski dragan mijalkovski z-1721/3"
+   "search": "бакни ме драган мијалковски драган мијалковски з-1721/3 bakni me dragan mijalkovski dragan mijalkovski z-1721/3",
+   "videoLengthSec": 157,
+   "videoDeltaSec": 0
   },
   {
    "category": "arrVocal",
@@ -4590,7 +4825,9 @@
    "textFixes": [],
    "id": "arrVocal-0012",
    "warnCount": 0,
-   "search": "бегај бегај марија драган мијалковски драган мијалковски з-3742/3 begaj begaj marija dragan mijalkovski dragan mijalkovski z-3742/3"
+   "search": "бегај бегај марија драган мијалковски драган мијалковски з-3742/3 begaj begaj marija dragan mijalkovski dragan mijalkovski z-3742/3",
+   "videoLengthSec": 200,
+   "videoDeltaSec": 3
   },
   {
    "category": "arrVocal",
@@ -4603,15 +4840,20 @@
    "signature": "З-2219/4",
    "signatureRaw": "З-2219/4",
    "collection": "З",
-   "video": null,
+   "video": "EVCYU3ykkiY",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 19,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0013",
    "warnCount": 0,
-   "search": "бим бам бум импулси х. адамсон з-2219/4 bim bam bum impulsi h. adamson z-2219/4"
+   "search": "бим бам бум импулси х. адамсон з-2219/4 bim bam bum impulsi h. adamson z-2219/4",
+   "videoLengthSec": 160,
+   "videoDeltaSec": 40,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -4632,7 +4874,9 @@
    "textFixes": [],
    "id": "arrVocal-0014",
    "warnCount": 0,
-   "search": "благодарам нина спирова љубомир бранѓолица з-1222/1 blagodaram nina spirova ljubomir brangjolica z-1222/1"
+   "search": "благодарам нина спирова љубомир бранѓолица з-1222/1 blagodaram nina spirova ljubomir brangjolica z-1222/1",
+   "videoLengthSec": 164,
+   "videoDeltaSec": 1
   },
   {
    "category": "arrVocal",
@@ -4761,17 +5005,20 @@
    "signature": "З-2093/3",
    "signatureRaw": "З-2093/3",
    "collection": "З",
-   "video": null,
+   "video": "ywdm3q5S4rY",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 26,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0020",
    "warnCount": 0,
-   "search": "далеку во далечина диме поповски јане коџабашија з-2093/3 daleku vo dalechina dime popovski jane kodjabashija z-2093/3"
+   "search": "далеку во далечина диме поповски јане коџабашија з-2093/3 daleku vo dalechina dime popovski jane kodjabashija z-2093/3",
+   "videoLengthSec": 183,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -4877,17 +5124,20 @@
    "signature": "З-5106/1",
    "signatureRaw": "З-5106/1",
    "collection": "З",
-   "video": null,
+   "video": "2J0cCxLbcec",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 31,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0025",
    "warnCount": 0,
-   "search": "дождот нека плисне верица ристевска к. костадиновски з-5106/1 dozhdot neka plisne verica ristevska k. kostadinovski z-5106/1"
+   "search": "дождот нека плисне верица ристевска к. костадиновски з-5106/1 dozhdot neka plisne verica ristevska k. kostadinovski z-5106/1",
+   "videoLengthSec": 161,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -4931,7 +5181,9 @@
    "textFixes": [],
    "id": "arrVocal-0027",
    "warnCount": 0,
-   "search": "дојди виолета томовска александар џамбазов з-262/3 dojdi violeta tomovska aleksandar djambazov z-262/3"
+   "search": "дојди виолета томовска александар џамбазов з-262/3 dojdi violeta tomovska aleksandar djambazov z-262/3",
+   "videoLengthSec": 193,
+   "videoDeltaSec": 8
   },
   {
    "category": "arrVocal",
@@ -4944,17 +5196,20 @@
    "signature": "АЗ-55/1",
    "signatureRaw": "АЗ-55/1",
    "collection": "АЗ",
-   "video": null,
+   "video": "TTFiQbfLkIw",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 34,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0028",
    "warnCount": 0,
-   "search": "дојди ми љупка апостолова слободан николовски аз-55/1 dojdi mi ljupka apostolova slobodan nikolovski az-55/1"
+   "search": "дојди ми љупка апостолова слободан николовски аз-55/1 dojdi mi ljupka apostolova slobodan nikolovski az-55/1",
+   "videoLengthSec": 108,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -5035,15 +5290,20 @@
    "signature": "З-3783/3",
    "signatureRaw": "З-3783/3",
    "collection": "З",
-   "video": null,
+   "video": "RKaLdlhZzYs",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 38,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0032",
    "warnCount": 0,
-   "search": "друг љубиш импулси славе димитров з-3783/3 drug ljubish impulsi slave dimitrov z-3783/3"
+   "search": "друг љубиш импулси славе димитров з-3783/3 drug ljubish impulsi slave dimitrov z-3783/3",
+   "videoLengthSec": 211,
+   "videoDeltaSec": 11,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -5123,17 +5383,20 @@
    "signature": "АЗ-10/3",
    "signatureRaw": "АЗ-10/3",
    "collection": "АЗ",
-   "video": null,
+   "video": "PH8sa4Jea3U",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 42,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0036",
    "warnCount": 0,
-   "search": "еден бакнеж зоран георгиев петар пешев аз-10/3 eden baknezh zoran georgiev petar peshev az-10/3"
+   "search": "еден бакнеж зоран георгиев петар пешев аз-10/3 eden baknezh zoran georgiev petar peshev az-10/3",
+   "videoLengthSec": 223,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -5255,15 +5518,20 @@
    "signature": "З-2059/2",
    "signatureRaw": "З-2059/2",
    "collection": "З",
-   "video": null,
+   "video": "cDiZ1BZmsAM",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 48,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0042",
    "warnCount": 0,
-   "search": "фолк соул диме поповски кочо петровски з-2059/2 folk soul dime popovski kocho petrovski z-2059/2"
+   "search": "фолк соул диме поповски кочо петровски з-2059/2 folk soul dime popovski kocho petrovski z-2059/2",
+   "videoLengthSec": 229,
+   "videoDeltaSec": 47,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -5345,7 +5613,9 @@
    "textFixes": [],
    "id": "arrVocal-0045",
    "warnCount": 0,
-   "search": "го љубам до најмалите ѕвезди нина спирова димитар масевски з-3904/2 go ljubam do najmalite dzvezdi nina spirova dimitar masevski z-3904/2"
+   "search": "го љубам до најмалите ѕвезди нина спирова димитар масевски з-3904/2 go ljubam do najmalite dzvezdi nina spirova dimitar masevski z-3904/2",
+   "videoLengthSec": 165,
+   "videoDeltaSec": 4
   },
   {
    "category": "arrVocal",
@@ -5358,18 +5628,21 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "OAM5b4b7ieM",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 52,
    "flags": [
     "missing-duration",
-    "missing-signature"
+    "missing-signature",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0046",
    "warnCount": 0,
-   "search": "и можеби нина спирова христо крстевски i mozhebi nina spirova hristo krstevski"
+   "search": "и можеби нина спирова христо крстевски i mozhebi nina spirova hristo krstevski",
+   "videoLengthSec": 179,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -5539,7 +5812,7 @@
    "signature": "З-1365/3",
    "signatureRaw": "З-1365/3",
    "collection": "З",
-   "video": null,
+   "video": "qYt_TaG9IWk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 60,
    "flags": [
@@ -5549,7 +5822,9 @@
    "textFixes": [],
    "id": "arrVocal-0054",
    "warnCount": 1,
-   "search": "јужна ѕвезда зоран георгиев александар џамбазов з-1365/3 juzhna dzvezda zoran georgiev aleksandar djambazov z-1365/3"
+   "search": "јужна ѕвезда зоран георгиев александар џамбазов з-1365/3 juzhna dzvezda zoran georgiev aleksandar djambazov z-1365/3",
+   "videoLengthSec": 189,
+   "videoDeltaSec": 2
   },
   {
    "category": "arrVocal",
@@ -5562,13 +5837,14 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "x-AqPPiYKrA",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 61,
    "flags": [
     "missing-duration",
     "missing-signature",
-    "punctuation-spacing"
+    "punctuation-spacing",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -5581,7 +5857,9 @@
    ],
    "id": "arrVocal-0055",
    "warnCount": 0,
-   "search": "кажи зошто ме остави томислав маниќ н. гунарис kazhi zoshto me ostavi tomislav manikj n. gunaris"
+   "search": "кажи зошто ме остави томислав маниќ н. гунарис kazhi zoshto me ostavi tomislav manikj n. gunaris",
+   "videoLengthSec": 185,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -5594,15 +5872,20 @@
    "signature": "З-2740/1",
    "signatureRaw": "З-2740/1",
    "collection": "З",
-   "video": null,
+   "video": "J7GAuLtj2_w",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 62,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0056",
    "warnCount": 0,
-   "search": "кај си мајко даниела панчетовиќ григор копров з-2740/1 kaj si majko daniela panchetovikj grigor koprov z-2740/1"
+   "search": "кај си мајко даниела панчетовиќ григор копров з-2740/1 kaj si majko daniela panchetovikj grigor koprov z-2740/1",
+   "videoLengthSec": 154,
+   "videoDeltaSec": 27,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -5615,7 +5898,7 @@
    "signature": "З-2071/3",
    "signatureRaw": "З-2071/3",
    "collection": "З",
-   "video": null,
+   "video": "KL7tkRTUjdY",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 63,
    "flags": [],
@@ -5623,7 +5906,9 @@
    "textFixes": [],
    "id": "arrVocal-0057",
    "warnCount": 0,
-   "search": "ќе наминеш кај мене даниела панчетовиќ димитар масевски з-2071/3 kje naminesh kaj mene daniela panchetovikj dimitar masevski z-2071/3"
+   "search": "ќе наминеш кај мене даниела панчетовиќ димитар масевски з-2071/3 kje naminesh kaj mene daniela panchetovikj dimitar masevski z-2071/3",
+   "videoLengthSec": 190,
+   "videoDeltaSec": 0
   },
   {
    "category": "arrVocal",
@@ -5657,17 +5942,20 @@
    "signature": "АЗ-47/10",
    "signatureRaw": "АЗ-47/10",
    "collection": "АЗ",
-   "video": null,
+   "video": "U8S0-8hDgOE",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 65,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0059",
    "warnCount": 0,
-   "search": "кога бев млад м. станојковиќ петар пешев аз-47/10 koga bev mlad m. stanojkovikj petar peshev az-47/10"
+   "search": "кога бев млад м. станојковиќ петар пешев аз-47/10 koga bev mlad m. stanojkovikj petar peshev az-47/10",
+   "videoLengthSec": 110,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -5724,7 +6012,7 @@
    "signature": "З-3770/1",
    "signatureRaw": "З-3770/1",
    "collection": "З",
-   "video": null,
+   "video": "imFdCshzBxA",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 68,
    "flags": [],
@@ -5732,7 +6020,9 @@
    "textFixes": [],
    "id": "arrVocal-0062",
    "warnCount": 0,
-   "search": "кој да те колне с. грнчаровски драган мијалковски з-3770/1 koj da te kolne s. grncharovski dragan mijalkovski z-3770/1"
+   "search": "кој да те колне с. грнчаровски драган мијалковски з-3770/1 koj da te kolne s. grncharovski dragan mijalkovski z-3770/1",
+   "videoLengthSec": 192,
+   "videoDeltaSec": 1
   },
   {
    "category": "arrVocal",
@@ -5745,15 +6035,20 @@
    "signature": "З-1704/3",
    "signatureRaw": "З-1704/3",
    "collection": "З",
-   "video": null,
+   "video": "JDhc_q1gJv4",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 69,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0063",
    "warnCount": 0,
-   "search": "крајот на нашата љубов зоран милосављевиќ славе димитров з-1704/3 krajot na nashata ljubov zoran milosavljevikj slave dimitrov z-1704/3"
+   "search": "крајот на нашата љубов зоран милосављевиќ славе димитров з-1704/3 krajot na nashata ljubov zoran milosavljevikj slave dimitrov z-1704/3",
+   "videoLengthSec": 212,
+   "videoDeltaSec": 7,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -5955,18 +6250,21 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "ro3-qRE9Yvw",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 78,
    "flags": [
     "missing-duration",
-    "missing-signature"
+    "missing-signature",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0072",
    "warnCount": 0,
-   "search": "љубам нина спирова христо крстевски ljubam nina spirova hristo krstevski"
+   "search": "љубам нина спирова христо крстевски ljubam nina spirova hristo krstevski",
+   "videoLengthSec": 217,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -5979,17 +6277,20 @@
    "signature": "АЗ-47/15",
    "signatureRaw": "АЗ-47/15",
    "collection": "АЗ",
-   "video": null,
+   "video": "3nI2OFKJN6g",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 79,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0073",
    "warnCount": 0,
-   "search": "љубов и мотор м. станојковиќ александар џамбазов аз-47/15 ljubov i motor m. stanojkovikj aleksandar djambazov az-47/15"
+   "search": "љубов и мотор м. станојковиќ александар џамбазов аз-47/15 ljubov i motor m. stanojkovikj aleksandar djambazov az-47/15",
+   "videoLengthSec": 166,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -6002,18 +6303,21 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "D657Yu5503M",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 80,
    "flags": [
     "missing-duration",
-    "missing-signature"
+    "missing-signature",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0074",
    "warnCount": 0,
-   "search": "љуби ме даниела панчетовиќ р. пајдаков ljubi me daniela panchetovikj r. pajdakov"
+   "search": "љуби ме даниела панчетовиќ р. пајдаков ljubi me daniela panchetovikj r. pajdakov",
+   "videoLengthSec": 162,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -6091,14 +6395,15 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "Ra-FWdn5QVY",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 84,
    "flags": [
     "missing-duration",
     "missing-signature",
     "punctuation-spacing",
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -6123,7 +6428,9 @@
    ],
    "id": "arrVocal-0078",
    "warnCount": 0,
-   "search": "љубов ти сладок сон љупка апостолова ј. вељановски ljubov ti sladok son ljupka apostolova j. veljanovski"
+   "search": "љубов ти сладок сон љупка апостолова ј. вељановски ljubov ti sladok son ljupka apostolova j. veljanovski",
+   "videoLengthSec": 221,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -6159,12 +6466,13 @@
    "signature": "АЗ-61/8",
    "signatureRaw": "АЗ-61/8",
    "collection": "АЗ",
-   "video": null,
+   "video": "5R2VyMdE9LQ",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 86,
    "flags": [
     "missing-duration",
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -6177,7 +6485,9 @@
    ],
    "id": "arrVocal-0080",
    "warnCount": 0,
-   "search": "љубен си? зоран георгиев димитар масевски аз-61/8 ljuben si? zoran georgiev dimitar masevski az-61/8"
+   "search": "љубен си? зоран георгиев димитар масевски аз-61/8 ljuben si? zoran georgiev dimitar masevski az-61/8",
+   "videoLengthSec": 151,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -6288,15 +6598,20 @@
    "signature": "З-1146/3",
    "signatureRaw": "З-1146/3",
    "collection": "З",
-   "video": null,
+   "video": "gJPlb_dL9Z8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 90,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0084",
    "warnCount": 0,
-   "search": "македонка а. сурмеан христо крстевски з-1146/3 makedonka a. surmean hristo krstevski z-1146/3"
+   "search": "македонка а. сурмеан христо крстевски з-1146/3 makedonka a. surmean hristo krstevski z-1146/3",
+   "videoLengthSec": 179,
+   "videoDeltaSec": 13,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -6309,15 +6624,20 @@
    "signature": "З-1720/3",
    "signatureRaw": "З-1720/3",
    "collection": "З",
-   "video": null,
+   "video": "VCX4uYPQsqQ",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 91,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0085",
    "warnCount": 0,
-   "search": "македонски кавал христо крстевски христо крстевски з-1720/3 makedonski kaval hristo krstevski hristo krstevski z-1720/3"
+   "search": "македонски кавал христо крстевски христо крстевски з-1720/3 makedonski kaval hristo krstevski hristo krstevski z-1720/3",
+   "videoLengthSec": 122,
+   "videoDeltaSec": 118,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -6330,7 +6650,7 @@
    "signature": "З-3904/1",
    "signatureRaw": "З-3904/1",
    "collection": "З",
-   "video": null,
+   "video": "KQVIqSBVuRQ",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 92,
    "flags": [],
@@ -6338,7 +6658,9 @@
    "textFixes": [],
    "id": "arrVocal-0086",
    "warnCount": 0,
-   "search": "марина зоран милосављевиќ димитар масевски з-3904/1 marina zoran milosavljevikj dimitar masevski z-3904/1"
+   "search": "марина зоран милосављевиќ димитар масевски з-3904/1 marina zoran milosavljevikj dimitar masevski z-3904/1",
+   "videoLengthSec": 169,
+   "videoDeltaSec": 2
   },
   {
    "category": "arrVocal",
@@ -6471,13 +6793,14 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "Fhkw_POjFOQ",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 98,
    "flags": [
     "missing-duration",
     "missing-signature",
-    "name-unified"
+    "name-unified",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -6490,7 +6813,9 @@
    ],
    "id": "arrVocal-0092",
    "warnCount": 0,
-   "search": "мила моја андреа сопронов м. божиновски mila moja andrea sopronov m. bozhinovski"
+   "search": "мила моја андреа сопронов м. божиновски mila moja andrea sopronov m. bozhinovski",
+   "videoLengthSec": 197,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -6524,18 +6849,21 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "km8gdZ415Zw",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 100,
    "flags": [
     "missing-duration",
-    "missing-signature"
+    "missing-signature",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0094",
    "warnCount": 0,
-   "search": "млади луди години б. ноев александар џамбазов mladi ludi godini b. noev aleksandar djambazov"
+   "search": "млади луди години б. ноев александар џамбазов mladi ludi godini b. noev aleksandar djambazov",
+   "videoLengthSec": 190,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -6792,7 +7120,7 @@
    "signature": "З-186/1",
    "signatureRaw": "З-186/1",
    "collection": "З",
-   "video": null,
+   "video": "wbWNxXsoCJ8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 111,
    "flags": [],
@@ -6800,7 +7128,9 @@
    "textFixes": [],
    "id": "arrVocal-0105",
    "warnCount": 0,
-   "search": "moon river д. поповска h. mancini з-186/1 moon river d. popovska h. mancini z-186/1"
+   "search": "moon river д. поповска h. mancini з-186/1 moon river d. popovska h. mancini z-186/1",
+   "videoLengthSec": 143,
+   "videoDeltaSec": 3
   },
   {
    "category": "arrVocal",
@@ -6836,15 +7166,20 @@
    "signature": "З-5100/3",
    "signatureRaw": "З-5100/3",
    "collection": "З",
-   "video": null,
+   "video": "5FAuImBPH34",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 113,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0107",
    "warnCount": 0,
-   "search": "нани, нуни, нина с. камџијаш з. запров з-5100/3 nani, nuni, nina s. kamdjijash z. zaprov z-5100/3"
+   "search": "нани, нуни, нина с. камџијаш з. запров з-5100/3 nani, nuni, nina s. kamdjijash z. zaprov z-5100/3",
+   "videoLengthSec": 161,
+   "videoDeltaSec": 16,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -6931,7 +7266,7 @@
    "signature": "З-6986/2",
    "signatureRaw": "З-6986/2",
    "collection": "З",
-   "video": null,
+   "video": "LQd14NdrdVk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 117,
    "flags": [],
@@ -6939,7 +7274,9 @@
    "textFixes": [],
    "id": "arrVocal-0111",
    "warnCount": 0,
-   "search": "нека е крај сефедин бајрамов тодор бојаџиев з-6986/2 neka e kraj sefedin bajramov todor bojadjiev z-6986/2"
+   "search": "нека е крај сефедин бајрамов тодор бојаџиев з-6986/2 neka e kraj sefedin bajramov todor bojadjiev z-6986/2",
+   "videoLengthSec": 175,
+   "videoDeltaSec": 0
   },
   {
    "category": "arrVocal",
@@ -6952,12 +7289,13 @@
    "signature": "АЗ-61/24",
    "signatureRaw": "АЗ-61/24",
    "collection": "АЗ",
-   "video": null,
+   "video": "OL63eiK3Wmk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 118,
    "flags": [
     "missing-duration",
-    "name-unified"
+    "name-unified",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -6970,7 +7308,9 @@
    ],
    "id": "arrVocal-0112",
    "warnCount": 0,
-   "search": "нежност кон мими христо крстевски петар пешев аз-61/24 nezhnost kon mimi hristo krstevski petar peshev az-61/24"
+   "search": "нежност кон мими христо крстевски петар пешев аз-61/24 nezhnost kon mimi hristo krstevski petar peshev az-61/24",
+   "videoLengthSec": 140,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -7090,7 +7430,9 @@
    "textFixes": [],
    "id": "arrVocal-0117",
    "warnCount": 0,
-   "search": "незнаена сестра нина спирова јане коџабашија з-2471/2 neznaena sestra nina spirova jane kodjabashija z-2471/2"
+   "search": "незнаена сестра нина спирова јане коџабашија з-2471/2 neznaena sestra nina spirova jane kodjabashija z-2471/2",
+   "videoLengthSec": 191,
+   "videoDeltaSec": 0
   },
   {
    "category": "arrVocal",
@@ -7103,7 +7445,7 @@
    "signature": "З-4917/1",
    "signatureRaw": "З-4917/1",
    "collection": "З",
-   "video": null,
+   "video": "ECD2aIgNP7k",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 124,
    "flags": [],
@@ -7111,7 +7453,9 @@
    "textFixes": [],
    "id": "arrVocal-0118",
    "warnCount": 0,
-   "search": "незнам кај си сега драган мијалковски к. костов з-4917/1 neznam kaj si sega dragan mijalkovski k. kostov z-4917/1"
+   "search": "незнам кај си сега драган мијалковски к. костов з-4917/1 neznam kaj si sega dragan mijalkovski k. kostov z-4917/1",
+   "videoLengthSec": 261,
+   "videoDeltaSec": 0
   },
   {
    "category": "arrVocal",
@@ -7210,18 +7554,21 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "QdyBIDd1u6c",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 128,
    "flags": [
     "missing-duration",
-    "missing-signature"
+    "missing-signature",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0122",
    "warnCount": 0,
-   "search": "ноќеска шумеа брезите зафир хаџиманов петар пешев nokjeska shumea brezite zafir hadjimanov petar peshev"
+   "search": "ноќеска шумеа брезите зафир хаџиманов петар пешев nokjeska shumea brezite zafir hadjimanov petar peshev",
+   "videoLengthSec": 241,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -7255,7 +7602,7 @@
    "signature": "З-3530/2",
    "signatureRaw": "З-3530/2",
    "collection": "З",
-   "video": null,
+   "video": "ZiGiurLMn0w",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 130,
    "flags": [],
@@ -7263,7 +7610,9 @@
    "textFixes": [],
    "id": "arrVocal-0124",
    "warnCount": 0,
-   "search": "о галеби бели драган мијалковски александар џамбазов з-3530/2 o galebi beli dragan mijalkovski aleksandar djambazov z-3530/2"
+   "search": "о галеби бели драган мијалковски александар џамбазов з-3530/2 o galebi beli dragan mijalkovski aleksandar djambazov z-3530/2",
+   "videoLengthSec": 173,
+   "videoDeltaSec": 3
   },
   {
    "category": "arrVocal",
@@ -7387,18 +7736,21 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "uqw4fCa2rAA",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 136,
    "flags": [
     "missing-duration",
-    "missing-signature"
+    "missing-signature",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0130",
    "warnCount": 0,
-   "search": "остани јанко узунов кирил милев ostani janko uzunov kiril milev"
+   "search": "остани јанко узунов кирил милев ostani janko uzunov kiril milev",
+   "videoLengthSec": 167,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -7411,15 +7763,20 @@
    "signature": "З-3818/2",
    "signatureRaw": "З-3818/2",
    "collection": "З",
-   "video": null,
+   "video": "aXy5AKqXr1Q",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 137,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0131",
    "warnCount": 0,
-   "search": "остани мој маја оџаклиевска живоин глишиќ з-3818/2 ostani moj maja odjaklievska zhivoin glishikj z-3818/2"
+   "search": "остани мој маја оџаклиевска живоин глишиќ з-3818/2 ostani moj maja odjaklievska zhivoin glishikj z-3818/2",
+   "videoLengthSec": 198,
+   "videoDeltaSec": 18,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -7432,15 +7789,20 @@
    "signature": "З-2070/3",
    "signatureRaw": "З-2070/3",
    "collection": "З",
-   "video": null,
+   "video": "NryzyFVnVtw",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 138,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0132",
    "warnCount": 0,
-   "search": "оставам сè диме поповски димитар масевски з-2070/3 ostavam sè dime popovski dimitar masevski z-2070/3"
+   "search": "оставам сè диме поповски димитар масевски з-2070/3 ostavam sè dime popovski dimitar masevski z-2070/3",
+   "videoLengthSec": 241,
+   "videoDeltaSec": 9,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -7520,17 +7882,20 @@
    "signature": "АЗ-45/24",
    "signatureRaw": "АЗ-45/24",
    "collection": "АЗ",
-   "video": null,
+   "video": "nvEA6G-_SWI",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 142,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0136",
    "warnCount": 0,
-   "search": "пролетно сеќавање нина спирова александар џамбазов аз-45/24 proletno sekjavanje nina spirova aleksandar djambazov az-45/24"
+   "search": "пролетно сеќавање нина спирова александар џамбазов аз-45/24 proletno sekjavanje nina spirova aleksandar djambazov az-45/24",
+   "videoLengthSec": 227,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -7543,13 +7908,14 @@
    "signature": "АЗ-45/25",
    "signatureRaw": "АЗ-45/25",
    "collection": "АЗ",
-   "video": null,
+   "video": "e11bOL1tVrI",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 143,
    "flags": [
     "missing-duration",
     "punctuation-spacing",
-    "name-unified"
+    "name-unified",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -7568,7 +7934,9 @@
    ],
    "id": "arrVocal-0137",
    "warnCount": 0,
-   "search": "песна на враќањето нина спирова александар џамбазов аз-45/25 pesna na vrakjanjeto nina spirova aleksandar djambazov az-45/25"
+   "search": "песна на враќањето нина спирова александар џамбазов аз-45/25 pesna na vrakjanjeto nina spirova aleksandar djambazov az-45/25",
+   "videoLengthSec": 123,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -7602,15 +7970,20 @@
    "signature": "З-3967/1",
    "signatureRaw": "З-3967/1",
    "collection": "З",
-   "video": null,
+   "video": "d2RBv1fcU9M",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 145,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0139",
    "warnCount": 0,
-   "search": "писмо ј. катерина д. ортаков з-3967/1 pismo j. katerina d. ortakov z-3967/1"
+   "search": "писмо ј. катерина д. ортаков з-3967/1 pismo j. katerina d. ortakov z-3967/1",
+   "videoLengthSec": 225,
+   "videoDeltaSec": 80,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -7623,12 +7996,13 @@
    "signature": "АЗ-46/5",
    "signatureRaw": "АЗ-46/5",
    "collection": "АЗ",
-   "video": null,
+   "video": "ufL_VPhCbzQ",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 146,
    "flags": [
     "missing-duration",
-    "name-unified"
+    "name-unified",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -7641,7 +8015,9 @@
    ],
    "id": "arrVocal-0140",
    "warnCount": 0,
-   "search": "прегрни ме нина спирова g. gershwin аз-46/5 pregrni me nina spirova g. gershwin az-46/5"
+   "search": "прегрни ме нина спирова g. gershwin аз-46/5 pregrni me nina spirova g. gershwin az-46/5",
+   "videoLengthSec": 234,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -7700,15 +8076,20 @@
    "signature": "З-3772/3",
    "signatureRaw": "З-3772/3",
    "collection": "З",
-   "video": null,
+   "video": "KvfPNzPuNKg",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 149,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0143",
    "warnCount": 0,
-   "search": "празно е без оваа љубов верица ристевска м. божиновски з-3772/3 prazno e bez ovaa ljubov verica ristevska m. bozhinovski z-3772/3"
+   "search": "празно е без оваа љубов верица ристевска м. божиновски з-3772/3 prazno e bez ovaa ljubov verica ristevska m. bozhinovski z-3772/3",
+   "videoLengthSec": 214,
+   "videoDeltaSec": 6,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -7721,17 +8102,20 @@
    "signature": "АЗ-59/17",
    "signatureRaw": "АЗ-59/17",
    "collection": "АЗ",
-   "video": null,
+   "video": "Myx2M0SygMc",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 150,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0144",
    "warnCount": 0,
-   "search": "пролетен бајон катица ѓаконовска кочо петровски аз-59/17 proleten bajon katica gjakonovska kocho petrovski az-59/17"
+   "search": "пролетен бајон катица ѓаконовска кочо петровски аз-59/17 proleten bajon katica gjakonovska kocho petrovski az-59/17",
+   "videoLengthSec": 154,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -7752,7 +8136,9 @@
    "textFixes": [],
    "id": "arrVocal-0145",
    "warnCount": 0,
-   "search": "планино моја рудино диме поповски јане коџабашија з-2033/2 planino moja rudino dime popovski jane kodjabashija z-2033/2"
+   "search": "планино моја рудино диме поповски јане коџабашија з-2033/2 planino moja rudino dime popovski jane kodjabashija z-2033/2",
+   "videoLengthSec": 180,
+   "videoDeltaSec": 0
   },
   {
    "category": "arrVocal",
@@ -7773,7 +8159,9 @@
    "textFixes": [],
    "id": "arrVocal-0146",
    "warnCount": 0,
-   "search": "почекај ме григор копров т. органџиев з-1445/1 pochekaj me grigor koprov t. organdjiev z-1445/1"
+   "search": "почекај ме григор копров т. органџиев з-1445/1 pochekaj me grigor koprov t. organdjiev z-1445/1",
+   "videoLengthSec": 188,
+   "videoDeltaSec": 7
   },
   {
    "category": "arrVocal",
@@ -7810,18 +8198,21 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "lJiyxoUYJEg",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 154,
    "flags": [
     "missing-duration",
-    "missing-signature"
+    "missing-signature",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0148",
    "warnCount": 0,
-   "search": "последна солза блага видец димитар масевски posledna solza blaga videc dimitar masevski"
+   "search": "последна солза блага видец димитар масевски posledna solza blaga videc dimitar masevski",
+   "videoLengthSec": 208,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -7834,7 +8225,7 @@
    "signature": "З-3905/1",
    "signatureRaw": "З-3905/1",
    "collection": "З",
-   "video": null,
+   "video": "gb2O8wnQsMs",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 155,
    "flags": [],
@@ -7842,7 +8233,9 @@
    "textFixes": [],
    "id": "arrVocal-0149",
    "warnCount": 0,
-   "search": "последна солза благоја чешларов димитар масевски з-3905/1 posledna solza blagoja cheshlarov dimitar masevski z-3905/1"
+   "search": "последна солза благоја чешларов димитар масевски з-3905/1 posledna solza blagoja cheshlarov dimitar masevski z-3905/1",
+   "videoLengthSec": 204,
+   "videoDeltaSec": 4
   },
   {
    "category": "arrVocal",
@@ -7855,18 +8248,21 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "NTxyra9EJSw",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 156,
    "flags": [
     "missing-duration",
-    "missing-signature"
+    "missing-signature",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0150",
    "warnCount": 0,
-   "search": "поздрав на марија томислав маниќ томислав маниќ pozdrav na marija tomislav manikj tomislav manikj"
+   "search": "поздрав на марија томислав маниќ томислав маниќ pozdrav na marija tomislav manikj tomislav manikj",
+   "videoLengthSec": 135,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -7879,19 +8275,22 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "7tHVdniHJTc",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 157,
    "flags": [
     "missing-duration",
     "missing-signature",
-    "possible-duplicate"
+    "possible-duplicate",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0151",
    "warnCount": 1,
-   "search": "празно е без оваа љубов верица ристевска тодор бојаџиев prazno e bez ovaa ljubov verica ristevska todor bojadjiev"
+   "search": "празно е без оваа љубов верица ристевска тодор бојаџиев prazno e bez ovaa ljubov verica ristevska todor bojadjiev",
+   "videoLengthSec": 212,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -7925,15 +8324,20 @@
    "signature": "З-6626/1",
    "signatureRaw": "З-6626/1",
    "collection": "З",
-   "video": null,
+   "video": "0IRrG_jh1VI",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 159,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0153",
    "warnCount": 0,
-   "search": "прости ми сефедин бајрамов м. манев з-6626/1 prosti mi sefedin bajramov m. manev z-6626/1"
+   "search": "прости ми сефедин бајрамов м. манев з-6626/1 prosti mi sefedin bajramov m. manev z-6626/1",
+   "videoLengthSec": 239,
+   "videoDeltaSec": 33,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -7946,7 +8350,7 @@
    "signature": "З-30061",
    "signatureRaw": "З-30061",
    "collection": "З",
-   "video": null,
+   "video": "QVQn3-Js5NI",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 160,
    "flags": [
@@ -7956,7 +8360,9 @@
    "textFixes": [],
    "id": "arrVocal-0154",
    "warnCount": 1,
-   "search": "прости ми драган мијалковски драган мијалковски з-30061 prosti mi dragan mijalkovski dragan mijalkovski z-30061"
+   "search": "прости ми драган мијалковски драган мијалковски з-30061 prosti mi dragan mijalkovski dragan mijalkovski z-30061",
+   "videoLengthSec": 220,
+   "videoDeltaSec": 5
   },
   {
    "category": "arrVocal",
@@ -7990,12 +8396,13 @@
    "signature": "АЗ-51/24",
    "signatureRaw": "АЗ-51/24",
    "collection": "АЗ",
-   "video": null,
+   "video": "0orMWlA7Dow",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 162,
    "flags": [
     "missing-duration",
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -8008,7 +8415,9 @@
    ],
    "id": "arrVocal-0156",
    "warnCount": 0,
-   "search": "рубин благоја чешларов периш аз-51/24 rubin blagoja cheshlarov perish az-51/24"
+   "search": "рубин благоја чешларов периш аз-51/24 rubin blagoja cheshlarov perish az-51/24",
+   "videoLengthSec": 317,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -8159,18 +8568,21 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "5YcnD1ahUCc",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 169,
    "flags": [
     "missing-duration",
-    "missing-signature"
+    "missing-signature",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0163",
    "warnCount": 0,
-   "search": "сеќавање нина спирова кирил милев sekjavanje nina spirova kiril milev"
+   "search": "сеќавање нина спирова кирил милев sekjavanje nina spirova kiril milev",
+   "videoLengthSec": 161,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -8215,17 +8627,20 @@
    "signature": "АЗ-61/27",
    "signatureRaw": "АЗ-61/27",
    "collection": "АЗ",
-   "video": null,
+   "video": "kcD_XwDR944",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 171,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0165",
    "warnCount": 0,
-   "search": "скитник христо крстевски христо крстевски аз-61/27 skitnik hristo krstevski hristo krstevski az-61/27"
+   "search": "скитник христо крстевски христо крстевски аз-61/27 skitnik hristo krstevski hristo krstevski az-61/27",
+   "videoLengthSec": 174,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -8374,17 +8789,20 @@
    "signature": "АЗ-49/19",
    "signatureRaw": "АЗ-49/19",
    "collection": "АЗ",
-   "video": null,
+   "video": "LqXguiNARto",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 178,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0172",
    "warnCount": 0,
-   "search": "спомен забавен оркестар александар џамбазов аз-49/19 spomen zabaven orkestar aleksandar djambazov az-49/19"
+   "search": "спомен забавен оркестар александар џамбазов аз-49/19 spomen zabaven orkestar aleksandar djambazov az-49/19",
+   "videoLengthSec": 152,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -8420,17 +8838,20 @@
    "signature": "З-5625/2",
    "signatureRaw": "З-5625/2",
    "collection": "З",
-   "video": null,
+   "video": "bHXoKylMQ6k",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 180,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0174",
    "warnCount": 0,
-   "search": "симона ванчо тарабунов п. галев з-5625/2 simona vancho tarabunov p. galev z-5625/2"
+   "search": "симона ванчо тарабунов п. галев з-5625/2 simona vancho tarabunov p. galev z-5625/2",
+   "videoLengthSec": 223,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -8466,17 +8887,20 @@
    "signature": "АЗ-51/22",
    "signatureRaw": "АЗ-51/22",
    "collection": "АЗ",
-   "video": null,
+   "video": "u4sLj4LnjEo",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 182,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0176",
    "warnCount": 0,
-   "search": "сино во сино христо крстевски д. модуњо аз-51/22 sino vo sino hristo krstevski d. modunjo az-51/22"
+   "search": "сино во сино христо крстевски д. модуњо аз-51/22 sino vo sino hristo krstevski d. modunjo az-51/22",
+   "videoLengthSec": 252,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -8542,12 +8966,13 @@
    "signature": "АЗ-60/12",
    "signatureRaw": "АЗ-60/12",
    "collection": "АЗ",
-   "video": null,
+   "video": "7hmR8gifV0Y",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 185,
    "flags": [
     "missing-duration",
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -8560,7 +8985,9 @@
    ],
    "id": "arrVocal-0179",
    "warnCount": 0,
-   "search": "село мое блага видец слободан николовски аз-60/12 selo moe blaga videc slobodan nikolovski az-60/12"
+   "search": "село мое блага видец слободан николовски аз-60/12 selo moe blaga videc slobodan nikolovski az-60/12",
+   "videoLengthSec": 199,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -8619,18 +9046,21 @@
    "signature": "ПК-2223/10",
    "signatureRaw": "ПК-2223/10",
    "collection": "ПК",
-   "video": null,
+   "video": "T_Od_9-7Hkg",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 188,
    "flags": [
     "missing-duration",
-    "possible-duplicate"
+    "possible-duplicate",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0182",
    "warnCount": 1,
-   "search": "сеќавање нина спирова кирил милев пк-2223/10 sekjavanje nina spirova kiril milev pk-2223/10"
+   "search": "сеќавање нина спирова кирил милев пк-2223/10 sekjavanje nina spirova kiril milev pk-2223/10",
+   "videoLengthSec": 160,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -8643,7 +9073,7 @@
    "signature": "З-2813/1",
    "signatureRaw": "З-2813/1",
    "collection": "З",
-   "video": null,
+   "video": "XpmbSj6HXBo",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 189,
    "flags": [],
@@ -8651,7 +9081,9 @@
    "textFixes": [],
    "id": "arrVocal-0183",
    "warnCount": 0,
-   "search": "се руши еден свет импулси мандел з-2813/1 se rushi eden svet impulsi mandel z-2813/1"
+   "search": "се руши еден свет импулси мандел з-2813/1 se rushi eden svet impulsi mandel z-2813/1",
+   "videoLengthSec": 135,
+   "videoDeltaSec": 0
   },
   {
    "category": "arrVocal",
@@ -8672,7 +9104,9 @@
    "textFixes": [],
    "id": "arrVocal-0184",
    "warnCount": 0,
-   "search": "скопје импулси м. мицев з-3821/2 skopje impulsi m. micev z-3821/2"
+   "search": "скопје импулси м. мицев з-3821/2 skopje impulsi m. micev z-3821/2",
+   "videoLengthSec": 198,
+   "videoDeltaSec": 1
   },
   {
    "category": "arrVocal",
@@ -8693,7 +9127,9 @@
    "textFixes": [],
    "id": "arrVocal-0185",
    "warnCount": 0,
-   "search": "скопје младост моја драган мијалковски драган мијалковски з-7747/2 skopje mladost moja dragan mijalkovski dragan mijalkovski z-7747/2"
+   "search": "скопје младост моја драган мијалковски драган мијалковски з-7747/2 skopje mladost moja dragan mijalkovski dragan mijalkovski z-7747/2",
+   "videoLengthSec": 206,
+   "videoDeltaSec": 3
   },
   {
    "category": "arrVocal",
@@ -8714,7 +9150,9 @@
    "textFixes": [],
    "id": "arrVocal-0186",
    "warnCount": 0,
-   "search": "со цвеќе да ме пречекаш јанко узунов јанко узунов з-5486/1 so cvekje da me prechekash janko uzunov janko uzunov z-5486/1"
+   "search": "со цвеќе да ме пречекаш јанко узунов јанко узунов з-5486/1 so cvekje da me prechekash janko uzunov janko uzunov z-5486/1",
+   "videoLengthSec": 222,
+   "videoDeltaSec": 0
   },
   {
    "category": "arrVocal",
@@ -8815,7 +9253,7 @@
    "signature": "З-3866/2",
    "signatureRaw": "З-3866/2",
    "collection": "З",
-   "video": null,
+   "video": "9mAeFyYWvRA",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 196,
    "flags": [],
@@ -8823,7 +9261,9 @@
    "textFixes": [],
    "id": "arrVocal-0190",
    "warnCount": 0,
-   "search": "спомен лена трајковска живоин глишиќ з-3866/2 spomen lena trajkovska zhivoin glishikj z-3866/2"
+   "search": "спомен лена трајковска живоин глишиќ з-3866/2 spomen lena trajkovska zhivoin glishikj z-3866/2",
+   "videoLengthSec": 160,
+   "videoDeltaSec": 2
   },
   {
    "category": "arrVocal",
@@ -8836,17 +9276,20 @@
    "signature": "З-9749/3",
    "signatureRaw": "З-9749/3",
    "collection": "З",
-   "video": null,
+   "video": "q8jg4jy9a44",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 197,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0191",
    "warnCount": 0,
-   "search": "спомен љупка апостолова в. стијаски з-9749/3 spomen ljupka apostolova v. stijaski z-9749/3"
+   "search": "спомен љупка апостолова в. стијаски з-9749/3 spomen ljupka apostolova v. stijaski z-9749/3",
+   "videoLengthSec": 143,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -8859,7 +9302,7 @@
    "signature": "З-1576/3",
    "signatureRaw": "З-1576/3",
    "collection": "З",
-   "video": null,
+   "video": "JS4FF1tH3vk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 198,
    "flags": [
@@ -8883,7 +9326,9 @@
    ],
    "id": "arrVocal-0192",
    "warnCount": 0,
-   "search": "срамежливи виолета томовска александар џамбазов з-1576/3 sramezhlivi violeta tomovska aleksandar djambazov z-1576/3"
+   "search": "срамежливи виолета томовска александар џамбазов з-1576/3 sramezhlivi violeta tomovska aleksandar djambazov z-1576/3",
+   "videoLengthSec": 206,
+   "videoDeltaSec": 1
   },
   {
    "category": "arrVocal",
@@ -9032,15 +9477,20 @@
    "signature": "З-7886/1",
    "signatureRaw": "З-7886/1",
    "collection": "З",
-   "video": null,
+   "video": "KkyROqFgrg0",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 204,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0198",
    "warnCount": 0,
-   "search": "татковино драган мијалковски драган мијалковски з-7886/1 tatkovino dragan mijalkovski dragan mijalkovski z-7886/1"
+   "search": "татковино драган мијалковски драган мијалковски з-7886/1 tatkovino dragan mijalkovski dragan mijalkovski z-7886/1",
+   "videoLengthSec": 219,
+   "videoDeltaSec": 6,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -9354,17 +9804,20 @@
    "signature": "АЗ-60/31",
    "signatureRaw": "АЗ-60/31",
    "collection": "АЗ",
-   "video": null,
+   "video": "4JGLMLdBHts",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 217,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0211",
    "warnCount": 0,
-   "search": "ти и јас зафир хаџиманов александар џамбазов аз-60/31 ti i jas zafir hadjimanov aleksandar djambazov az-60/31"
+   "search": "ти и јас зафир хаџиманов александар џамбазов аз-60/31 ti i jas zafir hadjimanov aleksandar djambazov az-60/31",
+   "videoLengthSec": 322,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -9419,15 +9872,20 @@
    "signature": "З-6671/1",
    "signatureRaw": "З-6671/1",
    "collection": "З",
-   "video": null,
+   "video": "7rxzBC160fc",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 220,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0214",
    "warnCount": 0,
-   "search": "ти си тој цветанка ласкова ванчо тарабунов з-6671/1 ti si toj cvetanka laskova vancho tarabunov z-6671/1"
+   "search": "ти си тој цветанка ласкова ванчо тарабунов з-6671/1 ti si toj cvetanka laskova vancho tarabunov z-6671/1",
+   "videoLengthSec": 297,
+   "videoDeltaSec": 112,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -9508,17 +9966,20 @@
    "signature": "АЗ-55/16",
    "signatureRaw": "АЗ-55/16",
    "collection": "АЗ",
-   "video": null,
+   "video": "tB8uFeLwba8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 224,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0218",
    "warnCount": 0,
-   "search": "те чекам љупка апостолова м. котлиќ аз-55/16 te chekam ljupka apostolova m. kotlikj az-55/16"
+   "search": "те чекам љупка апостолова м. котлиќ аз-55/16 te chekam ljupka apostolova m. kotlikj az-55/16",
+   "videoLengthSec": 280,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -9663,7 +10124,9 @@
    "textFixes": [],
    "id": "arrVocal-0224",
    "warnCount": 0,
-   "search": "убавице моја драган мијалковски драган мијалковски з-6822/1 ubavice moja dragan mijalkovski dragan mijalkovski z-6822/1"
+   "search": "убавице моја драган мијалковски драган мијалковски з-6822/1 ubavice moja dragan mijalkovski dragan mijalkovski z-6822/1",
+   "videoLengthSec": 277,
+   "videoDeltaSec": 2
   },
   {
    "category": "arrVocal",
@@ -9752,17 +10215,21 @@
    "signature": "З-4029/1",
    "signatureRaw": "4029/1",
    "collection": "З",
-   "video": null,
+   "video": "dW9I9_C6Vxs",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 234,
    "flags": [
-    "signature-missing-prefix"
+    "signature-missing-prefix",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0228",
    "warnCount": 0,
-   "search": "врати се с. сариевска ј. велинов з-4029/1 vrati se s. sarievska j. velinov z-4029/1"
+   "search": "врати се с. сариевска ј. велинов з-4029/1 vrati se s. sarievska j. velinov z-4029/1",
+   "videoLengthSec": 214,
+   "videoDeltaSec": 18,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -9851,18 +10318,21 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "lP_f896o9ng",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 238,
    "flags": [
     "missing-duration",
-    "missing-signature"
+    "missing-signature",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0232",
    "warnCount": 0,
-   "search": "во една пролет нина спирова димитар масевски vo edna prolet nina spirova dimitar masevski"
+   "search": "во една пролет нина спирова димитар масевски vo edna prolet nina spirova dimitar masevski",
+   "videoLengthSec": 179,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -9875,15 +10345,20 @@
    "signature": "З-3815/2",
    "signatureRaw": "З-3815/2",
    "collection": "З",
-   "video": null,
+   "video": "b4_N0C-wF1U",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 239,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0233",
    "warnCount": 0,
-   "search": "во ноќта виолета томовска кочо петровски з-3815/2 vo nokjta violeta tomovska kocho petrovski z-3815/2"
+   "search": "во ноќта виолета томовска кочо петровски з-3815/2 vo nokjta violeta tomovska kocho petrovski z-3815/2",
+   "videoLengthSec": 221,
+   "videoDeltaSec": 44,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -9942,17 +10417,20 @@
    "signature": "АЗ-55/20",
    "signatureRaw": "АЗ-55/20",
    "collection": "АЗ",
-   "video": null,
+   "video": "fIxulSLx7ng",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 242,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0236",
    "warnCount": 0,
-   "search": "вљуби се во мене љупка апостолова клуни аз-55/20 vljubi se vo mene ljupka apostolova kluni az-55/20"
+   "search": "вљуби се во мене љупка апостолова клуни аз-55/20 vljubi se vo mene ljupka apostolova kluni az-55/20",
+   "videoLengthSec": 137,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -10107,19 +10585,22 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "hwTzi_hG8jM",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 248,
    "flags": [
     "missing-duration",
     "missing-signature",
-    "composer-placeholder"
+    "composer-placeholder",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0242",
    "warnCount": 0,
-   "search": "за мене сега си сè томислав маниќ za mene sega si sè tomislav manikj"
+   "search": "за мене сега си сè томислав маниќ za mene sega si sè tomislav manikj",
+   "videoLengthSec": 226,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -10185,7 +10666,9 @@
    "textFixes": [],
    "id": "arrVocal-0245",
    "warnCount": 0,
-   "search": "запри сашка петковска димитар масевски з-1721/2 zapri sashka petkovska dimitar masevski z-1721/2"
+   "search": "запри сашка петковска димитар масевски з-1721/2 zapri sashka petkovska dimitar masevski z-1721/2",
+   "videoLengthSec": 164,
+   "videoDeltaSec": 2
   },
   {
    "category": "arrVocal",
@@ -10244,14 +10727,15 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "l0qF2FuW7_M",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 254,
    "flags": [
     "missing-duration",
     "missing-signature",
     "punctuation-spacing",
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -10270,7 +10754,9 @@
    ],
    "id": "arrVocal-0248",
    "warnCount": 0,
-   "search": "здодевно е нина спирова ванчо димитров zdodevno e nina spirova vancho dimitrov"
+   "search": "здодевно е нина спирова ванчо димитров zdodevno e nina spirova vancho dimitrov",
+   "videoLengthSec": 149,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -10283,19 +10769,22 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "bKiiKI5Z3cM",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 255,
    "flags": [
     "missing-duration",
     "missing-signature",
-    "missing-performer"
+    "missing-performer",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0249",
    "warnCount": 0,
-   "search": "златна месечина в. гомез zlatna mesechina v. gomez"
+   "search": "златна месечина в. гомез zlatna mesechina v. gomez",
+   "videoLengthSec": 244,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -10308,18 +10797,21 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "MZn_j1iWjN4",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 256,
    "flags": [
     "missing-duration",
-    "missing-signature"
+    "missing-signature",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0250",
    "warnCount": 0,
-   "search": "земјо родна даниела панчетовиќ п. сидовски zemjo rodna daniela panchetovikj p. sidovski"
+   "search": "земјо родна даниела панчетовиќ п. сидовски zemjo rodna daniela panchetovikj p. sidovski",
+   "videoLengthSec": 205,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -10402,15 +10894,20 @@
    "signature": "З-3674/1",
    "signatureRaw": "З-3674/1",
    "collection": "З",
-   "video": null,
+   "video": "rubMGVkJM6o",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 260,
-   "flags": [],
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0254",
    "warnCount": 0,
-   "search": "зошто зафир хаџиманов зафир хаџиманов з-3674/1 zoshto zafir hadjimanov zafir hadjimanov z-3674/1"
+   "search": "зошто зафир хаџиманов зафир хаџиманов з-3674/1 zoshto zafir hadjimanov zafir hadjimanov z-3674/1",
+   "videoLengthSec": 138,
+   "videoDeltaSec": 128,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -10532,17 +11029,20 @@
    "signature": "АЗ-50/22",
    "signatureRaw": "АЗ-50/22",
    "collection": "АЗ",
-   "video": null,
+   "video": "9bgGfhDcRs8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 265,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0259",
    "warnCount": 0,
-   "search": "шармен забавен оркестар полак аз-50/22 sharmen zabaven orkestar polak az-50/22"
+   "search": "шармен забавен оркестар полак аз-50/22 sharmen zabaven orkestar polak az-50/22",
+   "videoLengthSec": 309,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",
@@ -10555,18 +11055,21 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": null,
+   "video": "8R4gP15zm1w",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 266,
    "flags": [
     "missing-duration",
-    "missing-signature"
+    "missing-signature",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0260",
    "warnCount": 0,
-   "search": "штом те видам диме поповски александар џамбазов shtom te vidam dime popovski aleksandar djambazov"
+   "search": "штом те видам диме поповски александар џамбазов shtom te vidam dime popovski aleksandar djambazov",
+   "videoLengthSec": 130,
+   "videoApprox": true
   },
   {
    "category": "arrVocal",

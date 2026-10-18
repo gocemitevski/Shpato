@@ -9,9 +9,10 @@ and writes:
   data/notes.json      - every fix / flag applied, for transparency
   data/notes.js        - same, as a global
 
-It also merges sources/youtube.csv, the hand-curated record -> YouTube video
-map (columns `id,title,video`; see the README), into each record's "video"
-field.
+It also merges sources/youtube.csv, the record -> YouTube video map (columns
+`id,title,video,found,lengthSec`; see the README), into each record's "video"
+field, and records the links that were found by search rather than checked by
+hand as an approximate match.
 
 Only the Python 3 standard library is used.
 """
@@ -84,6 +85,7 @@ SEVERITY = {
     "signature-latin-prefix": "info",
     "signature-suspicious": "warning",
     "composer-placeholder": "info",
+    "video-approximate": "info",
     "duplicate": "info",
     "duplicate-dropped": "info",
     "possible-duplicate": "warning",
@@ -518,12 +520,32 @@ def extract_video_id(value):
     return s if VIDEO_ID_RE.match(s) else None
 
 
+# A machine-found link is only treated as the same recording when the upload's
+# own length is within this many seconds of the catalogue's. Mirrored in
+# tools/youtube-search.py.
+VIDEO_DURATION_TOLERANCE = 5
+
+
+def mmss(seconds):
+    """112 -> '1:52'. For the durations a video note compares."""
+    if seconds is None or seconds < 0:
+        return ""
+    return "{}:{:02d}".format(seconds // 60, seconds % 60)
+
+
 def read_videos():
-    """Read the curated `id,title,video` map. Returns ({id: video}, problems).
+    """Read the `id,title,video[,found,lengthSec]` map. Returns ({id: entry},
+    problems).
 
     `title` is a human-readable guard: it is not used for matching, but a
     mismatch is reported, because a record's id is positional and would
     otherwise attach a video to the wrong work silently.
+
+    `found` says where a link came from -- `human` (or blank, which is how
+    every row written before the column existed reads) for one somebody
+    checked, `search` for one tools/youtube-search.py proposed and nobody has
+    confirmed. `lengthSec` is the upload's own duration, which is what lets
+    the build say how far a machine-found link is from the catalogue's timing.
     """
     path = os.path.join(SOURCES_DIR, YOUTUBE_FILE)
     if not os.path.exists(path):
@@ -537,9 +559,9 @@ def read_videos():
         if not any(cell.strip() for cell in row):
             continue
         row = [clean(c) for c in row]
-        while len(row) < 3:
+        while len(row) < 5:
             row.append("")
-        rid, title, raw = row[0], row[1], row[2]
+        rid, title, raw, found, length = row[0], row[1], row[2], row[3].lower(), row[4]
         if not rid:
             problems.append("line {}: empty record id".format(n))
             continue
@@ -550,24 +572,50 @@ def read_videos():
         if rid in videos:
             problems.append("line {}: duplicate entry for {}".format(n, rid))
             continue
-        videos[rid] = (title, video)
+        if found not in ("", "human", "search"):
+            problems.append("line {}: unknown source {!r} (expected human or "
+                            "search)".format(n, found))
+            found = ""
+        if length and not length.isdigit():
+            problems.append("line {}: length {!r} is not whole seconds".format(n, length))
+            length = ""
+        videos[rid] = {"title": title, "video": video, "found": found or "human",
+                       "lengthSec": int(length) if length else None}
     return videos, problems
 
 
 def attach_videos(records, videos, problems):
-    """Fill in rec["video"]. Unmatched ids are reported, never guessed."""
+    """Fill in rec["video"] and mark the links nobody confirmed.
+
+    A search-found link whose upload runs within VIDEO_DURATION_TOLERANCE of
+    the catalogue's timing is treated as the same recording; every other one
+    gets the `video-approximate` flag, which the drawer and the notes tab then
+    show, and `videoApprox` for the places that only need the boolean. The
+    build decides this rather than the finder, so the threshold lives in one
+    place and re-running the build reproduces the same marks.
+    """
     by_id = {rec["id"]: rec for rec in records}
     for rid in sorted(videos):
-        title, video = videos[rid]
+        entry = videos[rid]
         rec = by_id.get(rid)
         if rec is None:
             problems.append("unknown record id: {}".format(rid))
             continue
-        if title and title != rec["title"]:
+        if entry["title"] and entry["title"] != rec["title"]:
             problems.append(
                 "{}: title in youtube.csv is {!r} but the record says {!r}".format(
-                    rid, title, rec["title"]))
-        rec["video"] = video
+                    rid, entry["title"], rec["title"]))
+        rec["video"] = entry["video"]
+        delta = None
+        if entry["lengthSec"] is not None:
+            rec["videoLengthSec"] = entry["lengthSec"]
+            if rec["durationSec"]:
+                delta = abs(entry["lengthSec"] - rec["durationSec"])
+                rec["videoDeltaSec"] = delta
+        if entry["found"] == "search" and (delta is None
+                                           or delta > VIDEO_DURATION_TOLERANCE):
+            rec["videoApprox"] = True
+            rec["flags"].append("video-approximate")
     return sum(1 for rec in records if rec["video"])
 
 
@@ -697,6 +745,11 @@ def main():
                 raw, normalized = rec["title"], rec["duplicateOf"] or ""
             elif rule == "possible-duplicate":
                 raw, normalized = rec["title"], possible_duplicates.get(rec["id"]) or ""
+            elif rule == "video-approximate":
+                # The two durations the reader can compare: ours, and the
+                # found upload's ("?" when the finder never learned it).
+                raw = mmss(rec["durationSec"])
+                normalized = mmss(rec.get("videoLengthSec")) or "?"
             else:
                 raw, normalized = "", ""
             entry = {

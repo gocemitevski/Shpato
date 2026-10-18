@@ -400,7 +400,8 @@
       // itself tells you what is listenable.
       var play = r.video
         ? '<button type="button" class="row-play" data-play="' + r.id + '" aria-label="' +
-          esc(t("player.playAria").replace("{title}", r.title)) + '">' +
+          esc(t(r.videoApprox ? "player.playAriaApprox" : "player.playAria")
+            .replace("{title}", r.title)) + '">' +
           '<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false">' +
           '<path d="M3.2 1.4 10 6 3.2 10.6Z"/></svg></button>'
         : "";
@@ -570,6 +571,16 @@
       (r.composer ? row("detail.composer", esc(r.composer)) : "") +
       row("detail.duration", fmt(r.durationSec) +
         (r.durationRaw && r.durationRaw !== "" ? ' <span class="raw-hint">(' + esc(r.durationRaw) + " " + esc(t("detail.raw")) + ")</span>" : "")) +
+      // A video's own length next to ours, with the difference when the link
+      // was found automatically: that is the one measurable reason to think
+      // the upload may be a different edition, so it is shown rather than
+      // left for the reader to work out.
+      (r.videoLengthSec
+        ? row("detail.videoDuration", fmt(r.videoLengthSec) +
+            (r.videoApprox && r.videoDeltaSec != null
+              ? ' <span class="raw-hint">(' + fmt(r.videoDeltaSec) + " " + esc(t("detail.videoDiff")) + ")</span>"
+              : ""))
+        : "") +
       row("detail.signature", "<code class=\"raw\">" + esc(r.signature || r.signatureRaw || t("common.none")) + "</code>" +
         (r.signature && r.signatureRaw && r.signature !== r.signatureRaw ? " <span class=\"raw-hint\">" + esc(r.signatureRaw) + "</span>" : "")) +
       (r.collection ? row("detail.collection", esc(r.collection)) : "") +
