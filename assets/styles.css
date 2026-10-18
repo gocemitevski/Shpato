@@ -218,10 +218,9 @@ a { color: var(--accent-2); }
    shrink the mark. The subtitle stays — it is what keeps the header from
    reading as an empty band. */
 @media (max-width: 620px) {
-  .site-header { flex-wrap: wrap; }
-  .brand { flex: 1 1 100%; gap: .75rem; }
-  .brand-mark { width: 48px; height: 48px; }
-  .header-actions { margin-left: auto; }
+  .site-header { flex-wrap: wrap; justify-content: center; }
+  .brand { flex: 1 1 100%; gap: .75rem; justify-content: center; }
+  .brand-mark { width: 48px; height: 48px; order: 1; }
 }
 
 /* One segmented pill shared by the theme and language toggles. The track is
