@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 521,
-  "videos": 160,
+  "notes": 520,
+  "videos": 162,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -640,20 +640,17 @@
    "signature": "АЗ-55/8",
    "signatureRaw": "АЗ-55/8",
    "collection": "АЗ",
-   "video": "G3SK6qnXXhk",
+   "video": "O-OJ7mVkmSw",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 33,
-   "flags": [
-    "video-approximate"
-   ],
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0027",
    "warnCount": 0,
    "search": "калипсо љупка апостолова аз-55/8 kalipso ljupka apostolova az-55/8",
-   "videoLengthSec": 126,
-   "videoDeltaSec": 66,
-   "videoApprox": true
+   "videoLengthSec": 194,
+   "videoDeltaSec": 2
   },
   {
    "category": "vocal",
@@ -8743,7 +8740,7 @@
    "signature": "АЗ-49/7",
    "signatureRaw": "АЗ-49/7",
    "collection": "АЗ",
-   "video": null,
+   "video": "G3SK6qnXXhk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 176,
    "flags": [
@@ -8753,7 +8750,8 @@
    "textFixes": [],
    "id": "arrVocal-0170",
    "warnCount": 0,
-   "search": "сењорита калипсо љупка апостолова е. халец аз-49/7 senjorita kalipso ljupka apostolova e. halec az-49/7"
+   "search": "сењорита калипсо љупка апостолова е. халец аз-49/7 senjorita kalipso ljupka apostolova e. halec az-49/7",
+   "videoLengthSec": 126
   },
   {
    "category": "arrVocal",
@@ -8934,7 +8932,7 @@
    "signature": "АЗ-55/19",
    "signatureRaw": "АЗ-55/19",
    "collection": "АЗ",
-   "video": null,
+   "video": "G3SK6qnXXhk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 184,
    "flags": [
@@ -8953,7 +8951,8 @@
    ],
    "id": "arrVocal-0178",
    "warnCount": 1,
-   "search": "сењорита калипсо љупка апостолова е. халец аз-55/19 senjorita kalipso ljupka apostolova e. halec az-55/19"
+   "search": "сењорита калипсо љупка апостолова е. халец аз-55/19 senjorita kalipso ljupka apostolova e. halec az-55/19",
+   "videoLengthSec": 126
   },
   {
    "category": "arrVocal",

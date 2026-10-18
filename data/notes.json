@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 521,
-  "videos": 160,
+  "notes": 520,
+  "videos": 162,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "notes": [
@@ -145,17 +145,6 @@
    "severity": "info",
    "raw": "2:43",
    "normalized": "2:51"
-  },
-  {
-   "id": "vocal-0027",
-   "category": "vocal",
-   "title": "Калипсо",
-   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 33,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:12",
-   "normalized": "2:06"
   },
   {
    "id": "vocal-0029",
