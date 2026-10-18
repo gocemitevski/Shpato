@@ -1179,6 +1179,7 @@ body.player-open .view { padding-bottom: 18rem; }
      onto a line of its own on a narrow phone. */
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: .35rem 1rem;
   flex-wrap: wrap;
 }
