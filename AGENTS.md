@@ -292,10 +292,11 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   of its own so that the last card's border and the footer's rule do not draw
   the same line. The credit sits at its left and a group of four sharing links
   at its right: 1.5rem targets, the smallest that still clears the 24px minimum,
-  held right by `margin-left: auto` rather than `justify-content`, which would
-  leave a group that wraps onto a line of its own at the *start* of that line.
-  Below about 340px the credit and the group stop fitting side by side and the
-  footer grows a second row; that is the wrap behaving, not a bug.
+  held apart by `justify-content: space-between`. The 620px block turns that into
+  `center`, so on a phone the pair sits centred, and each of them on its own line
+  once they wrap. They wrap below about 375px — the `.5rem` gap between the four
+  share links costs 18px of the row, which is where the single row used to end at
+  340px — and the footer grows a second row; that is the wrap behaving, not a bug.
 - `.filters` and `.table-wrap` set `overscroll-behavior: contain`: a wheel that
   reaches the end of a facet list or of the table stops there instead of
   carrying on into the shell.
@@ -311,18 +312,21 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   narrow, the handle shows and the panel starts closed. That width is written out
   in the stylesheet and in `app.js` by hand, so changing one means changing the
   other.
-- Below 620px the mark also shrinks to 48px, and the search gives up its 320px
-  basis so the handle shares its row instead of costing a row of its own. The
-  four tabs need 443px at the default gap and size and a phone offers 361 of
-  them, so the strip tightens too — `.78rem` labels and `.75rem` gaps, and
-  `.7rem` with `.4rem` gaps under 360px (a 320px phone, or a window at 200%
-  zoom). The last tab used to hang off the edge: swipeable, but with nothing
-  showing that it was. The strip's own padding stays where `main`'s is, so the
-  first tab still lines up with the table. The subtitle is *not* dropped there:
-  it wraps to two lines and the header costs the pane 23px for it, which is
-  cheaper than the empty band it looks like without one. It is only the mark
-  that the breakpoint touches, and `text-wrap: balance` keeps the two lines from
-  ending on "МРТВ".
+- Below 620px the mark also shrinks to 48px and takes `order: 1`, so the brand
+  reads text first and portrait after, and the header centres: the brand on its
+  own row, the theme and language toggles on the next. The search gives up its
+  320px basis there, so the handle shares its row instead of costing a row of its
+  own. The four tabs need 443px at the default gap and size and a phone offers
+  361 of them, so the strip tightens too — `.78rem` labels that `flex-grow` to
+  share the row, at a `1.25rem` gap. That gap needs 386px of strip to sit in, so
+  from 385px down the labels drop to `.7rem` and the gaps to `.4rem`, which need
+  about 315px and fit even a 320px phone (or a window at 200% zoom). The last tab
+  used to hang off the edge: swipeable, but with nothing showing that it was. The
+  strip's own padding stays where `main`'s is, so the first tab still lines up
+  with the table. The subtitle is *not* dropped there: it wraps to two lines and
+  the header costs the pane 23px for it, which is cheaper than the empty band it
+  looks like without one. `text-wrap: balance` keeps the two lines from ending on
+  "МРТВ".
 - The shell stands down in two windows. Below 600px of *viewport height*
   (`@media (max-height: 600px)`) there is no room for the header, the toolbar
   and a table worth reading. Below 620px of *width* — a phone — the shell costs

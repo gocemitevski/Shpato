@@ -326,12 +326,23 @@ a { color: var(--accent-2); }
 }
 /* The four tabs need 443px and a phone offers 361 of them, so at the full gap
    and size the last one hangs off the edge: swipeable, but with nothing showing
-   that it is. Tighter, they fit from 360px up, and tighter again on the smallest
-   screens (a 320px phone, or a window at 200% zoom). The strip's own padding is
-   left where main's is, so the first tab still lines up with the table. */
+   that it is. Tighter labels, sharing the row between them, keep it whole from
+   386px up. The strip's own padding is left where main's is, so the first tab
+   still lines up with the table. */
 @media (max-width: 620px) {
   .tabs { gap: 1.25rem; }
   .tabs button { font-size: .78rem; padding: .9rem 0; flex-grow: 1; }
+}
+/* The 1.25rem gap above needs 386px of strip to sit in — measured, labels and
+   gaps together — so the smallest phones (a 320px phone, or a window at 200%
+   zoom) get the tight pair back, which needs about 315px and fits. */
+@media (max-width: 385px) {
+  .tabs { gap: .4rem; }
+  .tabs button { font-size: .7rem; }
+}
+/* A phone turns the footer's row into two centred ones rather than letting the
+   share links drop to the start of a line of their own. */
+@media (max-width: 620px) {
   .app .site-footer { justify-content: center; }
 }
 
@@ -1174,9 +1185,9 @@ body.player-open .view { padding-bottom: 18rem; }
   padding: .75rem clamp(1rem, 4vw, 2.5rem);
   color: var(--muted);
   font-size: .82rem;
-  /* Credit on the left, share links at the right end. `margin-left: auto` on the
-     group rather than justify-content: it stays at the right end when it wraps
-     onto a line of its own on a narrow phone. */
+  /* Credit on the left, share links at the right end: space-between, which the
+     620px block up the file overrides to centre the pair — and each of them,
+     when a narrow phone wraps them onto a line of their own. */
   display: flex;
   align-items: center;
   justify-content: space-between;
