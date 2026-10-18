@@ -36,6 +36,7 @@ data/catalog.json|.js   generated, committed
 data/notes.json|.js     generated, committed
 sources/*.csv           monograph exports, the build's input
 sources/youtube.csv     hand-curated record -> YouTube video map, the build's input
+sources/removals.csv    hand-curated rows the source repeats, the build's input
 robots.txt              crawl policy (see Deployment)
 sitemap.xml             the one canonical URL (see Deployment)
 ```
@@ -67,9 +68,18 @@ The `expected` dict at the bottom of `build.py` is a guard, not truth: it warns
 on stderr when the per-category counts move. Update it only when the move is
 intentional.
 
+`sources/removals.csv` (`file,line,title,performer,signature`) lists rows the
+source holds twice and the catalogue therefore carries once. `drop_rows()` runs
+**after** the ids are handed out: a drop made earlier would shift every later
+id in that category and send `sources/youtube.csv` at the wrong works. `line` is
+the weakest thing to key a deletion on, so the other three columns are guards —
+checked against the record and reported, never applied, when they disagree — and
+a row is only ever dropped when another row shares its `duplicate_key()`.
+
 Every normalization must be recorded in the notes pipeline (`textFixes` /
 `flags`, with a `SEVERITY` entry) or it is invisible in the Забелешки tab.
-Never "fix" a title or name silently.
+Never "fix" a title or name silently. A dropped row is recorded there too, under
+`duplicate-dropped`: it has no record left to carry a flag.
 
 ## YouTube links
 
@@ -291,11 +301,13 @@ footer must not have moved.
   keeps playing, and stays controllable, with the details open.
 - `state.onlyVideo` is dropped from a deep link when `meta.videos` is 0, and the
   checkbox is hidden then, so a stale link cannot land on an empty table.
-- `state.showDuplicates` is **on by default**: the catalogue is a record of what
-  the phonotheque holds, and a duplicate is one of its records. Off is the
-  serialised non-default (`dup=0`), and `deserialize()` reads the parameter only
-  when the hash carries one — reading it unconditionally would send every link
-  without a `dup` back to the off state.
+- Exact duplicates are collapsed at build time, not hidden in the app: the
+  catalogue carries one row per item and Забелешки says which row of the source
+  was left out and which one stayed (`Нормализирано` names the surviving work
+  rather than its id). There is no "show duplicates" control, and nothing in the
+  app filters on `duplicateOf` any more. The note for a dropped row names a
+  record that is not in the catalogue, so `renderNotes()` gives that row
+  `no-record` and a plain title instead of a button that would open nothing.
 - The four footer sharing links are share *intents*, not profile links: what is
   passed on is the catalogue. `renderShareLinks()` builds their hrefs from
   `<link rel="canonical">` rather than `location.href`, so they still name the
@@ -316,7 +328,7 @@ panel and one-character count chips are pre-existing false positives, not
 regressions.
 
 Focus order is keyboard-complete; the catalogue table's row buttons alone are
-434 tab stops, plus one more for each of the 39 play buttons, so avoid adding
+433 tab stops, plus one more for each of the 39 play buttons, so avoid adding
 anything focusable per row without thinking about it.
 
 `prefers-reduced-motion` is honoured for the drawer's slide-in, the player's

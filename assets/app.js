@@ -13,6 +13,12 @@
     return Math.max(60, Math.ceil(max / 30) * 30);
   })();
 
+  // A note can outlive the record it names: the one exact duplicate the build
+  // does not carry keeps a note but has no row to open.
+  function recordById(id) {
+    return RECORDS.filter(function (r) { return r.id === id; })[0] || null;
+  }
+
   var CATEGORY_ORDER = ["vocal", "instrumental", "arrThemes", "arrVocal"];
   var TABS = ["catalog", "stats", "notes", "about"];
   // The columns that carry a data-sort attribute in index.html.
@@ -32,10 +38,6 @@
     durMin: DATA_MIN,
     durMax: DATA_MAX,
     sort: { key: "title", dir: "asc" },
-    // On by default: the catalogue is a record of what is in the phonotheque,
-    // and a duplicate is one of its records. `dup=0` is what a link carries to
-    // turn it off.
-    showDuplicates: true,
     onlyVideo: false,
     selected: null,
     noteSeverity: "",
@@ -88,8 +90,6 @@
   function normalize(s) { return (s || "").toLowerCase().trim(); }
 
   // ------------------------------------------------------------- filtering
-  function isDuplicate(r) { return r.duplicateOf !== null && r.duplicateOf !== undefined; }
-
   function matchesQuery(r, q) {
     if (!q) return true;
     return q.split(/\s+/).every(function (part) {
@@ -102,7 +102,6 @@
     var q = normalize(state.query);
     var durActive = state.durMin > DATA_MIN || state.durMax < DATA_MAX;
     var list = RECORDS.filter(function (r) {
-      if (!state.showDuplicates && isDuplicate(r)) return false;
       if (state.onlyVideo && !r.video) return false;
       if (state.categories.size && !state.categories.has(r.category)) return false;
       if (state.collections.size && !state.collections.has(r.collection || "__none__")) return false;
@@ -134,13 +133,11 @@
     });
   }
 
-  // Counts per facet value. `includeHidden` ignores the "show duplicates"
-  // toggle, which the statistics need: they describe the whole catalogue and
-  // must not shift when that box is ticked.
-  function facetCounts(field, includeHidden) {
+  // Counts per facet value, over the whole catalogue, so the numbers do not
+  // shift with the filters.
+  function facetCounts(field) {
     var map = new Map();
     RECORDS.forEach(function (r) {
-      if (!includeHidden && !state.showDuplicates && isDuplicate(r)) return;
       var v = r[field] || (field === "collection" ? "__none__" : "");
       if (!v) return;
       map.set(v, (map.get(v) || 0) + 1);
@@ -182,7 +179,6 @@
     document.getElementById("app-title").textContent = t("app.title");
     document.getElementById("app-subtitle").textContent = t("app.subtitle");
     document.getElementById("search").placeholder = t("search.placeholder");
-    document.getElementById("show-duplicates-label").textContent = t("results.showDuplicates");
     // The "with a video" filter is only worth showing when something can play.
     document.getElementById("only-video-wrap").hidden = !META.videos;
     document.getElementById("only-video-label").textContent =
@@ -518,7 +514,7 @@
   function renderDrawer(navigated) {
     var drawer = document.getElementById("drawer");
     var wasOpen = !drawer.hidden;
-    var r = state.selected ? RECORDS.find(function (x) { return x.id === state.selected; }) : null;
+    var r = state.selected ? recordById(state.selected) : null;
 
     if (!r) {
       state.selected = null;
@@ -535,11 +531,10 @@
     function row(labelKey, value) {
       return "<dt>" + esc(t(labelKey)) + "</dt><dd>" + value + "</dd>";
     }
-    var flags = r.flags.filter(function (f) { return f !== "duplicate"; });
     // The notes turn amber exactly when the row carries the amber badge in the
     // catalogue, so the same colour means the same thing in both places.
-    var flagItems = flags.length
-      ? '<ul class="flags' + (r.warnCount ? " flags-warn" : "") + '">' + flags.map(function (f) {
+    var flagItems = r.flags.length
+      ? '<ul class="flags' + (r.warnCount ? " flags-warn" : "") + '">' + r.flags.map(function (f) {
           return "<li>• " + esc(t("rule." + f)) + "</li>";
         }).join("") + "</ul>"
       : '<p class="empty-note">' + esc(t("detail.noFlags")) + "</p>";
@@ -642,11 +637,11 @@
     bars("chart-category", CATEGORY_ORDER.map(function (c) {
       return { label: categoryLabel(c), value: META.counts[c] || 0, cat: c };
     }));
-    bars("chart-collection", Array.from(facetCounts("collection", true).entries())
+    bars("chart-collection", Array.from(facetCounts("collection").entries())
       .sort(function (a, b) { return b[1] - a[1]; })
       .map(function (e) { return { label: e[0] === "__none__" ? t("common.unknown") : e[0], value: e[1] }; }));
-    bars("chart-performers", top(facetCounts("performer", true), 8));
-    bars("chart-composers", top(facetCounts("composer", true), 8));
+    bars("chart-performers", top(facetCounts("performer"), 8));
+    bars("chart-composers", top(facetCounts("composer"), 8));
     bars("chart-duration", durationBuckets());
   }
 
@@ -724,10 +719,22 @@
     body.innerHTML = shown.map(function (a) {
       var normalized = a.normalized;
       if (typeof normalized === "number" && a.rule.indexOf("duration") === 0) normalized = fmt(normalized);
+      // A duplicate note names the twin by id; show the work it names, so the
+      // column reads as a record rather than as an internal key — the dropped
+      // one has no row of its own to open.
+      if (a.rule.indexOf("duplicate") !== -1) {
+        var twin = recordById(a.normalized);
+        if (twin) normalized = twin.title + " · " + (twin.signature || twin.signatureRaw || t("common.none"));
+      }
       var ruleLabel = t("rule." + a.rule);
       if (a.field) ruleLabel += " · " + t("col." + a.field);
-      return '<tr data-id="' + a.id + '">' +
-        '<td class="cell-title"><button type="button" class="row-open">' + esc(a.title) + "</button></td>" +
+      // A dropped row has no record behind it, so its title is text, not a
+      // button that would open nothing.
+      var openable = recordById(a.id);
+      return "<tr" + (openable ? ' data-id="' + a.id + '"' : ' class="no-record"') + ">" +
+        '<td class="cell-title">' + (openable
+          ? '<button type="button" class="row-open">' + esc(a.title) + "</button>"
+          : esc(a.title)) + "</td>" +
         '<td class="rule">' + esc(ruleLabel) + "</td>" +
         '<td><span class="sev ' + a.severity + '">' + esc(t("severity." + a.severity)) + "</span></td>" +
         "<td>" + (a.raw ? '<code class="raw">' + esc(a.raw) + "</code>" : "") + "</td>" +
@@ -802,7 +809,6 @@
     if (state.composers.size) p.set("comp", Array.from(state.composers).join("|"));
     if (state.durMin > DATA_MIN) p.set("dmin", state.durMin);
     if (state.durMax < DATA_MAX) p.set("dmax", state.durMax);
-    if (!state.showDuplicates) p.set("dup", "0");
     if (state.onlyVideo) p.set("video", "1");
     if (state.sort.key !== "title" || state.sort.dir !== "asc") { p.set("sort", state.sort.key); p.set("dir", state.sort.dir); }
     return "#" + p.toString();
@@ -810,7 +816,7 @@
   // A shared link is untrusted input, so every value read out of the hash is
   // validated against the data before it reaches the state.
   function knownValues(field, values) {
-    var known = facetCounts(field, true);
+    var known = facetCounts(field);
     var out = new Set();
     values.forEach(function (v) { if (known.has(v)) out.add(v); });
     return out;
@@ -836,8 +842,6 @@
     if (state.durMin > state.durMax) {
       var swap = state.durMin; state.durMin = state.durMax; state.durMax = swap;
     }
-    // Only when the link says so: absent means the default, which is on.
-    if (p.has("dup")) state.showDuplicates = p.get("dup") === "1";
     // Ignore the flag when nothing in the catalogue has a video, or a stale
     // link would land on a permanently empty table.
     state.onlyVideo = p.get("video") === "1" && META.videos > 0;
@@ -961,11 +965,6 @@
     var search = document.getElementById("search");
     search.value = state.query;
     search.addEventListener("input", function () { state.query = search.value; refreshResults(); });
-
-    document.getElementById("show-duplicates").checked = state.showDuplicates;
-    document.getElementById("show-duplicates").addEventListener("change", function (e) {
-      state.showDuplicates = e.target.checked; update();
-    });
 
     document.getElementById("only-video").checked = state.onlyVideo;
     document.getElementById("only-video").addEventListener("change", function (e) {

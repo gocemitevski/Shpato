@@ -1,13 +1,13 @@
 {
  "meta": {
-  "total": 434,
+  "total": 433,
   "counts": {
    "vocal": 74,
-   "instrumental": 56,
+   "instrumental": 55,
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 420,
+  "notes": 419,
   "videos": 39,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -288,18 +288,6 @@
    "normalized": "Мики Асановиќ"
   },
   {
-   "id": "instrumental-0005",
-   "category": "instrumental",
-   "title": "Гарача",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 11,
-   "rule": "mixed-script",
-   "severity": "warning",
-   "field": "performer",
-   "raw": "ТO на РТС",
-   "normalized": "ТО на РТС"
-  },
-  {
    "id": "instrumental-0006",
    "category": "instrumental",
    "title": "Гермијан",
@@ -310,17 +298,6 @@
    "field": "performer",
    "raw": "TО на РТС",
    "normalized": "ТО на РТС"
-  },
-  {
-   "id": "instrumental-0007",
-   "category": "instrumental",
-   "title": "Гарача",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 13,
-   "rule": "duplicate",
-   "severity": "info",
-   "raw": "Гарача",
-   "normalized": "instrumental-0005"
   },
   {
    "id": "instrumental-0008",
@@ -4753,6 +4730,17 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
+  },
+  {
+   "id": "instrumental-0005",
+   "category": "instrumental",
+   "title": "Гарача",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 11,
+   "rule": "duplicate-dropped",
+   "severity": "info",
+   "raw": "Гарача",
+   "normalized": "instrumental-0007"
   }
  ]
 }

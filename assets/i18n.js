@@ -55,7 +55,6 @@ window.I18N = {
 
     "results.count": "прикажани {n} од {total}",
     "results.empty": "Нема пронајдени дела.",
-    "results.showDuplicates": "Прикажи дупликати",
     "results.onlyVideo": "Само со снимка ({n})",
 
     "export.label": "Извези",
@@ -122,6 +121,7 @@ window.I18N = {
     "rule.signature-latin-prefix": "Латинска буква во префиксот (Z- → З-)",
     "rule.composer-placeholder": "Непознат автор („+++“)",
     "rule.duplicate": "Точен дупликат",
+    "rule.duplicate-dropped": "Точен дупликат (не е внесен)",
     "rule.possible-duplicate": "Можен дупликат (ист наслов и изведувач)",
     "rule.missing-signature": "Нема сигнатура",
     "rule.missing-duration": "Нема времетраење",
@@ -222,7 +222,6 @@ window.I18N = {
 
     "results.count": "showing {n} of {total}",
     "results.empty": "No works found.",
-    "results.showDuplicates": "Show duplicates",
     "results.onlyVideo": "With a video ({n})",
 
     "export.label": "Export",
@@ -289,6 +288,7 @@ window.I18N = {
     "rule.signature-latin-prefix": "Latin letter in prefix (Z- → З-)",
     "rule.composer-placeholder": "Unknown composer (“+++”)",
     "rule.duplicate": "Exact duplicate",
+    "rule.duplicate-dropped": "Exact duplicate (not carried over)",
     "rule.possible-duplicate": "Possible duplicate (same title and performer)",
     "rule.missing-signature": "No signature",
     "rule.missing-duration": "No duration",

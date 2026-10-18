@@ -1,13 +1,13 @@
 {
  "meta": {
-  "total": 434,
+  "total": 433,
   "counts": {
    "vocal": 74,
-   "instrumental": 56,
+   "instrumental": 55,
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 420,
+  "notes": 419,
   "videos": 39,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -1768,36 +1768,6 @@
   },
   {
    "category": "instrumental",
-   "title": "Гарача",
-   "composer": "",
-   "performer": "ТО на РТС",
-   "performerRole": "",
-   "durationSec": 234,
-   "durationRaw": "3.54",
-   "signature": "З-7700/2",
-   "signatureRaw": "З-7700/2",
-   "collection": "З",
-   "video": null,
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 11,
-   "flags": [
-    "mixed-script"
-   ],
-   "duplicateOf": null,
-   "textFixes": [
-    {
-     "field": "performer",
-     "rule": "mixed-script",
-     "from": "ТO на РТС",
-     "to": "ТО на РТС"
-    }
-   ],
-   "id": "instrumental-0005",
-   "warnCount": 1,
-   "search": "гарача то на ртс з-7700/2 garacha to na rts z-7700/2"
-  },
-  {
-   "category": "instrumental",
    "title": "Гермијан",
    "composer": "",
    "performer": "ТО на РТС",
@@ -1840,10 +1810,8 @@
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 13,
-   "flags": [
-    "duplicate"
-   ],
-   "duplicateOf": "instrumental-0005",
+   "flags": [],
+   "duplicateOf": null,
    "textFixes": [],
    "id": "instrumental-0007",
    "warnCount": 0,

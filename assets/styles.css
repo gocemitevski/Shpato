@@ -738,6 +738,9 @@ body.app main { min-height: 0; overflow-y: auto; }
 .catalog-table tbody tr:last-child td { border-bottom: 0; }
 .catalog-table tbody tr { cursor: pointer; transition: background-color .12s ease; }
 .catalog-table tbody tr:hover { background: var(--accent-soft); }
+/* A note for a row the build does not carry has nothing to open. */
+.catalog-table.notes-table tbody tr.no-record { cursor: default; }
+.catalog-table.notes-table tbody tr.no-record:hover { background: transparent; }
 .catalog-table td.cell-title { font-weight: 500; }
 /* The play icon and the title share one flex line. As plain inline boxes a
    title wide enough to fill the cell broke the line after the icon and left

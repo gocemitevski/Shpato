@@ -85,6 +85,7 @@ SEVERITY = {
     "signature-suspicious": "warning",
     "composer-placeholder": "info",
     "duplicate": "info",
+    "duplicate-dropped": "info",
     "possible-duplicate": "warning",
     "missing-signature": "info",
     "missing-duration": "info",
@@ -433,20 +434,27 @@ def parse_source(source):
 # ---------------------------------------------------------------------------
 # Duplicates, ids, search
 # ---------------------------------------------------------------------------
+def duplicate_key(rec):
+    """The identity two rows have to share to be the same listing.
+
+    Transliterated to a single alphabet so a Latin "O" typed into a Cyrillic
+    word (e.g. "ТO на РТС") does not hide a duplicate.
+    """
+    return (rec["category"], to_latin(rec["title"]), to_latin(rec["performer"]),
+            to_latin(rec["signature"] or ""))
+
+
 def mark_duplicates(records):
     """Flag exact and possible duplicates in place.
 
     Returns {record id: id of the record it may duplicate}, so the notes can
     point at the twin.
     """
-    # Keys are transliterated to a single alphabet so a Latin "O" typed into a
-    # Cyrillic word (e.g. "ТO на РТС") does not hide a duplicate.
     exact = {}
     base = {}
     possible = {}
     for rec in records:
-        key = (rec["category"], to_latin(rec["title"]), to_latin(rec["performer"]),
-               to_latin(rec["signature"] or ""))
+        key = duplicate_key(rec)
         if key in exact:
             rec["duplicateOf"] = exact[key]
             rec["flags"].append("duplicate")
@@ -496,6 +504,7 @@ VIDEO_URL_RE = re.compile(
     r"(?:youtu\.be/|youtube(?:-nocookie)?\.com/(?:watch\?(?:[^#\s]*&)?v=|"
     r"embed/|shorts/|live/))([A-Za-z0-9_-]{11})")
 YOUTUBE_FILE = "youtube.csv"
+REMOVALS_FILE = "removals.csv"
 
 
 def extract_video_id(value):
@@ -562,16 +571,78 @@ def attach_videos(records, videos, problems):
     return sum(1 for rec in records if rec["video"])
 
 
+def read_removals():
+    """Read the curated `file,line,title,performer,signature` drop list.
+
+    A listed row is one the source holds twice, so the catalogue carries the
+    other copy. `line` is a position in the source file, which is the weakest
+    thing to key a deletion on, so the other three columns are guards: they are
+    checked against the record and a mismatch is reported, never applied.
+    """
+    path = os.path.join(SOURCES_DIR, REMOVALS_FILE)
+    if not os.path.exists(path):
+        return [], []
+    removals = []
+    problems = []
+    for n, row in enumerate(read_rows(path), start=1):
+        if n == 1 and row and row[0].strip().lower() == "file":
+            continue  # header
+        if not any(cell.strip() for cell in row):
+            continue
+        row = [clean(c) for c in row]
+        while len(row) < 5:
+            row.append("")
+        file_name, line = row[0], row[1]
+        if not file_name or not line.isdigit():
+            problems.append("line {}: expected a file name and a line number".format(n))
+            continue
+        removals.append({"file": file_name, "line": int(line),
+                         "title": row[2], "performer": row[3], "signature": row[4]})
+    return removals, problems
+
+
+def drop_rows(records, removals, problems):
+    """Drop the listed rows. Returns the [(dropped, kept)] pairs.
+
+    This runs after the ids are handed out, so a drop never renumbers the
+    records that stay: an id keeps naming the record it named before, and
+    sources/youtube.csv keeps pointing at the works it points at. A row is only
+    ever dropped when another row shares its duplicate key, because a wrong
+    drop would take a unique record out of the catalogue with no symptom.
+    """
+    dropped = []
+    for entry in removals:
+        rec = next((r for r in records if r["sourceFile"] == entry["file"]
+                    and r["sourceLine"] == entry["line"]), None)
+        if rec is None:
+            problems.append("{}: no row at line {}".format(entry["file"], entry["line"]))
+            continue
+        for field in ("title", "performer", "signature"):
+            if entry[field] and entry[field] != rec[field]:
+                problems.append("{} line {}: {} is {!r}, not {!r}".format(
+                    entry["file"], entry["line"], field, rec[field], entry[field]))
+                rec = None
+                break
+        if rec is None:
+            continue
+        key = duplicate_key(rec)
+        twin = next((r for r in records if r is not rec and duplicate_key(r) == key), None)
+        if twin is None:
+            problems.append("{} line {}: no other row duplicates it".format(
+                entry["file"], entry["line"]))
+            continue
+        records.remove(rec)
+        dropped.append((rec, twin))
+    return dropped
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 def main():
     all_records = []
-    counters = {}
     for source in SOURCES:
-        records = parse_source(source)
-        counters[source["category"]] = len(records)
-        all_records.extend(records)
+        all_records.extend(parse_source(source))
 
     # stable ids per category
     per_cat = {}
@@ -579,6 +650,15 @@ def main():
         n = per_cat.get(rec["category"], 0) + 1
         per_cat[rec["category"]] = n
         rec["id"] = "{}-{:04d}".format(rec["category"], n)
+
+    # Rows the source holds twice, dropped after the ids above were handed out
+    # so nothing is renumbered. The notes below record every drop.
+    removals, removal_problems = read_removals()
+    dropped_rows = drop_rows(all_records, removals, removal_problems)
+
+    counters = {}
+    for rec in all_records:
+        counters[rec["category"]] = counters.get(rec["category"], 0) + 1
 
     possible_duplicates = mark_duplicates(all_records)
     count_warnings(all_records)
@@ -632,6 +712,22 @@ def main():
             }
             notes.append(entry)
 
+    # A dropped row is a normalization like any other. Without a note the
+    # catalogue would just be one record shorter than the source and nothing
+    # would say which row went or why.
+    for dropped, kept in dropped_rows:
+        notes.append({
+            "id": dropped["id"],
+            "category": dropped["category"],
+            "title": dropped["title"],
+            "sourceFile": dropped["sourceFile"],
+            "sourceLine": dropped["sourceLine"],
+            "rule": "duplicate-dropped",
+            "severity": SEVERITY["duplicate-dropped"],
+            "raw": dropped["title"],
+            "normalized": kept["id"],
+        })
+
     # No build timestamp: it would make the committed output non-reproducible.
     meta = {
         "total": len(all_records),
@@ -651,11 +747,14 @@ def main():
     write_js(os.path.join(DATA_DIR, "notes.js"), "NOTES",
              {"meta": meta, "notes": notes})
 
-    expected = {"vocal": 74, "instrumental": 56, "arrThemes": 43, "arrVocal": 261}
+    expected = {"vocal": 74, "instrumental": 55, "arrThemes": 43, "arrVocal": 261}
     print("Built {} records: {}".format(len(all_records), counters))
     print("Expected:            {}".format(expected))
     print("Notes: {}".format(len(notes)))
     print("Videos: {} of {}".format(video_count, len(all_records)))
+    print("Dropped: {} row(s) the source repeats".format(len(dropped_rows)))
+    for problem in removal_problems:
+        print("WARNING removals.csv: {}".format(problem), file=sys.stderr)
     for problem in video_problems:
         print("WARNING youtube.csv: {}".format(problem), file=sys.stderr)
     if counters != expected:
