@@ -1338,8 +1338,12 @@ body.player-open .view { padding-bottom: calc(18rem + var(--consent-h, 0px)); }
    footer's neutral colour, not a link colour. It opens a view of this document,
    and `--accent-2` beside it is what a door out of it looks like — the credit
    link next to it really does leave. The underline is the whole affordance, so
-   the colour lifts on hover instead of the other way round. */
-.footer-credit .link-btn { font-size: inherit; color: var(--muted); }
+   the colour lifts on hover instead of the other way round.
+   It follows the credit's full stop, which used to be all that told the two
+   apart; half the footer's own column gap (.5rem against the 1rem between the
+   credit and the share group) says the sentence has ended and something else
+   begins, without pulling the door all the way out of the line. */
+.footer-credit .link-btn { font-size: inherit; color: var(--muted); margin-left: .5rem; }
 .footer-credit .link-btn:hover { color: var(--ink); }
 
 .footer-share {

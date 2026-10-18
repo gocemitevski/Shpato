@@ -338,14 +338,16 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   pixel the catalogue cannot show, and `main` keeps `1.25rem` of bottom padding
   of its own so that the last card's border and the footer's rule do not draw
   the same line. The credit sits at its left — carrying the notice's door,
-  `#privacy-link`, in the footer's own link colour — and a group of four sharing
-  links at its right: 1.5rem targets, the smallest that still clears the 24px
-  minimum, held apart by `justify-content: space-between`. The 620px block turns
-  that into `center`, so on a phone the pair sits centred, and each of them on its
-  own line once they wrap. That door moved the wrap: the pair fits one row from
-  455px up, where the four share links' `.5rem` gap used to end the row at 375. It
-  costs the catalogue nothing, because below 620px the shell has stood down and
-  the document scrolls, so a second row is a second row of the page.
+  `#privacy-link`, in the footer's own neutral colour and with `.5rem` in front
+  of it, half the `1rem` that separates the two groups — and a group of four
+  sharing links at its right: 1.5rem targets, the smallest that still clears the
+  24px minimum, held apart by `justify-content: space-between`. The 620px block
+  turns that into `center`, so on a phone the pair sits centred, and each of them
+  on its own line once they wrap. That door moved the wrap: the pair fits one row
+  from 463px up (455 before the space in front of it), where the four share
+  links' `.5rem` gap used to end the row at 375. It costs the catalogue nothing,
+  because below 620px the shell has stood down and the document scrolls, so a
+  second row is a second row of the page.
 - `.filters` and `.table-wrap` set `overscroll-behavior: contain`: a wheel that
   reaches the end of a facet list or of the table stops there instead of
   carrying on into the shell. Each `.table-wrap` sits in a `.table-frame`, and
