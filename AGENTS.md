@@ -299,7 +299,15 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   340px — and the footer grows a second row; that is the wrap behaving, not a bug.
 - `.filters` and `.table-wrap` set `overscroll-behavior: contain`: a wheel that
   reaches the end of a facet list or of the table stops there instead of
-  carrying on into the shell.
+  carrying on into the shell. `.table-wrap` also carries the cue that it can be
+  panned sideways — on a phone the table is 706px inside a 361px card and
+  nothing else on screen says so — as two `--shadow-edge` gradients against its
+  own edges, with two panel-coloured covers riding the content (`local`) over
+  them, so a shadow shows only while there is table left in that direction. The
+  covers are opaque across the shadow's own 1rem and fade only after it, or a
+  quarter of the shadow leaks through at the very end it exists to hide. The
+  layers are the scroller's own background, which reads through the transparent
+  rows; print drops them, because paper does not pan.
 - From 1024px up the facet panel is a permanent left pane
   (`clamp(260px, 32vw, 500px)`). Below that it is a disclosure above the table,
   opened from a handle in the toolbar (`#filters-toggle`, the export menu's
@@ -334,11 +342,13 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   table 380px, about seven rows, and with no document to scroll the browser's
   address bar could never collapse to give any of it back. Stood down, the table
   has the whole page and the tab bar still sticks to the top (the document is the
-  scrollport now); what is given up is the sticky column header, because the card
-  is no longer a scroll container and its `thead` has nothing to stick to, so the
-  five sort buttons live at the head of the table. The print block undoes the
-  shell for the same kind of reason: a printer wants the whole catalogue, not one
-  clipped viewport of a scroll pane.
+  scrollport now); what is given up is the sticky column header: the card still
+  pans sideways, so `overflow: auto` keeps it a scroll container, and a sticky
+  `thead` resolves against that scrollport rather than the page's, and that
+  scrollport never moves vertically — so the header travels with the document
+  and the five sort buttons live at the head of the table. The print block
+  undoes the shell for the same kind of reason: a printer wants the whole
+  catalogue, not one clipped viewport of a scroll pane.
 - Stood down, `.table-wrap` and `.filters` release their vertical
   `overscroll-behavior: contain` (`overscroll-behavior-y: auto`, scoped to
   `body.app` because the base rule is a shorthand declared later in the file and
@@ -385,7 +395,11 @@ footer must not have moved.
   second. `1lh` is derived from the inherited line-height rather than chosen,
   and `flex-shrink: 0` on the button is not what keeps it round — nothing in a
   table cell shrinks it. The warning badge keeps the old centring, because it
-  trails the title rather than leading it.
+  trails the title rather than leading it. The circle's hit area is bigger than
+  the circle: a pseudo-element takes it to 40x45px, which stays 3px inside the
+  row's top and 4px inside its bottom (the cell's `.85rem` of vertical padding
+  is the room) and 1px short of the title button 8px to its right, so a thumb
+  reaches neither the row above nor the title beside it.
 - `[hidden] { display: none !important }` is the only hide mechanism. Use the
   `hidden` property/attribute, not classes.
 - `* { box-sizing: border-box }` is global, so a fixed `width` includes padding.
@@ -395,6 +409,11 @@ footer must not have moved.
   the stylesheet. Language is `localStorage["shpato-lang"]`.
 - `--theme-color` is mirrored into `<meta name="theme-color">` by
   `syncThemeColor()`; add new tokens to `:root` and both theme blocks.
+- Text is pinned with `text-size-adjust: 100%`: iOS inflates it when a rotation
+  widens the viewport, and every size here is already meant. A form control is
+  kept at 16px or more wherever the pointer is coarse, because iOS Safari zooms
+  the page when it focuses one that is smaller — the rule `<select>` inherits
+  the field's `.78rem` and would otherwise zoom the notes tab.
 - App state is serialised into the location hash (`#tab=…&q=…`) with
   `history.replaceState`, which works on `file://`.
 - The drawer is a modal: `setPageInert()` marks every `body > *` except

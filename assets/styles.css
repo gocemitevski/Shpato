@@ -67,6 +67,9 @@
 
   --shadow-sm: 0 1px 2px rgba(15, 23, 42, .06);
   --shadow: 0 10px 30px rgba(15, 23, 42, .1);
+  /* The cue that a card can be scrolled sideways, drawn against its own edge
+     rather than cast outside it. */
+  --shadow-edge: rgba(15, 23, 42, .22);
   --radius: 10px;
   --radius-sm: 6px;
 }
@@ -100,6 +103,7 @@
   --cat-arrVocal-soft: #3a1622;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4);
   --shadow: 0 10px 30px rgba(0, 0, 0, .45);
+  --shadow-edge: rgba(0, 0, 0, .6);
 }
 
 /* Any element can adopt a category hue by carrying data-cat. The --cat and
@@ -129,7 +133,14 @@
    the user agent's [hidden] { display: none }). */
 [hidden] { display: none !important; }
 
-html { scroll-behavior: smooth; }
+/* iOS inflates text when the viewport widens under a rotation unless this is
+   pinned; every size here is already meant, and every other engine leaves the
+   text alone. */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 
 body {
   margin: 0;
@@ -712,7 +723,22 @@ body.app main { min-height: 0; overflow-y: auto; }
   overscroll-behavior: contain;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: var(--panel);
+  background-color: var(--panel);
+  /* On a phone the table is wider than the card and nothing on screen says so.
+     Two shadows sit against the card's own edges and two panel-coloured covers
+     ride the content (`local`) over them, so a shadow shows only while there is
+     table left in that direction, and neither survives a scroll to the end.
+     They are layers of the scroller's own background, and the card is also the
+     scroller: the rows are transparent, so the cue reads through them. */
+  background-image:
+    linear-gradient(to right, var(--panel) 1rem, transparent),
+    linear-gradient(to left, var(--panel) 1rem, transparent),
+    linear-gradient(to right, var(--shadow-edge), transparent),
+    linear-gradient(to left, var(--shadow-edge), transparent);
+  background-position: left center, right center, left center, right center;
+  background-size: 2rem 100%, 2rem 100%, 1rem 100%, 1rem 100%;
+  background-repeat: no-repeat;
+  background-attachment: local, local, scroll, scroll;
   box-shadow: var(--shadow-sm);
 }
 
@@ -927,6 +953,12 @@ td.sig {
      half-cut rule name into an ellipsis without touching the arrow. */
   text-overflow: ellipsis;
 }
+/* iOS Safari zooms the page when a control it can focus carries text under
+   16px, and this select inherits the field's .78rem. The larger size is for
+   touch only: a window driven by a mouse keeps the compact field. */
+@media (pointer: coarse) {
+  .field select { font-size: 1rem; }
+}
 
 .sev { font-size: .78rem; font-weight: 600; }
 .sev.warning {
@@ -1107,6 +1139,7 @@ code.raw {
 .row-play {
   display: inline-flex;
   flex-shrink: 0;
+  position: relative;
   font: inherit;
   align-items: center;
   justify-content: center;
@@ -1125,6 +1158,19 @@ code.raw {
 .row-play svg { width: .58rem; height: .58rem; fill: currentColor; }
 .row-play:hover { background: var(--accent); color: var(--bg); }
 .row-play:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* The circle is 1.3rem because that is what the title's first line needs, but
+   21px is not a thumb's target. A pseudo-element stretches the hit area to
+   40x43px without moving or enlarging anything: it stays inside the cell's
+   .85rem of padding above and below, and stops 7px short of the title button,
+   which sits 8px to its right, so the two never overlap. */
+.row-play::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  right: -7px;
+  bottom: -12px;
+  left: -12px;
+}
 
 .drawer-play { margin: 0 0 1.25rem; }
 .player-start { display: inline-flex; align-items: center; gap: .5rem; }
@@ -1237,4 +1283,6 @@ body.player-open .view { padding-bottom: 18rem; }
   .layout { display: block; }
   .results { display: block; }
   body { background: #fff; }
+  /* The cue belongs to a card that can be panned; paper cannot. */
+  .table-wrap { background-image: none; }
 }
