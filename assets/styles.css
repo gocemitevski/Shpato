@@ -1334,9 +1334,13 @@ body.player-open .view { padding-bottom: calc(18rem + var(--consent-h, 0px)); }
   flex-wrap: wrap;
 }
 .site-footer p { margin: .2rem 0; max-width: 80ch; }
-/* The notice's door, in the footer's own voice: the same size as the credit and
-   the same colour as the link beside it, which .link-btn does not do by itself. */
-.footer-credit .link-btn { font-size: inherit; color: var(--accent-2); }
+/* The notice's door, in the footer's own voice: the credit's size and the
+   footer's neutral colour, not a link colour. It opens a view of this document,
+   and `--accent-2` beside it is what a door out of it looks like — the credit
+   link next to it really does leave. The underline is the whole affordance, so
+   the colour lifts on hover instead of the other way round. */
+.footer-credit .link-btn { font-size: inherit; color: var(--muted); }
+.footer-credit .link-btn:hover { color: var(--ink); }
 
 .footer-share {
   display: flex;
