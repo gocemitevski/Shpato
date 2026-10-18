@@ -20,7 +20,7 @@
   }
 
   var CATEGORY_ORDER = ["vocal", "instrumental", "arrThemes", "arrVocal"];
-  var TABS = ["catalog", "stats", "notes", "about"];
+  var TABS = ["catalog", "stats", "notes", "about", "privacy"];
   // The columns that carry a data-sort attribute in index.html.
   var SORT_KEYS = ["title", "performer", "composer", "durationSec", "signature"];
   var facetFilterState = {};
@@ -194,6 +194,7 @@
     });
 
     renderShareLinks();
+    renderConsent();
 
     document.querySelectorAll("#tabs button").forEach(function (btn) {
       var tab = btn.getAttribute("data-tab");
@@ -881,10 +882,14 @@
     TABS.forEach(function (name) {
       document.getElementById("view-" + name).hidden = name !== tab;
     });
+    var ownTab = document.getElementById("tab-" + tab);
     document.querySelectorAll("#tabs button").forEach(function (btn) {
       var active = btn.getAttribute("data-tab") === tab;
       btn.setAttribute("aria-selected", active ? "true" : "false");
-      btn.tabIndex = active ? 0 : -1;
+      // A view with no tab of its own (the privacy notice) leaves the strip with
+      // nothing selected, so the first tab keeps the roving tabindex: the strip
+      // stays reachable, and an arrow key leads back to a tab from there.
+      btn.tabIndex = active || (!ownTab && btn.id === "tab-catalog") ? 0 : -1;
     });
     updateTitle();
     if (tab === "stats") renderStats();
@@ -962,6 +967,129 @@
   function syncPanCues() {
     var wraps = document.querySelectorAll(".table-frame > .table-wrap");
     for (var i = 0; i < wraps.length; i++) syncPanCue(wraps[i]);
+  }
+
+  // --------------------------------------------------------------- consent
+  // Consent rather than a notice: nothing is fetched from Google until the
+  // reader allows it, and the Consent Mode defaults in index.html keep the tag
+  // refused even if something loads it earlier. The decision is remembered in
+  // localStorage, and withdrawal has to be as easy as giving it — the notice
+  // carries the same choice — so it also clears what the tag left behind.
+  var CONSENT_KEY = "shpato-consent";
+  var GA_ID = "G-Z2QYKW1QNC";
+  var analyticsLoaded = false;
+  var consentChoice = null;
+
+  function readConsent() {
+    try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; }
+  }
+
+  function writeConsent(value) {
+    consentChoice = value;
+    try { localStorage.setItem(CONSENT_KEY, value); } catch (e) {}
+  }
+
+  function analyticsConsent(granted) {
+    gtag("consent", "update", { analytics_storage: granted ? "granted" : "denied" });
+    if (!granted) { clearAnalyticsCookies(); return; }
+    if (analyticsLoaded) return;
+    analyticsLoaded = true;
+    gtag("js", new Date());
+    gtag("config", GA_ID);
+    var tag = document.createElement("script");
+    tag.async = true;
+    tag.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(tag);
+  }
+
+  // Withdrawal has to stop the processing, not just tell it to stop using
+  // storage: a tag that is already in the page goes on sending cookieless pings
+  // after `analytics_storage: denied`, and reloading is the one reliable way to
+  // take it out. The choice is stored first, so the page comes back refused, with
+  // no bar, and the browser's own scroll restoration puts the reader back where
+  // they were.
+  function withdrawAnalytics() {
+    analyticsConsent(false);
+    if (analyticsLoaded) location.reload();
+  }
+
+  // The tag takes the registrable domain when it can, so "the host" is not
+  // enough: both are tried, each in its leading-dot form as well, which a
+  // browser treats as a different cookie. An empty domain clears the host-only
+  // one. None of this runs unless a cookie is there to clear.
+  function cookieDomains() {
+    var host = location.hostname;
+    if (!host) return [""];
+    var bases = [host];
+    var parts = host.split(".");
+    if (parts.length > 2) bases.push(parts.slice(-2).join("."));
+    var out = [""];
+    bases.forEach(function (b) { out.push(b); out.push("." + b); });
+    return out;
+  }
+
+  function clearAnalyticsCookies() {
+    var all = document.cookie ? document.cookie.split(";") : [];
+    var names = [];
+    all.forEach(function (c) {
+      var name = c.split("=")[0].trim();
+      if (name.indexOf("_ga") === 0) names.push(name);
+    });
+    if (!names.length) return;
+    var domains = cookieDomains();
+    names.forEach(function (name) {
+      domains.forEach(function (domain) {
+        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/" +
+          (domain ? "; domain=" + domain : "");
+      });
+    });
+  }
+
+  // The bar is fixed to the viewport, so the shell gives up exactly its height
+  // or the footer would sit behind it: one viewport minus that padding is still
+  // a whole shell, just a shorter one, and on a phone it is space at the end of
+  // the document instead.
+  function sizeConsentSpace() {
+    var el = document.getElementById("consent");
+    var h = el.hidden ? 0 : Math.ceil(el.getBoundingClientRect().height);
+    document.body.style.setProperty("--consent-h", h + "px");
+  }
+
+  function renderConsent() {
+    var line = document.getElementById("privacy-state");
+    if (line) {
+      line.textContent = t(consentChoice === "granted" ? "privacy.granted"
+        : consentChoice === "denied" ? "privacy.denied" : "privacy.undecided");
+    }
+    sizeConsentSpace();
+  }
+
+  function showConsent() {
+    document.getElementById("consent").hidden = false;
+    sizeConsentSpace();
+  }
+
+  function decideConsent(granted) {
+    writeConsent(granted ? "granted" : "denied");
+    document.getElementById("consent").hidden = true;
+    renderConsent();
+    if (granted) analyticsConsent(true);
+    else withdrawAnalytics();
+  }
+
+  // Reached from the notice, which is where a reader looks to change their mind.
+  function reopenConsent() {
+    showConsent();
+    document.getElementById("consent-accept").focus();
+  }
+
+  // The notice is a view with no tab in the strip, so both doors into it move
+  // focus to its heading: a screen reader then announces the region it has just
+  // landed in, which nothing about the tab strip can do for it.
+  function openPrivacy() {
+    setTab("privacy");
+    persist();
+    document.getElementById("privacy-title").focus();
   }
 
   function bind() {
@@ -1121,10 +1249,20 @@
     // How wide the table is comes from the font, which can land after the first
     // render, so what can be panned is not settled until it has.
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncPanCues);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(sizeConsentSpace);
+
+    document.getElementById("consent-accept").addEventListener("click", function () { decideConsent(true); });
+    document.getElementById("consent-decline").addEventListener("click", function () { decideConsent(false); });
+    document.getElementById("consent-more").addEventListener("click", openPrivacy);
+    document.getElementById("privacy-link").addEventListener("click", openPrivacy);
+    document.getElementById("privacy-choice").addEventListener("click", reopenConsent);
+    // The bar is fixed and its height depends on the width the text wraps at.
+    window.addEventListener("resize", sizeConsentSpace);
   }
 
   function renderDrawerStatic() { if (state.selected) renderDrawer(); }
 
+  consentChoice = readConsent();
   syncThemeColor();
   deserialize();
   syncFiltersHandle();
@@ -1132,4 +1270,8 @@
   bind();
   setTab(state.tab);
   update();
+  // Last, so a reader who has already decided never sees the bar flash. Without
+  // a stored decision it stays up, and nothing is requested from Google.
+  if (consentChoice === "granted") analyticsConsent(true);
+  else if (consentChoice !== "denied") showConsent();
 })();

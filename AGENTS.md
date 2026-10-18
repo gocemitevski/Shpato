@@ -22,7 +22,7 @@ as plain `<script>` globals.
 ## Repo map
 
 ```
-index.html              the whole app shell (four views + drawer)
+index.html              the whole app shell (five views, drawer, consent bar)
 assets/styles.css       theme tokens + all styling
 assets/i18n.js          every user-visible string, mk + en
 assets/app.js           all behaviour
@@ -252,6 +252,53 @@ the tab states what they collectively support.
   band, taken from slobodnaevropa.mk/a/3537129.html. It is RFE/RL's, so the
   caption carries the credit (`about.credit`); keep the credit with the image.
 
+## Analytics and the privacy notice
+
+`index.html` carries a Google Analytics 4 tag (`G-Z2QYKW1QNC`), and it is not
+loaded until the reader allows it. The `<head>` sets Consent Mode's defaults with
+every signal denied, and it is `assets/app.js` that fetches `gtag.js` at all: the
+decision lives in `localStorage["shpato-consent"]`, an undecided reader gets the
+bar, `granted` loads the tag, `denied` means nothing is ever requested from
+Google. Withdrawing is as easy as granting — `privacy.choice` reopens the bar
+from the notice — and it clears the `_ga*` cookies the tag left, on the host and
+on the registrable domain, because the tag takes the registrable one when it can.
+If the tag had already loaded it also reloads the page, since a tag in memory
+cannot be taken out and consent-denied GA goes on sending cookieless pings; the
+choice is stored first, so the reload comes back refused, with no bar. Do not
+"simplify" this into an eager tag plus `consent update`: that still pings Google
+before a choice, which is the thing the bar exists to prevent.
+
+The bar is `position: fixed` rather than a row of the shell, because on a phone
+the shell has stood down and the document scrolls: in the flow it would sit at
+the end of the catalogue and only be met by scrolling there. What the shell gives
+up instead is exactly its height, measured into `--consent-h` and spent as
+`body.app`'s bottom padding — the same bargain `main`'s bottom padding strikes
+with the footer, and the reason the footer is never behind the bar. It comes
+first in the document so a keyboard reader meets it before 433 rows, while it
+paints at the bottom; its controls are buttons, not links, because they change
+the page's state rather than navigating anywhere. Print drops it, reduced motion
+drops its slide-in, and the drawer makes it inert like the rest of the page.
+
+`#view-privacy` is the notice, the one view with no tab of its own: the strip is
+sized for four, so it is reached from the footer's `#privacy-link` and from the
+bar's "What is collected?". Both call `setTab("privacy")` and then put focus on
+its heading, since no tab exists to announce the switch, and its `role` is
+`region` rather than `tabpanel` for the same reason: nothing controls it.
+`setTab` keeps the first tab in the roving tabindex when the active view has no
+tab of its own, or the whole strip would drop out of the tab order; `t("tab.privacy")`
+exists for the document title alone.
+
+Every sentence there is `privacy.*` prose in both languages, like `about.*`, and
+it deliberately carries no "last updated" date: that date would have to be
+hand-edited at every change and would go stale without anything noticing, the
+same reason the build payload has no timestamp. What it says is what is true
+today — GA4's `_ga` cookies last two years, the property's default retention is
+two months, Google Ireland processes and Google LLC receives under the EU–US Data
+Privacy Framework, the player is `youtube-nocookie.com` and fetches nothing until
+a recording is pressed, and the site's own three `localStorage` keys
+(`shpato-theme`, `shpato-lang`, `shpato-consent`) are functional and never
+transmitted. If any of that changes, the notice has to change with it.
+
 ## The shell
 
 `index.html` is an app shell, not a document: `body.app` is a grid pinned to
@@ -290,13 +337,15 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   padding, so about 52px at a desktop width — because every pixel of it is a
   pixel the catalogue cannot show, and `main` keeps `1.25rem` of bottom padding
   of its own so that the last card's border and the footer's rule do not draw
-  the same line. The credit sits at its left and a group of four sharing links
-  at its right: 1.5rem targets, the smallest that still clears the 24px minimum,
-  held apart by `justify-content: space-between`. The 620px block turns that into
-  `center`, so on a phone the pair sits centred, and each of them on its own line
-  once they wrap. They wrap below about 375px — the `.5rem` gap between the four
-  share links costs 18px of the row, which is where the single row used to end at
-  340px — and the footer grows a second row; that is the wrap behaving, not a bug.
+  the same line. The credit sits at its left — carrying the notice's door,
+  `#privacy-link`, in the footer's own link colour — and a group of four sharing
+  links at its right: 1.5rem targets, the smallest that still clears the 24px
+  minimum, held apart by `justify-content: space-between`. The 620px block turns
+  that into `center`, so on a phone the pair sits centred, and each of them on its
+  own line once they wrap. That door moved the wrap: the pair fits one row from
+  455px up, where the four share links' `.5rem` gap used to end the row at 375. It
+  costs the catalogue nothing, because below 620px the shell has stood down and
+  the document scrolls, so a second row is a second row of the page.
 - `.filters` and `.table-wrap` set `overscroll-behavior: contain`: a wheel that
   reaches the end of a facet list or of the table stops there instead of
   carrying on into the shell. Each `.table-wrap` sits in a `.table-frame`, and
@@ -388,7 +437,10 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   away.
 - `body.player-open` reserves the player's room inside `.table-wrap` and `.view`,
   never by padding `main`: padding `main` would make the shell scroll to reveal
-  nothing but itself.
+  nothing but itself. The consent bar's height is added to that room, because the
+  player stands above the bar rather than over it: the bar's buttons sit at the
+  right, exactly where the player docks, and an undecided reader has to be able to
+  answer the bar while the work plays.
 
 The check that matters when touching any of this is positional: with the shell up,
 scroll the table to its end and the header, the tab bar, the facet sidebar and the
@@ -400,7 +452,7 @@ own.
 - **All UI text is bilingual.** Adding a key means adding it to *both* `mk` and
   `en` in `assets/i18n.js`. `t()` falls back to English silently, so a missing
   Macedonian key will not throw — it will just ship English. Keys are currently
-  at parity (151 each).
+  at parity (186 each).
 - **Capitalisation lives in the strings, not in CSS.** A `<select>`'s
   `<option>` does not inherit `text-transform`, so a CSS-capitalised label looks
   right in the table and wrong in a dropdown. Capitalise in `i18n.js`.
@@ -501,8 +553,9 @@ child paints over the accent ring), and it must show the bare domain
 
 GitHub Pages via `CNAME` (`shpato.gocemitevski.com`). Pushing `master`
 publishes the site. `index.html` carries real OG/Twitter tags and a Google tag
-(`G-Z2QYKW1QNC`); keep the canonical and absolute image URLs in step with the
-domain if either changes.
+(`G-Z2QYKW1QNC`) that only loads once the reader allows it — see Analytics and
+the privacy notice above; keep the canonical and absolute image URLs in step with
+the domain if either changes.
 
 Pages serves `index.html` at both `/` and `/index.html` with no redirect, so
 there are two URLs for one document. The canonical names the root; `robots.txt`

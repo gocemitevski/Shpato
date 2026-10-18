@@ -9,14 +9,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
   <title>Драган Ѓаконовски – Шпато - Дигитален каталог</title>
   <meta name="description" content="Дигитален каталог на делата на Драган Ѓаконовски – Шпато во фонотеката на МРТВ.">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2QYKW1QNC"></script>
+  <!-- Google Analytics, refused until the reader says otherwise. Consent Mode
+       starts every signal denied, and the tag itself is only fetched after a
+       choice (assets/app.js), so nothing reaches Google before one: this block
+       is the half that holds if the tag is ever loaded earlier, and the half
+       that makes withdrawal mean something. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-Z2QYKW1QNC');
+    gtag("consent", "default", {
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      analytics_storage: "denied"
+    });
   </script>
 
   <!-- The shipped value is the dark canvas. app.js rewrites it from
@@ -74,6 +80,23 @@
 </head>
 <body class="app">
   <a class="skip-link" href="#main" data-i18n="a11y.skip"></a>
+
+  <!-- Consent for the analytics above. It comes first in the document so a
+       keyboard reader meets it before the catalogue, and it is fixed to the
+       bottom of the viewport so a phone sees it without scrolling; body.app
+       reserves --consent-h, which the app measures, so it never covers the
+       footer. Until Accept is pressed no request is made to Google at all. -->
+  <section class="consent" id="consent" role="region" aria-labelledby="consent-title" hidden>
+    <div class="consent-body">
+      <h2 id="consent-title" data-i18n="consent.title"></h2>
+      <p data-i18n="consent.body"></p>
+    </div>
+    <div class="consent-actions">
+      <button type="button" class="btn consent-allow" id="consent-accept" data-i18n="consent.accept"></button>
+      <button type="button" class="btn" id="consent-decline" data-i18n="consent.decline"></button>
+      <button type="button" class="link-btn" id="consent-more" data-i18n="consent.more"></button>
+    </div>
+  </section>
 
   <header class="site-header">
     <a class="brand" href="index.html" id="home-link">
@@ -291,6 +314,41 @@
         <li><a href="https://js.ugd.edu.mk/index.php/YFMA/article/view/2916" target="_blank" rel="noopener" data-i18n="about.source3"></a></li>
       </ul>
     </section>
+
+    <!-- Privacy notice. A view without a tab of its own: the strip is sized for
+         four, so this one is reached from the footer and from the consent bar.
+         role="region" rather than "tabpanel" for the same reason — no tab
+         controls it, so nothing may claim one does. -->
+    <section id="view-privacy" class="view" role="region" aria-labelledby="privacy-title" hidden>
+      <h2 class="section-title" id="privacy-title" tabindex="-1" data-i18n="privacy.title"></h2>
+      <p class="intro" data-i18n="privacy.intro"></p>
+      <div class="privacy">
+        <h3 data-i18n="privacy.controllerTitle"></h3>
+        <p data-i18n="privacy.controller"></p>
+        <h3 data-i18n="privacy.analyticsTitle"></h3>
+        <p data-i18n="privacy.analytics"></p>
+        <p data-i18n="privacy.retention"></p>
+        <h3 data-i18n="privacy.cookiesTitle"></h3>
+        <p data-i18n="privacy.cookies"></p>
+        <h3 data-i18n="privacy.storageTitle"></h3>
+        <p data-i18n="privacy.storage"></p>
+        <h3 data-i18n="privacy.mediaTitle"></h3>
+        <p data-i18n="privacy.media"></p>
+        <h3 data-i18n="privacy.rightsTitle"></h3>
+        <p data-i18n="privacy.rights"></p>
+        <p id="privacy-state" class="privacy-state"></p>
+        <p>
+          <button type="button" class="btn" id="privacy-choice" data-i18n="privacy.choice"></button>
+        </p>
+      </div>
+      <h3 class="about-sources-title" data-i18n="privacy.links"></h3>
+      <ul class="sources">
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener" data-i18n="privacy.link1"></a></li>
+        <li><a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener" data-i18n="privacy.link2"></a></li>
+        <li><a href="https://www.dataprivacyframework.gov/list" target="_blank" rel="noopener" data-i18n="privacy.link3"></a></li>
+        <li><a href="https://azlp.mk/" target="_blank" rel="noopener" data-i18n="privacy.link4"></a></li>
+      </ul>
+    </section>
   </main>
 
   <!-- Below the pane on purpose: a row of the shell, so the pane never has to
@@ -300,6 +358,7 @@
     <p class="footer-credit">
       <span data-i18n="app.credit"></span>
       <a href="https://www.gocemitevski.com" target="_blank" rel="noopener">Гоце Митевски</a>.
+      <button type="button" class="link-btn" id="privacy-link" data-i18n="privacy.link"></button>
     </p>
     <!-- Share intents, not profile links: what is passed on is the catalogue.
          renderShareLinks() fills the hrefs from the canonical address, so they
