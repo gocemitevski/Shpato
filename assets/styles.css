@@ -427,7 +427,8 @@ html.boot-foot .site-footer { visibility: hidden; }
   padding-bottom: 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: auto auto auto minmax(0, 1fr) auto auto;
+  /* The empty line is inside the card, as in the catalogue: five rows, not six. */
+  grid-template-rows: auto auto auto minmax(0, 1fr) auto;
 }
 
 /* A shell that leaves the table almost nothing is worse than a scrolling
@@ -729,12 +730,16 @@ html.boot-foot .site-footer { visibility: hidden; }
 .range-row input[type="range"] { width: 100%; accent-color: var(--accent); }
 
 /* --------------------------------------------------------------- results */
-/* Three rows: the count, the scrolling table, the empty message. */
+/* Two rows: the count and the card. The empty message is not a row of its own
+   — as one it landed past the bottom edge of the card, at the foot of the pane,
+   reading as a caption on the pane rather than on the card. It is a child of
+   the scroller instead, so it stands inside the card where the rows would
+   begin. */
 .results {
   min-width: 0;
   min-height: 0;
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;
+  grid-template-rows: auto minmax(0, 1fr);
 }
 .result-meta { margin: 0 1rem 1rem; color: var(--muted); font-size: .88rem; }
 /* The count is written by the first render, and the empty line is what is left
@@ -915,7 +920,17 @@ td.sig {
   vertical-align: middle;
 }
 
-.empty { color: var(--muted); padding: 2.5rem; text-align: center; }
+/* The empty message is a child of the scroller, so it stands inside the card,
+   under the header row, where the rows would begin. It sticks to the left edge
+   because that header row can still be panned and a message that slid sideways
+   with it would read as a glitch. */
+.empty {
+  position: sticky;
+  left: 0;
+  color: var(--muted);
+  padding: 2.5rem;
+  text-align: center;
+}
 
 .table-more { display: flex; justify-content: center; padding: 1.25rem 0 0; }
 

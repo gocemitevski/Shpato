@@ -215,12 +215,14 @@
                 </thead>
                 <tbody id="catalog-body"></tbody>
               </table>
+              <!-- Inside the scroller, so it stands in the card where the rows
+                   would begin rather than below the card. See .empty. -->
+              <p class="empty" id="catalog-empty" hidden></p>
             </div>
             <!-- One layer per side, above the card: see .pan-cue. -->
             <div class="pan-cue left" aria-hidden="true"></div>
             <div class="pan-cue right" aria-hidden="true"></div>
           </div>
-          <p class="empty" id="catalog-empty" hidden></p>
         </div>
       </div>
     </section>
@@ -287,12 +289,13 @@
             </thead>
             <tbody id="note-body"></tbody>
           </table>
+          <!-- Inside the scroller, like the catalogue's: see .empty. -->
+          <p class="empty" id="note-empty" hidden></p>
         </div>
         <!-- One layer per side, above the card: see .pan-cue. -->
         <div class="pan-cue left" aria-hidden="true"></div>
         <div class="pan-cue right" aria-hidden="true"></div>
       </div>
-      <p class="empty" id="note-empty" hidden></p>
       <div id="note-more" class="table-more"></div>
     </section>
 

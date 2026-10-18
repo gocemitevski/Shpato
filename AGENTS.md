@@ -453,6 +453,16 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   read as a wash rather than as a band with an edge, so widening it lengthens
   the wash rather than deepening it. Print drops the two gradients, because
   paper does not pan, and reduced motion drops their cross-fade.
+- The empty message ("no works found", "no notes") is a child of `.table-wrap`,
+  not a row of `.results`/`#view-notes`: as a grid row it was laid out past the
+  card's bottom edge, at the foot of the pane, where it read as a caption on the
+  pane rather than on the card. Inside the scroller it stands in the card where
+  the rows would begin, under the header row — and a block there is only as wide
+  as the card's *visible* width even though the table overflows it, so on a
+  phone the line centres where the reader is looking rather than in the table's
+  overflow. It is `position: sticky; left: 0` because that header row can still
+  be panned. A card with no rows still draws its header row, so the pan cue
+  stays on while the header overflows.
 - From 1024px up the facet panel is a permanent left pane
   (`clamp(260px, 32vw, 500px)`). Below that it is a disclosure above the table,
   opened from a handle in the toolbar (`#filters-toggle`, the export menu's
