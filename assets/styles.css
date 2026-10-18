@@ -331,11 +331,10 @@ a { color: var(--accent-2); }
    screens (a 320px phone, or a window at 200% zoom). The strip's own padding is
    left where main's is, so the first tab still lines up with the table. */
 @media (max-width: 620px) {
-  .tabs { gap: .75rem; }
-  .tabs button { font-size: .78rem; padding: .9rem 0; }
+  .tabs { gap: 1.25rem; }
+  .tabs button { font-size: .78rem; padding: .9rem 0; flex-grow: 1; }
 }
 @media (max-width: 360px) {
-  .tabs { gap: .4rem; }
   .tabs button { font-size: .7rem; }
 }
 
