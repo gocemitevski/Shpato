@@ -799,6 +799,12 @@ def main():
              {"meta": meta, "records": all_records})
     write_js(os.path.join(DATA_DIR, "notes.js"), "NOTES",
              {"meta": meta, "notes": notes})
+    # The hand-written assets are minified into siblings, which index.html
+    # points at; the generated data files are already written compact and are
+    # left alone. Same command, so nothing can go stale on its own.
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import minify
+    minify.main([])
 
     expected = {"vocal": 74, "instrumental": 55, "arrThemes": 43, "arrVocal": 261}
     print("Built {} records: {}".format(len(all_records), counters))

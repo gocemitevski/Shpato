@@ -390,6 +390,22 @@ body.app {
 }
 body.app main { min-height: 0; overflow-y: auto; }
 
+/* The shell is withheld until the app has labelled it. Every string in it comes
+   from assets/i18n.js, so a shell painted before app.js runs is an empty one, and
+   it moves when the labels land — Lighthouse measured CLS 0.88 on a phone for
+   exactly that. The classes are set by the inline script in index.html's head and
+   removed by app.js: boot-shell once the labels are in, boot-foot once the
+   catalogue has rendered, because on a phone the footer sits where 433 rows are
+   about to arrive. Never classes on the elements themselves: scripting off means
+   they are never added, and the shell is served as it was. The consent bar and
+   the skip link stay visible throughout — the bar has to be answerable whether
+   or not the app has finished. */
+html.boot-shell .site-header,
+html.boot-shell .tabs-nav,
+html.boot-shell #main,
+html.boot-shell .site-footer,
+html.boot-foot .site-footer { visibility: hidden; }
+
 .view { width: 100%; padding-bottom: 4rem; }
 
 /* The catalogue and the notes fill their pane rather than growing the page.
@@ -721,6 +737,12 @@ body.app main { min-height: 0; overflow-y: auto; }
   grid-template-rows: auto minmax(0, 1fr) auto;
 }
 .result-meta { margin: 0 1rem 1rem; color: var(--muted); font-size: .88rem; }
+/* The count is written by the first render, and the empty line is what is left
+   of the layout shift the boot would otherwise produce: on a phone the table
+   sits directly under it, and the line appearing is the whole of that movement.
+   Reserving the box keeps the table where the reveal put it. 1lh, not a
+   rem figure: the line is the one this element will occupy. */
+.result-meta:empty { min-height: 1lh; }
 
 /* The card is the scroller, so the cue that it can be panned sideways cannot be
    one of its own background layers: those lie under its children, and the

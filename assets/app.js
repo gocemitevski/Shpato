@@ -2,16 +2,31 @@
 (function () {
   "use strict";
 
-  var CATALOG = window.CATALOG || { meta: {}, records: [] };
-  var NOTES = window.NOTES || { notes: [] };
-  var RECORDS = CATALOG.records;
-  var META = CATALOG.meta;
+  // The catalogue and the notes arrive after this file does: app.js fetches the
+  // catalogue itself once the shell is labelled, and the notes payload when its
+  // tab is opened. adoptData() binds both once they are in; until then RECORDS
+  // is empty and nothing describes them.
+  var CATALOG = null;
+  var NOTES = null;
+  var RECORDS = [];
+  var META = {};
   var DATA_MIN = 0;
-  var DATA_MAX = (function () {
+  var DATA_MAX = 0;
+
+  // Called with the catalogue in hand, before anything is rendered from it. The
+  // duration bounds are the longest work's, rounded up to half a minute, and
+  // they are the two ends of the range slider.
+  function adoptData() {
+    CATALOG = window.CATALOG || { meta: {}, records: [] };
+    RECORDS = CATALOG.records;
+    META = CATALOG.meta;
+    NOTES = window.NOTES || null;
     var max = 0;
     RECORDS.forEach(function (r) { if (r.durationSec && r.durationSec > max) max = r.durationSec; });
-    return Math.max(60, Math.ceil(max / 30) * 30);
-  })();
+    DATA_MAX = Math.max(60, Math.ceil(max / 30) * 30);
+    state.durMin = DATA_MIN;
+    state.durMax = DATA_MAX;
+  }
 
   // A note can outlive the record it names: the one exact duplicate the build
   // does not carry keeps a note but has no row to open.
@@ -227,16 +242,7 @@
       }
     });
 
-    // The counts ride in the option labels, so the select carries the summary on
-    // its own: closed, it reads "Сите степени (420)" rather than a bare "Сите".
-    var sev = severityCounts();
-    document.querySelector("#note-severity option[value='']").textContent =
-      t("notes.allSeverities") + " (" + sev.all + ")";
-    document.querySelector("#note-severity [value='warning']").textContent =
-      t("severity.warning") + " (" + sev.warning + ")";
-    document.querySelector("#note-severity [value='info']").textContent =
-      t("severity.info") + " (" + sev.info + ")";
-    refreshRuleSelect();
+    renderNoteControls();
     // The player's own labels are static, but its subtitle is built from the
     // record, so it has to be rebuilt when the language changes.
     if (playing) {
@@ -701,7 +707,47 @@
   }
 
   // ------------------------------------------------------------- notes
+  // The notes payload is 145 KB that only this tab reads, so index.html does not
+  // load it: opening the tab fetches it once, and the render is repeated when it
+  // lands. A deep link into the tab takes the same path, through setTab.
+  var notesLoading = false;
+
+  function loadNotes() {
+    if (NOTES || notesLoading) return;
+    notesLoading = true;
+    var tag = document.createElement("script");
+    tag.src = "data/notes.js";
+    tag.onload = function () {
+      NOTES = window.NOTES || { notes: [] };
+      notesLoading = false;
+      renderNoteControls();
+      renderNotes();
+    };
+    // A payload that does not arrive says so in the empty state rather than
+    // leaving the table stuck on a loading line.
+    tag.onerror = function () { notesLoading = false; renderNotes(); };
+    document.head.appendChild(tag);
+  }
+
+  // The labels of the two notes controls carry counts and rule names that only
+  // the payload knows, so they are written when it arrives rather than with the
+  // shell; the view that holds them is not on screen before then.
+  function renderNoteControls() {
+    if (!NOTES) return;
+    // The counts ride in the option labels, so the select carries the summary on
+    // its own: closed, it reads "Сите степени (420)" rather than a bare "Сите".
+    var sev = severityCounts();
+    document.querySelector("#note-severity option[value='']").textContent =
+      t("notes.allSeverities") + " (" + sev.all + ")";
+    document.querySelector("#note-severity [value='warning']").textContent =
+      t("severity.warning") + " (" + sev.warning + ")";
+    document.querySelector("#note-severity [value='info']").textContent =
+      t("severity.info") + " (" + sev.info + ")";
+    refreshRuleSelect();
+  }
+
   function refreshRuleSelect() {
+    if (!NOTES) return;
     var sel = document.getElementById("note-rule");
     var rules = new Set(NOTES.notes.map(function (a) { return a.rule; }));
     sel.innerHTML = '<option value="">' + esc(t("notes.allRules")) + "</option>" +
@@ -713,21 +759,32 @@
 
   // Severity counts, used as the option labels of the severity select.
   function severityCounts() {
+    if (!NOTES) return { all: 0, warning: 0, info: 0 };
     var all = NOTES.notes.length;
     var warning = NOTES.notes.filter(function (a) { return a.severity === "warning"; }).length;
     return { all: all, warning: warning, info: all - warning };
   }
 
   function renderNotes() {
+    var body = document.getElementById("note-body");
+    var empty = document.getElementById("note-empty");
+    if (!NOTES) {
+      body.innerHTML = "";
+      empty.hidden = false;
+      empty.textContent = t("notes.loading");
+      loadNotes();
+      return;
+    }
     var list = NOTES.notes.filter(function (a) {
       if (state.noteSeverity && a.severity !== state.noteSeverity) return false;
       if (state.noteRule && a.rule !== state.noteRule) return false;
       return true;
     });
-    var body = document.getElementById("note-body");
-    var empty = document.getElementById("note-empty");
     empty.hidden = list.length > 0;
     empty.textContent = t("notes.empty");
+    // A notes deep link is the one boot that paints the footer last: the rows it
+    // sits under are this payload, which is fetched on demand.
+    document.documentElement.classList.remove("boot-foot");
 
     var shown = list.slice(0, state.noteLimit);
     body.innerHTML = shown.map(function (a) {
@@ -842,12 +899,29 @@
     return Math.min(DATA_MAX, Math.max(DATA_MIN, n));
   }
 
-  function deserialize() {
+  // The hash is read in two halves. The tab, the query and the sort need nothing
+  // but the location, so the shell can be labelled from them before the
+  // catalogue is in; everything else names a catalogue value and waits for it.
+  function hashParams() {
     var raw = location.hash.replace(/^#/, "");
-    if (!raw) return;
-    var p = new URLSearchParams(raw);
+    return raw ? new URLSearchParams(raw) : null;
+  }
+
+  function deserializeShell() {
+    var p = hashParams();
+    if (!p) return;
     if (TABS.indexOf(p.get("tab")) !== -1) state.tab = p.get("tab");
     if (p.get("q")) state.query = p.get("q");
+    if (SORT_KEYS.indexOf(p.get("sort")) !== -1) {
+      state.sort.key = p.get("sort");
+      state.sort.dir = p.get("dir") === "desc" ? "desc" : "asc";
+    }
+  }
+
+  function deserialize() {
+    var p = hashParams();
+    if (!p) return;
+    deserializeShell();
     if (p.get("cat")) state.categories = knownValues("category", p.get("cat").split("|"));
     if (p.get("col")) state.collections = knownValues("collection", p.get("col").split("|"));
     if (p.get("perf")) state.performers = knownValues("performer", p.get("perf").split("|"));
@@ -860,25 +934,14 @@
     // Ignore the flag when nothing in the catalogue has a video, or a stale
     // link would land on a permanently empty table.
     state.onlyVideo = p.get("video") === "1" && META.videos > 0;
-    if (SORT_KEYS.indexOf(p.get("sort")) !== -1) {
-      state.sort.key = p.get("sort");
-      state.sort.dir = p.get("dir") === "desc" ? "desc" : "asc";
-    }
   }
 
   // ------------------------------------------------------------------ main
-  function setTab(tab) {
+  // Which view is on screen, and which tab says so. This half needs no
+  // catalogue, so the boot uses it to reveal the shell with the right view in it;
+  // the rendering half below runs once the data is in.
+  function showView(tab) {
     state.tab = tab;
-    // Whichever of the two scrolls has to be sent back to the top by hand, or a
-    // tab opens part-way down wherever the previous one was left: the pane when
-    // the shell is pinned, the document when it has stood down (short window).
-    // <html> scrolls smoothly, which is wrong for a jump this size, so the
-    // default behaviour is restored for the call.
-    document.getElementById("main").scrollTop = 0;
-    var root = document.documentElement;
-    root.style.scrollBehavior = "auto";
-    window.scrollTo(0, 0);
-    root.style.scrollBehavior = "";
     TABS.forEach(function (name) {
       document.getElementById("view-" + name).hidden = name !== tab;
     });
@@ -892,6 +955,20 @@
       btn.tabIndex = active || (!ownTab && btn.id === "tab-catalog") ? 0 : -1;
     });
     updateTitle();
+  }
+
+  function setTab(tab) {
+    // Whichever of the two scrolls has to be sent back to the top by hand, or a
+    // tab opens part-way down wherever the previous one was left: the pane when
+    // the shell is pinned, the document when it has stood down (short window).
+    // <html> scrolls smoothly, which is wrong for a jump this size, so the
+    // default behaviour is restored for the call.
+    document.getElementById("main").scrollTop = 0;
+    var root = document.documentElement;
+    root.style.scrollBehavior = "auto";
+    window.scrollTo(0, 0);
+    root.style.scrollBehavior = "";
+    showView(tab);
     if (tab === "stats") renderStats();
     if (tab === "notes") renderNotes();
   }
@@ -1092,7 +1169,11 @@
     document.getElementById("privacy-title").focus();
   }
 
-  function bind() {
+  // The controls the shell needs before the catalogue is in: the tab strip, the
+  // theme and language toggles, and the two doors into the consent bar and the
+  // privacy notice. They are bound first, so a reader can answer the bar, or
+  // switch the theme, in the moment between the shell and the table.
+  function bindChrome() {
     document.getElementById("tabs").addEventListener("click", function (e) {
       var btn = e.target.closest("button[data-tab]");
       if (btn) { setTab(btn.getAttribute("data-tab")); persist(); }
@@ -1130,6 +1211,18 @@
       if (btn) { applyTheme(btn.getAttribute("data-theme")); renderStatic(); }
     });
 
+    document.getElementById("consent-accept").addEventListener("click", function () { decideConsent(true); });
+    document.getElementById("consent-decline").addEventListener("click", function () { decideConsent(false); });
+    document.getElementById("consent-more").addEventListener("click", openPrivacy);
+    document.getElementById("privacy-link").addEventListener("click", openPrivacy);
+    document.getElementById("privacy-choice").addEventListener("click", reopenConsent);
+    // The bar is fixed and its height depends on the width the text wraps at.
+    window.addEventListener("resize", sizeConsentSpace);
+  }
+
+  // Everything else: the controls that only mean something with a catalogue
+  // behind them.
+  function bind() {
     var search = document.getElementById("search");
     search.value = state.query;
     search.addEventListener("input", function () { state.query = search.value; refreshResults(); });
@@ -1250,28 +1343,62 @@
     // render, so what can be panned is not settled until it has.
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncPanCues);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(sizeConsentSpace);
-
-    document.getElementById("consent-accept").addEventListener("click", function () { decideConsent(true); });
-    document.getElementById("consent-decline").addEventListener("click", function () { decideConsent(false); });
-    document.getElementById("consent-more").addEventListener("click", openPrivacy);
-    document.getElementById("privacy-link").addEventListener("click", openPrivacy);
-    document.getElementById("privacy-choice").addEventListener("click", reopenConsent);
-    // The bar is fixed and its height depends on the width the text wraps at.
-    window.addEventListener("resize", sizeConsentSpace);
   }
 
   function renderDrawerStatic() { if (state.selected) renderDrawer(); }
 
+  // ---------------------------------------------------------------- booting
+  // Two phases, because the shell and the catalogue do not arrive together. The
+  // labels come from assets/i18n.js alone, so the first phase can put a finished
+  // shell on screen — correct tab, correct view, correct labels — while the
+  // catalogue reads in behind it. On a phone that is what moves first paint from
+  // 2.7 s to about one, and what stops the shell shifting when the labels land.
+  window.SHPATO_STARTED = true;
   consentChoice = readConsent();
   syncThemeColor();
-  deserialize();
+  deserializeShell();
   syncFiltersHandle();
+  showView(state.tab);
   renderStatic();
-  bind();
-  setTab(state.tab);
-  update();
+  bindChrome();
   // Last, so a reader who has already decided never sees the bar flash. Without
   // a stored decision it stays up, and nothing is requested from Google.
   if (consentChoice === "granted") analyticsConsent(true);
   else if (consentChoice !== "denied") showConsent();
+  // After the bar, so the room it takes is already given up: the reveal is the
+  // paint the reader sees, and nothing may move after it.
+  document.documentElement.classList.remove("boot-shell");
+  bootData();
+
+  // Phase two: everything that reads the catalogue. The catalogue is fetched
+  // here rather than linked in index.html, because linked it would be in the air
+  // at the same moment as the two scripts that put the shell on screen, and the
+  // reveal is waiting for them, not for it: 40 KB of handshake ahead of the
+  // first paint. The price is one round trip between the reveal and the table,
+  // which is the table arriving a moment late instead of the whole page. The
+  // notes payload is fetched later still, on demand, from renderNotes().
+  function bootData() {
+    function run() {
+      adoptData();
+      deserialize();
+      renderStatic();
+      bind();
+      setTab(state.tab);
+      update();
+      // The footer is only worth painting once there is something above it: on a
+      // phone, where the document scrolls, a footer painted before the rows land
+      // moves thirty thousand pixels when they do. The notes tab waits for its
+      // own payload, which arrives later; renderNotes() clears it then.
+      if (state.tab !== "notes") document.documentElement.classList.remove("boot-foot");
+    }
+    if (window.CATALOG) { run(); return; }
+    var tag = document.createElement("script");
+    tag.src = "data/catalog.js";
+    tag.onload = run;
+    // A catalogue that does not arrive leaves the shell on screen with an empty
+    // table: run() adopts what is there, which is nothing, and the empty state
+    // says so rather than the page waiting on something that is not coming.
+    tag.onerror = run;
+    document.head.appendChild(tag);
+  }
 })();

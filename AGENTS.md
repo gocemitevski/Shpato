@@ -10,7 +10,7 @@ JavaScript. Keep both that way.
 ## Commands
 
 ```bash
-python3 tools/build.py          # sources/*.csv -> data/catalog.* + data/notes.*
+python3 tools/build.py          # sources/*.csv -> data/* and assets/*.min.{css,js}
 python3 -m http.server 8000     # http://localhost:8000/
 git status --short              # after a build: must be clean
 ```
@@ -26,9 +26,11 @@ index.html              the whole app shell (five views, drawer, consent bar)
 assets/styles.css       theme tokens + all styling
 assets/i18n.js          every user-visible string, mk + en
 assets/app.js           all behaviour
+assets/*.min.css|.min.js  what index.html loads: generated, committed
 assets/fonts/*.woff2    self-hosted Geologica (the only typeface, OFL 1.1)
-assets/images/          cover, brand icon, About photograph, favicon set
-tools/build.py          normalizer: sources -> data
+assets/images/          cover, brand icons, About photograph, favicon set
+tools/build.py          normalizer: sources -> data, then the minifier
+tools/minify.py         the CSS/JS minifier build.py calls
 tools/youtube-search.py candidate finder for the link map (dev-only)
 tools/cover.html        1920x1080 social cover render target (dev-only)
 tools/favicon.html      favicon render target (dev-only)
@@ -41,8 +43,81 @@ robots.txt              crawl policy (see Deployment)
 sitemap.xml             the one canonical URL (see Deployment)
 ```
 
-Script order in `index.html` is load-bearing: `data/catalog.js`,
-`data/notes.js`, `assets/i18n.js`, `assets/app.js`.
+Script order in `index.html` is load-bearing: `assets/i18n.min.js` then
+`assets/app.min.js`, both `fetchpriority="high"`, and nothing else — `app.js`
+fetches `data/catalog.js` itself once the shell is labelled, and
+`data/notes.js` when the Забелешки tab is first opened.
+
+## The boot
+
+The shell is labelled in two phases, because the strings and the catalogue do
+not arrive together. Every visible string comes from `assets/i18n.js` and is
+written by `renderStatic()`, so a shell painted before `app.js` runs is an
+*empty* shell — four blank tabs, an unlabelled toolbar, no header text — and it
+moves when the labels land. On a phone that measured CLS 0.885, which is a
+quarter of the Lighthouse score. So the inline script in `index.html`'s head
+puts `boot-shell` and `boot-foot` on `<html>`, and those classes hold the shell
+(and, separately, the footer) at `visibility: hidden`:
+
+- **phase one**, when `app.min.js` executes: the language, the theme, the
+  filters handle, the labels — `deserializeShell()` reads the tab, query and
+  sort out of the hash, then `showView()` and `renderStatic()` — and the consent
+  bar. Then `boot-shell` comes off, and *that* paint is the reader's first look
+  at the page: right view, right labels, nothing left to move.
+- **phase two**, once the catalogue has arrived: `adoptData()`, the full
+  `deserialize()`, the event handlers, and the table. `boot-foot` comes off
+  last, because on a phone the footer sits where 433 rows are about to arrive
+  and a footer painted first moves thirty thousand pixels when they do.
+
+Two things follow. The labels cannot be in the HTML — that is what `i18n.js`
+is for — so the shell is *held back* rather than reserved: a `min-height` per
+breakpoint would be a guess that goes stale with the translations, and a shell
+that shrinks when the text lands shifts just as badly as one that grows. And
+the timer in that inline script is the way out if the app never runs: it checks
+`window.SHPATO_STARTED`, which `app.js` sets first thing, so it stands aside
+for a slow boot and only reveals the shell for a broken one. `#result-meta:empty`
+carries a reserved line for the same reason — it is what is left of the
+movement once the shell is stable, the count landing on a line the table sits
+under.
+
+Measured with Lighthouse 10 mobile against a gzipped local copy of the repo
+(GitHub Pages serves gzip; a plain `python3 -m http.server` does not, and
+measuring against it is measuring the dev server): **0.99 performance**, TBT
+50 ms, CLS 0.02, FCP 1.5 s, LCP 1.9 s. The last hundredth is the typeface: the
+two subsets are 42 KB discovered through the render-blocking stylesheet, and
+Lighthouse's simulator chains them behind it even though `font-display: swap`
+means the paint does not wait for them. Moving them out of that stylesheet
+measures 1.00 and makes the page worse — the reader sees the fallback and the
+typeface pops in — so they stay where they are. Do not chase that point by
+deferring the fonts.
+
+## Minification
+
+`tools/build.py` ends by calling `tools/minify.py`, which writes
+`assets/styles.min.css`, `assets/i18n.min.js` and `assets/app.min.js`;
+`index.html` loads those. They are **generated and committed**, like `data/*`,
+and the build stays reproducible: `git diff --exit-code assets/` after a build
+must be silent.
+
+The minifier is dependency-free and deliberately conservative.
+
+- CSS: comments and whitespace between rules go, but whitespace **inside a
+  value** is load-bearing and collapses to one space rather than vanishing —
+  `linear-gradient(to right, …)` and `calc(1rem + var(--x))` are invalid
+  without it. Punctuation is squeezed only at depth 0, so the bodies of
+  `@media` blocks keep their inner rules intact.
+- JS: comments go and intra-line whitespace collapses, but **newlines stay** —
+  no automatic-semicolon-insertion hazard — and nothing is renamed. `app.js` is
+  written a statement per line with semicolons, which is what makes that safe.
+
+Verification is not `node --check`. A CSS pass that ate the space in
+`linear-gradient(to right, …)` produced CSS that parsed cleanly and that axe
+flagged as 18 new contrast failures inside the facet panel. Render the page and
+compare it — axe, and the suites in `/tmp/opencode/harness` — before committing
+a minifier change.
+
+`tools/cover.html` and `tools/favicon.html` link `../assets/styles.css` and
+keep the unminified sheet: they are render targets, not pages.
 
 ## Data workflow
 
@@ -454,7 +529,7 @@ own.
 - **All UI text is bilingual.** Adding a key means adding it to *both* `mk` and
   `en` in `assets/i18n.js`. `t()` falls back to English silently, so a missing
   Macedonian key will not throw — it will just ship English. Keys are currently
-  at parity (187 each).
+  at parity (188 each).
 - **Capitalisation lives in the strings, not in CSS.** A `<select>`'s
   `<option>` does not inherit `text-transform`, so a CSS-capitalised label looks
   right in the table and wrong in a dropdown. Capitalise in `i18n.js`.
@@ -511,6 +586,13 @@ own.
   app filters on `duplicateOf` any more. The note for a dropped row names a
   record that is not in the catalogue, so `renderNotes()` gives that row
   `no-record` and a plain title instead of a button that would open nothing.
+- The notes payload is fetched the first time the tab is opened, so
+  `renderNotes()` has a state for "not here yet": it says `notes.loading` in the
+  empty line and calls `loadNotes()`. Everything else in the tab reads `NOTES`,
+  so `refreshRuleSelect()` and `severityCounts()` are written to be called
+  before it arrives — they no-op or return zeros rather than throwing. A notes
+  deep link takes the same path, which is why `boot-foot` is not cleared until
+  that payload has rendered.
 - The four footer sharing links are share *intents*, not profile links: what is
   passed on is the catalogue. `renderShareLinks()` builds their hrefs from
   `<link rel="canonical">` rather than `location.href`, so they still name the
@@ -550,6 +632,15 @@ The cover must match `.brand-mark`: the portrait is never cropped or scaled
 (Chrome clips a rounded `overflow: hidden` box to the *border* box, so a scaled
 child paints over the accent ring), and it must show the bare domain
 `shpato.gocemitevski.com`.
+
+There are two brand marks, on purpose. `…-Icon.webp` is 512px and belongs to
+the two render targets above; `…-Icon-168.webp` is the 56px mark of the header
+at 3x, which is all any screen resolves, and is 14 KB smaller. index.html
+loads the small one — do not "simplify" that back to the original.
+
+The About photograph carries `loading="lazy"`: its tab is hidden until it is
+opened, so it is 170 KB nobody has asked for yet, and on a phone it competed
+for the bandwidth that decides first paint.
 
 ## Deployment
 

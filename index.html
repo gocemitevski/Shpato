@@ -67,16 +67,29 @@
   <meta name="twitter:image:alt" content="Портрет на Драган Ѓаконовски – Шпато во син прстен, со насловот и адресата на дигиталниот каталог">
 
   <script>
-    /* Apply the saved theme before first paint to avoid a flash. */
+    /* Apply the saved theme before first paint to avoid a flash, and hold the
+       shell back until app.js has written its labels. Every string in it comes
+       from assets/i18n.js, so a shell painted before the app runs is an empty
+       one, and it moves when the labels land: Lighthouse measured CLS 0.88 on a
+       phone for exactly that. app.js clears both classes — the first once the
+       labels are in, the second once the catalogue has rendered, because the
+       footer on a phone sits where 433 rows are about to arrive. The timer is
+       the way out if the app never runs at all, and it stays out of the way of
+       a slow one. */
     (function () {
+      var root = document.documentElement;
+      root.classList.add("boot-shell", "boot-foot");
+      setTimeout(function () {
+        if (!window.SHPATO_STARTED) root.classList.remove("boot-shell", "boot-foot");
+      }, 4000);
       try {
         var saved = localStorage.getItem("shpato-theme");
         var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-        document.documentElement.setAttribute("data-theme", theme);
+        root.setAttribute("data-theme", theme);
       } catch (e) {}
     })();
   </script>
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.min.css">
 </head>
 <body class="app">
   <a class="skip-link" href="#main" data-i18n="a11y.skip"></a>
@@ -101,7 +114,10 @@
   <header class="site-header">
     <a class="brand" href="index.html" id="home-link">
       <span class="brand-mark" aria-hidden="true">
-        <img src="assets/images/Dragan-Gjakonovski-Shpato-Icon.webp" alt="" width="512" height="512">
+        <!-- 168px is the 56px mark at 3x, which is as much of it as any screen
+             resolves; the 512px original is 22 KB of pixels nobody sees, and on
+             a phone it competed with the scripts that label the shell. -->
+        <img src="assets/images/Dragan-Gjakonovski-Shpato-Icon-168.webp" alt="" width="168" height="168">
       </span>
       <span class="brand-text">
         <h1 id="app-title"></h1>
@@ -291,7 +307,11 @@
           <p data-i18n="about.bio3"></p>
         </div>
         <figure class="about-portrait">
-          <img src="assets/images/Dragan-Gjakonovski-Shpato-About.jpg" alt="" width="800" height="994">
+          <!-- Lazy: the tab is hidden until it is opened, so this is 170 KB that
+               nobody has asked for yet, and on a phone it competed with the
+               catalogue for the bandwidth that decides first paint. -->
+          <img src="assets/images/Dragan-Gjakonovski-Shpato-About.jpg" alt="" width="800" height="994"
+               loading="lazy" decoding="async">
           <figcaption>
             <span data-i18n="about.caption"></span>
             <span class="credit" data-i18n="about.credit"></span>
@@ -413,9 +433,14 @@
     </div>
   </div>
 
-  <script src="data/catalog.js"></script>
-  <script src="data/notes.js"></script>
-  <script src="assets/i18n.js"></script>
-  <script src="assets/app.js"></script>
+  <!-- The order is load-bearing twice over: i18n before app, so the shell can be
+       labelled without waiting for the catalogue, and the catalogue fetched by
+       app.js only after that, so its 40 KB is not in the same burst as these
+       two. fetchpriority: without it these sit behind the two font files, which
+       are 42 KB, and the shell stays unlabelled while a typeface it does not
+       need yet arrives ahead of it. notes.js is 145 KB that only the Забелешки
+       tab reads, so app.js fetches it when that tab is first opened. -->
+  <script src="assets/i18n.min.js" fetchpriority="high"></script>
+  <script src="assets/app.min.js" fetchpriority="high"></script>
 </body>
 </html>
