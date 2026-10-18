@@ -332,9 +332,7 @@ a { color: var(--accent-2); }
 @media (max-width: 620px) {
   .tabs { gap: 1.25rem; }
   .tabs button { font-size: .78rem; padding: .9rem 0; flex-grow: 1; }
-}
-@media (max-width: 360px) {
-  .tabs button { font-size: .7rem; }
+  .app .site-footer { justify-content: center; }
 }
 
 /* The bottom padding is the gap between the pane and the footer rule: flush,
