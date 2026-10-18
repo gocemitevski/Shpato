@@ -68,8 +68,9 @@
   --shadow-sm: 0 1px 2px rgba(15, 23, 42, .06);
   --shadow: 0 10px 30px rgba(15, 23, 42, .1);
   /* The cue that a card can be scrolled sideways, drawn against its own edge
-     rather than cast outside it. */
-  --shadow-edge: rgba(15, 23, 42, .22);
+     rather than cast outside it. Weak on purpose: it is spread over 2rem, so
+     raising it does not deepen the shade so much as lengthen it. */
+  --shadow-edge: rgba(15, 23, 42, .14);
   --radius: 10px;
   --radius-sm: 6px;
 }
@@ -103,7 +104,7 @@
   --cat-arrVocal-soft: #3a1622;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4);
   --shadow: 0 10px 30px rgba(0, 0, 0, .45);
-  --shadow-edge: rgba(0, 0, 0, .6);
+  --shadow-edge: rgba(0, 0, 0, .38);
 }
 
 /* Any element can adopt a category hue by carrying data-cat. The --cat and
@@ -731,12 +732,12 @@ body.app main { min-height: 0; overflow-y: auto; }
      They are layers of the scroller's own background, and the card is also the
      scroller: the rows are transparent, so the cue reads through them. */
   background-image:
-    linear-gradient(to right, var(--panel) 1rem, transparent),
-    linear-gradient(to left, var(--panel) 1rem, transparent),
+    linear-gradient(to right, var(--panel) 2rem, transparent),
+    linear-gradient(to left, var(--panel) 2rem, transparent),
     linear-gradient(to right, var(--shadow-edge), transparent),
     linear-gradient(to left, var(--shadow-edge), transparent);
   background-position: left center, right center, left center, right center;
-  background-size: 2rem 100%, 2rem 100%, 1rem 100%, 1rem 100%;
+  background-size: 3rem 100%, 3rem 100%, 2rem 100%, 2rem 100%;
   background-repeat: no-repeat;
   background-attachment: local, local, scroll, scroll;
   box-shadow: var(--shadow-sm);

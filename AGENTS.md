@@ -304,10 +304,16 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   nothing else on screen says so — as two `--shadow-edge` gradients against its
   own edges, with two panel-coloured covers riding the content (`local`) over
   them, so a shadow shows only while there is table left in that direction. The
-  covers are opaque across the shadow's own 1rem and fade only after it, or a
-  quarter of the shadow leaks through at the very end it exists to hide. The
-  layers are the scroller's own background, which reads through the transparent
-  rows; print drops them, because paper does not pan.
+  covers are opaque across the shadow's own 2rem and fade only after it, or a
+  quarter of the shadow leaks through at the very end it exists to hide. Shade
+  and cover are both 2rem wide on purpose: the cue is meant to read as a wash
+  rather than as a band with an edge, which is why `--shadow-edge` is as weak as
+  it is — widening it lengthens the wash rather than deepening it. The layers
+  are the scroller's own background, which reads through the transparent rows,
+  and for that same reason the cue stops at the header row: a `th` is opaque so
+  that rows cannot show through the sticky band, and nothing a scroller paints
+  into its own background can paint over its children. Print drops the layers,
+  because paper does not pan.
 - From 1024px up the facet panel is a permanent left pane
   (`clamp(260px, 32vw, 500px)`). Below that it is a disclosure above the table,
   opened from a handle in the toolbar (`#filters-toggle`, the export menu's
