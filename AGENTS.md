@@ -452,7 +452,7 @@ own.
 - **All UI text is bilingual.** Adding a key means adding it to *both* `mk` and
   `en` in `assets/i18n.js`. `t()` falls back to English silently, so a missing
   Macedonian key will not throw — it will just ship English. Keys are currently
-  at parity (186 each).
+  at parity (187 each).
 - **Capitalisation lives in the strings, not in CSS.** A `<select>`'s
   `<option>` does not inherit `text-transform`, so a CSS-capitalised label looks
   right in the table and wrong in a dropdown. Capitalise in `i18n.js`.
