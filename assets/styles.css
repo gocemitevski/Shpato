@@ -1187,8 +1187,7 @@ body.player-open .view { padding-bottom: 18rem; }
 .footer-share {
   display: flex;
   align-items: center;
-  gap: .125rem;
-  margin-left: auto;
+  gap: .5rem;
 }
 /* 1.5rem square, the smallest target that still clears the 24px minimum: every
    pixel of footer height is a pixel the catalogue cannot show. */
