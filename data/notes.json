@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 519,
-  "videos": 161,
+  "notes": 518,
+  "videos": 160,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "notes": [
@@ -1703,17 +1703,6 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
-  },
-  {
-   "id": "arrThemes-0033",
-   "category": "arrThemes",
-   "title": "Виделина",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 39,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "3:52"
   },
   {
    "id": "arrThemes-0034",

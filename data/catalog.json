@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 519,
-  "videos": 161,
+  "notes": 518,
+  "videos": 160,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -4244,22 +4244,19 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": "s36iQ9x2-Vw",
+   "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 39,
    "flags": [
     "missing-duration",
     "missing-signature",
-    "missing-performer",
-    "video-approximate"
+    "missing-performer"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrThemes-0033",
    "warnCount": 0,
-   "search": "виделина григор копров videlina grigor koprov",
-   "videoLengthSec": 232,
-   "videoApprox": true
+   "search": "виделина григор копров videlina grigor koprov"
   },
   {
    "category": "arrThemes",
