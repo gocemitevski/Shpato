@@ -1,18 +1,21 @@
 # The catalogue is one document, served at the root. The state the app keeps in
 # the URL is a fragment (#tab=...&q=...), and a fragment is not a page, so there
-# is nothing else to crawl. /index.html is the same file Pages serves at /, so
-# crawlers are kept off that copy; the page's own canonical names the root.
+# is nothing else here to crawl.
 #
-# assets/ and data/ are deliberately absent: Google renders the page by fetching
-# its scripts, and blocking either would only cost it the catalogue it is here to
-# index. The paths below are never loaded by the app.
+# Nothing is disallowed. /index.html is the same file Pages serves at /, and a
+# rule naming it reads as "the root is blocked" to a fetcher that normalises a
+# directory URL into its index document: LinkedIn's Post Inspector refused to
+# scrape https://shpato.gocemitevski.com/ over exactly that line. The page's own
+# canonical is what keeps the pair together, and a disallowed URL cannot be seen
+# to canonicalise anywhere.
+#
+# sources/, tools/, AGENTS.md and README.md are not pages either, and are left
+# alone for the same kind of reason: nothing links them and the sitemap lists one
+# URL, so no crawler reaches them anyway, and a rule is one more thing to
+# mis-read. assets/ and data/ are absent for the opposite reason: Google renders
+# the page by fetching its scripts, and blocking either would only cost it the
+# catalogue it is here to index.
 
 User-agent: *
 Allow: /
-Disallow: /index.html
-Disallow: /tools/
-Disallow: /sources/
-Disallow: /AGENTS.md
-Disallow: /README.md
-
 Sitemap: https://shpato.gocemitevski.com/sitemap.xml

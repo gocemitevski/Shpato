@@ -661,11 +661,17 @@ the privacy notice above; keep the canonical and absolute image URLs in step wit
 the domain if either changes.
 
 Pages serves `index.html` at both `/` and `/index.html` with no redirect, so
-there are two URLs for one document. The canonical names the root; `robots.txt`
-keeps crawlers off `/index.html` so no audit has to reconcile the pair, and it
-deliberately does *not* disallow `assets/` or `data/`, which Google fetches to
-render the page. `sitemap.xml` lists the one URL — the tabs and the search live
-in the fragment, and a fragment is not a page. The two `tools/*.html` render
-targets are published like everything else, so each carries
-`<meta name="robots" content="noindex">`; they are not pages and want no
-canonical.
+there are two URLs for one document. The canonical names the root, and
+`robots.txt` disallows nothing at all. A rule naming the index document reads as
+"the root is blocked" to a fetcher that normalises a directory URL into it —
+LinkedIn's Post Inspector refused to scrape `https://shpato.gocemitevski.com/`
+over exactly that line — and a disallowed URL cannot be seen to canonicalise
+anywhere, so the pair is the canonical's to reconcile. The paths that are not
+pages (`sources/`, `tools/`, `AGENTS.md`, `README.md`) are left alone for the
+same kind of reason: nothing links them, so no crawler reaches them anyway, and a
+rule is one more thing to mis-read. `assets/` and `data/` are absent for the
+opposite reason — Google fetches them to render the page. `sitemap.xml` lists the
+one URL: the tabs and the search live in the fragment, and a fragment is not a
+page. The two `tools/*.html` render targets are published like everything else,
+so each carries `<meta name="robots" content="noindex">`; they are not pages and
+want no canonical.
