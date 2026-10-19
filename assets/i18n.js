@@ -138,7 +138,7 @@ window.I18N = {
     "rule.typo-corrected": "Исправена печатна грешка",
     "rule.name-unified": "Обединето име (иницијал → полно име)",
     "rule.performer-split": "Изведувач одделен од улогата/инструментот",
-    "rule.ellipsis-normalized": "Нормализиран триточка (…)",
+    "rule.ellipsis-normalized": "Нормализирана триточка (…)",
     "rule.video-approximate": "Снимка пронајдена автоматски (може да е друго издание)",
 
     "about.caption": "Драган Ѓаконовски – Шпато",
