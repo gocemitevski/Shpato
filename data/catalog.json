@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 520,
-  "videos": 162,
+  "notes": 519,
+  "videos": 161,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -10344,20 +10344,15 @@
    "signature": "З-3815/2",
    "signatureRaw": "З-3815/2",
    "collection": "З",
-   "video": "b4_N0C-wF1U",
+   "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 239,
-   "flags": [
-    "video-approximate"
-   ],
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0233",
    "warnCount": 0,
-   "search": "во ноќта виолета томовска кочо петровски з-3815/2 vo nokjta violeta tomovska kocho petrovski z-3815/2",
-   "videoLengthSec": 221,
-   "videoDeltaSec": 44,
-   "videoApprox": true
+   "search": "во ноќта виолета томовска кочо петровски з-3815/2 vo nokjta violeta tomovska kocho petrovski z-3815/2"
   },
   {
    "category": "arrVocal",
