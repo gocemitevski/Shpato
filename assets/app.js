@@ -172,7 +172,13 @@
     if (i !== -1) return 60 + i;
     i = DIGIT_ORDER.indexOf(ch);
     if (i !== -1) return 10 + i;
-    return 1;
+    // A space is the lightest separator, other punctuation a step above it:
+    // ICU puts "Ти и јас" before "Ти, ти, ти", and collapsing both to one rank
+    // would reverse that and the "Еден човек ..." pair with it.
+    if (ch === " ") return 1;
+    if (ch >= "\u0400" && ch <= "\u04ff") return 55;
+    if (ch < "\u0080") return 2;
+    return 90;
   }
   function collateFold(s) {
     return (s || "").toLowerCase().replace(/[^\x00-\x7f]/g, function (ch) {
