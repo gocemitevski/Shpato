@@ -470,7 +470,7 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   keeps the whole pane; open, `.layout:has(.filters:not([hidden]))` splits it
   45/55 so neither can push the other out of sight. The panel takes the smaller
   share because it scrolls inside its own half and the table does not. The
-  collection facet carries a `.facet-note` under its list: its values are MRTV
+  collection facet carries a `.facet-note` above its list: its values are MRTV
   phonotheque shelf marks, and the monograph the catalogue copies them from
   prints them with no key, so the note says so rather than guessing at an
   expansion.

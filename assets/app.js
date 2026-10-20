@@ -306,7 +306,7 @@
       var note = document.createElement("p");
       note.className = "facet-note";
       note.textContent = t(noteKey);
-      body.appendChild(note);
+      body.insertBefore(note, list);
     }
 
     var filter = body.querySelector(".facet-filter");
