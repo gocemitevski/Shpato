@@ -141,11 +141,52 @@
         if (bv === null) return -1;
       }
       if (typeof av === "string" || typeof bv === "string") {
-        av = av || ""; bv = bv || "";
-        return av.localeCompare(bv, "mk") * dir;
+        return compareText(av, bv) * dir;
       }
       return ((av || 0) - (bv || 0)) * dir;
     });
+  }
+
+  // Sorting is done here, not by Intl. This Chrome's ICU build has no `mk`:
+  // supportedLocalesOf(["mk"]) is empty and "mk" silently resolves to en-US,
+  // so it puts Latin before Cyrillic and reads Ѓ Ќ Љ Њ Џ Ѕ as plain Cyrillic,
+  // while Firefox applies the real alphabet — the two browsers put different
+  // works first (Moon River against Авизо). A fixed collation instead: the
+  // Macedonian alphabet, then Latin, with digits and punctuation ahead.
+  var MK_ORDER = "абвгдѓежзѕијклљмнњопрстќуфхцчџш";
+  var LATIN_ORDER = "abcdefghijklmnopqrstuvwxyz";
+  var DIGIT_ORDER = "0123456789";
+  // Accents that Macedonian titles and foreign names actually carry ("сè" is
+  // in the catalogue), folded to the letter they sit on.
+  var LATIN_FOLD = {
+    "à": "a", "á": "a", "â": "a", "ä": "a", "å": "a", "æ": "ae", "ç": "c",
+    "è": "e", "é": "e", "ê": "e", "ë": "e", "ì": "i", "í": "i", "î": "i",
+    "ï": "i", "ñ": "n", "ò": "o", "ó": "o", "ô": "o", "ö": "o", "ø": "o",
+    "ù": "u", "ú": "u", "û": "u", "ü": "u", "ý": "y", "š": "s", "ž": "z",
+    "č": "c", "ć": "c", "đ": "d"
+  };
+  function collationRank(ch) {
+    var i = MK_ORDER.indexOf(ch);
+    if (i !== -1) return 20 + i;
+    i = LATIN_ORDER.indexOf(ch);
+    if (i !== -1) return 60 + i;
+    i = DIGIT_ORDER.indexOf(ch);
+    if (i !== -1) return 10 + i;
+    return 1;
+  }
+  function collateFold(s) {
+    return (s || "").toLowerCase().replace(/[^\x00-\x7f]/g, function (ch) {
+      return LATIN_FOLD[ch] || ch;
+    });
+  }
+  function compareText(a, b) {
+    a = collateFold(a); b = collateFold(b);
+    var n = Math.min(a.length, b.length);
+    for (var i = 0; i < n; i++) {
+      var d = collationRank(a.charAt(i)) - collationRank(b.charAt(i));
+      if (d) return d;
+    }
+    return a.length - b.length || (a < b ? -1 : a > b ? 1 : 0);
   }
 
   // Counts per facet value, over the whole catalogue, so the numbers do not
@@ -348,13 +389,13 @@
 
     var comps = facetCounts("composer");
     checkboxFacet("facet-composer", "filters.composer",
-      Array.from(comps.keys()).sort(function (a, b) { return a.localeCompare(b, "mk"); })
+      Array.from(comps.keys()).sort(function (a, b) { return compareText(a, b); })
         .map(function (c) { return { value: c, count: comps.get(c) }; }),
       state.composers, "");
 
     var perfs = facetCounts("performer");
     checkboxFacet("facet-performer", "filters.performer",
-      Array.from(perfs.keys()).sort(function (a, b) { return a.localeCompare(b, "mk"); })
+      Array.from(perfs.keys()).sort(function (a, b) { return compareText(a, b); })
         .map(function (p) { return { value: p, count: perfs.get(p) }; })
         .sort(function (a, b) { return b.count - a.count; }),
       state.performers, "");

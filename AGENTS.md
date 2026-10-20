@@ -616,6 +616,13 @@ own.
 - Transliteration exists twice on purpose: `toLatin()` in `app.js` normalises
   the *query*, `to_latin()` in `build.py` bakes the *index* (`rec.search`, which
   is built at build time). Change one and check the other, or search breaks.
+- Sorting is `compareText()` in `app.js`, not `localeCompare()`. Chrome's ICU
+  build here has no `mk`: `supportedLocalesOf(["mk"])` is empty and `"mk"`
+  silently resolves to `en-US`, so it puts Latin before Cyrillic and reads
+  Ѓ Ќ Љ Њ Џ Ѕ as plain Cyrillic, while Firefox applies the real alphabet — the
+  two browsers opened the catalogue on different works. The comparator is the
+  Macedonian alphabet in order, then Latin, with punctuation and digits ahead;
+  it is the reason the table and the facet lists agree everywhere.
 - Commit messages are imperative mood, sentence case, no prefix.
 
 ## Accessibility
