@@ -660,6 +660,13 @@ html.boot-foot .site-footer { visibility: hidden; }
 
 .facet-body { padding-bottom: 1rem; }
 
+.facet-note {
+  margin: .55rem .4rem 0;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.45;
+}
+
 .facet-filter {
   width: 100%;
   margin-bottom: .5rem;

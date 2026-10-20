@@ -469,7 +469,11 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   `aria-expanded` + `hidden` idiom: no modal, no focus trap). Closed, the table
   keeps the whole pane; open, `.layout:has(.filters:not([hidden]))` splits it
   45/55 so neither can push the other out of sight. The panel takes the smaller
-  share because it scrolls inside its own half and the table does not.
+  share because it scrolls inside its own half and the table does not. The
+  collection facet carries a `.facet-note` under its list: its values are MRTV
+  phonotheque shelf marks, and the monograph the catalogue copies them from
+  prints them with no key, so the note says so rather than guessing at an
+  expansion.
 - The width is the script's business too: `matchMedia("(min-width: 1024px)")`
   hands the panel over — wide, it is simply there and the handle is hidden;
   narrow, the handle shows and the panel starts closed. That width is written out
@@ -539,7 +543,7 @@ own.
 - **All UI text is bilingual.** Adding a key means adding it to *both* `mk` and
   `en` in `assets/i18n.js`. `t()` falls back to English silently, so a missing
   Macedonian key will not throw — it will just ship English. Keys are currently
-  at parity (188 each).
+  at parity (189 each).
 - **Capitalisation lives in the strings, not in CSS.** A `<select>`'s
   `<option>` does not inherit `text-transform`, so a CSS-capitalised label looks
   right in the table and wrong in a dropdown. Capitalise in `i18n.js`.

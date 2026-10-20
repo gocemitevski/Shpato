@@ -278,7 +278,7 @@
     return details.querySelector(".facet-body");
   }
 
-  function checkboxFacet(container, titleKey, entries, selectedSet, noneLabel, defaultOpen) {
+  function checkboxFacet(container, titleKey, entries, selectedSet, noneLabel, defaultOpen, noteKey) {
     var el = document.getElementById(container);
     var open = facetOpenState[container];
     if (open === undefined) open = !!defaultOpen || selectedSet.size > 0;
@@ -300,6 +300,14 @@
         "<span>" + esc(label) + '</span><span class="count">' + e.count + "</span></label>";
     }).join("");
     body.appendChild(list);
+
+    // A provenance line under a facet whose values are not self-explanatory.
+    if (noteKey) {
+      var note = document.createElement("p");
+      note.className = "facet-note";
+      note.textContent = t(noteKey);
+      body.appendChild(note);
+    }
 
     var filter = body.querySelector(".facet-filter");
     if (filter) {
@@ -336,7 +344,7 @@
     var cols = facetCounts("collection");
     checkboxFacet("facet-collection", "filters.collection",
       Array.from(cols.keys()).sort().map(function (c) { return { value: c, count: cols.get(c) }; }),
-      state.collections, t("common.unknown"));
+      state.collections, t("common.unknown"), undefined, "filters.collectionNote");
 
     var comps = facetCounts("composer");
     checkboxFacet("facet-composer", "filters.composer",
