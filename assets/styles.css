@@ -383,10 +383,6 @@ body.app {
   height: 100vh;
   height: 100dvh;
   overflow: hidden;
-  /* Exactly the height of the consent bar, measured in app.js: the bar is fixed
-     to the viewport, and without this the footer would end up behind it. It is
-     0 until the bar is up, and a full shell minus a bar is still a full shell. */
-  padding-bottom: var(--consent-h, 0px);
 }
 body.app main { min-height: 0; overflow-y: auto; }
 
@@ -397,9 +393,8 @@ body.app main { min-height: 0; overflow-y: auto; }
    removed by app.js: boot-shell once the labels are in, boot-foot once the
    catalogue has rendered, because on a phone the footer sits where 433 rows are
    about to arrive. Never classes on the elements themselves: scripting off means
-   they are never added, and the shell is served as it was. The consent bar and
-   the skip link stay visible throughout — the bar has to be answerable whether
-   or not the app has finished. */
+   they are never added, and the shell is served as it was. The skip link stays
+   visible throughout. */
 html.boot-shell .site-header,
 html.boot-shell .tabs-nav,
 html.boot-shell #main,
@@ -1149,7 +1144,6 @@ code.raw {
 .privacy h3 { font-size: .95rem; margin: 1.4rem 0 .5rem; }
 .privacy h3:first-child { margin-top: 0; }
 .privacy p { margin: 0 0 .9rem; }
-.privacy-state { color: var(--muted); font-size: .85rem; }
 
 /* ---------------------------------------------------------------- drawer */
 .drawer { position: fixed; inset: 0; z-index: 50; }
@@ -1278,10 +1272,7 @@ code.raw {
 .player {
   position: fixed;
   right: clamp(1rem, 4vw, 2.5rem);
-  /* Above the consent bar when both are up, rather than over it: the bar's own
-     buttons sit at the right, which is exactly where the player docks, and an
-     undecided reader has to be able to answer the bar while the work plays. */
-  bottom: calc(1rem + var(--consent-h, 0px));
+  bottom: 1rem;
   z-index: 60;
   width: min(340px, calc(100vw - 2rem));
   background: var(--panel);
@@ -1318,47 +1309,9 @@ code.raw {
 
 /* Keep the last rows reachable while the player is open. The room is made
    inside the scrolling table, not by padding main — padding main would make
-   the shell scroll to reveal nothing but itself. The bar's height comes on top
-   of the player's, since the player now stands above the bar. */
-body.player-open .table-wrap { padding-bottom: calc(18rem + var(--consent-h, 0px)); }
-body.player-open .view { padding-bottom: calc(18rem + var(--consent-h, 0px)); }
-
-/* --------------------------------------------------------------- consent */
-/* The analytics bar. It is fixed to the viewport rather than a row of the shell
-   because on a phone the shell has stood down and the document scrolls: a bar in
-   the flow would sit at the end of the catalogue and be seen only by scrolling.
-   body.app therefore gives up exactly its height (--consent-h, measured in
-   app.js) instead of being covered by it — the same bargain main's bottom
-   padding strikes with the footer. It is first in the document so a keyboard
-   reader meets it before 433 rows, and its controls are buttons, not links: they
-   change the page's state rather than navigating anywhere. */
-.consent {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 30;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: .6rem 1.25rem;
-  padding: .85rem clamp(1rem, 4vw, 2.5rem);
-  background: var(--panel);
-  border-top: 1px solid var(--line);
-  box-shadow: var(--shadow);
-  animation: consent-in .2s ease;
-}
-@keyframes consent-in { from { transform: translateY(100%); } to { transform: translateY(0); } }
-.consent-body { min-width: 0; flex: 1 1 30rem; max-width: 68ch; }
-.consent h2 { margin: 0 0 .2rem; font-size: .95rem; }
-.consent p { margin: 0; color: var(--muted); font-size: .85rem; }
-.consent-actions { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
-/* The allow button is the one the reader is expected to reach for, so it is the
-   only tinted control in the app: --accent-soft with --accent on it, which is
-   the pair the category tags already use on both themes. */
-.consent-allow { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
-.consent-allow:hover { background: var(--accent-soft); color: var(--accent); }
+   the shell scroll to reveal nothing but itself. */
+body.player-open .table-wrap { padding-bottom: 18rem; }
+body.player-open .view { padding-bottom: 18rem; }
 
 /* --------------------------------------------------------------- footer */
 .site-footer {
@@ -1420,11 +1373,10 @@ body.player-open .view { padding-bottom: calc(18rem + var(--consent-h, 0px)); }
   .player { animation: none; }
   .bar-fill { animation: none; }
   .pan-cue { transition: none; }
-  .consent { animation: none; }
 }
 
 @media print {
-  .tabs, .toolbar, .filters, .lang-toggle, .theme-toggle, .drawer, .player, .site-footer, .consent { display: none !important; }
+  .tabs, .toolbar, .filters, .lang-toggle, .theme-toggle, .drawer, .player, .site-footer { display: none !important; }
   /* The shell is a screen layout. Unless it is undone here, the printer gets a
      single clipped viewport of a scroll pane instead of the whole catalogue. */
   body.app { display: block; height: auto; min-height: 0; overflow: visible; padding-bottom: 0; }

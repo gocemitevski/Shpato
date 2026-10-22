@@ -256,7 +256,6 @@
     });
 
     renderShareLinks();
-    renderConsent();
 
     document.querySelectorAll("#tabs button").forEach(function (btn) {
       var tab = btn.getAttribute("data-tab");
@@ -1101,123 +1100,38 @@
     for (var i = 0; i < wraps.length; i++) syncPanCue(wraps[i]);
   }
 
-  // --------------------------------------------------------------- consent
-  // Consent rather than a notice: nothing is fetched from Google until the
-  // reader allows it, and the Consent Mode defaults in index.html keep the tag
-  // refused even if something loads it earlier. The decision is remembered in
-  // localStorage, and withdrawal has to be as easy as giving it — the notice
-  // carries the same choice — so it also clears what the tag left behind.
-  var CONSENT_KEY = "shpato-consent";
-  var GA_ID = "G-Z2QYKW1QNC";
-  var analyticsLoaded = false;
-  var consentChoice = null;
-
-  function readConsent() {
-    try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; }
-  }
-
-  function writeConsent(value) {
-    consentChoice = value;
-    try { localStorage.setItem(CONSENT_KEY, value); } catch (e) {}
-  }
-
-  function analyticsConsent(granted) {
-    gtag("consent", "update", { analytics_storage: granted ? "granted" : "denied" });
-    if (!granted) { clearAnalyticsCookies(); return; }
-    if (analyticsLoaded) return;
-    analyticsLoaded = true;
-    gtag("js", new Date());
-    gtag("config", GA_ID);
-    var tag = document.createElement("script");
-    tag.async = true;
-    tag.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
-    document.head.appendChild(tag);
-  }
-
-  // Withdrawal has to stop the processing, not just tell it to stop using
-  // storage: a tag that is already in the page goes on sending cookieless pings
-  // after `analytics_storage: denied`, and reloading is the one reliable way to
-  // take it out. The choice is stored first, so the page comes back refused, with
-  // no bar, and the browser's own scroll restoration puts the reader back where
-  // they were.
-  function withdrawAnalytics() {
-    analyticsConsent(false);
-    if (analyticsLoaded) location.reload();
-  }
-
-  // The tag takes the registrable domain when it can, so "the host" is not
-  // enough: both are tried, each in its leading-dot form as well, which a
-  // browser treats as a different cookie. An empty domain clears the host-only
-  // one. None of this runs unless a cookie is there to clear.
-  function cookieDomains() {
+  // ------------------------------------------------------------- analytics
+  // Matomo is loaded from index.html itself: the tracking code is part of the
+  // shell, not of the app, so a deep link is counted even if the catalogue is
+  // slow to arrive. What is left here is the cleanup of the Google tag this
+  // page used to carry: the old consent decision and the property-specific
+  // _ga cookie it set. The generic _ga and _gid cookies are shared with
+  // www.gocemitevski.com's Google Analytics on the same registrable domain, so
+  // they are left alone; deleting them would break that property.
+  function clearLegacyAnalytics() {
+    try { localStorage.removeItem("shpato-consent"); } catch (e) {}
     var host = location.hostname;
-    if (!host) return [""];
+    if (!host) return;
     var bases = [host];
     var parts = host.split(".");
     if (parts.length > 2) bases.push(parts.slice(-2).join("."));
-    var out = [""];
-    bases.forEach(function (b) { out.push(b); out.push("." + b); });
-    return out;
-  }
-
-  function clearAnalyticsCookies() {
-    var all = document.cookie ? document.cookie.split(";") : [];
-    var names = [];
-    all.forEach(function (c) {
-      var name = c.split("=")[0].trim();
-      if (name.indexOf("_ga") === 0) names.push(name);
-    });
-    if (!names.length) return;
-    var domains = cookieDomains();
-    names.forEach(function (name) {
-      domains.forEach(function (domain) {
-        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/" +
-          (domain ? "; domain=" + domain : "");
-      });
+    // The tag took the registrable domain when it could, so clearing only the
+    // host would leave a second copy behind: both forms are written, each with
+    // and without the leading dot, which a browser treats as a different cookie.
+    // Only the old property cookie is touched; the shared _ga/_gid cookies are
+    // still used by www.gocemitevski.com's Google Analytics.
+    var domains = [""];
+    bases.forEach(function (b) { domains.push(b); domains.push("." + b); });
+    if (document.cookie.indexOf("_ga_G-Z2QYKW1QNC=") === -1) return;
+    domains.forEach(function (domain) {
+      document.cookie = "_ga_G-Z2QYKW1QNC=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/" +
+        (domain ? "; domain=" + domain : "");
     });
   }
 
-  // The bar is fixed to the viewport, so the shell gives up exactly its height
-  // or the footer would sit behind it: one viewport minus that padding is still
-  // a whole shell, just a shorter one, and on a phone it is space at the end of
-  // the document instead.
-  function sizeConsentSpace() {
-    var el = document.getElementById("consent");
-    var h = el.hidden ? 0 : Math.ceil(el.getBoundingClientRect().height);
-    document.body.style.setProperty("--consent-h", h + "px");
-  }
-
-  function renderConsent() {
-    var line = document.getElementById("privacy-state");
-    if (line) {
-      line.textContent = t(consentChoice === "granted" ? "privacy.granted"
-        : consentChoice === "denied" ? "privacy.denied" : "privacy.undecided");
-    }
-    sizeConsentSpace();
-  }
-
-  function showConsent() {
-    document.getElementById("consent").hidden = false;
-    sizeConsentSpace();
-  }
-
-  function decideConsent(granted) {
-    writeConsent(granted ? "granted" : "denied");
-    document.getElementById("consent").hidden = true;
-    renderConsent();
-    if (granted) analyticsConsent(true);
-    else withdrawAnalytics();
-  }
-
-  // Reached from the notice, which is where a reader looks to change their mind.
-  function reopenConsent() {
-    showConsent();
-    document.getElementById("consent-accept").focus();
-  }
-
-  // The notice is a view with no tab in the strip, so both doors into it move
-  // focus to its heading: a screen reader then announces the region it has just
-  // landed in, which nothing about the tab strip can do for it.
+  // The notice is a view with no tab in the strip, so the footer's door into it
+  // moves focus to its heading: a screen reader then announces the region it has
+  // just landed in, which nothing about the tab strip can do for it.
   function openPrivacy() {
     setTab("privacy");
     persist();
@@ -1225,9 +1139,9 @@
   }
 
   // The controls the shell needs before the catalogue is in: the tab strip, the
-  // theme and language toggles, and the two doors into the consent bar and the
-  // privacy notice. They are bound first, so a reader can answer the bar, or
-  // switch the theme, in the moment between the shell and the table.
+  // theme and language toggles, and the footer's door into the privacy notice.
+  // They are bound first, so a reader can switch the theme or open the notice in
+  // the moment between the shell and the table.
   function bindChrome() {
     document.getElementById("tabs").addEventListener("click", function (e) {
       var btn = e.target.closest("button[data-tab]");
@@ -1266,13 +1180,7 @@
       if (btn) { applyTheme(btn.getAttribute("data-theme")); renderStatic(); }
     });
 
-    document.getElementById("consent-accept").addEventListener("click", function () { decideConsent(true); });
-    document.getElementById("consent-decline").addEventListener("click", function () { decideConsent(false); });
-    document.getElementById("consent-more").addEventListener("click", openPrivacy);
     document.getElementById("privacy-link").addEventListener("click", openPrivacy);
-    document.getElementById("privacy-choice").addEventListener("click", reopenConsent);
-    // The bar is fixed and its height depends on the width the text wraps at.
-    window.addEventListener("resize", sizeConsentSpace);
   }
 
   // Everything else: the controls that only mean something with a catalogue
@@ -1397,7 +1305,6 @@
     // How wide the table is comes from the font, which can land after the first
     // render, so what can be panned is not settled until it has.
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncPanCues);
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(sizeConsentSpace);
   }
 
   function renderDrawerStatic() { if (state.selected) renderDrawer(); }
@@ -1409,19 +1316,14 @@
   // catalogue reads in behind it. On a phone that is what moves first paint from
   // 2.7 s to about one, and what stops the shell shifting when the labels land.
   window.SHPATO_STARTED = true;
-  consentChoice = readConsent();
+  clearLegacyAnalytics();
   syncThemeColor();
   deserializeShell();
   syncFiltersHandle();
   showView(state.tab);
   renderStatic();
   bindChrome();
-  // Last, so a reader who has already decided never sees the bar flash. Without
-  // a stored decision it stays up, and nothing is requested from Google.
-  if (consentChoice === "granted") analyticsConsent(true);
-  else if (consentChoice !== "denied") showConsent();
-  // After the bar, so the room it takes is already given up: the reveal is the
-  // paint the reader sees, and nothing may move after it.
+  // The reveal is the paint the reader sees, and nothing may move after it.
   document.documentElement.classList.remove("boot-shell");
   bootData();
 

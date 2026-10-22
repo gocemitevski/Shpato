@@ -22,7 +22,7 @@ as plain `<script>` globals.
 ## Repo map
 
 ```
-index.html              the whole app shell (five views, drawer, consent bar)
+index.html              the whole app shell (five views, drawer)
 assets/styles.css       theme tokens + all styling
 assets/i18n.js          every user-visible string, mk + en
 assets/app.js           all behaviour
@@ -61,8 +61,8 @@ puts `boot-shell` and `boot-foot` on `<html>`, and those classes hold the shell
 
 - **phase one**, when `app.min.js` executes: the language, the theme, the
   filters handle, the labels — `deserializeShell()` reads the tab, query and
-  sort out of the hash, then `showView()` and `renderStatic()` — and the consent
-  bar. Then `boot-shell` comes off, and *that* paint is the reader's first look
+  sort out of the hash, then `showView()` and `renderStatic()`. Then
+  `boot-shell` comes off, and *that* paint is the reader's first look
   at the page: right view, right labels, nothing left to move.
 - **phase two**, once the catalogue has arrived: `adoptData()`, the full
   `deserialize()`, the event handlers, and the table. `boot-foot` comes off
@@ -264,8 +264,8 @@ already has a video is never overwritten or re-searched. The finder reuses
 `to_latin()` from `build.py` rather than growing a third transliteration.
 
 Where the pass over the 361 works that were still unlinked left the catalogue:
-162 of 433 works carry a link, 120 of them machine-found — vocal 38/74,
-instrumental 23/55, arrThemes 9/43, arrVocal 92/261 — with the rest of the
+160 of 433 works carry a link, 118 of them machine-found — vocal 38/74,
+instrumental 23/55, arrThemes 8/43, arrVocal 91/261 — with the rest of the
 catalogue offered as a YouTube search from the drawer instead. A machine-found
 link that is not within `VIDEO_DURATION_TOLERANCE` of the catalogue's timing is
 marked, so the reader is told, and the five links a re-audit refused are simply
@@ -329,50 +329,66 @@ the tab states what they collectively support.
 
 ## Analytics and the privacy notice
 
-`index.html` carries a Google Analytics 4 tag (`G-Z2QYKW1QNC`), and it is not
-loaded until the reader allows it. The `<head>` sets Consent Mode's defaults with
-every signal denied, and it is `assets/app.js` that fetches `gtag.js` at all: the
-decision lives in `localStorage["shpato-consent"]`, an undecided reader gets the
-bar, `granted` loads the tag, `denied` means nothing is ever requested from
-Google. Withdrawing is as easy as granting — `privacy.choice` reopens the bar
-from the notice — and it clears the `_ga*` cookies the tag left, on the host and
-on the registrable domain, because the tag takes the registrable one when it can.
-If the tag had already loaded it also reloads the page, since a tag in memory
-cannot be taken out and consent-denied GA goes on sending cookieless pings; the
-choice is stored first, so the reload comes back refused, with no bar. Do not
-"simplify" this into an eager tag plus `consent update`: that still pings Google
-before a choice, which is the thing the bar exists to prevent.
+`index.html` carries the Matomo tracker (`analytics.gocemitevski.com`, site `3`)
+in the `<head>`, loaded `async` and only when `location.protocol` is `http:` or
+`https:`. The guard is not decoration: the app must keep working from `file://`,
+and on `file://` the absolute analytics URL would track a local read of the
+catalogue. There is no `<noscript>` pixel — with scripting off the shell is
+visible but empty (no labels, no table) and there is no catalogue to read — so
+a no-JS reader is not counted.
 
-The bar is `position: fixed` rather than a row of the shell, because on a phone
-the shell has stood down and the document scrolls: in the flow it would sit at
-the end of the catalogue and only be met by scrolling there. What the shell gives
-up instead is exactly its height, measured into `--consent-h` and spent as
-`body.app`'s bottom padding — the same bargain `main`'s bottom padding strikes
-with the footer, and the reason the footer is never behind the bar. It comes
-first in the document so a keyboard reader meets it before 433 rows, while it
-paints at the bottom; its controls are buttons, not links, because they change
-the page's state rather than navigating anywhere. Print drops it, reduced motion
-drops its slide-in, and the drawer makes it inert like the rest of the page.
+The tracking is **cookieless**, in two halves. The instance enforces it (Privacy
+→ Anonymize data → *Force tracking without cookies*), which Matomo bakes into
+the served `matomo.js`; and the page queues `disableCookies` before
+`trackPageView`, so a change on either side alone cannot bring an analytics
+cookie back. `discardHashTag` is queued for the same reason: the catalogue keeps
+its state, search text included, in the fragment, and Matomo would otherwise
+record it as part of the page URL. Both must stay before `trackPageView`, which
+is the first call that reads them. `discardHashTag` is deprecated in Matomo 5
+but still honoured by the served tracker; if it is removed, use `setCustomUrl`
+before `trackPageView`. `enableLinkTracking` is on, so outbound clicks are
+counted too; the privacy notice says so.
+
+`assets/app.js` no longer loads or gates anything. It carries
+`clearLegacyAnalytics()` instead, run once at boot: it removes the old
+`localStorage["shpato-consent"]` and deletes the old property cookie
+`_ga_G-Z2QYKW1QNC` on the host and on the registrable domain, because the tag
+took the registrable one when it could. The generic `_ga` and `_gid` cookies are
+left alone: `www.gocemitevski.com` still uses Google Analytics on the same
+registrable domain, and those cookies are shared. That is what makes "the
+catalogue sets no analytics cookies" true for a reader who visited before the
+change, without breaking the neighbouring property. When www moves
+off Google Analytics, the shared cookies can be cleaned up too.
+
+Do not add the Matomo Tag Manager container alongside this tracker. The container
+already holds a Matomo tag (site 3, PageView, link tracking) and bundles its own
+copy of the tracker, so the pair would create two trackers and two pageviews.
+If Tag Manager is ever wanted for other tags, the Matomo tag inside it has to be
+disabled first, or the tracker removed from `index.html`.
 
 `#view-privacy` is the notice, the one view with no tab of its own: the strip is
-sized for four, so it is reached from the footer's `#privacy-link` and from the
-bar's "What is collected?". Both call `setTab("privacy")` and then put focus on
-its heading, since no tab exists to announce the switch, and its `role` is
-`region` rather than `tabpanel` for the same reason: nothing controls it.
-`setTab` keeps the first tab in the roving tabindex when the active view has no
-tab of its own, or the whole strip would drop out of the tab order; `t("tab.privacy")`
-exists for the document title alone.
+sized for four, so it is reached from the footer's `#privacy-link`. `openPrivacy()`
+calls `setTab("privacy")` and then puts focus on its heading, since no tab exists
+to announce the switch, and its `role` is `region` rather than `tabpanel` for the
+same reason: nothing controls it. `setTab` keeps the first tab in the roving
+tabindex when the active view has no tab of its own, or the whole strip would
+drop out of the tab order; `t("tab.privacy")` exists for the document title
+alone.
 
 Every sentence there is `privacy.*` prose in both languages, like `about.*`, and
 it deliberately carries no "last updated" date: that date would have to be
 hand-edited at every change and would go stale without anything noticing, the
 same reason the build payload has no timestamp. What it says is what is true
-today — GA4's `_ga` cookies last two years, the property's default retention is
-two months, Google Ireland processes and Google LLC receives under the EU–US Data
-Privacy Framework, the player is `youtube-nocookie.com` and fetches nothing until
-a recording is pressed, and the site's own three `localStorage` keys
-(`shpato-theme`, `shpato-lang`, `shpato-consent`) are functional and never
-transmitted. If any of that changes, the notice has to change with it.
+today — the notice states the purpose and the right to object, the raw log is
+promised gone after 180 days, visits are measured without analytics cookies or a
+persistent identifier, nothing is sent to Google for analytics, the player is
+`youtube-nocookie.com` and fetches nothing until a recording is pressed, and the
+two browser settings the page stores (theme and language) are functional and
+never transmitted. The notice deliberately leaves the legal basis out; if one is
+added, update both languages and this paragraph. The 180 days is a promise, not a
+default: it holds only while Matomo's *delete old raw data* is enabled at 180, so
+change the notice if that setting moves. If any of the rest changes, the notice
+has to change with it.
 
 ## The shell
 
@@ -528,10 +544,7 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   away.
 - `body.player-open` reserves the player's room inside `.table-wrap` and `.view`,
   never by padding `main`: padding `main` would make the shell scroll to reveal
-  nothing but itself. The consent bar's height is added to that room, because the
-  player stands above the bar rather than over it: the bar's buttons sit at the
-  right, exactly where the player docks, and an undecided reader has to be able to
-  answer the bar while the work plays.
+  nothing but itself.
 
 The check that matters when touching any of this is positional: with the shell up,
 scroll the table to its end and the header, the tab bar, the facet sidebar and the
@@ -543,7 +556,7 @@ own.
 - **All UI text is bilingual.** Adding a key means adding it to *both* `mk` and
   `en` in `assets/i18n.js`. `t()` falls back to English silently, so a missing
   Macedonian key will not throw — it will just ship English. Keys are currently
-  at parity (189 each).
+  at parity (175 each).
 - **Capitalisation lives in the strings, not in CSS.** A `<select>`'s
   `<option>` does not inherit `text-transform`, so a CSS-capitalised label looks
   right in the table and wrong in a dropdown. Capitalise in `i18n.js`.
@@ -666,9 +679,8 @@ for the bandwidth that decides first paint.
 ## Deployment
 
 GitHub Pages via `CNAME` (`shpato.gocemitevski.com`). Pushing `master`
-publishes the site. `index.html` carries real OG/Twitter tags and a Google tag
-(`G-Z2QYKW1QNC`) that only loads once the reader allows it — see Analytics and
-the privacy notice above; keep the canonical and absolute image URLs in step with
+publishes the site. `index.html` carries real OG/Twitter tags and the Matomo
+tracker described above; keep the canonical and absolute image URLs in step with
 the domain if either changes.
 
 Pages serves `index.html` at both `/` and `/index.html` with no redirect, so
