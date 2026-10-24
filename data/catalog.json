@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 536,
-  "videos": 181,
+  "notes": 535,
+  "videos": 180,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -4680,20 +4680,15 @@
    "signature": "АЗ-51/1",
    "signatureRaw": "АЗ-51/1",
    "collection": "АЗ",
-   "video": "g7oMVWm-MLo",
+   "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 11,
-   "flags": [
-    "video-approximate"
-   ],
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0005",
    "warnCount": 0,
-   "search": "ако отидеш забавен оркестар м. емер аз-51/1 ako otidesh zabaven orkestar m. emer az-51/1",
-   "videoLengthSec": 141,
-   "videoDeltaSec": 79,
-   "videoApprox": true
+   "search": "ако отидеш забавен оркестар м. емер аз-51/1 ako otidesh zabaven orkestar m. emer az-51/1"
   },
   {
    "category": "arrVocal",
