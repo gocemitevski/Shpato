@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 518,
-  "videos": 160,
+  "notes": 537,
+  "videos": 182,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "notes": [
@@ -67,17 +67,6 @@
    "field": "performer",
    "raw": "Љупка Димитровска (со ревиски оркестар на РТВ Љубљана, ар. Никица Калоѓера)",
    "normalized": "Љупка Димитровска"
-  },
-  {
-   "id": "vocal-0010",
-   "category": "vocal",
-   "title": "Даниела",
-   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 16,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "2:37",
-   "normalized": "2:43"
   },
   {
    "id": "vocal-0017",
@@ -283,6 +272,17 @@
    "normalized": ""
   },
   {
+   "id": "vocal-0050",
+   "category": "vocal",
+   "title": "Планината во спомени",
+   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 56,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "3:00",
+   "normalized": "2:08"
+  },
+  {
    "id": "vocal-0052",
    "category": "vocal",
    "title": "Прва љубов",
@@ -370,6 +370,17 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
+  },
+  {
+   "id": "vocal-0071",
+   "category": "vocal",
+   "title": "За тебе е сè",
+   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 77,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "2:05",
+   "normalized": "3:16"
   },
   {
    "id": "instrumental-0001",
@@ -521,6 +532,17 @@
    "field": "performer",
    "raw": "Благоја Чешларов, на труба",
    "normalized": "Благоја Чешларов"
+  },
+  {
+   "id": "instrumental-0013",
+   "category": "instrumental",
+   "title": "Далечен крај",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 19,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "2:25",
+   "normalized": "3:26"
   },
   {
    "id": "instrumental-0015",
@@ -790,6 +812,17 @@
    "normalized": "Трио Лабиш"
   },
   {
+   "id": "instrumental-0037",
+   "category": "instrumental",
+   "title": "Ми вети ти (џез верзија)",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 43,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "8:15",
+   "normalized": "8:39"
+  },
+  {
    "id": "instrumental-0038",
    "category": "instrumental",
    "title": "Мими",
@@ -1043,6 +1076,17 @@
    "severity": "info",
    "raw": "+++",
    "normalized": ""
+  },
+  {
+   "id": "arrThemes-0002",
+   "category": "arrThemes",
+   "title": "Без тебе",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 8,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "2:38",
+   "normalized": "3:46"
   },
   {
    "id": "arrThemes-0003",
@@ -1464,6 +1508,17 @@
    "normalized": ""
   },
   {
+   "id": "arrThemes-0025",
+   "category": "arrThemes",
+   "title": "Почеток на почетокот",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 31,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "",
+   "normalized": "4:38"
+  },
+  {
    "id": "arrThemes-0026",
    "category": "arrThemes",
    "title": "Почнувам да гледам светлина",
@@ -1703,6 +1758,17 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
+  },
+  {
+   "id": "arrThemes-0033",
+   "category": "arrThemes",
+   "title": "Виделина",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 39,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "",
+   "normalized": "4:08"
   },
   {
    "id": "arrThemes-0034",
@@ -2061,6 +2127,28 @@
    "normalized": "З-3531/3"
   },
   {
+   "id": "arrVocal-0001",
+   "category": "arrVocal",
+   "title": "Ана",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 7,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "2:38",
+   "normalized": "3:08"
+  },
+  {
+   "id": "arrVocal-0003",
+   "category": "arrVocal",
+   "title": "Аранхуез",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 9,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "4:05",
+   "normalized": "2:35"
+  },
+  {
    "id": "arrVocal-0004",
    "category": "arrVocal",
    "title": "Ако отидеш",
@@ -2093,6 +2181,17 @@
    "severity": "info",
    "raw": "",
    "normalized": "3:44"
+  },
+  {
+   "id": "arrVocal-0005",
+   "category": "arrVocal",
+   "title": "Ако отидеш",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 11,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "3:40",
+   "normalized": "2:21"
   },
   {
    "id": "arrVocal-0007",
@@ -2218,6 +2317,17 @@
    "normalized": "Христо Крстевски"
   },
   {
+   "id": "arrVocal-0023",
+   "category": "arrVocal",
+   "title": "Детство",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 29,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "3:44",
+   "normalized": "2:17"
+  },
+  {
    "id": "arrVocal-0025",
    "category": "arrVocal",
    "title": "Дождот нека плисне",
@@ -2304,6 +2414,17 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
+  },
+  {
+   "id": "arrVocal-0031",
+   "category": "arrVocal",
+   "title": "Да ме љубиш",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 37,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "2:46",
+   "normalized": "3:55"
   },
   {
    "id": "arrVocal-0032",
@@ -2659,6 +2780,17 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
+  },
+  {
+   "id": "arrVocal-0065",
+   "category": "arrVocal",
+   "title": "Ќе се препознаеш",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 71,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "2:32",
+   "normalized": "3:29"
   },
   {
    "id": "arrVocal-0066",
@@ -3255,6 +3387,17 @@
    "normalized": ""
   },
   {
+   "id": "arrVocal-0100",
+   "category": "arrVocal",
+   "title": "Мојата гитара",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 106,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "",
+   "normalized": "3:45"
+  },
+  {
    "id": "arrVocal-0101",
    "category": "arrVocal",
    "title": "Море в кутивче",
@@ -3455,6 +3598,17 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
+  },
+  {
+   "id": "arrVocal-0115",
+   "category": "arrVocal",
+   "title": "Не ми верувај",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 121,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "",
+   "normalized": "3:15"
   },
   {
    "id": "arrVocal-0116",
@@ -3714,6 +3868,17 @@
    "severity": "info",
    "raw": "",
    "normalized": "2:03"
+  },
+  {
+   "id": "arrVocal-0138",
+   "category": "arrVocal",
+   "title": "Песна за Ана",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 144,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "3:20",
+   "normalized": "3:38"
   },
   {
    "id": "arrVocal-0139",
@@ -4403,6 +4568,17 @@
    "normalized": ""
   },
   {
+   "id": "arrVocal-0181",
+   "category": "arrVocal",
+   "title": "Серенада во ноќта",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 187,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "",
+   "normalized": "3:38"
+  },
+  {
    "id": "arrVocal-0182",
    "category": "arrVocal",
    "title": "Сеќавање",
@@ -4650,6 +4826,17 @@
    "normalized": ""
   },
   {
+   "id": "arrVocal-0195",
+   "category": "arrVocal",
+   "title": "Summer time",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 201,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "",
+   "normalized": "5:36"
+  },
+  {
    "id": "arrVocal-0196",
    "category": "arrVocal",
    "title": "Тага за југ",
@@ -4804,6 +4991,17 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
+  },
+  {
+   "id": "arrVocal-0208",
+   "category": "arrVocal",
+   "title": "Ти си ми драга",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 214,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "",
+   "normalized": "2:28"
   },
   {
    "id": "arrVocal-0209",
@@ -5184,6 +5382,17 @@
    "severity": "info",
    "raw": "",
    "normalized": "2:59"
+  },
+  {
+   "id": "arrVocal-0233",
+   "category": "arrVocal",
+   "title": "Во ноќта",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 239,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "2:57",
+   "normalized": "4:08"
   },
   {
    "id": "arrVocal-0234",
