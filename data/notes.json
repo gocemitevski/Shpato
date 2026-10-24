@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 535,
-  "videos": 180,
+  "notes": 503,
+  "videos": 148,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "notes": [
@@ -44,17 +44,6 @@
    "severity": "info",
    "raw": "2:50",
    "normalized": "2:10"
-  },
-  {
-   "id": "vocal-0008",
-   "category": "vocal",
-   "title": "Далечен крај",
-   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 14,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:40",
-   "normalized": "2:33"
   },
   {
    "id": "vocal-0009",
@@ -372,17 +361,6 @@
    "normalized": ""
   },
   {
-   "id": "vocal-0071",
-   "category": "vocal",
-   "title": "За тебе е сè",
-   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 77,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "2:05",
-   "normalized": "3:16"
-  },
-  {
    "id": "instrumental-0001",
    "category": "instrumental",
    "title": "Балада за Бранка",
@@ -591,17 +569,6 @@
    "normalized": "З-8189"
   },
   {
-   "id": "instrumental-0019",
-   "category": "instrumental",
-   "title": "Идила",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 25,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:00",
-   "normalized": "2:24"
-  },
-  {
    "id": "instrumental-0020",
    "category": "instrumental",
    "title": "Импресија",
@@ -684,28 +651,6 @@
    "normalized": "Зоран Јовановиќ"
   },
   {
-   "id": "instrumental-0025",
-   "category": "instrumental",
-   "title": "Јас не сум ти",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 31,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "7:27",
-   "normalized": "4:19"
-  },
-  {
-   "id": "instrumental-0026",
-   "category": "instrumental",
-   "title": "Кога си сама",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 32,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:06",
-   "normalized": "2:56"
-  },
-  {
    "id": "instrumental-0029",
    "category": "instrumental",
    "title": "Лајт мотив 3",
@@ -740,28 +685,6 @@
    "field": "performer",
    "raw": "К. Божиновски, флејта",
    "normalized": "К. Божиновски"
-  },
-  {
-   "id": "instrumental-0032",
-   "category": "instrumental",
-   "title": "Лени",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 38,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:22",
-   "normalized": "3:34"
-  },
-  {
-   "id": "instrumental-0033",
-   "category": "instrumental",
-   "title": "Лени",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 39,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:18",
-   "normalized": "2:33"
   },
   {
    "id": "instrumental-0034",
@@ -915,17 +838,6 @@
    "normalized": "Голем забавен оркестар"
   },
   {
-   "id": "instrumental-0041",
-   "category": "instrumental",
-   "title": "Молчи една долина",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 47,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:10",
-   "normalized": "2:35"
-  },
-  {
    "id": "instrumental-0042",
    "category": "instrumental",
    "title": "Молчи една долина",
@@ -1033,17 +945,6 @@
    "normalized": "Љупчо Мирковски"
   },
   {
-   "id": "instrumental-0055",
-   "category": "instrumental",
-   "title": "Убава си како музика",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 61,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:11",
-   "normalized": "2:47"
-  },
-  {
    "id": "arrThemes-0001",
    "category": "arrThemes",
    "title": "Авизо",
@@ -1076,17 +977,6 @@
    "severity": "info",
    "raw": "+++",
    "normalized": ""
-  },
-  {
-   "id": "arrThemes-0002",
-   "category": "arrThemes",
-   "title": "Без тебе",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 8,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "2:38",
-   "normalized": "3:46"
   },
   {
    "id": "arrThemes-0003",
@@ -1259,17 +1149,6 @@
    "normalized": ""
   },
   {
-   "id": "arrThemes-0010",
-   "category": "arrThemes",
-   "title": "Еден бакнеж",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 16,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "3:01"
-  },
-  {
    "id": "arrThemes-0012",
    "category": "arrThemes",
    "title": "Како сонцето што зајдува",
@@ -1418,17 +1297,6 @@
    "normalized": "Никола Комовски"
   },
   {
-   "id": "arrThemes-0021",
-   "category": "arrThemes",
-   "title": "Мојата улица",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 27,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "4:50",
-   "normalized": "3:55"
-  },
-  {
    "id": "arrThemes-0022",
    "category": "arrThemes",
    "title": "Мојата драга Валентина",
@@ -1508,17 +1376,6 @@
    "normalized": ""
   },
   {
-   "id": "arrThemes-0025",
-   "category": "arrThemes",
-   "title": "Почеток на почетокот",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 31,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "4:38"
-  },
-  {
    "id": "arrThemes-0026",
    "category": "arrThemes",
    "title": "Почнувам да гледам светлина",
@@ -1576,17 +1433,6 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
-  },
-  {
-   "id": "arrThemes-0027",
-   "category": "arrThemes",
-   "title": "Последна солза",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 33,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "3:29"
   },
   {
    "id": "arrThemes-0028",
@@ -1758,17 +1604,6 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
-  },
-  {
-   "id": "arrThemes-0033",
-   "category": "arrThemes",
-   "title": "Виделина",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 39,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "4:08"
   },
   {
    "id": "arrThemes-0034",
@@ -2216,17 +2051,6 @@
    "normalized": ""
   },
   {
-   "id": "arrVocal-0009",
-   "category": "arrVocal",
-   "title": "Адиос",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 15,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "2:58"
-  },
-  {
    "id": "arrVocal-0013",
    "category": "arrVocal",
    "title": "Бим бам бум",
@@ -2350,17 +2174,6 @@
    "normalized": ""
   },
   {
-   "id": "arrVocal-0028",
-   "category": "arrVocal",
-   "title": "Дојди ми",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 34,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "1:48"
-  },
-  {
    "id": "arrVocal-0029",
    "category": "arrVocal",
    "title": "Држи ме цврсто",
@@ -2392,17 +2205,6 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
-  },
-  {
-   "id": "arrVocal-0031",
-   "category": "arrVocal",
-   "title": "Да ме љубиш",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 37,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "2:46",
-   "normalized": "3:55"
   },
   {
    "id": "arrVocal-0032",
@@ -3365,17 +3167,6 @@
    "normalized": ""
   },
   {
-   "id": "arrVocal-0100",
-   "category": "arrVocal",
-   "title": "Мојата гитара",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 106,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "3:45"
-  },
-  {
    "id": "arrVocal-0101",
    "category": "arrVocal",
    "title": "Море в кутивче",
@@ -3576,17 +3367,6 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
-  },
-  {
-   "id": "arrVocal-0115",
-   "category": "arrVocal",
-   "title": "Не ми верувај",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 121,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "3:15"
   },
   {
    "id": "arrVocal-0116",
@@ -3848,28 +3628,6 @@
    "normalized": "2:03"
   },
   {
-   "id": "arrVocal-0138",
-   "category": "arrVocal",
-   "title": "Песна за Ана",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 144,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:20",
-   "normalized": "3:38"
-  },
-  {
-   "id": "arrVocal-0139",
-   "category": "arrVocal",
-   "title": "Писмо",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 145,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "2:25",
-   "normalized": "3:45"
-  },
-  {
    "id": "arrVocal-0140",
    "category": "arrVocal",
    "title": "Прегрни ме",
@@ -3891,17 +3649,6 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
-  },
-  {
-   "id": "arrVocal-0140",
-   "category": "arrVocal",
-   "title": "Прегрни ме",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 146,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "3:54"
   },
   {
    "id": "arrVocal-0141",
@@ -4136,17 +3883,6 @@
    "normalized": ""
   },
   {
-   "id": "arrVocal-0156",
-   "category": "arrVocal",
-   "title": "Рубин",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 162,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "5:17"
-  },
-  {
    "id": "arrVocal-0157",
    "category": "arrVocal",
    "title": "Разговор",
@@ -4379,17 +4115,6 @@
    "normalized": ""
   },
   {
-   "id": "arrVocal-0172",
-   "category": "arrVocal",
-   "title": "Спомен",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 178,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "2:32"
-  },
-  {
    "id": "arrVocal-0173",
    "category": "arrVocal",
    "title": "Со сонце во око",
@@ -4412,17 +4137,6 @@
    "normalized": ""
   },
   {
-   "id": "arrVocal-0174",
-   "category": "arrVocal",
-   "title": "Симона",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 180,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "3:43"
-  },
-  {
    "id": "arrVocal-0175",
    "category": "arrVocal",
    "title": "Сината лагуна",
@@ -4443,17 +4157,6 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
-  },
-  {
-   "id": "arrVocal-0176",
-   "category": "arrVocal",
-   "title": "Сино во сино",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 182,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "4:12"
   },
   {
    "id": "arrVocal-0178",
@@ -4871,17 +4574,6 @@
    "normalized": ""
   },
   {
-   "id": "arrVocal-0198",
-   "category": "arrVocal",
-   "title": "Татковино",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 204,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:33",
-   "normalized": "3:39"
-  },
-  {
    "id": "arrVocal-0200",
    "category": "arrVocal",
    "title": "Тажната кукла",
@@ -4971,17 +4663,6 @@
    "normalized": ""
   },
   {
-   "id": "arrVocal-0208",
-   "category": "arrVocal",
-   "title": "Ти си ми драга",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 214,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "2:28"
-  },
-  {
    "id": "arrVocal-0209",
    "category": "arrVocal",
    "title": "Твојата прегратка",
@@ -5049,28 +4730,6 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
-  },
-  {
-   "id": "arrVocal-0211",
-   "category": "arrVocal",
-   "title": "Ти и јас",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 217,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "5:22"
-  },
-  {
-   "id": "arrVocal-0214",
-   "category": "arrVocal",
-   "title": "Ти си тој",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 220,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:05",
-   "normalized": "4:57"
   },
   {
    "id": "arrVocal-0215",
@@ -5360,17 +5019,6 @@
    "severity": "info",
    "raw": "",
    "normalized": "2:59"
-  },
-  {
-   "id": "arrVocal-0233",
-   "category": "arrVocal",
-   "title": "Во ноќта",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 239,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "2:57",
-   "normalized": "4:08"
   },
   {
    "id": "arrVocal-0234",
