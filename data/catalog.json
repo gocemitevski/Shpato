@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 537,
-  "videos": 182,
+  "notes": 536,
+  "videos": 181,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -4576,21 +4576,17 @@
    "signature": "З-3531/3",
    "signatureRaw": "Z-3531/3",
    "collection": "З",
-   "video": "ghJ-CILfWGA",
+   "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 7,
    "flags": [
-    "signature-latin-prefix",
-    "video-approximate"
+    "signature-latin-prefix"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0001",
    "warnCount": 0,
-   "search": "ана зоран милосављевиќ димитар масевски з-3531/3 ana zoran milosavljevikj dimitar masevski z-3531/3",
-   "videoLengthSec": 188,
-   "videoDeltaSec": 30,
-   "videoApprox": true
+   "search": "ана зоран милосављевиќ димитар масевски з-3531/3 ana zoran milosavljevikj dimitar masevski z-3531/3"
   },
   {
    "category": "arrVocal",
