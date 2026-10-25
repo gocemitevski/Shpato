@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 502,
-  "videos": 149,
+  "notes": 510,
+  "videos": 157,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "notes": [
@@ -44,6 +44,17 @@
    "severity": "info",
    "raw": "2:50",
    "normalized": "2:10"
+  },
+  {
+   "id": "vocal-0008",
+   "category": "vocal",
+   "title": "Далечен крај",
+   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 14,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "3:40",
+   "normalized": "2:33"
   },
   {
    "id": "vocal-0009",
@@ -569,6 +580,17 @@
    "normalized": "З-8189"
   },
   {
+   "id": "instrumental-0019",
+   "category": "instrumental",
+   "title": "Идила",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 25,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "3:00",
+   "normalized": "2:24"
+  },
+  {
    "id": "instrumental-0020",
    "category": "instrumental",
    "title": "Импресија",
@@ -651,6 +673,17 @@
    "normalized": "Зоран Јовановиќ"
   },
   {
+   "id": "instrumental-0026",
+   "category": "instrumental",
+   "title": "Кога си сама",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 32,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "3:06",
+   "normalized": "2:56"
+  },
+  {
    "id": "instrumental-0029",
    "category": "instrumental",
    "title": "Лајт мотив 3",
@@ -685,6 +718,28 @@
    "field": "performer",
    "raw": "К. Божиновски, флејта",
    "normalized": "К. Божиновски"
+  },
+  {
+   "id": "instrumental-0032",
+   "category": "instrumental",
+   "title": "Лени",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 38,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "3:22",
+   "normalized": "3:34"
+  },
+  {
+   "id": "instrumental-0033",
+   "category": "instrumental",
+   "title": "Лени",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 39,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "3:18",
+   "normalized": "2:33"
   },
   {
    "id": "instrumental-0034",
@@ -838,6 +893,17 @@
    "normalized": "Голем забавен оркестар"
   },
   {
+   "id": "instrumental-0041",
+   "category": "instrumental",
+   "title": "Молчи една долина",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 47,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "3:10",
+   "normalized": "2:35"
+  },
+  {
    "id": "instrumental-0042",
    "category": "instrumental",
    "title": "Молчи една долина",
@@ -943,6 +1009,17 @@
    "field": "performer",
    "raw": "Љупчо Мирковски, труба",
    "normalized": "Љупчо Мирковски"
+  },
+  {
+   "id": "instrumental-0055",
+   "category": "instrumental",
+   "title": "Убава си како музика",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 61,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "3:11",
+   "normalized": "2:47"
   },
   {
    "id": "arrThemes-0001",
@@ -1422,6 +1499,17 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
+  },
+  {
+   "id": "arrThemes-0027",
+   "category": "arrThemes",
+   "title": "Последна солза",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 33,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "",
+   "normalized": "3:29"
   },
   {
    "id": "arrThemes-0028",
