@@ -8,7 +8,7 @@
    "arrVocal": 261
   },
   "notes": 510,
-  "videos": 157,
+  "videos": 158,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -7699,7 +7699,7 @@
    "signature": "З-3880/1",
    "signatureRaw": "З-3880/1",
    "collection": "З",
-   "video": null,
+   "video": "2aCGz-ZwGsc",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 134,
    "flags": [],
@@ -7707,7 +7707,9 @@
    "textFixes": [],
    "id": "arrVocal-0128",
    "warnCount": 0,
-   "search": "охрид син импулси слободан николовски з-3880/1 ohrid sin impulsi slobodan nikolovski z-3880/1"
+   "search": "охрид син импулси слободан николовски з-3880/1 ohrid sin impulsi slobodan nikolovski z-3880/1",
+   "videoLengthSec": 177,
+   "videoDeltaSec": 0
   },
   {
    "category": "arrVocal",
