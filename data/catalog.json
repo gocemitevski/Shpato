@@ -7,7 +7,7 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 503,
+  "notes": 502,
   "videos": 148,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -3449,12 +3449,11 @@
    "signature": "З-1850/2",
    "signatureRaw": "З-1850/2",
    "collection": "З",
-   "video": "JrwBFlKC5s8",
+   "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 13,
    "flags": [
-    "performer-split",
-    "video-approximate"
+    "performer-split"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3467,10 +3466,7 @@
    ],
    "id": "arrThemes-0007",
    "warnCount": 0,
-   "search": "девојката од ипанема димитар маневски жобим з-1850/2 devojkata od ipanema dimitar manevski zhobim z-1850/2",
-   "videoLengthSec": 156,
-   "videoDeltaSec": 6,
-   "videoApprox": true
+   "search": "девојката од ипанема димитар маневски жобим з-1850/2 devojkata od ipanema dimitar manevski zhobim z-1850/2"
   },
   {
    "category": "arrThemes",
@@ -4992,7 +4988,7 @@
    "signature": "З-1442/3",
    "signatureRaw": "З-1442/3",
    "collection": "З",
-   "video": null,
+   "video": "JrwBFlKC5s8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 27,
    "flags": [],
@@ -5000,7 +4996,9 @@
    "textFixes": [],
    "id": "arrVocal-0021",
    "warnCount": 0,
-   "search": "девојката од ипанема импулси жобим з-1442/3 devojkata od ipanema impulsi zhobim z-1442/3"
+   "search": "девојката од ипанема импулси жобим з-1442/3 devojkata od ipanema impulsi zhobim z-1442/3",
+   "videoLengthSec": 156,
+   "videoDeltaSec": 15
   },
   {
    "category": "arrVocal",

@@ -7,7 +7,7 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 503,
+  "notes": 502,
   "videos": 148,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -1068,17 +1068,6 @@
    "field": "performer",
    "raw": "Димитар Маневски, труба",
    "normalized": "Димитар Маневски"
-  },
-  {
-   "id": "arrThemes-0007",
-   "category": "arrThemes",
-   "title": "Девојката од Ипанема",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 13,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "2:30",
-   "normalized": "2:36"
   },
   {
    "id": "arrThemes-0008",
