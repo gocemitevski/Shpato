@@ -8,7 +8,7 @@
    "arrVocal": 261
   },
   "notes": 502,
-  "videos": 148,
+  "videos": 149,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -1035,7 +1035,7 @@
    "signature": "З-2810/3",
    "signatureRaw": "З-2810/3",
    "collection": "З",
-   "video": null,
+   "video": "LlKOOYIhwQ4",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 49,
    "flags": [],
@@ -1043,7 +1043,9 @@
    "textFixes": [],
    "id": "vocal-0043",
    "warnCount": 0,
-   "search": "неповратни дни импулси з-2810/3 nepovratni dni impulsi z-2810/3"
+   "search": "неповратни дни импулси з-2810/3 nepovratni dni impulsi z-2810/3",
+   "videoLengthSec": 175,
+   "videoDeltaSec": 0
   },
   {
    "category": "vocal",
