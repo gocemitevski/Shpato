@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 510,
-  "videos": 158,
+  "notes": 509,
+  "videos": 159,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "notes": [
@@ -3053,17 +3053,6 @@
    "severity": "info",
    "raw": "4:00",
    "normalized": "2:02"
-  },
-  {
-   "id": "arrVocal-0087",
-   "category": "arrVocal",
-   "title": "Маскарада",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 93,
-   "rule": "missing-performer",
-   "severity": "info",
-   "raw": "",
-   "normalized": ""
   },
   {
    "id": "arrVocal-0090",

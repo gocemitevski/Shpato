@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 510,
-  "videos": 158,
+  "notes": 509,
+  "videos": 159,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -6668,25 +6668,25 @@
   {
    "category": "arrVocal",
    "title": "Маскарада",
-   "composer": "Бен Импулси",
-   "performer": "",
+   "composer": "Бен",
+   "performer": "Импулси",
    "performerRole": "",
    "durationSec": 165,
    "durationRaw": "2.45",
    "signature": "З-2534/2",
    "signatureRaw": "З-2534/2",
    "collection": "З",
-   "video": null,
+   "video": "0n2LfYnDG6M",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 93,
-   "flags": [
-    "missing-performer"
-   ],
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0087",
    "warnCount": 0,
-   "search": "маскарада бен импулси з-2534/2 maskarada ben impulsi z-2534/2"
+   "search": "маскарада импулси бен з-2534/2 maskarada impulsi ben z-2534/2",
+   "videoLengthSec": 165,
+   "videoDeltaSec": 0
   },
   {
    "category": "arrVocal",
