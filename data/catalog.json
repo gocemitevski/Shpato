@@ -8,7 +8,7 @@
    "arrVocal": 261
   },
   "notes": 509,
-  "videos": 159,
+  "videos": 160,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -4742,7 +4742,7 @@
    "signature": "АЗ-53/5",
    "signatureRaw": "АЗ-53/5",
    "collection": "АЗ",
-   "video": null,
+   "video": "qNLlAPg23m8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 15,
    "flags": [
@@ -4752,7 +4752,8 @@
    "textFixes": [],
    "id": "arrVocal-0009",
    "warnCount": 0,
-   "search": "адиос љупка апостолова е. мадригера аз-53/5 adios ljupka apostolova e. madrigera az-53/5"
+   "search": "адиос љупка апостолова е. мадригера аз-53/5 adios ljupka apostolova e. madrigera az-53/5",
+   "videoLengthSec": 91
   },
   {
    "category": "arrVocal",
