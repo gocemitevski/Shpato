@@ -8,7 +8,7 @@
    "arrVocal": 261
   },
   "notes": 509,
-  "videos": 160,
+  "videos": 161,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -7493,7 +7493,7 @@
    "signature": "З-2413/1",
    "signatureRaw": "З-2413/1",
    "collection": "З",
-   "video": null,
+   "video": "Vyj1zXdXxvg",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 126,
    "flags": [],
@@ -7501,7 +7501,9 @@
    "textFixes": [],
    "id": "arrVocal-0120",
    "warnCount": 0,
-   "search": "ноември во скопје импулси јане коџабашија з-2413/1 noemvri vo skopje impulsi jane kodjabashija z-2413/1"
+   "search": "ноември во скопје импулси јане коџабашија з-2413/1 noemvri vo skopje impulsi jane kodjabashija z-2413/1",
+   "videoLengthSec": 149,
+   "videoDeltaSec": 0
   },
   {
    "category": "arrVocal",
