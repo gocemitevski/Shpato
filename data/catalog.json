@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 509,
-  "videos": 162,
+  "notes": 507,
+  "videos": 160,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -2893,12 +2893,11 @@
    "signature": "АЗ-49/16",
    "signatureRaw": "АЗ-49/16",
    "collection": "АЗ",
-   "video": "2GUnaOK6ij4",
+   "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 47,
    "flags": [
-    "performer-split",
-    "video-approximate"
+    "performer-split"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2911,11 +2910,7 @@
    ],
    "id": "instrumental-0041",
    "warnCount": 0,
-   "search": "молчи една долина голем забавен оркестар аз-49/16 molchi edna dolina golem zabaven orkestar az-49/16",
-   "videoLengthSec": 155,
-   "videoDeltaSec": 35,
-   "videoApprox": true,
-   "isNew": true
+   "search": "молчи една долина голем забавен оркестар аз-49/16 molchi edna dolina golem zabaven orkestar az-49/16"
   },
   {
    "category": "instrumental",
@@ -2928,12 +2923,11 @@
    "signature": "ПМ-538/1",
    "signatureRaw": "ПМ-538/1",
    "collection": "ПМ",
-   "video": "IUxVcbRp7Vw",
+   "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 48,
    "flags": [
-    "performer-split",
-    "video-approximate"
+    "performer-split"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2946,10 +2940,7 @@
    ],
    "id": "instrumental-0042",
    "warnCount": 0,
-   "search": "молчи една долина христо христовски пм-538/1 molchi edna dolina hristo hristovski pm-538/1",
-   "videoLengthSec": 310,
-   "videoDeltaSec": 104,
-   "videoApprox": true
+   "search": "молчи една долина христо христовски пм-538/1 molchi edna dolina hristo hristovski pm-538/1"
   },
   {
    "category": "instrumental",
