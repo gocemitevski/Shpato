@@ -8,7 +8,7 @@
    "arrVocal": 261
   },
   "notes": 509,
-  "videos": 161,
+  "videos": 162,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -9977,7 +9977,7 @@
    "signature": "З-14421",
    "signatureRaw": "З-14421",
    "collection": "З",
-   "video": null,
+   "video": "tk90axokQPY",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 225,
    "flags": [
@@ -9987,7 +9987,9 @@
    "textFixes": [],
    "id": "arrVocal-0219",
    "warnCount": 1,
-   "search": "туѓо импулси џ. латус з-14421 tugjo impulsi dj. latus z-14421"
+   "search": "туѓо импулси џ. латус з-14421 tugjo impulsi dj. latus z-14421",
+   "videoLengthSec": 129,
+   "videoDeltaSec": 2
   },
   {
    "category": "arrVocal",
