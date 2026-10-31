@@ -304,6 +304,11 @@ def split_performer(value):
     Trailing parentheses (recording dates, accompanying orchestras) and the
     part after the first comma, slash or "со" become the role; the leading
     name is what the performer facet groups by.
+
+    The trailing parentheses are stripped rather than kept: the role is
+    displayed wrapped in brackets by the drawer, so keeping them here renders
+    a recording note as "((сним. 1961, ГЗО на РС))". Brackets belong to the
+    presentation, and the role is a value the export writes out on its own.
     """
     s = clean(value)
     if not s:
@@ -313,7 +318,7 @@ def split_performer(value):
         m = re.search(r"\s*\(([^()]*)\)\s*$", s)
         if not m:
             break
-        role_parts.insert(0, "(" + m.group(1).strip() + ")")
+        role_parts.insert(0, m.group(1).strip())
         s = s[:m.start()].strip()
 
     sep = None
