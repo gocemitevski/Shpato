@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 504,
-  "videos": 157,
+  "notes": 499,
+  "videos": 152,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -2438,21 +2438,15 @@
    "signature": "З-8227/1",
    "signatureRaw": "З-8227/1",
    "collection": "З",
-   "video": "nLT4VOfPqiw",
+   "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 32,
-   "flags": [
-    "video-approximate"
-   ],
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
    "id": "instrumental-0026",
    "warnCount": 0,
-   "search": "кога си сама ро на ртс з-8227/1 koga si sama ro na rts z-8227/1",
-   "videoLengthSec": 176,
-   "videoDeltaSec": 10,
-   "videoApprox": true,
-   "isNew": true
+   "search": "кога си сама ро на ртс з-8227/1 koga si sama ro na rts z-8227/1"
   },
   {
    "category": "instrumental",
@@ -2597,21 +2591,15 @@
    "signature": "З-7474/1",
    "signatureRaw": "З-7474/1",
    "collection": "З",
-   "video": "sl_2PnefVRc",
+   "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 38,
-   "flags": [
-    "video-approximate"
-   ],
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
    "id": "instrumental-0032",
    "warnCount": 0,
-   "search": "лени квартет рибарски з-7474/1 leni kvartet ribarski z-7474/1",
-   "videoLengthSec": 214,
-   "videoDeltaSec": 12,
-   "videoApprox": true,
-   "isNew": true
+   "search": "лени квартет рибарски з-7474/1 leni kvartet ribarski z-7474/1"
   },
   {
    "category": "instrumental",
@@ -2624,21 +2612,15 @@
    "signature": "ПМ-303/1",
    "signatureRaw": "ПМ-303/1",
    "collection": "ПМ",
-   "video": "B5Rl7T7hsh8",
+   "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 39,
-   "flags": [
-    "video-approximate"
-   ],
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
    "id": "instrumental-0033",
    "warnCount": 0,
-   "search": "лени то пм-303/1 leni to pm-303/1",
-   "videoLengthSec": 153,
-   "videoDeltaSec": 45,
-   "videoApprox": true,
-   "isNew": true
+   "search": "лени то пм-303/1 leni to pm-303/1"
   },
   {
    "category": "instrumental",
@@ -3248,12 +3230,11 @@
    "signature": "ПМ-1002/2",
    "signatureRaw": "ПМ-1002/2",
    "collection": "ПМ",
-   "video": "wcq3ai5UW8Y",
+   "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 61,
    "flags": [
-    "performer-split",
-    "video-approximate"
+    "performer-split"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3266,11 +3247,7 @@
    ],
    "id": "instrumental-0055",
    "warnCount": 0,
-   "search": "убава си како музика љупчо мирковски пм-1002/2 ubava si kako muzika ljupcho mirkovski pm-1002/2",
-   "videoLengthSec": 167,
-   "videoDeltaSec": 24,
-   "videoApprox": true,
-   "isNew": true
+   "search": "убава си како музика љупчо мирковски пм-1002/2 ubava si kako muzika ljupcho mirkovski pm-1002/2"
   },
   {
    "category": "instrumental",
@@ -4019,14 +3996,13 @@
    "signature": "З-7256/1",
    "signatureRaw": "З-7256/1",
    "collection": "З",
-   "video": "NhIeyt6Bfb8",
+   "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 33,
    "flags": [
     "missing-duration",
     "performer-split",
-    "name-unified",
-    "video-approximate"
+    "name-unified"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -4045,10 +4021,7 @@
    ],
    "id": "arrThemes-0027",
    "warnCount": 0,
-   "search": "последна солза кирил рибарски димитар масевски з-7256/1 posledna solza kiril ribarski dimitar masevski z-7256/1",
-   "videoLengthSec": 209,
-   "videoApprox": true,
-   "isNew": true
+   "search": "последна солза кирил рибарски димитар масевски з-7256/1 posledna solza kiril ribarski dimitar masevski z-7256/1"
   },
   {
    "category": "arrThemes",

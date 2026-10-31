@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 504,
-  "videos": 157,
+  "notes": 499,
+  "videos": 152,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "notes": [
@@ -640,17 +640,6 @@
    "normalized": "Зоран Јовановиќ"
   },
   {
-   "id": "instrumental-0026",
-   "category": "instrumental",
-   "title": "Кога си сама",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 32,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:06",
-   "normalized": "2:56"
-  },
-  {
    "id": "instrumental-0029",
    "category": "instrumental",
    "title": "Лајт мотив 3",
@@ -685,28 +674,6 @@
    "field": "performer",
    "raw": "К. Божиновски, флејта",
    "normalized": "К. Божиновски"
-  },
-  {
-   "id": "instrumental-0032",
-   "category": "instrumental",
-   "title": "Лени",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 38,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:22",
-   "normalized": "3:34"
-  },
-  {
-   "id": "instrumental-0033",
-   "category": "instrumental",
-   "title": "Лени",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 39,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:18",
-   "normalized": "2:33"
   },
   {
    "id": "instrumental-0034",
@@ -954,17 +921,6 @@
    "field": "performer",
    "raw": "Љупчо Мирковски, труба",
    "normalized": "Љупчо Мирковски"
-  },
-  {
-   "id": "instrumental-0055",
-   "category": "instrumental",
-   "title": "Убава си како музика",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 61,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:11",
-   "normalized": "2:47"
   },
   {
    "id": "arrThemes-0001",
@@ -1444,17 +1400,6 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
-  },
-  {
-   "id": "arrThemes-0027",
-   "category": "arrThemes",
-   "title": "Последна солза",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 33,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "3:29"
   },
   {
    "id": "arrThemes-0028",
