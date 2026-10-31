@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 507,
-  "videos": 160,
+  "notes": 505,
+  "videos": 158,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -185,21 +185,15 @@
    "signature": "АЗ-50/6",
    "signatureRaw": "АЗ-50/6",
    "collection": "АЗ",
-   "video": "Q7c7QkQVqRI",
+   "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 14,
-   "flags": [
-    "video-approximate"
-   ],
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0008",
    "warnCount": 0,
-   "search": "далечен крај велко трпчевски аз-50/6 dalechen kraj velko trpchevski az-50/6",
-   "videoLengthSec": 153,
-   "videoDeltaSec": 67,
-   "videoApprox": true,
-   "isNew": true
+   "search": "далечен крај велко трпчевски аз-50/6 dalechen kraj velko trpchevski az-50/6"
   },
   {
    "category": "vocal",
@@ -2081,12 +2075,11 @@
    "signature": "З-3905/3",
    "signatureRaw": "З-3905/3",
    "collection": "З",
-   "video": "noPfWaVmsYs",
+   "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 19,
    "flags": [
-    "performer-split",
-    "video-approximate"
+    "performer-split"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2099,10 +2092,7 @@
    ],
    "id": "instrumental-0013",
    "warnCount": 0,
-   "search": "далечен крај благоја чешларов з-3905/3 dalechen kraj blagoja cheshlarov z-3905/3",
-   "videoLengthSec": 206,
-   "videoDeltaSec": 61,
-   "videoApprox": true
+   "search": "далечен крај благоја чешларов з-3905/3 dalechen kraj blagoja cheshlarov z-3905/3"
   },
   {
    "category": "instrumental",
