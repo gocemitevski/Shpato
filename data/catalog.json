@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 505,
-  "videos": 158,
+  "notes": 504,
+  "videos": 157,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -2228,13 +2228,12 @@
    "signature": "З-8189",
    "signatureRaw": "З-8189/",
    "collection": "З",
-   "video": "nNTNDmu2DZM",
+   "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 25,
    "flags": [
     "signature-trailing-slash",
-    "performer-split",
-    "video-approximate"
+    "performer-split"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2247,11 +2246,7 @@
    ],
    "id": "instrumental-0019",
    "warnCount": 0,
-   "search": "идила никола комовски з-8189 idila nikola komovski z-8189",
-   "videoLengthSec": 144,
-   "videoDeltaSec": 36,
-   "videoApprox": true,
-   "isNew": true
+   "search": "идила никола комовски з-8189 idila nikola komovski z-8189"
   },
   {
    "category": "instrumental",
