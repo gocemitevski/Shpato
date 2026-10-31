@@ -178,6 +178,10 @@ badged, and a malformed one is reported and read as blank; the date is checked
 rather than trusted, because comparing it as a string would otherwise let
 `2026-13-45` sort as recent.
 
+The count of badged rows is `meta.new`, which labels the toolbar's "Само ново
+(n)" toggle and hides it when it reaches 0 — so a `NEW_SINCE` moved far enough
+forward retires the filter along with the badges, with no second edit.
+
 Backfilled from git history: a row's date is the commit that last introduced it,
 so a row restored after the audit carries its restore date, not its original
 one. `git log -S "<id>," -- sources/youtube.csv` recovers any row's history.
@@ -572,7 +576,7 @@ own.
 - **All UI text is bilingual.** Adding a key means adding it to *both* `mk` and
   `en` in `assets/i18n.js`. `t()` falls back to English silently, so a missing
   Macedonian key will not throw — it will just ship English. Keys are currently
-  at parity (176 each).
+  at parity (177 each).
 - **Capitalisation lives in the strings, not in CSS.** A `<select>`'s
   `<option>` does not inherit `text-transform`, so a CSS-capitalised label looks
   right in the table and wrong in a dropdown. Capitalise in `i18n.js`.
@@ -624,7 +628,12 @@ own.
   outranks the drawer in `z-index` and steps clear of it above 900px, so a work
   keeps playing, and stays controllable, with the details open.
 - `state.onlyVideo` is dropped from a deep link when `meta.videos` is 0, and the
-  checkbox is hidden then, so a stale link cannot land on an empty table.
+  checkbox is hidden then, so a stale link cannot land on an empty table. The
+  same guard covers `state.onlyNew` against `meta.new`, the count of badged rows:
+  the toggle is hidden when it is 0, which is also what a moved `NEW_SINCE`
+  eventually does. The two toggles are one item of the toolbar (`.checks`), so
+  they wrap as a pair instead of one at a time, and the pair is hidden when
+  neither has anything to filter.
 - Exact duplicates are collapsed at build time, not hidden in the app: the
   catalogue carries one row per item and Забелешки says which row of the source
   was left out and which one stayed (`Нормализирано` names the surviving work

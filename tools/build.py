@@ -830,6 +830,7 @@ def main():
         "counts": counters,
         "notes": len(notes),
         "videos": video_count,
+        "new": new_count,
         "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija",
     }
 

@@ -496,6 +496,15 @@ html.boot-foot .site-footer { visibility: hidden; }
   cursor: pointer;
 }
 
+/* The two toggles are one item of the toolbar, so they stay on one line
+   together and wrap as a pair rather than one at a time. */
+.checks {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
 .btn {
   padding: .6rem 1rem;
   font: inherit;

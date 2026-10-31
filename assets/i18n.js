@@ -59,6 +59,7 @@ window.I18N = {
     "results.count": "прикажани {n} од {total}",
     "results.empty": "Нема пронајдени дела.",
     "results.onlyVideo": "Само со снимка ({n})",
+    "results.onlyNew": "Само ново ({n})",
 
     "export.label": "Извези",
     "export.optionCsv": "„CSV“ (.csv)",
@@ -252,6 +253,7 @@ window.I18N = {
     "results.count": "showing {n} of {total}",
     "results.empty": "No works found.",
     "results.onlyVideo": "With a video ({n})",
+    "results.onlyNew": "Only new ({n})",
 
     "export.label": "Export",
     "export.optionCsv": "CSV (.csv)",

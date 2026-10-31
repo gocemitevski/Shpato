@@ -54,6 +54,7 @@
     durMax: DATA_MAX,
     sort: { key: "title", dir: "asc" },
     onlyVideo: false,
+    onlyNew: false,
     selected: null,
     noteSeverity: "",
     noteRule: "",
@@ -118,6 +119,7 @@
     var durActive = state.durMin > DATA_MIN || state.durMax < DATA_MAX;
     var list = RECORDS.filter(function (r) {
       if (state.onlyVideo && !r.video) return false;
+      if (state.onlyNew && !r.isNew) return false;
       if (state.categories.size && !state.categories.has(r.category)) return false;
       if (state.collections.size && !state.collections.has(r.collection || "__none__")) return false;
       if (state.composers.size && !state.composers.has(r.composer || "__none__")) return false;
@@ -245,6 +247,12 @@
     document.getElementById("only-video-wrap").hidden = !META.videos;
     document.getElementById("only-video-label").textContent =
       t("results.onlyVideo").replace("{n}", num(META.videos || 0));
+    // The same for "only new": with no badged row it can only empty the table.
+    document.getElementById("only-new-wrap").hidden = !META.new;
+    document.getElementById("only-new-label").textContent =
+      t("results.onlyNew").replace("{n}", num(META.new || 0));
+    // The pair wraps as one unit, so it does not come apart at a medium width.
+    document.getElementById("filter-checks").hidden = !META.videos && !META.new;
     document.getElementById("filters-title").textContent = t("filters.title");
     document.getElementById("clear-filters").textContent = t("filters.clear");
 
@@ -942,6 +950,7 @@
     if (state.durMin > DATA_MIN) p.set("dmin", state.durMin);
     if (state.durMax < DATA_MAX) p.set("dmax", state.durMax);
     if (state.onlyVideo) p.set("video", "1");
+    if (state.onlyNew) p.set("new", "1");
     if (state.sort.key !== "title" || state.sort.dir !== "asc") { p.set("sort", state.sort.key); p.set("dir", state.sort.dir); }
     return "#" + p.toString();
   }
@@ -994,6 +1003,7 @@
     // Ignore the flag when nothing in the catalogue has a video, or a stale
     // link would land on a permanently empty table.
     state.onlyVideo = p.get("video") === "1" && META.videos > 0;
+    state.onlyNew = p.get("new") === "1" && META.new > 0;
   }
 
   // ------------------------------------------------------------------ main
@@ -1199,6 +1209,10 @@
     document.getElementById("only-video").checked = state.onlyVideo;
     document.getElementById("only-video").addEventListener("change", function (e) {
       state.onlyVideo = e.target.checked; refreshResults();
+    });
+    document.getElementById("only-new").checked = state.onlyNew;
+    document.getElementById("only-new").addEventListener("change", function (e) {
+      state.onlyNew = e.target.checked; refreshResults();
     });
     document.getElementById("player-close").addEventListener("click", stopPlayer);
 
