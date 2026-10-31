@@ -849,13 +849,14 @@ html.boot-foot .site-footer { visibility: hidden; }
    title wide enough to fill the cell broke the line after the icon and left
    it stranded above the text, and the icon's baseline is the bottom edge of
    its <svg> rather than its text, which no vertical-align can line up across
-   fonts and sizes. The icon rides the title's first line (see .row-play), so
-   the line starts its items at the top: centring them would centre them on
-   the whole title, which on a phone is a paragraph of two or three lines, and
-   the icon would hang beside its middle. */
+   fonts and sizes. The items share a baseline, so the badges sit on the title
+   text's own baseline: on a phone, where the title can wrap to three lines,
+   that is the first one's, which is where the eye reads the name. The play
+   button has no text of its own, so its baseline is its bottom edge, which is
+   where the circle wants it. */
 .cell-title-inner {
   display: inline-flex;
-  align-items: flex-start;
+  align-items: baseline;
 }
 .row-open {
   font: inherit;
@@ -902,12 +903,10 @@ td.sig {
   color: var(--muted);
 }
 
-/* The warning count trails the title rather than leading it, and a marker
-   after a wrapped paragraph belongs at its end, so this one keeps the
-   centring the flex line no longer gives it. */
+/* Both badges trail the title and take the line's baseline, so they sit on the
+   title text's baseline rather than an alignment of their own. */
 .badge {
   display: inline-flex;
-  align-self: center;
   align-items: center;
   justify-content: center;
   min-width: 1.15rem;
@@ -919,6 +918,26 @@ td.sig {
   color: var(--warn);
   font-size: .68rem;
   font-weight: 700;
+  vertical-align: middle;
+}
+
+/* The NEW marker is not a warning but a note of freshness, so it takes the
+   accent pair the category tags already use rather than the amber one. The
+   word is uppercase in the string itself: a <select>'s <option> would not
+   inherit a text-transform, and neither does a badge's text in every browser
+   that renders it. */
+.badge-new {
+  display: inline-flex;
+  align-items: center;
+  margin-left: .45rem;
+  padding: 0 .4rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  white-space: nowrap;
   vertical-align: middle;
 }
 
@@ -1235,7 +1254,6 @@ code.raw {
   justify-content: center;
   width: 1.3rem;
   height: 1.3rem;
-  margin-top: calc((1lh - 1.3rem) / 2);
   margin-right: .5rem;
   padding: 0;
   border: 0;

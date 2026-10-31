@@ -10,14 +10,15 @@ and writes:
   data/notes.js        - same, as a global
 
 It also merges sources/youtube.csv, the record -> YouTube video map (columns
-`id,title,video,found,lengthSec`; see the README), into each record's "video"
-field, and records the links that were found by search rather than checked by
-hand as an approximate match.
+`id,title,video,found,lengthSec,added`; see the README), into each record's
+"video" field, and records the links that were found by search rather than
+checked by hand as an approximate match.
 
 Only the Python 3 standard library is used.
 """
 
 import csv
+import datetime
 import json
 import os
 import re
@@ -530,6 +531,17 @@ def extract_video_id(value):
 # tools/youtube-search.py.
 VIDEO_DURATION_TOLERANCE = 5
 
+# A link added on or after this date carries the NEW badge. It is a constant
+# rather than a rolling window so that the badge set is a property of the data
+# and the build stays reproducible: moving this date forward is what retires a
+# badge, and adding a row with a later date is what creates one.
+NEW_SINCE = "2026-10-25"
+
+# `added` is written by hand or by tools/youtube-search.py, so it is checked
+# rather than trusted: a mistyped date would otherwise compare as a string and
+# badge or un-badge a row silently.
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
 
 def mmss(seconds):
     """112 -> '1:52'. For the durations a video note compares."""
@@ -539,8 +551,8 @@ def mmss(seconds):
 
 
 def read_videos():
-    """Read the `id,title,video[,found,lengthSec]` map. Returns ({id: entry},
-    problems).
+    """Read the `id,title,video[,found,lengthSec,added]` map. Returns
+    ({id: entry}, problems).
 
     `title` is a human-readable guard: it is not used for matching, but a
     mismatch is reported, because a record's id is positional and would
@@ -551,6 +563,12 @@ def read_videos():
     checked, `search` for one tools/youtube-search.py proposed and nobody has
     confirmed. `lengthSec` is the upload's own duration, which is what lets
     the build say how far a machine-found link is from the catalogue's timing.
+
+    `added` is the day the link went in, as `YYYY-MM-DD`. It is a fact about
+    the row, so the badge the catalogue shows for "recently added" is derived
+    from it rather than from a list kept beside the map, and adding a link
+    announces itself. Blank means no date is known, and such a row is never
+    badged; a malformed one is reported and read as blank.
     """
     path = os.path.join(SOURCES_DIR, YOUTUBE_FILE)
     if not os.path.exists(path):
@@ -564,9 +582,10 @@ def read_videos():
         if not any(cell.strip() for cell in row):
             continue
         row = [clean(c) for c in row]
-        while len(row) < 5:
+        while len(row) < 6:
             row.append("")
         rid, title, raw, found, length = row[0], row[1], row[2], row[3].lower(), row[4]
+        added = row[5]
         if not rid:
             problems.append("line {}: empty record id".format(n))
             continue
@@ -584,8 +603,18 @@ def read_videos():
         if length and not length.isdigit():
             problems.append("line {}: length {!r} is not whole seconds".format(n, length))
             length = ""
+        if added:
+            try:
+                if not DATE_RE.match(added):
+                    raise ValueError
+                datetime.date.fromisoformat(added)
+            except ValueError:
+                problems.append("line {}: added {!r} is not a YYYY-MM-DD date".format(
+                    n, added))
+                added = ""
         videos[rid] = {"title": title, "video": video, "found": found or "human",
-                       "lengthSec": int(length) if length else None}
+                       "lengthSec": int(length) if length else None,
+                       "added": added}
     return videos, problems
 
 
@@ -621,6 +650,12 @@ def attach_videos(records, videos, problems):
                                            or delta > VIDEO_DURATION_TOLERANCE):
             rec["videoApprox"] = True
             rec["flags"].append("video-approximate")
+        # The badge is derived from the row's own date, so a link announces
+        # itself when it is added and stops when NEW_SINCE moves past it. The
+        # build never reads the clock, which is what keeps the payload
+        # reproducible across clones and machines.
+        if entry["added"] and entry["added"] >= NEW_SINCE:
+            rec["isNew"] = True
     return sum(1 for rec in records if rec["video"])
 
 
@@ -721,6 +756,9 @@ def main():
     videos, video_problems = read_videos()
     video_count = attach_videos(all_records, videos, video_problems)
 
+    # The links marked new in the map itself; see read_videos.
+    new_count = sum(1 for rec in all_records if rec.get("isNew"))
+
     # data notes
     notes = []
     for rec in all_records:
@@ -816,6 +854,7 @@ def main():
     print("Expected:            {}".format(expected))
     print("Notes: {}".format(len(notes)))
     print("Videos: {} of {}".format(video_count, len(all_records)))
+    print("New: {} of {}".format(new_count, len(all_records)))
     print("Dropped: {} row(s) the source repeats".format(len(dropped_rows)))
     for problem in removal_problems:
         print("WARNING removals.csv: {}".format(problem), file=sys.stderr)

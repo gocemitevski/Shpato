@@ -457,6 +457,12 @@
         ? '<span class="badge" title="' + esc(t("detail.flags")) + '">' + r.warnCount +
           '<span class="visually-hidden"> ' + esc(t("detail.flags")) + "</span></span>"
         : "";
+      // A link marks itself as new: the build badges a row whose `added` date
+      // is on or after NEW_SINCE, so there is no list here to re-read. It
+      // trails the title, like the warning count.
+      var fresh = r.isNew
+        ? '<span class="badge-new">' + esc(t("badge.new")) + "</span>"
+        : "";
       // Only a work with a known video gets a play button, so the affordance
       // itself tells you what is listenable.
       var play = r.video
@@ -468,7 +474,7 @@
         : "";
       return '<tr data-id="' + r.id + '">' +
         '<td class="cell-title"><span class="cell-title-inner">' + play +
-        '<button type="button" class="row-open">' + esc(r.title) + "</button>" + warn +
+        '<button type="button" class="row-open">' + esc(r.title) + "</button>" + fresh + warn +
         "</span></td>" +
         '<td class="cell-perf">' + esc(r.performer || t("common.none")) + "</td>" +
         '<td class="cell-comp">' + esc(r.composer || "") + "</td>" +

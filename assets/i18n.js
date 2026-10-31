@@ -24,6 +24,7 @@ window.I18N = {
     "a11y.close": "Затвори",
     "search.label": "Пребарување",
     "catalog.caption": "Каталог на дела",
+    "badge.new": "НОВО",
 
     "search.placeholder": "Пребарај наслов, изведувач или автор…",
     "filters.title": "Филтри",
@@ -216,6 +217,7 @@ window.I18N = {
     "a11y.close": "Close",
     "search.label": "Search",
     "catalog.caption": "Catalogue of works",
+    "badge.new": "NEW",
 
     "search.placeholder": "Search title, performer or composer…",
     "filters.title": "Filters",

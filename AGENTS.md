@@ -158,13 +158,29 @@ Never "fix" a title or name silently. A dropped row is recorded there too, under
 
 ## YouTube links
 
-`sources/youtube.csv` (`id,title,video,found,lengthSec`) is the link map, part
-hand-checked and part machine-filled. `id` is positional (`vocal-0007`), so
+`sources/youtube.csv` (`id,title,video,found,lengthSec,added`) is the link map,
+part hand-checked and part machine-filled. `id` is positional (`vocal-0007`), so
 `title` is a guard: `attach_videos()` warns when it disagrees with the record,
 because a shifted id would otherwise attach a video to the wrong work with no
 visible symptom. A value that is not a valid 11-character id (or a pasted
 YouTube URL) is dropped with a warning. The field is present on every record,
 `null` when unknown.
+
+`added` is the day the link went in (`YYYY-MM-DD`), and it is what the NEW badge
+beside a title is derived from: `attach_videos()` sets `isNew` for a row whose
+date is on or after `NEW_SINCE`. So adding a link announces it with no second
+edit, and moving that one constant forward retires the badges it leaves behind
+— the build never reads the clock, because a date it took from "now" would make
+the committed payload unreproducible. `tools/youtube-search.py --apply` stamps
+its rows with the day it runs, and `--verify`/`--drop`/`--backfill` carry the
+column through, so a pass cannot silently un-badge a row. A blank date is never
+badged, and a malformed one is reported and read as blank; the date is checked
+rather than trusted, because comparing it as a string would otherwise let
+`2026-13-45` sort as recent.
+
+Backfilled from git history: a row's date is the commit that last introduced it,
+so a row restored after the audit carries its restore date, not its original
+one. `git log -S "<id>," -- sources/youtube.csv` recovers any row's history.
 
 `found` says where a link came from: blank or `human` for one a person checked
 (blank is how the first 39 rows read — they predate the column), `search` for
@@ -556,7 +572,7 @@ own.
 - **All UI text is bilingual.** Adding a key means adding it to *both* `mk` and
   `en` in `assets/i18n.js`. `t()` falls back to English silently, so a missing
   Macedonian key will not throw — it will just ship English. Keys are currently
-  at parity (175 each).
+  at parity (176 each).
 - **Capitalisation lives in the strings, not in CSS.** A `<select>`'s
   `<option>` does not inherit `text-transform`, so a CSS-capitalised label looks
   right in the table and wrong in a dropdown. Capitalise in `i18n.js`.
@@ -569,17 +585,20 @@ own.
   the play icon and the title must not be able to break apart, and the icon's
   baseline is the bottom edge of its `<svg>` rather than its text. Returning
   that cell to plain inline flow strands the icon above any title wide enough
-  to fill the column. Its items start at the top of the line and the button
-  then drops by `calc((1lh - 1.3rem) / 2)`, so the icon centres on the title's
-  *first* line: centring it in the line instead centres it on the whole title,
-  which on a phone is two or three lines, and the icon hangs beside the
-  second. `1lh` is derived from the inherited line-height rather than chosen,
-  and `flex-shrink: 0` on the button is not what keeps it round — nothing in a
-  table cell shrinks it. The warning badge keeps the old centring, because it
-  trails the title rather than leading it. The circle's hit area is bigger than
-  the circle: a pseudo-element takes it to 40x45px, which stays 3px inside the
-  row's top and 4px inside its bottom (the cell's `.85rem` of vertical padding
-  is the room) and 1px short of the title button 8px to its right, so a thumb
+  to fill the column. Its items share a **baseline**, so the NEW and warning
+  badges sit on the title text's own baseline — on a phone, where the title
+  can wrap to three lines, that is the first line's, which is where the eye
+  reads the name. The play button has no text of its own, so its baseline is
+  its bottom edge, and that is what places the circle. This replaced a
+  `flex-start` line with a `calc((1lh - 1.3rem) / 2)` drop on the button, which
+  put the icon on the first line but left the badges centred on the whole
+  block; both the drop and a centring `align-items` fight the baseline and
+  should not come back alongside it. `flex-shrink: 0` on the button is not
+  what keeps it round — nothing in a table cell shrinks it. The circle's hit
+  area is bigger than the circle: a pseudo-element takes it to 40x45px, which
+  stays inside the row's top and bottom (the cell's `.85rem` of vertical
+  padding is the room; measured at a 390px width it clears the top edge by
+  2.5px) and 1px short of the title button 8px to its right, so a thumb
   reaches neither the row above nor the title beside it.
 - `[hidden] { display: none !important }` is the only hide mechanism. Use the
   `hidden` property/attribute, not classes.

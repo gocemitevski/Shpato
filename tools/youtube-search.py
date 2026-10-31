@@ -53,6 +53,7 @@ is used.
 
 import argparse
 import csv
+import datetime
 import json
 import os
 import re
@@ -603,7 +604,13 @@ def accepted(record, tried, trusted):
 # sources/youtube.csv
 # ---------------------------------------------------------------------------
 def read_youtube():
-    """Read `id,title,video[,found,lengthSec]` rows, in file order."""
+    """Read `id,title,video[,found,lengthSec,added]` rows, in file order.
+
+    The sixth column is the date the link went in, which the build turns into
+    the NEW badge. It is carried through as-is, because this tool rewrites the
+    whole file whenever it applies or drops a row and a column it does not
+    understand would otherwise be lost.
+    """
     rows = []
     if not os.path.exists(YOUTUBE_FILE):
         return rows
@@ -613,8 +620,8 @@ def read_youtube():
                 continue
             if not any(cell.strip() for cell in row):
                 continue
-            row = [c.strip() for c in row] + [""] * 5
-            rows.append(row[:5])
+            row = [c.strip() for c in row] + [""] * 6
+            rows.append(row[:6])
     return rows
 
 
@@ -622,7 +629,7 @@ def write_youtube(rows):
     """Rewrite the file with its header, CRLF like the source it came from."""
     with open(YOUTUBE_FILE, "w", encoding="utf-8", newline="") as fh:
         writer = csv.writer(fh, lineterminator="\r\n")
-        writer.writerow(["id", "title", "video", "found", "lengthSec"])
+        writer.writerow(["id", "title", "video", "found", "lengthSec", "added"])
         for row in rows:
             writer.writerow(row)
 
@@ -793,12 +800,19 @@ def scan(args, rows, cache):
     return picks
 
 
+def today():
+    """The date a link applied now goes in as, for the NEW badge."""
+    return datetime.date.today().isoformat()
+
+
 def apply_picks(picks, rows):
     """Append the accepted links to sources/youtube.csv, CRLF preserved.
 
     The record's title goes in as the guard column the build checks against,
     and `found=search` marks the row for the notes pipeline. A row that
-    already has a video is never overwritten.
+    already has a video is never overwritten. The date is today's because that
+    is when the link goes in; it is data this tool writes, not something the
+    build reads from the clock.
     """
     known = {row[0] for row in rows}
     added = []
@@ -808,7 +822,8 @@ def apply_picks(picks, rows):
         best = hits[0]
         c = best["candidate"]
         rows.append([rid, rec["title"], c["id"], "search",
-                     str(best["lengthSec"]) if best["lengthSec"] > 0 else ""])
+                     str(best["lengthSec"]) if best["lengthSec"] > 0 else "",
+                     today()])
         added.append((rid, c["id"], best["by"], c["channel"]))
     if added:
         write_youtube(rows)
@@ -983,8 +998,11 @@ def main():
         writer = csv.writer(sys.stdout, lineterminator="\n")
         for rid, (rec, hits) in sorted(picks.items()):
             best = hits[0]
+            # Six fields, like the map's own header, so a dump can be pasted
+            # into it: `added` is the date an --apply would write.
             writer.writerow([rid, rec["title"], best["candidate"]["id"], "search",
-                             best["lengthSec"] if best["lengthSec"] > 0 else ""])
+                             best["lengthSec"] if best["lengthSec"] > 0 else "",
+                             today()])
     if args.apply:
         apply_picks(picks, rows)
 
