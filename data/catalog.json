@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 499,
-  "videos": 152,
+  "notes": 498,
+  "videos": 151,
   "new": 7,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -5040,20 +5040,15 @@
    "signature": "З-3527/3",
    "signatureRaw": "З-3527/3",
    "collection": "З",
-   "video": "0VIFDVXauxk",
+   "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 29,
-   "flags": [
-    "video-approximate"
-   ],
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0023",
    "warnCount": 0,
-   "search": "детство ро зоран милосављевиќ александар џамбазов з-3527/3 detstvo ro zoran milosavljevikj aleksandar djambazov z-3527/3",
-   "videoLengthSec": 137,
-   "videoDeltaSec": 87,
-   "videoApprox": true
+   "search": "детство ро зоран милосављевиќ александар џамбазов з-3527/3 detstvo ro zoran milosavljevikj aleksandar djambazov z-3527/3"
   },
   {
    "category": "arrVocal",

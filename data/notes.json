@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 499,
-  "videos": 152,
+  "notes": 498,
+  "videos": 151,
   "new": 7,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -2085,17 +2085,6 @@
    "field": "composer",
    "raw": "Х. Крствески",
    "normalized": "Христо Крстевски"
-  },
-  {
-   "id": "arrVocal-0023",
-   "category": "arrVocal",
-   "title": "Детство",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 29,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:44",
-   "normalized": "2:17"
   },
   {
    "id": "arrVocal-0025",
