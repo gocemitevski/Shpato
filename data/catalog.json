@@ -1,13 +1,13 @@
 {
  "meta": {
-  "total": 433,
+  "total": 434,
   "counts": {
    "vocal": 74,
-   "instrumental": 55,
+   "instrumental": 56,
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 539,
+  "notes": 541,
   "videos": 144,
   "new": 8,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
@@ -26,7 +26,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 7,
+   "sourceLine": 2,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -47,7 +47,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 8,
+   "sourceLine": 3,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -68,7 +68,7 @@
    "collection": "З",
    "video": "zOrztTuXttE",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 9,
+   "sourceLine": 4,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -91,7 +91,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 10,
+   "sourceLine": 5,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -112,7 +112,7 @@
    "collection": "АЗ",
    "video": "2k0kD6Mj9vk",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 11,
+   "sourceLine": 6,
    "flags": [
     "video-approximate"
    ],
@@ -138,7 +138,7 @@
    "collection": "З",
    "video": "dAXua0oaXa8",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 12,
+   "sourceLine": 7,
    "flags": [
     "signature-missing-prefix",
     "video-approximate"
@@ -165,7 +165,7 @@
    "collection": "З",
    "video": "mPpjbo0tSBg",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 13,
+   "sourceLine": 8,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -188,7 +188,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 14,
+   "sourceLine": 9,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -209,7 +209,7 @@
    "collection": "З",
    "video": "7VRhCF2jtUU",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 15,
+   "sourceLine": 10,
    "flags": [
     "performer-split"
    ],
@@ -241,7 +241,7 @@
    "collection": "З",
    "video": "P0bPWV7nQQg",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 16,
+   "sourceLine": 11,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -264,7 +264,7 @@
    "collection": "З",
    "video": "5YBLvWD89AY",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 17,
+   "sourceLine": 12,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -287,7 +287,7 @@
    "collection": "Л",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 18,
+   "sourceLine": 13,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -308,7 +308,7 @@
    "collection": "З",
    "video": "1yWXqyBd09E",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 19,
+   "sourceLine": 14,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -331,7 +331,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 20,
+   "sourceLine": 15,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -352,7 +352,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 21,
+   "sourceLine": 16,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -373,7 +373,7 @@
    "collection": "ПК",
    "video": "pY9TzksujZw",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 22,
+   "sourceLine": 17,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -396,7 +396,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 23,
+   "sourceLine": 18,
    "flags": [
     "performer-split"
    ],
@@ -426,7 +426,7 @@
    "collection": "З",
    "video": "z9nAy0PhR6I",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 24,
+   "sourceLine": 19,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -449,7 +449,7 @@
    "collection": "З",
    "video": "4NPYDFIcV2Y",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 25,
+   "sourceLine": 20,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -472,7 +472,7 @@
    "collection": null,
    "video": "O-OJ7mVkmSw",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 26,
+   "sourceLine": 21,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -500,7 +500,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 27,
+   "sourceLine": 22,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -521,7 +521,7 @@
    "collection": "З",
    "video": "XqpV5xbNvjs",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 28,
+   "sourceLine": 23,
    "flags": [
     "video-approximate"
    ],
@@ -547,7 +547,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 29,
+   "sourceLine": 24,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -568,7 +568,7 @@
    "collection": "АЗ",
    "video": "wC49Ytu9EGI",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 30,
+   "sourceLine": 25,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -591,7 +591,7 @@
    "collection": "АЗ",
    "video": "HbugyIxBrJ4",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 31,
+   "sourceLine": 26,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -614,7 +614,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 32,
+   "sourceLine": 27,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -635,7 +635,7 @@
    "collection": "АЗ",
    "video": "O-OJ7mVkmSw",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 33,
+   "sourceLine": 28,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -658,7 +658,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 34,
+   "sourceLine": 29,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -679,7 +679,7 @@
    "collection": "АЗ",
    "video": "PTIdxNIfPvU",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 35,
+   "sourceLine": 30,
    "flags": [
     "performer-split",
     "video-approximate"
@@ -713,7 +713,7 @@
    "collection": "З",
    "video": "mBMsiP9UWcg",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 36,
+   "sourceLine": 31,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -736,7 +736,7 @@
    "collection": "Л",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 37,
+   "sourceLine": 32,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -757,7 +757,7 @@
    "collection": "З",
    "video": "kFZk5Qo8I5s",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 38,
+   "sourceLine": 33,
    "flags": [
     "performer-split"
    ],
@@ -789,7 +789,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 39,
+   "sourceLine": 34,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -810,7 +810,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 40,
+   "sourceLine": 35,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -831,7 +831,7 @@
    "collection": "З",
    "video": "8LbUNZ_JFWk",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 41,
+   "sourceLine": 36,
    "flags": [
     "performer-split"
    ],
@@ -863,7 +863,7 @@
    "collection": "З",
    "video": "_fn-siexksY",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 42,
+   "sourceLine": 37,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -886,7 +886,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 43,
+   "sourceLine": 38,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -907,7 +907,7 @@
    "collection": "АЗ",
    "video": "LvG7PtOXf10",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 44,
+   "sourceLine": 39,
    "flags": [
     "duration-ambiguous-seconds",
     "performer-split",
@@ -949,7 +949,7 @@
    "collection": "З",
    "video": "MNGjrtM4qDA",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 45,
+   "sourceLine": 40,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -972,7 +972,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 46,
+   "sourceLine": 41,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -993,7 +993,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 47,
+   "sourceLine": 42,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1014,7 +1014,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 48,
+   "sourceLine": 43,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1035,7 +1035,7 @@
    "collection": "З",
    "video": "LlKOOYIhwQ4",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 49,
+   "sourceLine": 44,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1059,7 +1059,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 50,
+   "sourceLine": 45,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1080,7 +1080,7 @@
    "collection": "З",
    "video": "NLx5SMYld_0",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 51,
+   "sourceLine": 46,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1103,7 +1103,7 @@
    "collection": "З",
    "video": "0FyCv3qltjo",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 52,
+   "sourceLine": 47,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1126,7 +1126,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 53,
+   "sourceLine": 48,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1147,7 +1147,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 54,
+   "sourceLine": 49,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -1172,7 +1172,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 55,
+   "sourceLine": 50,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1193,7 +1193,7 @@
    "collection": "З",
    "video": "6KMlMaFwMEk",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 56,
+   "sourceLine": 51,
    "flags": [
     "video-approximate"
    ],
@@ -1219,7 +1219,7 @@
    "collection": "З",
    "video": "UJoXlDq69Eg",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 57,
+   "sourceLine": 52,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1242,7 +1242,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 58,
+   "sourceLine": 53,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1263,7 +1263,7 @@
    "collection": "З",
    "video": "PZnoDyzgyx8",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 59,
+   "sourceLine": 54,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1286,7 +1286,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 60,
+   "sourceLine": 55,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1307,7 +1307,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 61,
+   "sourceLine": 56,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1328,7 +1328,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 62,
+   "sourceLine": 57,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1349,7 +1349,7 @@
    "collection": "З",
    "video": "n6CIWAUMDuQ",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 63,
+   "sourceLine": 58,
    "flags": [
     "video-approximate"
    ],
@@ -1375,7 +1375,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 64,
+   "sourceLine": 59,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1396,7 +1396,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 65,
+   "sourceLine": 60,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1417,7 +1417,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 66,
+   "sourceLine": 61,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1438,7 +1438,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 67,
+   "sourceLine": 62,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -1470,7 +1470,7 @@
    "collection": "З",
    "video": "J4ntcnjaPX8",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 68,
+   "sourceLine": 63,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1493,7 +1493,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 69,
+   "sourceLine": 64,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1514,7 +1514,7 @@
    "collection": "З",
    "video": "L3i6AvDuM0c",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 70,
+   "sourceLine": 65,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1537,7 +1537,7 @@
    "collection": "З",
    "video": "zpJlRSA4jKs",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 71,
+   "sourceLine": 66,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1560,7 +1560,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 72,
+   "sourceLine": 67,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -1585,7 +1585,7 @@
    "collection": "З",
    "video": "RDdThnE5YuM",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 73,
+   "sourceLine": 68,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1608,7 +1608,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 74,
+   "sourceLine": 69,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1629,7 +1629,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 75,
+   "sourceLine": 70,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1650,7 +1650,7 @@
    "collection": "З",
    "video": "n69xkQTt_LA",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 76,
+   "sourceLine": 71,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1673,7 +1673,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 77,
+   "sourceLine": 72,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1694,7 +1694,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 78,
+   "sourceLine": 73,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1715,7 +1715,7 @@
    "collection": "З",
    "video": "IG2ksOSMbRI",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 79,
+   "sourceLine": 74,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1738,7 +1738,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 80,
+   "sourceLine": 75,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -1759,7 +1759,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 7,
+   "sourceLine": 2,
    "flags": [
     "performer-split"
    ],
@@ -1789,7 +1789,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 8,
+   "sourceLine": 3,
    "flags": [
     "performer-split"
    ],
@@ -1819,7 +1819,7 @@
    "collection": "З",
    "video": "D5oEe7IzHWk",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 9,
+   "sourceLine": 4,
    "flags": [
     "performer-split",
     "ensemble-expanded",
@@ -1860,7 +1860,7 @@
    "collection": "З",
    "video": "mou1ztGr7vk",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 10,
+   "sourceLine": 5,
    "flags": [
     "performer-split",
     "ensemble-expanded"
@@ -1888,6 +1888,43 @@
   },
   {
    "category": "instrumental",
+   "title": "Гарача",
+   "composer": "",
+   "performer": "Танцов оркестар на Радио-телевизија Скопје",
+   "performerRole": "",
+   "durationSec": 234,
+   "durationRaw": "3.54",
+   "signature": "З-7700/2",
+   "signatureRaw": "З-7700/2",
+   "collection": "З",
+   "video": null,
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 6,
+   "flags": [
+    "mixed-script",
+    "ensemble-expanded"
+   ],
+   "duplicateOf": null,
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "mixed-script",
+     "from": "ТO на РТС",
+     "to": "ТО на РТС"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ТО на РТС",
+     "to": "Танцов оркестар на Радио-телевизија Скопје"
+    }
+   ],
+   "id": "instrumental-0005",
+   "warnCount": 1,
+   "search": "гарача танцов оркестар на радио-телевизија скопје з-7700/2 garacha tancov orkestar na radio-televizija skopje z-7700/2"
+  },
+  {
+   "category": "instrumental",
    "title": "Гермијан",
    "composer": "",
    "performer": "Танцов оркестар на Радио-телевизија Скопје",
@@ -1899,7 +1936,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 12,
+   "sourceLine": 7,
    "flags": [
     "mixed-script",
     "ensemble-expanded"
@@ -1936,11 +1973,12 @@
    "collection": "З",
    "video": "b_D0ILHpu8M",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 13,
+   "sourceLine": 8,
    "flags": [
-    "ensemble-expanded"
+    "ensemble-expanded",
+    "duplicate"
    ],
-   "duplicateOf": null,
+   "duplicateOf": "instrumental-0005",
    "textFixes": [
     {
      "field": "performer",
@@ -1968,7 +2006,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 14,
+   "sourceLine": 9,
    "flags": [
     "performer-split"
    ],
@@ -1998,7 +2036,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 15,
+   "sourceLine": 10,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -2023,7 +2061,7 @@
    "collection": "З",
    "video": "JeIqhHwl1ic",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 16,
+   "sourceLine": 11,
    "flags": [
     "video-approximate"
    ],
@@ -2049,7 +2087,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 17,
+   "sourceLine": 12,
    "flags": [
     "ensemble-expanded"
    ],
@@ -2079,7 +2117,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 18,
+   "sourceLine": 13,
    "flags": [
     "performer-split"
    ],
@@ -2109,7 +2147,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 19,
+   "sourceLine": 14,
    "flags": [
     "performer-split"
    ],
@@ -2139,7 +2177,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 20,
+   "sourceLine": 15,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -2160,7 +2198,7 @@
    "collection": "З",
    "video": "R16qOzW8Aok",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 21,
+   "sourceLine": 16,
    "flags": [
     "performer-split"
    ],
@@ -2192,7 +2230,7 @@
    "collection": "З",
    "video": "JUwTiHyAqH4",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 22,
+   "sourceLine": 17,
    "flags": [
     "ensemble-expanded",
     "video-approximate"
@@ -2226,7 +2264,7 @@
    "collection": "З",
    "video": "YurRHulM3Cw",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 23,
+   "sourceLine": 18,
    "flags": [
     "ensemble-expanded"
    ],
@@ -2258,7 +2296,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 24,
+   "sourceLine": 19,
    "flags": [
     "ensemble-expanded"
    ],
@@ -2288,7 +2326,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 25,
+   "sourceLine": 20,
    "flags": [
     "signature-trailing-slash",
     "performer-split"
@@ -2319,7 +2357,7 @@
    "collection": "З",
    "video": "Jyg2X8icikk",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 26,
+   "sourceLine": 21,
    "flags": [
     "performer-split",
     "ensemble-expanded",
@@ -2360,7 +2398,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 27,
+   "sourceLine": 22,
    "flags": [
     "performer-split"
    ],
@@ -2390,7 +2428,7 @@
    "collection": "АЗ",
    "video": "DfeW-KngHMg",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 28,
+   "sourceLine": 23,
    "flags": [
     "performer-split",
     "video-approximate"
@@ -2424,7 +2462,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 29,
+   "sourceLine": 24,
    "flags": [
     "performer-split"
    ],
@@ -2454,7 +2492,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 30,
+   "sourceLine": 25,
    "flags": [
     "performer-split"
    ],
@@ -2484,7 +2522,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 31,
+   "sourceLine": 26,
    "flags": [
     "ensemble-expanded"
    ],
@@ -2514,7 +2552,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 32,
+   "sourceLine": 27,
    "flags": [
     "ensemble-expanded"
    ],
@@ -2544,7 +2582,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 33,
+   "sourceLine": 28,
    "flags": [
     "ensemble-expanded"
    ],
@@ -2574,7 +2612,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 34,
+   "sourceLine": 29,
    "flags": [
     "ensemble-expanded"
    ],
@@ -2604,7 +2642,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 35,
+   "sourceLine": 30,
    "flags": [
     "performer-split"
    ],
@@ -2634,7 +2672,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 36,
+   "sourceLine": 31,
    "flags": [
     "performer-split"
    ],
@@ -2664,7 +2702,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 37,
+   "sourceLine": 32,
    "flags": [
     "performer-split"
    ],
@@ -2694,7 +2732,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 38,
+   "sourceLine": 33,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -2715,7 +2753,7 @@
    "collection": "ПМ",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 39,
+   "sourceLine": 34,
    "flags": [
     "ensemble-expanded"
    ],
@@ -2745,7 +2783,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 40,
+   "sourceLine": 35,
    "flags": [
     "performer-split"
    ],
@@ -2775,7 +2813,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 41,
+   "sourceLine": 36,
    "flags": [
     "performer-split"
    ],
@@ -2805,7 +2843,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 42,
+   "sourceLine": 37,
    "flags": [
     "performer-split"
    ],
@@ -2835,7 +2873,7 @@
    "collection": "ПК",
    "video": "hDVaLYRDmJs",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 43,
+   "sourceLine": 38,
    "flags": [
     "performer-split",
     "video-approximate"
@@ -2869,7 +2907,7 @@
    "collection": "З",
    "video": "aDIg9yPLJAY",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 44,
+   "sourceLine": 39,
    "flags": [
     "performer-split",
     "video-approximate"
@@ -2903,7 +2941,7 @@
    "collection": "З",
    "video": "vBUyE5_SKKk",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 45,
+   "sourceLine": 40,
    "flags": [
     "duration-missing-separator",
     "performer-split",
@@ -2938,7 +2976,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 46,
+   "sourceLine": 41,
    "flags": [
     "performer-split"
    ],
@@ -2968,7 +3006,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 47,
+   "sourceLine": 42,
    "flags": [
     "performer-split"
    ],
@@ -2998,7 +3036,7 @@
    "collection": "ПМ",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 48,
+   "sourceLine": 43,
    "flags": [
     "performer-split"
    ],
@@ -3028,7 +3066,7 @@
    "collection": "З",
    "video": "t80NdEeHDKU",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 49,
+   "sourceLine": 44,
    "flags": [
     "abbreviation-normalized",
     "performer-split",
@@ -3074,7 +3112,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 50,
+   "sourceLine": 45,
    "flags": [
     "ensemble-expanded"
    ],
@@ -3104,7 +3142,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 51,
+   "sourceLine": 46,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -3125,7 +3163,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 52,
+   "sourceLine": 47,
    "flags": [
     "performer-split"
    ],
@@ -3155,7 +3193,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 53,
+   "sourceLine": 48,
    "flags": [
     "performer-split",
     "ensemble-expanded"
@@ -3192,7 +3230,7 @@
    "collection": "З",
    "video": "geK0tWTLWXo",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 54,
+   "sourceLine": 49,
    "flags": [
     "performer-split",
     "ensemble-expanded"
@@ -3231,7 +3269,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 55,
+   "sourceLine": 50,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -3252,7 +3290,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 56,
+   "sourceLine": 51,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -3273,7 +3311,7 @@
    "collection": "З",
    "video": "s48DHQzMb5I",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 57,
+   "sourceLine": 52,
    "flags": [
     "performer-split"
    ],
@@ -3305,7 +3343,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 58,
+   "sourceLine": 53,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -3326,7 +3364,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 59,
+   "sourceLine": 54,
    "flags": [
     "ensemble-expanded"
    ],
@@ -3356,7 +3394,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 60,
+   "sourceLine": 55,
    "flags": [
     "ensemble-expanded"
    ],
@@ -3386,7 +3424,7 @@
    "collection": "ПМ",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 61,
+   "sourceLine": 56,
    "flags": [
     "performer-split"
    ],
@@ -3416,7 +3454,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 62,
+   "sourceLine": 57,
    "flags": [
     "ensemble-expanded"
    ],
@@ -3446,7 +3484,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 7,
+   "sourceLine": 2,
    "flags": [
     "signature-trailing-slash",
     "ensemble-expanded"
@@ -3477,7 +3515,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 8,
+   "sourceLine": 3,
    "flags": [
     "composer-placeholder",
     "performer-split",
@@ -3515,7 +3553,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 9,
+   "sourceLine": 4,
    "flags": [
     "missing-duration",
     "composer-placeholder",
@@ -3527,7 +3565,7 @@
     {
      "field": "performer",
      "rule": "name-unified",
-     "from": "Забавен анс. На РС",
+     "from": "Забавен анс. на РС",
      "to": "Забавен оркестар на РС"
     },
     {
@@ -3554,7 +3592,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 10,
+   "sourceLine": 5,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -3578,7 +3616,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 11,
+   "sourceLine": 6,
    "flags": [
     "missing-duration",
     "ensemble-expanded"
@@ -3609,7 +3647,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 12,
+   "sourceLine": 7,
    "flags": [
     "performer-split",
     "ensemble-expanded"
@@ -3646,7 +3684,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 13,
+   "sourceLine": 8,
    "flags": [
     "performer-split"
    ],
@@ -3676,7 +3714,7 @@
    "collection": "З",
    "video": "rZe-eafI1rQ",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 14,
+   "sourceLine": 9,
    "flags": [
     "signature-double-prefix",
     "composer-placeholder",
@@ -3712,7 +3750,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 15,
+   "sourceLine": 10,
    "flags": [
     "performer-split",
     "ensemble-expanded"
@@ -3749,7 +3787,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 16,
+   "sourceLine": 11,
    "flags": [
     "missing-duration",
     "ensemble-expanded"
@@ -3780,7 +3818,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 17,
+   "sourceLine": 12,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -3801,7 +3839,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 18,
+   "sourceLine": 13,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -3825,7 +3863,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 19,
+   "sourceLine": 14,
    "flags": [
     "missing-duration"
    ],
@@ -3848,7 +3886,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 20,
+   "sourceLine": 15,
    "flags": [
     "missing-duration"
    ],
@@ -3871,7 +3909,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 21,
+   "sourceLine": 16,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -3892,7 +3930,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 22,
+   "sourceLine": 17,
    "flags": [
     "missing-duration",
     "ensemble-expanded"
@@ -3923,7 +3961,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 23,
+   "sourceLine": 18,
    "flags": [
     "performer-split"
    ],
@@ -3953,7 +3991,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 24,
+   "sourceLine": 19,
    "flags": [
     "missing-duration",
     "ensemble-expanded"
@@ -3984,7 +4022,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 25,
+   "sourceLine": 20,
    "flags": [
     "missing-duration",
     "performer-split"
@@ -4015,7 +4053,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 26,
+   "sourceLine": 21,
    "flags": [
     "missing-duration",
     "name-unified",
@@ -4053,7 +4091,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 27,
+   "sourceLine": 22,
    "flags": [
     "performer-split",
     "name-unified"
@@ -4090,7 +4128,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 28,
+   "sourceLine": 23,
    "flags": [
     "performer-split"
    ],
@@ -4120,7 +4158,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 29,
+   "sourceLine": 24,
    "flags": [
     "missing-duration",
     "name-unified",
@@ -4158,7 +4196,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 30,
+   "sourceLine": 25,
    "flags": [
     "missing-duration",
     "ensemble-expanded"
@@ -4189,7 +4227,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 31,
+   "sourceLine": 26,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -4214,7 +4252,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 32,
+   "sourceLine": 27,
    "flags": [
     "name-unified",
     "performer-split",
@@ -4258,7 +4296,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 33,
+   "sourceLine": 28,
    "flags": [
     "missing-duration",
     "performer-split",
@@ -4296,7 +4334,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 34,
+   "sourceLine": 29,
    "flags": [
     "performer-split"
    ],
@@ -4326,7 +4364,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 35,
+   "sourceLine": 30,
    "flags": [
     "performer-split",
     "name-unified"
@@ -4363,7 +4401,7 @@
    "collection": null,
    "video": "7oQywfAC31M",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 36,
+   "sourceLine": 31,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -4405,7 +4443,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 37,
+   "sourceLine": 32,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -4430,7 +4468,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 38,
+   "sourceLine": 33,
    "flags": [
     "name-unified"
    ],
@@ -4460,7 +4498,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 39,
+   "sourceLine": 34,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -4485,7 +4523,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 40,
+   "sourceLine": 35,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -4510,7 +4548,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 41,
+   "sourceLine": 36,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -4549,7 +4587,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 42,
+   "sourceLine": 37,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -4574,7 +4612,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 43,
+   "sourceLine": 38,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -4598,7 +4636,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 44,
+   "sourceLine": 39,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -4623,7 +4661,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 45,
+   "sourceLine": 40,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -4648,7 +4686,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 46,
+   "sourceLine": 41,
    "flags": [
     "punctuation-spacing",
     "performer-split",
@@ -4692,7 +4730,7 @@
    "collection": null,
    "video": "DGwlpM8cHI0",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 47,
+   "sourceLine": 42,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -4720,7 +4758,7 @@
    "collection": null,
    "video": "sWoJ94r2Isw",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 48,
+   "sourceLine": 43,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -4748,7 +4786,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 49,
+   "sourceLine": 44,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -4781,7 +4819,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 7,
+   "sourceLine": 2,
    "flags": [
     "signature-latin-prefix"
    ],
@@ -4804,7 +4842,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 8,
+   "sourceLine": 3,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -4825,7 +4863,7 @@
    "collection": "З",
    "video": "AGtL9uDuGpk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 9,
+   "sourceLine": 4,
    "flags": [
     "video-approximate"
    ],
@@ -4851,7 +4889,7 @@
    "collection": "АЗ",
    "video": "3fvsu-yUwzk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 10,
+   "sourceLine": 5,
    "flags": [
     "missing-duration",
     "punctuation-spacing",
@@ -4885,7 +4923,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 11,
+   "sourceLine": 6,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -4906,7 +4944,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 12,
+   "sourceLine": 7,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -4927,7 +4965,7 @@
    "collection": "АЗ",
    "video": "U0URpThLhDY",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 13,
+   "sourceLine": 8,
    "flags": [
     "missing-duration",
     "video-approximate"
@@ -4953,7 +4991,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 14,
+   "sourceLine": 9,
    "flags": [
     "missing-duration"
    ],
@@ -4976,7 +5014,7 @@
    "collection": "АЗ",
    "video": "qNLlAPg23m8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 15,
+   "sourceLine": 10,
    "flags": [
     "missing-duration"
    ],
@@ -5001,7 +5039,7 @@
    "collection": "З",
    "video": "JgVkOCBYlP8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 16,
+   "sourceLine": 11,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5024,7 +5062,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 17,
+   "sourceLine": 12,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5045,7 +5083,7 @@
    "collection": "З",
    "video": "AOknZvcBryw",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 18,
+   "sourceLine": 13,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5068,7 +5106,7 @@
    "collection": "З",
    "video": "EVCYU3ykkiY",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 19,
+   "sourceLine": 14,
    "flags": [
     "video-approximate"
    ],
@@ -5094,7 +5132,7 @@
    "collection": "З",
    "video": "EEL2MQbf6bk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 20,
+   "sourceLine": 15,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5117,7 +5155,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 21,
+   "sourceLine": 16,
    "flags": [
     "missing-duration"
    ],
@@ -5140,7 +5178,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 22,
+   "sourceLine": 17,
    "flags": [
     "typo-corrected"
    ],
@@ -5170,7 +5208,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 23,
+   "sourceLine": 18,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5191,7 +5229,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 24,
+   "sourceLine": 19,
    "flags": [
     "performer-author"
    ],
@@ -5221,7 +5259,7 @@
    "collection": "З",
    "video": "sQf0oQRgOo8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 25,
+   "sourceLine": 20,
    "flags": [
     "ensemble-expanded"
    ],
@@ -5253,7 +5291,7 @@
    "collection": "З",
    "video": "ywdm3q5S4rY",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 26,
+   "sourceLine": 21,
    "flags": [
     "missing-duration",
     "video-approximate"
@@ -5279,7 +5317,7 @@
    "collection": "З",
    "video": "JrwBFlKC5s8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 27,
+   "sourceLine": 22,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5303,7 +5341,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 28,
+   "sourceLine": 23,
    "flags": [
     "name-unified",
     "performer-author"
@@ -5340,7 +5378,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 29,
+   "sourceLine": 24,
    "flags": [
     "ensemble-expanded"
    ],
@@ -5370,7 +5408,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 30,
+   "sourceLine": 25,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5391,7 +5429,7 @@
    "collection": "З",
    "video": "2J0cCxLbcec",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 31,
+   "sourceLine": 26,
    "flags": [
     "missing-duration",
     "video-approximate"
@@ -5417,7 +5455,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 32,
+   "sourceLine": 27,
    "flags": [
     "missing-duration"
    ],
@@ -5440,7 +5478,7 @@
    "collection": "З",
    "video": "sb2HWWXgPjE",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 33,
+   "sourceLine": 28,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5463,7 +5501,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 34,
+   "sourceLine": 29,
    "flags": [
     "missing-duration"
    ],
@@ -5486,7 +5524,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 35,
+   "sourceLine": 30,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -5510,7 +5548,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 36,
+   "sourceLine": 31,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5531,7 +5569,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 37,
+   "sourceLine": 32,
    "flags": [
     "missing-performer"
    ],
@@ -5554,7 +5592,7 @@
    "collection": "З",
    "video": "RKaLdlhZzYs",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 38,
+   "sourceLine": 33,
    "flags": [
     "video-approximate"
    ],
@@ -5580,7 +5618,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 39,
+   "sourceLine": 34,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -5605,7 +5643,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 40,
+   "sourceLine": 35,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5626,7 +5664,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 41,
+   "sourceLine": 36,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5647,7 +5685,7 @@
    "collection": "АЗ",
    "video": "PH8sa4Jea3U",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 42,
+   "sourceLine": 37,
    "flags": [
     "missing-duration",
     "video-approximate"
@@ -5673,7 +5711,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 43,
+   "sourceLine": 38,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5694,7 +5732,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 44,
+   "sourceLine": 39,
    "flags": [
     "missing-performer"
    ],
@@ -5717,7 +5755,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 45,
+   "sourceLine": 40,
    "flags": [
     "missing-duration"
    ],
@@ -5740,7 +5778,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 46,
+   "sourceLine": 41,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5761,7 +5799,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 47,
+   "sourceLine": 42,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5782,7 +5820,7 @@
    "collection": "З",
    "video": "cDiZ1BZmsAM",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 48,
+   "sourceLine": 43,
    "flags": [
     "video-approximate"
    ],
@@ -5808,7 +5846,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 49,
+   "sourceLine": 44,
    "flags": [
     "missing-duration",
     "performer-split",
@@ -5846,7 +5884,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 50,
+   "sourceLine": 45,
    "flags": [
     "punctuation-spacing"
    ],
@@ -5876,7 +5914,7 @@
    "collection": "З",
    "video": "0D-J--RGujE",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 51,
+   "sourceLine": 46,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5899,7 +5937,7 @@
    "collection": null,
    "video": "OAM5b4b7ieM",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 52,
+   "sourceLine": 47,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -5926,7 +5964,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 53,
+   "sourceLine": 48,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -5950,7 +5988,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 54,
+   "sourceLine": 49,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5971,7 +6009,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 55,
+   "sourceLine": 50,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -5992,7 +6030,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 56,
+   "sourceLine": 51,
    "flags": [
     "missing-duration"
    ],
@@ -6015,7 +6053,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 57,
+   "sourceLine": 52,
    "flags": [
     "missing-duration"
    ],
@@ -6038,7 +6076,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 58,
+   "sourceLine": 53,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -6059,7 +6097,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 59,
+   "sourceLine": 54,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -6083,7 +6121,7 @@
    "collection": "З",
    "video": "qYt_TaG9IWk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 60,
+   "sourceLine": 55,
    "flags": [
     "duration-ambiguous-seconds"
    ],
@@ -6108,7 +6146,7 @@
    "collection": null,
    "video": "9anOvbmFdl0",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 61,
+   "sourceLine": 56,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -6141,7 +6179,7 @@
    "collection": "З",
    "video": "xlc0l3mk7cc",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 62,
+   "sourceLine": 57,
    "flags": [
     "video-approximate"
    ],
@@ -6167,7 +6205,7 @@
    "collection": "З",
    "video": "KL7tkRTUjdY",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 63,
+   "sourceLine": 58,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -6190,7 +6228,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 64,
+   "sourceLine": 59,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -6211,7 +6249,7 @@
    "collection": "АЗ",
    "video": "U8S0-8hDgOE",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 65,
+   "sourceLine": 60,
    "flags": [
     "missing-duration",
     "video-approximate"
@@ -6237,7 +6275,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 66,
+   "sourceLine": 61,
    "flags": [
     "missing-duration"
    ],
@@ -6260,7 +6298,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 67,
+   "sourceLine": 62,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -6281,7 +6319,7 @@
    "collection": "З",
    "video": "imFdCshzBxA",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 68,
+   "sourceLine": 63,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -6304,7 +6342,7 @@
    "collection": "З",
    "video": "JDhc_q1gJv4",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 69,
+   "sourceLine": 64,
    "flags": [
     "video-approximate"
    ],
@@ -6330,7 +6368,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 70,
+   "sourceLine": 65,
    "flags": [
     "missing-duration"
    ],
@@ -6353,7 +6391,7 @@
    "collection": "З",
    "video": "mzRkZ5xozF4",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 71,
+   "sourceLine": 66,
    "flags": [
     "video-approximate"
    ],
@@ -6379,7 +6417,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 72,
+   "sourceLine": 67,
    "flags": [
     "missing-duration",
     "composer-placeholder"
@@ -6403,7 +6441,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 73,
+   "sourceLine": 68,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -6428,7 +6466,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 74,
+   "sourceLine": 69,
    "flags": [
     "signature-missing-prefix"
    ],
@@ -6451,7 +6489,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 75,
+   "sourceLine": 70,
    "flags": [
     "composer-placeholder",
     "name-unified"
@@ -6482,7 +6520,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 76,
+   "sourceLine": 71,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -6503,7 +6541,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 77,
+   "sourceLine": 72,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -6524,7 +6562,7 @@
    "collection": null,
    "video": "ro3-qRE9Yvw",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 78,
+   "sourceLine": 73,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -6551,7 +6589,7 @@
    "collection": "АЗ",
    "video": "3nI2OFKJN6g",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 79,
+   "sourceLine": 74,
    "flags": [
     "missing-duration",
     "video-approximate"
@@ -6577,7 +6615,7 @@
    "collection": null,
    "video": "D657Yu5503M",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 80,
+   "sourceLine": 75,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -6604,7 +6642,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 81,
+   "sourceLine": 76,
    "flags": [
     "missing-duration"
    ],
@@ -6627,7 +6665,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 82,
+   "sourceLine": 77,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -6648,7 +6686,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 83,
+   "sourceLine": 78,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -6669,7 +6707,7 @@
    "collection": null,
    "video": "Ra-FWdn5QVY",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 84,
+   "sourceLine": 79,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -6717,7 +6755,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 85,
+   "sourceLine": 80,
    "flags": [
     "missing-duration"
    ],
@@ -6740,7 +6778,7 @@
    "collection": "АЗ",
    "video": "5R2VyMdE9LQ",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 86,
+   "sourceLine": 81,
    "flags": [
     "missing-duration",
     "performer-split",
@@ -6774,7 +6812,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 87,
+   "sourceLine": 82,
    "flags": [
     "missing-duration",
     "performer-split"
@@ -6805,7 +6843,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 88,
+   "sourceLine": 83,
    "flags": [
     "missing-duration"
    ],
@@ -6828,7 +6866,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 89,
+   "sourceLine": 84,
    "flags": [
     "signature-missing-dash",
     "punctuation-spacing",
@@ -6872,7 +6910,7 @@
    "collection": "З",
    "video": "gJPlb_dL9Z8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 90,
+   "sourceLine": 85,
    "flags": [
     "video-approximate"
    ],
@@ -6898,7 +6936,7 @@
    "collection": "З",
    "video": "VCX4uYPQsqQ",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 91,
+   "sourceLine": 86,
    "flags": [
     "video-approximate"
    ],
@@ -6924,7 +6962,7 @@
    "collection": "З",
    "video": "KQVIqSBVuRQ",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 92,
+   "sourceLine": 87,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -6947,7 +6985,7 @@
    "collection": "З",
    "video": "0n2LfYnDG6M",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 93,
+   "sourceLine": 88,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -6971,7 +7009,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 94,
+   "sourceLine": 89,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -6992,7 +7030,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 95,
+   "sourceLine": 90,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -7013,7 +7051,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 96,
+   "sourceLine": 91,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -7037,7 +7075,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 97,
+   "sourceLine": 92,
    "flags": [
     "composer-placeholder",
     "typo-corrected"
@@ -7068,7 +7106,7 @@
    "collection": null,
    "video": "Fhkw_POjFOQ",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 98,
+   "sourceLine": 93,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -7103,7 +7141,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 99,
+   "sourceLine": 94,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -7124,7 +7162,7 @@
    "collection": null,
    "video": "km8gdZ415Zw",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 100,
+   "sourceLine": 95,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -7151,7 +7189,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 101,
+   "sourceLine": 96,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -7172,7 +7210,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 102,
+   "sourceLine": 97,
    "flags": [
     "missing-duration"
    ],
@@ -7195,7 +7233,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 103,
+   "sourceLine": 98,
    "flags": [
     "missing-duration"
    ],
@@ -7218,7 +7256,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 104,
+   "sourceLine": 99,
    "flags": [
     "missing-duration"
    ],
@@ -7241,7 +7279,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 105,
+   "sourceLine": 100,
    "flags": [
     "missing-duration"
    ],
@@ -7264,7 +7302,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 106,
+   "sourceLine": 101,
    "flags": [
     "missing-duration"
    ],
@@ -7287,7 +7325,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 107,
+   "sourceLine": 102,
    "flags": [
     "missing-duration",
     "composer-placeholder",
@@ -7319,7 +7357,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 108,
+   "sourceLine": 103,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -7340,7 +7378,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 109,
+   "sourceLine": 104,
    "flags": [
     "missing-duration",
     "name-unified"
@@ -7371,7 +7409,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 110,
+   "sourceLine": 105,
    "flags": [
     "missing-duration",
     "possible-duplicate"
@@ -7395,7 +7433,7 @@
    "collection": "З",
    "video": "wbWNxXsoCJ8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 111,
+   "sourceLine": 106,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -7418,7 +7456,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 112,
+   "sourceLine": 107,
    "flags": [
     "missing-duration"
    ],
@@ -7441,7 +7479,7 @@
    "collection": "З",
    "video": "5FAuImBPH34",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 113,
+   "sourceLine": 108,
    "flags": [
     "video-approximate"
    ],
@@ -7467,7 +7505,7 @@
    "collection": "З",
    "video": "nKXRjTq5UVs",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 114,
+   "sourceLine": 109,
    "flags": [
     "performer-author"
    ],
@@ -7500,7 +7538,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 115,
+   "sourceLine": 110,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -7532,7 +7570,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 116,
+   "sourceLine": 111,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -7553,7 +7591,7 @@
    "collection": "З",
    "video": "LQd14NdrdVk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 117,
+   "sourceLine": 112,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -7576,7 +7614,7 @@
    "collection": "АЗ",
    "video": "OL63eiK3Wmk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 118,
+   "sourceLine": 113,
    "flags": [
     "missing-duration",
     "name-unified",
@@ -7610,7 +7648,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 119,
+   "sourceLine": 114,
    "flags": [
     "missing-duration"
    ],
@@ -7633,7 +7671,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 120,
+   "sourceLine": 115,
    "flags": [
     "missing-duration"
    ],
@@ -7656,7 +7694,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 121,
+   "sourceLine": 116,
    "flags": [
     "missing-duration"
    ],
@@ -7679,7 +7717,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 122,
+   "sourceLine": 117,
    "flags": [
     "name-unified"
    ],
@@ -7709,7 +7747,7 @@
    "collection": "З",
    "video": "HJwqKT2oSt0",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 123,
+   "sourceLine": 118,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -7732,7 +7770,7 @@
    "collection": "З",
    "video": "ECD2aIgNP7k",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 124,
+   "sourceLine": 119,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -7755,7 +7793,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 125,
+   "sourceLine": 120,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -7776,7 +7814,7 @@
    "collection": "З",
    "video": "Vyj1zXdXxvg",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 126,
+   "sourceLine": 121,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -7800,7 +7838,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 127,
+   "sourceLine": 122,
    "flags": [
     "name-unified",
     "punctuation-spacing",
@@ -7844,7 +7882,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 128,
+   "sourceLine": 123,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -7868,7 +7906,7 @@
    "collection": "З",
    "video": "z7S-d-RUJxQ",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 129,
+   "sourceLine": 124,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -7891,7 +7929,7 @@
    "collection": "З",
    "video": "ZiGiurLMn0w",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 130,
+   "sourceLine": 125,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -7914,7 +7952,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 131,
+   "sourceLine": 126,
    "flags": [
     "missing-duration"
    ],
@@ -7937,7 +7975,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 132,
+   "sourceLine": 127,
    "flags": [
     "missing-duration"
    ],
@@ -7960,7 +7998,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 133,
+   "sourceLine": 128,
    "flags": [
     "missing-duration"
    ],
@@ -7983,7 +8021,7 @@
    "collection": "З",
    "video": "2aCGz-ZwGsc",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 134,
+   "sourceLine": 129,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -8007,7 +8045,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 135,
+   "sourceLine": 130,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -8028,7 +8066,7 @@
    "collection": null,
    "video": "uqw4fCa2rAA",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 136,
+   "sourceLine": 131,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -8055,7 +8093,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 137,
+   "sourceLine": 132,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -8076,7 +8114,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 138,
+   "sourceLine": 133,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -8097,7 +8135,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 139,
+   "sourceLine": 134,
    "flags": [
     "composer-placeholder"
    ],
@@ -8120,7 +8158,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 140,
+   "sourceLine": 135,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -8141,7 +8179,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 141,
+   "sourceLine": 136,
    "flags": [
     "missing-duration"
    ],
@@ -8164,7 +8202,7 @@
    "collection": "АЗ",
    "video": "nvEA6G-_SWI",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 142,
+   "sourceLine": 137,
    "flags": [
     "missing-duration",
     "video-approximate"
@@ -8190,7 +8228,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 143,
+   "sourceLine": 138,
    "flags": [
     "missing-duration",
     "punctuation-spacing",
@@ -8228,7 +8266,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 144,
+   "sourceLine": 139,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -8249,7 +8287,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 145,
+   "sourceLine": 140,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -8270,7 +8308,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 146,
+   "sourceLine": 141,
    "flags": [
     "missing-duration",
     "name-unified"
@@ -8301,7 +8339,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 147,
+   "sourceLine": 142,
    "flags": [
     "missing-duration"
    ],
@@ -8324,7 +8362,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 148,
+   "sourceLine": 143,
    "flags": [
     "missing-duration"
    ],
@@ -8347,7 +8385,7 @@
    "collection": "З",
    "video": "KvfPNzPuNKg",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 149,
+   "sourceLine": 144,
    "flags": [
     "video-approximate"
    ],
@@ -8373,7 +8411,7 @@
    "collection": "АЗ",
    "video": "Myx2M0SygMc",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 150,
+   "sourceLine": 145,
    "flags": [
     "missing-duration",
     "video-approximate"
@@ -8399,7 +8437,7 @@
    "collection": "З",
    "video": "8ZNpiRc-vJ0",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 151,
+   "sourceLine": 146,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -8422,7 +8460,7 @@
    "collection": "З",
    "video": "dm8oa1UWrdE",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 152,
+   "sourceLine": 147,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -8445,7 +8483,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 153,
+   "sourceLine": 148,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -8469,7 +8507,7 @@
    "collection": null,
    "video": "lJiyxoUYJEg",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 154,
+   "sourceLine": 149,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -8496,7 +8534,7 @@
    "collection": "З",
    "video": "gb2O8wnQsMs",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 155,
+   "sourceLine": 150,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -8519,7 +8557,7 @@
    "collection": null,
    "video": "NTxyra9EJSw",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 156,
+   "sourceLine": 151,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -8546,7 +8584,7 @@
    "collection": null,
    "video": "7tHVdniHJTc",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 157,
+   "sourceLine": 152,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -8574,7 +8612,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 158,
+   "sourceLine": 153,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -8595,7 +8633,7 @@
    "collection": "З",
    "video": "0IRrG_jh1VI",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 159,
+   "sourceLine": 154,
    "flags": [
     "video-approximate"
    ],
@@ -8621,7 +8659,7 @@
    "collection": "З",
    "video": "QVQn3-Js5NI",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 160,
+   "sourceLine": 155,
    "flags": [
     "signature-suspicious"
    ],
@@ -8646,7 +8684,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 161,
+   "sourceLine": 156,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -8667,7 +8705,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 162,
+   "sourceLine": 157,
    "flags": [
     "missing-duration",
     "performer-split"
@@ -8698,7 +8736,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 163,
+   "sourceLine": 158,
    "flags": [
     "missing-duration"
    ],
@@ -8721,7 +8759,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 164,
+   "sourceLine": 159,
    "flags": [
     "missing-duration"
    ],
@@ -8744,7 +8782,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 165,
+   "sourceLine": 160,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -8765,7 +8803,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 166,
+   "sourceLine": 161,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -8789,7 +8827,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 167,
+   "sourceLine": 162,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -8813,7 +8851,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 168,
+   "sourceLine": 163,
    "flags": [
     "missing-duration"
    ],
@@ -8836,7 +8874,7 @@
    "collection": null,
    "video": "5YcnD1ahUCc",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 169,
+   "sourceLine": 164,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -8863,7 +8901,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 170,
+   "sourceLine": 165,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -8895,7 +8933,7 @@
    "collection": "АЗ",
    "video": "kcD_XwDR944",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 171,
+   "sourceLine": 166,
    "flags": [
     "missing-duration",
     "video-approximate"
@@ -8921,7 +8959,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 172,
+   "sourceLine": 167,
    "flags": [
     "missing-duration"
    ],
@@ -8944,7 +8982,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 173,
+   "sourceLine": 168,
    "flags": [
     "missing-duration"
    ],
@@ -8967,7 +9005,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 174,
+   "sourceLine": 169,
    "flags": [
     "missing-duration"
    ],
@@ -8990,7 +9028,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 175,
+   "sourceLine": 170,
    "flags": [
     "performer-author"
    ],
@@ -9020,7 +9058,7 @@
    "collection": "АЗ",
    "video": "G3SK6qnXXhk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 176,
+   "sourceLine": 171,
    "flags": [
     "missing-duration"
    ],
@@ -9044,7 +9082,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 177,
+   "sourceLine": 172,
    "flags": [
     "missing-duration"
    ],
@@ -9067,7 +9105,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 178,
+   "sourceLine": 173,
    "flags": [
     "missing-duration"
    ],
@@ -9090,7 +9128,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 179,
+   "sourceLine": 174,
    "flags": [
     "missing-duration"
    ],
@@ -9113,7 +9151,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 180,
+   "sourceLine": 175,
    "flags": [
     "missing-duration"
    ],
@@ -9136,7 +9174,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 181,
+   "sourceLine": 176,
    "flags": [
     "missing-duration"
    ],
@@ -9159,7 +9197,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 182,
+   "sourceLine": 177,
    "flags": [
     "missing-duration"
    ],
@@ -9182,7 +9220,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 183,
+   "sourceLine": 178,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -9203,7 +9241,7 @@
    "collection": "АЗ",
    "video": "G3SK6qnXXhk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 184,
+   "sourceLine": 179,
    "flags": [
     "missing-duration",
     "punctuation-spacing",
@@ -9236,7 +9274,7 @@
    "collection": "АЗ",
    "video": "7hmR8gifV0Y",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 185,
+   "sourceLine": 180,
    "flags": [
     "missing-duration",
     "performer-split",
@@ -9270,7 +9308,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 186,
+   "sourceLine": 181,
    "flags": [
     "missing-duration"
    ],
@@ -9293,7 +9331,7 @@
    "collection": "АЗ",
    "video": "m3Oyu_e6OdY",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 187,
+   "sourceLine": 182,
    "flags": [
     "missing-duration",
     "video-approximate"
@@ -9319,7 +9357,7 @@
    "collection": "ПК",
    "video": "T_Od_9-7Hkg",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 188,
+   "sourceLine": 183,
    "flags": [
     "missing-duration",
     "possible-duplicate",
@@ -9346,7 +9384,7 @@
    "collection": "З",
    "video": "XpmbSj6HXBo",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 189,
+   "sourceLine": 184,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -9369,7 +9407,7 @@
    "collection": "З",
    "video": "MFvfQHS4Cbs",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 190,
+   "sourceLine": 185,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -9392,7 +9430,7 @@
    "collection": "З",
    "video": "hkCnH7q6RPw",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 191,
+   "sourceLine": 186,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -9415,7 +9453,7 @@
    "collection": "З",
    "video": "8mXUlZ-6nHk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 192,
+   "sourceLine": 187,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -9438,7 +9476,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 193,
+   "sourceLine": 188,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -9462,7 +9500,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 194,
+   "sourceLine": 189,
    "flags": [
     "composer-placeholder",
     "name-unified"
@@ -9493,7 +9531,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 195,
+   "sourceLine": 190,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -9526,7 +9564,7 @@
    "collection": "З",
    "video": "9mAeFyYWvRA",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 196,
+   "sourceLine": 191,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -9549,7 +9587,7 @@
    "collection": "З",
    "video": "q8jg4jy9a44",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 197,
+   "sourceLine": 192,
    "flags": [
     "missing-duration",
     "video-approximate"
@@ -9575,7 +9613,7 @@
    "collection": "З",
    "video": "JS4FF1tH3vk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 198,
+   "sourceLine": 193,
    "flags": [
     "punctuation-spacing",
     "performer-split"
@@ -9614,7 +9652,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 199,
+   "sourceLine": 194,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -9638,7 +9676,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 200,
+   "sourceLine": 195,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -9662,7 +9700,7 @@
    "collection": null,
    "video": "jG4eIEhNaWE",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 201,
+   "sourceLine": 196,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -9697,7 +9735,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 202,
+   "sourceLine": 197,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -9721,7 +9759,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 203,
+   "sourceLine": 198,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -9753,7 +9791,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 204,
+   "sourceLine": 199,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -9774,7 +9812,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 205,
+   "sourceLine": 200,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -9795,7 +9833,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 206,
+   "sourceLine": 201,
    "flags": [
     "missing-duration"
    ],
@@ -9818,7 +9856,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 207,
+   "sourceLine": 202,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -9839,7 +9877,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 208,
+   "sourceLine": 203,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -9860,7 +9898,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 209,
+   "sourceLine": 204,
    "flags": [
     "missing-duration"
    ],
@@ -9883,7 +9921,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 210,
+   "sourceLine": 205,
    "flags": [
     "missing-duration",
     "name-unified"
@@ -9914,7 +9952,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 211,
+   "sourceLine": 206,
    "flags": [
     "missing-duration"
    ],
@@ -9937,7 +9975,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 212,
+   "sourceLine": 207,
    "flags": [
     "missing-duration"
    ],
@@ -9960,7 +9998,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 213,
+   "sourceLine": 208,
    "flags": [
     "missing-duration"
    ],
@@ -9983,7 +10021,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 214,
+   "sourceLine": 209,
    "flags": [
     "missing-duration"
    ],
@@ -10006,7 +10044,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 215,
+   "sourceLine": 210,
    "flags": [
     "missing-duration",
     "mixed-script",
@@ -10044,7 +10082,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 216,
+   "sourceLine": 211,
    "flags": [
     "signature-suspicious",
     "name-unified",
@@ -10082,7 +10120,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 217,
+   "sourceLine": 212,
    "flags": [
     "missing-duration"
    ],
@@ -10105,7 +10143,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 218,
+   "sourceLine": 213,
    "flags": [
     "performer-author"
    ],
@@ -10135,7 +10173,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 219,
+   "sourceLine": 214,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -10156,7 +10194,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 220,
+   "sourceLine": 215,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -10177,7 +10215,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 221,
+   "sourceLine": 216,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -10201,7 +10239,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 222,
+   "sourceLine": 217,
    "flags": [
     "signature-double-prefix"
    ],
@@ -10224,7 +10262,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 223,
+   "sourceLine": 218,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -10245,7 +10283,7 @@
    "collection": "АЗ",
    "video": "tB8uFeLwba8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 224,
+   "sourceLine": 219,
    "flags": [
     "missing-duration",
     "video-approximate"
@@ -10271,7 +10309,7 @@
    "collection": "З",
    "video": "tk90axokQPY",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 225,
+   "sourceLine": 220,
    "flags": [
     "signature-suspicious"
    ],
@@ -10297,7 +10335,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 226,
+   "sourceLine": 221,
    "flags": [
     "missing-duration",
     "ensemble-expanded"
@@ -10328,7 +10366,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 227,
+   "sourceLine": 222,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -10349,7 +10387,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 228,
+   "sourceLine": 223,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -10374,7 +10412,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 229,
+   "sourceLine": 224,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -10406,7 +10444,7 @@
    "collection": "З",
    "video": "C8Fg-CRoQZk",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 230,
+   "sourceLine": 225,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -10429,7 +10467,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 231,
+   "sourceLine": 226,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -10450,7 +10488,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 232,
+   "sourceLine": 227,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -10475,7 +10513,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 233,
+   "sourceLine": 228,
    "flags": [
     "typo-corrected"
    ],
@@ -10505,7 +10543,7 @@
    "collection": "З",
    "video": "dW9I9_C6Vxs",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 234,
+   "sourceLine": 229,
    "flags": [
     "signature-missing-prefix",
     "video-approximate"
@@ -10532,7 +10570,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 235,
+   "sourceLine": 230,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -10553,7 +10591,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 236,
+   "sourceLine": 231,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -10578,7 +10616,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 237,
+   "sourceLine": 232,
    "flags": [
     "name-unified"
    ],
@@ -10608,7 +10646,7 @@
    "collection": null,
    "video": "lP_f896o9ng",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 238,
+   "sourceLine": 233,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -10635,7 +10673,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 239,
+   "sourceLine": 234,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -10656,7 +10694,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 240,
+   "sourceLine": 235,
    "flags": [
     "missing-duration",
     "ensemble-expanded"
@@ -10687,7 +10725,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 241,
+   "sourceLine": 236,
    "flags": [
     "missing-duration"
    ],
@@ -10710,7 +10748,7 @@
    "collection": "АЗ",
    "video": "fIxulSLx7ng",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 242,
+   "sourceLine": 237,
    "flags": [
     "missing-duration",
     "video-approximate"
@@ -10736,7 +10774,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 243,
+   "sourceLine": 238,
    "flags": [
     "missing-duration"
    ],
@@ -10759,7 +10797,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 244,
+   "sourceLine": 239,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -10791,7 +10829,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 245,
+   "sourceLine": 240,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -10816,7 +10854,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 246,
+   "sourceLine": 241,
    "flags": [
     "missing-duration",
     "name-unified"
@@ -10847,7 +10885,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 247,
+   "sourceLine": 242,
    "flags": [
     "composer-placeholder",
     "performer-split",
@@ -10885,7 +10923,7 @@
    "collection": null,
    "video": "hwTzi_hG8jM",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 248,
+   "sourceLine": 243,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -10913,7 +10951,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 249,
+   "sourceLine": 244,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -10937,7 +10975,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 250,
+   "sourceLine": 245,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -10958,7 +10996,7 @@
    "collection": "З",
    "video": "1mUyf5sDygs",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 251,
+   "sourceLine": 246,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -10981,7 +11019,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 252,
+   "sourceLine": 247,
    "flags": [
     "missing-duration"
    ],
@@ -11004,7 +11042,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 253,
+   "sourceLine": 248,
    "flags": [
     "missing-duration"
    ],
@@ -11027,7 +11065,7 @@
    "collection": null,
    "video": "l0qF2FuW7_M",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 254,
+   "sourceLine": 249,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -11069,7 +11107,7 @@
    "collection": null,
    "video": "bKiiKI5Z3cM",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 255,
+   "sourceLine": 250,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -11097,7 +11135,7 @@
    "collection": null,
    "video": "MZn_j1iWjN4",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 256,
+   "sourceLine": 251,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -11124,7 +11162,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 257,
+   "sourceLine": 252,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -11149,7 +11187,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 258,
+   "sourceLine": 253,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -11170,7 +11208,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 259,
+   "sourceLine": 254,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -11194,7 +11232,7 @@
    "collection": "З",
    "video": "rubMGVkJM6o",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 260,
+   "sourceLine": 255,
    "flags": [
     "video-approximate"
    ],
@@ -11220,7 +11258,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 261,
+   "sourceLine": 256,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -11245,7 +11283,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 262,
+   "sourceLine": 257,
    "flags": [
     "missing-duration",
     "composer-placeholder",
@@ -11284,7 +11322,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 263,
+   "sourceLine": 258,
    "flags": [
     "missing-duration",
     "missing-signature"
@@ -11308,7 +11346,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 264,
+   "sourceLine": 259,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
@@ -11329,7 +11367,7 @@
    "collection": "АЗ",
    "video": "9bgGfhDcRs8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 265,
+   "sourceLine": 260,
    "flags": [
     "missing-duration",
     "video-approximate"
@@ -11355,7 +11393,7 @@
    "collection": null,
    "video": "8R4gP15zm1w",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 266,
+   "sourceLine": 261,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -11382,7 +11420,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 267,
+   "sourceLine": 262,
    "flags": [
     "missing-duration",
     "name-unified",
