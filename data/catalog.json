@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 496,
-  "videos": 150,
+  "notes": 495,
+  "videos": 149,
   "new": 7,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -884,20 +884,15 @@
    "signature": "З-8226/1",
    "signatureRaw": "З-8226/1",
    "collection": "З",
-   "video": "L9d9ls1rpDw",
+   "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 43,
-   "flags": [
-    "video-approximate"
-   ],
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0037",
    "warnCount": 0,
-   "search": "мојот дом драган мијалковски з-8226/1 mojot dom dragan mijalkovski z-8226/1",
-   "videoLengthSec": 164,
-   "videoDeltaSec": 25,
-   "videoApprox": true
+   "search": "мојот дом драган мијалковски з-8226/1 mojot dom dragan mijalkovski z-8226/1"
   },
   {
    "category": "vocal",
