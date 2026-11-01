@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 494,
-  "videos": 148,
+  "notes": 493,
+  "videos": 147,
   "new": 7,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -7502,21 +7502,18 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": "QdyBIDd1u6c",
+   "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 128,
    "flags": [
     "missing-duration",
-    "missing-signature",
-    "video-approximate"
+    "missing-signature"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0122",
    "warnCount": 0,
-   "search": "ноќеска шумеа брезите зафир хаџиманов петар пешев nokjeska shumea brezite zafir hadjimanov petar peshev",
-   "videoLengthSec": 241,
-   "videoApprox": true
+   "search": "ноќеска шумеа брезите зафир хаџиманов петар пешев nokjeska shumea brezite zafir hadjimanov petar peshev"
   },
   {
    "category": "arrVocal",
