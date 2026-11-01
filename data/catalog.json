@@ -7,9 +7,9 @@
    "arrThemes": 43,
    "arrVocal": 260
   },
-  "notes": 538,
+  "notes": 537,
   "videos": 140,
-  "new": 8,
+  "new": 9,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -9324,9 +9324,7 @@
    "video": "5YcnD1ahUCc",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 183,
-   "flags": [
-    "video-approximate"
-   ],
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0182",
@@ -9334,7 +9332,7 @@
    "search": "се руши еден свет импулси мандел з-2813/1 se rushi eden svet impulsi mandel z-2813/1",
    "videoLengthSec": 160,
    "videoDeltaSec": 25,
-   "videoApprox": true
+   "isNew": true
   },
   {
    "category": "arrVocal",
