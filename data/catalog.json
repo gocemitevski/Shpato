@@ -7,7 +7,7 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 498,
+  "notes": 497,
   "videos": 151,
   "new": 7,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
@@ -5792,14 +5792,13 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": "x-AqPPiYKrA",
+   "video": "9anOvbmFdl0",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 61,
    "flags": [
     "missing-duration",
     "missing-signature",
-    "punctuation-spacing",
-    "video-approximate"
+    "punctuation-spacing"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -5813,8 +5812,7 @@
    "id": "arrVocal-0055",
    "warnCount": 0,
    "search": "кажи зошто ме остави томислав маниќ н. гунарис kazhi zoshto me ostavi tomislav manikj n. gunaris",
-   "videoLengthSec": 185,
-   "videoApprox": true
+   "videoLengthSec": 185
   },
   {
    "category": "arrVocal",
