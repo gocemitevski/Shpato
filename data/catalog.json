@@ -1811,7 +1811,7 @@
    "title": "Балада за гитара",
    "composer": "",
    "performer": "Петар Лукиќ",
-   "performerRole": "соло гитара со Танцов оркестар на Радио телевизија Скопје",
+   "performerRole": "соло гитара со Танцов оркестар на Радио-телевизија Скопје",
    "durationSec": 172,
    "durationRaw": "2.52",
    "signature": "З-4698/2",
@@ -1837,7 +1837,7 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "соло гитара со ТО на РТС",
-     "to": "соло гитара со Танцов оркестар на Радио телевизија Скопје"
+     "to": "соло гитара со Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0003",
@@ -1852,7 +1852,7 @@
    "title": "Во спомен на старото пријателство",
    "composer": "",
    "performer": "Мики Асановиќ",
-   "performerRole": "тенор саксофон со Танцов оркестар на Радио телевизија Скопје",
+   "performerRole": "тенор саксофон со Танцов оркестар на Радио-телевизија Скопје",
    "durationSec": 220,
    "durationRaw": "3.40",
    "signature": "З-7206/2",
@@ -1877,7 +1877,7 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "тенор саксофон со ТО на РТС",
-     "to": "тенор саксофон со Танцов оркестар на Радио телевизија Скопје"
+     "to": "тенор саксофон со Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0004",
@@ -1890,7 +1890,7 @@
    "category": "instrumental",
    "title": "Гермијан",
    "composer": "",
-   "performer": "Танцов оркестар на Радио телевизија Скопје",
+   "performer": "Танцов оркестар на Радио-телевизија Скопје",
    "performerRole": "",
    "durationSec": 245,
    "durationRaw": "4.05",
@@ -1916,18 +1916,18 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ТО на РТС",
-     "to": "Танцов оркестар на Радио телевизија Скопје"
+     "to": "Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0006",
    "warnCount": 1,
-   "search": "гермијан танцов оркестар на радио телевизија скопје з-7457/1 germijan tancov orkestar na radio televizija skopje z-7457/1"
+   "search": "гермијан танцов оркестар на радио-телевизија скопје з-7457/1 germijan tancov orkestar na radio-televizija skopje z-7457/1"
   },
   {
    "category": "instrumental",
    "title": "Гарача",
    "composer": "",
-   "performer": "Танцов оркестар на Радио телевизија Скопје",
+   "performer": "Танцов оркестар на Радио-телевизија Скопје",
    "performerRole": "",
    "durationSec": 234,
    "durationRaw": "3.54",
@@ -1946,12 +1946,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ТО на РТС",
-     "to": "Танцов оркестар на Радио телевизија Скопје"
+     "to": "Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0007",
    "warnCount": 0,
-   "search": "гарача танцов оркестар на радио телевизија скопје з-7700/2 garacha tancov orkestar na radio televizija skopje z-7700/2",
+   "search": "гарача танцов оркестар на радио-телевизија скопје з-7700/2 garacha tancov orkestar na radio-televizija skopje z-7700/2",
    "videoLengthSec": 235,
    "videoDeltaSec": 1
   },
@@ -2040,7 +2040,7 @@
    "category": "instrumental",
    "title": "Дојди есен",
    "composer": "",
-   "performer": "Танцов оркестар на Радио телевизија Скопје",
+   "performer": "Танцов оркестар на Радио-телевизија Скопје",
    "performerRole": "",
    "durationSec": 210,
    "durationRaw": "3.30",
@@ -2059,12 +2059,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ТО на РТС",
-     "to": "Танцов оркестар на Радио телевизија Скопје"
+     "to": "Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0011",
    "warnCount": 0,
-   "search": "дојди есен танцов оркестар на радио телевизија скопје з-9483/2 dojdi esen tancov orkestar na radio televizija skopje z-9483/2"
+   "search": "дојди есен танцов оркестар на радио-телевизија скопје з-9483/2 dojdi esen tancov orkestar na radio-televizija skopje z-9483/2"
   },
   {
    "category": "instrumental",
@@ -2217,7 +2217,7 @@
    "category": "instrumental",
    "title": "Ехо од далечното минато",
    "composer": "",
-   "performer": "Танцов оркестар на Радио телевизија Скопје",
+   "performer": "Танцов оркестар на Радио-телевизија Скопје",
    "performerRole": "",
    "durationSec": 300,
    "durationRaw": "5.00",
@@ -2236,12 +2236,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ТО на РТС",
-     "to": "Танцов оркестар на Радио телевизија Скопје"
+     "to": "Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0017",
    "warnCount": 0,
-   "search": "ехо од далечното минато танцов оркестар на радио телевизија скопје з-4701/1 eho od dalechnoto minato tancov orkestar na radio televizija skopje z-4701/1",
+   "search": "ехо од далечното минато танцов оркестар на радио-телевизија скопје з-4701/1 eho od dalechnoto minato tancov orkestar na radio-televizija skopje z-4701/1",
    "videoLengthSec": 301,
    "videoDeltaSec": 1
   },
@@ -2249,7 +2249,7 @@
    "category": "instrumental",
    "title": "Злато најдоа, злато во Калифорнија",
    "composer": "",
-   "performer": "Ревиски оркестар на Радио телевизија Скопје",
+   "performer": "Ревиски оркестар на Радио-телевизија Скопје",
    "performerRole": "",
    "durationSec": 74,
    "durationRaw": "1.14",
@@ -2268,12 +2268,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "РО на РТС",
-     "to": "Ревиски оркестар на Радио телевизија Скопје"
+     "to": "Ревиски оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0018",
    "warnCount": 0,
-   "search": "злато најдоа, злато во калифорнија ревиски оркестар на радио телевизија скопје з-7690/2 zlato najdoa, zlato vo kalifornija reviski orkestar na radio televizija skopje z-7690/2"
+   "search": "злато најдоа, злато во калифорнија ревиски оркестар на радио-телевизија скопје з-7690/2 zlato najdoa, zlato vo kalifornija reviski orkestar na radio-televizija skopje z-7690/2"
   },
   {
    "category": "instrumental",
@@ -2311,7 +2311,7 @@
    "title": "Импресија",
    "composer": "",
    "performer": "Петар Лукиќ",
-   "performerRole": "гитара со Танцов оркестар на Радио телевизија Скопје",
+   "performerRole": "гитара со Танцов оркестар на Радио-телевизија Скопје",
    "durationSec": 170,
    "durationRaw": "2.50",
    "signature": "З-6668/1",
@@ -2337,7 +2337,7 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "гитара со ТО на РТС",
-     "to": "гитара со Танцов оркестар на Радио телевизија Скопје"
+     "to": "гитара со Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0020",
@@ -2475,7 +2475,7 @@
    "category": "instrumental",
    "title": "Јас не сум ти",
    "composer": "",
-   "performer": "Џез ансамбл на Радио телевизија Скопје",
+   "performer": "Џез ансамбл на Радио-телевизија Скопје",
    "performerRole": "",
    "durationSec": 447,
    "durationRaw": "7.27",
@@ -2494,18 +2494,18 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "Џез ансамбл на РТС",
-     "to": "Џез ансамбл на Радио телевизија Скопје"
+     "to": "Џез ансамбл на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0025",
    "warnCount": 0,
-   "search": "јас не сум ти џез ансамбл на радио телевизија скопје з-3004/2 jas ne sum ti djez ansambl na radio televizija skopje z-3004/2"
+   "search": "јас не сум ти џез ансамбл на радио-телевизија скопје з-3004/2 jas ne sum ti djez ansambl na radio-televizija skopje z-3004/2"
   },
   {
    "category": "instrumental",
    "title": "Кога си сама",
    "composer": "",
-   "performer": "Ревиски оркестар на Радио телевизија Скопје",
+   "performer": "Ревиски оркестар на Радио-телевизија Скопје",
    "performerRole": "",
    "durationSec": 186,
    "durationRaw": "3.06",
@@ -2524,12 +2524,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "РО на РТС",
-     "to": "Ревиски оркестар на Радио телевизија Скопје"
+     "to": "Ревиски оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0026",
    "warnCount": 0,
-   "search": "кога си сама ревиски оркестар на радио телевизија скопје з-8227/1 koga si sama reviski orkestar na radio televizija skopje z-8227/1"
+   "search": "кога си сама ревиски оркестар на радио-телевизија скопје з-8227/1 koga si sama reviski orkestar na radio-televizija skopje z-8227/1"
   },
   {
    "category": "instrumental",
@@ -3019,7 +3019,7 @@
    "category": "instrumental",
    "title": "На игранка",
    "composer": "",
-   "performer": "Танцов оркестар на Радио телевизија Скопје",
+   "performer": "Танцов оркестар на Радио-телевизија Скопје",
    "performerRole": "Божидар Ноев, труба, Петар Каргов, саксофон",
    "durationSec": 308,
    "durationRaw": "5.08",
@@ -3052,12 +3052,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ТО на РТС",
-     "to": "Танцов оркестар на Радио телевизија Скопје"
+     "to": "Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0043",
    "warnCount": 0,
-   "search": "на игранка танцов оркестар на радио телевизија скопје з-7638/2 na igranka tancov orkestar na radio televizija skopje z-7638/2",
+   "search": "на игранка танцов оркестар на радио-телевизија скопје з-7638/2 na igranka tancov orkestar na radio-televizija skopje z-7638/2",
    "videoLengthSec": 306,
    "videoDeltaSec": 2
   },
@@ -3065,7 +3065,7 @@
    "category": "instrumental",
    "title": "Народна игра",
    "composer": "",
-   "performer": "ЗО на Радио телевизија Скопје",
+   "performer": "ЗО на Радио-телевизија Скопје",
    "performerRole": "",
    "durationSec": 98,
    "durationRaw": "1.38",
@@ -3084,12 +3084,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ЗО на РТС",
-     "to": "ЗО на Радио телевизија Скопје"
+     "to": "ЗО на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0044",
    "warnCount": 0,
-   "search": "народна игра зо на радио телевизија скопје з-7693/1 narodna igra zo na radio televizija skopje z-7693/1"
+   "search": "народна игра зо на радио-телевизија скопје з-7693/1 narodna igra zo na radio-televizija skopje z-7693/1"
   },
   {
    "category": "instrumental",
@@ -3147,7 +3147,7 @@
    "title": "Поздрав до А. К. Жобим",
    "composer": "",
    "performer": "Рамиз Имеров",
-   "performerRole": "тромбон со Танцов оркестар на Радио телевизија Скопје",
+   "performerRole": "тромбон со Танцов оркестар на Радио-телевизија Скопје",
    "durationSec": 252,
    "durationRaw": "4.12",
    "signature": "З-7194/1",
@@ -3172,7 +3172,7 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "тромбон со ТО на РТС",
-     "to": "тромбон со Танцов оркестар на Радио телевизија Скопје"
+     "to": "тромбон со Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0047",
@@ -3183,7 +3183,7 @@
    "category": "instrumental",
    "title": "Поздрав до оркестарот",
    "composer": "",
-   "performer": "Танцов оркестар на Радио телевизија Скопје",
+   "performer": "Танцов оркестар на Радио-телевизија Скопје",
    "performerRole": "солист Кире Костов, труба",
    "durationSec": 270,
    "durationRaw": "4.30",
@@ -3209,12 +3209,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ТО на РТС",
-     "to": "Танцов оркестар на Радио телевизија Скопје"
+     "to": "Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0048",
    "warnCount": 0,
-   "search": "поздрав до оркестарот танцов оркестар на радио телевизија скопје з-3783/1 pozdrav do orkestarot tancov orkestar na radio televizija skopje z-3783/1",
+   "search": "поздрав до оркестарот танцов оркестар на радио-телевизија скопје з-3783/1 pozdrav do orkestarot tancov orkestar na radio-televizija skopje z-3783/1",
    "videoLengthSec": 273,
    "videoDeltaSec": 3
   },
@@ -3317,7 +3317,7 @@
    "category": "instrumental",
    "title": "Тема број 1, Транскрипција на една замислена тема",
    "composer": "",
-   "performer": "Танцов оркестар на Радио телевизија Скопје",
+   "performer": "Танцов оркестар на Радио-телевизија Скопје",
    "performerRole": "",
    "durationSec": 252,
    "durationRaw": "4.12",
@@ -3336,18 +3336,18 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ТО на РТС",
-     "to": "Танцов оркестар на Радио телевизија Скопје"
+     "to": "Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0053",
    "warnCount": 0,
-   "search": "тема број 1, транскрипција на една замислена тема танцов оркестар на радио телевизија скопје з-7702/3 tema broj 1, transkripcija na edna zamislena tema tancov orkestar na radio televizija skopje z-7702/3"
+   "search": "тема број 1, транскрипција на една замислена тема танцов оркестар на радио-телевизија скопје з-7702/3 tema broj 1, transkripcija na edna zamislena tema tancov orkestar na radio-televizija skopje z-7702/3"
   },
   {
    "category": "instrumental",
    "title": "Титовиот пат",
    "composer": "",
-   "performer": "Танцов оркестар на Радио телевизија Скопје",
+   "performer": "Танцов оркестар на Радио-телевизија Скопје",
    "performerRole": "",
    "durationSec": 170,
    "durationRaw": "2.50",
@@ -3366,12 +3366,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ТО на РТС",
-     "to": "Танцов оркестар на Радио телевизија Скопје"
+     "to": "Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0054",
    "warnCount": 0,
-   "search": "титовиот пат танцов оркестар на радио телевизија скопје з-7964/2 titoviot pat tancov orkestar na radio televizija skopje z-7964/2"
+   "search": "титовиот пат танцов оркестар на радио-телевизија скопје з-7964/2 titoviot pat tancov orkestar na radio-televizija skopje z-7964/2"
   },
   {
    "category": "instrumental",
@@ -3407,7 +3407,7 @@
    "category": "instrumental",
    "title": "Чилеанска игра",
    "composer": "",
-   "performer": "Забавен оркестар на Радио телевизија Скопје",
+   "performer": "Забавен оркестар на Радио-телевизија Скопје",
    "performerRole": "",
    "durationSec": 128,
    "durationRaw": "2.08",
@@ -3426,18 +3426,18 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "Забавен оркестар на РТС",
-     "to": "Забавен оркестар на Радио телевизија Скопје"
+     "to": "Забавен оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0056",
    "warnCount": 0,
-   "search": "чилеанска игра забавен оркестар на радио телевизија скопје з-7690/3 chileanska igra zabaven orkestar na radio televizija skopje z-7690/3"
+   "search": "чилеанска игра забавен оркестар на радио-телевизија скопје з-7690/3 chileanska igra zabaven orkestar na radio-televizija skopje z-7690/3"
   },
   {
    "category": "arrThemes",
    "title": "Авизо",
    "composer": "Дјук Елингтон",
-   "performer": "Танцов оркестар на Радио телевизија Скопје",
+   "performer": "Танцов оркестар на Радио-телевизија Скопје",
    "performerRole": "",
    "durationSec": 37,
    "durationRaw": "0.37",
@@ -3457,12 +3457,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ТО на РТС",
-     "to": "Танцов оркестар на Радио телевизија Скопје"
+     "to": "Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "arrThemes-0001",
    "warnCount": 0,
-   "search": "авизо танцов оркестар на радио телевизија скопје дјук елингтон аз-57 avizo tancov orkestar na radio televizija skopje djuk elington az-57"
+   "search": "авизо танцов оркестар на радио-телевизија скопје дјук елингтон аз-57 avizo tancov orkestar na radio-televizija skopje djuk elington az-57"
   },
   {
    "category": "arrThemes",
@@ -3601,7 +3601,7 @@
    "title": "Гагово расположение",
    "composer": "Л. Митревски",
    "performer": "Петар Каргов",
-   "performerRole": "со Танцов оркестар на Македонска радио телевизија",
+   "performerRole": "со Танцов оркестар на Македонска радио-телевизија",
    "durationSec": 230,
    "durationRaw": "3.50",
    "signature": "З-7615/2",
@@ -3626,7 +3626,7 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "со ТО на МРТ",
-     "to": "со Танцов оркестар на Македонска радио телевизија"
+     "to": "со Танцов оркестар на Македонска радио-телевизија"
     }
    ],
    "id": "arrThemes-0006",
@@ -4206,7 +4206,7 @@
    "title": "Почнувам да гледам светлина",
    "composer": "Дјук Елингтон",
    "performer": "Зоран Јовановиќ",
-   "performerRole": "со Танцов оркестар на Македонска радио телевизија",
+   "performerRole": "со Танцов оркестар на Македонска радио-телевизија",
    "durationSec": 218,
    "durationRaw": "3.38",
    "signature": "З-2814/2",
@@ -4238,7 +4238,7 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "со ТО на МРТ",
-     "to": "со Танцов оркестар на Македонска радио телевизија"
+     "to": "со Танцов оркестар на Македонска радио-телевизија"
     }
    ],
    "id": "arrThemes-0026",
@@ -4501,7 +4501,7 @@
    "category": "arrThemes",
    "title": "Vinter",
    "composer": "A. Vivaldi",
-   "performer": "Танцов оркестар на Радио телевизија Скопје",
+   "performer": "Танцов оркестар на Радио-телевизија Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -4529,12 +4529,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ТО на РТС",
-     "to": "Танцов оркестар на Радио телевизија Скопје"
+     "to": "Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "arrThemes-0035",
    "warnCount": 0,
-   "search": "vinter танцов оркестар на радио телевизија скопје a. vivaldi vinter tancov orkestar na radio televizija skopje a. vivaldi"
+   "search": "vinter танцов оркестар на радио-телевизија скопје a. vivaldi vinter tancov orkestar na radio-televizija skopje a. vivaldi"
   },
   {
    "category": "arrThemes",
@@ -4639,7 +4639,7 @@
    "category": "arrThemes",
    "title": "Зошто си во мојата близина",
    "composer": "Александар Џамбазов",
-   "performer": "Танцов оркестар на Радио телевизија Скопје",
+   "performer": "Танцов оркестар на Радио-телевизија Скопје",
    "performerRole": "Зоран Јовановиќ",
    "durationSec": 205,
    "durationRaw": "3.25",
@@ -4672,12 +4672,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ТО на РТС",
-     "to": "Танцов оркестар на Радио телевизија Скопје"
+     "to": "Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "arrThemes-0040",
    "warnCount": 0,
-   "search": "зошто си во мојата близина танцов оркестар на радио телевизија скопје александар џамбазов з-3529/3 zoshto si vo mojata blizina tancov orkestar na radio televizija skopje aleksandar djambazov z-3529/3"
+   "search": "зошто си во мојата близина танцов оркестар на радио-телевизија скопје александар џамбазов з-3529/3 zoshto si vo mojata blizina tancov orkestar na radio-televizija skopje aleksandar djambazov z-3529/3"
   },
   {
    "category": "arrThemes",
@@ -10035,7 +10035,7 @@
    "category": "arrVocal",
    "title": "Те имам под кожа",
    "composer": "Кол Портер",
-   "performer": "Танцов оркестар на Радио телевизија Скопје",
+   "performer": "Танцов оркестар на Радио-телевизија Скопје",
    "performerRole": "",
    "durationSec": 195,
    "durationRaw": "3.15",
@@ -10062,12 +10062,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ТО на РТС",
-     "to": "Танцов оркестар на Радио телевизија Скопје"
+     "to": "Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "arrVocal-0210",
    "warnCount": 1,
-   "search": "те имам под кожа танцов оркестар на радио телевизија скопје кол портер з-8511-1 te imam pod kozha tancov orkestar na radio televizija skopje kol porter z-8511-1"
+   "search": "те имам под кожа танцов оркестар на радио-телевизија скопје кол портер з-8511-1 te imam pod kozha tancov orkestar na radio-televizija skopje kol porter z-8511-1"
   },
   {
    "category": "arrVocal",

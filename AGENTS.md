@@ -164,11 +164,10 @@ The source keeps the export's wording, as it does for `+++` and the abbreviated
 names. Five records carry it.
 
 The broadcasters' house ensembles are abbreviated too: `ТО` is Танцов оркестар,
-`РО` Ревиски оркестар, `РТС` Радио телевизија Скопје, `МРТ` Македонска радио
-телевизија, `РС` Радио Скопје. `expand_ensembles()` spells them out wherever
+`РО` Ревиски оркестар, `РТС` Радио-телевизија Скопје, `МРТ` Македонска радио-телевизија, `РС` Радио Скопје. `expand_ensembles()` spells them out wherever
 they stand as a word, in the performer and in the role after `со` (so
-`соло гитара со ТО на РТС` reads `соло гитара со Танцов оркестар на Радио
-телевизија Скопје`), and records each substitution under `ensemble-expanded`.
+`соло гитара со ТО на РТС` reads `соло гитара со Танцов оркестар на
+Радио-телевизија Скопје`), and records each substitution under `ensemble-expanded`.
 It runs *after* `apply_maps()`, so `Забавен анс. на РС` is a name before `РС` is
 spelled out, and in a single pass, so a replacement is never expanded twice.
 `РТЉ`, `ЗО`, `ГЗО` and `ЗА` are deliberately left as written: what they stand
