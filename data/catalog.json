@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 492,
-  "videos": 146,
+  "notes": 491,
+  "videos": 145,
   "new": 7,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -7713,20 +7713,15 @@
    "signature": "З-3818/2",
    "signatureRaw": "З-3818/2",
    "collection": "З",
-   "video": "aXy5AKqXr1Q",
+   "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 137,
-   "flags": [
-    "video-approximate"
-   ],
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0131",
    "warnCount": 0,
-   "search": "остани мој маја оџаклиевска живоин глишиќ з-3818/2 ostani moj maja odjaklievska zhivoin glishikj z-3818/2",
-   "videoLengthSec": 198,
-   "videoDeltaSec": 18,
-   "videoApprox": true
+   "search": "остани мој маја оџаклиевска живоин глишиќ з-3818/2 ostani moj maja odjaklievska zhivoin glishikj z-3818/2"
   },
   {
    "category": "arrVocal",
