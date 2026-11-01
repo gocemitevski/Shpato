@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 542,
-  "videos": 143,
+  "notes": 541,
+  "videos": 142,
   "new": 8,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -4377,15 +4377,14 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": "7oQywfAC31M",
+   "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 31,
    "flags": [
     "missing-duration",
     "missing-signature",
     "punctuation-spacing",
-    "performer-split",
-    "video-approximate"
+    "performer-split"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -4404,9 +4403,7 @@
    ],
    "id": "arrThemes-0030",
    "warnCount": 0,
-   "search": "taste of honey импулси w. scott taste of honey impulsi w. scott",
-   "videoLengthSec": 176,
-   "videoApprox": true
+   "search": "taste of honey импулси w. scott taste of honey impulsi w. scott"
   },
   {
    "category": "arrThemes",

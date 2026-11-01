@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 542,
-  "videos": 143,
+  "notes": 541,
+  "videos": 142,
   "new": 8,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -1915,17 +1915,6 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
-  },
-  {
-   "id": "arrThemes-0030",
-   "category": "arrThemes",
-   "title": "Taste of Honey",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 31,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "2:56"
   },
   {
    "id": "arrThemes-0031",
