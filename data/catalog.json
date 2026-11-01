@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 497,
-  "videos": 151,
+  "notes": 496,
+  "videos": 150,
   "new": 7,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -2827,12 +2827,11 @@
    "signature": "З-4253/3",
    "signatureRaw": "З-4253/3",
    "collection": "З",
-   "video": "SKTR8koEVq4",
+   "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 46,
    "flags": [
-    "performer-split",
-    "video-approximate"
+    "performer-split"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2845,10 +2844,7 @@
    ],
    "id": "instrumental-0040",
    "warnCount": 0,
-   "search": "младоста е убава зоран јовановиќ з-4253/3 mladosta e ubava zoran jovanovikj z-4253/3",
-   "videoLengthSec": 205,
-   "videoDeltaSec": 10,
-   "videoApprox": true
+   "search": "младоста е убава зоран јовановиќ з-4253/3 mladosta e ubava zoran jovanovikj z-4253/3"
   },
   {
    "category": "instrumental",
