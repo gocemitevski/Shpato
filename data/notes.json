@@ -1,13 +1,13 @@
 {
  "meta": {
-  "total": 434,
+  "total": 433,
   "counts": {
    "vocal": 74,
-   "instrumental": 56,
+   "instrumental": 55,
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 541,
+  "notes": 543,
   "videos": 144,
   "new": 8,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
@@ -474,32 +474,9 @@
   {
    "id": "instrumental-0007",
    "category": "instrumental",
-   "title": "Гарача",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 8,
-   "rule": "ensemble-expanded",
-   "severity": "info",
-   "field": "performer",
-   "raw": "ТО на РТС",
-   "normalized": "Танцов оркестар на Радио-телевизија Скопје"
-  },
-  {
-   "id": "instrumental-0007",
-   "category": "instrumental",
-   "title": "Гарача",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 8,
-   "rule": "duplicate",
-   "severity": "info",
-   "raw": "Гарача",
-   "normalized": "instrumental-0005"
-  },
-  {
-   "id": "instrumental-0008",
-   "category": "instrumental",
    "title": "Главна тема",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 9,
+   "sourceLine": 8,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -507,33 +484,44 @@
    "normalized": "Кирил Рибарски"
   },
   {
-   "id": "instrumental-0009",
+   "id": "instrumental-0007",
+   "category": "instrumental",
+   "title": "Главна тема",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 8,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "2:55",
+   "normalized": "3:55"
+  },
+  {
+   "id": "instrumental-0008",
    "category": "instrumental",
    "title": "Гитарата ја оплакува смртта на Муриета",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 10,
+   "sourceLine": 9,
    "rule": "missing-duration",
    "severity": "info",
    "raw": "",
    "normalized": ""
   },
   {
-   "id": "instrumental-0009",
+   "id": "instrumental-0008",
    "category": "instrumental",
    "title": "Гитарата ја оплакува смртта на Муриета",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 10,
+   "sourceLine": 9,
    "rule": "missing-signature",
    "severity": "info",
    "raw": "",
    "normalized": ""
   },
   {
-   "id": "instrumental-0009",
+   "id": "instrumental-0008",
    "category": "instrumental",
    "title": "Гитарата ја оплакува смртта на Муриета",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 10,
+   "sourceLine": 9,
    "rule": "missing-performer",
    "severity": "info",
    "raw": "",
@@ -545,9 +533,21 @@
    "title": "Дојди есен",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 11,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ТО на РТС",
+   "normalized": "Танцов оркестар на Радио-телевизија Скопје"
+  },
+  {
+   "id": "instrumental-0010",
+   "category": "instrumental",
+   "title": "Дојди есен",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 11,
    "rule": "video-approximate",
    "severity": "info",
-   "raw": "2:40",
+   "raw": "3:30",
    "normalized": "3:49"
   },
   {
@@ -556,18 +556,6 @@
    "title": "Дојди есен",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 12,
-   "rule": "ensemble-expanded",
-   "severity": "info",
-   "field": "performer",
-   "raw": "ТО на РТС",
-   "normalized": "Танцов оркестар на Радио-телевизија Скопје"
-  },
-  {
-   "id": "instrumental-0012",
-   "category": "instrumental",
-   "title": "Дојди есен",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 13,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -575,11 +563,11 @@
    "normalized": "Ратко Спасовски-Пици"
   },
   {
-   "id": "instrumental-0013",
+   "id": "instrumental-0012",
    "category": "instrumental",
    "title": "Далечен крај",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 14,
+   "sourceLine": 13,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -587,11 +575,11 @@
    "normalized": "Благоја Чешларов"
   },
   {
-   "id": "instrumental-0015",
+   "id": "instrumental-0014",
    "category": "instrumental",
    "title": "Елегија за тромбон",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 16,
+   "sourceLine": 15,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -599,11 +587,11 @@
    "normalized": "Кирил Рибарски"
   },
   {
-   "id": "instrumental-0016",
+   "id": "instrumental-0015",
    "category": "instrumental",
    "title": "Еден бакнеж",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 17,
+   "sourceLine": 16,
    "rule": "ensemble-expanded",
    "severity": "info",
    "field": "performer",
@@ -613,20 +601,9 @@
   {
    "id": "instrumental-0016",
    "category": "instrumental",
-   "title": "Еден бакнеж",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 17,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:10",
-   "normalized": "3:22"
-  },
-  {
-   "id": "instrumental-0017",
-   "category": "instrumental",
    "title": "Ехо од далечното минато",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 18,
+   "sourceLine": 17,
    "rule": "ensemble-expanded",
    "severity": "info",
    "field": "performer",
@@ -634,11 +611,22 @@
    "normalized": "Танцов оркестар на Радио-телевизија Скопје"
   },
   {
-   "id": "instrumental-0018",
+   "id": "instrumental-0016",
+   "category": "instrumental",
+   "title": "Ехо од далечното минато",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 17,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "5:00",
+   "normalized": "3:22"
+  },
+  {
+   "id": "instrumental-0017",
    "category": "instrumental",
    "title": "Злато најдоа, злато во Калифорнија",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 19,
+   "sourceLine": 18,
    "rule": "ensemble-expanded",
    "severity": "info",
    "field": "performer",
@@ -646,11 +634,22 @@
    "normalized": "Ревиски оркестар на Радио-телевизија Скопје"
   },
   {
-   "id": "instrumental-0019",
+   "id": "instrumental-0017",
+   "category": "instrumental",
+   "title": "Злато најдоа, злато во Калифорнија",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 18,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "1:14",
+   "normalized": "5:01"
+  },
+  {
+   "id": "instrumental-0018",
    "category": "instrumental",
    "title": "Идила",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 20,
+   "sourceLine": 19,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -658,22 +657,22 @@
    "normalized": "Никола Комовски"
   },
   {
-   "id": "instrumental-0019",
+   "id": "instrumental-0018",
    "category": "instrumental",
    "title": "Идила",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 20,
+   "sourceLine": 19,
    "rule": "signature-trailing-slash",
    "severity": "info",
    "raw": "З-8189/",
    "normalized": "З-8189"
   },
   {
-   "id": "instrumental-0020",
+   "id": "instrumental-0019",
    "category": "instrumental",
    "title": "Импресија",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 21,
+   "sourceLine": 20,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -681,11 +680,11 @@
    "normalized": "Петар Лукиќ"
   },
   {
-   "id": "instrumental-0020",
+   "id": "instrumental-0019",
    "category": "instrumental",
    "title": "Импресија",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 21,
+   "sourceLine": 20,
    "rule": "ensemble-expanded",
    "severity": "info",
    "field": "performer",
@@ -695,12 +694,24 @@
   {
    "id": "instrumental-0020",
    "category": "instrumental",
-   "title": "Импресија",
+   "title": "Идила",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 21,
+   "rule": "performer-split",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Благоја Чешларов, на труба",
+   "normalized": "Благоја Чешларов"
+  },
+  {
+   "id": "instrumental-0020",
+   "category": "instrumental",
+   "title": "Идила",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 21,
    "rule": "video-approximate",
    "severity": "info",
-   "raw": "2:50",
+   "raw": "2:25",
    "normalized": "3:58"
   },
   {
@@ -712,38 +723,15 @@
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
-   "raw": "Благоја Чешларов, на труба",
-   "normalized": "Благоја Чешларов"
-  },
-  {
-   "id": "instrumental-0022",
-   "category": "instrumental",
-   "title": "Идила",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 23,
-   "rule": "performer-split",
-   "severity": "info",
-   "field": "performer",
    "raw": "Голем забавен оркестар (сним. 1959)",
    "normalized": "Голем забавен оркестар"
   },
   {
    "id": "instrumental-0022",
    "category": "instrumental",
-   "title": "Идила",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 23,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:15",
-   "normalized": "2:25"
-  },
-  {
-   "id": "instrumental-0023",
-   "category": "instrumental",
    "title": "Индекс и љубов",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 24,
+   "sourceLine": 23,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -751,11 +739,22 @@
    "normalized": "Голем забавен оркестар"
   },
   {
-   "id": "instrumental-0024",
+   "id": "instrumental-0022",
+   "category": "instrumental",
+   "title": "Индекс и љубов",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 23,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "2:15",
+   "normalized": "2:25"
+  },
+  {
+   "id": "instrumental-0023",
    "category": "instrumental",
    "title": "Исповест на црномурестата жена",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 25,
+   "sourceLine": 24,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -763,11 +762,11 @@
    "normalized": "Зоран Јовановиќ"
   },
   {
-   "id": "instrumental-0025",
+   "id": "instrumental-0024",
    "category": "instrumental",
    "title": "Јас не сум ти",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 26,
+   "sourceLine": 25,
    "rule": "ensemble-expanded",
    "severity": "info",
    "field": "performer",
@@ -775,11 +774,11 @@
    "normalized": "Џез ансамбл на Радио-телевизија Скопје"
   },
   {
-   "id": "instrumental-0026",
+   "id": "instrumental-0025",
    "category": "instrumental",
    "title": "Кога си сама",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 27,
+   "sourceLine": 26,
    "rule": "ensemble-expanded",
    "severity": "info",
    "field": "performer",
@@ -787,9 +786,21 @@
    "normalized": "Ревиски оркестар на Радио-телевизија Скопје"
   },
   {
-   "id": "instrumental-0027",
+   "id": "instrumental-0026",
    "category": "instrumental",
    "title": "Лајт мотив 1",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 27,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "РО",
+   "normalized": "Ревиски оркестар"
+  },
+  {
+   "id": "instrumental-0027",
+   "category": "instrumental",
+   "title": "Лајт мотив 2",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 28,
    "rule": "ensemble-expanded",
@@ -801,26 +812,26 @@
   {
    "id": "instrumental-0028",
    "category": "instrumental",
-   "title": "Лајт мотив 2",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 29,
-   "rule": "ensemble-expanded",
-   "severity": "info",
-   "field": "performer",
-   "raw": "РО",
-   "normalized": "Ревиски оркестар"
-  },
-  {
-   "id": "instrumental-0029",
-   "category": "instrumental",
    "title": "Лајт мотив 3",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 30,
+   "sourceLine": 29,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
    "raw": "К. Божиновски, флејта со Ревиски оркестар",
    "normalized": "К. Божиновски"
+  },
+  {
+   "id": "instrumental-0029",
+   "category": "instrumental",
+   "title": "Љубовна тема",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 30,
+   "rule": "performer-split",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Кирил Рибарски, тромбон со Ревиски оркестар",
+   "normalized": "Кирил Рибарски"
   },
   {
    "id": "instrumental-0030",
@@ -831,27 +842,15 @@
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
-   "raw": "Кирил Рибарски, тромбон со Ревиски оркестар",
-   "normalized": "Кирил Рибарски"
-  },
-  {
-   "id": "instrumental-0031",
-   "category": "instrumental",
-   "title": "Љубовна тема",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 32,
-   "rule": "performer-split",
-   "severity": "info",
-   "field": "performer",
    "raw": "К. Божиновски, флејта",
    "normalized": "К. Божиновски"
   },
   {
-   "id": "instrumental-0033",
+   "id": "instrumental-0032",
    "category": "instrumental",
    "title": "Лени",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 34,
+   "sourceLine": 33,
    "rule": "ensemble-expanded",
    "severity": "info",
    "field": "performer",
@@ -859,11 +858,11 @@
    "normalized": "Танцов оркестар"
   },
   {
-   "id": "instrumental-0034",
+   "id": "instrumental-0033",
    "category": "instrumental",
    "title": "Летна ноќ задна ноќ",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 35,
+   "sourceLine": 34,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -871,11 +870,11 @@
    "normalized": "Кире Костов"
   },
   {
-   "id": "instrumental-0035",
+   "id": "instrumental-0034",
    "category": "instrumental",
    "title": "Мамбо Гарача",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 36,
+   "sourceLine": 35,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -883,11 +882,11 @@
    "normalized": "Никола Ципушев"
   },
   {
-   "id": "instrumental-0036",
+   "id": "instrumental-0035",
    "category": "instrumental",
    "title": "Марија",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 37,
+   "sourceLine": 36,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -895,11 +894,11 @@
    "normalized": "Кокан Димушевски"
   },
   {
-   "id": "instrumental-0037",
+   "id": "instrumental-0036",
    "category": "instrumental",
    "title": "Ми вети ти (џез верзија)",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 38,
+   "sourceLine": 37,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -909,12 +908,24 @@
   {
    "id": "instrumental-0037",
    "category": "instrumental",
-   "title": "Ми вети ти (џез верзија)",
+   "title": "Мими",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 38,
+   "rule": "performer-split",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Слободан (Боби) Мицев, пијано",
+   "normalized": "Слободан (Боби) Мицев"
+  },
+  {
+   "id": "instrumental-0037",
+   "category": "instrumental",
+   "title": "Мими",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 38,
    "rule": "video-approximate",
    "severity": "info",
-   "raw": "8:15",
+   "raw": "4:10",
    "normalized": "8:39"
   },
   {
@@ -926,8 +937,19 @@
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
-   "raw": "Слободан (Боби) Мицев, пијано",
-   "normalized": "Слободан (Боби) Мицев"
+   "raw": "Кирил Рибарски, тромбон",
+   "normalized": "Кирил Рибарски"
+  },
+  {
+   "id": "instrumental-0038",
+   "category": "instrumental",
+   "title": "Мими",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 39,
+   "rule": "duration-missing-separator",
+   "severity": "warning",
+   "raw": "405",
+   "normalized": 245
   },
   {
    "id": "instrumental-0038",
@@ -937,54 +959,43 @@
    "sourceLine": 39,
    "rule": "video-approximate",
    "severity": "info",
-   "raw": "4:10",
+   "raw": "4:05",
    "normalized": "3:41"
   },
   {
    "id": "instrumental-0039",
    "category": "instrumental",
-   "title": "Мими",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 40,
-   "rule": "performer-split",
-   "severity": "info",
-   "field": "performer",
-   "raw": "Кирил Рибарски, тромбон",
-   "normalized": "Кирил Рибарски"
-  },
-  {
-   "id": "instrumental-0039",
-   "category": "instrumental",
-   "title": "Мими",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 40,
-   "rule": "duration-missing-separator",
-   "severity": "warning",
-   "raw": "405",
-   "normalized": 245
-  },
-  {
-   "id": "instrumental-0039",
-   "category": "instrumental",
-   "title": "Мими",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 40,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "4:05",
-   "normalized": "4:44"
-  },
-  {
-   "id": "instrumental-0040",
-   "category": "instrumental",
    "title": "Младоста е убава",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 41,
+   "sourceLine": 40,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
    "raw": "Зоран Јовановиќ, кларинет",
    "normalized": "Зоран Јовановиќ"
+  },
+  {
+   "id": "instrumental-0039",
+   "category": "instrumental",
+   "title": "Младоста е убава",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 40,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "3:35",
+   "normalized": "4:44"
+  },
+  {
+   "id": "instrumental-0040",
+   "category": "instrumental",
+   "title": "Молчи една долина",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 41,
+   "rule": "performer-split",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Голем забавен оркестар (1960)",
+   "normalized": "Голем забавен оркестар"
   },
   {
    "id": "instrumental-0041",
@@ -995,27 +1006,15 @@
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
-   "raw": "Голем забавен оркестар (1960)",
-   "normalized": "Голем забавен оркестар"
-  },
-  {
-   "id": "instrumental-0042",
-   "category": "instrumental",
-   "title": "Молчи една долина",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 43,
-   "rule": "performer-split",
-   "severity": "info",
-   "field": "performer",
    "raw": "Христо Христовски, гитара",
    "normalized": "Христо Христовски"
   },
   {
-   "id": "instrumental-0043",
+   "id": "instrumental-0042",
    "category": "instrumental",
    "title": "На игранка",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 44,
+   "sourceLine": 43,
    "rule": "abbreviation-normalized",
    "severity": "info",
    "field": "performer",
@@ -1023,11 +1022,11 @@
    "normalized": "ТО на РТС, Божидар Ноев, труба, Петар Каргов, саксофон"
   },
   {
-   "id": "instrumental-0043",
+   "id": "instrumental-0042",
    "category": "instrumental",
    "title": "На игранка",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 44,
+   "sourceLine": 43,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -1035,11 +1034,11 @@
    "normalized": "ТО на РТС"
   },
   {
-   "id": "instrumental-0043",
+   "id": "instrumental-0042",
    "category": "instrumental",
    "title": "На игранка",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 44,
+   "sourceLine": 43,
    "rule": "ensemble-expanded",
    "severity": "info",
    "field": "performer",
@@ -1047,11 +1046,11 @@
    "normalized": "Танцов оркестар на Радио-телевизија Скопје"
   },
   {
-   "id": "instrumental-0044",
+   "id": "instrumental-0043",
    "category": "instrumental",
    "title": "Народна игра",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 45,
+   "sourceLine": 44,
    "rule": "ensemble-expanded",
    "severity": "info",
    "field": "performer",
@@ -1059,11 +1058,11 @@
    "normalized": "ЗО на Радио-телевизија Скопје"
   },
   {
-   "id": "instrumental-0046",
+   "id": "instrumental-0045",
    "category": "instrumental",
    "title": "Песна на русокосата пејачка",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 47,
+   "sourceLine": 46,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -1071,11 +1070,11 @@
    "normalized": "Зоран Јовановиќ"
   },
   {
-   "id": "instrumental-0047",
+   "id": "instrumental-0046",
    "category": "instrumental",
    "title": "Поздрав до А. К. Жобим",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 48,
+   "sourceLine": 47,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -1083,11 +1082,11 @@
    "normalized": "Рамиз Имеров"
   },
   {
-   "id": "instrumental-0047",
+   "id": "instrumental-0046",
    "category": "instrumental",
    "title": "Поздрав до А. К. Жобим",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 48,
+   "sourceLine": 47,
    "rule": "ensemble-expanded",
    "severity": "info",
    "field": "performer",
@@ -1095,11 +1094,11 @@
    "normalized": "тромбон со Танцов оркестар на Радио-телевизија Скопје"
   },
   {
-   "id": "instrumental-0048",
+   "id": "instrumental-0047",
    "category": "instrumental",
    "title": "Поздрав до оркестарот",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 49,
+   "sourceLine": 48,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -1107,11 +1106,11 @@
    "normalized": "ТО на РТС"
   },
   {
-   "id": "instrumental-0048",
+   "id": "instrumental-0047",
    "category": "instrumental",
    "title": "Поздрав до оркестарот",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 49,
+   "sourceLine": 48,
    "rule": "ensemble-expanded",
    "severity": "info",
    "field": "performer",
@@ -1119,11 +1118,22 @@
    "normalized": "Танцов оркестар на Радио-телевизија Скопје"
   },
   {
-   "id": "instrumental-0051",
+   "id": "instrumental-0048",
+   "category": "instrumental",
+   "title": "Радост на победата",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 49,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "1:35",
+   "normalized": "4:33"
+  },
+  {
+   "id": "instrumental-0050",
    "category": "instrumental",
    "title": "Синтеза",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 52,
+   "sourceLine": 51,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -1131,9 +1141,32 @@
    "normalized": "Кире Костов"
   },
   {
-   "id": "instrumental-0053",
+   "id": "instrumental-0051",
+   "category": "instrumental",
+   "title": "Свечена игра",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 52,
+   "rule": "video-approximate",
+   "severity": "info",
+   "raw": "2:28",
+   "normalized": "5:01"
+  },
+  {
+   "id": "instrumental-0052",
    "category": "instrumental",
    "title": "Тема број 1, Транскрипција на една замислена тема",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 53,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ТО на РТС",
+   "normalized": "Танцов оркестар на Радио-телевизија Скопје"
+  },
+  {
+   "id": "instrumental-0053",
+   "category": "instrumental",
+   "title": "Титовиот пат",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 54,
    "rule": "ensemble-expanded",
@@ -1145,21 +1178,9 @@
   {
    "id": "instrumental-0054",
    "category": "instrumental",
-   "title": "Титовиот пат",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 55,
-   "rule": "ensemble-expanded",
-   "severity": "info",
-   "field": "performer",
-   "raw": "ТО на РТС",
-   "normalized": "Танцов оркестар на Радио-телевизија Скопје"
-  },
-  {
-   "id": "instrumental-0055",
-   "category": "instrumental",
    "title": "Убава си како музика",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 56,
+   "sourceLine": 55,
    "rule": "performer-split",
    "severity": "info",
    "field": "performer",
@@ -1167,11 +1188,11 @@
    "normalized": "Љупчо Мирковски"
   },
   {
-   "id": "instrumental-0056",
+   "id": "instrumental-0055",
    "category": "instrumental",
    "title": "Чилеанска игра",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 57,
+   "sourceLine": 56,
    "rule": "ensemble-expanded",
    "severity": "info",
    "field": "performer",

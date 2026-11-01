@@ -1,13 +1,13 @@
 {
  "meta": {
-  "total": 434,
+  "total": 433,
   "counts": {
    "vocal": 74,
-   "instrumental": 56,
+   "instrumental": 55,
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 541,
+  "notes": 543,
   "videos": 144,
   "new": 8,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
@@ -1962,39 +1962,6 @@
   },
   {
    "category": "instrumental",
-   "title": "Гарача",
-   "composer": "",
-   "performer": "Танцов оркестар на Радио-телевизија Скопје",
-   "performerRole": "",
-   "durationSec": 234,
-   "durationRaw": "3.54",
-   "signature": "З-7700/2",
-   "signatureRaw": "З-7700/2",
-   "collection": "З",
-   "video": "b_D0ILHpu8M",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 8,
-   "flags": [
-    "ensemble-expanded",
-    "duplicate"
-   ],
-   "duplicateOf": "instrumental-0005",
-   "textFixes": [
-    {
-     "field": "performer",
-     "rule": "ensemble-expanded",
-     "from": "ТО на РТС",
-     "to": "Танцов оркестар на Радио-телевизија Скопје"
-    }
-   ],
-   "id": "instrumental-0007",
-   "warnCount": 0,
-   "search": "гарача танцов оркестар на радио-телевизија скопје з-7700/2 garacha tancov orkestar na radio-televizija skopje z-7700/2",
-   "videoLengthSec": 235,
-   "videoDeltaSec": 1
-  },
-  {
-   "category": "instrumental",
    "title": "Главна тема",
    "composer": "",
    "performer": "Кирил Рибарски",
@@ -2004,11 +1971,12 @@
    "signature": "З-7687/2",
    "signatureRaw": "З-7687/2",
    "collection": "З",
-   "video": null,
+   "video": "b_D0ILHpu8M",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 9,
+   "sourceLine": 8,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2019,9 +1987,12 @@
      "to": "Кирил Рибарски"
     }
    ],
-   "id": "instrumental-0008",
+   "id": "instrumental-0007",
    "warnCount": 0,
-   "search": "главна тема кирил рибарски з-7687/2 glavna tema kiril ribarski z-7687/2"
+   "search": "главна тема кирил рибарски з-7687/2 glavna tema kiril ribarski z-7687/2",
+   "videoLengthSec": 235,
+   "videoDeltaSec": 60,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2036,7 +2007,7 @@
    "collection": null,
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 10,
+   "sourceLine": 9,
    "flags": [
     "missing-duration",
     "missing-signature",
@@ -2044,7 +2015,7 @@
    ],
    "duplicateOf": null,
    "textFixes": [],
-   "id": "instrumental-0009",
+   "id": "instrumental-0008",
    "warnCount": 0,
    "search": "гитарата ја оплакува смртта на муриета gitarata ja oplakuva smrtta na murieta"
   },
@@ -2059,20 +2030,15 @@
    "signature": "З-7608/3",
    "signatureRaw": "З-7608/3",
    "collection": "З",
-   "video": "JeIqhHwl1ic",
+   "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 11,
-   "flags": [
-    "video-approximate"
-   ],
+   "sourceLine": 10,
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
-   "id": "instrumental-0010",
+   "id": "instrumental-0009",
    "warnCount": 0,
-   "search": "дојди есен квартет рибарски з-7608/3 dojdi esen kvartet ribarski z-7608/3",
-   "videoLengthSec": 229,
-   "videoDeltaSec": 69,
-   "videoApprox": true
+   "search": "дојди есен квартет рибарски з-7608/3 dojdi esen kvartet ribarski z-7608/3"
   },
   {
    "category": "instrumental",
@@ -2085,11 +2051,12 @@
    "signature": "З-9483/2",
    "signatureRaw": "З-9483/2",
    "collection": "З",
-   "video": null,
+   "video": "JeIqhHwl1ic",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 12,
+   "sourceLine": 11,
    "flags": [
-    "ensemble-expanded"
+    "ensemble-expanded",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2100,9 +2067,12 @@
      "to": "Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
-   "id": "instrumental-0011",
+   "id": "instrumental-0010",
    "warnCount": 0,
-   "search": "дојди есен танцов оркестар на радио-телевизија скопје з-9483/2 dojdi esen tancov orkestar na radio-televizija skopje z-9483/2"
+   "search": "дојди есен танцов оркестар на радио-телевизија скопје з-9483/2 dojdi esen tancov orkestar na radio-televizija skopje z-9483/2",
+   "videoLengthSec": 229,
+   "videoDeltaSec": 19,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2117,7 +2087,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 13,
+   "sourceLine": 12,
    "flags": [
     "performer-split"
    ],
@@ -2130,7 +2100,7 @@
      "to": "Ратко Спасовски-Пици"
     }
    ],
-   "id": "instrumental-0012",
+   "id": "instrumental-0011",
    "warnCount": 0,
    "search": "дојди есен ратко спасовски-пици аз-48/10 dojdi esen ratko spasovski-pici az-48/10"
   },
@@ -2147,7 +2117,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 14,
+   "sourceLine": 13,
    "flags": [
     "performer-split"
    ],
@@ -2160,7 +2130,7 @@
      "to": "Благоја Чешларов"
     }
    ],
-   "id": "instrumental-0013",
+   "id": "instrumental-0012",
    "warnCount": 0,
    "search": "далечен крај благоја чешларов з-3905/3 dalechen kraj blagoja cheshlarov z-3905/3"
   },
@@ -2177,11 +2147,11 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 15,
+   "sourceLine": 14,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
-   "id": "instrumental-0014",
+   "id": "instrumental-0013",
    "warnCount": 0,
    "search": "егзотика квартет рибарски з-7608/1 egzotika kvartet ribarski z-7608/1"
   },
@@ -2196,9 +2166,9 @@
    "signature": "З-8605/1",
    "signatureRaw": "З-8605/1",
    "collection": "З",
-   "video": "R16qOzW8Aok",
+   "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 16,
+   "sourceLine": 15,
    "flags": [
     "performer-split"
    ],
@@ -2211,11 +2181,9 @@
      "to": "Кирил Рибарски"
     }
    ],
-   "id": "instrumental-0015",
+   "id": "instrumental-0014",
    "warnCount": 0,
-   "search": "елегија за тромбон кирил рибарски з-8605/1 elegija za trombon kiril ribarski z-8605/1",
-   "videoLengthSec": 169,
-   "videoDeltaSec": 1
+   "search": "елегија за тромбон кирил рибарски з-8605/1 elegija za trombon kiril ribarski z-8605/1"
   },
   {
    "category": "instrumental",
@@ -2227,6 +2195,38 @@
    "durationRaw": "3.10",
    "signature": "З-6057/3",
    "signatureRaw": "З-6057/3",
+   "collection": "З",
+   "video": "R16qOzW8Aok",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 16,
+   "flags": [
+    "ensemble-expanded"
+   ],
+   "duplicateOf": null,
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "РО на РТЉ",
+     "to": "Ревиски оркестар на РТЉ"
+    }
+   ],
+   "id": "instrumental-0015",
+   "warnCount": 0,
+   "search": "еден бакнеж ревиски оркестар на ртљ з-6057/3 eden baknezh reviski orkestar na rtlj z-6057/3",
+   "videoLengthSec": 169,
+   "videoDeltaSec": 21
+  },
+  {
+   "category": "instrumental",
+   "title": "Ехо од далечното минато",
+   "composer": "",
+   "performer": "Танцов оркестар на Радио-телевизија Скопје",
+   "performerRole": "",
+   "durationSec": 300,
+   "durationRaw": "5.00",
+   "signature": "З-4701/1",
+   "signatureRaw": "З-4701/1",
    "collection": "З",
    "video": "JUwTiHyAqH4",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
@@ -2240,48 +2240,16 @@
     {
      "field": "performer",
      "rule": "ensemble-expanded",
-     "from": "РО на РТЉ",
-     "to": "Ревиски оркестар на РТЉ"
-    }
-   ],
-   "id": "instrumental-0016",
-   "warnCount": 0,
-   "search": "еден бакнеж ревиски оркестар на ртљ з-6057/3 eden baknezh reviski orkestar na rtlj z-6057/3",
-   "videoLengthSec": 202,
-   "videoDeltaSec": 12,
-   "videoApprox": true
-  },
-  {
-   "category": "instrumental",
-   "title": "Ехо од далечното минато",
-   "composer": "",
-   "performer": "Танцов оркестар на Радио-телевизија Скопје",
-   "performerRole": "",
-   "durationSec": 300,
-   "durationRaw": "5.00",
-   "signature": "З-4701/1",
-   "signatureRaw": "З-4701/1",
-   "collection": "З",
-   "video": "YurRHulM3Cw",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 18,
-   "flags": [
-    "ensemble-expanded"
-   ],
-   "duplicateOf": null,
-   "textFixes": [
-    {
-     "field": "performer",
-     "rule": "ensemble-expanded",
      "from": "ТО на РТС",
      "to": "Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
-   "id": "instrumental-0017",
+   "id": "instrumental-0016",
    "warnCount": 0,
    "search": "ехо од далечното минато танцов оркестар на радио-телевизија скопје з-4701/1 eho od dalechnoto minato tancov orkestar na radio-televizija skopje z-4701/1",
-   "videoLengthSec": 301,
-   "videoDeltaSec": 1
+   "videoLengthSec": 202,
+   "videoDeltaSec": 98,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2294,11 +2262,12 @@
    "signature": "З-7690/2",
    "signatureRaw": "З-7690/2",
    "collection": "З",
-   "video": null,
+   "video": "YurRHulM3Cw",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 19,
+   "sourceLine": 18,
    "flags": [
-    "ensemble-expanded"
+    "ensemble-expanded",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2309,9 +2278,12 @@
      "to": "Ревиски оркестар на Радио-телевизија Скопје"
     }
    ],
-   "id": "instrumental-0018",
+   "id": "instrumental-0017",
    "warnCount": 0,
-   "search": "злато најдоа, злато во калифорнија ревиски оркестар на радио-телевизија скопје з-7690/2 zlato najdoa, zlato vo kalifornija reviski orkestar na radio-televizija skopje z-7690/2"
+   "search": "злато најдоа, злато во калифорнија ревиски оркестар на радио-телевизија скопје з-7690/2 zlato najdoa, zlato vo kalifornija reviski orkestar na radio-televizija skopje z-7690/2",
+   "videoLengthSec": 301,
+   "videoDeltaSec": 227,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2326,7 +2298,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 20,
+   "sourceLine": 19,
    "flags": [
     "signature-trailing-slash",
     "performer-split"
@@ -2340,7 +2312,7 @@
      "to": "Никола Комовски"
     }
    ],
-   "id": "instrumental-0019",
+   "id": "instrumental-0018",
    "warnCount": 0,
    "search": "идила никола комовски з-8189 idila nikola komovski z-8189"
   },
@@ -2355,13 +2327,12 @@
    "signature": "З-6668/1",
    "signatureRaw": "З-6668/1",
    "collection": "З",
-   "video": "Jyg2X8icikk",
+   "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 21,
+   "sourceLine": 20,
    "flags": [
     "performer-split",
-    "ensemble-expanded",
-    "video-approximate"
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2378,12 +2349,9 @@
      "to": "гитара со Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
-   "id": "instrumental-0020",
+   "id": "instrumental-0019",
    "warnCount": 0,
-   "search": "импресија петар лукиќ з-6668/1 impresija petar lukikj z-6668/1",
-   "videoLengthSec": 238,
-   "videoDeltaSec": 68,
-   "videoApprox": true
+   "search": "импресија петар лукиќ з-6668/1 impresija petar lukikj z-6668/1"
   },
   {
    "category": "instrumental",
@@ -2396,11 +2364,12 @@
    "signature": "З-3905/2",
    "signatureRaw": "З-3905/2",
    "collection": "З",
-   "video": null,
+   "video": "Jyg2X8icikk",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 22,
+   "sourceLine": 21,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2411,9 +2380,12 @@
      "to": "Благоја Чешларов"
     }
    ],
-   "id": "instrumental-0021",
+   "id": "instrumental-0020",
    "warnCount": 0,
-   "search": "идила благоја чешларов з-3905/2 idila blagoja cheshlarov z-3905/2"
+   "search": "идила благоја чешларов з-3905/2 idila blagoja cheshlarov z-3905/2",
+   "videoLengthSec": 238,
+   "videoDeltaSec": 93,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -2425,6 +2397,36 @@
    "durationRaw": "3.15",
    "signature": "АЗ-49/22",
    "signatureRaw": "АЗ-49/22",
+   "collection": "АЗ",
+   "video": null,
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 22,
+   "flags": [
+    "performer-split"
+   ],
+   "duplicateOf": null,
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "performer-split",
+     "from": "Голем забавен оркестар (сним. 1959)",
+     "to": "Голем забавен оркестар"
+    }
+   ],
+   "id": "instrumental-0021",
+   "warnCount": 0,
+   "search": "идила голем забавен оркестар аз-49/22 idila golem zabaven orkestar az-49/22"
+  },
+  {
+   "category": "instrumental",
+   "title": "Индекс и љубов",
+   "composer": "",
+   "performer": "Голем забавен оркестар",
+   "performerRole": "сним. 1959г",
+   "durationSec": 135,
+   "durationRaw": "2.15",
+   "signature": "АЗ-49/21",
+   "signatureRaw": "АЗ-49/21",
    "collection": "АЗ",
    "video": "DfeW-KngHMg",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
@@ -2438,46 +2440,16 @@
     {
      "field": "performer",
      "rule": "performer-split",
-     "from": "Голем забавен оркестар (сним. 1959)",
+     "from": "Голем забавен оркестар (сним. 1959г)",
      "to": "Голем забавен оркестар"
     }
    ],
    "id": "instrumental-0022",
    "warnCount": 0,
-   "search": "идила голем забавен оркестар аз-49/22 idila golem zabaven orkestar az-49/22",
+   "search": "индекс и љубов голем забавен оркестар аз-49/21 indeks i ljubov golem zabaven orkestar az-49/21",
    "videoLengthSec": 145,
-   "videoDeltaSec": 50,
+   "videoDeltaSec": 10,
    "videoApprox": true
-  },
-  {
-   "category": "instrumental",
-   "title": "Индекс и љубов",
-   "composer": "",
-   "performer": "Голем забавен оркестар",
-   "performerRole": "сним. 1959г",
-   "durationSec": 135,
-   "durationRaw": "2.15",
-   "signature": "АЗ-49/21",
-   "signatureRaw": "АЗ-49/21",
-   "collection": "АЗ",
-   "video": null,
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 24,
-   "flags": [
-    "performer-split"
-   ],
-   "duplicateOf": null,
-   "textFixes": [
-    {
-     "field": "performer",
-     "rule": "performer-split",
-     "from": "Голем забавен оркестар (сним. 1959г)",
-     "to": "Голем забавен оркестар"
-    }
-   ],
-   "id": "instrumental-0023",
-   "warnCount": 0,
-   "search": "индекс и љубов голем забавен оркестар аз-49/21 indeks i ljubov golem zabaven orkestar az-49/21"
   },
   {
    "category": "instrumental",
@@ -2492,7 +2464,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 25,
+   "sourceLine": 24,
    "flags": [
     "performer-split"
    ],
@@ -2505,7 +2477,7 @@
      "to": "Зоран Јовановиќ"
     }
    ],
-   "id": "instrumental-0024",
+   "id": "instrumental-0023",
    "warnCount": 0,
    "search": "исповест на црномурестата жена зоран јовановиќ з-7415/1 ispovest na crnomurestata zhena zoran jovanovikj z-7415/1"
   },
@@ -2522,7 +2494,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 26,
+   "sourceLine": 25,
    "flags": [
     "ensemble-expanded"
    ],
@@ -2535,7 +2507,7 @@
      "to": "Џез ансамбл на Радио-телевизија Скопје"
     }
    ],
-   "id": "instrumental-0025",
+   "id": "instrumental-0024",
    "warnCount": 0,
    "search": "јас не сум ти џез ансамбл на радио-телевизија скопје з-3004/2 jas ne sum ti djez ansambl na radio-televizija skopje z-3004/2"
   },
@@ -2552,7 +2524,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 27,
+   "sourceLine": 26,
    "flags": [
     "ensemble-expanded"
    ],
@@ -2565,7 +2537,7 @@
      "to": "Ревиски оркестар на Радио-телевизија Скопје"
     }
    ],
-   "id": "instrumental-0026",
+   "id": "instrumental-0025",
    "warnCount": 0,
    "search": "кога си сама ревиски оркестар на радио-телевизија скопје з-8227/1 koga si sama reviski orkestar na radio-televizija skopje z-8227/1"
   },
@@ -2579,6 +2551,36 @@
    "durationRaw": "1.37",
    "signature": "З-7690/1",
    "signatureRaw": "З-7690/1",
+   "collection": "З",
+   "video": null,
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 27,
+   "flags": [
+    "ensemble-expanded"
+   ],
+   "duplicateOf": null,
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "РО",
+     "to": "Ревиски оркестар"
+    }
+   ],
+   "id": "instrumental-0026",
+   "warnCount": 0,
+   "search": "лајт мотив 1 ревиски оркестар з-7690/1 lajt motiv 1 reviski orkestar z-7690/1"
+  },
+  {
+   "category": "instrumental",
+   "title": "Лајт мотив 2",
+   "composer": "",
+   "performer": "Ревиски оркестар",
+   "performerRole": "",
+   "durationSec": 111,
+   "durationRaw": "1.51",
+   "signature": "З-7693/2",
+   "signatureRaw": "З-7693/2",
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
@@ -2597,36 +2599,6 @@
    ],
    "id": "instrumental-0027",
    "warnCount": 0,
-   "search": "лајт мотив 1 ревиски оркестар з-7690/1 lajt motiv 1 reviski orkestar z-7690/1"
-  },
-  {
-   "category": "instrumental",
-   "title": "Лајт мотив 2",
-   "composer": "",
-   "performer": "Ревиски оркестар",
-   "performerRole": "",
-   "durationSec": 111,
-   "durationRaw": "1.51",
-   "signature": "З-7693/2",
-   "signatureRaw": "З-7693/2",
-   "collection": "З",
-   "video": null,
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 29,
-   "flags": [
-    "ensemble-expanded"
-   ],
-   "duplicateOf": null,
-   "textFixes": [
-    {
-     "field": "performer",
-     "rule": "ensemble-expanded",
-     "from": "РО",
-     "to": "Ревиски оркестар"
-    }
-   ],
-   "id": "instrumental-0028",
-   "warnCount": 0,
    "search": "лајт мотив 2 ревиски оркестар з-7693/2 lajt motiv 2 reviski orkestar z-7693/2"
   },
   {
@@ -2642,7 +2614,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 30,
+   "sourceLine": 29,
    "flags": [
     "performer-split"
    ],
@@ -2655,7 +2627,7 @@
      "to": "К. Божиновски"
     }
    ],
-   "id": "instrumental-0029",
+   "id": "instrumental-0028",
    "warnCount": 0,
    "search": "лајт мотив 3 к. божиновски з-7693/3 lajt motiv 3 k. bozhinovski z-7693/3"
   },
@@ -2672,7 +2644,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 31,
+   "sourceLine": 30,
    "flags": [
     "performer-split"
    ],
@@ -2685,7 +2657,7 @@
      "to": "Кирил Рибарски"
     }
    ],
-   "id": "instrumental-0030",
+   "id": "instrumental-0029",
    "warnCount": 0,
    "search": "љубовна тема кирил рибарски з-7694/3 ljubovna tema kiril ribarski z-7694/3"
   },
@@ -2702,7 +2674,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 32,
+   "sourceLine": 31,
    "flags": [
     "performer-split"
    ],
@@ -2715,7 +2687,7 @@
      "to": "К. Божиновски"
     }
    ],
-   "id": "instrumental-0031",
+   "id": "instrumental-0030",
    "warnCount": 0,
    "search": "љубовна тема к. божиновски з-7693/3 ljubovna tema k. bozhinovski z-7693/3"
   },
@@ -2732,11 +2704,11 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 33,
+   "sourceLine": 32,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
-   "id": "instrumental-0032",
+   "id": "instrumental-0031",
    "warnCount": 0,
    "search": "лени квартет рибарски з-7474/1 leni kvartet ribarski z-7474/1"
   },
@@ -2753,7 +2725,7 @@
    "collection": "ПМ",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 34,
+   "sourceLine": 33,
    "flags": [
     "ensemble-expanded"
    ],
@@ -2766,7 +2738,7 @@
      "to": "Танцов оркестар"
     }
    ],
-   "id": "instrumental-0033",
+   "id": "instrumental-0032",
    "warnCount": 0,
    "search": "лени танцов оркестар пм-303/1 leni tancov orkestar pm-303/1"
   },
@@ -2783,7 +2755,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 35,
+   "sourceLine": 34,
    "flags": [
     "performer-split"
    ],
@@ -2796,7 +2768,7 @@
      "to": "Кире Костов"
     }
    ],
-   "id": "instrumental-0034",
+   "id": "instrumental-0033",
    "warnCount": 0,
    "search": "летна ноќ задна ноќ кире костов з-7537/1 letna nokj zadna nokj kire kostov z-7537/1"
   },
@@ -2813,7 +2785,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 36,
+   "sourceLine": 35,
    "flags": [
     "performer-split"
    ],
@@ -2826,7 +2798,7 @@
      "to": "Никола Ципушев"
     }
    ],
-   "id": "instrumental-0035",
+   "id": "instrumental-0034",
    "warnCount": 0,
    "search": "мамбо гарача никола ципушев аз-54/17 mambo garacha nikola cipushev az-54/17"
   },
@@ -2843,7 +2815,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 37,
+   "sourceLine": 36,
    "flags": [
     "performer-split"
    ],
@@ -2856,7 +2828,7 @@
      "to": "Кокан Димушевски"
     }
    ],
-   "id": "instrumental-0036",
+   "id": "instrumental-0035",
    "warnCount": 0,
    "search": "марија кокан димушевски з-8526/2 marija kokan dimushevski z-8526/2"
   },
@@ -2871,12 +2843,11 @@
    "signature": "ПК-2137/1",
    "signatureRaw": "ПК-2137/1",
    "collection": "ПК",
-   "video": "hDVaLYRDmJs",
+   "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 38,
+   "sourceLine": 37,
    "flags": [
-    "performer-split",
-    "video-approximate"
+    "performer-split"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2887,12 +2858,9 @@
      "to": "Трио Лабиш"
     }
    ],
-   "id": "instrumental-0037",
+   "id": "instrumental-0036",
    "warnCount": 0,
-   "search": "ми вети ти (џез верзија) трио лабиш пк-2137/1 mi veti ti (djez verzija) trio labish pk-2137/1",
-   "videoLengthSec": 519,
-   "videoDeltaSec": 24,
-   "videoApprox": true
+   "search": "ми вети ти (џез верзија) трио лабиш пк-2137/1 mi veti ti (djez verzija) trio labish pk-2137/1"
   },
   {
    "category": "instrumental",
@@ -2905,9 +2873,9 @@
    "signature": "З-7493/2",
    "signatureRaw": "З-7493/2",
    "collection": "З",
-   "video": "aDIg9yPLJAY",
+   "video": "hDVaLYRDmJs",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 39,
+   "sourceLine": 38,
    "flags": [
     "performer-split",
     "video-approximate"
@@ -2921,11 +2889,11 @@
      "to": "Слободан (Боби) Мицев"
     }
    ],
-   "id": "instrumental-0038",
+   "id": "instrumental-0037",
    "warnCount": 0,
    "search": "мими слободан (боби) мицев з-7493/2 mimi slobodan (bobi) micev z-7493/2",
-   "videoLengthSec": 221,
-   "videoDeltaSec": 29,
+   "videoLengthSec": 519,
+   "videoDeltaSec": 269,
    "videoApprox": true
   },
   {
@@ -2939,9 +2907,9 @@
    "signature": "З-8638/2",
    "signatureRaw": "З-8638/2",
    "collection": "З",
-   "video": "vBUyE5_SKKk",
+   "video": "aDIg9yPLJAY",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 40,
+   "sourceLine": 39,
    "flags": [
     "duration-missing-separator",
     "performer-split",
@@ -2956,11 +2924,11 @@
      "to": "Кирил Рибарски"
     }
    ],
-   "id": "instrumental-0039",
+   "id": "instrumental-0038",
    "warnCount": 1,
    "search": "мими кирил рибарски з-8638/2 mimi kiril ribarski z-8638/2",
-   "videoLengthSec": 284,
-   "videoDeltaSec": 39,
+   "videoLengthSec": 221,
+   "videoDeltaSec": 24,
    "videoApprox": true
   },
   {
@@ -2974,11 +2942,12 @@
    "signature": "З-4253/3",
    "signatureRaw": "З-4253/3",
    "collection": "З",
-   "video": null,
+   "video": "vBUyE5_SKKk",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 41,
+   "sourceLine": 40,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "video-approximate"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2989,9 +2958,12 @@
      "to": "Зоран Јовановиќ"
     }
    ],
-   "id": "instrumental-0040",
+   "id": "instrumental-0039",
    "warnCount": 0,
-   "search": "младоста е убава зоран јовановиќ з-4253/3 mladosta e ubava zoran jovanovikj z-4253/3"
+   "search": "младоста е убава зоран јовановиќ з-4253/3 mladosta e ubava zoran jovanovikj z-4253/3",
+   "videoLengthSec": 284,
+   "videoDeltaSec": 69,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -3006,7 +2978,7 @@
    "collection": "АЗ",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 42,
+   "sourceLine": 41,
    "flags": [
     "performer-split"
    ],
@@ -3019,7 +2991,7 @@
      "to": "Голем забавен оркестар"
     }
    ],
-   "id": "instrumental-0041",
+   "id": "instrumental-0040",
    "warnCount": 0,
    "search": "молчи една долина голем забавен оркестар аз-49/16 molchi edna dolina golem zabaven orkestar az-49/16"
   },
@@ -3036,7 +3008,7 @@
    "collection": "ПМ",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 43,
+   "sourceLine": 42,
    "flags": [
     "performer-split"
    ],
@@ -3049,7 +3021,7 @@
      "to": "Христо Христовски"
     }
    ],
-   "id": "instrumental-0042",
+   "id": "instrumental-0041",
    "warnCount": 0,
    "search": "молчи една долина христо христовски пм-538/1 molchi edna dolina hristo hristovski pm-538/1"
   },
@@ -3064,9 +3036,9 @@
    "signature": "З-7638/2",
    "signatureRaw": "З-7638/2",
    "collection": "З",
-   "video": "t80NdEeHDKU",
+   "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 44,
+   "sourceLine": 43,
    "flags": [
     "abbreviation-normalized",
     "performer-split",
@@ -3093,11 +3065,9 @@
      "to": "Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
-   "id": "instrumental-0043",
+   "id": "instrumental-0042",
    "warnCount": 0,
-   "search": "на игранка танцов оркестар на радио-телевизија скопје з-7638/2 na igranka tancov orkestar na radio-televizija skopje z-7638/2",
-   "videoLengthSec": 306,
-   "videoDeltaSec": 2
+   "search": "на игранка танцов оркестар на радио-телевизија скопје з-7638/2 na igranka tancov orkestar na radio-televizija skopje z-7638/2"
   },
   {
    "category": "instrumental",
@@ -3110,9 +3080,9 @@
    "signature": "З-7693/1",
    "signatureRaw": "З-7693/1",
    "collection": "З",
-   "video": null,
+   "video": "t80NdEeHDKU",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 45,
+   "sourceLine": 44,
    "flags": [
     "ensemble-expanded"
    ],
@@ -3125,9 +3095,11 @@
      "to": "ЗО на Радио-телевизија Скопје"
     }
    ],
-   "id": "instrumental-0044",
+   "id": "instrumental-0043",
    "warnCount": 0,
-   "search": "народна игра зо на радио-телевизија скопје з-7693/1 narodna igra zo na radio-televizija skopje z-7693/1"
+   "search": "народна игра зо на радио-телевизија скопје з-7693/1 narodna igra zo na radio-televizija skopje z-7693/1",
+   "videoLengthSec": 306,
+   "videoDeltaSec": 208
   },
   {
    "category": "instrumental",
@@ -3142,11 +3114,11 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 46,
+   "sourceLine": 45,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
-   "id": "instrumental-0045",
+   "id": "instrumental-0044",
    "warnCount": 0,
    "search": "осаменост (молчи една долина) квартет рибарски з-7608/2 osamenost (molchi edna dolina) kvartet ribarski z-7608/2"
   },
@@ -3163,7 +3135,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 47,
+   "sourceLine": 46,
    "flags": [
     "performer-split"
    ],
@@ -3176,7 +3148,7 @@
      "to": "Зоран Јовановиќ"
     }
    ],
-   "id": "instrumental-0046",
+   "id": "instrumental-0045",
    "warnCount": 0,
    "search": "песна на русокосата пејачка зоран јовановиќ з-7687/1 pesna na rusokosata pejachka zoran jovanovikj z-7687/1"
   },
@@ -3193,7 +3165,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 48,
+   "sourceLine": 47,
    "flags": [
     "performer-split",
     "ensemble-expanded"
@@ -3213,7 +3185,7 @@
      "to": "тромбон со Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
-   "id": "instrumental-0047",
+   "id": "instrumental-0046",
    "warnCount": 0,
    "search": "поздрав до а. к. жобим рамиз имеров з-7194/1 pozdrav do a. k. zhobim ramiz imerov z-7194/1"
   },
@@ -3228,9 +3200,9 @@
    "signature": "З-3783/1",
    "signatureRaw": "З-3783/1",
    "collection": "З",
-   "video": "geK0tWTLWXo",
+   "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 49,
+   "sourceLine": 48,
    "flags": [
     "performer-split",
     "ensemble-expanded"
@@ -3250,11 +3222,9 @@
      "to": "Танцов оркестар на Радио-телевизија Скопје"
     }
    ],
-   "id": "instrumental-0048",
+   "id": "instrumental-0047",
    "warnCount": 0,
-   "search": "поздрав до оркестарот танцов оркестар на радио-телевизија скопје з-3783/1 pozdrav do orkestarot tancov orkestar na radio-televizija skopje z-3783/1",
-   "videoLengthSec": 273,
-   "videoDeltaSec": 3
+   "search": "поздрав до оркестарот танцов оркестар на радио-телевизија скопје з-3783/1 pozdrav do orkestarot tancov orkestar na radio-televizija skopje z-3783/1"
   },
   {
    "category": "instrumental",
@@ -3267,15 +3237,20 @@
    "signature": "З-7691/2",
    "signatureRaw": "З-7691/2",
    "collection": "З",
-   "video": null,
+   "video": "geK0tWTLWXo",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 50,
-   "flags": [],
+   "sourceLine": 49,
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
-   "id": "instrumental-0049",
+   "id": "instrumental-0048",
    "warnCount": 0,
-   "search": "радост на победата забавен ансамбл з-7691/2 radost na pobedata zabaven ansambl z-7691/2"
+   "search": "радост на победата забавен ансамбл з-7691/2 radost na pobedata zabaven ansambl z-7691/2",
+   "videoLengthSec": 273,
+   "videoDeltaSec": 178,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -3290,11 +3265,11 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 51,
+   "sourceLine": 50,
    "flags": [],
    "duplicateOf": null,
    "textFixes": [],
-   "id": "instrumental-0050",
+   "id": "instrumental-0049",
    "warnCount": 0,
    "search": "reg time диксиленд ансамбл з-7691/1 reg time diksilend ansambl z-7691/1"
   },
@@ -3309,9 +3284,9 @@
    "signature": "З-8212/1",
    "signatureRaw": "З-8212/1",
    "collection": "З",
-   "video": "s48DHQzMb5I",
+   "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 52,
+   "sourceLine": 51,
    "flags": [
     "performer-split"
    ],
@@ -3324,11 +3299,9 @@
      "to": "Кире Костов"
     }
    ],
-   "id": "instrumental-0051",
+   "id": "instrumental-0050",
    "warnCount": 0,
-   "search": "синтеза кире костов з-8212/1 sinteza kire kostov z-8212/1",
-   "videoLengthSec": 301,
-   "videoDeltaSec": 1
+   "search": "синтеза кире костов з-8212/1 sinteza kire kostov z-8212/1"
   },
   {
    "category": "instrumental",
@@ -3341,15 +3314,20 @@
    "signature": "З-7693/4",
    "signatureRaw": "З-7693/4",
    "collection": "З",
-   "video": null,
+   "video": "s48DHQzMb5I",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 53,
-   "flags": [],
+   "sourceLine": 52,
+   "flags": [
+    "video-approximate"
+   ],
    "duplicateOf": null,
    "textFixes": [],
-   "id": "instrumental-0052",
+   "id": "instrumental-0051",
    "warnCount": 0,
-   "search": "свечена игра забавен ансамбл з-7693/4 svechena igra zabaven ansambl z-7693/4"
+   "search": "свечена игра забавен ансамбл з-7693/4 svechena igra zabaven ansambl z-7693/4",
+   "videoLengthSec": 301,
+   "videoDeltaSec": 153,
+   "videoApprox": true
   },
   {
    "category": "instrumental",
@@ -3361,6 +3339,36 @@
    "durationRaw": "4.12",
    "signature": "З-7702/3",
    "signatureRaw": "З-7702/3",
+   "collection": "З",
+   "video": null,
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 53,
+   "flags": [
+    "ensemble-expanded"
+   ],
+   "duplicateOf": null,
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ТО на РТС",
+     "to": "Танцов оркестар на Радио-телевизија Скопје"
+    }
+   ],
+   "id": "instrumental-0052",
+   "warnCount": 0,
+   "search": "тема број 1, транскрипција на една замислена тема танцов оркестар на радио-телевизија скопје з-7702/3 tema broj 1, transkripcija na edna zamislena tema tancov orkestar na radio-televizija skopje z-7702/3"
+  },
+  {
+   "category": "instrumental",
+   "title": "Титовиот пат",
+   "composer": "",
+   "performer": "Танцов оркестар на Радио-телевизија Скопје",
+   "performerRole": "",
+   "durationSec": 170,
+   "durationRaw": "2.50",
+   "signature": "З-7964/2",
+   "signatureRaw": "З-7964/2",
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
@@ -3379,36 +3387,6 @@
    ],
    "id": "instrumental-0053",
    "warnCount": 0,
-   "search": "тема број 1, транскрипција на една замислена тема танцов оркестар на радио-телевизија скопје з-7702/3 tema broj 1, transkripcija na edna zamislena tema tancov orkestar na radio-televizija skopje z-7702/3"
-  },
-  {
-   "category": "instrumental",
-   "title": "Титовиот пат",
-   "composer": "",
-   "performer": "Танцов оркестар на Радио-телевизија Скопје",
-   "performerRole": "",
-   "durationSec": 170,
-   "durationRaw": "2.50",
-   "signature": "З-7964/2",
-   "signatureRaw": "З-7964/2",
-   "collection": "З",
-   "video": null,
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 55,
-   "flags": [
-    "ensemble-expanded"
-   ],
-   "duplicateOf": null,
-   "textFixes": [
-    {
-     "field": "performer",
-     "rule": "ensemble-expanded",
-     "from": "ТО на РТС",
-     "to": "Танцов оркестар на Радио-телевизија Скопје"
-    }
-   ],
-   "id": "instrumental-0054",
-   "warnCount": 0,
    "search": "титовиот пат танцов оркестар на радио-телевизија скопје з-7964/2 titoviot pat tancov orkestar na radio-televizija skopje z-7964/2"
   },
   {
@@ -3424,7 +3402,7 @@
    "collection": "ПМ",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 56,
+   "sourceLine": 55,
    "flags": [
     "performer-split"
    ],
@@ -3437,7 +3415,7 @@
      "to": "Љупчо Мирковски"
     }
    ],
-   "id": "instrumental-0055",
+   "id": "instrumental-0054",
    "warnCount": 0,
    "search": "убава си како музика љупчо мирковски пм-1002/2 ubava si kako muzika ljupcho mirkovski pm-1002/2"
   },
@@ -3454,7 +3432,7 @@
    "collection": "З",
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 57,
+   "sourceLine": 56,
    "flags": [
     "ensemble-expanded"
    ],
@@ -3467,7 +3445,7 @@
      "to": "Забавен оркестар на Радио-телевизија Скопје"
     }
    ],
-   "id": "instrumental-0056",
+   "id": "instrumental-0055",
    "warnCount": 0,
    "search": "чилеанска игра забавен оркестар на радио-телевизија скопје з-7690/3 chileanska igra zabaven orkestar na radio-televizija skopje z-7690/3"
   },
