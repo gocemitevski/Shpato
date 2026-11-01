@@ -8,8 +8,8 @@
    "arrVocal": 261
   },
   "notes": 489,
-  "videos": 143,
-  "new": 7,
+  "videos": 144,
+  "new": 8,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -7132,7 +7132,7 @@
    "signature": "З-3994/1",
    "signatureRaw": "З-3994/1",
    "collection": "З",
-   "video": null,
+   "video": "nKXRjTq5UVs",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 114,
    "flags": [],
@@ -7140,7 +7140,10 @@
    "textFixes": [],
    "id": "arrVocal-0108",
    "warnCount": 0,
-   "search": "најмила авторот ванчо тарабунов з-3994/1 najmila avtorot vancho tarabunov z-3994/1"
+   "search": "најмила авторот ванчо тарабунов з-3994/1 najmila avtorot vancho tarabunov z-3994/1",
+   "videoLengthSec": 168,
+   "videoDeltaSec": 0,
+   "isNew": true
   },
   {
    "category": "arrVocal",
