@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 260
   },
-  "notes": 539,
-  "videos": 141,
+  "notes": 538,
+  "videos": 140,
   "new": 8,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -8842,14 +8842,13 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": "5YcnD1ahUCc",
+   "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 164,
    "flags": [
     "missing-duration",
     "missing-signature",
-    "mixed-script",
-    "video-approximate"
+    "mixed-script"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -8862,9 +8861,7 @@
    ],
    "id": "arrVocal-0163",
    "warnCount": 1,
-   "search": "сини очи во октомври маја оџаклиевска димитар масевски sini ochi vo oktomvri maja odjaklievska dimitar masevski",
-   "videoLengthSec": 161,
-   "videoApprox": true
+   "search": "сини очи во октомври маја оџаклиевска димитар масевски sini ochi vo oktomvri maja odjaklievska dimitar masevski"
   },
   {
    "category": "arrVocal",
