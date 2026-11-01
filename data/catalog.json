@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 541,
-  "videos": 142,
+  "notes": 540,
+  "videos": 141,
   "new": 8,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -8606,20 +8606,15 @@
    "signature": "З-6626/1",
    "signatureRaw": "З-6626/1",
    "collection": "З",
-   "video": "0IRrG_jh1VI",
+   "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 154,
-   "flags": [
-    "video-approximate"
-   ],
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0153",
    "warnCount": 0,
-   "search": "прости ми сефедин бајрамов м. манев з-6626/1 prosti mi sefedin bajramov m. manev z-6626/1",
-   "videoLengthSec": 239,
-   "videoDeltaSec": 33,
-   "videoApprox": true
+   "search": "прости ми сефедин бајрамов м. манев з-6626/1 prosti mi sefedin bajramov m. manev z-6626/1"
   },
   {
    "category": "arrVocal",
