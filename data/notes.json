@@ -7,7 +7,7 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 489,
+  "notes": 494,
   "videos": 144,
   "new": 8,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
@@ -2009,6 +2009,18 @@
    "normalized": "Андреа Сопронов"
   },
   {
+   "id": "arrVocal-0018",
+   "category": "arrVocal",
+   "title": "Да си близу мила моја",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 24,
+   "rule": "performer-author",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Авторот",
+   "normalized": "Ванчо Тарабунов"
+  },
+  {
    "id": "arrVocal-0020",
    "category": "arrVocal",
    "title": "Далеку во далечина",
@@ -2040,6 +2052,18 @@
    "severity": "info",
    "field": "composer",
    "raw": "Х. Крствески",
+   "normalized": "Христо Крстевски"
+  },
+  {
+   "id": "arrVocal-0022",
+   "category": "arrVocal",
+   "title": "Девојката од 3 смена",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 28,
+   "rule": "performer-author",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Авторот",
    "normalized": "Христо Крстевски"
   },
   {
@@ -3159,6 +3183,18 @@
    "normalized": "2:41"
   },
   {
+   "id": "arrVocal-0108",
+   "category": "arrVocal",
+   "title": "Најмила",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 114,
+   "rule": "performer-author",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Авторот",
+   "normalized": "Ванчо Тарабунов"
+  },
+  {
    "id": "arrVocal-0109",
    "category": "arrVocal",
    "title": "На последната средба",
@@ -3929,6 +3965,18 @@
    "normalized": ""
   },
   {
+   "id": "arrVocal-0169",
+   "category": "arrVocal",
+   "title": "Синови на партизани",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 175,
+   "rule": "performer-author",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Авторот",
+   "normalized": "Јанко Узунов"
+  },
+  {
    "id": "arrVocal-0170",
    "category": "arrVocal",
    "title": "Сењорита Калипсо",
@@ -4577,6 +4625,18 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
+  },
+  {
+   "id": "arrVocal-0212",
+   "category": "arrVocal",
+   "title": "Ти пак сакаш некого",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 218,
+   "rule": "performer-author",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Авторот",
+   "normalized": "Григор Копров"
   },
   {
    "id": "arrVocal-0215",

@@ -69,6 +69,7 @@ LATIN_PREFIX = {
 
 SEVERITY = {
     "performer-placeholder": "info",
+    "performer-author": "info",
     "performer-split": "info",
     "punctuation-spacing": "info",
     "ellipsis-normalized": "info",
@@ -236,9 +237,9 @@ NAME_ALIASES = {
     "Забавен анс. на РС": "Забавен оркестар на РС",
     "Забавен орк. на РС": "Забавен оркестар на РС",
 }
-TEXT_RULES = {"performer-split", "punctuation-spacing", "ellipsis-normalized",
-              "mixed-script", "abbreviation-normalized", "typo-corrected",
-              "name-unified"}
+TEXT_RULES = {"performer-split", "performer-author", "punctuation-spacing",
+              "ellipsis-normalized", "mixed-script", "abbreviation-normalized",
+              "typo-corrected", "name-unified"}
 
 # A performer may be followed by an instrument or an accompanying ensemble,
 # separated from the name by a comma, a slash or the word "со".
@@ -407,6 +408,19 @@ def parse_source(source):
         if composer == "+++":
             flags.append("composer-placeholder")
             composer = ""
+
+        # The arrangement volumes write "Авторот" where the song's author sang
+        # his own piece. It is a pointer, not a performer, so the catalogue
+        # names the author the same row credits -- and says so in Забелешки,
+        # because the record no longer shows what the export wrote.
+        if performer == "Авторот":
+            if composer:
+                text_fixes.append({"field": "performer", "rule": "performer-author",
+                                   "from": performer, "to": composer})
+                performer = composer
+            else:
+                flags.append("missing-performer")
+                performer = ""
 
         if performer == "+++":
             flags.append("performer-placeholder")

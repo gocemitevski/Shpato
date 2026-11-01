@@ -156,6 +156,13 @@ Every normalization must be recorded in the notes pipeline (`textFixes` /
 Never "fix" a title or name silently. A dropped row is recorded there too, under
 `duplicate-dropped`: it has no record left to carry a flag.
 
+The arrangement volumes write `Авторот` in the performer column where the song's
+author sang his own piece. That is a pointer, not a name, so the build replaces
+it with the composer the same row credits (`performer-author`, after the alias
+map, so `Х. Крствески` arrives as `Христо Крстевски`) and says so in Забелешки.
+The source keeps the export's wording, as it does for `+++` and the abbreviated
+names. Five records carry it.
+
 ## YouTube links
 
 `sources/youtube.csv` (`id,title,video,found,lengthSec,added`) is the link map,
@@ -576,7 +583,7 @@ own.
 - **All UI text is bilingual.** Adding a key means adding it to *both* `mk` and
   `en` in `assets/i18n.js`. `t()` falls back to English silently, so a missing
   Macedonian key will not throw — it will just ship English. Keys are currently
-  at parity (177 each).
+  at parity (178 each).
 - **Capitalisation lives in the strings, not in CSS.** A `<select>`'s
   `<option>` does not inherit `text-transform`, so a CSS-capitalised label looks
   right in the table and wrong in a dropdown. Capitalise in `i18n.js`.

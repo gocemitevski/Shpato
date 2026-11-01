@@ -7,7 +7,7 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 489,
+  "notes": 494,
   "videos": 144,
   "new": 8,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
@@ -4890,7 +4890,7 @@
    "category": "arrVocal",
    "title": "Да си близу мила моја",
    "composer": "Ванчо Тарабунов",
-   "performer": "Авторот",
+   "performer": "Ванчо Тарабунов",
    "performerRole": "",
    "durationSec": 198,
    "durationRaw": "3.18",
@@ -4900,12 +4900,21 @@
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 24,
-   "flags": [],
+   "flags": [
+    "performer-author"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "performer-author",
+     "from": "Авторот",
+     "to": "Ванчо Тарабунов"
+    }
+   ],
    "id": "arrVocal-0018",
    "warnCount": 0,
-   "search": "да си близу мила моја авторот ванчо тарабунов з-3995/1 da si blizu mila moja avtorot vancho tarabunov z-3995/1"
+   "search": "да си близу мила моја ванчо тарабунов ванчо тарабунов з-3995/1 da si blizu mila moja vancho tarabunov vancho tarabunov z-3995/1"
   },
   {
    "category": "arrVocal",
@@ -4984,7 +4993,7 @@
    "category": "arrVocal",
    "title": "Девојката од 3 смена",
    "composer": "Христо Крстевски",
-   "performer": "Авторот",
+   "performer": "Христо Крстевски",
    "performerRole": "",
    "durationSec": 150,
    "durationRaw": "2.30",
@@ -4995,7 +5004,8 @@
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 28,
    "flags": [
-    "name-unified"
+    "name-unified",
+    "performer-author"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -5004,11 +5014,17 @@
      "rule": "name-unified",
      "from": "Х. Крствески",
      "to": "Христо Крстевски"
+    },
+    {
+     "field": "performer",
+     "rule": "performer-author",
+     "from": "Авторот",
+     "to": "Христо Крстевски"
     }
    ],
    "id": "arrVocal-0022",
    "warnCount": 0,
-   "search": "девојката од 3 смена авторот христо крстевски з-2012/1 devojkata od 3 smena avtorot hristo krstevski z-2012/1"
+   "search": "девојката од 3 смена христо крстевски христо крстевски з-2012/1 devojkata od 3 smena hristo krstevski hristo krstevski z-2012/1"
   },
   {
    "category": "arrVocal",
@@ -7125,7 +7141,7 @@
    "category": "arrVocal",
    "title": "Најмила",
    "composer": "Ванчо Тарабунов",
-   "performer": "Авторот",
+   "performer": "Ванчо Тарабунов",
    "performerRole": "",
    "durationSec": 168,
    "durationRaw": "2.48",
@@ -7135,12 +7151,21 @@
    "video": "nKXRjTq5UVs",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 114,
-   "flags": [],
+   "flags": [
+    "performer-author"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "performer-author",
+     "from": "Авторот",
+     "to": "Ванчо Тарабунов"
+    }
+   ],
    "id": "arrVocal-0108",
    "warnCount": 0,
-   "search": "најмила авторот ванчо тарабунов з-3994/1 najmila avtorot vancho tarabunov z-3994/1",
+   "search": "најмила ванчо тарабунов ванчо тарабунов з-3994/1 najmila vancho tarabunov vancho tarabunov z-3994/1",
    "videoLengthSec": 168,
    "videoDeltaSec": 0,
    "isNew": true
@@ -8639,7 +8664,7 @@
    "category": "arrVocal",
    "title": "Синови на партизани",
    "composer": "Јанко Узунов",
-   "performer": "Авторот",
+   "performer": "Јанко Узунов",
    "performerRole": "",
    "durationSec": 174,
    "durationRaw": "2.54",
@@ -8649,12 +8674,21 @@
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 175,
-   "flags": [],
+   "flags": [
+    "performer-author"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "performer-author",
+     "from": "Авторот",
+     "to": "Јанко Узунов"
+    }
+   ],
    "id": "arrVocal-0169",
    "warnCount": 0,
-   "search": "синови на партизани авторот јанко узунов з-5707/1 sinovi na partizani avtorot janko uzunov z-5707/1"
+   "search": "синови на партизани јанко узунов јанко узунов з-5707/1 sinovi na partizani janko uzunov janko uzunov z-5707/1"
   },
   {
    "category": "arrVocal",
@@ -9738,7 +9772,7 @@
    "category": "arrVocal",
    "title": "Ти пак сакаш некого",
    "composer": "Григор Копров",
-   "performer": "Авторот",
+   "performer": "Григор Копров",
    "performerRole": "",
    "durationSec": 182,
    "durationRaw": "3.02",
@@ -9748,12 +9782,21 @@
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 218,
-   "flags": [],
+   "flags": [
+    "performer-author"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "performer-author",
+     "from": "Авторот",
+     "to": "Григор Копров"
+    }
+   ],
    "id": "arrVocal-0212",
    "warnCount": 0,
-   "search": "ти пак сакаш некого авторот григор копров з-3881/2 ti pak sakash nekogo avtorot grigor koprov z-3881/2"
+   "search": "ти пак сакаш некого григор копров григор копров з-3881/2 ti pak sakash nekogo grigor koprov grigor koprov z-3881/2"
   },
   {
    "category": "arrVocal",
