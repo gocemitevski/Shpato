@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 543,
-  "videos": 144,
+  "notes": 542,
+  "videos": 143,
   "new": 8,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -9676,14 +9676,13 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": "jG4eIEhNaWE",
+   "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 196,
    "flags": [
     "missing-duration",
     "missing-signature",
-    "punctuation-spacing",
-    "video-approximate"
+    "punctuation-spacing"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -9696,9 +9695,7 @@
    ],
    "id": "arrVocal-0195",
    "warnCount": 0,
-   "search": "summer time нина спирова g. gershwin summer time nina spirova g. gershwin",
-   "videoLengthSec": 336,
-   "videoApprox": true
+   "search": "summer time нина спирова g. gershwin summer time nina spirova g. gershwin"
   },
   {
    "category": "arrVocal",

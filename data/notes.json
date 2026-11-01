@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 543,
-  "videos": 144,
+  "notes": 542,
+  "videos": 143,
   "new": 8,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -4936,17 +4936,6 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
-  },
-  {
-   "id": "arrVocal-0195",
-   "category": "arrVocal",
-   "title": "Summer time",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 196,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "5:36"
   },
   {
    "id": "arrVocal-0196",
