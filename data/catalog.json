@@ -7,7 +7,7 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 494,
+  "notes": 539,
   "videos": 144,
   "new": 8,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
@@ -899,7 +899,7 @@
    "title": "Молчи една долина",
    "composer": "",
    "performer": "Блага Видец",
-   "performerRole": "сним. 1961, ГЗО на РС",
+   "performerRole": "сним. 1961, ГЗО на Радио Скопје",
    "durationSec": 180,
    "durationRaw": "3.0",
    "signature": "АЗ-60/12",
@@ -911,6 +911,7 @@
    "flags": [
     "duration-ambiguous-seconds",
     "performer-split",
+    "ensemble-expanded",
     "video-approximate"
    ],
    "duplicateOf": null,
@@ -920,6 +921,12 @@
      "rule": "performer-split",
      "from": "Блага Видец (сним. 1961, ГЗО на РС)",
      "to": "Блага Видец"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "сним. 1961, ГЗО на РС",
+     "to": "сним. 1961, ГЗО на Радио Скопје"
     }
    ],
    "id": "vocal-0038",
@@ -1804,7 +1811,7 @@
    "title": "Балада за гитара",
    "composer": "",
    "performer": "Петар Лукиќ",
-   "performerRole": "соло гитара со ТО на РТС",
+   "performerRole": "соло гитара со Танцов оркестар на Радио телевизија Скопје",
    "durationSec": 172,
    "durationRaw": "2.52",
    "signature": "З-4698/2",
@@ -1815,6 +1822,7 @@
    "sourceLine": 9,
    "flags": [
     "performer-split",
+    "ensemble-expanded",
     "video-approximate"
    ],
    "duplicateOf": null,
@@ -1824,6 +1832,12 @@
      "rule": "performer-split",
      "from": "Петар Лукиќ, соло гитара со ТО на РТС",
      "to": "Петар Лукиќ"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "соло гитара со ТО на РТС",
+     "to": "соло гитара со Танцов оркестар на Радио телевизија Скопје"
     }
    ],
    "id": "instrumental-0003",
@@ -1838,7 +1852,7 @@
    "title": "Во спомен на старото пријателство",
    "composer": "",
    "performer": "Мики Асановиќ",
-   "performerRole": "тенор саксофон со ТО на РТС",
+   "performerRole": "тенор саксофон со Танцов оркестар на Радио телевизија Скопје",
    "durationSec": 220,
    "durationRaw": "3.40",
    "signature": "З-7206/2",
@@ -1848,7 +1862,8 @@
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 10,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -1857,6 +1872,12 @@
      "rule": "performer-split",
      "from": "Мики Асановиќ, тенор саксофон со ТО на РТС",
      "to": "Мики Асановиќ"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "тенор саксофон со ТО на РТС",
+     "to": "тенор саксофон со Танцов оркестар на Радио телевизија Скопје"
     }
    ],
    "id": "instrumental-0004",
@@ -1869,7 +1890,7 @@
    "category": "instrumental",
    "title": "Гермијан",
    "composer": "",
-   "performer": "ТО на РТС",
+   "performer": "Танцов оркестар на Радио телевизија Скопје",
    "performerRole": "",
    "durationSec": 245,
    "durationRaw": "4.05",
@@ -1880,7 +1901,8 @@
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 12,
    "flags": [
-    "mixed-script"
+    "mixed-script",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -1889,17 +1911,23 @@
      "rule": "mixed-script",
      "from": "TО на РТС",
      "to": "ТО на РТС"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ТО на РТС",
+     "to": "Танцов оркестар на Радио телевизија Скопје"
     }
    ],
    "id": "instrumental-0006",
    "warnCount": 1,
-   "search": "гермијан то на ртс з-7457/1 germijan to na rts z-7457/1"
+   "search": "гермијан танцов оркестар на радио телевизија скопје з-7457/1 germijan tancov orkestar na radio televizija skopje z-7457/1"
   },
   {
    "category": "instrumental",
    "title": "Гарача",
    "composer": "",
-   "performer": "ТО на РТС",
+   "performer": "Танцов оркестар на Радио телевизија Скопје",
    "performerRole": "",
    "durationSec": 234,
    "durationRaw": "3.54",
@@ -1909,12 +1937,21 @@
    "video": "b_D0ILHpu8M",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 13,
-   "flags": [],
+   "flags": [
+    "ensemble-expanded"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ТО на РТС",
+     "to": "Танцов оркестар на Радио телевизија Скопје"
+    }
+   ],
    "id": "instrumental-0007",
    "warnCount": 0,
-   "search": "гарача то на ртс з-7700/2 garacha to na rts z-7700/2",
+   "search": "гарача танцов оркестар на радио телевизија скопје з-7700/2 garacha tancov orkestar na radio televizija skopje z-7700/2",
    "videoLengthSec": 235,
    "videoDeltaSec": 1
   },
@@ -2003,7 +2040,7 @@
    "category": "instrumental",
    "title": "Дојди есен",
    "composer": "",
-   "performer": "ТО на РТС",
+   "performer": "Танцов оркестар на Радио телевизија Скопје",
    "performerRole": "",
    "durationSec": 210,
    "durationRaw": "3.30",
@@ -2013,12 +2050,21 @@
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 17,
-   "flags": [],
+   "flags": [
+    "ensemble-expanded"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ТО на РТС",
+     "to": "Танцов оркестар на Радио телевизија Скопје"
+    }
+   ],
    "id": "instrumental-0011",
    "warnCount": 0,
-   "search": "дојди есен то на ртс з-9483/2 dojdi esen to na rts z-9483/2"
+   "search": "дојди есен танцов оркестар на радио телевизија скопје з-9483/2 dojdi esen tancov orkestar na radio televizija skopje z-9483/2"
   },
   {
    "category": "instrumental",
@@ -2137,7 +2183,7 @@
    "category": "instrumental",
    "title": "Еден бакнеж",
    "composer": "",
-   "performer": "РО на РТЉ",
+   "performer": "Радиски оркестар на РТЉ",
    "performerRole": "",
    "durationSec": 190,
    "durationRaw": "3.10",
@@ -2148,13 +2194,21 @@
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 22,
    "flags": [
+    "ensemble-expanded",
     "video-approximate"
    ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "РО на РТЉ",
+     "to": "Радиски оркестар на РТЉ"
+    }
+   ],
    "id": "instrumental-0016",
    "warnCount": 0,
-   "search": "еден бакнеж ро на ртљ з-6057/3 eden baknezh ro na rtlj z-6057/3",
+   "search": "еден бакнеж радиски оркестар на ртљ з-6057/3 eden baknezh radiski orkestar na rtlj z-6057/3",
    "videoLengthSec": 202,
    "videoDeltaSec": 12,
    "videoApprox": true
@@ -2163,7 +2217,7 @@
    "category": "instrumental",
    "title": "Ехо од далечното минато",
    "composer": "",
-   "performer": "ТО на РТС",
+   "performer": "Танцов оркестар на Радио телевизија Скопје",
    "performerRole": "",
    "durationSec": 300,
    "durationRaw": "5.00",
@@ -2173,12 +2227,21 @@
    "video": "YurRHulM3Cw",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 23,
-   "flags": [],
+   "flags": [
+    "ensemble-expanded"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ТО на РТС",
+     "to": "Танцов оркестар на Радио телевизија Скопје"
+    }
+   ],
    "id": "instrumental-0017",
    "warnCount": 0,
-   "search": "ехо од далечното минато то на ртс з-4701/1 eho od dalechnoto minato to na rts z-4701/1",
+   "search": "ехо од далечното минато танцов оркестар на радио телевизија скопје з-4701/1 eho od dalechnoto minato tancov orkestar na radio televizija skopje z-4701/1",
    "videoLengthSec": 301,
    "videoDeltaSec": 1
   },
@@ -2186,7 +2249,7 @@
    "category": "instrumental",
    "title": "Злато најдоа, злато во Калифорнија",
    "composer": "",
-   "performer": "РО на РТС",
+   "performer": "Радиски оркестар на Радио телевизија Скопје",
    "performerRole": "",
    "durationSec": 74,
    "durationRaw": "1.14",
@@ -2196,12 +2259,21 @@
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 24,
-   "flags": [],
+   "flags": [
+    "ensemble-expanded"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "РО на РТС",
+     "to": "Радиски оркестар на Радио телевизија Скопје"
+    }
+   ],
    "id": "instrumental-0018",
    "warnCount": 0,
-   "search": "злато најдоа, злато во калифорнија ро на ртс з-7690/2 zlato najdoa, zlato vo kalifornija ro na rts z-7690/2"
+   "search": "злато најдоа, злато во калифорнија радиски оркестар на радио телевизија скопје з-7690/2 zlato najdoa, zlato vo kalifornija radiski orkestar na radio televizija skopje z-7690/2"
   },
   {
    "category": "instrumental",
@@ -2239,7 +2311,7 @@
    "title": "Импресија",
    "composer": "",
    "performer": "Петар Лукиќ",
-   "performerRole": "гитара со ТО на РТС",
+   "performerRole": "гитара со Танцов оркестар на Радио телевизија Скопје",
    "durationSec": 170,
    "durationRaw": "2.50",
    "signature": "З-6668/1",
@@ -2250,6 +2322,7 @@
    "sourceLine": 26,
    "flags": [
     "performer-split",
+    "ensemble-expanded",
     "video-approximate"
    ],
    "duplicateOf": null,
@@ -2259,6 +2332,12 @@
      "rule": "performer-split",
      "from": "Петар Лукиќ, гитара со ТО на РТС",
      "to": "Петар Лукиќ"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "гитара со ТО на РТС",
+     "to": "гитара со Танцов оркестар на Радио телевизија Скопје"
     }
    ],
    "id": "instrumental-0020",
@@ -2396,7 +2475,7 @@
    "category": "instrumental",
    "title": "Јас не сум ти",
    "composer": "",
-   "performer": "Џез ансамбл на РТС",
+   "performer": "Џез ансамбл на Радио телевизија Скопје",
    "performerRole": "",
    "durationSec": 447,
    "durationRaw": "7.27",
@@ -2406,18 +2485,27 @@
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 31,
-   "flags": [],
+   "flags": [
+    "ensemble-expanded"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "Џез ансамбл на РТС",
+     "to": "Џез ансамбл на Радио телевизија Скопје"
+    }
+   ],
    "id": "instrumental-0025",
    "warnCount": 0,
-   "search": "јас не сум ти џез ансамбл на ртс з-3004/2 jas ne sum ti djez ansambl na rts z-3004/2"
+   "search": "јас не сум ти џез ансамбл на радио телевизија скопје з-3004/2 jas ne sum ti djez ansambl na radio televizija skopje z-3004/2"
   },
   {
    "category": "instrumental",
    "title": "Кога си сама",
    "composer": "",
-   "performer": "РО на РТС",
+   "performer": "Радиски оркестар на Радио телевизија Скопје",
    "performerRole": "",
    "durationSec": 186,
    "durationRaw": "3.06",
@@ -2427,18 +2515,27 @@
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 32,
-   "flags": [],
+   "flags": [
+    "ensemble-expanded"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "РО на РТС",
+     "to": "Радиски оркестар на Радио телевизија Скопје"
+    }
+   ],
    "id": "instrumental-0026",
    "warnCount": 0,
-   "search": "кога си сама ро на ртс з-8227/1 koga si sama ro na rts z-8227/1"
+   "search": "кога си сама радиски оркестар на радио телевизија скопје з-8227/1 koga si sama radiski orkestar na radio televizija skopje z-8227/1"
   },
   {
    "category": "instrumental",
    "title": "Лајт мотив 1",
    "composer": "",
-   "performer": "РО",
+   "performer": "Радиски оркестар",
    "performerRole": "",
    "durationSec": 97,
    "durationRaw": "1.37",
@@ -2448,18 +2545,27 @@
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 33,
-   "flags": [],
+   "flags": [
+    "ensemble-expanded"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "РО",
+     "to": "Радиски оркестар"
+    }
+   ],
    "id": "instrumental-0027",
    "warnCount": 0,
-   "search": "лајт мотив 1 ро з-7690/1 lajt motiv 1 ro z-7690/1"
+   "search": "лајт мотив 1 радиски оркестар з-7690/1 lajt motiv 1 radiski orkestar z-7690/1"
   },
   {
    "category": "instrumental",
    "title": "Лајт мотив 2",
    "composer": "",
-   "performer": "РО",
+   "performer": "Радиски оркестар",
    "performerRole": "",
    "durationSec": 111,
    "durationRaw": "1.51",
@@ -2469,12 +2575,21 @@
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 34,
-   "flags": [],
+   "flags": [
+    "ensemble-expanded"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "РО",
+     "to": "Радиски оркестар"
+    }
+   ],
    "id": "instrumental-0028",
    "warnCount": 0,
-   "search": "лајт мотив 2 ро з-7693/2 lajt motiv 2 ro z-7693/2"
+   "search": "лајт мотив 2 радиски оркестар з-7693/2 lajt motiv 2 radiski orkestar z-7693/2"
   },
   {
    "category": "instrumental",
@@ -2591,7 +2706,7 @@
    "category": "instrumental",
    "title": "Лени",
    "composer": "",
-   "performer": "ТО",
+   "performer": "Танцов оркестар",
    "performerRole": "",
    "durationSec": 198,
    "durationRaw": "3.18",
@@ -2601,12 +2716,21 @@
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 39,
-   "flags": [],
+   "flags": [
+    "ensemble-expanded"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ТО",
+     "to": "Танцов оркестар"
+    }
+   ],
    "id": "instrumental-0033",
    "warnCount": 0,
-   "search": "лени то пм-303/1 leni to pm-303/1"
+   "search": "лени танцов оркестар пм-303/1 leni tancov orkestar pm-303/1"
   },
   {
    "category": "instrumental",
@@ -2895,7 +3019,7 @@
    "category": "instrumental",
    "title": "На игранка",
    "composer": "",
-   "performer": "ТО на РТС",
+   "performer": "Танцов оркестар на Радио телевизија Скопје",
    "performerRole": "Божидар Ноев, труба, Петар Каргов, саксофон",
    "durationSec": 308,
    "durationRaw": "5.08",
@@ -2907,7 +3031,8 @@
    "sourceLine": 49,
    "flags": [
     "abbreviation-normalized",
-    "performer-split"
+    "performer-split",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -2922,11 +3047,17 @@
      "rule": "performer-split",
      "from": "ТО на РТС, Божидар Ноев, труба, Петар Каргов, саксофон",
      "to": "ТО на РТС"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ТО на РТС",
+     "to": "Танцов оркестар на Радио телевизија Скопје"
     }
    ],
    "id": "instrumental-0043",
    "warnCount": 0,
-   "search": "на игранка то на ртс з-7638/2 na igranka to na rts z-7638/2",
+   "search": "на игранка танцов оркестар на радио телевизија скопје з-7638/2 na igranka tancov orkestar na radio televizija skopje z-7638/2",
    "videoLengthSec": 306,
    "videoDeltaSec": 2
   },
@@ -2934,7 +3065,7 @@
    "category": "instrumental",
    "title": "Народна игра",
    "composer": "",
-   "performer": "ЗО на РТС",
+   "performer": "ЗО на Радио телевизија Скопје",
    "performerRole": "",
    "durationSec": 98,
    "durationRaw": "1.38",
@@ -2944,12 +3075,21 @@
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 50,
-   "flags": [],
+   "flags": [
+    "ensemble-expanded"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ЗО на РТС",
+     "to": "ЗО на Радио телевизија Скопје"
+    }
+   ],
    "id": "instrumental-0044",
    "warnCount": 0,
-   "search": "народна игра зо на ртс з-7693/1 narodna igra zo na rts z-7693/1"
+   "search": "народна игра зо на радио телевизија скопје з-7693/1 narodna igra zo na radio televizija skopje z-7693/1"
   },
   {
    "category": "instrumental",
@@ -3007,7 +3147,7 @@
    "title": "Поздрав до А. К. Жобим",
    "composer": "",
    "performer": "Рамиз Имеров",
-   "performerRole": "тромбон со ТО на РТС",
+   "performerRole": "тромбон со Танцов оркестар на Радио телевизија Скопје",
    "durationSec": 252,
    "durationRaw": "4.12",
    "signature": "З-7194/1",
@@ -3017,7 +3157,8 @@
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 53,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3026,6 +3167,12 @@
      "rule": "performer-split",
      "from": "Рамиз Имеров, тромбон со ТО на РТС",
      "to": "Рамиз Имеров"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "тромбон со ТО на РТС",
+     "to": "тромбон со Танцов оркестар на Радио телевизија Скопје"
     }
    ],
    "id": "instrumental-0047",
@@ -3036,7 +3183,7 @@
    "category": "instrumental",
    "title": "Поздрав до оркестарот",
    "composer": "",
-   "performer": "ТО на РТС",
+   "performer": "Танцов оркестар на Радио телевизија Скопје",
    "performerRole": "солист Кире Костов, труба",
    "durationSec": 270,
    "durationRaw": "4.30",
@@ -3047,7 +3194,8 @@
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 54,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3056,11 +3204,17 @@
      "rule": "performer-split",
      "from": "ТО на РТС, солист Кире Костов, труба",
      "to": "ТО на РТС"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ТО на РТС",
+     "to": "Танцов оркестар на Радио телевизија Скопје"
     }
    ],
    "id": "instrumental-0048",
    "warnCount": 0,
-   "search": "поздрав до оркестарот то на ртс з-3783/1 pozdrav do orkestarot to na rts z-3783/1",
+   "search": "поздрав до оркестарот танцов оркестар на радио телевизија скопје з-3783/1 pozdrav do orkestarot tancov orkestar na radio televizija skopje z-3783/1",
    "videoLengthSec": 273,
    "videoDeltaSec": 3
   },
@@ -3163,7 +3317,7 @@
    "category": "instrumental",
    "title": "Тема број 1, Транскрипција на една замислена тема",
    "composer": "",
-   "performer": "ТО на РТС",
+   "performer": "Танцов оркестар на Радио телевизија Скопје",
    "performerRole": "",
    "durationSec": 252,
    "durationRaw": "4.12",
@@ -3173,18 +3327,27 @@
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 59,
-   "flags": [],
+   "flags": [
+    "ensemble-expanded"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ТО на РТС",
+     "to": "Танцов оркестар на Радио телевизија Скопје"
+    }
+   ],
    "id": "instrumental-0053",
    "warnCount": 0,
-   "search": "тема број 1, транскрипција на една замислена тема то на ртс з-7702/3 tema broj 1, transkripcija na edna zamislena tema to na rts z-7702/3"
+   "search": "тема број 1, транскрипција на една замислена тема танцов оркестар на радио телевизија скопје з-7702/3 tema broj 1, transkripcija na edna zamislena tema tancov orkestar na radio televizija skopje z-7702/3"
   },
   {
    "category": "instrumental",
    "title": "Титовиот пат",
    "composer": "",
-   "performer": "ТО на РТС",
+   "performer": "Танцов оркестар на Радио телевизија Скопје",
    "performerRole": "",
    "durationSec": 170,
    "durationRaw": "2.50",
@@ -3194,12 +3357,21 @@
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 60,
-   "flags": [],
+   "flags": [
+    "ensemble-expanded"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ТО на РТС",
+     "to": "Танцов оркестар на Радио телевизија Скопје"
+    }
+   ],
    "id": "instrumental-0054",
    "warnCount": 0,
-   "search": "титовиот пат то на ртс з-7964/2 titoviot pat to na rts z-7964/2"
+   "search": "титовиот пат танцов оркестар на радио телевизија скопје з-7964/2 titoviot pat tancov orkestar na radio televizija skopje z-7964/2"
   },
   {
    "category": "instrumental",
@@ -3235,7 +3407,7 @@
    "category": "instrumental",
    "title": "Чилеанска игра",
    "composer": "",
-   "performer": "Забавен оркестар на РТС",
+   "performer": "Забавен оркестар на Радио телевизија Скопје",
    "performerRole": "",
    "durationSec": 128,
    "durationRaw": "2.08",
@@ -3245,18 +3417,27 @@
    "video": null,
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 62,
-   "flags": [],
+   "flags": [
+    "ensemble-expanded"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "Забавен оркестар на РТС",
+     "to": "Забавен оркестар на Радио телевизија Скопје"
+    }
+   ],
    "id": "instrumental-0056",
    "warnCount": 0,
-   "search": "чилеанска игра забавен оркестар на ртс з-7690/3 chileanska igra zabaven orkestar na rts z-7690/3"
+   "search": "чилеанска игра забавен оркестар на радио телевизија скопје з-7690/3 chileanska igra zabaven orkestar na radio televizija skopje z-7690/3"
   },
   {
    "category": "arrThemes",
    "title": "Авизо",
    "composer": "Дјук Елингтон",
-   "performer": "ТО на РТС",
+   "performer": "Танцов оркестар на Радио телевизија Скопје",
    "performerRole": "",
    "durationSec": 37,
    "durationRaw": "0.37",
@@ -3267,20 +3448,28 @@
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 7,
    "flags": [
-    "signature-trailing-slash"
+    "signature-trailing-slash",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ТО на РТС",
+     "to": "Танцов оркестар на Радио телевизија Скопје"
+    }
+   ],
    "id": "arrThemes-0001",
    "warnCount": 0,
-   "search": "авизо то на ртс дјук елингтон аз-57 avizo to na rts djuk elington az-57"
+   "search": "авизо танцов оркестар на радио телевизија скопје дјук елингтон аз-57 avizo tancov orkestar na radio televizija skopje djuk elington az-57"
   },
   {
    "category": "arrThemes",
    "title": "Без тебе",
    "composer": "",
    "performer": "Кире Костов",
-   "performerRole": "труба со ТО",
+   "performerRole": "труба со Танцов оркестар",
    "durationSec": 158,
    "durationRaw": "2.38",
    "signature": "З-7418/2",
@@ -3291,7 +3480,8 @@
    "sourceLine": 8,
    "flags": [
     "composer-placeholder",
-    "performer-split"
+    "performer-split",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3300,6 +3490,12 @@
      "rule": "performer-split",
      "from": "Кире Костов, труба со ТО",
      "to": "Кире Костов"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "труба со ТО",
+     "to": "труба со Танцов оркестар"
     }
    ],
    "id": "arrThemes-0002",
@@ -3310,7 +3506,7 @@
    "category": "arrThemes",
    "title": "Би бап буги",
    "composer": "",
-   "performer": "Забавен оркестар на РС",
+   "performer": "Забавен оркестар на Радио Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -3323,7 +3519,8 @@
    "flags": [
     "missing-duration",
     "composer-placeholder",
-    "name-unified"
+    "name-unified",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3332,11 +3529,17 @@
      "rule": "name-unified",
      "from": "Забавен анс. На РС",
      "to": "Забавен оркестар на РС"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "Забавен оркестар на РС",
+     "to": "Забавен оркестар на Радио Скопје"
     }
    ],
    "id": "arrThemes-0003",
    "warnCount": 0,
-   "search": "би бап буги забавен оркестар на рс аз-51/23 bi bap bugi zabaven orkestar na rs az-51/23"
+   "search": "би бап буги забавен оркестар на радио скопје аз-51/23 bi bap bugi zabaven orkestar na radio skopje az-51/23"
   },
   {
    "category": "arrThemes",
@@ -3366,7 +3569,7 @@
    "category": "arrThemes",
    "title": "Безввредниот Џо",
    "composer": "традиционална",
-   "performer": "ГЗО на РС",
+   "performer": "ГЗО на Радио Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -3377,20 +3580,28 @@
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 11,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ГЗО на РС",
+     "to": "ГЗО на Радио Скопје"
+    }
+   ],
    "id": "arrThemes-0005",
    "warnCount": 0,
-   "search": "безввредниот џо гзо на рс традиционална аз-50/15 bezvvredniot djo gzo na rs tradicionalna az-50/15"
+   "search": "безввредниот џо гзо на радио скопје традиционална аз-50/15 bezvvredniot djo gzo na radio skopje tradicionalna az-50/15"
   },
   {
    "category": "arrThemes",
    "title": "Гагово расположение",
    "composer": "Л. Митревски",
    "performer": "Петар Каргов",
-   "performerRole": "со ТО на МРТ",
+   "performerRole": "со Танцов оркестар на Македонска радио телевизија",
    "durationSec": 230,
    "durationRaw": "3.50",
    "signature": "З-7615/2",
@@ -3400,7 +3611,8 @@
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 12,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3409,6 +3621,12 @@
      "rule": "performer-split",
      "from": "Петар Каргов со ТО на МРТ",
      "to": "Петар Каргов"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "со ТО на МРТ",
+     "to": "со Танцов оркестар на Македонска радио телевизија"
     }
    ],
    "id": "arrThemes-0006",
@@ -3486,7 +3704,7 @@
    "title": "Четири такта",
    "composer": "Фречмен",
    "performer": "Томе Николовски",
-   "performerRole": "сакс со ТО",
+   "performerRole": "сакс со Танцов оркестар",
    "durationSec": 240,
    "durationRaw": "4.00",
    "signature": "З-2814/3",
@@ -3496,7 +3714,8 @@
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 15,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3505,6 +3724,12 @@
      "rule": "performer-split",
      "from": "Томе Николовски, сакс со ТО",
      "to": "Томе Николовски"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "сакс со ТО",
+     "to": "сакс со Танцов оркестар"
     }
    ],
    "id": "arrThemes-0009",
@@ -3515,7 +3740,7 @@
    "category": "arrThemes",
    "title": "Еден бакнеж",
    "composer": "Петар Пешев",
-   "performer": "РО на РТЉ",
+   "performer": "Радиски оркестар на РТЉ",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -3526,13 +3751,21 @@
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 16,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "РО на РТЉ",
+     "to": "Радиски оркестар на РТЉ"
+    }
+   ],
    "id": "arrThemes-0010",
    "warnCount": 0,
-   "search": "еден бакнеж ро на ртљ петар пешев з-2057/3 eden baknezh ro na rtlj petar peshev z-2057/3"
+   "search": "еден бакнеж радиски оркестар на ртљ петар пешев з-2057/3 eden baknezh radiski orkestar na rtlj petar peshev z-2057/3"
   },
   {
    "category": "arrThemes",
@@ -3650,7 +3883,7 @@
    "category": "arrThemes",
    "title": "Лосел блуз",
    "composer": "Џ. Ширинг",
-   "performer": "ГЗО на РС",
+   "performer": "ГЗО на Радио Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -3661,13 +3894,21 @@
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 22,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ГЗО на РС",
+     "to": "ГЗО на Радио Скопје"
+    }
+   ],
    "id": "arrThemes-0016",
    "warnCount": 0,
-   "search": "лосел блуз гзо на рс џ. ширинг аз-50/18 losel bluz gzo na rs dj. shiring az-50/18"
+   "search": "лосел блуз гзо на радио скопје џ. ширинг аз-50/18 losel bluz gzo na radio skopje dj. shiring az-50/18"
   },
   {
    "category": "arrThemes",
@@ -3703,7 +3944,7 @@
    "category": "arrThemes",
    "title": "Меланхолична рапсодија",
    "composer": "Р. Хендроф",
-   "performer": "ГЗО на РС",
+   "performer": "ГЗО на Радио Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -3714,13 +3955,21 @@
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 24,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ГЗО на РС",
+     "to": "ГЗО на Радио Скопје"
+    }
+   ],
    "id": "arrThemes-0018",
    "warnCount": 0,
-   "search": "меланхолична рапсодија гзо на рс р. хендроф аз-50/17 melanholichna rapsodija gzo na rs r. hendrof az-50/17"
+   "search": "меланхолична рапсодија гзо на радио скопје р. хендроф аз-50/17 melanholichna rapsodija gzo na radio skopje r. hendrof az-50/17"
   },
   {
    "category": "arrThemes",
@@ -3757,7 +4006,7 @@
    "category": "arrThemes",
    "title": "Маскет рејмбл",
    "composer": "Е. Ори",
-   "performer": "Забавен оркестар на РС",
+   "performer": "Забавен оркестар на Радио Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -3769,7 +4018,8 @@
    "sourceLine": 26,
    "flags": [
     "missing-duration",
-    "name-unified"
+    "name-unified",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3778,11 +4028,17 @@
      "rule": "name-unified",
      "from": "Забавен анс. на РС",
      "to": "Забавен оркестар на РС"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "Забавен оркестар на РС",
+     "to": "Забавен оркестар на Радио Скопје"
     }
    ],
    "id": "arrThemes-0020",
    "warnCount": 0,
-   "search": "маскет рејмбл забавен оркестар на рс е. ори аз-51/20 masket rejmbl zabaven orkestar na rs e. ori az-51/20"
+   "search": "маскет рејмбл забавен оркестар на радио скопје е. ори аз-51/20 masket rejmbl zabaven orkestar na radio skopje e. ori az-51/20"
   },
   {
    "category": "arrThemes",
@@ -3855,7 +4111,7 @@
    "category": "arrThemes",
    "title": "Настоен сум за љубов",
    "composer": "Д. Вернон",
-   "performer": "Забавен оркестар на РС",
+   "performer": "Забавен оркестар на Радио Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -3867,7 +4123,8 @@
    "sourceLine": 29,
    "flags": [
     "missing-duration",
-    "name-unified"
+    "name-unified",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3876,17 +4133,23 @@
      "rule": "name-unified",
      "from": "Забавен орк. на РС",
      "to": "Забавен оркестар на РС"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "Забавен оркестар на РС",
+     "to": "Забавен оркестар на Радио Скопје"
     }
    ],
    "id": "arrThemes-0023",
    "warnCount": 0,
-   "search": "настоен сум за љубов забавен оркестар на рс д. вернон аз-48/19 nastoen sum za ljubov zabaven orkestar na rs d. vernon az-48/19"
+   "search": "настоен сум за љубов забавен оркестар на радио скопје д. вернон аз-48/19 nastoen sum za ljubov zabaven orkestar na radio skopje d. vernon az-48/19"
   },
   {
    "category": "arrThemes",
    "title": "Очи чорние",
    "composer": "традиционална",
-   "performer": "ГЗО на РС",
+   "performer": "ГЗО на Радио Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -3897,13 +4160,21 @@
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 30,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ГЗО на РС",
+     "to": "ГЗО на Радио Скопје"
+    }
+   ],
    "id": "arrThemes-0024",
    "warnCount": 0,
-   "search": "очи чорние гзо на рс традиционална аз-50/12 ochi chornie gzo na rs tradicionalna az-50/12"
+   "search": "очи чорние гзо на радио скопје традиционална аз-50/12 ochi chornie gzo na radio skopje tradicionalna az-50/12"
   },
   {
    "category": "arrThemes",
@@ -3935,7 +4206,7 @@
    "title": "Почнувам да гледам светлина",
    "composer": "Дјук Елингтон",
    "performer": "Зоран Јовановиќ",
-   "performerRole": "со ТО на МРТ",
+   "performerRole": "со Танцов оркестар на Македонска радио телевизија",
    "durationSec": 218,
    "durationRaw": "3.38",
    "signature": "З-2814/2",
@@ -3946,7 +4217,8 @@
    "sourceLine": 32,
    "flags": [
     "name-unified",
-    "performer-split"
+    "performer-split",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -3961,6 +4233,12 @@
      "rule": "performer-split",
      "from": "Зоран Јовановиќ со ТО на МРТ",
      "to": "Зоран Јовановиќ"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "со ТО на МРТ",
+     "to": "со Танцов оркестар на Македонска радио телевизија"
     }
    ],
    "id": "arrThemes-0026",
@@ -4223,7 +4501,7 @@
    "category": "arrThemes",
    "title": "Vinter",
    "composer": "A. Vivaldi",
-   "performer": "ТО на РТС",
+   "performer": "Танцов оркестар на Радио телевизија Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -4236,7 +4514,8 @@
    "flags": [
     "missing-duration",
     "missing-signature",
-    "punctuation-spacing"
+    "punctuation-spacing",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -4245,11 +4524,17 @@
      "rule": "punctuation-spacing",
      "from": "A.Vivaldi",
      "to": "A. Vivaldi"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ТО на РТС",
+     "to": "Танцов оркестар на Радио телевизија Скопје"
     }
    ],
    "id": "arrThemes-0035",
    "warnCount": 0,
-   "search": "vinter то на ртс a. vivaldi vinter to na rts a. vivaldi"
+   "search": "vinter танцов оркестар на радио телевизија скопје a. vivaldi vinter tancov orkestar na radio televizija skopje a. vivaldi"
   },
   {
    "category": "arrThemes",
@@ -4354,7 +4639,7 @@
    "category": "arrThemes",
    "title": "Зошто си во мојата близина",
    "composer": "Александар Џамбазов",
-   "performer": "ТО на РТС",
+   "performer": "Танцов оркестар на Радио телевизија Скопје",
    "performerRole": "Зоран Јовановиќ",
    "durationSec": 205,
    "durationRaw": "3.25",
@@ -4366,7 +4651,8 @@
    "sourceLine": 46,
    "flags": [
     "punctuation-spacing",
-    "performer-split"
+    "performer-split",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -4381,11 +4667,17 @@
      "rule": "performer-split",
      "from": "ТО на РТС / Зоран Јовановиќ",
      "to": "ТО на РТС"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ТО на РТС",
+     "to": "Танцов оркестар на Радио телевизија Скопје"
     }
    ],
    "id": "arrThemes-0040",
    "warnCount": 0,
-   "search": "зошто си во мојата близина то на ртс александар џамбазов з-3529/3 zoshto si vo mojata blizina to na rts aleksandar djambazov z-3529/3"
+   "search": "зошто си во мојата близина танцов оркестар на радио телевизија скопје александар џамбазов з-3529/3 zoshto si vo mojata blizina tancov orkestar na radio televizija skopje aleksandar djambazov z-3529/3"
   },
   {
    "category": "arrThemes",
@@ -4920,7 +5212,7 @@
    "category": "arrVocal",
    "title": "Далеку некаде на југ",
    "composer": "Григор Копров",
-   "performer": "РО",
+   "performer": "Радиски оркестар",
    "performerRole": "",
    "durationSec": 200,
    "durationRaw": "3.20",
@@ -4930,12 +5222,21 @@
    "video": "sQf0oQRgOo8",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 25,
-   "flags": [],
+   "flags": [
+    "ensemble-expanded"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "РО",
+     "to": "Радиски оркестар"
+    }
+   ],
    "id": "arrVocal-0019",
    "warnCount": 0,
-   "search": "далеку некаде на југ ро григор копров з-2649/1 daleku nekade na jug ro grigor koprov z-2649/1",
+   "search": "далеку некаде на југ радиски оркестар григор копров з-2649/1 daleku nekade na jug radiski orkestar grigor koprov z-2649/1",
    "videoLengthSec": 202,
    "videoDeltaSec": 2
   },
@@ -5030,7 +5331,7 @@
    "category": "arrVocal",
    "title": "Детство",
    "composer": "Александар Џамбазов",
-   "performer": "РО Зоран Милосављевиќ",
+   "performer": "Радиски оркестар Зоран Милосављевиќ",
    "performerRole": "",
    "durationSec": 224,
    "durationRaw": "3.44",
@@ -5040,12 +5341,21 @@
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 29,
-   "flags": [],
+   "flags": [
+    "ensemble-expanded"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "РО Зоран Милосављевиќ",
+     "to": "Радиски оркестар Зоран Милосављевиќ"
+    }
+   ],
    "id": "arrVocal-0023",
    "warnCount": 0,
-   "search": "детство ро зоран милосављевиќ александар џамбазов з-3527/3 detstvo ro zoran milosavljevikj aleksandar djambazov z-3527/3"
+   "search": "детство радиски оркестар зоран милосављевиќ александар џамбазов з-3527/3 detstvo radiski orkestar zoran milosavljevikj aleksandar djambazov z-3527/3"
   },
   {
    "category": "arrVocal",
@@ -5490,7 +5800,7 @@
    "title": "Фламенко рок",
    "composer": "Малгони",
    "performer": "Нина Спирова",
-   "performerRole": "со ТО",
+   "performerRole": "со Танцов оркестар",
    "durationSec": null,
    "durationRaw": "",
    "signature": "АЗ-61/13",
@@ -5501,7 +5811,8 @@
    "sourceLine": 49,
    "flags": [
     "missing-duration",
-    "performer-split"
+    "performer-split",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -5510,6 +5821,12 @@
      "rule": "performer-split",
      "from": "Нина Спирова со ТО",
      "to": "Нина Спирова"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "со ТО",
+     "to": "со Танцов оркестар"
     }
    ],
    "id": "arrVocal-0043",
@@ -9718,7 +10035,7 @@
    "category": "arrVocal",
    "title": "Те имам под кожа",
    "composer": "Кол Портер",
-   "performer": "ТО на РТС",
+   "performer": "Танцов оркестар на Радио телевизија Скопје",
    "performerRole": "",
    "durationSec": 195,
    "durationRaw": "3.15",
@@ -9730,7 +10047,8 @@
    "sourceLine": 216,
    "flags": [
     "signature-suspicious",
-    "name-unified"
+    "name-unified",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -9739,11 +10057,17 @@
      "rule": "name-unified",
      "from": "К. Портер",
      "to": "Кол Портер"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ТО на РТС",
+     "to": "Танцов оркестар на Радио телевизија Скопје"
     }
    ],
    "id": "arrVocal-0210",
    "warnCount": 1,
-   "search": "те имам под кожа то на ртс кол портер з-8511-1 te imam pod kozha to na rts kol porter z-8511-1"
+   "search": "те имам под кожа танцов оркестар на радио телевизија скопје кол портер з-8511-1 te imam pod kozha tancov orkestar na radio televizija skopje kol porter z-8511-1"
   },
   {
    "category": "arrVocal",
@@ -9964,7 +10288,7 @@
    "category": "arrVocal",
    "title": "Зимски здив",
    "composer": "Димитар Масевски",
-   "performer": "ГЗО на РС",
+   "performer": "ГЗО на Радио Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -9975,13 +10299,21 @@
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 226,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ГЗО на РС",
+     "to": "ГЗО на Радио Скопје"
+    }
+   ],
    "id": "arrVocal-0220",
    "warnCount": 0,
-   "search": "зимски здив гзо на рс димитар масевски аз-60/2 zimski zdiv gzo na rs dimitar masevski az-60/2"
+   "search": "зимски здив гзо на радио скопје димитар масевски аз-60/2 zimski zdiv gzo na radio skopje dimitar masevski az-60/2"
   },
   {
    "category": "arrVocal",
@@ -10315,7 +10647,7 @@
    "category": "arrVocal",
    "title": "Визија на мојата среќа",
    "composer": "Димитар Масевски",
-   "performer": "Забавен оркестар на РС",
+   "performer": "Забавен оркестар на Радио Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -10326,13 +10658,21 @@
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 240,
    "flags": [
-    "missing-duration"
+    "missing-duration",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "Забавен оркестар на РС",
+     "to": "Забавен оркестар на Радио Скопје"
+    }
+   ],
    "id": "arrVocal-0234",
    "warnCount": 0,
-   "search": "визија на мојата среќа забавен оркестар на рс димитар масевски аз-48/20 vizija na mojata srekja zabaven orkestar na rs dimitar masevski az-48/20"
+   "search": "визија на мојата среќа забавен оркестар на радио скопје димитар масевски аз-48/20 vizija na mojata srekja zabaven orkestar na radio skopje dimitar masevski az-48/20"
   },
   {
    "category": "arrVocal",
@@ -10499,7 +10839,7 @@
    "title": "За еден цвет господине",
    "composer": "",
    "performer": "Марија Арсова",
-   "performerRole": "со ТО на „Македонка“",
+   "performerRole": "со Танцов оркестар на „Македонка“",
    "durationSec": 162,
    "durationRaw": "2.42",
    "signature": "З-1947/3",
@@ -10510,7 +10850,8 @@
    "sourceLine": 247,
    "flags": [
     "composer-placeholder",
-    "performer-split"
+    "performer-split",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -10519,6 +10860,12 @@
      "rule": "performer-split",
      "from": "Марија Арсова со ТО на „Македонка“",
      "to": "Марија Арсова"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "со ТО на „Македонка“",
+     "to": "со Танцов оркестар на „Македонка“"
     }
    ],
    "id": "arrVocal-0241",
@@ -11026,7 +11373,7 @@
    "category": "arrVocal",
    "title": "Што е љубов",
    "composer": "Кол Портер",
-   "performer": "ГЗО на РС",
+   "performer": "ГЗО на Радио Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -11038,7 +11385,8 @@
    "sourceLine": 267,
    "flags": [
     "missing-duration",
-    "name-unified"
+    "name-unified",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -11047,11 +11395,17 @@
      "rule": "name-unified",
      "from": "К. Портер",
      "to": "Кол Портер"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "ГЗО на РС",
+     "to": "ГЗО на Радио Скопје"
     }
    ],
    "id": "arrVocal-0261",
    "warnCount": 0,
-   "search": "што е љубов гзо на рс кол портер аз-50/16 shto e ljubov gzo na rs kol porter az-50/16"
+   "search": "што е љубов гзо на радио скопје кол портер аз-50/16 shto e ljubov gzo na radio skopje kol porter az-50/16"
   }
  ]
 }

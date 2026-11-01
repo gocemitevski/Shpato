@@ -163,6 +163,19 @@ map, so `Х. Крствески` arrives as `Христо Крстевски`) a
 The source keeps the export's wording, as it does for `+++` and the abbreviated
 names. Five records carry it.
 
+The broadcasters' house ensembles are abbreviated too: `ТО` is Танцов оркестар,
+`РО` Радиски оркестар, `РТС` Радио телевизија Скопје, `МРТ` Македонска радио
+телевизија, `РС` Радио Скопје. `expand_ensembles()` spells them out wherever
+they stand as a word, in the performer and in the role after `со` (so
+`соло гитара со ТО на РТС` reads `соло гитара со Танцов оркестар на Радио
+телевизија Скопје`), and records each substitution under `ensemble-expanded`.
+It runs *after* `apply_maps()`, so `Забавен анс. на РС` is a name before `РС` is
+spelled out, and in a single pass, so a replacement is never expanded twice.
+`РТЉ`, `ЗО`, `ГЗО` and `ЗА` are deliberately left as written: what they stand
+for is not established. A spelling-out that changes a `performer` has to reach
+`sources/removals.csv` too, whose `performer` column is a guard on the row it
+drops — otherwise the drop stops applying and the catalogue grows a record.
+
 ## YouTube links
 
 `sources/youtube.csv` (`id,title,video,found,lengthSec,added`) is the link map,
@@ -583,7 +596,7 @@ own.
 - **All UI text is bilingual.** Adding a key means adding it to *both* `mk` and
   `en` in `assets/i18n.js`. `t()` falls back to English silently, so a missing
   Macedonian key will not throw — it will just ship English. Keys are currently
-  at parity (178 each).
+  at parity (179 each).
 - **Capitalisation lives in the strings, not in CSS.** A `<select>`'s
   `<option>` does not inherit `text-transform`, so a CSS-capitalised label looks
   right in the table and wrong in a dropdown. Capitalise in `i18n.js`.

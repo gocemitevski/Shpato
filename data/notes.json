@@ -7,7 +7,7 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 494,
+  "notes": 539,
   "videos": 144,
   "new": 8,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
@@ -183,6 +183,18 @@
    "field": "performer",
    "raw": "Блага Видец (сним. 1961, ГЗО на РС)",
    "normalized": "Блага Видец"
+  },
+  {
+   "id": "vocal-0038",
+   "category": "vocal",
+   "title": "Молчи една долина",
+   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 44,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "сним. 1961, ГЗО на РС",
+   "normalized": "сним. 1961, ГЗО на Радио Скопје"
   },
   {
    "id": "vocal-0038",
@@ -370,6 +382,18 @@
    "title": "Балада за гитара",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 9,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "соло гитара со ТО на РТС",
+   "normalized": "соло гитара со Танцов оркестар на Радио телевизија Скопје"
+  },
+  {
+   "id": "instrumental-0003",
+   "category": "instrumental",
+   "title": "Балада за гитара",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 9,
    "rule": "video-approximate",
    "severity": "info",
    "raw": "2:52",
@@ -388,6 +412,18 @@
    "normalized": "Мики Асановиќ"
   },
   {
+   "id": "instrumental-0004",
+   "category": "instrumental",
+   "title": "Во спомен на старото пријателство",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 10,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "тенор саксофон со ТО на РТС",
+   "normalized": "тенор саксофон со Танцов оркестар на Радио телевизија Скопје"
+  },
+  {
    "id": "instrumental-0006",
    "category": "instrumental",
    "title": "Гермијан",
@@ -398,6 +434,30 @@
    "field": "performer",
    "raw": "TО на РТС",
    "normalized": "ТО на РТС"
+  },
+  {
+   "id": "instrumental-0006",
+   "category": "instrumental",
+   "title": "Гермијан",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 12,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ТО на РТС",
+   "normalized": "Танцов оркестар на Радио телевизија Скопје"
+  },
+  {
+   "id": "instrumental-0007",
+   "category": "instrumental",
+   "title": "Гарача",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 13,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ТО на РТС",
+   "normalized": "Танцов оркестар на Радио телевизија Скопје"
   },
   {
    "id": "instrumental-0008",
@@ -456,6 +516,18 @@
    "normalized": "3:49"
   },
   {
+   "id": "instrumental-0011",
+   "category": "instrumental",
+   "title": "Дојди есен",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 17,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ТО на РТС",
+   "normalized": "Танцов оркестар на Радио телевизија Скопје"
+  },
+  {
    "id": "instrumental-0012",
    "category": "instrumental",
    "title": "Дојди есен",
@@ -497,10 +569,46 @@
    "title": "Еден бакнеж",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 22,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "РО на РТЉ",
+   "normalized": "Радиски оркестар на РТЉ"
+  },
+  {
+   "id": "instrumental-0016",
+   "category": "instrumental",
+   "title": "Еден бакнеж",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 22,
    "rule": "video-approximate",
    "severity": "info",
    "raw": "3:10",
    "normalized": "3:22"
+  },
+  {
+   "id": "instrumental-0017",
+   "category": "instrumental",
+   "title": "Ехо од далечното минато",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 23,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ТО на РТС",
+   "normalized": "Танцов оркестар на Радио телевизија Скопје"
+  },
+  {
+   "id": "instrumental-0018",
+   "category": "instrumental",
+   "title": "Злато најдоа, злато во Калифорнија",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 24,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "РО на РТС",
+   "normalized": "Радиски оркестар на Радио телевизија Скопје"
   },
   {
    "id": "instrumental-0019",
@@ -536,6 +644,18 @@
    "field": "performer",
    "raw": "Петар Лукиќ, гитара со ТО на РТС",
    "normalized": "Петар Лукиќ"
+  },
+  {
+   "id": "instrumental-0020",
+   "category": "instrumental",
+   "title": "Импресија",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 26,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "гитара со ТО на РТС",
+   "normalized": "гитара со Танцов оркестар на Радио телевизија Скопје"
   },
   {
    "id": "instrumental-0020",
@@ -608,6 +728,54 @@
    "normalized": "Зоран Јовановиќ"
   },
   {
+   "id": "instrumental-0025",
+   "category": "instrumental",
+   "title": "Јас не сум ти",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 31,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Џез ансамбл на РТС",
+   "normalized": "Џез ансамбл на Радио телевизија Скопје"
+  },
+  {
+   "id": "instrumental-0026",
+   "category": "instrumental",
+   "title": "Кога си сама",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 32,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "РО на РТС",
+   "normalized": "Радиски оркестар на Радио телевизија Скопје"
+  },
+  {
+   "id": "instrumental-0027",
+   "category": "instrumental",
+   "title": "Лајт мотив 1",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 33,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "РО",
+   "normalized": "Радиски оркестар"
+  },
+  {
+   "id": "instrumental-0028",
+   "category": "instrumental",
+   "title": "Лајт мотив 2",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 34,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "РО",
+   "normalized": "Радиски оркестар"
+  },
+  {
    "id": "instrumental-0029",
    "category": "instrumental",
    "title": "Лајт мотив 3",
@@ -642,6 +810,18 @@
    "field": "performer",
    "raw": "К. Божиновски, флејта",
    "normalized": "К. Божиновски"
+  },
+  {
+   "id": "instrumental-0033",
+   "category": "instrumental",
+   "title": "Лени",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 39,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ТО",
+   "normalized": "Танцов оркестар"
   },
   {
    "id": "instrumental-0034",
@@ -820,6 +1000,30 @@
    "normalized": "ТО на РТС"
   },
   {
+   "id": "instrumental-0043",
+   "category": "instrumental",
+   "title": "На игранка",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 49,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ТО на РТС",
+   "normalized": "Танцов оркестар на Радио телевизија Скопје"
+  },
+  {
+   "id": "instrumental-0044",
+   "category": "instrumental",
+   "title": "Народна игра",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 50,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ЗО на РТС",
+   "normalized": "ЗО на Радио телевизија Скопје"
+  },
+  {
    "id": "instrumental-0046",
    "category": "instrumental",
    "title": "Песна на русокосата пејачка",
@@ -844,6 +1048,18 @@
    "normalized": "Рамиз Имеров"
   },
   {
+   "id": "instrumental-0047",
+   "category": "instrumental",
+   "title": "Поздрав до А. К. Жобим",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 53,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "тромбон со ТО на РТС",
+   "normalized": "тромбон со Танцов оркестар на Радио телевизија Скопје"
+  },
+  {
    "id": "instrumental-0048",
    "category": "instrumental",
    "title": "Поздрав до оркестарот",
@@ -854,6 +1070,18 @@
    "field": "performer",
    "raw": "ТО на РТС, солист Кире Костов, труба",
    "normalized": "ТО на РТС"
+  },
+  {
+   "id": "instrumental-0048",
+   "category": "instrumental",
+   "title": "Поздрав до оркестарот",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 54,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ТО на РТС",
+   "normalized": "Танцов оркестар на Радио телевизија Скопје"
   },
   {
    "id": "instrumental-0051",
@@ -868,6 +1096,30 @@
    "normalized": "Кире Костов"
   },
   {
+   "id": "instrumental-0053",
+   "category": "instrumental",
+   "title": "Тема број 1, Транскрипција на една замислена тема",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 59,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ТО на РТС",
+   "normalized": "Танцов оркестар на Радио телевизија Скопје"
+  },
+  {
+   "id": "instrumental-0054",
+   "category": "instrumental",
+   "title": "Титовиот пат",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 60,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ТО на РТС",
+   "normalized": "Танцов оркестар на Радио телевизија Скопје"
+  },
+  {
    "id": "instrumental-0055",
    "category": "instrumental",
    "title": "Убава си како музика",
@@ -878,6 +1130,30 @@
    "field": "performer",
    "raw": "Љупчо Мирковски, труба",
    "normalized": "Љупчо Мирковски"
+  },
+  {
+   "id": "instrumental-0056",
+   "category": "instrumental",
+   "title": "Чилеанска игра",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 62,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Забавен оркестар на РТС",
+   "normalized": "Забавен оркестар на Радио телевизија Скопје"
+  },
+  {
+   "id": "arrThemes-0001",
+   "category": "arrThemes",
+   "title": "Авизо",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 7,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ТО на РТС",
+   "normalized": "Танцов оркестар на Радио телевизија Скопје"
   },
   {
    "id": "arrThemes-0001",
@@ -908,6 +1184,18 @@
    "title": "Без тебе",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 8,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "труба со ТО",
+   "normalized": "труба со Танцов оркестар"
+  },
+  {
+   "id": "arrThemes-0002",
+   "category": "arrThemes",
+   "title": "Без тебе",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 8,
    "rule": "composer-placeholder",
    "severity": "info",
    "raw": "+++",
@@ -924,6 +1212,18 @@
    "field": "performer",
    "raw": "Забавен анс. На РС",
    "normalized": "Забавен оркестар на РС"
+  },
+  {
+   "id": "arrThemes-0003",
+   "category": "arrThemes",
+   "title": "Би бап буги",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 9,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Забавен оркестар на РС",
+   "normalized": "Забавен оркестар на Радио Скопје"
   },
   {
    "id": "arrThemes-0003",
@@ -975,6 +1275,18 @@
    "title": "Безввредниот Џо",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 11,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ГЗО на РС",
+   "normalized": "ГЗО на Радио Скопје"
+  },
+  {
+   "id": "arrThemes-0005",
+   "category": "arrThemes",
+   "title": "Безввредниот Џо",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 11,
    "rule": "missing-duration",
    "severity": "info",
    "raw": "",
@@ -991,6 +1303,18 @@
    "field": "performer",
    "raw": "Петар Каргов со ТО на МРТ",
    "normalized": "Петар Каргов"
+  },
+  {
+   "id": "arrThemes-0006",
+   "category": "arrThemes",
+   "title": "Гагово расположение",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 12,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "со ТО на МРТ",
+   "normalized": "со Танцов оркестар на Македонска радио телевизија"
   },
   {
    "id": "arrThemes-0007",
@@ -1062,6 +1386,30 @@
    "normalized": "Томе Николовски"
   },
   {
+   "id": "arrThemes-0009",
+   "category": "arrThemes",
+   "title": "Четири такта",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 15,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "сакс со ТО",
+   "normalized": "сакс со Танцов оркестар"
+  },
+  {
+   "id": "arrThemes-0010",
+   "category": "arrThemes",
+   "title": "Еден бакнеж",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 16,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "РО на РТЉ",
+   "normalized": "Радиски оркестар на РТЉ"
+  },
+  {
    "id": "arrThemes-0010",
    "category": "arrThemes",
    "title": "Еден бакнеж",
@@ -1122,6 +1470,18 @@
    "title": "Лосел блуз",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 22,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ГЗО на РС",
+   "normalized": "ГЗО на Радио Скопје"
+  },
+  {
+   "id": "arrThemes-0016",
+   "category": "arrThemes",
+   "title": "Лосел блуз",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 22,
    "rule": "missing-duration",
    "severity": "info",
    "raw": "",
@@ -1138,6 +1498,18 @@
    "field": "performer",
    "raw": "Зоран Јовановиќ, на кларинет",
    "normalized": "Зоран Јовановиќ"
+  },
+  {
+   "id": "arrThemes-0018",
+   "category": "arrThemes",
+   "title": "Меланхолична рапсодија",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 24,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ГЗО на РС",
+   "normalized": "ГЗО на Радио Скопје"
   },
   {
    "id": "arrThemes-0018",
@@ -1184,6 +1556,18 @@
    "field": "performer",
    "raw": "Забавен анс. на РС",
    "normalized": "Забавен оркестар на РС"
+  },
+  {
+   "id": "arrThemes-0020",
+   "category": "arrThemes",
+   "title": "Маскет рејмбл",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 26,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Забавен оркестар на РС",
+   "normalized": "Забавен оркестар на Радио Скопје"
   },
   {
    "id": "arrThemes-0020",
@@ -1250,10 +1634,34 @@
    "title": "Настоен сум за љубов",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 29,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Забавен оркестар на РС",
+   "normalized": "Забавен оркестар на Радио Скопје"
+  },
+  {
+   "id": "arrThemes-0023",
+   "category": "arrThemes",
+   "title": "Настоен сум за љубов",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 29,
    "rule": "missing-duration",
    "severity": "info",
    "raw": "",
    "normalized": ""
+  },
+  {
+   "id": "arrThemes-0024",
+   "category": "arrThemes",
+   "title": "Очи чорние",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 30,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ГЗО на РС",
+   "normalized": "ГЗО на Радио Скопје"
   },
   {
    "id": "arrThemes-0024",
@@ -1322,6 +1730,18 @@
    "field": "performer",
    "raw": "Зоран Јовановиќ со ТО на МРТ",
    "normalized": "Зоран Јовановиќ"
+  },
+  {
+   "id": "arrThemes-0026",
+   "category": "arrThemes",
+   "title": "Почнувам да гледам светлина",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 32,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "со ТО на МРТ",
+   "normalized": "со Танцов оркестар на Македонска радио телевизија"
   },
   {
    "id": "arrThemes-0027",
@@ -1580,6 +2000,18 @@
    "title": "Vinter",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 41,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ТО на РТС",
+   "normalized": "Танцов оркестар на Радио телевизија Скопје"
+  },
+  {
+   "id": "arrThemes-0035",
+   "category": "arrThemes",
+   "title": "Vinter",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 41,
    "rule": "missing-duration",
    "severity": "info",
    "raw": "",
@@ -1740,6 +2172,18 @@
    "field": "performer",
    "raw": "ТО на РТС / Зоран Јовановиќ",
    "normalized": "ТО на РТС"
+  },
+  {
+   "id": "arrThemes-0040",
+   "category": "arrThemes",
+   "title": "Зошто си во мојата близина",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 46,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ТО на РТС",
+   "normalized": "Танцов оркестар на Радио телевизија Скопје"
   },
   {
    "id": "arrThemes-0041",
@@ -2021,6 +2465,18 @@
    "normalized": "Ванчо Тарабунов"
   },
   {
+   "id": "arrVocal-0019",
+   "category": "arrVocal",
+   "title": "Далеку некаде на југ",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 25,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "РО",
+   "normalized": "Радиски оркестар"
+  },
+  {
    "id": "arrVocal-0020",
    "category": "arrVocal",
    "title": "Далеку во далечина",
@@ -2065,6 +2521,18 @@
    "field": "performer",
    "raw": "Авторот",
    "normalized": "Христо Крстевски"
+  },
+  {
+   "id": "arrVocal-0023",
+   "category": "arrVocal",
+   "title": "Детство",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 29,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "РО Зоран Милосављевиќ",
+   "normalized": "Радиски оркестар Зоран Милосављевиќ"
   },
   {
    "id": "arrVocal-0025",
@@ -2253,6 +2721,18 @@
    "field": "performer",
    "raw": "Нина Спирова со ТО",
    "normalized": "Нина Спирова"
+  },
+  {
+   "id": "arrVocal-0043",
+   "category": "arrVocal",
+   "title": "Фламенко рок",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 49,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "со ТО",
+   "normalized": "со Танцов оркестар"
   },
   {
    "id": "arrVocal-0043",
@@ -4610,6 +5090,18 @@
    "title": "Те имам под кожа",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 216,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ТО на РТС",
+   "normalized": "Танцов оркестар на Радио телевизија Скопје"
+  },
+  {
+   "id": "arrVocal-0210",
+   "category": "arrVocal",
+   "title": "Те имам под кожа",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 216,
    "rule": "signature-suspicious",
    "severity": "warning",
    "raw": "З-8511-1",
@@ -4703,6 +5195,18 @@
    "severity": "warning",
    "raw": "З-14421",
    "normalized": "З-14421"
+  },
+  {
+   "id": "arrVocal-0220",
+   "category": "arrVocal",
+   "title": "Зимски здив",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 226,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ГЗО на РС",
+   "normalized": "ГЗО на Радио Скопје"
   },
   {
    "id": "arrVocal-0220",
@@ -4933,6 +5437,18 @@
    "title": "Визија на мојата среќа",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 240,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Забавен оркестар на РС",
+   "normalized": "Забавен оркестар на Радио Скопје"
+  },
+  {
+   "id": "arrVocal-0234",
+   "category": "arrVocal",
+   "title": "Визија на мојата среќа",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 240,
    "rule": "missing-duration",
    "severity": "info",
    "raw": "",
@@ -5083,6 +5599,18 @@
    "field": "performer",
    "raw": "Марија Арсова со ТО на „Македонка“",
    "normalized": "Марија Арсова"
+  },
+  {
+   "id": "arrVocal-0241",
+   "category": "arrVocal",
+   "title": "За еден цвет господине",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 247,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "со ТО на „Македонка“",
+   "normalized": "со Танцов оркестар на „Македонка“"
   },
   {
    "id": "arrVocal-0241",
@@ -5550,6 +6078,18 @@
    "field": "composer",
    "raw": "К. Портер",
    "normalized": "Кол Портер"
+  },
+  {
+   "id": "arrVocal-0261",
+   "category": "arrVocal",
+   "title": "Што е љубов",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 267,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "ГЗО на РС",
+   "normalized": "ГЗО на Радио Скопје"
   },
   {
    "id": "arrVocal-0261",

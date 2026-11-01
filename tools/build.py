@@ -70,6 +70,7 @@ LATIN_PREFIX = {
 SEVERITY = {
     "performer-placeholder": "info",
     "performer-author": "info",
+    "ensemble-expanded": "info",
     "performer-split": "info",
     "punctuation-spacing": "info",
     "ellipsis-normalized": "info",
@@ -237,9 +238,32 @@ NAME_ALIASES = {
     "Забавен анс. на РС": "Забавен оркестар на РС",
     "Забавен орк. на РС": "Забавен оркестар на РС",
 }
-TEXT_RULES = {"performer-split", "performer-author", "punctuation-spacing",
-              "ellipsis-normalized", "mixed-script", "abbreviation-normalized",
-              "typo-corrected", "name-unified"}
+TEXT_RULES = {"performer-split", "performer-author", "ensemble-expanded",
+              "punctuation-spacing", "ellipsis-normalized", "mixed-script",
+              "abbreviation-normalized", "typo-corrected", "name-unified"}
+
+# The export abbreviates the broadcasters' house ensembles. Each abbreviation
+# is spelled out wherever it stands as a word -- in the performer, and in the
+# role the performer was split from ("соло гитара со ТО на РТС"). A single
+# pass keeps a replacement from being expanded again; РТЉ, ЗО, ГЗО and ЗА are
+# left alone because what they stand for is not established.
+ENSEMBLE_WORDS = {
+    "ТО": "Танцов оркестар",
+    "РО": "Радиски оркестар",
+    "РТС": "Радио телевизија Скопје",
+    "МРТ": "Македонска радио телевизија",
+    "РС": "Радио Скопје",
+}
+ENSEMBLE_RE = re.compile(
+    r"(?<![\w“„])(%s)(?![\w“”])" % "|".join(
+        re.escape(k) for k in sorted(ENSEMBLE_WORDS, key=len, reverse=True)))
+
+
+def expand_ensembles(value):
+    """Spell out the ensemble abbreviations in a performer or role string."""
+    if not value:
+        return value
+    return ENSEMBLE_RE.sub(lambda m: ENSEMBLE_WORDS[m.group(1)], value)
 
 # A performer may be followed by an instrument or an accompanying ensemble,
 # separated from the name by a comma, a slash or the word "со".
@@ -404,6 +428,20 @@ def parse_source(source):
                                "from": performer_full, "to": performer})
         performer, fixes = apply_maps(performer, "performer")
         text_fixes += fixes
+
+        # After the alias map, so "Забавен анс. на РС" is already a name before
+        # "РС" is spelled out.
+        expanded = expand_ensembles(performer)
+        if expanded != performer:
+            text_fixes.append({"field": "performer", "rule": "ensemble-expanded",
+                               "from": performer, "to": expanded})
+            performer = expanded
+        if performer_role:
+            expanded_role = expand_ensembles(performer_role)
+            if expanded_role != performer_role:
+                text_fixes.append({"field": "performer", "rule": "ensemble-expanded",
+                                   "from": performer_role, "to": expanded_role})
+                performer_role = expanded_role
 
         if composer == "+++":
             flags.append("composer-placeholder")
