@@ -164,7 +164,7 @@ The source keeps the export's wording, as it does for `+++` and the abbreviated
 names. Five records carry it.
 
 The broadcasters' house ensembles are abbreviated too: `ТО` is Танцов оркестар,
-`РО` Радиски оркестар, `РТС` Радио телевизија Скопје, `МРТ` Македонска радио
+`РО` Ревиски оркестар, `РТС` Радио телевизија Скопје, `МРТ` Македонска радио
 телевизија, `РС` Радио Скопје. `expand_ensembles()` spells them out wherever
 they stand as a word, in the performer and in the role after `со` (so
 `соло гитара со ТО на РТС` reads `соло гитара со Танцов оркестар на Радио

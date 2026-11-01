@@ -249,7 +249,7 @@ TEXT_RULES = {"performer-split", "performer-author", "ensemble-expanded",
 # left alone because what they stand for is not established.
 ENSEMBLE_WORDS = {
     "ТО": "Танцов оркестар",
-    "РО": "Радиски оркестар",
+    "РО": "Ревиски оркестар",
     "РТС": "Радио телевизија Скопје",
     "МРТ": "Македонска радио телевизија",
     "РС": "Радио Скопје",

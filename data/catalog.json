@@ -2183,7 +2183,7 @@
    "category": "instrumental",
    "title": "Еден бакнеж",
    "composer": "",
-   "performer": "Радиски оркестар на РТЉ",
+   "performer": "Ревиски оркестар на РТЉ",
    "performerRole": "",
    "durationSec": 190,
    "durationRaw": "3.10",
@@ -2203,12 +2203,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "РО на РТЉ",
-     "to": "Радиски оркестар на РТЉ"
+     "to": "Ревиски оркестар на РТЉ"
     }
    ],
    "id": "instrumental-0016",
    "warnCount": 0,
-   "search": "еден бакнеж радиски оркестар на ртљ з-6057/3 eden baknezh radiski orkestar na rtlj z-6057/3",
+   "search": "еден бакнеж ревиски оркестар на ртљ з-6057/3 eden baknezh reviski orkestar na rtlj z-6057/3",
    "videoLengthSec": 202,
    "videoDeltaSec": 12,
    "videoApprox": true
@@ -2249,7 +2249,7 @@
    "category": "instrumental",
    "title": "Злато најдоа, злато во Калифорнија",
    "composer": "",
-   "performer": "Радиски оркестар на Радио телевизија Скопје",
+   "performer": "Ревиски оркестар на Радио телевизија Скопје",
    "performerRole": "",
    "durationSec": 74,
    "durationRaw": "1.14",
@@ -2268,12 +2268,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "РО на РТС",
-     "to": "Радиски оркестар на Радио телевизија Скопје"
+     "to": "Ревиски оркестар на Радио телевизија Скопје"
     }
    ],
    "id": "instrumental-0018",
    "warnCount": 0,
-   "search": "злато најдоа, злато во калифорнија радиски оркестар на радио телевизија скопје з-7690/2 zlato najdoa, zlato vo kalifornija radiski orkestar na radio televizija skopje z-7690/2"
+   "search": "злато најдоа, злато во калифорнија ревиски оркестар на радио телевизија скопје з-7690/2 zlato najdoa, zlato vo kalifornija reviski orkestar na radio televizija skopje z-7690/2"
   },
   {
    "category": "instrumental",
@@ -2505,7 +2505,7 @@
    "category": "instrumental",
    "title": "Кога си сама",
    "composer": "",
-   "performer": "Радиски оркестар на Радио телевизија Скопје",
+   "performer": "Ревиски оркестар на Радио телевизија Скопје",
    "performerRole": "",
    "durationSec": 186,
    "durationRaw": "3.06",
@@ -2524,18 +2524,18 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "РО на РТС",
-     "to": "Радиски оркестар на Радио телевизија Скопје"
+     "to": "Ревиски оркестар на Радио телевизија Скопје"
     }
    ],
    "id": "instrumental-0026",
    "warnCount": 0,
-   "search": "кога си сама радиски оркестар на радио телевизија скопје з-8227/1 koga si sama radiski orkestar na radio televizija skopje z-8227/1"
+   "search": "кога си сама ревиски оркестар на радио телевизија скопје з-8227/1 koga si sama reviski orkestar na radio televizija skopje z-8227/1"
   },
   {
    "category": "instrumental",
    "title": "Лајт мотив 1",
    "composer": "",
-   "performer": "Радиски оркестар",
+   "performer": "Ревиски оркестар",
    "performerRole": "",
    "durationSec": 97,
    "durationRaw": "1.37",
@@ -2554,18 +2554,18 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "РО",
-     "to": "Радиски оркестар"
+     "to": "Ревиски оркестар"
     }
    ],
    "id": "instrumental-0027",
    "warnCount": 0,
-   "search": "лајт мотив 1 радиски оркестар з-7690/1 lajt motiv 1 radiski orkestar z-7690/1"
+   "search": "лајт мотив 1 ревиски оркестар з-7690/1 lajt motiv 1 reviski orkestar z-7690/1"
   },
   {
    "category": "instrumental",
    "title": "Лајт мотив 2",
    "composer": "",
-   "performer": "Радиски оркестар",
+   "performer": "Ревиски оркестар",
    "performerRole": "",
    "durationSec": 111,
    "durationRaw": "1.51",
@@ -2584,12 +2584,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "РО",
-     "to": "Радиски оркестар"
+     "to": "Ревиски оркестар"
     }
    ],
    "id": "instrumental-0028",
    "warnCount": 0,
-   "search": "лајт мотив 2 радиски оркестар з-7693/2 lajt motiv 2 radiski orkestar z-7693/2"
+   "search": "лајт мотив 2 ревиски оркестар з-7693/2 lajt motiv 2 reviski orkestar z-7693/2"
   },
   {
    "category": "instrumental",
@@ -3740,7 +3740,7 @@
    "category": "arrThemes",
    "title": "Еден бакнеж",
    "composer": "Петар Пешев",
-   "performer": "Радиски оркестар на РТЉ",
+   "performer": "Ревиски оркестар на РТЉ",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -3760,12 +3760,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "РО на РТЉ",
-     "to": "Радиски оркестар на РТЉ"
+     "to": "Ревиски оркестар на РТЉ"
     }
    ],
    "id": "arrThemes-0010",
    "warnCount": 0,
-   "search": "еден бакнеж радиски оркестар на ртљ петар пешев з-2057/3 eden baknezh radiski orkestar na rtlj petar peshev z-2057/3"
+   "search": "еден бакнеж ревиски оркестар на ртљ петар пешев з-2057/3 eden baknezh reviski orkestar na rtlj petar peshev z-2057/3"
   },
   {
    "category": "arrThemes",
@@ -5212,7 +5212,7 @@
    "category": "arrVocal",
    "title": "Далеку некаде на југ",
    "composer": "Григор Копров",
-   "performer": "Радиски оркестар",
+   "performer": "Ревиски оркестар",
    "performerRole": "",
    "durationSec": 200,
    "durationRaw": "3.20",
@@ -5231,12 +5231,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "РО",
-     "to": "Радиски оркестар"
+     "to": "Ревиски оркестар"
     }
    ],
    "id": "arrVocal-0019",
    "warnCount": 0,
-   "search": "далеку некаде на југ радиски оркестар григор копров з-2649/1 daleku nekade na jug radiski orkestar grigor koprov z-2649/1",
+   "search": "далеку некаде на југ ревиски оркестар григор копров з-2649/1 daleku nekade na jug reviski orkestar grigor koprov z-2649/1",
    "videoLengthSec": 202,
    "videoDeltaSec": 2
   },
@@ -5331,7 +5331,7 @@
    "category": "arrVocal",
    "title": "Детство",
    "composer": "Александар Џамбазов",
-   "performer": "Радиски оркестар Зоран Милосављевиќ",
+   "performer": "Ревиски оркестар Зоран Милосављевиќ",
    "performerRole": "",
    "durationSec": 224,
    "durationRaw": "3.44",
@@ -5350,12 +5350,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "РО Зоран Милосављевиќ",
-     "to": "Радиски оркестар Зоран Милосављевиќ"
+     "to": "Ревиски оркестар Зоран Милосављевиќ"
     }
    ],
    "id": "arrVocal-0023",
    "warnCount": 0,
-   "search": "детство радиски оркестар зоран милосављевиќ александар џамбазов з-3527/3 detstvo radiski orkestar zoran milosavljevikj aleksandar djambazov z-3527/3"
+   "search": "детство ревиски оркестар зоран милосављевиќ александар џамбазов з-3527/3 detstvo reviski orkestar zoran milosavljevikj aleksandar djambazov z-3527/3"
   },
   {
    "category": "arrVocal",

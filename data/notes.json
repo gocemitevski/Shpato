@@ -573,7 +573,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "РО на РТЉ",
-   "normalized": "Радиски оркестар на РТЉ"
+   "normalized": "Ревиски оркестар на РТЉ"
   },
   {
    "id": "instrumental-0016",
@@ -608,7 +608,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "РО на РТС",
-   "normalized": "Радиски оркестар на Радио телевизија Скопје"
+   "normalized": "Ревиски оркестар на Радио телевизија Скопје"
   },
   {
    "id": "instrumental-0019",
@@ -749,7 +749,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "РО на РТС",
-   "normalized": "Радиски оркестар на Радио телевизија Скопје"
+   "normalized": "Ревиски оркестар на Радио телевизија Скопје"
   },
   {
    "id": "instrumental-0027",
@@ -761,7 +761,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "РО",
-   "normalized": "Радиски оркестар"
+   "normalized": "Ревиски оркестар"
   },
   {
    "id": "instrumental-0028",
@@ -773,7 +773,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "РО",
-   "normalized": "Радиски оркестар"
+   "normalized": "Ревиски оркестар"
   },
   {
    "id": "instrumental-0029",
@@ -1407,7 +1407,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "РО на РТЉ",
-   "normalized": "Радиски оркестар на РТЉ"
+   "normalized": "Ревиски оркестар на РТЉ"
   },
   {
    "id": "arrThemes-0010",
@@ -2474,7 +2474,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "РО",
-   "normalized": "Радиски оркестар"
+   "normalized": "Ревиски оркестар"
   },
   {
    "id": "arrVocal-0020",
@@ -2532,7 +2532,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "РО Зоран Милосављевиќ",
-   "normalized": "Радиски оркестар Зоран Милосављевиќ"
+   "normalized": "Ревиски оркестар Зоран Милосављевиќ"
   },
   {
    "id": "arrVocal-0025",
