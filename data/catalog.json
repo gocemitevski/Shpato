@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 493,
-  "videos": 147,
+  "notes": 492,
+  "videos": 146,
   "new": 7,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -7739,20 +7739,15 @@
    "signature": "З-2070/3",
    "signatureRaw": "З-2070/3",
    "collection": "З",
-   "video": "NryzyFVnVtw",
+   "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 138,
-   "flags": [
-    "video-approximate"
-   ],
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
    "id": "arrVocal-0132",
    "warnCount": 0,
-   "search": "оставам сè диме поповски димитар масевски з-2070/3 ostavam sè dime popovski dimitar masevski z-2070/3",
-   "videoLengthSec": 241,
-   "videoDeltaSec": 9,
-   "videoApprox": true
+   "search": "оставам сè диме поповски димитар масевски з-2070/3 ostavam sè dime popovski dimitar masevski z-2070/3"
   },
   {
    "category": "arrVocal",
