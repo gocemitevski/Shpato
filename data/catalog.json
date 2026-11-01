@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 495,
-  "videos": 149,
+  "notes": 494,
+  "videos": 148,
   "new": 7,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -984,20 +984,15 @@
    "signature": "З-6568/1",
    "signatureRaw": "З-6568/1",
    "collection": "З",
-   "video": "6kA5P4j-RUI",
+   "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 47,
-   "flags": [
-    "video-approximate"
-   ],
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0041",
    "warnCount": 0,
-   "search": "не ме заборавај цветанка ласкова з-6568/1 ne me zaboravaj cvetanka laskova z-6568/1",
-   "videoLengthSec": 260,
-   "videoDeltaSec": 80,
-   "videoApprox": true
+   "search": "не ме заборавај цветанка ласкова з-6568/1 ne me zaboravaj cvetanka laskova z-6568/1"
   },
   {
    "category": "vocal",

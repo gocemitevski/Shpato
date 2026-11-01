@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 495,
-  "videos": 149,
+  "notes": 494,
+  "videos": 148,
   "new": 7,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -205,17 +205,6 @@
    "severity": "info",
    "raw": "3:00",
    "normalized": "2:50"
-  },
-  {
-   "id": "vocal-0041",
-   "category": "vocal",
-   "title": "Не ме заборавај",
-   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 47,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:00",
-   "normalized": "4:20"
   },
   {
    "id": "vocal-0048",
