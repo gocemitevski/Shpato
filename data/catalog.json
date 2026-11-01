@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 490,
-  "videos": 144,
+  "notes": 489,
+  "videos": 143,
   "new": 7,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -1233,20 +1233,15 @@
    "signature": "З-3674/3",
    "signatureRaw": "З-3674/3",
    "collection": "З",
-   "video": "xFHL7EZSjms",
+   "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 58,
-   "flags": [
-    "video-approximate"
-   ],
+   "flags": [],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0052",
    "warnCount": 0,
-   "search": "прва љубов ванчо тарабунов з-3674/3 prva ljubov vancho tarabunov z-3674/3",
-   "videoLengthSec": 270,
-   "videoDeltaSec": 30,
-   "videoApprox": true
+   "search": "прва љубов ванчо тарабунов з-3674/3 prva ljubov vancho tarabunov z-3674/3"
   },
   {
    "category": "vocal",

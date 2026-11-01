@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 490,
-  "videos": 144,
+  "notes": 489,
+  "videos": 143,
   "new": 7,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -249,17 +249,6 @@
    "severity": "info",
    "raw": "3:00",
    "normalized": "2:08"
-  },
-  {
-   "id": "vocal-0052",
-   "category": "vocal",
-   "title": "Прва љубов",
-   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 58,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "4:00",
-   "normalized": "4:30"
   },
   {
    "id": "vocal-0057",
