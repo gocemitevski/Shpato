@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 491,
-  "videos": 145,
+  "notes": 490,
+  "videos": 144,
   "new": 7,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -7848,14 +7848,13 @@
    "signature": "АЗ-45/25",
    "signatureRaw": "АЗ-45/25",
    "collection": "АЗ",
-   "video": "e11bOL1tVrI",
+   "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 143,
    "flags": [
     "missing-duration",
     "punctuation-spacing",
-    "name-unified",
-    "video-approximate"
+    "name-unified"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -7874,9 +7873,7 @@
    ],
    "id": "arrVocal-0137",
    "warnCount": 0,
-   "search": "песна на враќањето нина спирова александар џамбазов аз-45/25 pesna na vrakjanjeto nina spirova aleksandar djambazov az-45/25",
-   "videoLengthSec": 123,
-   "videoApprox": true
+   "search": "песна на враќањето нина спирова александар џамбазов аз-45/25 pesna na vrakjanjeto nina spirova aleksandar djambazov az-45/25"
   },
   {
    "category": "arrVocal",

@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 261
   },
-  "notes": 491,
-  "videos": 145,
+  "notes": 490,
+  "videos": 144,
   "new": 7,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -3484,17 +3484,6 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
-  },
-  {
-   "id": "arrVocal-0137",
-   "category": "arrVocal",
-   "title": "Песна на враќањето",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 143,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "2:03"
   },
   {
    "id": "arrVocal-0140",
