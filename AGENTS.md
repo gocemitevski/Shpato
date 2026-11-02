@@ -214,6 +214,17 @@ Backfilled from git history: a row's date is the commit that last introduced it,
 so a row restored after the audit carries its restore date, not its original
 one. `git log -S "<id>," -- sources/youtube.csv` recovers any row's history.
 
+One upload can belong to two records, and that is not a fault to repair. The
+monograph is an inventory, so a work the phonotheque holds in two archive units
+gets two rows — same title, composer and performer, different shelf marks
+(`Сењорита Калипсо` at `АЗ-49/7` and `АЗ-55/19`, `Мојот јуни` at `АЗ-46/4` and
+`АЗ-62/11`). Both rows then carry the same link, because it is the same
+performance, and `possible-duplicate` marks the pair. `drop_rows()` will refuse
+to drop one anyway: the shelf mark is part of `duplicate_key()`. A link that
+appears on two *different* titles is the fault — `vocal-0020` had one, a
+`search` row on the same upload a hand-checked row already held, and it was
+removed rather than kept.
+
 `found` says where a link came from: blank or `human` for one a person checked
 (blank is how the first 39 rows read — they predate the column), `search` for
 one `tools/youtube-search.py` accepted and nobody confirmed. `lengthSec` is the

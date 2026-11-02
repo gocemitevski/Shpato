@@ -7,8 +7,8 @@
    "arrThemes": 43,
    "arrVocal": 260
   },
-  "notes": 531,
-  "videos": 140,
+  "notes": 530,
+  "videos": 139,
   "new": 9,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
@@ -470,22 +470,19 @@
    "signature": null,
    "signatureRaw": "",
    "collection": null,
-   "video": "O-OJ7mVkmSw",
+   "video": null,
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 21,
    "flags": [
     "missing-duration",
     "missing-signature",
-    "missing-performer",
-    "video-approximate"
+    "missing-performer"
    ],
    "duplicateOf": null,
    "textFixes": [],
    "id": "vocal-0020",
    "warnCount": 0,
-   "search": "играј и пеј калипсо igraj i pej kalipso",
-   "videoLengthSec": 194,
-   "videoApprox": true
+   "search": "играј и пеј калипсо igraj i pej kalipso"
   },
   {
    "category": "vocal",
