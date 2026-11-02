@@ -7,9 +7,9 @@
    "arrThemes": 43,
    "arrVocal": 260
   },
-  "notes": 530,
-  "videos": 139,
-  "new": 9,
+  "notes": 518,
+  "videos": 126,
+  "new": 11,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "notes": [
@@ -252,17 +252,6 @@
    "normalized": "2:08"
   },
   {
-   "id": "vocal-0057",
-   "category": "vocal",
-   "title": "Сини очи",
-   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 58,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:36",
-   "normalized": "2:37"
-  },
-  {
    "id": "vocal-0061",
    "category": "vocal",
    "title": "Те ценам цени ме…",
@@ -376,17 +365,6 @@
    "field": "performer",
    "raw": "соло гитара со ТО на РТС",
    "normalized": "соло гитара со Танцов оркестар на Радио-телевизија Скопје"
-  },
-  {
-   "id": "instrumental-0003",
-   "category": "instrumental",
-   "title": "Балада за гитара",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 4,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "2:52",
-   "normalized": "3:09"
   },
   {
    "id": "instrumental-0004",
@@ -506,17 +484,6 @@
    "normalized": ""
   },
   {
-   "id": "instrumental-0009",
-   "category": "instrumental",
-   "title": "Дојди есен",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 10,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "2:40",
-   "normalized": "3:49"
-  },
-  {
    "id": "instrumental-0010",
    "category": "instrumental",
    "title": "Дојди есен",
@@ -575,17 +542,6 @@
    "field": "performer",
    "raw": "РО на РТЉ",
    "normalized": "Ревиски оркестар на РТЉ"
-  },
-  {
-   "id": "instrumental-0015",
-   "category": "instrumental",
-   "title": "Еден бакнеж",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 16,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:10",
-   "normalized": "3:22"
   },
   {
    "id": "instrumental-0016",
@@ -659,17 +615,6 @@
    "normalized": "гитара со Танцов оркестар на Радио-телевизија Скопје"
   },
   {
-   "id": "instrumental-0019",
-   "category": "instrumental",
-   "title": "Импресија",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 20,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "2:50",
-   "normalized": "3:58"
-  },
-  {
    "id": "instrumental-0020",
    "category": "instrumental",
    "title": "Идила",
@@ -692,17 +637,6 @@
    "field": "performer",
    "raw": "Голем забавен оркестар (сним. 1959)",
    "normalized": "Голем забавен оркестар"
-  },
-  {
-   "id": "instrumental-0021",
-   "category": "instrumental",
-   "title": "Идила",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 22,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:15",
-   "normalized": "2:25"
   },
   {
    "id": "instrumental-0022",
@@ -873,17 +807,6 @@
    "normalized": "Трио Лабиш"
   },
   {
-   "id": "instrumental-0036",
-   "category": "instrumental",
-   "title": "Ми вети ти (џез верзија)",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 37,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "8:15",
-   "normalized": "8:39"
-  },
-  {
    "id": "instrumental-0037",
    "category": "instrumental",
    "title": "Мими",
@@ -894,17 +817,6 @@
    "field": "performer",
    "raw": "Слободан (Боби) Мицев, пијано",
    "normalized": "Слободан (Боби) Мицев"
-  },
-  {
-   "id": "instrumental-0037",
-   "category": "instrumental",
-   "title": "Мими",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 38,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "4:10",
-   "normalized": "3:41"
   },
   {
    "id": "instrumental-0038",
@@ -928,17 +840,6 @@
    "severity": "warning",
    "raw": "405",
    "normalized": 245
-  },
-  {
-   "id": "instrumental-0038",
-   "category": "instrumental",
-   "title": "Мими",
-   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 39,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "4:05",
-   "normalized": "4:44"
   },
   {
    "id": "instrumental-0039",
@@ -1362,17 +1263,6 @@
    "severity": "info",
    "raw": "+++",
    "normalized": ""
-  },
-  {
-   "id": "arrThemes-0008",
-   "category": "arrThemes",
-   "title": "Дење, ноќе",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
-   "sourceLine": 9,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "2:20",
-   "normalized": "3:14"
   },
   {
    "id": "arrThemes-0009",
@@ -2892,17 +2782,6 @@
    "normalized": ""
   },
   {
-   "id": "arrVocal-0056",
-   "category": "arrVocal",
-   "title": "Кај си мајко",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 57,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "3:01",
-   "normalized": "2:34"
-  },
-  {
    "id": "arrVocal-0059",
    "category": "arrVocal",
    "title": "Кога бев млад",
@@ -3933,17 +3812,6 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
-  },
-  {
-   "id": "arrVocal-0136",
-   "category": "arrVocal",
-   "title": "Пролетно сеќавање",
-   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
-   "sourceLine": 137,
-   "rule": "video-approximate",
-   "severity": "info",
-   "raw": "",
-   "normalized": "3:47"
   },
   {
    "id": "arrVocal-0137",

@@ -6,30 +6,34 @@ This is a convenience for filling in `sources/youtube.csv`, not part of the
 build: `tools/build.py` reads that file, this script proposes rows for it and
 (with --apply) writes them.
 
-The point of a link here is that the reader can listen to the work, not that
-the phonotheque's own copy has been identified. So the question a candidate
-has to answer is "is this the same piece of music?", and duration is not
-evidence for it: "Blagoja Ceslarov - Aranhuez" runs 90 seconds longer than the
-catalogue's timing and is still the right piece. Duration is recorded, and the
-build uses it to *mark* a link, never to reject one.
+Duration is not evidence either way: "Blagoja Ceslarov - Aranhuez" runs 90
+seconds longer than the catalogue's timing and is still the right piece, and a
+clip of it is still the right piece. Duration is recorded, and the build uses
+it to *mark* a link, never to reject one.
 
-A candidate is accepted when its title carries the work's title and something
-ties it to the work's performer or arranger:
+A link is the record's own performance, not merely a recording of the same
+song by somebody else, because the drawer has no way to say "different
+performer". So a candidate is accepted when its title carries the work's title
+*and* the catalogue's performer is named on the page: a distinctive word of
+the name in the video title, or on the uploader's channel, where a
+"... - Topic" channel carries the artist and little else. A one-word title
+("Илузија") is a weak identity, so it asks for the performer's surname rather
+than any part of the name, and a letter of spelling may differ ("А. Сурмеан"
+against "Армен Сурмејан"). A record with no performer to check — an empty
+cell, or a house ensemble whose name is nothing but role words — still leans
+on a channel a hand-verified link came from, since there is nothing else to
+test.
 
-  - a distinctive word of the performer's name in the video title;
-  - two distinctive words of it anywhere on the page;
-  - an upload on a channel a hand-verified link already came from (some works
-    only ever appear on an archive channel, with the performer in the title but
-    not the uploader);
-  - the arranger credited by name (Шпато / Shpato / Gjakonovski).
-
-A title hit means all the significant words of the catalogue title appear in
-the candidate's, or at least half of them (two or more) when the title is long
-enough to afford it. That is what keeps a shared *title* from being mistaken
-for a shared *work*: "Балада за гитара" must not match "Bodulska balada", and
-the Serbian "Bez tebe" must not match "Без тебе". Loosening the title test
-instead of the artist test is what fills the results with Russian, Serbian and
-Slovak songs that merely share a name.
+A title hit alone is not enough, however trusted the channel: it attaches
+"Христо Крстевски - Пролетно сеќавање" to a record performed by Нина Спирова,
+and the right song sung by someone else is the one kind of wrong link the
+catalogue cannot label. A title hit means every significant word of the
+catalogue title appears in the candidate's, allowance made for one short word
+left out of a title of three words or more. That is what keeps a shared
+*title* from being mistaken for a shared *work*: "Балада за гитара" must not
+match "Bodulska balada", and the Serbian "Bez tebe" must not match "Без
+тебе". Loosening the title test instead of the artist test is what fills the
+results with Russian, Serbian and Slovak songs that merely share a name.
 
 A hand-verified link is written with found=human; anything this script accepts
 is written with found=search, and the build records those as an approximate
@@ -111,14 +115,14 @@ NOISE_WORDS = {"the", "and", "feat", "ft", "official", "video", "audio", "hd",
 # Performer words that name a role rather than a performer: "ТО на РТС" is not
 # evidence for a work performed by another RTS orchestra, and РТС alone appears
 # on half of YouTube's Macedonian archive. Matching one of these is worth
-# nothing, so they are removed before the artist test runs.
+# nothing, so they are removed before the artist test runs. The city in a
+# broadcaster's name ("Радио-телевизија Скопје") belongs to the institution,
+# like РТС and МРТ, so it goes too.
 ROLE_WORDS = {"orkestar", "orkestarot", "orchestra", "ansambl", "ensemble",
               "trio", "kvartet", "kvintet", "sekstet", "sextet", "hor",
               "chorus", "grupa", "group", "bend", "duo", "solisti", "solist",
-              "rts", "mrtv", "tv", "radio", "televizija", "naroden", "zabaven"}
-
-# The arranger's own name, as an uploader would spell it.
-CREDIT_WORDS = {"shpato", "gjakonovski", "gjakonovska"}
+              "rts", "mrtv", "tv", "radio", "televizija", "naroden", "zabaven",
+              "skopje"}
 
 # Diacritics uploaders drop, on top of the build's Cyrillic transliteration.
 FOLD_MAP = str.maketrans({"č": "c", "ć": "c", "š": "s", "ž": "z", "đ": "d"})
@@ -314,16 +318,77 @@ def words_of(text):
     return set(compare_word(w) for w in fold(text).split())
 
 
-# The fixed word sets are compared against folded words, so they are folded the
-# same way -- otherwise "shpato" in CREDIT_WORDS would never meet the "spato"
-# that a page arrives as.
+# The role words are compared against folded words, so they are folded the same
+# way -- otherwise "chorus" in the set would never meet the "corus" a page
+# arrives as.
 ROLE_WORDS = set(compare_word(w) for w in ROLE_WORDS)
-CREDIT_WORDS = set(compare_word(w) for w in CREDIT_WORDS)
 
 
-def artist_words(performer):
-    """The words of a performer that identify the performer, not a role."""
-    return set(compare_word(w) for w in sig_words(performer)) - ROLE_WORDS
+def artist_tokens(performer):
+    """The performer's identifying words, in the order they are written.
+
+    Role words go, because "ТО на РТС" is not evidence for a work by another
+    RTS orchestra, and РТС alone is on half of the archive. What is left is a
+    name, or a house ensemble's own word.
+    """
+    out = []
+    for raw in fold(performer).split():
+        word = compare_word(raw)
+        if (len(word) >= 3 or word.isdigit()) and word not in ROLE_WORDS \
+                and word not in NOISE_WORDS and word not in out:
+            out.append(word)
+    return out
+
+
+def anchor_token(tokens):
+    """The performer's own word, for a title too short to carry the identity.
+
+    A personal name here is written given name first, so the surname is the
+    last word ("Мицев" in "Слободан (Боби) Мицев", not "Слободан"); an
+    ensemble's own word is its last word too ("Ревиски" in "Ревиски оркестар на
+    РТЉ"). An institution's acronym is not a name, so a word with no vowel in it
+    steps aside when there is another.
+    """
+    spelled = [w for w in tokens if any(ch in "aeiou" for ch in w)]
+    return (spelled or tokens)[-1]
+
+
+def one_edit(a, b):
+    """Are two words one letter apart: one substituted, added or dropped?"""
+    if a == b:
+        return True
+    if abs(len(a) - len(b)) > 1:
+        return False
+    if len(a) == len(b):
+        return sum(1 for x, y in zip(a, b) if x != y) == 1
+    short, long = (a, b) if len(a) < len(b) else (b, a)
+    i = j = 0
+    skipped = False
+    while i < len(short) and j < len(long):
+        if short[i] == long[j]:
+            i += 1
+            j += 1
+        elif skipped:
+            return False
+        else:
+            skipped = True
+            j += 1
+    return True
+
+
+def word_close(word, have):
+    """Is `word` on the page, allowing one letter of spelling difference?
+
+    The catalogue abbreviates a first name ("А. Сурмеан") and uploaders romanise
+    a surname their own way ("Армен Сурмејан"), so a name can arrive a letter
+    from the catalogue's. From six letters up that is a spelling, not another
+    name; a short word is compared exactly, where one letter is most of it.
+    """
+    if word in have:
+        return True
+    if len(word) < 6:
+        return False
+    return any(len(other) >= 6 and one_edit(word, other) for other in have)
 
 
 def title_words_of(text):
@@ -455,40 +520,42 @@ def accept(record, candidate, trusted):
 
     The evidence is returned rather than a bare boolean so the same rule can
     explain itself on screen and in --report.
+
+    A link is evidence for this record's performance, so the catalogue's
+    performer has to be named on the page. A trusted channel is not a
+    substitute: it attaches "Христо Крстевски - Пролетно сеќавање" to a record
+    performed by Нина Спирова -- the right song sung by somebody else, which
+    the drawer has no way to mark.
     """
     if not plausible_length(record, candidate):
         return None
     if not title_hit(record["title"], candidate["title"]):
         return None
-    words = artist_words(record["performer"] or "")
+    tokens = artist_tokens(record["performer"] or "")
     title_text = words_of(candidate["title"] or "")
     page_text = title_text | words_of(candidate["channel"])
-    # A one-word title ("Илузија") is a weak identity on its own: it then has to
-    # be paired with the performer's name in full -- both words of "Зоран
-    # Георгиев", which is what keeps a Croatian podcast titled "...najveća
-    # iluzija" by a host called Zoran from becoming the song Илузија -- or, when
-    # the name is itself one word ("Импулси", a band), with that word. A name
-    # with nothing left after the role words leans on the other branches.
-    #
-    # A trusted channel still stands in for that name. Requiring it anyway was
-    # measured over the 122 links a pass had written: it refused 21, and almost
-    # all of them were a different *recording of the right song* on a channel a
-    # hand-checked link had already come from ("Идила" by Никола Комовски as
-    # "Идила - Нина Спирова", "Ти си тој" as "Лидија Кочовска - Ти си тој"),
-    # which is the class this catalogue accepts and marks. It is two rows such
-    # as "Адиос" becoming "Ljupka Dimitrovska - Adios Amor" that the trade costs,
-    # and a wrong song is the worse error, but not at this price.
-    need = 2 if len(title_words(record["title"])) == 1 else 1
-    need = min(need, len(words))
-    if need and len(words & title_text) >= need:
-        return {"by": "artist in title", "words": sorted(words & title_text)}
-    if is_trusted(candidate["channel"], trusted):
-        return {"by": "trusted channel", "words": sorted(words & page_text)}
-    if len(words & page_text) >= max(2, need):
-        return {"by": "artist words", "words": sorted(words & page_text)}
-    credit = CREDIT_WORDS & page_text
-    if credit:
-        return {"by": "arranger credited", "words": sorted(credit)}
+    # Nothing to check: no performer at all, or a house ensemble whose name is
+    # only role words ("Забавен оркестар"). A title on a channel a hand-
+    # verified link came from is all the evidence there is.
+    if not tokens:
+        if is_trusted(candidate["channel"], trusted):
+            return {"by": "title on a trusted channel", "words": []}
+        return None
+    # A one-word title ("Илузија") is a weak identity, so the name has to carry
+    # it: the performer's surname, or an ensemble's own word. A podcast titled
+    # "...najveća iluzija" by a host called Zoran must not answer for the song
+    # "Илузија" by Зоран Георгиев.
+    if len(title_words(record["title"])) == 1:
+        anchor = anchor_token(tokens)
+        if not word_close(anchor, page_text):
+            return None
+        return {"by": "performer's surname", "words": [anchor]}
+    in_title = [w for w in tokens if word_close(w, title_text)]
+    if in_title:
+        return {"by": "performer in title", "words": in_title}
+    on_channel = [w for w in tokens if word_close(w, page_text)]
+    if on_channel:
+        return {"by": "performer on channel", "words": on_channel}
     return None
 
 
@@ -505,8 +572,10 @@ def variants_for(title, performer):
     the hand-verified links. The rest exist for the works it fails on: the
     performer trimmed to its core, both terms and then the title alone in the
     Latin script, the performer alone (an upload may name the song only in its
-    description), and finally the arranger's name, which is how a video that
-    credits him but not the catalogue's performer is still his work.
+    description), and finally the title with the arranger's name, which
+    reaches uploads that name the work through him -- the performer still has
+    to be named for the link to be accepted, but his name is how those uploads
+    are titled and so how the query finds them.
     """
     core = performer_core(performer)
     full = " ".join(p for p in (title, performer) if p)

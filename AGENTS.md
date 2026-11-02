@@ -255,16 +255,30 @@ that rule (severity info) with both durations. The build decides the mark, not
 the finder, so the threshold lives in one place. A `human` link is never
 marked, whatever its length.
 
-What the finder accepts, and why it is loose: the point of a link is that the
-reader can hear the work, not that the phonotheque's copy has been identified,
-so duration never rejects a candidate — "Blagoja Ceslarov - Aranhuez" is 90 s
-off the catalogue's timing and is still the right piece. A candidate is
-accepted when its title carries the work's title and something ties it to the
-performer or arranger: a distinctive word of the performer's name in the video
-title, two of them anywhere on the page, an upload on a channel a hand-verified
-link already came from, or the arranger credited (`CREDIT_WORDS`). `ROLE_WORDS`
-is what stops "ТО на РТС" from matching on "РТС" alone, which is on half the
-archive.
+What the finder accepts: a link is the record's own performance. The drawer has
+no way to say "different performer", so a candidate is accepted when its title
+carries the work's title *and* the catalogue's performer is named on the page —
+in the video title, which is where a hand-checked link almost always has it, or
+on the uploader's channel, where a "... - Topic" channel carries the artist and
+little else (`arrVocal-0223`). Nothing else stands in for it, not the arranger
+credited and not a channel a hand-checked link came from, with the one exception
+below. The looser rule that allowed both wrote 20 links out of 86 with no
+performer anywhere on the page: "Кирчо Поп Лазаров - Сини Очи" on Веле Матевски,
+"Христо Крстевски - Пролетно сеќавање" on Нина Спирова, and an 8:39 tribute
+montage on Трио Лабиш, accepted on the arranger's name alone. `ROLE_WORDS` is
+what stops "ТО на РТС" from matching on "РТС" alone, which is on half the
+archive; the city in "Радио-телевизија Скопје" belongs to the institution the
+same way, so it goes too.
+
+The trusted channel survives in one place: a performer with no identifying word
+at all — an empty cell, or a house ensemble whose name is nothing but role words
+("Забавен оркестар", "Оркестар", 19 records) — leaves nothing to check, and a
+title on a channel a hand-checked link came from is then all the evidence there
+is.
+
+Duration settles nothing either way: "Blagoja Ceslarov - Aranhuez" is 90 s off
+the catalogue's timing and is still the right piece, and it is the build, not
+the finder, that marks a link whose length disagrees.
 
 The title test is deliberately the part that does **not** get loosened: an
 artist-only loosening attaches the wrong *recording* of the right song, a
@@ -285,11 +299,10 @@ variants that stand for one letter (ч romanised as "ch" against an uploader's
 "č", ќ as "kj" against their "k"): "Молчи" arrives as "molchi" against their
 "Molci", "Ќе наминеш" as "kje" against their "Ke", and a whole-title test would
 otherwise lose a song to a spelling difference. The same folding is applied to
-`ROLE_WORDS` and `CREDIT_WORDS`, or the fixed sets would never meet a folded
-page. Where the artist is named inside the video title matters more than where
-it is not: requiring it in the title is what rejected two unrelated videos that
-matched "Балада за гитара — Петар Лукиќ" on "petar" sitting in an uploader's
-channel name.
+`ROLE_WORDS`, or the fixed set would never meet a folded page, and `word_close()`
+allows the one letter that separates an uploader's spelling from the catalogue's
+("А. Сурмеан" against "Армен Сурмејан", "Lupka" against "Љупка") — from six
+letters up, where one letter is a spelling and not another name.
 
 A work's title can also name the piece twice — "Осаменост (Молчи една долина)"
 is one piece under two names, and an upload carries one of them — so
@@ -309,19 +322,18 @@ wrong):
   `PLAUSIBLE_SLACK_SEC` (120 s) over it is a podcast or a whole album. This is
   what refused a 71-minute Croatian podcast for a 3:50 song and a 10:51 concert
   for a 5:36 one.
-- A one-word title is a weak identity, so `accept()` asks for the performer's
-  name in full when the title has a single word — both words of "Зоран
-  Георгиев", so that "Zašto je uspjeh najveća iluzija?" by a host called Zoran
-  cannot become the song "Илузија" — or, when the name is itself one word, that
-  one word ("Импулси"), or a trusted channel. Measured on the selftest, the
-  stricter form cost one hand-checked link (a one-word band name) until it was
-  written this way. Requiring the name *regardless* of the channel was measured
-  over the 122 links a pass had written: it refused 21, and almost all were a
-  different *recording of the right song* on a channel a hand-checked link had
-  come from ("Идила" by Никола Комовски as "Идила - Нина Спирова") — the class
-  this catalogue accepts and marks — so the trusted channel keeps its standing
-  and the two rows such as "Адиос" becoming "Ljupka Dimitrovska - Adios Amor"
-  are the price.
+- A one-word title is a weak identity, so it asks for the performer's surname —
+  the last word of the name ("Апостолова", "Мицев"), or an ensemble's own word
+  ("Ревиски" in "Ревиски оркестар на РТЉ"), with an institutional acronym
+  skipped. That is what keeps "Zašto je uspjeh najveća iluzija?" by a host
+  called Zoran from becoming the song "Илузија" by Зоран Георгиев, while "Lupka
+  Apostolova - Igraj kalipso" still answers for «Калипсо». Asking for the whole
+  name instead cost that hand-checked link: "Lupka" is "Љупка" a letter away.
+  Measured over the 86 links the looser rule wrote, the performer requirement
+  refuses 16: 6 name another singer outright, 9 name an orchestra or the
+  arranger's own channel where the catalogue credits a soloist, a quartet or a
+  different ensemble, and 1 is a title mismatch the older rule already refused
+  («Каде си мајко» for «Кај си мајко»).
 - `dedupe_picks()` — with 38 titles naming more than one work, one upload can
   pass the test for two of them; a scan keeps it for one work only.
 
@@ -332,21 +344,32 @@ The chain runs title+performer, its core, both romanised, the title alone, the
 performer alone and title+Шпато, stopping at the first query that yields an
 accepted candidate. `--selftest` replays the hand-verified links as unknown,
 with each work's own channel left out of the trusted set, and measures the
-rule: 38/39 recovered, 33 as the best pick (the miss is an upload titled
-"Indiana" for "Индијана"). Run it before changing the rule, and read the
-measured numbers rather than guessing.
+rule: 50/53 recovered, 45 as the best pick, 77 other candidates accepted. The
+looser rule measured 51/53 and 112 others on the same run; requiring the
+performer costs one upload and 35 of the candidates that were never this
+record's performance. The three misses are an upload titled "Indiana" for
+«Индијана», one that names no performer at all («Во спомен на старото
+пријателство» for Мики Асановиќ), and arrVocal-0055, where the rule does find
+the work — nine uploads of Tomislav Manic singing it — but not the one a person
+had picked. Run it before changing the rule, and read the measured numbers
+rather than guessing.
 
 Only `--apply` writes: new rows go in with `found=search`, and a row that
 already has a video is never overwritten or re-searched. The finder reuses
 `to_latin()` from `build.py` rather than growing a third transliteration.
 
 Where the pass over the 361 works that were still unlinked left the catalogue:
-160 of 433 works carry a link, 118 of them machine-found — vocal 38/74,
-instrumental 23/55, arrThemes 8/43, arrVocal 91/261 — with the rest of the
+126 of 432 works carry a link, 73 of them machine-found — vocal 34/74,
+instrumental 8/55, arrThemes 2/43, arrVocal 82/260 — with the rest of the
 catalogue offered as a YouTube search from the drawer instead. A machine-found
 link that is not within `VIDEO_DURATION_TOLERANCE` of the catalogue's timing is
-marked, so the reader is told, and the five links a re-audit refused are simply
-not there.
+marked, so the reader is told. The five links an earlier re-audit refused are
+not there, and neither are 13 of the 16 the performer rule refused once it was
+made strict: two of those works were re-linked to an upload that does name the
+performer, and `instrumental-0050` was put back after a second look, because its
+upload names the record's own orchestra and no contradicting soloist — the best
+evidence there is, where the alternative is none. It is marked `found=human`,
+since a person made that call, so `--verify` will not take it out again.
 
 When the rule changes, the rows a pass already wrote down do not have to be
 searched for again: `--verify` asks YouTube for each machine-found upload's own
