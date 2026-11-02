@@ -173,16 +173,20 @@ The source keeps the export's wording, as it does for `+++` and the abbreviated
 names. Five records carry it.
 
 The broadcasters' house ensembles are abbreviated too: `ТО` is Танцов оркестар,
-`РО` Ревиски оркестар, `РТС` Радио-телевизија Скопје, `МРТ` Македонска радио-телевизија, `РС` Радио Скопје. `expand_ensembles()` spells them out wherever
-they stand as a word, in the performer and in the role after `со` (so
-`соло гитара со ТО на РТС` reads `соло гитара со Танцов оркестар на
-Радио-телевизија Скопје`), and records each substitution under `ensemble-expanded`.
-It runs *after* `apply_maps()`, so `Забавен анс. на РС` is a name before `РС` is
-spelled out, and in a single pass, so a replacement is never expanded twice.
-`РТЉ`, `ЗО`, `ГЗО` and `ЗА` are deliberately left as written: what they stand
-for is not established. A spelling-out that changes a `performer` has to reach
-`sources/removals.csv` too, whose `performer` column is a guard on the row it
-drops — otherwise the drop stops applying and the catalogue grows a record.
+`РО` Ревиски оркестар, `РТС` Радио-телевизија Скопје, `РТЉ` Радио-телевизија
+Љубљана, `МРТ` Македонска радио-телевизија, `РС` Радио Скопје.
+`expand_ensembles()` spells them out wherever they stand as a word, in the
+performer and in the role after `со` (so `соло гитара со ТО на РТС` reads `соло
+гитара со Танцов оркестар на Радио-телевизија Скопје`), and records each
+substitution under `ensemble-expanded`. It runs *after* `apply_maps()`, so
+`Забавен анс. на РС` is a name before `РС` is spelled out, and in a single pass,
+so a replacement is never expanded twice. `ЗО`, `ГЗО` and `ЗА` are deliberately
+left as written: what they stand for is not established. `РТЉ` was, once the
+ensemble's own uploads named it ("Revijski Orkestar Rtv Ljubljana"), which is
+the standard for settling any of the three that follow. A spelling-out that
+changes a `performer` has to reach `sources/removals.csv` too, whose `performer`
+column is a guard on the row it drops — otherwise the drop stops applying and
+the catalogue grows a record.
 
 The two volumes of his own compositions carry no `автор` column at all — their
 header is `наслов,изведувач,минути,сигнатура` — so their author cells are empty
@@ -324,11 +328,12 @@ wrong):
   for a 5:36 one.
 - A one-word title is a weak identity, so it asks for the performer's surname —
   the last word of the name ("Апостолова", "Мицев"), or an ensemble's own word
-  ("Ревиски" in "Ревиски оркестар на РТЉ"), with an institutional acronym
-  skipped. That is what keeps "Zašto je uspjeh najveća iluzija?" by a host
-  called Zoran from becoming the song "Илузија" by Зоран Георгиев, while "Lupka
-  Apostolova - Igraj kalipso" still answers for «Калипсо». Asking for the whole
-  name instead cost that hand-checked link: "Lupka" is "Љупка" a letter away.
+  ("Ревиски" in "Ревиски оркестар на Радио-телевизија Љубљана"), with an
+  institutional acronym skipped. That is what keeps "Zašto je uspjeh najveća
+  iluzija?" by a host called Zoran from becoming the song "Илузија" by Зоран
+  Георгиев, while "Lupka Apostolova - Igraj kalipso" still answers for «Калипсо».
+  Asking for the whole name instead cost that hand-checked link: "Lupka" is
+  "Љупка" a letter away.
   Measured over the 86 links the looser rule wrote, the performer requirement
   refuses 16: 6 name another singer outright, 9 name an orchestra or the
   arranger's own channel where the catalogue credits a soloist, a quartet or a

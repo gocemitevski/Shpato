@@ -245,12 +245,15 @@ TEXT_RULES = {"performer-split", "performer-author", "ensemble-expanded",
 # The export abbreviates the broadcasters' house ensembles. Each abbreviation
 # is spelled out wherever it stands as a word -- in the performer, and in the
 # role the performer was split from ("соло гитара со ТО на РТС"). A single
-# pass keeps a replacement from being expanded again; РТЉ, ЗО, ГЗО and ЗА are
-# left alone because what they stand for is not established.
+# pass keeps a replacement from being expanded again; ЗО, ГЗО and ЗА are left
+# alone because what they stand for is not established. РТЉ is Радио-телевизија
+# Љубљана: the ensemble's own uploads name it ("Revijski Orkestar Rtv
+# Ljubljana"), which is what settled it where the monograph does not.
 ENSEMBLE_WORDS = {
     "ТО": "Танцов оркестар",
     "РО": "Ревиски оркестар",
     "РТС": "Радио-телевизија Скопје",
+    "РТЉ": "Радио-телевизија Љубљана",
     "МРТ": "Македонска радио-телевизија",
     "РС": "Радио Скопје",
 }

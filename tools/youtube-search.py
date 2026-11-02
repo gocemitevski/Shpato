@@ -116,13 +116,13 @@ NOISE_WORDS = {"the", "and", "feat", "ft", "official", "video", "audio", "hd",
 # evidence for a work performed by another RTS orchestra, and РТС alone appears
 # on half of YouTube's Macedonian archive. Matching one of these is worth
 # nothing, so they are removed before the artist test runs. The city in a
-# broadcaster's name ("Радио-телевизија Скопје") belongs to the institution,
-# like РТС and МРТ, so it goes too.
+# broadcaster's name ("Радио-телевизија Скопје", "Радио-телевизија Љубљана")
+# belongs to the institution, like РТС and МРТ, so it goes too.
 ROLE_WORDS = {"orkestar", "orkestarot", "orchestra", "ansambl", "ensemble",
               "trio", "kvartet", "kvintet", "sekstet", "sextet", "hor",
               "chorus", "grupa", "group", "bend", "duo", "solisti", "solist",
               "rts", "mrtv", "tv", "radio", "televizija", "naroden", "zabaven",
-              "skopje"}
+              "skopje", "ljubljana"}
 
 # Diacritics uploaders drop, on top of the build's Cyrillic transliteration.
 FOLD_MAP = str.maketrans({"č": "c", "ć": "c", "š": "s", "ž": "z", "đ": "d"})
@@ -344,10 +344,11 @@ def anchor_token(tokens):
     """The performer's own word, for a title too short to carry the identity.
 
     A personal name here is written given name first, so the surname is the
-    last word ("Мицев" in "Слободан (Боби) Мицев", not "Слободан"); an
-    ensemble's own word is its last word too ("Ревиски" in "Ревиски оркестар на
-    РТЉ"). An institution's acronym is not a name, so a word with no vowel in it
-    steps aside when there is another.
+    last word ("Мицев" in "Слободан (Боби) Мицев", not "Слободан"). An
+    ensemble's role words go and what is left is its own word, last of the
+    remainder ("Ревиски" in "Ревиски оркестар на Радио-телевизија Љубљана").
+    An institution's acronym is not a name, so a word with no vowel in it steps
+    aside when there is another.
     """
     spelled = [w for w in tokens if any(ch in "aeiou" for ch in w)]
     return (spelled or tokens)[-1]

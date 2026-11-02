@@ -2173,7 +2173,7 @@
    "category": "instrumental",
    "title": "Еден бакнеж",
    "composer": "",
-   "performer": "Ревиски оркестар на РТЉ",
+   "performer": "Ревиски оркестар на Радио-телевизија Љубљана",
    "performerRole": "",
    "durationSec": 190,
    "durationRaw": "3.10",
@@ -2192,12 +2192,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "РО на РТЉ",
-     "to": "Ревиски оркестар на РТЉ"
+     "to": "Ревиски оркестар на Радио-телевизија Љубљана"
     }
    ],
    "id": "instrumental-0015",
    "warnCount": 0,
-   "search": "еден бакнеж ревиски оркестар на ртљ з-6057/3 eden baknezh reviski orkestar na rtlj z-6057/3",
+   "search": "еден бакнеж ревиски оркестар на радио-телевизија љубљана з-6057/3 eden baknezh reviski orkestar na radio-televizija ljubljana z-6057/3",
    "videoLengthSec": 191,
    "videoDeltaSec": 1,
    "isNew": true
@@ -3705,7 +3705,7 @@
    "category": "arrThemes",
    "title": "Еден бакнеж",
    "composer": "Петар Пешев",
-   "performer": "Ревиски оркестар на РТЉ",
+   "performer": "Ревиски оркестар на Радио-телевизија Љубљана",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -3725,12 +3725,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "РО на РТЉ",
-     "to": "Ревиски оркестар на РТЉ"
+     "to": "Ревиски оркестар на Радио-телевизија Љубљана"
     }
    ],
    "id": "arrThemes-0010",
    "warnCount": 0,
-   "search": "еден бакнеж ревиски оркестар на ртљ петар пешев з-2057/3 eden baknezh reviski orkestar na rtlj petar peshev z-2057/3"
+   "search": "еден бакнеж ревиски оркестар на радио-телевизија љубљана петар пешев з-2057/3 eden baknezh reviski orkestar na radio-televizija ljubljana petar peshev z-2057/3"
   },
   {
    "category": "arrThemes",

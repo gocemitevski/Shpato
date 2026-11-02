@@ -541,7 +541,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "РО на РТЉ",
-   "normalized": "Ревиски оркестар на РТЉ"
+   "normalized": "Ревиски оркестар на Радио-телевизија Љубљана"
   },
   {
    "id": "instrumental-0016",
@@ -1298,7 +1298,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "РО на РТЉ",
-   "normalized": "Ревиски оркестар на РТЉ"
+   "normalized": "Ревиски оркестар на Радио-телевизија Љубљана"
   },
   {
    "id": "arrThemes-0010",
