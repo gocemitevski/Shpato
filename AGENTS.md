@@ -66,7 +66,7 @@ puts `boot-shell` and `boot-foot` on `<html>`, and those classes hold the shell
   at the page: right view, right labels, nothing left to move.
 - **phase two**, once the catalogue has arrived: `adoptData()`, the full
   `deserialize()`, the event handlers, and the table. `boot-foot` comes off
-  last, because on a phone the footer sits where 433 rows are about to arrive
+  last, because on a phone the footer sits where 431 rows are about to arrive
   and a footer painted first moves thirty thousand pixels when they do.
 
 Two things follow. The labels cannot be in the HTML — that is what `i18n.js`
@@ -143,22 +143,34 @@ The `expected` dict at the bottom of `build.py` is a guard, not truth: it warns
 on stderr when the per-category counts move. Update it only when the move is
 intentional.
 
-`sources/removals.csv` (`file,line,title,performer,signature`) lists rows the
-source holds twice and the catalogue therefore carries once. `drop_rows()` runs
-**after** the ids are handed out: a drop made earlier would shift every later
-id in that category and send `sources/youtube.csv` at the wrong works. `line` is
-the weakest thing to key a deletion on, so the other three columns are guards —
-checked against the record and reported, never applied, when they disagree — and
-a row is only ever dropped when another row shares its `duplicate_key()`.
+`sources/removals.csv` (`file,line,title,performer,signature,same_as`) lists rows
+the source holds twice and the catalogue therefore carries once. `drop_rows()`
+runs **after** the ids are handed out: a drop made earlier would shift every
+later id in that category and send `sources/youtube.csv` at the wrong works.
+`line` is the weakest thing to key a deletion on, so the other three columns are
+guards — checked against the record and reported, never applied, when they
+disagree.
 
-The file is header-only at the moment: the one row it dropped (the duplicate
-`Гарача` in the instrumental volume) has since been deleted from the source CSV
-itself, so there is nothing left for the build to drop and no `duplicate-dropped`
-note either — the record simply isn't in the export we hold. Deleting a row from
-a source **shifts every later id in that category**, which is what the generated
-catalog warns about through the `title` guard in `sources/youtube.csv`; re-point
-the map by the same shift rather than by matching titles, because a category
-holds more than one work with the same name.
+A row goes only when the catalogue is known to carry the same work elsewhere, and
+there are two ways to know it. Blank `same_as` means the pair is an exact
+duplicate and the twin is found by its `duplicate_key()`; a `same_as` value names
+the work that is kept, and the pointer has to resolve to exactly one record in
+the same category with that title. The pointer exists because one pair is not an
+exact duplicate and only a person can say so: the vocal volume lists «Играј и пеј
+калипсо» bare on line 21 and «Калипсо» with Љупка Апостолова, its timing and its
+shelf mark on line 28, and they are one work — the 1958 Jugoton single "Igraj
+Kalipso" (music D. Đakonovski, lyrics D. Georgiev), whose one upload is already
+on «Калипсо». The catalogue keeps the phonotheque's short title, and the drop is
+one `duplicate-dropped` note naming it. A pointer that matches none, or more than
+one, is reported and the row kept, because a wrong drop takes a unique record out
+of the catalogue with no symptom.
+
+The `Гарача` this list once dropped is no longer in the export we hold, so the
+build has nothing left to remove there and the list carries the calypso pair
+alone. Deleting a row from a source **shifts every later id in that category**,
+which is what the generated catalog warns about through the `title` guard in
+`sources/youtube.csv`; re-point the map by the same shift rather than by matching
+titles, because a category holds more than one work with the same name.
 
 Every normalization must be recorded in the notes pipeline (`textFixes` /
 `flags`, with a `SEVERITY` entry) or it is invisible in the Забелешки tab.
@@ -375,7 +387,7 @@ already has a video is never overwritten or re-searched. The finder reuses
 `to_latin()` from `build.py` rather than growing a third transliteration.
 
 Where the pass over the 361 works that were still unlinked left the catalogue:
-126 of 432 works carry a link, 73 of them machine-found — vocal 34/74,
+126 of 431 works carry a link, 73 of them machine-found — vocal 34/73,
 instrumental 8/55, arrThemes 2/43, arrVocal 82/260 — with the rest of the
 catalogue offered as a YouTube search from the drawer instead. A machine-found
 link that is not within `VIDEO_DURATION_TOLERANCE` of the catalogue's timing is
@@ -771,7 +783,7 @@ panel and one-character count chips are pre-existing false positives, not
 regressions.
 
 Focus order is keyboard-complete; the catalogue table's row buttons alone are
-433 tab stops, plus one more for each of the 39 play buttons, so avoid adding
+431 tab stops, plus one more for each of the 39 play buttons, so avoid adding
 anything focusable per row without thinking about it.
 
 `prefers-reduced-motion` is honoured for the drawer's slide-in, the player's

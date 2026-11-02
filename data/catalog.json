@@ -1,13 +1,13 @@
 {
  "meta": {
-  "total": 432,
+  "total": 431,
   "counts": {
-   "vocal": 74,
+   "vocal": 73,
    "instrumental": 55,
    "arrThemes": 43,
    "arrVocal": 260
   },
-  "notes": 535,
+  "notes": 533,
   "videos": 126,
   "new": 11,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
@@ -465,31 +465,6 @@
    "search": "илјада проблеми импулси з-1441/2 iljada problemi impulsi z-1441/2",
    "videoLengthSec": 139,
    "videoDeltaSec": 3
-  },
-  {
-   "category": "vocal",
-   "title": "Играј и пеј калипсо",
-   "composer": "",
-   "performer": "",
-   "performerRole": "",
-   "durationSec": null,
-   "durationRaw": "",
-   "signature": null,
-   "signatureRaw": "",
-   "collection": null,
-   "video": null,
-   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
-   "sourceLine": 21,
-   "flags": [
-    "missing-duration",
-    "missing-signature",
-    "missing-performer"
-   ],
-   "duplicateOf": null,
-   "textFixes": [],
-   "id": "vocal-0020",
-   "warnCount": 0,
-   "search": "играј и пеј калипсо igraj i pej kalipso"
   },
   {
    "category": "vocal",

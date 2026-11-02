@@ -733,12 +733,15 @@ def attach_videos(records, videos, problems):
 
 
 def read_removals():
-    """Read the curated `file,line,title,performer,signature` drop list.
+    """Read the curated `file,line,title,performer,signature,same_as` drop list.
 
     A listed row is one the source holds twice, so the catalogue carries the
     other copy. `line` is a position in the source file, which is the weakest
-    thing to key a deletion on, so the other three columns are guards: they are
+    thing to key a deletion on, so the other columns are guards: they are
     checked against the record and a mismatch is reported, never applied.
+    `same_as` names the work that is kept, for the one kind of pair the source
+    holds twice under two different listings; blank means the copy is an exact
+    duplicate and is found by its `duplicate_key()`.
     """
     path = os.path.join(SOURCES_DIR, REMOVALS_FILE)
     if not os.path.exists(path):
@@ -751,14 +754,15 @@ def read_removals():
         if not any(cell.strip() for cell in row):
             continue
         row = [clean(c) for c in row]
-        while len(row) < 5:
+        while len(row) < 6:
             row.append("")
         file_name, line = row[0], row[1]
         if not file_name or not line.isdigit():
             problems.append("line {}: expected a file name and a line number".format(n))
             continue
-        removals.append({"file": file_name, "line": int(line),
-                         "title": row[2], "performer": row[3], "signature": row[4]})
+        removals.append({"file": file_name, "line": int(line), "title": row[2],
+                         "performer": row[3], "signature": row[4],
+                         "same_as": row[5]})
     return removals, problems
 
 
@@ -767,9 +771,18 @@ def drop_rows(records, removals, problems):
 
     This runs after the ids are handed out, so a drop never renumbers the
     records that stay: an id keeps naming the record it named before, and
-    sources/youtube.csv keeps pointing at the works it points at. A row is only
-    ever dropped when another row shares its duplicate key, because a wrong
-    drop would take a unique record out of the catalogue with no symptom.
+    sources/youtube.csv keeps pointing at the works it points at.
+
+    A row goes only when the catalogue is known to carry the same work
+    elsewhere, and there are two ways to know it. Either another row shares
+    its duplicate key, which is an exact duplicate found on its own, or the
+    entry names that row in `same_as` -- a claim that two listings are one
+    work, which only a person can make: «Калипсо» is the phonotheque's short
+    title for «Играј и пеј калипсо», and nothing in the row says so. The
+    pointer has to resolve to exactly one other record in the same category
+    with that title; a pointer that matches none or several is reported and
+    the row kept, because a wrong drop would take a unique record out of the
+    catalogue with no symptom.
     """
     dropped = []
     for entry in removals:
@@ -786,12 +799,25 @@ def drop_rows(records, removals, problems):
                 break
         if rec is None:
             continue
-        key = duplicate_key(rec)
-        twin = next((r for r in records if r is not rec and duplicate_key(r) == key), None)
-        if twin is None:
-            problems.append("{} line {}: no other row duplicates it".format(
-                entry["file"], entry["line"]))
-            continue
+        if entry["same_as"]:
+            title = to_latin(entry["same_as"])
+            twins = [r for r in records if r is not rec
+                     and r["category"] == rec["category"]
+                     and to_latin(r["title"]) == title]
+            if len(twins) != 1:
+                problems.append(
+                    "{} line {}: same_as {!r} names {} rows, not one".format(
+                        entry["file"], entry["line"], entry["same_as"], len(twins)))
+                continue
+            twin = twins[0]
+        else:
+            key = duplicate_key(rec)
+            twin = next((r for r in records if r is not rec
+                         and duplicate_key(r) == key), None)
+            if twin is None:
+                problems.append("{} line {}: no other row duplicates it".format(
+                    entry["file"], entry["line"]))
+                continue
         records.remove(rec)
         dropped.append((rec, twin))
     return dropped
@@ -923,7 +949,7 @@ def main():
     import minify
     minify.main([])
 
-    expected = {"vocal": 74, "instrumental": 55, "arrThemes": 43, "arrVocal": 260}
+    expected = {"vocal": 73, "instrumental": 55, "arrThemes": 43, "arrVocal": 260}
     print("Built {} records: {}".format(len(all_records), counters))
     print("Expected:            {}".format(expected))
     print("Notes: {}".format(len(notes)))

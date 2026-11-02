@@ -391,7 +391,7 @@ body.app main { min-height: 0; overflow-y: auto; }
    it moves when the labels land — Lighthouse measured CLS 0.88 on a phone for
    exactly that. The classes are set by the inline script in index.html's head and
    removed by app.js: boot-shell once the labels are in, boot-foot once the
-   catalogue has rendered, because on a phone the footer sits where 433 rows are
+   catalogue has rendered, because on a phone the footer sits where 431 rows are
    about to arrive. Never classes on the elements themselves: scripting off means
    they are never added, and the shell is served as it was. The skip link stays
    visible throughout. */
