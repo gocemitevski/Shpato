@@ -172,21 +172,32 @@ map, so `Х. Крствески` arrives as `Христо Крстевски`) a
 The source keeps the export's wording, as it does for `+++` and the abbreviated
 names. Five records carry it.
 
-The broadcasters' house ensembles are abbreviated too: `ТО` is Танцов оркестар,
-`РО` Ревиски оркестар, `РТС` Радио-телевизија Скопје, `РТЉ` Радио-телевизија
-Љубљана, `МРТ` Македонска радио-телевизија, `РС` Радио Скопје.
-`expand_ensembles()` spells them out wherever they stand as a word, in the
-performer and in the role after `со` (so `соло гитара со ТО на РТС` reads `соло
-гитара со Танцов оркестар на Радио-телевизија Скопје`), and records each
+The broadcasters and their house ensembles are abbreviated too: `ТО` is Танцов
+оркестар, `РО` Ревиски оркестар, `ГЗО` Голем забавен оркестар, `ЗО` Забавен
+оркестар, `РТС` Радио-телевизија Скопје, `РТ` and `РТВ` Радио-телевизија,
+`РТЉ` Радио-телевизија Љубљана, `МРТ` Македонска радио-телевизија, `РС` Радио
+Скопје. `expand_ensembles()` spells them out wherever they stand as a word, in
+the performer and in the role after `со` (so `соло гитара со ТО на РТС` reads
+`соло гитара со Танцов оркестар на Радио-телевизија Скопје`), and records each
 substitution under `ensemble-expanded`. It runs *after* `apply_maps()`, so
 `Забавен анс. на РС` is a name before `РС` is spelled out, and in a single pass,
-so a replacement is never expanded twice. `ЗО`, `ГЗО` and `ЗА` are deliberately
-left as written: what they stand for is not established. `РТЉ` was, once the
-ensemble's own uploads named it ("Revijski Orkestar Rtv Ljubljana"), which is
-the standard for settling any of the three that follow. A spelling-out that
-changes a `performer` has to reach `sources/removals.csv` too, whose `performer`
-column is a guard on the row it drops — otherwise the drop stops applying and
-the catalogue grows a record.
+so a replacement is never expanded twice. `ЗА` and `ГО` are deliberately left as
+written: what they stand for is not established. `РТЉ` was, once the ensemble's
+own uploads named it ("Revijski Orkestar Rtv Ljubljana"), and `ГЗО` and `ЗО`
+rest on the export spelling them out itself, with the initials exact; that is the
+standard for settling any that follow. A spelling-out that changes a `performer`
+has to reach `sources/removals.csv` too, whose `performer` column is a guard on
+the row it drops — otherwise the drop stops applying and the catalogue grows a
+record.
+
+Inside a role the export clips words as well: `сакс` for саксофон, `арр.` for the
+Macedonian `ар.`, and a year with its `г` run into it (`сним. 1959г`). Those are
+`abbreviation-normalized` fixes in `ABBREVIATIONS`, which runs on the whole
+performer cell before the name/role split, so the role is cleaned with the rest.
+A name abbreviated to an initial is spelled out only where the catalogue also
+carries the full form (`Љ. Димитровска` → Љупка Димитровска, `Б. Ноев` →
+Божидар Ноев, both `name-unified`); the ninety-odd credits the monograph gives
+only in initials stay as they are.
 
 The two volumes of his own compositions carry no `автор` column at all — their
 header is `наслов,изведувач,минути,сигнатура` — so their author cells are empty

@@ -197,8 +197,17 @@ LATIN_TO_CYRILLIC = {
 CYRILLIC_RE = re.compile(r"[\u0400-\u04FF]")
 LATIN_RE = re.compile(r"[A-Za-z]")
 # "Т.О." is an in-house ensemble abbreviation; the file spells it both with
-# and without dots, so it is canonicalised to the plain form.
-ABBREVIATIONS = [(re.compile(r"\bТ\.\s*О\.?(?=\s|$)"), "ТО")]
+# and without dots, so it is canonicalised to the plain form. The rest are the
+# shorthand the export writes inside a role: the same word twice with two
+# spellings ("ар." and "арр."), an instrument clipped to four letters ("сакс"),
+# and a year with its "г" run into it ("сним. 1959г"). Each is a word, not a
+# prefix, so "саксофон" is never touched twice.
+ABBREVIATIONS = [
+    (re.compile(r"\bТ\.\s*О\.?(?=\s|$)"), "ТО"),
+    (re.compile(r"\bарр\."), "ар."),
+    (re.compile(r"\bсакс\b"), "саксофон"),
+    (re.compile(r"(?<=\d)г\b"), ""),
+]
 # Clear misspellings, keyed by the value *after* the generic cleanups.
 TYPO_MAP = {
     "Имулси": "Импулси",
@@ -227,6 +236,8 @@ NAME_ALIASES = {
     "С. Петкповска": "Сашка Петковска",
     "З. Јовановиќ": "Зоран Јовановиќ",
     "Љ. Босилков": "Љупчо Босилков",
+    "Љ. Димитровска": "Љупка Димитровска",
+    "Б. Ноев": "Божидар Ноев",
     "А. Сопронов": "Андреа Сопронов",
     "К. Рибарски": "Кирил Рибарски",
     "Македонија": "група Македонија",
@@ -245,15 +256,22 @@ TEXT_RULES = {"performer-split", "performer-author", "ensemble-expanded",
 # The export abbreviates the broadcasters' house ensembles. Each abbreviation
 # is spelled out wherever it stands as a word -- in the performer, and in the
 # role the performer was split from ("соло гитара со ТО на РТС"). A single
-# pass keeps a replacement from being expanded again; ЗО, ГЗО and ЗА are left
-# alone because what they stand for is not established. РТЉ is Радио-телевизија
+# pass keeps a replacement from being expanded again; ЗА and ГО are left alone
+# because what they stand for is not established. РТЉ is Радио-телевизија
 # Љубљана: the ensemble's own uploads name it ("Revijski Orkestar Rtv
-# Ljubljana"), which is what settled it where the monograph does not.
+# Ljubljana"), which is what settled it where the monograph does not. ГЗО and
+# ЗО rest on the same export spelling them out ("Голем забавен оркестар",
+# "Забавен оркестар"): the initials are exact and no other ensemble fits them.
+# РТ and РТВ are the broadcaster itself, abbreviated the way РТС and МРТ are.
 ENSEMBLE_WORDS = {
     "ТО": "Танцов оркестар",
     "РО": "Ревиски оркестар",
+    "ГЗО": "Голем забавен оркестар",
+    "ЗО": "Забавен оркестар",
     "РТС": "Радио-телевизија Скопје",
+    "РТВ": "Радио-телевизија",
     "РТЉ": "Радио-телевизија Љубљана",
+    "РТ": "Радио-телевизија",
     "МРТ": "Македонска радио-телевизија",
     "РС": "Радио Скопје",
 }

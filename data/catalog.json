@@ -7,7 +7,7 @@
    "arrThemes": 43,
    "arrVocal": 260
   },
-  "notes": 518,
+  "notes": 535,
   "videos": 126,
   "new": 11,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
@@ -201,7 +201,7 @@
    "title": "Даниела",
    "composer": "",
    "performer": "Љупка Димитровска",
-   "performerRole": "со ревиски оркестар на РТВ Љубљана, ар. Никица Калоѓера",
+   "performerRole": "со ревиски оркестар на Радио-телевизија Љубљана, ар. Никица Калоѓера",
    "durationSec": 163,
    "durationRaw": "2.43",
    "signature": "З-1558/3",
@@ -211,7 +211,8 @@
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 10,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -220,6 +221,12 @@
      "rule": "performer-split",
      "from": "Љупка Димитровска (со ревиски оркестар на РТВ Љубљана, ар. Никица Калоѓера)",
      "to": "Љупка Димитровска"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "со ревиски оркестар на РТВ Љубљана, ар. Никица Калоѓера",
+     "to": "со ревиски оркестар на Радио-телевизија Љубљана, ар. Никица Калоѓера"
     }
    ],
    "id": "vocal-0009",
@@ -668,7 +675,7 @@
    "title": "Кога пеам, кога љубам",
    "composer": "",
    "performer": "Диме Поповски",
-   "performerRole": "со ГО на РТ Љубљана",
+   "performerRole": "со ГО на Радио-телевизија Љубљана",
    "durationSec": 160,
    "durationRaw": "2.40",
    "signature": "АЗ-7/5",
@@ -679,6 +686,7 @@
    "sourceLine": 30,
    "flags": [
     "performer-split",
+    "ensemble-expanded",
     "video-approximate"
    ],
    "duplicateOf": null,
@@ -688,6 +696,12 @@
      "rule": "performer-split",
      "from": "Диме Поповски (со ГО на РТ Љубљана)",
      "to": "Диме Поповски"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "со ГО на РТ Љубљана",
+     "to": "со ГО на Радио-телевизија Љубљана"
     }
    ],
    "id": "vocal-0029",
@@ -746,7 +760,7 @@
    "title": "Лени",
    "composer": "",
    "performer": "Диме Поповски",
-   "performerRole": "со ревиски оркестар на РТ Загреб, арр. Миливој Керблер",
+   "performerRole": "со ревиски оркестар на Радио-телевизија Загреб, ар. Миливој Керблер",
    "durationSec": 210,
    "durationRaw": "3.30",
    "signature": "З-478/1",
@@ -756,15 +770,29 @@
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 33,
    "flags": [
-    "performer-split"
+    "abbreviation-normalized",
+    "performer-split",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
     {
      "field": "performer",
-     "rule": "performer-split",
+     "rule": "abbreviation-normalized",
      "from": "Диме Поповски (со ревиски оркестар на РТ Загреб, арр. Миливој Керблер)",
+     "to": "Диме Поповски (со ревиски оркестар на РТ Загреб, ар. Миливој Керблер)"
+    },
+    {
+     "field": "performer",
+     "rule": "performer-split",
+     "from": "Диме Поповски (со ревиски оркестар на РТ Загреб, ар. Миливој Керблер)",
      "to": "Диме Поповски"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "со ревиски оркестар на РТ Загреб, ар. Миливој Керблер",
+     "to": "со ревиски оркестар на Радио-телевизија Загреб, ар. Миливој Керблер"
     }
    ],
    "id": "vocal-0032",
@@ -820,7 +848,7 @@
    "title": "Ми вети ти",
    "composer": "",
    "performer": "Диме Поповски",
-   "performerRole": "со Џез оркестарот на РТ Белград",
+   "performerRole": "со Џез оркестарот на Радио-телевизија Белград",
    "durationSec": 190,
    "durationRaw": "3.10",
    "signature": "З-477/3",
@@ -830,7 +858,8 @@
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 36,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -839,6 +868,12 @@
      "rule": "performer-split",
      "from": "Диме Поповски (со Џез оркестарот на РТ Белград)",
      "to": "Диме Поповски"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "со Џез оркестарот на РТ Белград",
+     "to": "со Џез оркестарот на Радио-телевизија Белград"
     }
    ],
    "id": "vocal-0035",
@@ -896,7 +931,7 @@
    "title": "Молчи една долина",
    "composer": "",
    "performer": "Блага Видец",
-   "performerRole": "сним. 1961, ГЗО на Радио Скопје",
+   "performerRole": "сним. 1961, Голем забавен оркестар на Радио Скопје",
    "durationSec": 180,
    "durationRaw": "3.0",
    "signature": "АЗ-60/12",
@@ -923,7 +958,7 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "сним. 1961, ГЗО на РС",
-     "to": "сним. 1961, ГЗО на Радио Скопје"
+     "to": "сним. 1961, Голем забавен оркестар на Радио Скопје"
     }
    ],
    "id": "vocal-0038",
@@ -1955,7 +1990,7 @@
    "title": "Главна тема",
    "composer": "",
    "performer": "Кирил Рибарски",
-   "performerRole": "тромбон ЗО",
+   "performerRole": "тромбон Забавен оркестар",
    "durationSec": 175,
    "durationRaw": "2.55",
    "signature": "З-7687/2",
@@ -1965,7 +2000,8 @@
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 8,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -1974,6 +2010,12 @@
      "rule": "performer-split",
      "from": "Кирил Рибарски, тромбон ЗО",
      "to": "Кирил Рибарски"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "тромбон ЗО",
+     "to": "тромбон Забавен оркестар"
     }
    ],
    "id": "instrumental-0007",
@@ -2397,7 +2439,7 @@
    "title": "Индекс и љубов",
    "composer": "",
    "performer": "Голем забавен оркестар",
-   "performerRole": "сним. 1959г",
+   "performerRole": "сним. 1959",
    "durationSec": 135,
    "durationRaw": "2.15",
    "signature": "АЗ-49/21",
@@ -2407,14 +2449,21 @@
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 23,
    "flags": [
+    "abbreviation-normalized",
     "performer-split"
    ],
    "duplicateOf": null,
    "textFixes": [
     {
      "field": "performer",
-     "rule": "performer-split",
+     "rule": "abbreviation-normalized",
      "from": "Голем забавен оркестар (сним. 1959г)",
+     "to": "Голем забавен оркестар (сним. 1959)"
+    },
+    {
+     "field": "performer",
+     "rule": "performer-split",
+     "from": "Голем забавен оркестар (сним. 1959)",
      "to": "Голем забавен оркестар"
     }
    ],
@@ -2808,7 +2857,7 @@
    "title": "Ми вети ти (џез верзија)",
    "composer": "",
    "performer": "Трио Лабиш",
-   "performerRole": "арр. Зоран Павловски",
+   "performerRole": "ар. Зоран Павловски",
    "durationSec": 495,
    "durationRaw": "8.15",
    "signature": "ПК-2137/1",
@@ -2818,14 +2867,21 @@
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 37,
    "flags": [
+    "abbreviation-normalized",
     "performer-split"
    ],
    "duplicateOf": null,
    "textFixes": [
     {
      "field": "performer",
-     "rule": "performer-split",
+     "rule": "abbreviation-normalized",
      "from": "Трио Лабиш, (арр. Зоран Павловски)",
+     "to": "Трио Лабиш, (ар. Зоран Павловски)"
+    },
+    {
+     "field": "performer",
+     "rule": "performer-split",
+     "from": "Трио Лабиш, (ар. Зоран Павловски)",
      "to": "Трио Лабиш"
     }
    ],
@@ -3034,7 +3090,7 @@
    "category": "instrumental",
    "title": "Народна игра",
    "composer": "",
-   "performer": "ЗО на Радио-телевизија Скопје",
+   "performer": "Забавен оркестар на Радио-телевизија Скопје",
    "performerRole": "",
    "durationSec": 98,
    "durationRaw": "1.38",
@@ -3053,12 +3109,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ЗО на РТС",
-     "to": "ЗО на Радио-телевизија Скопје"
+     "to": "Забавен оркестар на Радио-телевизија Скопје"
     }
    ],
    "id": "instrumental-0043",
    "warnCount": 0,
-   "search": "народна игра зо на радио-телевизија скопје з-7693/1 narodna igra zo na radio-televizija skopje z-7693/1"
+   "search": "народна игра забавен оркестар на радио-телевизија скопје з-7693/1 narodna igra zabaven orkestar na radio-televizija skopje z-7693/1"
   },
   {
    "category": "instrumental",
@@ -3538,7 +3594,7 @@
    "category": "arrThemes",
    "title": "Безввредниот Џо",
    "composer": "Традиционална",
-   "performer": "ГЗО на Радио Скопје",
+   "performer": "Голем забавен оркестар на Радио Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -3558,12 +3614,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ГЗО на РС",
-     "to": "ГЗО на Радио Скопје"
+     "to": "Голем забавен оркестар на Радио Скопје"
     }
    ],
    "id": "arrThemes-0005",
    "warnCount": 0,
-   "search": "безввредниот џо гзо на радио скопје традиционална аз-50/15 bezvvredniot djo gzo na radio skopje tradicionalna az-50/15"
+   "search": "безввредниот џо голем забавен оркестар на радио скопје традиционална аз-50/15 bezvvredniot djo golem zabaven orkestar na radio skopje tradicionalna az-50/15"
   },
   {
    "category": "arrThemes",
@@ -3669,7 +3725,7 @@
    "title": "Четири такта",
    "composer": "Фречмен",
    "performer": "Томе Николовски",
-   "performerRole": "сакс со Танцов оркестар",
+   "performerRole": "саксофон со Танцов оркестар",
    "durationSec": 240,
    "durationRaw": "4.00",
    "signature": "З-2814/3",
@@ -3679,6 +3735,7 @@
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 10,
    "flags": [
+    "abbreviation-normalized",
     "performer-split",
     "ensemble-expanded"
    ],
@@ -3686,15 +3743,21 @@
    "textFixes": [
     {
      "field": "performer",
-     "rule": "performer-split",
+     "rule": "abbreviation-normalized",
      "from": "Томе Николовски, сакс со ТО",
+     "to": "Томе Николовски, саксофон со ТО"
+    },
+    {
+     "field": "performer",
+     "rule": "performer-split",
+     "from": "Томе Николовски, саксофон со ТО",
      "to": "Томе Николовски"
     },
     {
      "field": "performer",
      "rule": "ensemble-expanded",
-     "from": "сакс со ТО",
-     "to": "сакс со Танцов оркестар"
+     "from": "саксофон со ТО",
+     "to": "саксофон со Танцов оркестар"
     }
    ],
    "id": "arrThemes-0009",
@@ -3848,7 +3911,7 @@
    "category": "arrThemes",
    "title": "Лосел блуз",
    "composer": "Џ. Ширинг",
-   "performer": "ГЗО на Радио Скопје",
+   "performer": "Голем забавен оркестар на Радио Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -3868,12 +3931,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ГЗО на РС",
-     "to": "ГЗО на Радио Скопје"
+     "to": "Голем забавен оркестар на Радио Скопје"
     }
    ],
    "id": "arrThemes-0016",
    "warnCount": 0,
-   "search": "лосел блуз гзо на радио скопје џ. ширинг аз-50/18 losel bluz gzo na radio skopje dj. shiring az-50/18"
+   "search": "лосел блуз голем забавен оркестар на радио скопје џ. ширинг аз-50/18 losel bluz golem zabaven orkestar na radio skopje dj. shiring az-50/18"
   },
   {
    "category": "arrThemes",
@@ -3909,7 +3972,7 @@
    "category": "arrThemes",
    "title": "Меланхолична рапсодија",
    "composer": "Р. Хендроф",
-   "performer": "ГЗО на Радио Скопје",
+   "performer": "Голем забавен оркестар на Радио Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -3929,12 +3992,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ГЗО на РС",
-     "to": "ГЗО на Радио Скопје"
+     "to": "Голем забавен оркестар на Радио Скопје"
     }
    ],
    "id": "arrThemes-0018",
    "warnCount": 0,
-   "search": "меланхолична рапсодија гзо на радио скопје р. хендроф аз-50/17 melanholichna rapsodija gzo na radio skopje r. hendrof az-50/17"
+   "search": "меланхолична рапсодија голем забавен оркестар на радио скопје р. хендроф аз-50/17 melanholichna rapsodija golem zabaven orkestar na radio skopje r. hendrof az-50/17"
   },
   {
    "category": "arrThemes",
@@ -4047,7 +4110,7 @@
    "title": "Мојата драга Валентина",
    "composer": "Р. Роџерс",
    "performer": "Зоран Јовановиќ",
-   "performerRole": "кларинет со ЗО",
+   "performerRole": "кларинет со Забавен оркестар",
    "durationSec": 236,
    "durationRaw": "3.56",
    "signature": "З-1784/4",
@@ -4057,7 +4120,8 @@
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 23,
    "flags": [
-    "performer-split"
+    "performer-split",
+    "ensemble-expanded"
    ],
    "duplicateOf": null,
    "textFixes": [
@@ -4066,6 +4130,12 @@
      "rule": "performer-split",
      "from": "Зоран Јовановиќ, кларинет со ЗО",
      "to": "Зоран Јовановиќ"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "кларинет со ЗО",
+     "to": "кларинет со Забавен оркестар"
     }
    ],
    "id": "arrThemes-0022",
@@ -4114,7 +4184,7 @@
    "category": "arrThemes",
    "title": "Очи чорние",
    "composer": "Традиционална",
-   "performer": "ГЗО на Радио Скопје",
+   "performer": "Голем забавен оркестар на Радио Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -4134,12 +4204,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ГЗО на РС",
-     "to": "ГЗО на Радио Скопје"
+     "to": "Голем забавен оркестар на Радио Скопје"
     }
    ],
    "id": "arrThemes-0024",
    "warnCount": 0,
-   "search": "очи чорние гзо на радио скопје традиционална аз-50/12 ochi chornie gzo na radio skopje tradicionalna az-50/12"
+   "search": "очи чорние голем забавен оркестар на радио скопје традиционална аз-50/12 ochi chornie golem zabaven orkestar na radio skopje tradicionalna az-50/12"
   },
   {
    "category": "arrThemes",
@@ -4702,7 +4772,7 @@
    "title": "Четири такта",
    "composer": "B. Gudman",
    "performer": "Томе Николовски",
-   "performerRole": "сакс",
+   "performerRole": "саксофон",
    "durationSec": null,
    "durationRaw": "",
    "signature": null,
@@ -4714,6 +4784,7 @@
    "flags": [
     "missing-duration",
     "missing-signature",
+    "abbreviation-normalized",
     "performer-split",
     "possible-duplicate"
    ],
@@ -4721,8 +4792,14 @@
    "textFixes": [
     {
      "field": "performer",
-     "rule": "performer-split",
+     "rule": "abbreviation-normalized",
      "from": "Томе Николовски, сакс",
+     "to": "Томе Николовски, саксофон"
+    },
+    {
+     "field": "performer",
+     "rule": "performer-split",
+     "from": "Томе Николовски, саксофон",
      "to": "Томе Николовски"
     }
    ],
@@ -6595,7 +6672,7 @@
    "category": "arrVocal",
    "title": "Љубовнта е син",
    "composer": "А. Поп",
-   "performer": "Љ. Димитровска",
+   "performer": "Љупка Димитровска",
    "performerRole": "",
    "durationSec": 190,
    "durationRaw": "3.10",
@@ -6605,12 +6682,21 @@
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 78,
-   "flags": [],
+   "flags": [
+    "name-unified"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "name-unified",
+     "from": "Љ. Димитровска",
+     "to": "Љупка Димитровска"
+    }
+   ],
    "id": "arrVocal-0077",
    "warnCount": 0,
-   "search": "љубовнта е син љ. димитровска а. поп з-452/3 ljubovnta e sin lj. dimitrovska a. pop z-452/3"
+   "search": "љубовнта е син љупка димитровска а. поп з-452/3 ljubovnta e sin ljupka dimitrovska a. pop z-452/3"
   },
   {
    "category": "arrVocal",
@@ -7071,7 +7157,7 @@
    "category": "arrVocal",
    "title": "Млади луди години",
    "composer": "Александар Џамбазов",
-   "performer": "Б. Ноев",
+   "performer": "Божидар Ноев",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -7084,13 +7170,21 @@
    "flags": [
     "missing-duration",
     "missing-signature",
+    "name-unified",
     "video-approximate"
    ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "name-unified",
+     "from": "Б. Ноев",
+     "to": "Божидар Ноев"
+    }
+   ],
    "id": "arrVocal-0094",
    "warnCount": 0,
-   "search": "млади луди години б. ноев александар џамбазов mladi ludi godini b. noev aleksandar djambazov",
+   "search": "млади луди години божидар ноев александар џамбазов mladi ludi godini bozhidar noev aleksandar djambazov",
    "videoLengthSec": 190,
    "videoApprox": true
   },
@@ -7745,7 +7839,7 @@
    "category": "arrVocal",
    "title": "Нешто глупаво",
    "composer": "C. Parks",
-   "performer": "Љ. Димитровска",
+   "performer": "Љупка Димитровска",
    "performerRole": "З. Милос.",
    "durationSec": 142,
    "durationRaw": "2.22",
@@ -7779,11 +7873,17 @@
      "rule": "performer-split",
      "from": "Љ. Димитровска / З. Милос.",
      "to": "Љ. Димитровска"
+    },
+    {
+     "field": "performer",
+     "rule": "name-unified",
+     "from": "Љ. Димитровска",
+     "to": "Љупка Димитровска"
     }
    ],
    "id": "arrVocal-0121",
    "warnCount": 0,
-   "search": "нешто глупаво љ. димитровска c. parks з-479/2 neshto glupavo lj. dimitrovska c. parks z-479/2"
+   "search": "нешто глупаво љупка димитровска c. parks з-479/2 neshto glupavo ljupka dimitrovska c. parks z-479/2"
   },
   {
    "category": "arrVocal",
@@ -7952,7 +8052,7 @@
    "category": "arrVocal",
    "title": "Охридски гердан",
    "composer": "Димитар Масевски",
-   "performer": "Љ. Димитровска",
+   "performer": "Љупка Димитровска",
    "performerRole": "",
    "durationSec": 190,
    "durationRaw": "3.10",
@@ -7962,12 +8062,21 @@
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 130,
-   "flags": [],
+   "flags": [
+    "name-unified"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "name-unified",
+     "from": "Љ. Димитровска",
+     "to": "Љупка Димитровска"
+    }
+   ],
    "id": "arrVocal-0129",
    "warnCount": 0,
-   "search": "охридски гердан љ. димитровска димитар масевски з-2055/2 ohridski gerdan lj. dimitrovska dimitar masevski z-2055/2"
+   "search": "охридски гердан љупка димитровска димитар масевски з-2055/2 ohridski gerdan ljupka dimitrovska dimitar masevski z-2055/2"
   },
   {
    "category": "arrVocal",
@@ -9147,7 +9256,7 @@
    "title": "Село мое",
    "composer": "Слободан Николовски",
    "performer": "Блага Видец",
-   "performerRole": "со ГЗО",
+   "performerRole": "со Голем забавен оркестар",
    "durationSec": null,
    "durationRaw": "",
    "signature": "АЗ-60/12",
@@ -9159,6 +9268,7 @@
    "flags": [
     "missing-duration",
     "performer-split",
+    "ensemble-expanded",
     "video-approximate"
    ],
    "duplicateOf": null,
@@ -9168,6 +9278,12 @@
      "rule": "performer-split",
      "from": "Блага Видец со ГЗО",
      "to": "Блага Видец"
+    },
+    {
+     "field": "performer",
+     "rule": "ensemble-expanded",
+     "from": "со ГЗО",
+     "to": "со Голем забавен оркестар"
     }
    ],
    "id": "arrVocal-0178",
@@ -9744,7 +9860,7 @@
    "category": "arrVocal",
    "title": "Те изгубив",
    "composer": "Спрингфилд",
-   "performer": "Љ. Димитровска",
+   "performer": "Љупка Димитровска",
    "performerRole": "",
    "durationSec": 152,
    "durationRaw": "2.32",
@@ -9754,12 +9870,21 @@
    "video": null,
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 202,
-   "flags": [],
+   "flags": [
+    "name-unified"
+   ],
    "duplicateOf": null,
-   "textFixes": [],
+   "textFixes": [
+    {
+     "field": "performer",
+     "rule": "name-unified",
+     "from": "Љ. Димитровска",
+     "to": "Љупка Димитровска"
+    }
+   ],
    "id": "arrVocal-0201",
    "warnCount": 0,
-   "search": "те изгубив љ. димитровска спрингфилд з-479/2 te izgubiv lj. dimitrovska springfild z-479/2"
+   "search": "те изгубив љупка димитровска спрингфилд з-479/2 te izgubiv ljupka dimitrovska springfild z-479/2"
   },
   {
    "category": "arrVocal",
@@ -10202,7 +10327,7 @@
    "category": "arrVocal",
    "title": "Зимски здив",
    "composer": "Димитар Масевски",
-   "performer": "ГЗО на Радио Скопје",
+   "performer": "Голем забавен оркестар на Радио Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -10222,12 +10347,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ГЗО на РС",
-     "to": "ГЗО на Радио Скопје"
+     "to": "Голем забавен оркестар на Радио Скопје"
     }
    ],
    "id": "arrVocal-0219",
    "warnCount": 0,
-   "search": "зимски здив гзо на радио скопје димитар масевски аз-60/2 zimski zdiv gzo na radio skopje dimitar masevski az-60/2"
+   "search": "зимски здив голем забавен оркестар на радио скопје димитар масевски аз-60/2 zimski zdiv golem zabaven orkestar na radio skopje dimitar masevski az-60/2"
   },
   {
    "category": "arrVocal",
@@ -11287,7 +11412,7 @@
    "category": "arrVocal",
    "title": "Што е љубов",
    "composer": "Кол Портер",
-   "performer": "ГЗО на Радио Скопје",
+   "performer": "Голем забавен оркестар на Радио Скопје",
    "performerRole": "",
    "durationSec": null,
    "durationRaw": "",
@@ -11314,12 +11439,12 @@
      "field": "performer",
      "rule": "ensemble-expanded",
      "from": "ГЗО на РС",
-     "to": "ГЗО на Радио Скопје"
+     "to": "Голем забавен оркестар на Радио Скопје"
     }
    ],
    "id": "arrVocal-0260",
    "warnCount": 0,
-   "search": "што е љубов гзо на радио скопје кол портер аз-50/16 shto e ljubov gzo na radio skopje kol porter az-50/16"
+   "search": "што е љубов голем забавен оркестар на радио скопје кол портер аз-50/16 shto e ljubov golem zabaven orkestar na radio skopje kol porter az-50/16"
   }
  ]
 }

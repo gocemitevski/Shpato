@@ -7,7 +7,7 @@
    "arrThemes": 43,
    "arrVocal": 260
   },
-  "notes": 518,
+  "notes": 535,
   "videos": 126,
   "new": 11,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
@@ -57,6 +57,18 @@
    "field": "performer",
    "raw": "Љупка Димитровска (со ревиски оркестар на РТВ Љубљана, ар. Никица Калоѓера)",
    "normalized": "Љупка Димитровска"
+  },
+  {
+   "id": "vocal-0009",
+   "category": "vocal",
+   "title": "Даниела",
+   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 10,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "со ревиски оркестар на РТВ Љубљана, ар. Никица Калоѓера",
+   "normalized": "со ревиски оркестар на Радио-телевизија Љубљана, ар. Никица Калоѓера"
   },
   {
    "id": "vocal-0017",
@@ -132,6 +144,18 @@
    "title": "Кога пеам, кога љубам",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 30,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "со ГО на РТ Љубљана",
+   "normalized": "со ГО на Радио-телевизија Љубљана"
+  },
+  {
+   "id": "vocal-0029",
+   "category": "vocal",
+   "title": "Кога пеам, кога љубам",
+   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 30,
    "rule": "video-approximate",
    "severity": "info",
    "raw": "2:40",
@@ -143,11 +167,35 @@
    "title": "Лени",
    "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 33,
-   "rule": "performer-split",
+   "rule": "abbreviation-normalized",
    "severity": "info",
    "field": "performer",
    "raw": "Диме Поповски (со ревиски оркестар на РТ Загреб, арр. Миливој Керблер)",
+   "normalized": "Диме Поповски (со ревиски оркестар на РТ Загреб, ар. Миливој Керблер)"
+  },
+  {
+   "id": "vocal-0032",
+   "category": "vocal",
+   "title": "Лени",
+   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 33,
+   "rule": "performer-split",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Диме Поповски (со ревиски оркестар на РТ Загреб, ар. Миливој Керблер)",
    "normalized": "Диме Поповски"
+  },
+  {
+   "id": "vocal-0032",
+   "category": "vocal",
+   "title": "Лени",
+   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 33,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "со ревиски оркестар на РТ Загреб, ар. Миливој Керблер",
+   "normalized": "со ревиски оркестар на Радио-телевизија Загреб, ар. Миливој Керблер"
   },
   {
    "id": "vocal-0035",
@@ -160,6 +208,18 @@
    "field": "performer",
    "raw": "Диме Поповски (со Џез оркестарот на РТ Белград)",
    "normalized": "Диме Поповски"
+  },
+  {
+   "id": "vocal-0035",
+   "category": "vocal",
+   "title": "Ми вети ти",
+   "sourceFile": "Vokalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 36,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "со Џез оркестарот на РТ Белград",
+   "normalized": "со Џез оркестарот на Радио-телевизија Белград"
   },
   {
    "id": "vocal-0038",
@@ -183,7 +243,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "сним. 1961, ГЗО на РС",
-   "normalized": "сним. 1961, ГЗО на Радио Скопје"
+   "normalized": "сним. 1961, Голем забавен оркестар на Радио Скопје"
   },
   {
    "id": "vocal-0038",
@@ -451,6 +511,18 @@
    "normalized": "Кирил Рибарски"
   },
   {
+   "id": "instrumental-0007",
+   "category": "instrumental",
+   "title": "Главна тема",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 8,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "тромбон ЗО",
+   "normalized": "тромбон Забавен оркестар"
+  },
+  {
    "id": "instrumental-0008",
    "category": "instrumental",
    "title": "Гитарата ја оплакува смртта на Муриета",
@@ -644,10 +716,22 @@
    "title": "Индекс и љубов",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 23,
-   "rule": "performer-split",
+   "rule": "abbreviation-normalized",
    "severity": "info",
    "field": "performer",
    "raw": "Голем забавен оркестар (сним. 1959г)",
+   "normalized": "Голем забавен оркестар (сним. 1959)"
+  },
+  {
+   "id": "instrumental-0022",
+   "category": "instrumental",
+   "title": "Индекс и љубов",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 23,
+   "rule": "performer-split",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Голем забавен оркестар (сним. 1959)",
    "normalized": "Голем забавен оркестар"
   },
   {
@@ -800,10 +884,22 @@
    "title": "Ми вети ти (џез верзија)",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 37,
-   "rule": "performer-split",
+   "rule": "abbreviation-normalized",
    "severity": "info",
    "field": "performer",
    "raw": "Трио Лабиш, (арр. Зоран Павловски)",
+   "normalized": "Трио Лабиш, (ар. Зоран Павловски)"
+  },
+  {
+   "id": "instrumental-0036",
+   "category": "instrumental",
+   "title": "Ми вети ти (џез верзија)",
+   "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
+   "sourceLine": 37,
+   "rule": "performer-split",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Трио Лабиш, (ар. Зоран Павловски)",
    "normalized": "Трио Лабиш"
   },
   {
@@ -923,7 +1019,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "ЗО на РТС",
-   "normalized": "ЗО на Радио-телевизија Скопје"
+   "normalized": "Забавен оркестар на Радио-телевизија Скопје"
   },
   {
    "id": "instrumental-0045",
@@ -1181,7 +1277,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "ГЗО на РС",
-   "normalized": "ГЗО на Радио Скопје"
+   "normalized": "Голем забавен оркестар на Радио Скопје"
   },
   {
    "id": "arrThemes-0005",
@@ -1270,10 +1366,22 @@
    "title": "Четири такта",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 10,
-   "rule": "performer-split",
+   "rule": "abbreviation-normalized",
    "severity": "info",
    "field": "performer",
    "raw": "Томе Николовски, сакс со ТО",
+   "normalized": "Томе Николовски, саксофон со ТО"
+  },
+  {
+   "id": "arrThemes-0009",
+   "category": "arrThemes",
+   "title": "Четири такта",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 10,
+   "rule": "performer-split",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Томе Николовски, саксофон со ТО",
    "normalized": "Томе Николовски"
   },
   {
@@ -1285,8 +1393,8 @@
    "rule": "ensemble-expanded",
    "severity": "info",
    "field": "performer",
-   "raw": "сакс со ТО",
-   "normalized": "сакс со Танцов оркестар"
+   "raw": "саксофон со ТО",
+   "normalized": "саксофон со Танцов оркестар"
   },
   {
    "id": "arrThemes-0010",
@@ -1365,7 +1473,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "ГЗО на РС",
-   "normalized": "ГЗО на Радио Скопје"
+   "normalized": "Голем забавен оркестар на Радио Скопје"
   },
   {
    "id": "arrThemes-0016",
@@ -1400,7 +1508,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "ГЗО на РС",
-   "normalized": "ГЗО на Радио Скопје"
+   "normalized": "Голем забавен оркестар на Радио Скопје"
   },
   {
    "id": "arrThemes-0018",
@@ -1508,6 +1616,18 @@
    "normalized": "Зоран Јовановиќ"
   },
   {
+   "id": "arrThemes-0022",
+   "category": "arrThemes",
+   "title": "Мојата драга Валентина",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 23,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "кларинет со ЗО",
+   "normalized": "кларинет со Забавен оркестар"
+  },
+  {
    "id": "arrThemes-0023",
    "category": "arrThemes",
    "title": "Настоен сум за љубов",
@@ -1552,7 +1672,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "ГЗО на РС",
-   "normalized": "ГЗО на Радио Скопје"
+   "normalized": "Голем забавен оркестар на Радио Скопје"
   },
   {
    "id": "arrThemes-0024",
@@ -2159,10 +2279,22 @@
    "title": "Четири такта",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
    "sourceLine": 44,
-   "rule": "performer-split",
+   "rule": "abbreviation-normalized",
    "severity": "info",
    "field": "performer",
    "raw": "Томе Николовски, сакс",
+   "normalized": "Томе Николовски, саксофон"
+  },
+  {
+   "id": "arrThemes-0043",
+   "category": "arrThemes",
+   "title": "Четири такта",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_temi_od_drugi_avtori.csv",
+   "sourceLine": 44,
+   "rule": "performer-split",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Томе Николовски, саксофон",
    "normalized": "Томе Николовски"
   },
   {
@@ -3036,6 +3168,18 @@
    "normalized": ""
   },
   {
+   "id": "arrVocal-0077",
+   "category": "arrVocal",
+   "title": "Љубовнта е син",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 78,
+   "rule": "name-unified",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Љ. Димитровска",
+   "normalized": "Љупка Димитровска"
+  },
+  {
    "id": "arrVocal-0078",
    "category": "arrVocal",
    "title": "Љубов ти сладок сон",
@@ -3341,6 +3485,18 @@
    "severity": "info",
    "raw": "",
    "normalized": "3:17"
+  },
+  {
+   "id": "arrVocal-0094",
+   "category": "arrVocal",
+   "title": "Млади луди години",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 95,
+   "rule": "name-unified",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Б. Ноев",
+   "normalized": "Божидар Ноев"
   },
   {
    "id": "arrVocal-0094",
@@ -3693,6 +3849,18 @@
    "normalized": "Љ. Димитровска"
   },
   {
+   "id": "arrVocal-0121",
+   "category": "arrVocal",
+   "title": "Нешто глупаво",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 122,
+   "rule": "name-unified",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Љ. Димитровска",
+   "normalized": "Љупка Димитровска"
+  },
+  {
    "id": "arrVocal-0122",
    "category": "arrVocal",
    "title": "Ноќеска шумеа брезите",
@@ -3746,6 +3914,18 @@
    "severity": "info",
    "raw": "",
    "normalized": ""
+  },
+  {
+   "id": "arrVocal-0129",
+   "category": "arrVocal",
+   "title": "Охридски гердан",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 130,
+   "rule": "name-unified",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Љ. Димитровска",
+   "normalized": "Љупка Димитровска"
   },
   {
    "id": "arrVocal-0130",
@@ -4399,6 +4579,18 @@
    "title": "Село мое",
    "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
    "sourceLine": 179,
+   "rule": "ensemble-expanded",
+   "severity": "info",
+   "field": "performer",
+   "raw": "со ГЗО",
+   "normalized": "со Голем забавен оркестар"
+  },
+  {
+   "id": "arrVocal-0178",
+   "category": "arrVocal",
+   "title": "Село мое",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 179,
    "rule": "missing-duration",
    "severity": "info",
    "raw": "",
@@ -4741,6 +4933,18 @@
    "normalized": ""
   },
   {
+   "id": "arrVocal-0201",
+   "category": "arrVocal",
+   "title": "Те изгубив",
+   "sourceFile": "Aranzhmani_na_Dragan_Gjakonovski_Shpato_na_vokalni_tvorbi_od_drugi_avtori.csv",
+   "sourceLine": 202,
+   "rule": "name-unified",
+   "severity": "info",
+   "field": "performer",
+   "raw": "Љ. Димитровска",
+   "normalized": "Љупка Димитровска"
+  },
+  {
    "id": "arrVocal-0202",
    "category": "arrVocal",
    "title": "Ти не си вистинска",
@@ -4987,7 +5191,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "ГЗО на РС",
-   "normalized": "ГЗО на Радио Скопје"
+   "normalized": "Голем забавен оркестар на Радио Скопје"
   },
   {
    "id": "arrVocal-0219",
@@ -5870,7 +6074,7 @@
    "severity": "info",
    "field": "performer",
    "raw": "ГЗО на РС",
-   "normalized": "ГЗО на Радио Скопје"
+   "normalized": "Голем забавен оркестар на Радио Скопје"
   },
   {
    "id": "arrVocal-0260",
