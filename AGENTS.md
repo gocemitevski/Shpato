@@ -387,8 +387,8 @@ already has a video is never overwritten or re-searched. The finder reuses
 `to_latin()` from `build.py` rather than growing a third transliteration.
 
 Where the pass over the 361 works that were still unlinked left the catalogue:
-126 of 431 works carry a link, 73 of them machine-found — vocal 34/73,
-instrumental 8/55, arrThemes 2/43, arrVocal 82/260 — with the rest of the
+127 of 431 works carry a link, 73 of them machine-found — vocal 34/73,
+instrumental 9/55, arrThemes 2/43, arrVocal 82/260 — with the rest of the
 catalogue offered as a YouTube search from the drawer instead. A machine-found
 link that is not within `VIDEO_DURATION_TOLERANCE` of the catalogue's timing is
 marked, so the reader is told. The five links an earlier re-audit refused are

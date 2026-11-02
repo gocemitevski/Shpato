@@ -8,8 +8,8 @@
    "arrVocal": 260
   },
   "notes": 533,
-  "videos": 126,
-  "new": 11,
+  "videos": 127,
+  "new": 12,
   "source": "https://issuu.com/mareperotrpovski/docs/spato_kompaktna_verzija"
  },
  "records": [
@@ -2778,7 +2778,7 @@
    "signature": "АЗ-54/17",
    "signatureRaw": "АЗ-54/17",
    "collection": "АЗ",
-   "video": null,
+   "video": "cCkUkhhZB34",
    "sourceFile": "Instrumentalni_kompozicii_od_Dragan_Gjakonovski_Shpato.csv",
    "sourceLine": 35,
    "flags": [
@@ -2795,7 +2795,10 @@
    ],
    "id": "instrumental-0034",
    "warnCount": 0,
-   "search": "мамбо гарача никола ципушев аз-54/17 mambo garacha nikola cipushev az-54/17"
+   "search": "мамбо гарача никола ципушев аз-54/17 mambo garacha nikola cipushev az-54/17",
+   "videoLengthSec": 250,
+   "videoDeltaSec": 10,
+   "isNew": true
   },
   {
    "category": "instrumental",
