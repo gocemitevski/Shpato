@@ -184,6 +184,24 @@ for is not established. A spelling-out that changes a `performer` has to reach
 `sources/removals.csv` too, whose `performer` column is a guard on the row it
 drops — otherwise the drop stops applying and the catalogue grows a record.
 
+The two volumes of his own compositions carry no `автор` column at all — their
+header is `наслов,изведувач,минути,сигнатура` — so their author cells are empty
+not because the value is missing but because the volume *is* the author. That is
+a presentation gap, not a data one, so the app fills it: `adoptData()` sets
+`composer` on every `vocal`/`instrumental` record that has none (`SELF_AUTHOR`,
+which tracks `app.title`'s spelling, Cyrillic in both languages because a name
+is data). One fill there, before anything renders, is what keeps the table, the
+drawer, the composer facet, sort-by-Автор and both exports reading the same
+value; a label in the cell alone would sort and filter as empty and leave
+`data/catalog.json` disagreeing with what is downloaded. The same pass appends
+the name and its `toLatin()` form to `r.search`, because `build_search()` bakes
+that haystack and `matchesQuery()` never reads the fields. The 12 `+++` rows
+stay blank: the build blanks that placeholder on purpose and flags it
+`composer-placeholder`, which is a different statement from "this volume has no
+author column". The drawer's «Ист автор» is suppressed for `SELF_AUTHOR`, whose
+list would be every other work in the catalogue rather than a cross-reference —
+the same condition as the fill.
+
 ## YouTube links
 
 `sources/youtube.csv` (`id,title,video,found,lengthSec,added`) is the link map,

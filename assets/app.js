@@ -13,12 +13,31 @@
   var DATA_MIN = 0;
   var DATA_MAX = 0;
 
+  // The vocal and instrumental volumes are his own compositions, and they are
+  // the two that carry no автор column in the export — which is exactly why
+  // their author cells would be empty: the value is not missing, it is the
+  // volume itself. The build keeps the export's wording, so the fill happens
+  // here, once, before anything reads a record — which is what keeps the
+  // table, the drawer, the facet, the sort and the exports agreeing instead
+  // of the table alone knowing something the rest does not. Cyrillic, like
+  // every other composer in the payload; `app.title` carries this spelling.
+  var SELF_AUTHOR = "Драган Ѓаконовски – Шпато";
+
   // Called with the catalogue in hand, before anything is rendered from it. The
   // duration bounds are the longest work's, rounded up to half a minute, and
   // they are the two ends of the range slider.
   function adoptData() {
     CATALOG = window.CATALOG || { meta: {}, records: [] };
     RECORDS = CATALOG.records;
+    RECORDS.forEach(function (r) {
+      if (r.composer) return;
+      if (r.category !== "vocal" && r.category !== "instrumental") return;
+      r.composer = SELF_AUTHOR;
+      // The haystack is baked by the build and matchesQuery() reads it rather
+      // than the fields, so the name has to reach it too, or the search box
+      // would contradict the column it sits above.
+      r.search += " " + SELF_AUTHOR.toLowerCase() + " " + toLatin(SELF_AUTHOR);
+    });
     META = CATALOG.meta;
     NOTES = window.NOTES || null;
     var max = 0;
@@ -635,9 +654,14 @@
     related += relatedBlock("detail.samePerformer", r.performer ? RECORDS.filter(function (x) {
       return x.id !== r.id && x.performer === r.performer;
     }) : []);
-    related += relatedBlock("detail.sameComposer", r.composer ? RECORDS.filter(function (x) {
-      return x.id !== r.id && x.composer === r.composer;
-    }) : []);
+    // «Ист автор» is a cross-reference between works. For the catalogue's own
+    // author there is nothing to cross-reference to — the list would be every
+    // other work here — so his own rows are the one exempt case, and the
+    // condition is the same one the boot fill uses.
+    related += relatedBlock("detail.sameComposer",
+      r.composer && r.composer !== SELF_AUTHOR ? RECORDS.filter(function (x) {
+        return x.id !== r.id && x.composer === r.composer;
+      }) : []);
 
     document.getElementById("drawer-content").innerHTML =
       "<h2 id=\"drawer-title\" tabindex=\"-1\">" + esc(r.title) + "</h2>" +
