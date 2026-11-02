@@ -902,7 +902,7 @@ def main():
     import minify
     minify.main([])
 
-    expected = {"vocal": 74, "instrumental": 55, "arrThemes": 43, "arrVocal": 261}
+    expected = {"vocal": 74, "instrumental": 55, "arrThemes": 43, "arrVocal": 260}
     print("Built {} records: {}".format(len(all_records), counters))
     print("Expected:            {}".format(expected))
     print("Notes: {}".format(len(notes)))

@@ -151,6 +151,15 @@ the weakest thing to key a deletion on, so the other three columns are guards �
 checked against the record and reported, never applied, when they disagree — and
 a row is only ever dropped when another row shares its `duplicate_key()`.
 
+The file is header-only at the moment: the one row it dropped (the duplicate
+`Гарача` in the instrumental volume) has since been deleted from the source CSV
+itself, so there is nothing left for the build to drop and no `duplicate-dropped`
+note either — the record simply isn't in the export we hold. Deleting a row from
+a source **shifts every later id in that category**, which is what the generated
+catalog warns about through the `title` guard in `sources/youtube.csv`; re-point
+the map by the same shift rather than by matching titles, because a category
+holds more than one work with the same name.
+
 Every normalization must be recorded in the notes pipeline (`textFixes` /
 `flags`, with a `SEVERITY` entry) or it is invisible in the Забелешки tab.
 Never "fix" a title or name silently. A dropped row is recorded there too, under
