@@ -1041,7 +1041,12 @@ def write_catalog_page(records, meta):
         "</head>",
         '<body class="catalog-doc">',
         '  <header class="site-header">',
-        '    <a class="brand" href="./">',
+        # The app links the root, because that is where Pages serves it. This
+        # page is also read from disk, where "./" is a directory listing, and it
+        # carries no script to tell the difference — so it names the document
+        # itself. On the web that is the same page index.html's canonical folds
+        # into the root.
+        '    <a class="brand" href="index.html">',
         '      <span class="brand-mark" aria-hidden="true">',
         '        <img src="assets/images/Dragan-Gjakonovski-Shpato-Icon-168.webp" alt="" width="168" height="168">',
         "      </span>",
@@ -1056,7 +1061,7 @@ def write_catalog_page(records, meta):
         "    <h1>{}</h1>".format(esc(PAGE_TEXT["heading"])),
         '    <p class="doc-lead">{}</p>'.format(
             esc(PAGE_TEXT["lead"].format(n=meta["total"]))),
-        '    <p class="doc-cta"><a class="btn" href="./">{}</a></p>'.format(
+        '    <p class="doc-cta"><a class="btn" href="index.html">{}</a></p>'.format(
             esc(PAGE_TEXT["openApp"])),
         '    <nav class="doc-toc" aria-labelledby="doc-contents">',
         '      <p class="doc-toc-title" id="doc-contents">{}</p>'.format(
@@ -1069,7 +1074,7 @@ def write_catalog_page(records, meta):
         lines.extend("    " + line for line in section.splitlines())
         lines.append("")
     lines.extend([
-        '    <p class="doc-cta"><a class="btn" href="./">{}</a></p>'.format(
+        '    <p class="doc-cta"><a class="btn" href="index.html">{}</a></p>'.format(
             esc(PAGE_TEXT["openApp"])),
         "  </main>",
         "",
@@ -1078,7 +1083,7 @@ def write_catalog_page(records, meta):
         "      {}".format(esc(PAGE_TEXT["credit"])),
         '      <a href="https://www.gocemitevski.com" target="_blank" rel="noopener">{}</a>.'.format(
             esc(PAGE_TEXT["authorName"])),
-        '      <a class="link-btn" href="./#tab=privacy">{}</a>'.format(
+        '      <a class="link-btn" href="index.html#tab=privacy">{}</a>'.format(
             esc(PAGE_TEXT["privacy"])),
         "    </p>",
         "  </footer>",

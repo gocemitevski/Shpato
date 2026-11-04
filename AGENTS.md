@@ -506,7 +506,10 @@ Console is what measures it — and makes no third-party request; the only other
 host in it is the credit link. It is its own canonical URL (`/catalog.html`) and
 stays self-canonical: the app keeps the root it is shared by, and canonicalising
 either to the other would drop one of them from the index. The app links it from
-the footer, which is the crawl path.
+the footer, which is the crawl path. Its links back name `index.html` rather than
+`./`: the page is read from disk too, where `./` is a directory listing and there
+is no script here to tell the difference; on the web the app's canonical folds
+that URL into the root.
 
 The rows are not links: there is no per-work URL yet, and the title cell is
 where one goes when there is. The tables are the app's, minus the pointer and
@@ -789,6 +792,10 @@ own.
   the field's `.78rem` and would otherwise zoom the notes tab.
 - App state is serialised into the location hash (`#tab=…&q=…`) with
   `history.replaceState`, which works on `file://`.
+- The brand links to `./`, because the root is the URL the app is shared by. On
+  disk that is the directory listing, and a static href cannot be both, so the
+  boot re-points it at `index.html` when `location.protocol` is `file:` — the
+  same branch, and the same reason, as `CAN_EMBED`.
 - The drawer is a modal: `setPageInert()` marks every `body > *` except
   `#drawer` and `#player` inert, and focus returns to the row that opened it.
 - There is exactly one `<iframe>` in the app, in `#player-frame`, created on

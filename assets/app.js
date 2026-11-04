@@ -1369,6 +1369,12 @@
   window.SHPATO_STARTED = true;
   clearLegacyAnalytics();
   syncThemeColor();
+  // The brand points at "./", which is the site root on the web and the
+  // directory listing when the same page is opened from disk. A static href
+  // cannot be both, and this is the branch that can tell.
+  if (location.protocol === "file:") {
+    document.getElementById("home-link").href = "index.html";
+  }
   deserializeShell();
   syncFiltersHandle();
   showView(state.tab);
