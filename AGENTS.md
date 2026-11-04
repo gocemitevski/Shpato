@@ -459,6 +459,14 @@ The photograph also carries `about.photoAlt`, set through `data-i18n-alt` like
 the rest of the strings, so a screen reader and an image search get a
 description of the scene the caption credits.
 
+`index.html` carries a JSON-LD `Person`/`WebSite`/`CollectionPage` block for
+search engines. It restates these facts — name, dates, places, roles, the
+photograph, and the references as `sameAs` — and nothing generates it, so it has
+to move with `about.*` whenever one of them changes. Its URLs are absolute, like
+the OG tags, and follow the domain with them. It deliberately holds no counts:
+the app owns those, and a number written into the HTML would go stale without
+anything noticing.
+
 ## Analytics and the privacy notice
 
 `index.html` carries the Matomo tracker (`analytics.gocemitevski.com`, site `3`)

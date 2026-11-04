@@ -87,6 +87,56 @@
   <meta name="twitter:image" content="https://shpato.gocemitevski.com/assets/images/Dragan-Gjakonovski-Shpato-Cover.png">
   <meta name="twitter:image:alt" content="Портрет на Драган Ѓаконовски – Шпато во син прстен, со насловот и адресата на дигиталниот каталог">
 
+  <!-- Structured data. Every fact here is one the About tab states, and every
+       sameAs is a page that identifies the person rather than merely mentions
+       him; move this block together with about.* in assets/i18n.js when either
+       changes. No item counts are given: a number written here would go stale
+       without anything noticing, and the app, not this file, owns the counts. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://shpato.gocemitevski.com/#person",
+        "name": "Драган Ѓаконовски – Шпато",
+        "alternateName": ["Шпато", "Dragan Gjakonovski – Shpato", "Dragan Gjakonovski-Špato", "Dragan Đakonovski"],
+        "description": "Македонски композитор, аранжер, диригент и џез-музичар, основоположник на македонската забавна и џез-музика.",
+        "birthDate": "1931-03-11",
+        "birthPlace": { "@type": "Place", "name": "Скопје" },
+        "deathDate": "1987-01-03",
+        "deathPlace": { "@type": "Place", "name": "Скопје" },
+        "jobTitle": ["композитор", "аранжер", "диригент", "џез-музичар"],
+        "image": "https://shpato.gocemitevski.com/assets/images/Dragan-Gjakonovski-Shpato-About.jpg",
+        "url": "https://shpato.gocemitevski.com/",
+        "sameAs": [
+          "https://mk.wikipedia.org/wiki/%D0%94%D1%80%D0%B0%D0%B3%D0%B0%D0%BD_%D0%83%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B8_-_%D0%A8%D0%BF%D0%B0%D1%82%D0%BE",
+          "https://sokom.mk/mk/%D0%B4%D1%80%D0%B0%D0%B3%D0%B0%D0%BD-%D1%93%D0%B0%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B8-%D1%88%D0%BF%D0%B0%D1%82%D0%BE/",
+          "https://eprints.ugd.edu.mk/13123/",
+          "https://js.ugd.edu.mk/index.php/YFMA/article/view/2916"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://shpato.gocemitevski.com/#website",
+        "url": "https://shpato.gocemitevski.com/",
+        "name": "Драган Ѓаконовски – Шпато · Дигитален каталог",
+        "inLanguage": ["mk", "en"],
+        "about": { "@id": "https://shpato.gocemitevski.com/#person" }
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://shpato.gocemitevski.com/#catalogue",
+        "url": "https://shpato.gocemitevski.com/",
+        "name": "Дигитален каталог на делата на Драган Ѓаконовски – Шпато",
+        "description": "Каталог на делата на Драган Ѓаконовски – Шпато во фонотеката на МРТВ, со изведувачи, времетраења, сигнатури и снимки.",
+        "inLanguage": "mk",
+        "isPartOf": { "@id": "https://shpato.gocemitevski.com/#website" },
+        "about": { "@id": "https://shpato.gocemitevski.com/#person" }
+      }
+    ]
+  }
+  </script>
 
   <script>
     /* Apply the saved theme before first paint to avoid a flash, and hold the
