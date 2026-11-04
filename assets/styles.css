@@ -1340,6 +1340,72 @@ code.raw {
 body.player-open .table-wrap { padding-bottom: 18rem; }
 body.player-open .view { padding-bottom: 18rem; }
 
+/* ------------------------------------------------------- static catalogue */
+/* catalog.html: the same catalogue as one document, written by the build so a
+   crawler that runs no scripts still reads the works. It is not the app, so it
+   is not a pinned grid: the document scrolls, the footer is its last row, and
+   nothing on it assumes a click. The tables are the app's, minus the pointer
+   and the hover that there opened a drawer. */
+.catalog-doc main {
+  width: 100%;
+  max-width: 78rem;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+.catalog-doc h1 {
+  margin: 0 0 .75rem;
+  font-size: clamp(1.5rem, 3.6vw, 2.2rem);
+  line-height: 1.2;
+  letter-spacing: -.02em;
+}
+/* The app's brand is its <h1>; here the page's one <h1> is the list's, so the
+   brand is plain text with the same two sizes. */
+.catalog-doc .brand-name { font-size: clamp(1rem, 2.2vw, 1.3rem); font-weight: 800; letter-spacing: -.02em; }
+.catalog-doc .brand-sub { display: block; margin-top: .1rem; color: var(--muted); font-size: .82rem; }
+
+.doc-lead { max-width: 70ch; margin: 0 0 1.25rem; color: var(--muted); }
+.doc-cta { margin: 1.25rem 0 0; }
+.catalog-doc .btn { text-decoration: none; }
+.doc-toc { margin: 2rem 0 0; }
+.doc-toc-title {
+  margin: 0 0 .35rem;
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.doc-toc ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem 1.1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.doc-toc a { color: var(--accent); }
+.doc-count { color: var(--muted); font-weight: 500; font-variant-numeric: tabular-nums; }
+
+.doc-section h2 { margin: 2.5rem 0 .75rem; font-size: 1.15rem; }
+/* The card pans sideways with no cue: the app's cue needs a script to say
+   which sides still have table left, and this page has none. The table's
+   min-width keeps the columns readable instead of squeezing them onto a phone,
+   and a plain horizontal scroll is the standard answer for a wide table. */
+.doc-table {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: var(--shadow-sm);
+}
+.doc-table .catalog-table { min-width: 38rem; }
+.doc-table .catalog-table tbody tr { cursor: auto; }
+.doc-table .catalog-table tbody tr:hover { background: transparent; }
+.doc-table .catalog-table tbody tr:last-child th,
+.doc-table .catalog-table tbody tr:last-child td { border-bottom: 0; }
+.doc-table .cell-title { font-weight: 500; }
+
 /* --------------------------------------------------------------- footer */
 .site-footer {
   /* A row of the shell, so nothing bleeds and the pane keeps its own height.
@@ -1414,4 +1480,7 @@ body.player-open .view { padding-bottom: 18rem; }
   body { background: #fff; }
   /* The cue belongs to a card that can be panned; paper cannot. */
   .pan-cue { display: none; }
+  /* A document prints whole: the static list's tables must not be clipped to
+     whatever the screen's overflow box showed. */
+  .doc-table { overflow: visible; }
 }

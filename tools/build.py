@@ -8,6 +8,8 @@ and writes:
   data/catalog.js      - same, as a global for file:// usage
   data/notes.json      - every fix / flag applied, for transparency
   data/notes.js        - same, as a global
+  catalog.html         - the same catalogue as one plain document, for
+                         crawlers that do not run scripts
 
 It also merges sources/youtube.csv, the record -> YouTube video map (columns
 `id,title,video,found,lengthSec,added`; see the README), into each record's
@@ -19,6 +21,7 @@ Only the Python 3 standard library is used.
 
 import csv
 import datetime
+import html
 import json
 import os
 import re
@@ -824,6 +827,270 @@ def drop_rows(records, removals, problems):
 
 
 # ---------------------------------------------------------------------------
+# The static catalogue page
+# ---------------------------------------------------------------------------
+# index.html is an app: the works arrive only after app.js fetches
+# data/catalog.js and builds the table, so a crawler that runs no scripts reads
+# a shell and nothing else. This page is the same catalogue as one plain
+# document, generated from the records above so it cannot drift from them, and
+# committed like data/*.
+#
+# Its Macedonian prose is the one place the project's "every string comes from
+# assets/i18n.js" rule cannot hold: the page has to carry text with no script to
+# put it there. The labels below mirror the mk values of app.title, app.subtitle,
+# app.credit, cat.*, col.*, privacy.link and common.none; change both together.
+# Everything else — titles, performers, composers, durations, signatures and the
+# counts — is read from the data, so a number written here cannot go stale.
+SITE = "https://shpato.gocemitevski.com"
+PAGE_FILE = "catalog.html"
+PAGE_TEXT = {
+    "title": "Делата на Драган Ѓаконовски – Шпато во фонотеката на МРТВ",
+    "description": (
+        "Целосен список на делата на Драган Ѓаконовски – Шпато во фонотеката "
+        "на МРТВ, по категорија, со изведувач, времетраење и сигнатура."
+    ),
+    "name": "Драган Ѓаконовски – Шпато",
+    "subtitle": "Дигитален каталог",
+    "heading": "Делата на Драган Ѓаконовски – Шпато",
+    "lead": (
+        "Ова е целосниот список на делата на Драган Ѓаконовски – Шпато во "
+        "фонотеката на Македонската радио-телевизија, подреден по категорија — "
+        "вкупно {n}. Податоците се преземени од монографијата на Ванчо "
+        "Димитров и се истите што ги прикажува интерактивниот каталог, каде "
+        "што може да се пребарува, филтрира и слуша снимка."
+    ),
+    "openApp": "Отвори го интерактивниот каталог",
+    "contents": "Содржина",
+    "columns": ["Наслов", "Изведувач", "Автор", "Времетраење", "Сигнатура"],
+    "caption": "{} во фонотеката на МРТВ",
+    "credit": "Изработено од",
+    "authorName": "Гоце Митевски",
+    "privacy": "Приватност",
+    "none": "—",
+    "selfAuthor": "Драган Ѓаконовски – Шпато",
+    "categories": {
+        "vocal": "Вокални композиции",
+        "instrumental": "Инструментални композиции",
+        "arrThemes": "Аранжмани на теми од други автори",
+        "arrVocal": "Аранжмани на вокални творби од други автори",
+    },
+}
+
+# The theme line index.html runs before first paint, minus the two boot classes:
+# the page has no app to wait for. Duplicated rather than shared, because
+# sharing it would cost a request and this is six lines that must run
+# synchronously in the head. Change both together.
+PAGE_THEME_SCRIPT = """  <script>
+    /* Apply the saved theme before first paint, so a reader who chose the dark
+       theme in the app does not get a white flash here. */
+    (function () {
+      try {
+        var saved = localStorage.getItem("shpato-theme");
+        var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {}
+    })();
+  </script>"""
+
+# The ordering app.js uses by default: the Macedonian alphabet in order, then
+# Latin, with a space ahead of punctuation and digits ahead of both. Ported from
+# compareText()/collationRank() so the static list and the app's first column
+# agree — the two browsers that disagreed once are the reason that comparator
+# exists at all. Keep the two in step.
+MK_ORDER = "абвгдѓежзѕијклљмнњопрстќуфхцчџш"
+LATIN_ORDER = "abcdefghijklmnopqrstuvwxyz"
+DIGIT_ORDER = "0123456789"
+LATIN_FOLD = {
+    "à": "a", "á": "a", "â": "a", "ä": "a", "å": "a", "æ": "ae", "ç": "c",
+    "è": "e", "é": "e", "ê": "e", "ë": "e", "ì": "i", "í": "i", "î": "i",
+    "ï": "i", "ñ": "n", "ò": "o", "ó": "o", "ô": "o", "ö": "o", "ø": "o",
+    "ù": "u", "ú": "u", "û": "u", "ü": "u", "ý": "y", "š": "s", "ž": "z",
+    "č": "c", "ć": "c", "đ": "d",
+}
+
+
+def esc(value):
+    return html.escape(value or "", quote=False)
+
+
+def collate_fold(text):
+    return "".join(LATIN_FOLD.get(ch, ch) for ch in (text or "").lower())
+
+
+def collation_rank(ch):
+    index = MK_ORDER.find(ch)
+    if index != -1:
+        return index
+    index = LATIN_ORDER.find(ch)
+    if index != -1:
+        return 60 + index
+    index = DIGIT_ORDER.find(ch)
+    if index != -1:
+        return 10 + index
+    if ch == " ":
+        return 1
+    if "\u0400" <= ch <= "\u04ff":
+        return 55
+    if ch < "\u0080":
+        return 2
+    return 90
+
+
+def collate_key(text):
+    folded = collate_fold(text)
+    return (tuple(collation_rank(ch) for ch in folded), len(folded), folded)
+
+
+def page_row(rec):
+    """One work as a table row: the title names the row, the rest are cells."""
+    composer = rec["composer"] or ""
+    if not composer and rec["category"] in ("vocal", "instrumental"):
+        # The two volumes of his own compositions carry no author column at all,
+        # so their cells are empty because the volume is the author. The app
+        # fills that in adoptData(); the static page has to fill it the same way
+        # or the column would contradict the table the reader came from.
+        composer = PAGE_TEXT["selfAuthor"]
+    duration = PAGE_TEXT["none"] if rec["durationSec"] is None else mmss(rec["durationSec"])
+    return (
+        '<tr><th scope="row" class="cell-title">{title}</th>'
+        '<td class="cell-perf">{performer}</td>'
+        '<td class="cell-comp">{composer}</td>'
+        '<td class="dur">{duration}</td>'
+        '<td class="sig">{signature}</td></tr>'
+    ).format(
+        title=esc(rec["title"]),
+        performer=esc(rec["performer"] or PAGE_TEXT["none"]),
+        composer=esc(composer),
+        duration=duration,
+        signature=esc(rec["signature"] or rec.get("signatureRaw") or PAGE_TEXT["none"]),
+    )
+
+
+def write_catalog_page(records, meta):
+    columns = "".join('<th scope="col">{}</th>'.format(esc(col))
+                      for col in PAGE_TEXT["columns"])
+    contents = []
+    sections = []
+    for source in SOURCES:
+        category = source["category"]
+        rows = [rec for rec in records if rec["category"] == category]
+        rows.sort(key=lambda rec: collate_key(rec["title"]))
+        label = PAGE_TEXT["categories"][category]
+        anchor = "cat-" + category
+        heading = "h-" + category
+        contents.append(
+            '<li><a href="#{anchor}">{label}</a>'
+            ' <span class="doc-count">{n}</span></li>'.format(
+                anchor=anchor, label=esc(label), n=len(rows)))
+        sections.append(
+            '<section class="doc-section" id="{anchor}" aria-labelledby="{heading}">\n'
+            '  <h2 id="{heading}">{label} <span class="doc-count">{n}</span></h2>\n'
+            '  <div class="doc-table">\n'
+            '    <table class="catalog-table">\n'
+            '      <caption class="visually-hidden">{caption}</caption>\n'
+            '      <thead><tr>{columns}</tr></thead>\n'
+            '      <tbody>\n{rows}\n      </tbody>\n'
+            '    </table>\n'
+            '  </div>\n'
+            '</section>\n'.format(
+                anchor=anchor, heading=heading, label=esc(label), n=len(rows),
+                caption=esc(PAGE_TEXT["caption"].format(label)),
+                columns=columns,
+                rows="\n".join("        " + page_row(rec) for rec in rows)))
+
+    title = esc(PAGE_TEXT["title"])
+    description = esc(PAGE_TEXT["description"])
+    url = SITE + "/" + PAGE_FILE
+    cover = SITE + "/assets/images/Dragan-Gjakonovski-Shpato-Cover.png"
+    lines = [
+        "<!doctype html>",
+        '<html lang="mk">',
+        "<head>",
+        '  <meta charset="utf-8">',
+        '  <meta name="viewport" content="width=device-width, initial-scale=1">',
+        "  <title>{}</title>".format(title),
+        '  <meta name="description" content="{}">'.format(description),
+        "  <!-- The catalogue as one plain document, so a crawler that runs no",
+        "       scripts still reads the works. It is its own page rather than a",
+        "       copy of the app: this one is canonical for this address, and the",
+        "       app stays canonical for the root it is shared by. -->",
+        '  <link rel="canonical" href="{}">'.format(url),
+        '  <meta name="robots" content="index, follow, max-image-preview:large">',
+        '  <meta property="og:type" content="website">',
+        '  <meta property="og:site_name" content="{}">'.format(esc(PAGE_TEXT["name"])),
+        '  <meta property="og:url" content="{}">'.format(url),
+        '  <meta property="og:title" content="{}">'.format(title),
+        '  <meta property="og:description" content="{}">'.format(description),
+        '  <meta property="og:locale" content="mk_MK">',
+        '  <meta property="og:image" content="{}">'.format(cover),
+        '  <meta property="og:image:type" content="image/png">',
+        '  <meta property="og:image:width" content="1920">',
+        '  <meta property="og:image:height" content="1080">',
+        '  <meta name="twitter:card" content="summary_large_image">',
+        '  <meta name="twitter:title" content="{}">'.format(title),
+        '  <meta name="twitter:description" content="{}">'.format(description),
+        '  <meta name="twitter:image" content="{}">'.format(cover),
+        '  <link rel="icon" href="assets/images/favicon.ico" sizes="16x16 32x32 48x48">',
+        '  <link rel="icon" href="assets/images/favicon-32.png" type="image/png" sizes="32x32">',
+        '  <link rel="icon" href="assets/images/favicon-16.png" type="image/png" sizes="16x16">',
+        '  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">',
+    ]
+    lines.extend(PAGE_THEME_SCRIPT.splitlines())
+    lines.extend([
+        '  <link rel="stylesheet" href="assets/styles.min.css">',
+        "</head>",
+        '<body class="catalog-doc">',
+        '  <header class="site-header">',
+        '    <a class="brand" href="./">',
+        '      <span class="brand-mark" aria-hidden="true">',
+        '        <img src="assets/images/Dragan-Gjakonovski-Shpato-Icon-168.webp" alt="" width="168" height="168">',
+        "      </span>",
+        '      <span class="brand-text">',
+        '        <span class="brand-name">{}</span>'.format(esc(PAGE_TEXT["name"])),
+        '        <span class="brand-sub">{}</span>'.format(esc(PAGE_TEXT["subtitle"])),
+        "      </span>",
+        "    </a>",
+        "  </header>",
+        "",
+        '  <main id="main">',
+        "    <h1>{}</h1>".format(esc(PAGE_TEXT["heading"])),
+        '    <p class="doc-lead">{}</p>'.format(
+            esc(PAGE_TEXT["lead"].format(n=meta["total"]))),
+        '    <p class="doc-cta"><a class="btn" href="./">{}</a></p>'.format(
+            esc(PAGE_TEXT["openApp"])),
+        '    <nav class="doc-toc" aria-labelledby="doc-contents">',
+        '      <p class="doc-toc-title" id="doc-contents">{}</p>'.format(
+            esc(PAGE_TEXT["contents"])),
+        "      <ul>",
+    ])
+    lines.extend("        " + item for item in contents)
+    lines.extend(["      </ul>", "    </nav>", ""])
+    for section in sections:
+        lines.extend("    " + line for line in section.splitlines())
+        lines.append("")
+    lines.extend([
+        '    <p class="doc-cta"><a class="btn" href="./">{}</a></p>'.format(
+            esc(PAGE_TEXT["openApp"])),
+        "  </main>",
+        "",
+        '  <footer class="site-footer">',
+        '    <p class="footer-credit">',
+        "      {}".format(esc(PAGE_TEXT["credit"])),
+        '      <a href="https://www.gocemitevski.com" target="_blank" rel="noopener">{}</a>.'.format(
+            esc(PAGE_TEXT["authorName"])),
+        '      <a class="link-btn" href="./#tab=privacy">{}</a>'.format(
+            esc(PAGE_TEXT["privacy"])),
+        "    </p>",
+        "  </footer>",
+        "</body>",
+        "</html>",
+        "",
+    ])
+    with open(os.path.join(ROOT, PAGE_FILE), "w", encoding="utf-8", newline="\n") as fh:
+        fh.write("\n".join(lines))
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 def main():
@@ -942,6 +1209,9 @@ def main():
              {"meta": meta, "records": all_records})
     write_js(os.path.join(DATA_DIR, "notes.js"), "NOTES",
              {"meta": meta, "notes": notes})
+    # The plain document a crawler that runs no scripts can read. It is built
+    # from the records, not from the payload, so it cannot drift from the table.
+    write_catalog_page(all_records, meta)
     # The hand-written assets are minified into siblings, which index.html
     # points at; the generated data files are already written compact and are
     # left alone. Same command, so nothing can go stale on its own.

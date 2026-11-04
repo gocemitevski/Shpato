@@ -1,6 +1,7 @@
-# The catalogue is one document, served at the root. The state the app keeps in
-# the URL is a fragment (#tab=...&q=...), and a fragment is not a page, so there
-# is nothing else here to crawl.
+# The catalogue is two documents: the app at the root, whose state lives in the
+# URL fragment (#tab=...&q=...) and is therefore not a page, and catalog.html,
+# the same works as one plain list for a crawler that runs no scripts. There is
+# nothing else here to crawl.
 #
 # Nothing is disallowed. /index.html is the same file Pages serves at /, and a
 # rule naming it reads as "the root is blocked" to a fetcher that normalises a
