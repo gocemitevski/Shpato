@@ -8,7 +8,10 @@
        Unknown viewport keys are ignored, so browsers without it are unaffected. -->
   <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
   <title>Драган Ѓаконовски – Шпато - Дигитален каталог</title>
-  <meta name="description" content="Дигитален каталог на делата на Драган Ѓаконовски – Шпато во фонотеката на МРТВ.">
+  <meta name="description" content="Дигитален каталог на делата на Драган Ѓаконовски – Шпато во фонотеката на МРТВ: композиции, аранжмани, изведувачи, времетраења, сигнатури и снимки.">
+  <!-- max-image-preview:large lets the About photograph be shown at full size
+       in search results; without it engines cap the preview at a thumbnail. -->
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <!-- Matomo, cookieless. The instance enforces "tracking without cookies" and
        the tracker is told the same, so no analytics cookie is written. The
        fragment is discarded because the catalogue keeps its state there, search
@@ -55,12 +58,18 @@
        at both / and /index.html with no redirect, so the two URLs are one
        document and this says which one to keep. A self-referential canonical
        here would ask a search engine to index the duplicate as well. robots.txt
-       keeps crawlers off /index.html for the same reason. -->
+       deliberately disallows nothing — a rule naming the index document reads
+       as "the root is blocked" to a fetcher that normalises a directory URL
+       into it — so the canonical is what keeps the pair together. -->
+  <!-- The open data behind the catalogue, for machines rather than as an
+       alternate page: a reader can download the same records as CSV or JSON
+       from the toolbar. -->
+  <link rel="alternate" type="application/json" href="data/catalog.json">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Драган Ѓаконовски – Шпато">
   <meta property="og:url" content="https://shpato.gocemitevski.com/">
   <meta property="og:title" content="Драган Ѓаконовски – Шпато - Дигитален каталог">
-  <meta property="og:description" content="Дигитален каталог на делата на Драган Ѓаконовски – Шпато во фонотеката на МРТВ.">
+  <meta property="og:description" content="Дигитален каталог на делата на Драган Ѓаконовски – Шпато во фонотеката на МРТВ: композиции, аранжмани, изведувачи, времетраења, сигнатури и снимки.">
   <meta property="og:locale" content="mk_MK">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:image" content="https://shpato.gocemitevski.com/assets/images/Dragan-Gjakonovski-Shpato-Cover.png">
@@ -74,9 +83,10 @@
        the card explicit rather than incidental. -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Драган Ѓаконовски – Шпато - Дигитален каталог">
-  <meta name="twitter:description" content="Дигитален каталог на делата на Драган Ѓаконовски – Шпато во фонотеката на МРТВ.">
+  <meta name="twitter:description" content="Дигитален каталог на делата на Драган Ѓаконовски – Шпато во фонотеката на МРТВ: композиции, аранжмани, изведувачи, времетраења, сигнатури и снимки.">
   <meta name="twitter:image" content="https://shpato.gocemitevski.com/assets/images/Dragan-Gjakonovski-Shpato-Cover.png">
   <meta name="twitter:image:alt" content="Портрет на Драган Ѓаконовски – Шпато во син прстен, со насловот и адресата на дигиталниот каталог">
+
 
   <script>
     /* Apply the saved theme before first paint to avoid a flash, and hold the
@@ -107,7 +117,7 @@
   <a class="skip-link" href="#main" data-i18n="a11y.skip"></a>
 
   <header class="site-header">
-    <a class="brand" href="index.html" id="home-link">
+    <a class="brand" href="./" id="home-link">
       <span class="brand-mark" aria-hidden="true">
         <!-- 168px is the 56px mark at 3x, which is as much of it as any screen
              resolves; the 512px original is 22 KB of pixels nobody sees, and on
@@ -315,7 +325,7 @@
                nobody has asked for yet, and on a phone it competed with the
                catalogue for the bandwidth that decides first paint. -->
           <img src="assets/images/Dragan-Gjakonovski-Shpato-About.jpg" alt="" width="800" height="994"
-               loading="lazy" decoding="async">
+               data-i18n-alt="about.photoAlt" loading="lazy" decoding="async">
           <figcaption>
             <span data-i18n="about.caption"></span>
             <span class="credit" data-i18n="about.credit"></span>

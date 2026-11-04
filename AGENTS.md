@@ -455,6 +455,10 @@ the tab states what they collectively support.
   band, taken from slobodnaevropa.mk/a/3537129.html. It is RFE/RL's, so the
   caption carries the credit (`about.credit`); keep the credit with the image.
 
+The photograph also carries `about.photoAlt`, set through `data-i18n-alt` like
+the rest of the strings, so a screen reader and an image search get a
+description of the scene the caption credits.
+
 ## Analytics and the privacy notice
 
 `index.html` carries the Matomo tracker (`analytics.gocemitevski.com`, site `3`)
@@ -684,7 +688,7 @@ own.
 - **All UI text is bilingual.** Adding a key means adding it to *both* `mk` and
   `en` in `assets/i18n.js`. `t()` falls back to English silently, so a missing
   Macedonian key will not throw — it will just ship English. Keys are currently
-  at parity (179 each).
+  at parity (181 each).
 - **Capitalisation lives in the strings, not in CSS.** A `<select>`'s
   `<option>` does not inherit `text-transform`, so a CSS-capitalised label looks
   right in the table and wrong in a dropdown. Capitalise in `i18n.js`.
