@@ -615,17 +615,17 @@ viewport shrinks the shell with it. Browsers that do not know the key ignore it.
   padding, so about 52px at a desktop width — because every pixel of it is a
   pixel the catalogue cannot show, and `main` keeps `1.25rem` of bottom padding
   of its own so that the last card's border and the footer's rule do not draw
-  the same line. The credit sits at its left — carrying the notice's door,
-  `#privacy-link`, in the footer's own neutral colour and with `.5rem` in front
-  of it, half the `1rem` that separates the two groups — and a group of four
-  sharing links at its right: 1.5rem targets, the smallest that still clears the
-  24px minimum, held apart by `justify-content: space-between`. The 620px block
-  turns that into `center`, so on a phone the pair sits centred, and each of them
-  on its own line once they wrap. That door moved the wrap: the pair fits one row
-  from 463px up (455 before the space in front of it), where the four share
-  links' `.5rem` gap used to end the row at 375. It costs the catalogue nothing,
-  because below 620px the shell has stood down and the document scrolls, so a
-  second row is a second row of the page.
+  the same line. The credit sits at its left — carrying the two doors that are
+  not tabs, the full list (`catalog.html`) and the privacy notice
+  (`#privacy-link`), in the footer's own neutral colour and with `.5rem` in
+  front of each, half the `1rem` that separates the two groups — and a group of
+  four sharing links at its right: 1.5rem targets, the smallest that still
+  clears the 24px minimum, held apart by `justify-content: space-between`. The
+  620px block turns that into `center`, so on a phone the pair sits centred, and
+  each of them on its own line once they wrap. The doors moved the wrap: the
+  pair fits one row from 589px up — measured, not summed; the second door moved
+  it by 126px. It costs the catalogue nothing, because everything below 620px is
+  already standing down, where a second row is a second row of the page.
 - `.filters` and `.table-wrap` set `overscroll-behavior: contain`: a wheel that
   reaches the end of a facet list or of the table stops there instead of
   carrying on into the shell. Each `.table-wrap` sits in a `.table-frame`, and
@@ -743,7 +743,9 @@ own.
 - **All UI text is bilingual.** Adding a key means adding it to *both* `mk` and
   `en` in `assets/i18n.js`. `t()` falls back to English silently, so a missing
   Macedonian key will not throw — it will just ship English. Keys are currently
-  at parity (181 each).
+  at parity (182 each). The one exception is `catalog.html`, whose text has to be
+  in the document with no script to put it there; see "The static catalogue
+  page".
 - **Capitalisation lives in the strings, not in CSS.** A `<select>`'s
   `<option>` does not inherit `text-transform`, so a CSS-capitalised label looks
   right in the table and wrong in a dropdown. Capitalise in `i18n.js`.
