@@ -498,16 +498,27 @@ the same reason:
 Its Macedonian prose is the one place the rule that every string comes from
 `assets/i18n.js` cannot hold — the page must carry text with no script to put it
 there. The labels live in `PAGE_TEXT` at the top of the page generator and mirror
-the mk values of `app.title`, `app.subtitle`, `app.credit`, `footer.allWorks`,
-`theme.*`, `share.*`, `a11y.skip`, `cat.*`, `col.*`, `privacy.link` and
-`common.none`; change both together. Its icons are the same rule applied to
-markup: `PAGE_THEME_ICONS` and `PAGE_SHARE_ICONS` are the paths `index.html`
-carries inline, because the page has no `app.js` to draw them.
+the mk values of `app.title`, `app.catalogTitle`, `app.subtitle`, `app.credit`,
+`footer.allWorks`, `theme.*`, `share.*`, `a11y.skip`, `cat.*`, `col.*`,
+`privacy.link` and `common.none`; change both together. Its icons are the same
+rule applied to markup: `PAGE_THEME_ICONS` and `PAGE_SHARE_ICONS` are the paths
+`index.html` carries inline, because the page has no `app.js` to draw them.
 
-The page links `assets/styles.min.css` and carries two scripts. The first is the
-theme line from `index.html`, without the boot classes, so a reader who chose the
-dark theme in the app does not get a white flash here. The second is
-`assets/doc.min.js`, and it exists because the shell is the app's and the app's
+The page carries structured data of its own: a two-level `BreadcrumbList` (the
+app, then this list) and a `CollectionPage` for this address, `isPartOf` the
+app's `#website` and `about` its `#person`. Both entities are referenced by
+`@id` rather than restated, so the person's dates, places and references have
+one definition, in `index.html`, and this page cannot drift from them. Nothing
+in the block counts anything, and there is no per-work `ItemList`: the rows are
+the data, and 431 items restated in a second vocabulary would only be 40 KB of
+HTML saying what the tables already say. The breadcrumb's first crumb is
+`PAGE_TEXT["breadcrumbHome"]`, which is `app.catalogTitle`; its last carries no
+`item`, since it is the page it is on.
+
+The page links `assets/styles.min.css` and carries two scripts that run. The
+first is the theme line from `index.html`, without the boot classes, so a reader
+who chose the dark theme in the app does not get a white flash here. The second
+is `assets/doc.min.js`, and it exists because the shell is the app's and the app's
 controls work: it makes the theme switch write the same
 `localStorage["shpato-theme"]`, fills the four share intents from this page's
 canonical address, and sets `data-pan` on each `.table-frame` so the pan cue

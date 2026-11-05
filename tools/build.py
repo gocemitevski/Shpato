@@ -850,6 +850,8 @@ PAGE_TEXT = {
         "на МРТВ, по категорија, со изведувач, времетраење и сигнатура."
     ),
     "name": "Драган Ѓаконовски – Шпато",
+    # The first crumb, which is the app: the mk value of app.catalogTitle.
+    "breadcrumbHome": "Дигитален каталог",
     "subtitle": "Целосен список на делата во фонотеката на МРТВ",
     "heading": "Делата на Драган Ѓаконовски – Шпато",
     "lead": (
@@ -1098,6 +1100,52 @@ def write_catalog_page(records, meta):
         # once the stylesheet has resolved --theme-color.
         '  <meta name="theme-color" content="#0d1117">',
     ]
+    # Structured data for the page itself: the breadcrumb and the document.
+    # It describes this address rather than the catalogue's contents — the rows
+    # are the data, and a 431-item ItemList would restate them in a second
+    # vocabulary for no gain. The site and the person are referenced by the
+    # @ids the app's own block defines, so the two documents point at one entity
+    # each instead of carrying a copy of the facts that would drift from
+    # about.*. Nothing here counts anything, for the same reason.
+    ld = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "@id": url + "#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": PAGE_TEXT["breadcrumbHome"],
+                        "item": SITE + "/",
+                    },
+                    {
+                        # The last crumb is this page, so it needs no `item`:
+                        # schema.org reads a trailing crumb without one.
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": PAGE_TEXT["allWorks"],
+                    },
+                ],
+            },
+            {
+                "@type": "CollectionPage",
+                "@id": url + "#page",
+                "url": url,
+                "name": PAGE_TEXT["title"],
+                "description": PAGE_TEXT["description"],
+                "inLanguage": "mk",
+                "isPartOf": {"@id": SITE + "/#website"},
+                "about": {"@id": SITE + "/#person"},
+                "breadcrumb": {"@id": url + "#breadcrumb"},
+            },
+        ],
+    }
+    lines.append('  <script type="application/ld+json">')
+    lines.extend("  " + ln for ln in
+                 json.dumps(ld, ensure_ascii=False, indent=2).splitlines())
+    lines.append("  </script>")
     lines.extend(PAGE_THEME_SCRIPT.splitlines())
     lines.extend([
         '  <link rel="stylesheet" href="assets/styles.min.css">',
