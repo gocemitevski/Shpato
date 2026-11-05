@@ -8,6 +8,8 @@ and writes:
   data/catalog.js      - same, as a global for file:// usage
   data/notes.json      - every fix / flag applied, for transparency
   data/notes.js        - same, as a global
+  dela.html            - the same works as one plain document, for crawlers
+                         that do not run scripts
 
 It also merges sources/youtube.csv, the record -> YouTube video map (columns
 `id,title,video,found,lengthSec,added`; see the README), into each record's
@@ -19,6 +21,7 @@ Only the Python 3 standard library is used.
 
 import csv
 import datetime
+import html
 import json
 import os
 import re
@@ -824,6 +827,437 @@ def drop_rows(records, removals, problems):
 
 
 # ---------------------------------------------------------------------------
+# The static catalogue page
+# ---------------------------------------------------------------------------
+# index.html is an app: the works arrive only after app.js fetches
+# data/catalog.js and builds the table, so a crawler that runs no scripts reads
+# a shell and nothing else. This page is the same catalogue as one plain
+# document, generated from the records above so it cannot drift from them, and
+# committed like data/*.
+#
+# Its Macedonian prose is the one place the project's "every string comes from
+# assets/i18n.js" rule cannot hold: the page has to carry text with no script to
+# put it there. The labels below mirror the mk values of app.title, app.subtitle,
+# app.credit, cat.*, col.*, privacy.link and common.none; change both together.
+# Everything else — titles, performers, composers, durations, signatures and the
+# counts — is read from the data, so a number written here cannot go stale.
+SITE = "https://shpato.gocemitevski.com"
+PAGE_FILE = "dela.html"
+PAGE_TEXT = {
+    "title": "Сите дела на Драган Ѓаконовски – Шпато во фонотеката на МРТВ",
+    "description": (
+        "Целосен список на делата на Драган Ѓаконовски – Шпато во фонотеката "
+        "на МРТВ, по категорија, со изведувач, времетраење и сигнатура."
+    ),
+    "name": "Драган Ѓаконовски – Шпато",
+    # The first crumb, which is the app: the mk value of app.catalogTitle.
+    "breadcrumbHome": "Дигитален каталог",
+    "subtitle": "Целосен список на делата во фонотеката на МРТВ",
+    "heading": "Делата на Драган Ѓаконовски – Шпато",
+    "lead": (
+        "Ова е целосниот список на делата на Драган Ѓаконовски – Шпато во "
+        "фонотеката на Македонската радио-телевизија, подреден по категорија — "
+        "вкупно {n}. Податоците се преземени од монографијата на Ванчо "
+        "Димитров и се истите што ги прикажува интерактивниот каталог, каде "
+        "што може да се пребарува, филтрира и слуша снимка."
+    ),
+    "openApp": "Отвори го интерактивниот каталог",
+    "contents": "Содржина",
+    "columns": ["Наслов", "Изведувач", "Автор", "Времетраење", "Сигнатура"],
+    "caption": "{} во фонотеката на МРТВ",
+    "credit": "Изработено од",
+    "authorName": "Гоце Митевски",
+    "privacy": "Приватност",
+    "allWorks": "Сите дела на Шпато",
+    "none": "—",
+    "selfAuthor": "Драган Ѓаконовски – Шпато",
+    # The shell around the list, so the page reads as the same site as the app.
+    # It is the header and the footer; the tab strip is not here, because this
+    # is one document rather than four views, and its TOC already lists what is
+    # on it. There is no language switch either: the page and everything it
+    # lists are Macedonian.
+    "skip": "Прескокни до содржината",
+    "theme": "Тема",
+    "themeLight": "Светла",
+    "themeDark": "Темна",
+    "shareLabel": "Сподели",
+    "shareX": "Сподели на „X“",
+    "shareFacebook": "Сподели на „Facebook“",
+    "shareLinkedin": "Сподели на „LinkedIn“",
+    "shareBluesky": "Сподели на „Bluesky“",
+    "categories": {
+        "vocal": "Вокални композиции",
+        "instrumental": "Инструментални композиции",
+        "arrThemes": "Аранжмани на теми од други автори",
+        "arrVocal": "Аранжмани на вокални творби од други автори",
+    },
+}
+
+# The theme line index.html runs before first paint, minus the two boot classes:
+# the page has no app to wait for. Duplicated rather than shared, because
+# sharing it would cost a request and this is six lines that must run
+# synchronously in the head. Change both together.
+PAGE_THEME_SCRIPT = """  <script>
+    /* Apply the saved theme before first paint, so a reader who chose the dark
+       theme in the app does not get a white flash here. */
+    (function () {
+      try {
+        var saved = localStorage.getItem("shpato-theme");
+        var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {}
+    })();
+  </script>"""
+
+# The glyphs the shell needs. index.html's are inline too, but there they sit in
+# the document; this page is generated, so the paths live here. The theme pair is
+# the app's two toggle icons, and the four share glyphs are Simple Icons (CC0),
+# the same ones assets/app.js and index.html carry. Change them together.
+PAGE_THEME_ICONS = {
+    "light": '<circle cx="12" cy="12" r="4.6"/>'
+             '<path d="M12 2.4v2.2M12 19.4v2.2M2.4 12h2.2M19.4 12h2.2'
+             'M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/>',
+    "dark": '<path d="M21 13.1A9 9 0 1 1 10.9 3.1 7.4 7.4 0 0 0 21 13.1Z"/>',
+}
+PAGE_SHARE_ICONS = [
+    ("x", "shareX",
+     "M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33"
+     "l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929"
+     " 1.329 7.754 11.09h-3.182z"),
+    ("facebook", "shareFacebook",
+     "M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0"
+     " .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036"
+     " 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622"
+     "c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245"
+     "C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628"
+     " 3.874 10.35 9.101 11.647Z"),
+    ("linkedin", "shareLinkedin",
+     "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136"
+     " 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267"
+     " 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063"
+     " 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782"
+     " 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792"
+     " 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"),
+    ("bluesky", "shareBluesky",
+     "M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501"
+     "C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755"
+     " 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152"
+     "-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737"
+     "-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0"
+     "-3.67 3.217-2.517 5.202-1.026"),
+]
+
+# The ordering app.js uses by default: the Macedonian alphabet in order, then
+# Latin, with a space ahead of punctuation and digits ahead of both. Ported from
+# compareText()/collationRank() so the static list and the app's first column
+# agree — the two browsers that disagreed once are the reason that comparator
+# exists at all. Keep the two in step.
+MK_ORDER = "абвгдѓежзѕијклљмнњопрстќуфхцчџш"
+LATIN_ORDER = "abcdefghijklmnopqrstuvwxyz"
+DIGIT_ORDER = "0123456789"
+LATIN_FOLD = {
+    "à": "a", "á": "a", "â": "a", "ä": "a", "å": "a", "æ": "ae", "ç": "c",
+    "è": "e", "é": "e", "ê": "e", "ë": "e", "ì": "i", "í": "i", "î": "i",
+    "ï": "i", "ñ": "n", "ò": "o", "ó": "o", "ô": "o", "ö": "o", "ø": "o",
+    "ù": "u", "ú": "u", "û": "u", "ü": "u", "ý": "y", "š": "s", "ž": "z",
+    "č": "c", "ć": "c", "đ": "d",
+}
+
+
+def esc(value):
+    return html.escape(value or "", quote=False)
+
+
+def collate_fold(text):
+    return "".join(LATIN_FOLD.get(ch, ch) for ch in (text or "").lower())
+
+
+def collation_rank(ch):
+    index = MK_ORDER.find(ch)
+    if index != -1:
+        return index
+    index = LATIN_ORDER.find(ch)
+    if index != -1:
+        return 60 + index
+    index = DIGIT_ORDER.find(ch)
+    if index != -1:
+        return 10 + index
+    if ch == " ":
+        return 1
+    if "\u0400" <= ch <= "\u04ff":
+        return 55
+    if ch < "\u0080":
+        return 2
+    return 90
+
+
+def collate_key(text):
+    folded = collate_fold(text)
+    return (tuple(collation_rank(ch) for ch in folded), len(folded), folded)
+
+
+def page_row(rec):
+    """One work as a table row: the title names the row, the rest are cells."""
+    composer = rec["composer"] or ""
+    if not composer and rec["category"] in ("vocal", "instrumental"):
+        # The two volumes of his own compositions carry no author column at all,
+        # so their cells are empty because the volume is the author. The app
+        # fills that in adoptData(); the static page has to fill it the same way
+        # or the column would contradict the table the reader came from.
+        composer = PAGE_TEXT["selfAuthor"]
+    duration = PAGE_TEXT["none"] if rec["durationSec"] is None else mmss(rec["durationSec"])
+    return (
+        '<tr><th scope="row" class="cell-title">{title}</th>'
+        '<td class="cell-perf">{performer}</td>'
+        '<td class="cell-comp">{composer}</td>'
+        '<td class="dur">{duration}</td>'
+        '<td class="sig">{signature}</td></tr>'
+    ).format(
+        title=esc(rec["title"]),
+        performer=esc(rec["performer"] or PAGE_TEXT["none"]),
+        composer=esc(composer),
+        duration=duration,
+        signature=esc(rec["signature"] or rec.get("signatureRaw") or PAGE_TEXT["none"]),
+    )
+
+
+def write_catalog_page(records, meta):
+    columns = "".join('<th scope="col">{}</th>'.format(esc(col))
+                      for col in PAGE_TEXT["columns"])
+    contents = []
+    sections = []
+    for source in SOURCES:
+        category = source["category"]
+        rows = [rec for rec in records if rec["category"] == category]
+        rows.sort(key=lambda rec: collate_key(rec["title"]))
+        label = PAGE_TEXT["categories"][category]
+        anchor = "cat-" + category
+        heading = "h-" + category
+        # The entry is the app's pill, with the category's own dot and the
+        # count inside the link, so the list reads as the catalogue's controls
+        # rather than as a run of plain anchors.
+        contents.append(
+            '<li><a class="btn" href="#{anchor}" data-cat="{category}">'
+            '<span class="doc-dot" aria-hidden="true"></span>{label}'
+            ' <span class="doc-count">{n}</span></a></li>'.format(
+                anchor=anchor, category=category, label=esc(label), n=len(rows)))
+        sections.append(
+            '<section class="doc-section" id="{anchor}" aria-labelledby="{heading}">\n'
+            '  <h2 id="{heading}">{label} <span class="doc-count">{n}</span></h2>\n'
+            '  <div class="table-frame">\n'
+            # The card is the scroller and holds no focusable row, so a keyboard
+            # could not pan it at all; tabindex makes the card itself a stop and
+            # the arrow keys reach the columns a phone hides.
+            '    <div class="table-wrap doc-table" tabindex="0">\n'
+            '      <table class="catalog-table">\n'
+            '        <caption class="visually-hidden">{caption}</caption>\n'
+            '        <thead><tr>{columns}</tr></thead>\n'
+            '        <tbody>\n{rows}\n        </tbody>\n'
+            '      </table>\n'
+            '    </div>\n'
+            '    <div class="pan-cue left" aria-hidden="true"></div>\n'
+            '    <div class="pan-cue right" aria-hidden="true"></div>\n'
+            '  </div>\n'
+            '</section>\n'.format(
+                anchor=anchor, heading=heading, label=esc(label), n=len(rows),
+                caption=esc(PAGE_TEXT["caption"].format(label)),
+                columns=columns,
+                rows="\n".join("          " + page_row(rec) for rec in rows)))
+
+    title = esc(PAGE_TEXT["title"])
+    description = esc(PAGE_TEXT["description"])
+    url = SITE + "/" + PAGE_FILE
+    cover = SITE + "/assets/images/Dragan-Gjakonovski-Shpato-Cover.png"
+    lines = [
+        "<!doctype html>",
+        '<html lang="mk">',
+        "<head>",
+        '  <meta charset="utf-8">',
+        '  <meta name="viewport" content="width=device-width, initial-scale=1">',
+        "  <title>{}</title>".format(title),
+        '  <meta name="description" content="{}">'.format(description),
+        "  <!-- The catalogue as one plain document, so a crawler that runs no",
+        "       scripts still reads the works. It is its own page rather than a",
+        "       copy of the app: this one is canonical for this address, and the",
+        "       app stays canonical for the root it is shared by. -->",
+        '  <link rel="canonical" href="{}">'.format(url),
+        '  <meta name="robots" content="index, follow, max-image-preview:large">',
+        '  <meta property="og:type" content="website">',
+        '  <meta property="og:site_name" content="{}">'.format(esc(PAGE_TEXT["name"])),
+        '  <meta property="og:url" content="{}">'.format(url),
+        '  <meta property="og:title" content="{}">'.format(title),
+        '  <meta property="og:description" content="{}">'.format(description),
+        '  <meta property="og:locale" content="mk_MK">',
+        '  <meta property="og:image" content="{}">'.format(cover),
+        '  <meta property="og:image:type" content="image/png">',
+        '  <meta property="og:image:width" content="1920">',
+        '  <meta property="og:image:height" content="1080">',
+        '  <meta name="twitter:card" content="summary_large_image">',
+        '  <meta name="twitter:title" content="{}">'.format(title),
+        '  <meta name="twitter:description" content="{}">'.format(description),
+        '  <meta name="twitter:image" content="{}">'.format(cover),
+        '  <link rel="icon" href="assets/images/favicon.ico" sizes="16x16 32x32 48x48">',
+        '  <link rel="icon" href="assets/images/favicon-32.png" type="image/png" sizes="32x32">',
+        '  <link rel="icon" href="assets/images/favicon-16.png" type="image/png" sizes="16x16">',
+        '  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">',
+        # The browser chrome colour the app sets from CSS too; doc.js syncs it
+        # once the stylesheet has resolved --theme-color.
+        '  <meta name="theme-color" content="#0d1117">',
+    ]
+    # Structured data for the page itself: the breadcrumb and the document.
+    # It describes this address rather than the catalogue's contents — the rows
+    # are the data, and a 431-item ItemList would restate them in a second
+    # vocabulary for no gain. The site and the person are referenced by the
+    # @ids the app's own block defines, so the two documents point at one entity
+    # each instead of carrying a copy of the facts that would drift from
+    # about.*. Nothing here counts anything, for the same reason.
+    ld = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "@id": url + "#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": PAGE_TEXT["breadcrumbHome"],
+                        "item": SITE + "/",
+                    },
+                    {
+                        # The last crumb is this page, so it needs no `item`:
+                        # schema.org reads a trailing crumb without one.
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": PAGE_TEXT["allWorks"],
+                    },
+                ],
+            },
+            {
+                "@type": "CollectionPage",
+                "@id": url + "#page",
+                "url": url,
+                "name": PAGE_TEXT["title"],
+                "description": PAGE_TEXT["description"],
+                "inLanguage": "mk",
+                "isPartOf": {"@id": SITE + "/#website"},
+                "about": {"@id": SITE + "/#person"},
+                "breadcrumb": {"@id": url + "#breadcrumb"},
+            },
+        ],
+    }
+    lines.append('  <script type="application/ld+json">')
+    lines.extend("  " + ln for ln in
+                 json.dumps(ld, ensure_ascii=False, indent=2).splitlines())
+    lines.append("  </script>")
+    lines.extend(PAGE_THEME_SCRIPT.splitlines())
+    lines.extend([
+        '  <link rel="stylesheet" href="assets/styles.min.css">',
+        "</head>",
+        '<body class="catalog-doc">',
+        '  <a class="skip-link" href="#main">{}</a>'.format(esc(PAGE_TEXT["skip"])),
+        "",
+        '  <header class="site-header">',
+        # The app links the root, because that is where Pages serves it. This
+        # page is also read from disk, where "./" is a directory listing, and it
+        # carries no script to tell the difference — so it names the document
+        # itself. On the web that is the same page index.html's canonical folds
+        # into the root.
+        '    <a class="brand" href="index.html">',
+        '      <span class="brand-mark" aria-hidden="true">',
+        '        <img src="assets/images/Dragan-Gjakonovski-Shpato-Icon-168.webp" alt="" width="168" height="168">',
+        "      </span>",
+        '      <span class="brand-text">',
+        '        <span class="brand-name">{}</span>'.format(esc(PAGE_TEXT["name"])),
+        '        <span class="brand-sub">{}</span>'.format(esc(PAGE_TEXT["subtitle"])),
+        "      </span>",
+        "    </a>",
+        # No language switch: the page and the catalogue in it are Macedonian.
+        # The theme switch is the app's, and doc.js makes it work.
+        '    <div class="header-actions">',
+        '      <div class="theme-toggle" role="group" aria-label="{}">'.format(
+            esc(PAGE_TEXT["theme"])),
+    ])
+    for theme in ("light", "dark"):
+        label = PAGE_TEXT["themeLight" if theme == "light" else "themeDark"]
+        lines.extend([
+            '        <button type="button" data-theme="{theme}" aria-pressed="false"'
+            ' aria-label="{label}" title="{label}">'.format(theme=theme, label=esc(label)),
+            '          <svg class="toggle-icon" viewBox="0 0 24 24" aria-hidden="true"'
+            ' focusable="false">{}</svg>'.format(PAGE_THEME_ICONS[theme]),
+            "        </button>",
+        ])
+    lines.extend([
+        "      </div>",
+        "    </div>",
+        "  </header>",
+        "",
+        '  <main id="main" tabindex="-1">',
+        "    <h1>{}</h1>".format(esc(PAGE_TEXT["heading"])),
+        '    <p class="doc-lead">{}</p>'.format(
+            esc(PAGE_TEXT["lead"].format(n=meta["total"]))),
+        # One call to action, here, where the reader has just been told what
+        # the page is. There was a second under the last table, and the same
+        # button twice on one page reads as a template; the brand in the
+        # header is the other way back to the app.
+        '    <p class="doc-cta"><a class="btn" href="index.html">{}</a></p>'.format(
+            esc(PAGE_TEXT["openApp"])),
+        '    <nav class="doc-toc" aria-labelledby="doc-contents">',
+        '      <p class="doc-toc-title" id="doc-contents">{}</p>'.format(
+            esc(PAGE_TEXT["contents"])),
+        "      <ul>",
+    ])
+    lines.extend("        " + item for item in contents)
+    lines.extend(["      </ul>", "    </nav>", ""])
+    for section in sections:
+        lines.extend("    " + line for line in section.splitlines())
+        lines.append("")
+    lines.extend([
+        "  </main>",
+        "",
+        '  <footer class="site-footer">',
+        '    <p class="footer-credit">',
+        "      {}".format(esc(PAGE_TEXT["credit"])),
+        '      <a href="https://www.gocemitevski.com" target="_blank" rel="noopener">{}</a>.'.format(
+            esc(PAGE_TEXT["authorName"])),
+        # The app's two doors that are not tabs. This is the full list, so its
+        # door says where the reader already is instead of linking to itself.
+        '      <span class="link-btn footer-current" aria-current="page">{}</span>'.format(
+            esc(PAGE_TEXT["allWorks"])),
+        '      <a class="link-btn" href="index.html#tab=privacy">{}</a>'.format(
+            esc(PAGE_TEXT["privacy"])),
+        "    </p>",
+        # The app's share intents. doc.js fills the hrefs from this page's
+        # canonical address, because opened from disk a file: URL means nothing
+        # to whoever receives it.
+        '    <div class="footer-share" role="group" aria-label="{}">'.format(
+            esc(PAGE_TEXT["shareLabel"])),
+    ])
+    for key, label_key, path in PAGE_SHARE_ICONS:
+        lines.extend([
+            '      <a id="share-{key}" target="_blank" rel="noopener"'
+            ' aria-label="{label}">'.format(key=key, label=esc(PAGE_TEXT[label_key])),
+            '        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">',
+            '          <path d="{}"/>'.format(path),
+            "        </svg>",
+            "      </a>",
+        ])
+    lines.extend([
+        "    </div>",
+        "  </footer>",
+        # The page's only script: the works are in the HTML, so this carries the
+        # controls that need one — the theme switch, the share hrefs and the pan
+        # cue — and nothing else.
+        '  <script src="assets/doc.min.js"></script>',
+        "</body>",
+        "</html>",
+        "",
+    ])
+    with open(os.path.join(ROOT, PAGE_FILE), "w", encoding="utf-8", newline="\n") as fh:
+        fh.write("\n".join(lines))
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 def main():
@@ -942,6 +1376,9 @@ def main():
              {"meta": meta, "records": all_records})
     write_js(os.path.join(DATA_DIR, "notes.js"), "NOTES",
              {"meta": meta, "notes": notes})
+    # The plain document a crawler that runs no scripts can read. It is built
+    # from the records, not from the payload, so it cannot drift from the table.
+    write_catalog_page(all_records, meta)
     # The hand-written assets are minified into siblings, which index.html
     # points at; the generated data files are already written compact and are
     # left alone. Same command, so nothing can go stale on its own.

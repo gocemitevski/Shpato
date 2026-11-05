@@ -3,7 +3,9 @@ window.I18N = {
   mk: {
     "app.title": "Драган Ѓаконовски – Шпато",
     "app.subtitle": "Дигитален каталог на делата во фонотеката на МРТВ",
+    "app.catalogTitle": "Дигитален каталог",
     "app.credit": "Изработено од",
+    "footer.allWorks": "Сите дела на Шпато",
     "share.label": "Сподели",
     "share.x": "Сподели на „X“",
     "share.facebook": "Сподели на „Facebook“",
@@ -148,6 +150,7 @@ window.I18N = {
 
     "about.caption": "Драган Ѓаконовски – Шпато",
     "about.credit": "Фотографија: Радио Слободна Европа („RFE/RL“)",
+    "about.photoAlt": "Драган Ѓаконовски – Шпато диригира голем оркестар",
     "about.lead": "Драган Ѓаконовски – Шпато (11 март 1931 – 3 јануари 1987) беше македонски композитор, аранжер, диригент и џез-музичар. Важи за основоположник на македонската забавна и џез-музика и за една од најзначајните фигури во неа.",
     "about.bio1": "Потекнува од музичко семејство: татко му Васил бил мандолинист, а брат му Хари исто така музичар. Првите настапи ги имал со нив, во триото „Шпато“ на програмата на Радио Скопје. Средното музичко училиште не го завршил — џезот го открил слушајќи странски радиостаници, а компонирањето, аранжирањето и оркестрацијата ги учел сам, мелографирајќи ги снимките на светските автори што му се допаѓале.",
     "about.bio2": "Во 1948 година, како седумнаесетгодишник, го формирал студентскиот џез-оркестар „Саџо“ и ја напишал „На игранка“ — дванаесеттактна блуз-тема што на Скопскиот џез-фестивал во 1983 година неофицијално е прогласена за прва македонска џез-композиција. Од 1950 година работел на Радио Скопје, каде што го водел Ритмичкиот секстет (1951), потоа и Забавниот ансамбл (1956); во 1961 година го формирал и го диригирал Биг-бендот на Македонската радио-телевизија.",
@@ -199,7 +202,9 @@ window.I18N = {
   en: {
     "app.title": "Dragan Gjakonovski – Shpato",
     "app.subtitle": "Digital catalogue of his works in the MRTV phonotheque",
+    "app.catalogTitle": "Digital catalogue",
     "app.credit": "Made by",
+    "footer.allWorks": "All works",
     "share.label": "Share",
     "share.x": "Share on X",
     "share.facebook": "Share on Facebook",
@@ -344,6 +349,7 @@ window.I18N = {
 
     "about.caption": "Dragan Gjakonovski – Shpato",
     "about.credit": "Photo: Radio Slobodna Evropa (RFE/RL)",
+    "about.photoAlt": "Dragan Gjakonovski – Shpato conducting a big band",
     "about.lead": "Dragan Gjakonovski – Shpato (11 March 1931 – 3 January 1987) was a Macedonian composer, arranger, conductor and jazz musician. He is considered the founder of Macedonian popular and jazz music and one of its most significant figures.",
     "about.bio1": "He came from a musical family: his father Vasil was a mandolinist and his brother Hari a musician too. His first performances were with them, as the Špato Trio on Radio Skopje’s live programme. He never finished secondary music school — he discovered jazz listening to foreign radio stations, and taught himself composing, arranging and orchestration by transcribing the records of the world’s authors he admired.",
     "about.bio2": "In 1948, aged seventeen, he formed the student jazz orchestra “Sadzo” and wrote “Na igranka” (At a dance) — a twelve-bar blues that the Skopje Jazz Festival unofficially proclaimed the first Macedonian jazz composition in 1983. From 1950 he worked at Radio Skopje, where he led the Rhythmic Sextet (1951) and then the Popular Ensemble (1956); in 1961 he formed and conducted the Big Band of Macedonian Radio Television.",

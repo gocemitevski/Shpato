@@ -230,7 +230,11 @@
 
   // --------------------------------------------------------------- rendering
   function updateTitle() {
-    document.title = t("app.title") + " - " + t("tab." + state.tab);
+    // The catalogue tab carries the document's own title, so the title a
+    // crawler reads in the HTML and the one the browser shows after boot agree;
+    // the other tabs name themselves.
+    var suffix = state.tab === "catalog" ? t("app.catalogTitle") : t("tab." + state.tab);
+    document.title = t("app.title") + " - " + suffix;
   }
 
   // ------------------------------------------------------------- sharing
@@ -280,6 +284,9 @@
     });
     document.querySelectorAll("[data-i18n-label]").forEach(function (el) {
       el.setAttribute("aria-label", t(el.getAttribute("data-i18n-label")));
+    });
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      el.alt = t(el.getAttribute("data-i18n-alt"));
     });
 
     renderShareLinks();
@@ -1362,6 +1369,12 @@
   window.SHPATO_STARTED = true;
   clearLegacyAnalytics();
   syncThemeColor();
+  // The brand points at "./", which is the site root on the web and the
+  // directory listing when the same page is opened from disk. A static href
+  // cannot be both, and this is the branch that can tell.
+  if (location.protocol === "file:") {
+    document.getElementById("home-link").href = "index.html";
+  }
   deserializeShell();
   syncFiltersHandle();
   showView(state.tab);
