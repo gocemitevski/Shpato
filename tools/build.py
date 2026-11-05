@@ -1192,6 +1192,10 @@ def write_catalog_page(records, meta):
         "    <h1>{}</h1>".format(esc(PAGE_TEXT["heading"])),
         '    <p class="doc-lead">{}</p>'.format(
             esc(PAGE_TEXT["lead"].format(n=meta["total"]))),
+        # One call to action, here, where the reader has just been told what
+        # the page is. There was a second under the last table, and the same
+        # button twice on one page reads as a template; the brand in the
+        # header is the other way back to the app.
         '    <p class="doc-cta"><a class="btn" href="index.html">{}</a></p>'.format(
             esc(PAGE_TEXT["openApp"])),
         '    <nav class="doc-toc" aria-labelledby="doc-contents">',
@@ -1205,8 +1209,6 @@ def write_catalog_page(records, meta):
         lines.extend("    " + line for line in section.splitlines())
         lines.append("")
     lines.extend([
-        '    <p class="doc-cta"><a class="btn" href="index.html">{}</a></p>'.format(
-            esc(PAGE_TEXT["openApp"])),
         "  </main>",
         "",
         '  <footer class="site-footer">',
