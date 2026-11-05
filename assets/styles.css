@@ -352,10 +352,14 @@ a { color: var(--accent-2); }
   .tabs { gap: .4rem; }
   .tabs button { font-size: .7rem; }
 }
-/* A phone turns the footer's row into two centred ones rather than letting the
-   share links drop to the start of a line of their own. The static page has the
-   same footer, so it turns with it. */
-@media (max-width: 620px) {
+/* The footer's two groups need 568px of inner width together, which is 618px of
+   window while the scrollbar is an overlay and 634px once it takes its 15px —
+   so the centring runs to 634px. Stopping at 620px would leave a 621–633px band
+   where the pair wraps and the share group sits at the start of a line of its
+   own, which is the shape this block exists to avoid. The static page has the
+   same footer, so it turns with it; being a long document, it is the page that
+   carries the scrollbar. */
+@media (max-width: 634px) {
   .app .site-footer,
   .catalog-doc .site-footer { justify-content: center; }
 }
@@ -1343,7 +1347,7 @@ body.player-open .table-wrap { padding-bottom: 18rem; }
 body.player-open .view { padding-bottom: 18rem; }
 
 /* ------------------------------------------------------- static catalogue */
-/* catalog.html: the same catalogue as one document, written by the build so a
+/* dela.html: the same catalogue as one document, written by the build so a
    crawler that runs no scripts still reads the works. It is not the app, so it
    is not a pinned grid: the document scrolls, the footer is its last row, and
    nothing on it assumes a click. The tables are the app's, minus the pointer
@@ -1430,7 +1434,7 @@ body.player-open .view { padding-bottom: 18rem; }
   color: var(--muted);
   font-size: .82rem;
   /* Credit on the left, share links at the right end: space-between, which the
-     620px block up the file overrides to centre the pair — and each of them,
+     634px block up the file overrides to centre the pair — and each of them,
      when a narrow phone wraps them onto a line of their own. */
   display: flex;
   align-items: center;

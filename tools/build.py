@@ -8,8 +8,8 @@ and writes:
   data/catalog.js      - same, as a global for file:// usage
   data/notes.json      - every fix / flag applied, for transparency
   data/notes.js        - same, as a global
-  catalog.html         - the same catalogue as one plain document, for
-                         crawlers that do not run scripts
+  dela.html            - the same works as one plain document, for crawlers
+                         that do not run scripts
 
 It also merges sources/youtube.csv, the record -> YouTube video map (columns
 `id,title,video,found,lengthSec,added`; see the README), into each record's
@@ -842,15 +842,15 @@ def drop_rows(records, removals, problems):
 # Everything else — titles, performers, composers, durations, signatures and the
 # counts — is read from the data, so a number written here cannot go stale.
 SITE = "https://shpato.gocemitevski.com"
-PAGE_FILE = "catalog.html"
+PAGE_FILE = "dela.html"
 PAGE_TEXT = {
-    "title": "Делата на Драган Ѓаконовски – Шпато во фонотеката на МРТВ",
+    "title": "Сите дела на Драган Ѓаконовски – Шпато во фонотеката на МРТВ",
     "description": (
         "Целосен список на делата на Драган Ѓаконовски – Шпато во фонотеката "
         "на МРТВ, по категорија, со изведувач, времетраење и сигнатура."
     ),
     "name": "Драган Ѓаконовски – Шпато",
-    "subtitle": "Дигитален каталог на делата во фонотеката на МРТВ",
+    "subtitle": "Целосен список на делата во фонотеката на МРТВ",
     "heading": "Делата на Драган Ѓаконовски – Шпато",
     "lead": (
         "Ова е целосниот список на делата на Драган Ѓаконовски – Шпато во "
@@ -866,7 +866,7 @@ PAGE_TEXT = {
     "credit": "Изработено од",
     "authorName": "Гоце Митевски",
     "privacy": "Приватност",
-    "fullList": "Целосен список",
+    "allWorks": "Сите дела на Шпато",
     "none": "—",
     "selfAuthor": "Драган Ѓаконовски – Шпато",
     # The shell around the list, so the page reads as the same site as the app.
@@ -1169,7 +1169,7 @@ def write_catalog_page(records, meta):
         # The app's two doors that are not tabs. This is the full list, so its
         # door says where the reader already is instead of linking to itself.
         '      <span class="link-btn footer-current" aria-current="page">{}</span>'.format(
-            esc(PAGE_TEXT["fullList"])),
+            esc(PAGE_TEXT["allWorks"])),
         '      <a class="link-btn" href="index.html#tab=privacy">{}</a>'.format(
             esc(PAGE_TEXT["privacy"])),
         "    </p>",

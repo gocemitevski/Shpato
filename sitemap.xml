@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Two URLs, because there are two documents: the app at the root, whose tabs
      and search live in the URL fragment (a fragment search engines do not treat
-     as a separate page), and catalog.html, the same works as one plain list for
+     as a separate page), and dela.html, the same works as one plain list for
      a crawler that runs no scripts. No <lastmod>: it would have to be
      hand-edited or a build timestamp, and the build is deliberately
      reproducible. -->
@@ -10,6 +10,6 @@
     <loc>https://shpato.gocemitevski.com/</loc>
   </url>
   <url>
-    <loc>https://shpato.gocemitevski.com/catalog.html</loc>
+    <loc>https://shpato.gocemitevski.com/dela.html</loc>
   </url>
 </urlset>
