@@ -1033,10 +1033,14 @@ def write_catalog_page(records, meta):
         label = PAGE_TEXT["categories"][category]
         anchor = "cat-" + category
         heading = "h-" + category
+        # The entry is the app's pill, with the category's own dot and the
+        # count inside the link, so the list reads as the catalogue's controls
+        # rather than as a run of plain anchors.
         contents.append(
-            '<li><a href="#{anchor}">{label}</a>'
-            ' <span class="doc-count">{n}</span></li>'.format(
-                anchor=anchor, label=esc(label), n=len(rows)))
+            '<li><a class="btn" href="#{anchor}" data-cat="{category}">'
+            '<span class="doc-dot" aria-hidden="true"></span>{label}'
+            ' <span class="doc-count">{n}</span></a></li>'.format(
+                anchor=anchor, category=category, label=esc(label), n=len(rows)))
         sections.append(
             '<section class="doc-section" id="{anchor}" aria-labelledby="{heading}">\n'
             '  <h2 id="{heading}">{label} <span class="doc-count">{n}</span></h2>\n'

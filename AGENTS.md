@@ -546,6 +546,14 @@ it, and the brand and the `Отвори го интерактивниот кат
 reach the app and its other views. A strip here would also be sticky over a
 38,000px document, which is a scroll aid the TOC already does better.
 
+The `Содржина` entries are the app's own `.btn` pills, each carrying its
+category's dot — `data-cat` on the link, so the four facet colours are the four
+dot colours — and its count inside the link rather than beside it, and each
+section heading repeats the count as the same small chip. The pill is
+`display: inline-block` rather than a flex row on purpose: the longest label is
+two lines at 390px, and a flex count would sit centred against that pair at the
+pill's right edge instead of following its last word.
+
 There is deliberately no language switch. The page and every work in it are
 Macedonian, and the app's switch changes only its own labels; a switch here would
 have to make the whole document bilingual to be honest about what it did. The
