@@ -28,6 +28,7 @@ catalog.html            the same catalogue as one plain document, for crawlers
 assets/styles.css       theme tokens + all styling
 assets/i18n.js          every user-visible string, mk + en
 assets/app.js           all behaviour
+assets/doc.js           the static page's few controls (see its section)
 assets/*.min.css|.min.js  what index.html loads: generated, committed
 assets/fonts/*.woff2    self-hosted Geologica (the only typeface, OFL 1.1)
 assets/images/          cover, brand icons, About photograph, favicon set
@@ -96,8 +97,9 @@ deferring the fonts.
 ## Minification
 
 `tools/build.py` ends by calling `tools/minify.py`, which writes
-`assets/styles.min.css`, `assets/i18n.min.js` and `assets/app.min.js`;
-`index.html` loads those. They are **generated and committed**, like `data/*`,
+`assets/styles.min.css`, `assets/i18n.min.js`, `assets/app.min.js` and
+`assets/doc.min.js`; `index.html` loads the first three and `catalog.html` the
+stylesheet and the last. They are **generated and committed**, like `data/*`,
 and the build stays reproducible: `git diff --exit-code assets/` after a build
 must be silent.
 
@@ -496,26 +498,56 @@ the same reason:
 Its Macedonian prose is the one place the rule that every string comes from
 `assets/i18n.js` cannot hold — the page must carry text with no script to put it
 there. The labels live in `PAGE_TEXT` at the top of the page generator and mirror
-the mk values of `app.title`, `app.subtitle`, `app.credit`, `cat.*`, `col.*`,
-`privacy.link` and `common.none`; change both together.
+the mk values of `app.title`, `app.subtitle`, `app.credit`, `footer.fullList`,
+`tab.*`, `theme.*`, `share.*`, `a11y.skip`, `a11y.sections`, `cat.*`, `col.*`,
+`privacy.link` and `common.none`; change both together. Its icons are the same
+rule applied to markup: `PAGE_THEME_ICONS` and `PAGE_SHARE_ICONS` are the paths
+`index.html` carries inline, because the page has no `app.js` to draw them.
 
-The page links `assets/styles.min.css` and carries one script: the theme line
-from `index.html`, without the boot classes, so a reader who chose the dark theme
-in the app does not get a white flash here. It carries no analytics — Search
-Console is what measures it — and makes no third-party request; the only other
-host in it is the credit link. It is its own canonical URL (`/catalog.html`) and
-stays self-canonical: the app keeps the root it is shared by, and canonicalising
-either to the other would drop one of them from the index. The app links it from
-the footer, which is the crawl path. Its links back name `index.html` rather than
-`./`: the page is read from disk too, where `./` is a directory listing and there
-is no script here to tell the difference; on the web the app's canonical folds
-that URL into the root.
+The page links `assets/styles.min.css` and carries two scripts. The first is the
+theme line from `index.html`, without the boot classes, so a reader who chose the
+dark theme in the app does not get a white flash here. The second is
+`assets/doc.min.js`, and it exists because the shell is the app's and the app's
+controls work: it makes the theme switch write the same
+`localStorage["shpato-theme"]`, fills the four share intents from this page's
+canonical address, and sets `data-pan` on each `.table-frame` so the pan cue
+follows the scroll position, as `app.js` does for the app's table. It carries no
+analytics — Search Console is what measures it — and makes no third-party
+request; the other hosts in the page are the credit link and the share intents'
+`href`s. It is its own canonical URL (`/catalog.html`) and stays self-canonical:
+the app keeps the root it is shared by, and canonicalising either to the other
+would drop one of them from the index. The app links it from the footer, which is
+the crawl path. Its links back name `index.html` rather than `./`: the page is
+read from disk too, where `./` is a directory listing; on the web the app's
+canonical folds that URL into the root.
 
-The rows are not links: there is no per-work URL yet, and the title cell is
-where one goes when there is. The tables are the app's, minus the pointer and
-the hover, because a row here does nothing. They pan sideways without the pan
-cue, which needs a script to know which sides still have table left; a plain
-horizontal scroll is what a document gets.
+The header, the tab strip and the footer are the app's, so a reader who follows a
+link between the two does not arrive somewhere that looks like another site. The
+header has the same brand, the same full subtitle and the app's theme switch. The
+strip has the same four labels, with Каталог current (a `<span>`, since this *is*
+the catalogue) and the other three linking into the app's views. The footer has
+the app's credit line, the four share intents and the same `space-between` to
+`center` wrap at 620px; `Целосен список` is where the reader already is, so it is
+a span rather than a link to itself. Both pages draw those from the same CSS:
+`.tabs .tab` is what the strip styles, which is why `index.html`'s buttons carry
+the class too.
+
+There is deliberately no language switch. The page and every work in it are
+Macedonian, and the app's switch changes only its own labels; a switch here would
+have to make the whole document bilingual to be honest about what it did. The
+theme switch is different: it is one stored preference that both pages share.
+
+Two things the app gets for free need a line here. The tab strip is sticky, so
+`.doc-section` carries a `scroll-margin-top` — without it an in-page link lands
+with the section's own `<h2>` underneath the strip. And the table card cannot
+scroll vertically (its box is the whole table), so
+`.catalog-doc .table-wrap { overscroll-behavior-y: auto }` keeps a drag over it
+scrolling the page; leaving the base `contain` would swallow the gesture over
+most of a phone screen.
+
+The rows are not links: there is no per-work URL yet, and the title cell is where
+one goes when there is. The tables are the app's, minus the pointer and the hover,
+because a row here does nothing.
 
 ## Analytics and the privacy notice
 
@@ -848,7 +880,8 @@ The bar is **zero axe-core violations** in both themes, on all four tabs, with
 the drawer open, the export menu open and the player open. Re-check it after any
 markup change. axe's `incomplete` items on `#export-btn`, the scrollable facet
 panel and one-character count chips are pre-existing false positives, not
-regressions.
+regressions. `catalog.html` is held to the same bar: both themes, with a table
+panned to an end so the cue is showing.
 
 Focus order is keyboard-complete; the catalogue table's row buttons alone are
 431 tab stops, plus one more for each of the 39 play buttons, so avoid adding

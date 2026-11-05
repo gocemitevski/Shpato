@@ -29,6 +29,7 @@
   <link rel="icon" href="assets/images/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="icon" href="assets/images/favicon-16.png" type="image/png" sizes="16x16">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <meta name="theme-color" content="#0d1117">
   <script>
     /* Apply the saved theme before first paint, so a reader who chose the dark
        theme in the app does not get a white flash here. */
@@ -43,6 +44,8 @@
   <link rel="stylesheet" href="assets/styles.min.css">
 </head>
 <body class="catalog-doc">
+  <a class="skip-link" href="#main">Прескокни до содржината</a>
+
   <header class="site-header">
     <a class="brand" href="index.html">
       <span class="brand-mark" aria-hidden="true">
@@ -50,12 +53,31 @@
       </span>
       <span class="brand-text">
         <span class="brand-name">Драган Ѓаконовски – Шпато</span>
-        <span class="brand-sub">Дигитален каталог</span>
+        <span class="brand-sub">Дигитален каталог на делата во фонотеката на МРТВ</span>
       </span>
     </a>
+    <div class="header-actions">
+      <div class="theme-toggle" role="group" aria-label="Тема">
+        <button type="button" data-theme="light" aria-pressed="false" aria-label="Светла" title="Светла">
+          <svg class="toggle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.6"/><path d="M12 2.4v2.2M12 19.4v2.2M2.4 12h2.2M19.4 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        </button>
+        <button type="button" data-theme="dark" aria-pressed="false" aria-label="Темна" title="Темна">
+          <svg class="toggle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 13.1A9 9 0 1 1 10.9 3.1 7.4 7.4 0 0 0 21 13.1Z"/></svg>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <main id="main">
+  <nav class="tabs-nav" aria-label="Секции">
+    <div class="tabs">
+      <span class="tab" aria-current="page">Каталог</span>
+      <a class="tab" href="index.html#tab=stats">Статистика</a>
+      <a class="tab" href="index.html#tab=notes">Забелешки</a>
+      <a class="tab" href="index.html#tab=about">За Шпато</a>
+    </div>
+  </nav>
+
+  <main id="main" tabindex="-1">
     <h1>Делата на Драган Ѓаконовски – Шпато</h1>
     <p class="doc-lead">Ова е целосниот список на делата на Драган Ѓаконовски – Шпато во фонотеката на Македонската радио-телевизија, подреден по категорија — вкупно 431. Податоците се преземени од монографијата на Ванчо Димитров и се истите што ги прикажува интерактивниот каталог, каде што може да се пребарува, филтрира и слуша снимка.</p>
     <p class="doc-cta"><a class="btn" href="index.html">Отвори го интерактивниот каталог</a></p>
@@ -71,480 +93,496 @@
 
     <section class="doc-section" id="cat-vocal" aria-labelledby="h-vocal">
       <h2 id="h-vocal">Вокални композиции <span class="doc-count">73</span></h2>
-      <div class="doc-table">
-        <table class="catalog-table">
-          <caption class="visually-hidden">Вокални композиции во фонотеката на МРТВ</caption>
-          <thead><tr><th scope="col">Наслов</th><th scope="col">Изведувач</th><th scope="col">Автор</th><th scope="col">Времетраење</th><th scope="col">Сигнатура</th></tr></thead>
-          <tbody>
-            <tr><th scope="row" class="cell-title">Акорди по едно лето</th><td class="cell-perf">Цветанка Ласкова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:00</td><td class="sig">З-4175/1</td></tr>
-            <tr><th scope="row" class="cell-title">Без повраток</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:10</td><td class="sig">З-2810/2</td></tr>
-            <tr><th scope="row" class="cell-title">Блузот на црната пејачка</th><td class="cell-perf">Мелпомени Корнети</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">1:57</td><td class="sig">З-7689/2</td></tr>
-            <tr><th scope="row" class="cell-title">Во име на цветот</th><td class="cell-perf">Катерина Таневска</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:38</td><td class="sig">З-7835/1</td></tr>
-            <tr><th scope="row" class="cell-title">Во името на цветот</th><td class="cell-perf">—</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Гарача</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:44</td><td class="sig">АЗ-50/5</td></tr>
-            <tr><th scope="row" class="cell-title">Глас од далечината</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:50</td><td class="sig">З-3192/4</td></tr>
-            <tr><th scope="row" class="cell-title">Далечен крај</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:33</td><td class="sig">З-3737/2</td></tr>
-            <tr><th scope="row" class="cell-title">Далечен крај</th><td class="cell-perf">Велко Трпчевски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:40</td><td class="sig">АЗ-50/6</td></tr>
-            <tr><th scope="row" class="cell-title">Даниела</th><td class="cell-perf">Љупка Димитровска</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:43</td><td class="sig">З-1558/3</td></tr>
-            <tr><th scope="row" class="cell-title">Даниела</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:37</td><td class="sig">З-2413/2</td></tr>
-            <tr><th scope="row" class="cell-title">Девојка и песна</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:23</td><td class="sig">Л-7763/3</td></tr>
-            <tr><th scope="row" class="cell-title">Ден љубен безповратен</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:41</td><td class="sig">З-4543/2</td></tr>
-            <tr><th scope="row" class="cell-title">Дојди есен</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:16</td><td class="sig">З-3880/3</td></tr>
-            <tr><th scope="row" class="cell-title">Единствена песна</th><td class="cell-perf">Маријана и Росана</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:18</td><td class="sig">З-7706/3</td></tr>
-            <tr><th scope="row" class="cell-title">Ехо на љубовта</th><td class="cell-perf">Момо Николовски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:05</td><td class="sig">З-6357/2</td></tr>
-            <tr><th scope="row" class="cell-title">Жолта липа</th><td class="cell-perf">Томислав Маниќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:00</td><td class="sig">З-3090/2</td></tr>
-            <tr><th scope="row" class="cell-title">За нас почнува живот</th><td class="cell-perf">Даниела Панчетовиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:22</td><td class="sig">З-6779/2</td></tr>
-            <tr><th scope="row" class="cell-title">За тебе е сè</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:05</td><td class="sig">З-2558/1</td></tr>
-            <tr><th scope="row" class="cell-title">Загатка</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:30</td><td class="sig">З-4524/1</td></tr>
-            <tr><th scope="row" class="cell-title">Зар вистина е крај</th><td class="cell-perf">Веле Матевски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:43</td><td class="sig">З-3231/1</td></tr>
-            <tr><th scope="row" class="cell-title">Зар сè одминало</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:33</td><td class="sig">З-3682/3</td></tr>
-            <tr><th scope="row" class="cell-title">Знамето на мојот одред</th><td class="cell-perf">Јасмина Беличанска</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:54</td><td class="sig">З-7840/2</td></tr>
-            <tr><th scope="row" class="cell-title">Идила</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:25</td><td class="sig">ПК-2223/7</td></tr>
-            <tr><th scope="row" class="cell-title">Идила секогаш што била</th><td class="cell-perf">Квартет Мелос</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">5:27</td><td class="sig">З-3404/2</td></tr>
-            <tr><th scope="row" class="cell-title">Идила секогаш што била</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:33</td><td class="sig">З-3741/1</td></tr>
-            <tr><th scope="row" class="cell-title">Илјада проблеми</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:16</td><td class="sig">З-1441/2</td></tr>
-            <tr><th scope="row" class="cell-title">Илузија</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:50</td><td class="sig">З-5991/1</td></tr>
-            <tr><th scope="row" class="cell-title">Импресија</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:43</td><td class="sig">З-4330/1</td></tr>
-            <tr><th scope="row" class="cell-title">Индекс и љубов</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:20</td><td class="sig">АЗ-49</td></tr>
-            <tr><th scope="row" class="cell-title">Индијана</th><td class="cell-perf">Томислав Маниќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:37</td><td class="sig">АЗ-52/10</td></tr>
-            <tr><th scope="row" class="cell-title">Индијана</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:41</td><td class="sig">АЗ-55/4</td></tr>
-            <tr><th scope="row" class="cell-title">Исповест на црномурестата жена</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">1:53</td><td class="sig">З-7334/1</td></tr>
-            <tr><th scope="row" class="cell-title">Калипсо</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:12</td><td class="sig">АЗ-55/8</td></tr>
-            <tr><th scope="row" class="cell-title">Катерина</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:46</td><td class="sig">АЗ-61/25</td></tr>
-            <tr><th scope="row" class="cell-title">Кога пеам, кога љубам</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:40</td><td class="sig">АЗ-7/5</td></tr>
-            <tr><th scope="row" class="cell-title">Кога си сама</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:51</td><td class="sig">З-3372/2</td></tr>
-            <tr><th scope="row" class="cell-title">Копнеж за танц</th><td class="cell-perf">Зафир Хаџиманов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:35</td><td class="sig">Л-4569/3</td></tr>
-            <tr><th scope="row" class="cell-title">Лени</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:30</td><td class="sig">З-478/1</td></tr>
-            <tr><th scope="row" class="cell-title">Љубов од дамни дни</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:37</td><td class="sig">З-4548/2</td></tr>
-            <tr><th scope="row" class="cell-title">Љубовна тема</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:18</td><td class="sig">З-7334/2</td></tr>
-            <tr><th scope="row" class="cell-title">Ми вети ти</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:10</td><td class="sig">З-477/3</td></tr>
-            <tr><th scope="row" class="cell-title">Младоста е убава</th><td class="cell-perf">Даниела Панчетовиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:34</td><td class="sig">З-4530/2</td></tr>
-            <tr><th scope="row" class="cell-title">Мојот дом</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:09</td><td class="sig">З-8226/1</td></tr>
-            <tr><th scope="row" class="cell-title">Молчи една долина</th><td class="cell-perf">Блага Видец</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:00</td><td class="sig">АЗ-60/12</td></tr>
-            <tr><th scope="row" class="cell-title">Молчи една долина</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:27</td><td class="sig">З-3527/2</td></tr>
-            <tr><th scope="row" class="cell-title">Нашиот Титов ден</th><td class="cell-perf">Сефедин Бајрамов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:25</td><td class="sig">З-7879/1</td></tr>
-            <tr><th scope="row" class="cell-title">Не ме заборавај</th><td class="cell-perf">Цветанка Ласкова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:00</td><td class="sig">З-6568/1</td></tr>
-            <tr><th scope="row" class="cell-title">Незаборав</th><td class="cell-perf">Веле Матевски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:32</td><td class="sig">З-5897/2</td></tr>
-            <tr><th scope="row" class="cell-title">Незаборав</th><td class="cell-perf">Златко Давчевски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:44</td><td class="sig">З-8387/1</td></tr>
-            <tr><th scope="row" class="cell-title">Неповратни дни</th><td class="cell-perf">Љиљана Петровиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:07</td><td class="sig">З-690/4</td></tr>
-            <tr><th scope="row" class="cell-title">Неповратни дни</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:55</td><td class="sig">З-2810/3</td></tr>
-            <tr><th scope="row" class="cell-title">Носталгија</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:35</td><td class="sig">З-3866/1</td></tr>
-            <tr><th scope="row" class="cell-title">Песна за вечната младост</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:55</td><td class="sig">З-4533/2</td></tr>
-            <tr><th scope="row" class="cell-title">Песна за Кузман Јосифовски - Питу</th><td class="cell-perf">Мирјана Тасевска</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:43</td><td class="sig">З-4519/2</td></tr>
-            <tr><th scope="row" class="cell-title">Песна за мојата пријателка</th><td class="cell-perf">—</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Планината во спомени</th><td class="cell-perf">Томислав Маниќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:00</td><td class="sig">З-3090/1</td></tr>
-            <tr><th scope="row" class="cell-title">Последен ден на разделбата</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:00</td><td class="sig">З-2291/2</td></tr>
-            <tr><th scope="row" class="cell-title">Прва љубов</th><td class="cell-perf">Ванчо Тарабунов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:00</td><td class="sig">З-3674/3</td></tr>
-            <tr><th scope="row" class="cell-title">Роден крај</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:45</td><td class="sig">З-4175/2</td></tr>
-            <tr><th scope="row" class="cell-title">Само надежта останала</th><td class="cell-perf">Цветанка Ласкова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:12</td><td class="sig">З-5894/1</td></tr>
-            <tr><th scope="row" class="cell-title">Се боревме за светла иднина</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:45</td><td class="sig">З-4355/1</td></tr>
-            <tr><th scope="row" class="cell-title">Се боревме за светла иднина</th><td class="cell-perf">група Македонија</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:45</td><td class="sig">З-5662/2</td></tr>
-            <tr><th scope="row" class="cell-title">Си одам и се враќам пак</th><td class="cell-perf">Андреа Сопронов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:48</td><td class="sig">З-3620/3</td></tr>
-            <tr><th scope="row" class="cell-title">Сини очи</th><td class="cell-perf">Веле Матевски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:36</td><td class="sig">З-6362/1</td></tr>
-            <tr><th scope="row" class="cell-title">Снегулки</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:32</td><td class="sig">З-1791/3</td></tr>
-            <tr><th scope="row" class="cell-title">Со Тито и Партија</th><td class="cell-perf">Љупчо Босилков</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:55</td><td class="sig">З-7489/2</td></tr>
-            <tr><th scope="row" class="cell-title">Те носам во себе</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:15</td><td class="sig">З-1360/2</td></tr>
-            <tr><th scope="row" class="cell-title">Те ценам цени ме…</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Титовиот пат</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:50</td><td class="sig">З-7846/2</td></tr>
-            <tr><th scope="row" class="cell-title">Тој и таа-јас и ти</th><td class="cell-perf">група Пепел и крв</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:45</td><td class="sig">З-6363/2</td></tr>
-            <tr><th scope="row" class="cell-title">Убава си како музика</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:43</td><td class="sig">З-2618/2</td></tr>
-            <tr><th scope="row" class="cell-title">Што се дворој без нас</th><td class="cell-perf">Сефедин Бајрамов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:33</td><td class="sig">З-8148/1</td></tr>
-          </tbody>
-        </table>
+      <div class="table-frame">
+        <div class="table-wrap doc-table" tabindex="0">
+          <table class="catalog-table">
+            <caption class="visually-hidden">Вокални композиции во фонотеката на МРТВ</caption>
+            <thead><tr><th scope="col">Наслов</th><th scope="col">Изведувач</th><th scope="col">Автор</th><th scope="col">Времетраење</th><th scope="col">Сигнатура</th></tr></thead>
+            <tbody>
+              <tr><th scope="row" class="cell-title">Акорди по едно лето</th><td class="cell-perf">Цветанка Ласкова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:00</td><td class="sig">З-4175/1</td></tr>
+              <tr><th scope="row" class="cell-title">Без повраток</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:10</td><td class="sig">З-2810/2</td></tr>
+              <tr><th scope="row" class="cell-title">Блузот на црната пејачка</th><td class="cell-perf">Мелпомени Корнети</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">1:57</td><td class="sig">З-7689/2</td></tr>
+              <tr><th scope="row" class="cell-title">Во име на цветот</th><td class="cell-perf">Катерина Таневска</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:38</td><td class="sig">З-7835/1</td></tr>
+              <tr><th scope="row" class="cell-title">Во името на цветот</th><td class="cell-perf">—</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Гарача</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:44</td><td class="sig">АЗ-50/5</td></tr>
+              <tr><th scope="row" class="cell-title">Глас од далечината</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:50</td><td class="sig">З-3192/4</td></tr>
+              <tr><th scope="row" class="cell-title">Далечен крај</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:33</td><td class="sig">З-3737/2</td></tr>
+              <tr><th scope="row" class="cell-title">Далечен крај</th><td class="cell-perf">Велко Трпчевски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:40</td><td class="sig">АЗ-50/6</td></tr>
+              <tr><th scope="row" class="cell-title">Даниела</th><td class="cell-perf">Љупка Димитровска</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:43</td><td class="sig">З-1558/3</td></tr>
+              <tr><th scope="row" class="cell-title">Даниела</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:37</td><td class="sig">З-2413/2</td></tr>
+              <tr><th scope="row" class="cell-title">Девојка и песна</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:23</td><td class="sig">Л-7763/3</td></tr>
+              <tr><th scope="row" class="cell-title">Ден љубен безповратен</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:41</td><td class="sig">З-4543/2</td></tr>
+              <tr><th scope="row" class="cell-title">Дојди есен</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:16</td><td class="sig">З-3880/3</td></tr>
+              <tr><th scope="row" class="cell-title">Единствена песна</th><td class="cell-perf">Маријана и Росана</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:18</td><td class="sig">З-7706/3</td></tr>
+              <tr><th scope="row" class="cell-title">Ехо на љубовта</th><td class="cell-perf">Момо Николовски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:05</td><td class="sig">З-6357/2</td></tr>
+              <tr><th scope="row" class="cell-title">Жолта липа</th><td class="cell-perf">Томислав Маниќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:00</td><td class="sig">З-3090/2</td></tr>
+              <tr><th scope="row" class="cell-title">За нас почнува живот</th><td class="cell-perf">Даниела Панчетовиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:22</td><td class="sig">З-6779/2</td></tr>
+              <tr><th scope="row" class="cell-title">За тебе е сè</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:05</td><td class="sig">З-2558/1</td></tr>
+              <tr><th scope="row" class="cell-title">Загатка</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:30</td><td class="sig">З-4524/1</td></tr>
+              <tr><th scope="row" class="cell-title">Зар вистина е крај</th><td class="cell-perf">Веле Матевски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:43</td><td class="sig">З-3231/1</td></tr>
+              <tr><th scope="row" class="cell-title">Зар сè одминало</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:33</td><td class="sig">З-3682/3</td></tr>
+              <tr><th scope="row" class="cell-title">Знамето на мојот одред</th><td class="cell-perf">Јасмина Беличанска</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:54</td><td class="sig">З-7840/2</td></tr>
+              <tr><th scope="row" class="cell-title">Идила</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:25</td><td class="sig">ПК-2223/7</td></tr>
+              <tr><th scope="row" class="cell-title">Идила секогаш што била</th><td class="cell-perf">Квартет Мелос</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">5:27</td><td class="sig">З-3404/2</td></tr>
+              <tr><th scope="row" class="cell-title">Идила секогаш што била</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:33</td><td class="sig">З-3741/1</td></tr>
+              <tr><th scope="row" class="cell-title">Илјада проблеми</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:16</td><td class="sig">З-1441/2</td></tr>
+              <tr><th scope="row" class="cell-title">Илузија</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:50</td><td class="sig">З-5991/1</td></tr>
+              <tr><th scope="row" class="cell-title">Импресија</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:43</td><td class="sig">З-4330/1</td></tr>
+              <tr><th scope="row" class="cell-title">Индекс и љубов</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:20</td><td class="sig">АЗ-49</td></tr>
+              <tr><th scope="row" class="cell-title">Индијана</th><td class="cell-perf">Томислав Маниќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:37</td><td class="sig">АЗ-52/10</td></tr>
+              <tr><th scope="row" class="cell-title">Индијана</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:41</td><td class="sig">АЗ-55/4</td></tr>
+              <tr><th scope="row" class="cell-title">Исповест на црномурестата жена</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">1:53</td><td class="sig">З-7334/1</td></tr>
+              <tr><th scope="row" class="cell-title">Калипсо</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:12</td><td class="sig">АЗ-55/8</td></tr>
+              <tr><th scope="row" class="cell-title">Катерина</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:46</td><td class="sig">АЗ-61/25</td></tr>
+              <tr><th scope="row" class="cell-title">Кога пеам, кога љубам</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:40</td><td class="sig">АЗ-7/5</td></tr>
+              <tr><th scope="row" class="cell-title">Кога си сама</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:51</td><td class="sig">З-3372/2</td></tr>
+              <tr><th scope="row" class="cell-title">Копнеж за танц</th><td class="cell-perf">Зафир Хаџиманов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:35</td><td class="sig">Л-4569/3</td></tr>
+              <tr><th scope="row" class="cell-title">Лени</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:30</td><td class="sig">З-478/1</td></tr>
+              <tr><th scope="row" class="cell-title">Љубов од дамни дни</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:37</td><td class="sig">З-4548/2</td></tr>
+              <tr><th scope="row" class="cell-title">Љубовна тема</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:18</td><td class="sig">З-7334/2</td></tr>
+              <tr><th scope="row" class="cell-title">Ми вети ти</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:10</td><td class="sig">З-477/3</td></tr>
+              <tr><th scope="row" class="cell-title">Младоста е убава</th><td class="cell-perf">Даниела Панчетовиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:34</td><td class="sig">З-4530/2</td></tr>
+              <tr><th scope="row" class="cell-title">Мојот дом</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:09</td><td class="sig">З-8226/1</td></tr>
+              <tr><th scope="row" class="cell-title">Молчи една долина</th><td class="cell-perf">Блага Видец</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:00</td><td class="sig">АЗ-60/12</td></tr>
+              <tr><th scope="row" class="cell-title">Молчи една долина</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:27</td><td class="sig">З-3527/2</td></tr>
+              <tr><th scope="row" class="cell-title">Нашиот Титов ден</th><td class="cell-perf">Сефедин Бајрамов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:25</td><td class="sig">З-7879/1</td></tr>
+              <tr><th scope="row" class="cell-title">Не ме заборавај</th><td class="cell-perf">Цветанка Ласкова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:00</td><td class="sig">З-6568/1</td></tr>
+              <tr><th scope="row" class="cell-title">Незаборав</th><td class="cell-perf">Веле Матевски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:32</td><td class="sig">З-5897/2</td></tr>
+              <tr><th scope="row" class="cell-title">Незаборав</th><td class="cell-perf">Златко Давчевски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:44</td><td class="sig">З-8387/1</td></tr>
+              <tr><th scope="row" class="cell-title">Неповратни дни</th><td class="cell-perf">Љиљана Петровиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:07</td><td class="sig">З-690/4</td></tr>
+              <tr><th scope="row" class="cell-title">Неповратни дни</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:55</td><td class="sig">З-2810/3</td></tr>
+              <tr><th scope="row" class="cell-title">Носталгија</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:35</td><td class="sig">З-3866/1</td></tr>
+              <tr><th scope="row" class="cell-title">Песна за вечната младост</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:55</td><td class="sig">З-4533/2</td></tr>
+              <tr><th scope="row" class="cell-title">Песна за Кузман Јосифовски - Питу</th><td class="cell-perf">Мирјана Тасевска</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:43</td><td class="sig">З-4519/2</td></tr>
+              <tr><th scope="row" class="cell-title">Песна за мојата пријателка</th><td class="cell-perf">—</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Планината во спомени</th><td class="cell-perf">Томислав Маниќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:00</td><td class="sig">З-3090/1</td></tr>
+              <tr><th scope="row" class="cell-title">Последен ден на разделбата</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:00</td><td class="sig">З-2291/2</td></tr>
+              <tr><th scope="row" class="cell-title">Прва љубов</th><td class="cell-perf">Ванчо Тарабунов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:00</td><td class="sig">З-3674/3</td></tr>
+              <tr><th scope="row" class="cell-title">Роден крај</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:45</td><td class="sig">З-4175/2</td></tr>
+              <tr><th scope="row" class="cell-title">Само надежта останала</th><td class="cell-perf">Цветанка Ласкова</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:12</td><td class="sig">З-5894/1</td></tr>
+              <tr><th scope="row" class="cell-title">Се боревме за светла иднина</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:45</td><td class="sig">З-4355/1</td></tr>
+              <tr><th scope="row" class="cell-title">Се боревме за светла иднина</th><td class="cell-perf">група Македонија</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:45</td><td class="sig">З-5662/2</td></tr>
+              <tr><th scope="row" class="cell-title">Си одам и се враќам пак</th><td class="cell-perf">Андреа Сопронов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:48</td><td class="sig">З-3620/3</td></tr>
+              <tr><th scope="row" class="cell-title">Сини очи</th><td class="cell-perf">Веле Матевски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:36</td><td class="sig">З-6362/1</td></tr>
+              <tr><th scope="row" class="cell-title">Снегулки</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:32</td><td class="sig">З-1791/3</td></tr>
+              <tr><th scope="row" class="cell-title">Со Тито и Партија</th><td class="cell-perf">Љупчо Босилков</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:55</td><td class="sig">З-7489/2</td></tr>
+              <tr><th scope="row" class="cell-title">Те носам во себе</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:15</td><td class="sig">З-1360/2</td></tr>
+              <tr><th scope="row" class="cell-title">Те ценам цени ме…</th><td class="cell-perf">Импулси</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Титовиот пат</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:50</td><td class="sig">З-7846/2</td></tr>
+              <tr><th scope="row" class="cell-title">Тој и таа-јас и ти</th><td class="cell-perf">група Пепел и крв</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:45</td><td class="sig">З-6363/2</td></tr>
+              <tr><th scope="row" class="cell-title">Убава си како музика</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:43</td><td class="sig">З-2618/2</td></tr>
+              <tr><th scope="row" class="cell-title">Што се дворој без нас</th><td class="cell-perf">Сефедин Бајрамов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:33</td><td class="sig">З-8148/1</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pan-cue left" aria-hidden="true"></div>
+        <div class="pan-cue right" aria-hidden="true"></div>
       </div>
     </section>
 
     <section class="doc-section" id="cat-instrumental" aria-labelledby="h-instrumental">
       <h2 id="h-instrumental">Инструментални композиции <span class="doc-count">55</span></h2>
-      <div class="doc-table">
-        <table class="catalog-table">
-          <caption class="visually-hidden">Инструментални композиции во фонотеката на МРТВ</caption>
-          <thead><tr><th scope="col">Наслов</th><th scope="col">Изведувач</th><th scope="col">Автор</th><th scope="col">Времетраење</th><th scope="col">Сигнатура</th></tr></thead>
-          <tbody>
-            <tr><th scope="row" class="cell-title">Балада за Бранка</th><td class="cell-perf">Кирил Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:03</td><td class="sig">З-8526/1</td></tr>
-            <tr><th scope="row" class="cell-title">Балада за гитара</th><td class="cell-perf">Петар Лукиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:52</td><td class="sig">З-4698/2</td></tr>
-            <tr><th scope="row" class="cell-title">Блузот на црната пејачка</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:28</td><td class="sig">З-3415/2</td></tr>
-            <tr><th scope="row" class="cell-title">Во спомен на старото пријателство</th><td class="cell-perf">Мики Асановиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:40</td><td class="sig">З-7206/2</td></tr>
-            <tr><th scope="row" class="cell-title">Гарача</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:54</td><td class="sig">З-7700/2</td></tr>
-            <tr><th scope="row" class="cell-title">Гермијан</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:05</td><td class="sig">З-7457/1</td></tr>
-            <tr><th scope="row" class="cell-title">Гитарата ја оплакува смртта на Муриета</th><td class="cell-perf">—</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Главна тема</th><td class="cell-perf">Кирил Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:55</td><td class="sig">З-7687/2</td></tr>
-            <tr><th scope="row" class="cell-title">Далечен крај</th><td class="cell-perf">Благоја Чешларов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:25</td><td class="sig">З-3905/3</td></tr>
-            <tr><th scope="row" class="cell-title">Дојди есен</th><td class="cell-perf">Квартет Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:40</td><td class="sig">З-7608/3</td></tr>
-            <tr><th scope="row" class="cell-title">Дојди есен</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:30</td><td class="sig">З-9483/2</td></tr>
-            <tr><th scope="row" class="cell-title">Дојди есен</th><td class="cell-perf">Ратко Спасовски-Пици</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:17</td><td class="sig">АЗ-48/10</td></tr>
-            <tr><th scope="row" class="cell-title">Егзотика</th><td class="cell-perf">Квартет Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:32</td><td class="sig">З-7608/1</td></tr>
-            <tr><th scope="row" class="cell-title">Еден бакнеж</th><td class="cell-perf">Ревиски оркестар на Радио-телевизија Љубљана</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:10</td><td class="sig">З-6057/3</td></tr>
-            <tr><th scope="row" class="cell-title">Елегија за тромбон</th><td class="cell-perf">Кирил Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:50</td><td class="sig">З-8605/1</td></tr>
-            <tr><th scope="row" class="cell-title">Ехо од далечното минато</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">5:00</td><td class="sig">З-4701/1</td></tr>
-            <tr><th scope="row" class="cell-title">Злато најдоа, злато во Калифорнија</th><td class="cell-perf">Ревиски оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">1:14</td><td class="sig">З-7690/2</td></tr>
-            <tr><th scope="row" class="cell-title">Идила</th><td class="cell-perf">Никола Комовски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:00</td><td class="sig">З-8189</td></tr>
-            <tr><th scope="row" class="cell-title">Идила</th><td class="cell-perf">Благоја Чешларов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:25</td><td class="sig">З-3905/2</td></tr>
-            <tr><th scope="row" class="cell-title">Идила</th><td class="cell-perf">Голем забавен оркестар</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:15</td><td class="sig">АЗ-49/22</td></tr>
-            <tr><th scope="row" class="cell-title">Импресија</th><td class="cell-perf">Петар Лукиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:50</td><td class="sig">З-6668/1</td></tr>
-            <tr><th scope="row" class="cell-title">Индекс и љубов</th><td class="cell-perf">Голем забавен оркестар</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:15</td><td class="sig">АЗ-49/21</td></tr>
-            <tr><th scope="row" class="cell-title">Исповест на црномурестата жена</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:19</td><td class="sig">З-7415/1</td></tr>
-            <tr><th scope="row" class="cell-title">Јас не сум ти</th><td class="cell-perf">Џез ансамбл на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">7:27</td><td class="sig">З-3004/2</td></tr>
-            <tr><th scope="row" class="cell-title">Кога си сама</th><td class="cell-perf">Ревиски оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:06</td><td class="sig">З-8227/1</td></tr>
-            <tr><th scope="row" class="cell-title">Лајт мотив 1</th><td class="cell-perf">Ревиски оркестар</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">1:37</td><td class="sig">З-7690/1</td></tr>
-            <tr><th scope="row" class="cell-title">Лајт мотив 2</th><td class="cell-perf">Ревиски оркестар</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">1:51</td><td class="sig">З-7693/2</td></tr>
-            <tr><th scope="row" class="cell-title">Лајт мотив 3</th><td class="cell-perf">К. Божиновски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:12</td><td class="sig">З-7693/3</td></tr>
-            <tr><th scope="row" class="cell-title">Лени</th><td class="cell-perf">Квартет Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:22</td><td class="sig">З-7474/1</td></tr>
-            <tr><th scope="row" class="cell-title">Лени</th><td class="cell-perf">Танцов оркестар</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:18</td><td class="sig">ПМ-303/1</td></tr>
-            <tr><th scope="row" class="cell-title">Летна ноќ задна ноќ</th><td class="cell-perf">Кире Костов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:04</td><td class="sig">З-7537/1</td></tr>
-            <tr><th scope="row" class="cell-title">Љубовна тема</th><td class="cell-perf">Кирил Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:25</td><td class="sig">З-7694/3</td></tr>
-            <tr><th scope="row" class="cell-title">Љубовна тема</th><td class="cell-perf">К. Божиновски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:17</td><td class="sig">З-7693/3</td></tr>
-            <tr><th scope="row" class="cell-title">Мамбо Гарача</th><td class="cell-perf">Никола Ципушев</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:00</td><td class="sig">АЗ-54/17</td></tr>
-            <tr><th scope="row" class="cell-title">Марија</th><td class="cell-perf">Кокан Димушевски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">5:36</td><td class="sig">З-8526/2</td></tr>
-            <tr><th scope="row" class="cell-title">Ми вети ти (џез верзија)</th><td class="cell-perf">Трио Лабиш</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">8:15</td><td class="sig">ПК-2137/1</td></tr>
-            <tr><th scope="row" class="cell-title">Мими</th><td class="cell-perf">Слободан (Боби) Мицев</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:10</td><td class="sig">З-7493/2</td></tr>
-            <tr><th scope="row" class="cell-title">Мими</th><td class="cell-perf">Кирил Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:05</td><td class="sig">З-8638/2</td></tr>
-            <tr><th scope="row" class="cell-title">Младоста е убава</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:35</td><td class="sig">З-4253/3</td></tr>
-            <tr><th scope="row" class="cell-title">Молчи една долина</th><td class="cell-perf">Голем забавен оркестар</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:10</td><td class="sig">АЗ-49/16</td></tr>
-            <tr><th scope="row" class="cell-title">Молчи една долина</th><td class="cell-perf">Христо Христовски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:26</td><td class="sig">ПМ-538/1</td></tr>
-            <tr><th scope="row" class="cell-title">На игранка</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">5:08</td><td class="sig">З-7638/2</td></tr>
-            <tr><th scope="row" class="cell-title">Народна игра</th><td class="cell-perf">Забавен оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">1:38</td><td class="sig">З-7693/1</td></tr>
-            <tr><th scope="row" class="cell-title">Осаменост (Молчи една долина)</th><td class="cell-perf">Квартет Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:54</td><td class="sig">З-7608/2</td></tr>
-            <tr><th scope="row" class="cell-title">Песна на русокосата пејачка</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:15</td><td class="sig">З-7687/1</td></tr>
-            <tr><th scope="row" class="cell-title">Поздрав до А. К. Жобим</th><td class="cell-perf">Рамиз Имеров</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:12</td><td class="sig">З-7194/1</td></tr>
-            <tr><th scope="row" class="cell-title">Поздрав до оркестарот</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:30</td><td class="sig">З-3783/1</td></tr>
-            <tr><th scope="row" class="cell-title">Радост на победата</th><td class="cell-perf">Забавен ансамбл</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">1:35</td><td class="sig">З-7691/2</td></tr>
-            <tr><th scope="row" class="cell-title">Свечена игра</th><td class="cell-perf">Забавен ансамбл</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:28</td><td class="sig">З-7693/4</td></tr>
-            <tr><th scope="row" class="cell-title">Синтеза</th><td class="cell-perf">Кире Костов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">5:00</td><td class="sig">З-8212/1</td></tr>
-            <tr><th scope="row" class="cell-title">Тема број 1, Транскрипција на една замислена тема</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:12</td><td class="sig">З-7702/3</td></tr>
-            <tr><th scope="row" class="cell-title">Титовиот пат</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:50</td><td class="sig">З-7964/2</td></tr>
-            <tr><th scope="row" class="cell-title">Убава си како музика</th><td class="cell-perf">Љупчо Мирковски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:11</td><td class="sig">ПМ-1002/2</td></tr>
-            <tr><th scope="row" class="cell-title">Чилеанска игра</th><td class="cell-perf">Забавен оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:08</td><td class="sig">З-7690/3</td></tr>
-            <tr><th scope="row" class="cell-title">Reg Time</th><td class="cell-perf">Диксиленд ансамбл</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:03</td><td class="sig">З-7691/1</td></tr>
-          </tbody>
-        </table>
+      <div class="table-frame">
+        <div class="table-wrap doc-table" tabindex="0">
+          <table class="catalog-table">
+            <caption class="visually-hidden">Инструментални композиции во фонотеката на МРТВ</caption>
+            <thead><tr><th scope="col">Наслов</th><th scope="col">Изведувач</th><th scope="col">Автор</th><th scope="col">Времетраење</th><th scope="col">Сигнатура</th></tr></thead>
+            <tbody>
+              <tr><th scope="row" class="cell-title">Балада за Бранка</th><td class="cell-perf">Кирил Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:03</td><td class="sig">З-8526/1</td></tr>
+              <tr><th scope="row" class="cell-title">Балада за гитара</th><td class="cell-perf">Петар Лукиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:52</td><td class="sig">З-4698/2</td></tr>
+              <tr><th scope="row" class="cell-title">Блузот на црната пејачка</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:28</td><td class="sig">З-3415/2</td></tr>
+              <tr><th scope="row" class="cell-title">Во спомен на старото пријателство</th><td class="cell-perf">Мики Асановиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:40</td><td class="sig">З-7206/2</td></tr>
+              <tr><th scope="row" class="cell-title">Гарача</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:54</td><td class="sig">З-7700/2</td></tr>
+              <tr><th scope="row" class="cell-title">Гермијан</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:05</td><td class="sig">З-7457/1</td></tr>
+              <tr><th scope="row" class="cell-title">Гитарата ја оплакува смртта на Муриета</th><td class="cell-perf">—</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Главна тема</th><td class="cell-perf">Кирил Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:55</td><td class="sig">З-7687/2</td></tr>
+              <tr><th scope="row" class="cell-title">Далечен крај</th><td class="cell-perf">Благоја Чешларов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:25</td><td class="sig">З-3905/3</td></tr>
+              <tr><th scope="row" class="cell-title">Дојди есен</th><td class="cell-perf">Квартет Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:40</td><td class="sig">З-7608/3</td></tr>
+              <tr><th scope="row" class="cell-title">Дојди есен</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:30</td><td class="sig">З-9483/2</td></tr>
+              <tr><th scope="row" class="cell-title">Дојди есен</th><td class="cell-perf">Ратко Спасовски-Пици</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:17</td><td class="sig">АЗ-48/10</td></tr>
+              <tr><th scope="row" class="cell-title">Егзотика</th><td class="cell-perf">Квартет Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:32</td><td class="sig">З-7608/1</td></tr>
+              <tr><th scope="row" class="cell-title">Еден бакнеж</th><td class="cell-perf">Ревиски оркестар на Радио-телевизија Љубљана</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:10</td><td class="sig">З-6057/3</td></tr>
+              <tr><th scope="row" class="cell-title">Елегија за тромбон</th><td class="cell-perf">Кирил Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:50</td><td class="sig">З-8605/1</td></tr>
+              <tr><th scope="row" class="cell-title">Ехо од далечното минато</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">5:00</td><td class="sig">З-4701/1</td></tr>
+              <tr><th scope="row" class="cell-title">Злато најдоа, злато во Калифорнија</th><td class="cell-perf">Ревиски оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">1:14</td><td class="sig">З-7690/2</td></tr>
+              <tr><th scope="row" class="cell-title">Идила</th><td class="cell-perf">Никола Комовски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:00</td><td class="sig">З-8189</td></tr>
+              <tr><th scope="row" class="cell-title">Идила</th><td class="cell-perf">Благоја Чешларов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:25</td><td class="sig">З-3905/2</td></tr>
+              <tr><th scope="row" class="cell-title">Идила</th><td class="cell-perf">Голем забавен оркестар</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:15</td><td class="sig">АЗ-49/22</td></tr>
+              <tr><th scope="row" class="cell-title">Импресија</th><td class="cell-perf">Петар Лукиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:50</td><td class="sig">З-6668/1</td></tr>
+              <tr><th scope="row" class="cell-title">Индекс и љубов</th><td class="cell-perf">Голем забавен оркестар</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:15</td><td class="sig">АЗ-49/21</td></tr>
+              <tr><th scope="row" class="cell-title">Исповест на црномурестата жена</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:19</td><td class="sig">З-7415/1</td></tr>
+              <tr><th scope="row" class="cell-title">Јас не сум ти</th><td class="cell-perf">Џез ансамбл на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">7:27</td><td class="sig">З-3004/2</td></tr>
+              <tr><th scope="row" class="cell-title">Кога си сама</th><td class="cell-perf">Ревиски оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:06</td><td class="sig">З-8227/1</td></tr>
+              <tr><th scope="row" class="cell-title">Лајт мотив 1</th><td class="cell-perf">Ревиски оркестар</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">1:37</td><td class="sig">З-7690/1</td></tr>
+              <tr><th scope="row" class="cell-title">Лајт мотив 2</th><td class="cell-perf">Ревиски оркестар</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">1:51</td><td class="sig">З-7693/2</td></tr>
+              <tr><th scope="row" class="cell-title">Лајт мотив 3</th><td class="cell-perf">К. Божиновски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:12</td><td class="sig">З-7693/3</td></tr>
+              <tr><th scope="row" class="cell-title">Лени</th><td class="cell-perf">Квартет Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:22</td><td class="sig">З-7474/1</td></tr>
+              <tr><th scope="row" class="cell-title">Лени</th><td class="cell-perf">Танцов оркестар</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:18</td><td class="sig">ПМ-303/1</td></tr>
+              <tr><th scope="row" class="cell-title">Летна ноќ задна ноќ</th><td class="cell-perf">Кире Костов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:04</td><td class="sig">З-7537/1</td></tr>
+              <tr><th scope="row" class="cell-title">Љубовна тема</th><td class="cell-perf">Кирил Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:25</td><td class="sig">З-7694/3</td></tr>
+              <tr><th scope="row" class="cell-title">Љубовна тема</th><td class="cell-perf">К. Божиновски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:17</td><td class="sig">З-7693/3</td></tr>
+              <tr><th scope="row" class="cell-title">Мамбо Гарача</th><td class="cell-perf">Никола Ципушев</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:00</td><td class="sig">АЗ-54/17</td></tr>
+              <tr><th scope="row" class="cell-title">Марија</th><td class="cell-perf">Кокан Димушевски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">5:36</td><td class="sig">З-8526/2</td></tr>
+              <tr><th scope="row" class="cell-title">Ми вети ти (џез верзија)</th><td class="cell-perf">Трио Лабиш</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">8:15</td><td class="sig">ПК-2137/1</td></tr>
+              <tr><th scope="row" class="cell-title">Мими</th><td class="cell-perf">Слободан (Боби) Мицев</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:10</td><td class="sig">З-7493/2</td></tr>
+              <tr><th scope="row" class="cell-title">Мими</th><td class="cell-perf">Кирил Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:05</td><td class="sig">З-8638/2</td></tr>
+              <tr><th scope="row" class="cell-title">Младоста е убава</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:35</td><td class="sig">З-4253/3</td></tr>
+              <tr><th scope="row" class="cell-title">Молчи една долина</th><td class="cell-perf">Голем забавен оркестар</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:10</td><td class="sig">АЗ-49/16</td></tr>
+              <tr><th scope="row" class="cell-title">Молчи една долина</th><td class="cell-perf">Христо Христовски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:26</td><td class="sig">ПМ-538/1</td></tr>
+              <tr><th scope="row" class="cell-title">На игранка</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">5:08</td><td class="sig">З-7638/2</td></tr>
+              <tr><th scope="row" class="cell-title">Народна игра</th><td class="cell-perf">Забавен оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">1:38</td><td class="sig">З-7693/1</td></tr>
+              <tr><th scope="row" class="cell-title">Осаменост (Молчи една долина)</th><td class="cell-perf">Квартет Рибарски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:54</td><td class="sig">З-7608/2</td></tr>
+              <tr><th scope="row" class="cell-title">Песна на русокосата пејачка</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:15</td><td class="sig">З-7687/1</td></tr>
+              <tr><th scope="row" class="cell-title">Поздрав до А. К. Жобим</th><td class="cell-perf">Рамиз Имеров</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:12</td><td class="sig">З-7194/1</td></tr>
+              <tr><th scope="row" class="cell-title">Поздрав до оркестарот</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:30</td><td class="sig">З-3783/1</td></tr>
+              <tr><th scope="row" class="cell-title">Радост на победата</th><td class="cell-perf">Забавен ансамбл</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">1:35</td><td class="sig">З-7691/2</td></tr>
+              <tr><th scope="row" class="cell-title">Свечена игра</th><td class="cell-perf">Забавен ансамбл</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:28</td><td class="sig">З-7693/4</td></tr>
+              <tr><th scope="row" class="cell-title">Синтеза</th><td class="cell-perf">Кире Костов</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">5:00</td><td class="sig">З-8212/1</td></tr>
+              <tr><th scope="row" class="cell-title">Тема број 1, Транскрипција на една замислена тема</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">4:12</td><td class="sig">З-7702/3</td></tr>
+              <tr><th scope="row" class="cell-title">Титовиот пат</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:50</td><td class="sig">З-7964/2</td></tr>
+              <tr><th scope="row" class="cell-title">Убава си како музика</th><td class="cell-perf">Љупчо Мирковски</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">3:11</td><td class="sig">ПМ-1002/2</td></tr>
+              <tr><th scope="row" class="cell-title">Чилеанска игра</th><td class="cell-perf">Забавен оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:08</td><td class="sig">З-7690/3</td></tr>
+              <tr><th scope="row" class="cell-title">Reg Time</th><td class="cell-perf">Диксиленд ансамбл</td><td class="cell-comp">Драган Ѓаконовски – Шпато</td><td class="dur">2:03</td><td class="sig">З-7691/1</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pan-cue left" aria-hidden="true"></div>
+        <div class="pan-cue right" aria-hidden="true"></div>
       </div>
     </section>
 
     <section class="doc-section" id="cat-arrThemes" aria-labelledby="h-arrThemes">
       <h2 id="h-arrThemes">Аранжмани на теми од други автори <span class="doc-count">43</span></h2>
-      <div class="doc-table">
-        <table class="catalog-table">
-          <caption class="visually-hidden">Аранжмани на теми од други автори во фонотеката на МРТВ</caption>
-          <thead><tr><th scope="col">Наслов</th><th scope="col">Изведувач</th><th scope="col">Автор</th><th scope="col">Времетраење</th><th scope="col">Сигнатура</th></tr></thead>
-          <tbody>
-            <tr><th scope="row" class="cell-title">Авизо</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Дјук Елингтон</td><td class="dur">0:37</td><td class="sig">АЗ-57</td></tr>
-            <tr><th scope="row" class="cell-title">Без тебе</th><td class="cell-perf">Кире Костов</td><td class="cell-comp"></td><td class="dur">2:38</td><td class="sig">З-7418/2</td></tr>
-            <tr><th scope="row" class="cell-title">Безввредниот Џо</th><td class="cell-perf">Голем забавен оркестар на Радио Скопје</td><td class="cell-comp">Традиционална</td><td class="dur">—</td><td class="sig">АЗ-50/15</td></tr>
-            <tr><th scope="row" class="cell-title">Би бап буги</th><td class="cell-perf">Забавен оркестар на Радио Скопје</td><td class="cell-comp"></td><td class="dur">—</td><td class="sig">АЗ-51/23</td></tr>
-            <tr><th scope="row" class="cell-title">Билјана платно белеше</th><td class="cell-perf">Ревиски оркестар</td><td class="cell-comp">Традиционална</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Виделина</th><td class="cell-perf">—</td><td class="cell-comp">Григор Копров</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Во мојата улица</th><td class="cell-perf">—</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Гагово расположение</th><td class="cell-perf">Петар Каргов</td><td class="cell-comp">Л. Митревски</td><td class="dur">3:50</td><td class="sig">З-7615/2</td></tr>
-            <tr><th scope="row" class="cell-title">Девојката од Ипанема</th><td class="cell-perf">Димитар Маневски</td><td class="cell-comp">Жобим</td><td class="dur">2:30</td><td class="sig">З-1850/2</td></tr>
-            <tr><th scope="row" class="cell-title">Дење, ноќе</th><td class="cell-perf">Божидар Ноев</td><td class="cell-comp"></td><td class="dur">2:20</td><td class="sig">З-7683/2</td></tr>
-            <tr><th scope="row" class="cell-title">Еден бакнеж</th><td class="cell-perf">Ревиски оркестар на Радио-телевизија Љубљана</td><td class="cell-comp">Петар Пешев</td><td class="dur">—</td><td class="sig">З-2057/3</td></tr>
-            <tr><th scope="row" class="cell-title">Жалај моме</th><td class="cell-perf">—</td><td class="cell-comp">Петар Пешев</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">За Силвија Б</th><td class="cell-perf">—</td><td class="cell-comp">Т. Танев</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Заспаниот град</th><td class="cell-perf">—</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Зборувај тивко</th><td class="cell-perf">Благоја Чешларов</td><td class="cell-comp">Н. Рота</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Зошто си во мојата близина</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">3:25</td><td class="sig">З-3529/3</td></tr>
-            <tr><th scope="row" class="cell-title">Италијан</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp">Т. Кутуњо</td><td class="dur">3:30</td><td class="sig">З-7642/1</td></tr>
-            <tr><th scope="row" class="cell-title">Како сонцето што зајдува</th><td class="cell-perf">Оркестар</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Квечерина</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-51/15</td></tr>
-            <tr><th scope="row" class="cell-title">Кинеско момче</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">С. Беше</td><td class="dur">—</td><td class="sig">АЗ-4915</td></tr>
-            <tr><th scope="row" class="cell-title">Лосел блуз</th><td class="cell-perf">Голем забавен оркестар на Радио Скопје</td><td class="cell-comp">Џ. Ширинг</td><td class="dur">—</td><td class="sig">АЗ-50/18</td></tr>
-            <tr><th scope="row" class="cell-title">Луција</th><td class="cell-perf">Благоја Чешларов</td><td class="cell-comp">А. Бељан</td><td class="dur">3:55</td><td class="sig">З-3524/3</td></tr>
-            <tr><th scope="row" class="cell-title">Мал цвет</th><td class="cell-perf">Томе Николовски</td><td class="cell-comp">С. Беше</td><td class="dur">—</td><td class="sig">АЗ-49/14</td></tr>
-            <tr><th scope="row" class="cell-title">Маскет рејмбл</th><td class="cell-perf">Забавен оркестар на Радио Скопје</td><td class="cell-comp">Е. Ори</td><td class="dur">—</td><td class="sig">АЗ-51/20</td></tr>
-            <tr><th scope="row" class="cell-title">Меланхолична рапсодија</th><td class="cell-perf">Голем забавен оркестар на Радио Скопје</td><td class="cell-comp">Р. Хендроф</td><td class="dur">—</td><td class="sig">АЗ-50/17</td></tr>
-            <tr><th scope="row" class="cell-title">Мисти</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp">Е. Гарнер</td><td class="dur">2:39</td><td class="sig">З-990/3</td></tr>
-            <tr><th scope="row" class="cell-title">Мојата драга Валентина</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp">Р. Роџерс</td><td class="dur">3:56</td><td class="sig">З-1784/4</td></tr>
-            <tr><th scope="row" class="cell-title">Мојата улица</th><td class="cell-perf">Никола Комовски</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">4:50</td><td class="sig">З-8189/2</td></tr>
-            <tr><th scope="row" class="cell-title">Настоен сум за љубов</th><td class="cell-perf">Забавен оркестар на Радио Скопје</td><td class="cell-comp">Д. Вернон</td><td class="dur">—</td><td class="sig">АЗ-48/19</td></tr>
-            <tr><th scope="row" class="cell-title">Очи чорние</th><td class="cell-perf">Голем забавен оркестар на Радио Скопје</td><td class="cell-comp">Традиционална</td><td class="dur">—</td><td class="sig">АЗ-50/12</td></tr>
-            <tr><th scope="row" class="cell-title">Последна солза</th><td class="cell-perf">Кирил Рибарски</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">З-7256/1</td></tr>
-            <tr><th scope="row" class="cell-title">Почеток на почетокот</th><td class="cell-perf">—</td><td class="cell-comp">Кол Портер</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Почнувам да гледам светлина</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp">Дјук Елингтон</td><td class="dur">3:38</td><td class="sig">З-2814/2</td></tr>
-            <tr><th scope="row" class="cell-title">Се вљубив во својата сопруга</th><td class="cell-perf">Никола Комовски</td><td class="cell-comp">Назаро</td><td class="dur">4:06</td><td class="sig">З-7672/2</td></tr>
-            <tr><th scope="row" class="cell-title">Срцето трепери</th><td class="cell-perf">Петар Лукиќ</td><td class="cell-comp">Џексон</td><td class="dur">4:02</td><td class="sig">З-1295/2</td></tr>
-            <tr><th scope="row" class="cell-title">Твоето име е мојата љубов</th><td class="cell-perf">Зоран Јовановиќ- Лима</td><td class="cell-comp">Кирил Милев</td><td class="dur">3:30</td><td class="sig">З-5827/2</td></tr>
-            <tr><th scope="row" class="cell-title">Четири такта</th><td class="cell-perf">Томе Николовски</td><td class="cell-comp">Фречмен</td><td class="dur">4:00</td><td class="sig">З-2814/3</td></tr>
-            <tr><th scope="row" class="cell-title">Четири такта</th><td class="cell-perf">Томе Николовски</td><td class="cell-comp">B. Gudman</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Човекот што го сакам</th><td class="cell-perf">—</td><td class="cell-comp">G. Gershwin</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Taste of Honey</th><td class="cell-perf">Импулси</td><td class="cell-comp">W. Scott</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Trumpet bluz</th><td class="cell-perf">—</td><td class="cell-comp">L. Konyn</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Vinter</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">A. Vivaldi</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">You make me feel soo young</th><td class="cell-perf">—</td><td class="cell-comp">M. Gordon</td><td class="dur">—</td><td class="sig">—</td></tr>
-          </tbody>
-        </table>
+      <div class="table-frame">
+        <div class="table-wrap doc-table" tabindex="0">
+          <table class="catalog-table">
+            <caption class="visually-hidden">Аранжмани на теми од други автори во фонотеката на МРТВ</caption>
+            <thead><tr><th scope="col">Наслов</th><th scope="col">Изведувач</th><th scope="col">Автор</th><th scope="col">Времетраење</th><th scope="col">Сигнатура</th></tr></thead>
+            <tbody>
+              <tr><th scope="row" class="cell-title">Авизо</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Дјук Елингтон</td><td class="dur">0:37</td><td class="sig">АЗ-57</td></tr>
+              <tr><th scope="row" class="cell-title">Без тебе</th><td class="cell-perf">Кире Костов</td><td class="cell-comp"></td><td class="dur">2:38</td><td class="sig">З-7418/2</td></tr>
+              <tr><th scope="row" class="cell-title">Безввредниот Џо</th><td class="cell-perf">Голем забавен оркестар на Радио Скопје</td><td class="cell-comp">Традиционална</td><td class="dur">—</td><td class="sig">АЗ-50/15</td></tr>
+              <tr><th scope="row" class="cell-title">Би бап буги</th><td class="cell-perf">Забавен оркестар на Радио Скопје</td><td class="cell-comp"></td><td class="dur">—</td><td class="sig">АЗ-51/23</td></tr>
+              <tr><th scope="row" class="cell-title">Билјана платно белеше</th><td class="cell-perf">Ревиски оркестар</td><td class="cell-comp">Традиционална</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Виделина</th><td class="cell-perf">—</td><td class="cell-comp">Григор Копров</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Во мојата улица</th><td class="cell-perf">—</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Гагово расположение</th><td class="cell-perf">Петар Каргов</td><td class="cell-comp">Л. Митревски</td><td class="dur">3:50</td><td class="sig">З-7615/2</td></tr>
+              <tr><th scope="row" class="cell-title">Девојката од Ипанема</th><td class="cell-perf">Димитар Маневски</td><td class="cell-comp">Жобим</td><td class="dur">2:30</td><td class="sig">З-1850/2</td></tr>
+              <tr><th scope="row" class="cell-title">Дење, ноќе</th><td class="cell-perf">Божидар Ноев</td><td class="cell-comp"></td><td class="dur">2:20</td><td class="sig">З-7683/2</td></tr>
+              <tr><th scope="row" class="cell-title">Еден бакнеж</th><td class="cell-perf">Ревиски оркестар на Радио-телевизија Љубљана</td><td class="cell-comp">Петар Пешев</td><td class="dur">—</td><td class="sig">З-2057/3</td></tr>
+              <tr><th scope="row" class="cell-title">Жалај моме</th><td class="cell-perf">—</td><td class="cell-comp">Петар Пешев</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">За Силвија Б</th><td class="cell-perf">—</td><td class="cell-comp">Т. Танев</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Заспаниот град</th><td class="cell-perf">—</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Зборувај тивко</th><td class="cell-perf">Благоја Чешларов</td><td class="cell-comp">Н. Рота</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Зошто си во мојата близина</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">3:25</td><td class="sig">З-3529/3</td></tr>
+              <tr><th scope="row" class="cell-title">Италијан</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp">Т. Кутуњо</td><td class="dur">3:30</td><td class="sig">З-7642/1</td></tr>
+              <tr><th scope="row" class="cell-title">Како сонцето што зајдува</th><td class="cell-perf">Оркестар</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Квечерина</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-51/15</td></tr>
+              <tr><th scope="row" class="cell-title">Кинеско момче</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">С. Беше</td><td class="dur">—</td><td class="sig">АЗ-4915</td></tr>
+              <tr><th scope="row" class="cell-title">Лосел блуз</th><td class="cell-perf">Голем забавен оркестар на Радио Скопје</td><td class="cell-comp">Џ. Ширинг</td><td class="dur">—</td><td class="sig">АЗ-50/18</td></tr>
+              <tr><th scope="row" class="cell-title">Луција</th><td class="cell-perf">Благоја Чешларов</td><td class="cell-comp">А. Бељан</td><td class="dur">3:55</td><td class="sig">З-3524/3</td></tr>
+              <tr><th scope="row" class="cell-title">Мал цвет</th><td class="cell-perf">Томе Николовски</td><td class="cell-comp">С. Беше</td><td class="dur">—</td><td class="sig">АЗ-49/14</td></tr>
+              <tr><th scope="row" class="cell-title">Маскет рејмбл</th><td class="cell-perf">Забавен оркестар на Радио Скопје</td><td class="cell-comp">Е. Ори</td><td class="dur">—</td><td class="sig">АЗ-51/20</td></tr>
+              <tr><th scope="row" class="cell-title">Меланхолична рапсодија</th><td class="cell-perf">Голем забавен оркестар на Радио Скопје</td><td class="cell-comp">Р. Хендроф</td><td class="dur">—</td><td class="sig">АЗ-50/17</td></tr>
+              <tr><th scope="row" class="cell-title">Мисти</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp">Е. Гарнер</td><td class="dur">2:39</td><td class="sig">З-990/3</td></tr>
+              <tr><th scope="row" class="cell-title">Мојата драга Валентина</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp">Р. Роџерс</td><td class="dur">3:56</td><td class="sig">З-1784/4</td></tr>
+              <tr><th scope="row" class="cell-title">Мојата улица</th><td class="cell-perf">Никола Комовски</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">4:50</td><td class="sig">З-8189/2</td></tr>
+              <tr><th scope="row" class="cell-title">Настоен сум за љубов</th><td class="cell-perf">Забавен оркестар на Радио Скопје</td><td class="cell-comp">Д. Вернон</td><td class="dur">—</td><td class="sig">АЗ-48/19</td></tr>
+              <tr><th scope="row" class="cell-title">Очи чорние</th><td class="cell-perf">Голем забавен оркестар на Радио Скопје</td><td class="cell-comp">Традиционална</td><td class="dur">—</td><td class="sig">АЗ-50/12</td></tr>
+              <tr><th scope="row" class="cell-title">Последна солза</th><td class="cell-perf">Кирил Рибарски</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">З-7256/1</td></tr>
+              <tr><th scope="row" class="cell-title">Почеток на почетокот</th><td class="cell-perf">—</td><td class="cell-comp">Кол Портер</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Почнувам да гледам светлина</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp">Дјук Елингтон</td><td class="dur">3:38</td><td class="sig">З-2814/2</td></tr>
+              <tr><th scope="row" class="cell-title">Се вљубив во својата сопруга</th><td class="cell-perf">Никола Комовски</td><td class="cell-comp">Назаро</td><td class="dur">4:06</td><td class="sig">З-7672/2</td></tr>
+              <tr><th scope="row" class="cell-title">Срцето трепери</th><td class="cell-perf">Петар Лукиќ</td><td class="cell-comp">Џексон</td><td class="dur">4:02</td><td class="sig">З-1295/2</td></tr>
+              <tr><th scope="row" class="cell-title">Твоето име е мојата љубов</th><td class="cell-perf">Зоран Јовановиќ- Лима</td><td class="cell-comp">Кирил Милев</td><td class="dur">3:30</td><td class="sig">З-5827/2</td></tr>
+              <tr><th scope="row" class="cell-title">Четири такта</th><td class="cell-perf">Томе Николовски</td><td class="cell-comp">Фречмен</td><td class="dur">4:00</td><td class="sig">З-2814/3</td></tr>
+              <tr><th scope="row" class="cell-title">Четири такта</th><td class="cell-perf">Томе Николовски</td><td class="cell-comp">B. Gudman</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Човекот што го сакам</th><td class="cell-perf">—</td><td class="cell-comp">G. Gershwin</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Taste of Honey</th><td class="cell-perf">Импулси</td><td class="cell-comp">W. Scott</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Trumpet bluz</th><td class="cell-perf">—</td><td class="cell-comp">L. Konyn</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Vinter</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">A. Vivaldi</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">You make me feel soo young</th><td class="cell-perf">—</td><td class="cell-comp">M. Gordon</td><td class="dur">—</td><td class="sig">—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pan-cue left" aria-hidden="true"></div>
+        <div class="pan-cue right" aria-hidden="true"></div>
       </div>
     </section>
 
     <section class="doc-section" id="cat-arrVocal" aria-labelledby="h-arrVocal">
       <h2 id="h-arrVocal">Аранжмани на вокални творби од други автори <span class="doc-count">260</span></h2>
-      <div class="doc-table">
-        <table class="catalog-table">
-          <caption class="visually-hidden">Аранжмани на вокални творби од други автори во фонотеката на МРТВ</caption>
-          <thead><tr><th scope="col">Наслов</th><th scope="col">Изведувач</th><th scope="col">Автор</th><th scope="col">Времетраење</th><th scope="col">Сигнатура</th></tr></thead>
-          <tbody>
-            <tr><th scope="row" class="cell-title">Адиос</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Е. Мадригера</td><td class="dur">—</td><td class="sig">АЗ-53/5</td></tr>
-            <tr><th scope="row" class="cell-title">Ако животот</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">К. Сиари</td><td class="dur">3:32</td><td class="sig">З-1044/3</td></tr>
-            <tr><th scope="row" class="cell-title">Ако отидеш</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Ж. Брел</td><td class="dur">—</td><td class="sig">АЗ-45/20</td></tr>
-            <tr><th scope="row" class="cell-title">Ако отидеш</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">М. Емер</td><td class="dur">3:40</td><td class="sig">АЗ-51/1</td></tr>
-            <tr><th scope="row" class="cell-title">Алдила</th><td class="cell-perf">Блага Видец</td><td class="cell-comp">К. Донида</td><td class="dur">4:05</td><td class="sig">АЗ-60/10</td></tr>
-            <tr><th scope="row" class="cell-title">Ана</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Димитар Масевски</td><td class="dur">2:38</td><td class="sig">З-3531/3</td></tr>
-            <tr><th scope="row" class="cell-title">Ана бајон</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Варт</td><td class="dur">—</td><td class="sig">АЗ-53/6</td></tr>
-            <tr><th scope="row" class="cell-title">Андалузија</th><td class="cell-perf">Блага Видец</td><td class="cell-comp">Е. Лекуона</td><td class="dur">—</td><td class="sig">АЗ-51/5</td></tr>
-            <tr><th scope="row" class="cell-title">Аранхуез</th><td class="cell-perf">Благоја Чешларов</td><td class="cell-comp">Х. Родриго</td><td class="dur">4:05</td><td class="sig">З-1145/2</td></tr>
-            <tr><th scope="row" class="cell-title">Бакни ме</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">2:37</td><td class="sig">З-1721/3</td></tr>
-            <tr><th scope="row" class="cell-title">Бегај бегај Марија</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">3:23</td><td class="sig">З-3742/3</td></tr>
-            <tr><th scope="row" class="cell-title">Беше мој, беше мој</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Кочо Петровски</td><td class="dur">3:15</td><td class="sig">АЗ-15/8</td></tr>
-            <tr><th scope="row" class="cell-title">Бим бам бум</th><td class="cell-perf">Импулси</td><td class="cell-comp">Х. Адамсон</td><td class="dur">2:00</td><td class="sig">З-2219/4</td></tr>
-            <tr><th scope="row" class="cell-title">Благодарам</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Љубомир Бранѓолица</td><td class="dur">2:45</td><td class="sig">З-1222/1</td></tr>
-            <tr><th scope="row" class="cell-title">Буквар мамбо</th><td class="cell-perf">Катица Ѓаконовска</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-60/13</td></tr>
-            <tr><th scope="row" class="cell-title">Вардарска</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">2:43</td><td class="sig">З-2470/1</td></tr>
-            <tr><th scope="row" class="cell-title">Ватерло</th><td class="cell-perf">Верица Ристевска</td><td class="cell-comp">Б. Андерсон</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Везден чекам бистри води</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Кочо Петровски</td><td class="dur">3:07</td><td class="sig">З-3814/1</td></tr>
-            <tr><th scope="row" class="cell-title">Вејка скршена</th><td class="cell-perf">—</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Ветерница во моите мисли</th><td class="cell-perf">Импулси</td><td class="cell-comp">Легран</td><td class="dur">3:25</td><td class="sig">З-2812/3</td></tr>
-            <tr><th scope="row" class="cell-title">Ветрој ќе ме кинат</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Љубомир Бранѓолица</td><td class="dur">2:21</td><td class="sig">З-1365/1</td></tr>
-            <tr><th scope="row" class="cell-title">Ветрот и старите ѕидишта</th><td class="cell-perf">—</td><td class="cell-comp">Љубомир Бранѓолица</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Види ја Адела</th><td class="cell-perf">Велко Трпчевски</td><td class="cell-comp">М. Гилар</td><td class="dur">—</td><td class="sig">АЗ-49/9</td></tr>
-            <tr><th scope="row" class="cell-title">Визија на мојата среќа</th><td class="cell-perf">Забавен оркестар на Радио Скопје</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-48/20</td></tr>
-            <tr><th scope="row" class="cell-title">Вљуби се во мене</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Клуни</td><td class="dur">—</td><td class="sig">АЗ-55/20</td></tr>
-            <tr><th scope="row" class="cell-title">Во една пролет</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Во ноќта</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Кочо Петровски</td><td class="dur">2:57</td><td class="sig">З-3815/2</td></tr>
-            <tr><th scope="row" class="cell-title">Врати се</th><td class="cell-perf">С. Сариевска</td><td class="cell-comp">Ј. Велинов</td><td class="dur">3:52</td><td class="sig">З-4029/1</td></tr>
-            <tr><th scope="row" class="cell-title">Врне</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Д. Модуњо</td><td class="dur">—</td><td class="sig">АЗ-51/26</td></tr>
-            <tr><th scope="row" class="cell-title">Го љубам до најмалите ѕвезди</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Димитар Масевски</td><td class="dur">2:49</td><td class="sig">З-3904/2</td></tr>
-            <tr><th scope="row" class="cell-title">Гога</th><td class="cell-perf">Кирил Рибарски</td><td class="cell-comp">Б. Танев</td><td class="dur">6:05</td><td class="sig">З-7962/2</td></tr>
-            <tr><th scope="row" class="cell-title">Гордата Мери</th><td class="cell-perf">Андреа Сопронов</td><td class="cell-comp">Форгети</td><td class="dur">2:31</td><td class="sig">З-2061/4</td></tr>
-            <tr><th scope="row" class="cell-title">Да ме љубиш</th><td class="cell-perf">—</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">2:46</td><td class="sig">З-1714/2</td></tr>
-            <tr><th scope="row" class="cell-title">Да потонам во твоите коси</th><td class="cell-perf">Веле Матевски</td><td class="cell-comp">Григор Копров</td><td class="dur">3:26</td><td class="sig">З-5626/1</td></tr>
-            <tr><th scope="row" class="cell-title">Да си близу мила моја</th><td class="cell-perf">Ванчо Тарабунов</td><td class="cell-comp">Ванчо Тарабунов</td><td class="dur">3:18</td><td class="sig">З-3995/1</td></tr>
-            <tr><th scope="row" class="cell-title">Далеку во далечина</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">—</td><td class="sig">З-2093/3</td></tr>
-            <tr><th scope="row" class="cell-title">Далеку некаде на југ</th><td class="cell-perf">Ревиски оркестар</td><td class="cell-comp">Григор Копров</td><td class="dur">3:20</td><td class="sig">З-2649/1</td></tr>
-            <tr><th scope="row" class="cell-title">Две реки</th><td class="cell-perf">—</td><td class="cell-comp">Сотир Голабовски</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Девојката од Ипанема</th><td class="cell-perf">Импулси</td><td class="cell-comp">Жобим</td><td class="dur">2:21</td><td class="sig">З-1442/3</td></tr>
-            <tr><th scope="row" class="cell-title">Девојката од 3 смена</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Христо Крстевски</td><td class="dur">2:30</td><td class="sig">З-2012/1</td></tr>
-            <tr><th scope="row" class="cell-title">Детство</th><td class="cell-perf">Ревиски оркестар Зоран Милосављевиќ</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">3:44</td><td class="sig">З-3527/3</td></tr>
-            <tr><th scope="row" class="cell-title">Див цвет</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Д. Тјомкин</td><td class="dur">—</td><td class="sig">АЗ-55/17</td></tr>
-            <tr><th scope="row" class="cell-title">Дожд а по него ништо</th><td class="cell-perf">Сашка Петковска</td><td class="cell-comp">Димитар Масевски</td><td class="dur">2:50</td><td class="sig">З-2071/2</td></tr>
-            <tr><th scope="row" class="cell-title">Дождот нека плисне</th><td class="cell-perf">Верица Ристевска</td><td class="cell-comp">К. Костадиновски</td><td class="dur">—</td><td class="sig">З-5106/1</td></tr>
-            <tr><th scope="row" class="cell-title">Дојди</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">3:05</td><td class="sig">З-262/3</td></tr>
-            <tr><th scope="row" class="cell-title">Дојди ми</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Слободан Николовски</td><td class="dur">—</td><td class="sig">АЗ-55/1</td></tr>
-            <tr><th scope="row" class="cell-title">Држи ме цврсто</th><td class="cell-perf">Импулси</td><td class="cell-comp">Ванчо Димитров</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Друг љубиш</th><td class="cell-perf">Импулси</td><td class="cell-comp">Славе Димитров</td><td class="dur">3:20</td><td class="sig">З-3783/3</td></tr>
-            <tr><th scope="row" class="cell-title">Еден бакнеж</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Петар Пешев</td><td class="dur">—</td><td class="sig">АЗ-10/3</td></tr>
-            <tr><th scope="row" class="cell-title">Еден човек една сказна</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Палавичини</td><td class="dur">2:05</td><td class="sig">З-336/2</td></tr>
-            <tr><th scope="row" class="cell-title">Еден човек, една жена</th><td class="cell-perf">—</td><td class="cell-comp">Баро Импулси</td><td class="dur">3:13</td><td class="sig">З-2934/1</td></tr>
-            <tr><th scope="row" class="cell-title">Езерска тајна</th><td class="cell-perf">Ј. Митревска</td><td class="cell-comp">Димитар Масевски</td><td class="dur">3:23</td><td class="sig">З-2056/2</td></tr>
-            <tr><th scope="row" class="cell-title">Есен во Рим</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">С. Кил</td><td class="dur">—</td><td class="sig">АЗ-49/3</td></tr>
-            <tr><th scope="row" class="cell-title">Животот тече како река</th><td class="cell-perf">Сашка Петковска</td><td class="cell-comp">Григор Копров</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Жозефина</th><td class="cell-perf">Зорица Милисављевиќ - Попанкова</td><td class="cell-comp">Л. Митревски</td><td class="dur">2:42</td><td class="sig">З-7700/1</td></tr>
-            <tr><th scope="row" class="cell-title">За дружба и мир</th><td class="cell-perf">—</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">За еден цвет господине</th><td class="cell-perf">Марија Арсова</td><td class="cell-comp"></td><td class="dur">2:42</td><td class="sig">З-1947/3</td></tr>
-            <tr><th scope="row" class="cell-title">За мене сега си сè</th><td class="cell-perf">Томислав Маниќ</td><td class="cell-comp"></td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">За тебе за мене</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">З-230/3</td></tr>
-            <tr><th scope="row" class="cell-title">За тебе и за мене</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Запомни ја мојата љубов</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">3:42</td><td class="sig">З-7747/1</td></tr>
-            <tr><th scope="row" class="cell-title">Запри</th><td class="cell-perf">Сашка Петковска</td><td class="cell-comp">Димитар Масевски</td><td class="dur">2:46</td><td class="sig">З-1721/2</td></tr>
-            <tr><th scope="row" class="cell-title">Заспаниот град</th><td class="cell-perf">Блага Видец</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-50/19</td></tr>
-            <tr><th scope="row" class="cell-title">Здодевно е</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Ванчо Димитров</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Земјо родна</th><td class="cell-perf">Даниела Панчетовиќ</td><td class="cell-comp">П. Сидовски</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Земјо се враќам</th><td class="cell-perf">—</td><td class="cell-comp">Григор Копров</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Зимски здив</th><td class="cell-perf">Голем забавен оркестар на Радио Скопје</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-60/2</td></tr>
-            <tr><th scope="row" class="cell-title">Златна месечина</th><td class="cell-perf">—</td><td class="cell-comp">В. Гомез</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Знаеш ли што се дни без надеж</th><td class="cell-perf">Григор Копров</td><td class="cell-comp">Григор Копров</td><td class="dur">2:15</td><td class="sig">З-3012/1</td></tr>
-            <tr><th scope="row" class="cell-title">Знам скоро ќе ме намразиш</th><td class="cell-perf">Јанко Узунов</td><td class="cell-comp">Јанко Узунов</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Зомби</th><td class="cell-perf">—</td><td class="cell-comp">К. Кугат</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Зошто</th><td class="cell-perf">Зафир Хаџиманов</td><td class="cell-comp">Зафир Хаџиманов</td><td class="dur">4:26</td><td class="sig">З-3674/1</td></tr>
-            <tr><th scope="row" class="cell-title">Зошто комплименти за љубов</th><td class="cell-perf">Никола Комовски</td><td class="cell-comp"></td><td class="dur">—</td><td class="sig">З-7686/2</td></tr>
-            <tr><th scope="row" class="cell-title">Зошто си во мојата близина</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-51/18</td></tr>
-            <tr><th scope="row" class="cell-title">И можеби</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Христо Крстевски</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">И утре че е ден</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">3:36</td><td class="sig">З-984/4</td></tr>
-            <tr><th scope="row" class="cell-title">Играјте сенки</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">И. Стамаќ</td><td class="dur">—</td><td class="sig">АЗ-45/22</td></tr>
-            <tr><th scope="row" class="cell-title">Илинденска</th><td class="cell-perf">Т. Веселинов</td><td class="cell-comp">Круме Јовановски</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Има ли ѕвезди</th><td class="cell-perf">Копров и Верица Ристевска</td><td class="cell-comp">Григор Копров</td><td class="dur">2:42</td><td class="sig">З-7176/2</td></tr>
-            <tr><th scope="row" class="cell-title">Интимна румба</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-60/19</td></tr>
-            <tr><th scope="row" class="cell-title">Јас не сум Џон Траволта</th><td class="cell-perf">К. Манев</td><td class="cell-comp">К. Манев</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Јас чекам</th><td class="cell-perf">Импулси</td><td class="cell-comp">Димитар Масевски</td><td class="dur">2:25</td><td class="sig">З-2534/1</td></tr>
-            <tr><th scope="row" class="cell-title">Јужна ѕвезда</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">3:07</td><td class="sig">З-1365/3</td></tr>
-            <tr><th scope="row" class="cell-title">Кажи зошто ме остави</th><td class="cell-perf">Томислав Маниќ</td><td class="cell-comp">Н. Гунарис</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Кај си мајко</th><td class="cell-perf">Даниела Панчетовиќ</td><td class="cell-comp">Григор Копров</td><td class="dur">3:01</td><td class="sig">З-2740/1</td></tr>
-            <tr><th scope="row" class="cell-title">Калу</th><td class="cell-perf">Б. Автовски</td><td class="cell-comp"></td><td class="dur">—</td><td class="sig">АЗ-53/1</td></tr>
-            <tr><th scope="row" class="cell-title">Кејовите на Вардар</th><td class="cell-perf">Веле Матевски</td><td class="cell-comp">А. Лековски</td><td class="dur">3:20</td><td class="sig">З-2733/1</td></tr>
-            <tr><th scope="row" class="cell-title">Кога бев млад</th><td class="cell-perf">М. Станојковиќ</td><td class="cell-comp">Петар Пешев</td><td class="dur">—</td><td class="sig">АЗ-47/10</td></tr>
-            <tr><th scope="row" class="cell-title">Кога ти не би постоела</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp"></td><td class="dur">3:20</td><td class="sig">З-5828/2</td></tr>
-            <tr><th scope="row" class="cell-title">Кога ќе се вљубам</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Панцери</td><td class="dur">3:15</td><td class="sig">З-867/2</td></tr>
-            <tr><th scope="row" class="cell-title">Кога цветаат липите</th><td class="cell-perf">П. Христов</td><td class="cell-comp">К. Мицевски</td><td class="dur">—</td><td class="sig">З-5899/1</td></tr>
-            <tr><th scope="row" class="cell-title">Кој да те колне</th><td class="cell-perf">С. Грнчаровски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">3:11</td><td class="sig">З-3770/1</td></tr>
-            <tr><th scope="row" class="cell-title">Крајот на нашата љубов</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Славе Димитров</td><td class="dur">3:25</td><td class="sig">З-1704/3</td></tr>
-            <tr><th scope="row" class="cell-title">Крајот на нашата љубов</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Славе Димитров</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Кристина</th><td class="cell-perf">Сефедин Бајрамов</td><td class="cell-comp">Петар Лукиќ</td><td class="dur">4:00</td><td class="sig">З-7590/2</td></tr>
-            <tr><th scope="row" class="cell-title">Лихнида</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Димитар Масевски</td><td class="dur">2:47</td><td class="sig">З-2055/3</td></tr>
-            <tr><th scope="row" class="cell-title">Луд бев по тебе</th><td class="cell-perf">М. Колев</td><td class="cell-comp">Миљачи</td><td class="dur">3:27</td><td class="sig">З-4079/1</td></tr>
-            <tr><th scope="row" class="cell-title">Лудо младо</th><td class="cell-perf">Андреа Сопронов</td><td class="cell-comp">Григор Копров</td><td class="dur">2:32</td><td class="sig">З-3212/1</td></tr>
-            <tr><th scope="row" class="cell-title">Луција</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">А. Бељан</td><td class="dur">—</td><td class="sig">АЗ-55/2</td></tr>
-            <tr><th scope="row" class="cell-title">Љубам</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Христо Крстевски</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Љубен си?</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-61/8</td></tr>
-            <tr><th scope="row" class="cell-title">Љуби ме</th><td class="cell-perf">Даниела Панчетовиќ</td><td class="cell-comp">Р. Пајдаков</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Љубов во Портофино</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Бускаљоне</td><td class="dur">—</td><td class="sig">АЗ-59/23</td></tr>
-            <tr><th scope="row" class="cell-title">Љубов врати се</th><td class="cell-perf">С. Сариевска</td><td class="cell-comp">Ј. Велинов</td><td class="dur">—</td><td class="sig">З-4029/1</td></tr>
-            <tr><th scope="row" class="cell-title">Љубов и мотор</th><td class="cell-perf">М. Станојковиќ</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-47/15</td></tr>
-            <tr><th scope="row" class="cell-title">Љубов како река</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Слободан Николовски</td><td class="dur">—</td><td class="sig">АЗ-46/2</td></tr>
-            <tr><th scope="row" class="cell-title">Љубов ти сладок сон</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Ј. Вељановски</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Љубовнта е син</th><td class="cell-perf">Љупка Димитровска</td><td class="cell-comp">А. Поп</td><td class="dur">3:10</td><td class="sig">З-452/3</td></tr>
-            <tr><th scope="row" class="cell-title">Љубовта се раѓа</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Химел</td><td class="dur">2:28</td><td class="sig">З-1112/2</td></tr>
-            <tr><th scope="row" class="cell-title">Македонка</th><td class="cell-perf">А. Сурмеан</td><td class="cell-comp">Христо Крстевски</td><td class="dur">3:12</td><td class="sig">З-1146/3</td></tr>
-            <tr><th scope="row" class="cell-title">Македонски кавал</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Христо Крстевски</td><td class="dur">4:00</td><td class="sig">З-1720/3</td></tr>
-            <tr><th scope="row" class="cell-title">Мама</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Моранди</td><td class="dur">—</td><td class="sig">АЗ-45/19</td></tr>
-            <tr><th scope="row" class="cell-title">Мама Калипсо</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">М. Гилар</td><td class="dur">—</td><td class="sig">АЗ-55/18</td></tr>
-            <tr><th scope="row" class="cell-title">Марина</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Димитар Масевски</td><td class="dur">2:47</td><td class="sig">З-3904/1</td></tr>
-            <tr><th scope="row" class="cell-title">Маскарада</th><td class="cell-perf">Импулси</td><td class="cell-comp">Бен</td><td class="dur">2:45</td><td class="sig">З-2534/2</td></tr>
-            <tr><th scope="row" class="cell-title">Ме подмладуваш</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">А. Вучер</td><td class="dur">—</td><td class="sig">АЗ-45/17</td></tr>
-            <tr><th scope="row" class="cell-title">Меги</th><td class="cell-perf">Григор Копров</td><td class="cell-comp">Григор Копров</td><td class="dur">2:50</td><td class="sig">З-1572/2</td></tr>
-            <tr><th scope="row" class="cell-title">Мелодија за нас</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Христо Крстевски</td><td class="dur">3:28</td><td class="sig">З-2033/3</td></tr>
-            <tr><th scope="row" class="cell-title">Место за нас</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Кочо Петровски</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Мила моја</th><td class="cell-perf">Андреа Сопронов</td><td class="cell-comp">М. Божиновски</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Мил мој</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Ги Боне</td><td class="dur">3:10</td><td class="sig">З-3740/3</td></tr>
-            <tr><th scope="row" class="cell-title">Мисисипи линија</th><td class="cell-perf">С. Грнчаровски</td><td class="cell-comp"></td><td class="dur">2:42</td><td class="sig">З-1845/2</td></tr>
-            <tr><th scope="row" class="cell-title">Млади луди години</th><td class="cell-perf">Божидар Ноев</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Моето поле</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Петар Лукиќ</td><td class="dur">4:20</td><td class="sig">З-5910/1</td></tr>
-            <tr><th scope="row" class="cell-title">Мојата гитара</th><td class="cell-perf">Бл. Петров-Караѓуле</td><td class="cell-comp">Пичини</td><td class="dur">—</td><td class="sig">АЗ-52/7</td></tr>
-            <tr><th scope="row" class="cell-title">Мојот јуни</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-46/4</td></tr>
-            <tr><th scope="row" class="cell-title">Мојот јуни</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-62/11</td></tr>
-            <tr><th scope="row" class="cell-title">Море в кутивче</th><td class="cell-perf">Блага Видец</td><td class="cell-comp"></td><td class="dur">—</td><td class="sig">АЗ-60/11</td></tr>
-            <tr><th scope="row" class="cell-title">Моретп и јас</th><td class="cell-perf">Б. Николовски</td><td class="cell-comp">Ди Капуа</td><td class="dur">4:30</td><td class="sig">З-6062/1</td></tr>
-            <tr><th scope="row" class="cell-title">Мост на нашата љубов</th><td class="cell-perf">Веле Матевски</td><td class="cell-comp">Јанко Узунов</td><td class="dur">—</td><td class="sig">З-5626/2</td></tr>
-            <tr><th scope="row" class="cell-title">Мртви лиска</th><td class="cell-perf">Блага Видец</td><td class="cell-comp">Ж. Козма</td><td class="dur">—</td><td class="sig">АЗ-51/6</td></tr>
-            <tr><th scope="row" class="cell-title">На последната средба</th><td class="cell-perf">Љупчо Босилков</td><td class="cell-comp">Т. Органџиев</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Најмила</th><td class="cell-perf">Ванчо Тарабунов</td><td class="cell-comp">Ванчо Тарабунов</td><td class="dur">2:48</td><td class="sig">З-3994/1</td></tr>
-            <tr><th scope="row" class="cell-title">Нани, нуни, нина</th><td class="cell-perf">С. Камџијаш</td><td class="cell-comp">З. Запров</td><td class="dur">2:25</td><td class="sig">З-5100/3</td></tr>
-            <tr><th scope="row" class="cell-title">Не буди ја првата љубов</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Христо Крстевски</td><td class="dur">3:21</td><td class="sig">З-2012/3</td></tr>
-            <tr><th scope="row" class="cell-title">Не ми верувај</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Л. Дугнас</td><td class="dur">—</td><td class="sig">АЗ-54/9</td></tr>
-            <tr><th scope="row" class="cell-title">Нежно ноктурно</th><td class="cell-perf">Зафир Хаџиманов</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-60/21</td></tr>
-            <tr><th scope="row" class="cell-title">Нежност кон Мими</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Петар Пешев</td><td class="dur">—</td><td class="sig">АЗ-61/24</td></tr>
-            <tr><th scope="row" class="cell-title">Незавршена балада</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Димитар Масевски</td><td class="dur">3:03</td><td class="sig">З-1365/2</td></tr>
-            <tr><th scope="row" class="cell-title">Незнаена сестра</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">3:11</td><td class="sig">З-2471/2</td></tr>
-            <tr><th scope="row" class="cell-title">Незнам кај си сега</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">К. Костов</td><td class="dur">4:21</td><td class="sig">З-4917/1</td></tr>
-            <tr><th scope="row" class="cell-title">Нејќам срце што затајува</th><td class="cell-perf">Сашка Петковска</td><td class="cell-comp">Ванчо Тарабунов</td><td class="dur">3:52</td><td class="sig">З-5901/1</td></tr>
-            <tr><th scope="row" class="cell-title">Нека е крај</th><td class="cell-perf">Сефедин Бајрамов</td><td class="cell-comp">Тодор Бојаџиев</td><td class="dur">2:55</td><td class="sig">З-6986/2</td></tr>
-            <tr><th scope="row" class="cell-title">Нешто глупаво</th><td class="cell-perf">Љупка Димитровска</td><td class="cell-comp">C. Parks</td><td class="dur">2:22</td><td class="sig">З-479/2</td></tr>
-            <tr><th scope="row" class="cell-title">Никогаш помалку од вчера</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Бакарак</td><td class="dur">—</td><td class="sig">АЗ-45/21</td></tr>
-            <tr><th scope="row" class="cell-title">Ноември во Скопје</th><td class="cell-perf">Импулси</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">2:29</td><td class="sig">З-2413/1</td></tr>
-            <tr><th scope="row" class="cell-title">Носталгична балада</th><td class="cell-perf">Лена Трајковска</td><td class="cell-comp">Петар Лукиќ</td><td class="dur">4:10</td><td class="sig">З-5625/1</td></tr>
-            <tr><th scope="row" class="cell-title">Ноќеска шумеа брезите</th><td class="cell-perf">Зафир Хаџиманов</td><td class="cell-comp">Петар Пешев</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">О галеби бели</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">2:56</td><td class="sig">З-3530/2</td></tr>
-            <tr><th scope="row" class="cell-title">О каква девојка</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Низа</td><td class="dur">—</td><td class="sig">АЗ-61/18</td></tr>
-            <tr><th scope="row" class="cell-title">Облаче</th><td class="cell-perf">Х. Пирганова</td><td class="cell-comp">К. Тодоровски</td><td class="dur">—</td><td class="sig">З-5096/2</td></tr>
-            <tr><th scope="row" class="cell-title">Оставам сè</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Димитар Масевски</td><td class="dur">4:10</td><td class="sig">З-2070/3</td></tr>
-            <tr><th scope="row" class="cell-title">Остани</th><td class="cell-perf">Јанко Узунов</td><td class="cell-comp">Кирил Милев</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Остани мој</th><td class="cell-perf">Маја Оџаклиевска</td><td class="cell-comp">Живоин Глишиќ</td><td class="dur">3:00</td><td class="sig">З-3818/2</td></tr>
-            <tr><th scope="row" class="cell-title">Охрид син</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Слободан Николовски</td><td class="dur">—</td><td class="sig">АЗ-54/2</td></tr>
-            <tr><th scope="row" class="cell-title">Охрид син</th><td class="cell-perf">Импулси</td><td class="cell-comp">Слободан Николовски</td><td class="dur">2:57</td><td class="sig">З-3880/1</td></tr>
-            <tr><th scope="row" class="cell-title">Охридски гердан</th><td class="cell-perf">Љупка Димитровска</td><td class="cell-comp">Димитар Масевски</td><td class="dur">3:10</td><td class="sig">З-2055/2</td></tr>
-            <tr><th scope="row" class="cell-title">Париски мангуп</th><td class="cell-perf">В. Сиљановска</td><td class="cell-comp"></td><td class="dur">2:23</td><td class="sig">З-1364/1</td></tr>
-            <tr><th scope="row" class="cell-title">Песна за Ана</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">3:20</td><td class="sig">З-2142/2</td></tr>
-            <tr><th scope="row" class="cell-title">Песна за враќањето</th><td class="cell-perf">Катица Ѓаконовска</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-59/19</td></tr>
-            <tr><th scope="row" class="cell-title">Песна на враќањето</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-45/25</td></tr>
-            <tr><th scope="row" class="cell-title">Писмо</th><td class="cell-perf">Ј. Катерина</td><td class="cell-comp">Д. Ортаков</td><td class="dur">2:25</td><td class="sig">З-3967/1</td></tr>
-            <tr><th scope="row" class="cell-title">Планино моја рудино</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">3:00</td><td class="sig">З-2033/2</td></tr>
-            <tr><th scope="row" class="cell-title">Пожелување</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Е. Гарнер</td><td class="dur">2:38</td><td class="sig">АЗ-45/16</td></tr>
-            <tr><th scope="row" class="cell-title">Поздрав на Марија</th><td class="cell-perf">Томислав Маниќ</td><td class="cell-comp">Томислав Маниќ</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">После оваа љубов</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Кочо Петровски</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Последна солза</th><td class="cell-perf">Блага Видец</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Последна солза</th><td class="cell-perf">Благоја Чешларов</td><td class="cell-comp">Димитар Масевски</td><td class="dur">3:20</td><td class="sig">З-3905/1</td></tr>
-            <tr><th scope="row" class="cell-title">Почекај ме</th><td class="cell-perf">Григор Копров</td><td class="cell-comp">Т. Органџиев</td><td class="dur">3:15</td><td class="sig">З-1445/1</td></tr>
-            <tr><th scope="row" class="cell-title">Празно е без оваа љубов</th><td class="cell-perf">Верица Ристевска</td><td class="cell-comp">М. Божиновски</td><td class="dur">3:40</td><td class="sig">З-3772/3</td></tr>
-            <tr><th scope="row" class="cell-title">Празно е без оваа љубов</th><td class="cell-perf">Верица Ристевска</td><td class="cell-comp">Тодор Бојаџиев</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Прегрни ме</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">G. Gershwin</td><td class="dur">—</td><td class="sig">АЗ-46/5</td></tr>
-            <tr><th scope="row" class="cell-title">Пред бранови?</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-60/27</td></tr>
-            <tr><th scope="row" class="cell-title">Предчувство</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">А. Влатковиќ</td><td class="dur">—</td><td class="sig">АЗ-45/23</td></tr>
-            <tr><th scope="row" class="cell-title">Приказна незаборавна</th><td class="cell-perf">Веле Матевски</td><td class="cell-comp">Кирил Милев</td><td class="dur">3:23</td><td class="sig">З-3530/1</td></tr>
-            <tr><th scope="row" class="cell-title">Пролетен Бајон</th><td class="cell-perf">Катица Ѓаконовска</td><td class="cell-comp">Кочо Петровски</td><td class="dur">—</td><td class="sig">АЗ-59/17</td></tr>
-            <tr><th scope="row" class="cell-title">Пролетно сеќавање</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-45/24</td></tr>
-            <tr><th scope="row" class="cell-title">Прости ми</th><td class="cell-perf">Сефедин Бајрамов</td><td class="cell-comp">М. Манев</td><td class="dur">3:26</td><td class="sig">З-6626/1</td></tr>
-            <tr><th scope="row" class="cell-title">Прости ми</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">3:45</td><td class="sig">З-30061</td></tr>
-            <tr><th scope="row" class="cell-title">Разговор</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-51/13</td></tr>
-            <tr><th scope="row" class="cell-title">Река на спомените</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">2:44</td><td class="sig">З-2470/2</td></tr>
-            <tr><th scope="row" class="cell-title">Романтична</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Р. Рашел</td><td class="dur">—</td><td class="sig">АЗ-49/12</td></tr>
-            <tr><th scope="row" class="cell-title">Рубин</th><td class="cell-perf">Благоја Чешларов</td><td class="cell-comp">Периш</td><td class="dur">—</td><td class="sig">АЗ-51/24</td></tr>
-            <tr><th scope="row" class="cell-title">Само едни очи помнам</th><td class="cell-perf">Сашка Петковска</td><td class="cell-comp">Петар Лукиќ</td><td class="dur">3:24</td><td class="sig">З-3677/1</td></tr>
-            <tr><th scope="row" class="cell-title">Сарабанда</th><td class="cell-perf">Томислав Маниќ</td><td class="cell-comp">Томислав Маниќ</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Се руши еден свет</th><td class="cell-perf">Импулси</td><td class="cell-comp">Мандел</td><td class="dur">2:15</td><td class="sig">З-2813/1</td></tr>
-            <tr><th scope="row" class="cell-title">Секогаш задоволна</th><td class="cell-perf">Катица Ѓаконовска</td><td class="cell-comp">Петар Пешев</td><td class="dur">—</td><td class="sig">АЗ-60/14</td></tr>
-            <tr><th scope="row" class="cell-title">Секој од нас</th><td class="cell-perf">Верица Ристевска</td><td class="cell-comp">Тодор Бојаџиев</td><td class="dur">—</td><td class="sig">З-4704/3</td></tr>
-            <tr><th scope="row" class="cell-title">Село мое</th><td class="cell-perf">Блага Видец</td><td class="cell-comp">Слободан Николовски</td><td class="dur">—</td><td class="sig">АЗ-60/12</td></tr>
-            <tr><th scope="row" class="cell-title">Сењорита Калипсо</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Е. Халец</td><td class="dur">—</td><td class="sig">АЗ-49/7</td></tr>
-            <tr><th scope="row" class="cell-title">Сењорита Калипсо</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Е. Халец</td><td class="dur">—</td><td class="sig">АЗ-55/19</td></tr>
-            <tr><th scope="row" class="cell-title">Септемвриска песна</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">К. Вајл</td><td class="dur">—</td><td class="sig">АЗ-49/4</td></tr>
-            <tr><th scope="row" class="cell-title">Серенада во ноќта</th><td class="cell-perf">Велко Трпчевски</td><td class="cell-comp">М. Мицев</td><td class="dur">—</td><td class="sig">АЗ-54/1</td></tr>
-            <tr><th scope="row" class="cell-title">Сеќавање</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Кирил Милев</td><td class="dur">—</td><td class="sig">ПК-2223/10</td></tr>
-            <tr><th scope="row" class="cell-title">Симона</th><td class="cell-perf">Ванчо Тарабунов</td><td class="cell-comp">П. Галев</td><td class="dur">—</td><td class="sig">З-5625/2</td></tr>
-            <tr><th scope="row" class="cell-title">Сината лагуна</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">Е. Хоуц</td><td class="dur">—</td><td class="sig">АЗ-50/23</td></tr>
-            <tr><th scope="row" class="cell-title">Сини очи во октомври</th><td class="cell-perf">Маја Оџаклиевска</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Сино во сино</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Д. Модуњо</td><td class="dur">—</td><td class="sig">АЗ-51/22</td></tr>
-            <tr><th scope="row" class="cell-title">Синови на партизани</th><td class="cell-perf">Јанко Узунов</td><td class="cell-comp">Јанко Узунов</td><td class="dur">2:54</td><td class="sig">З-5707/1</td></tr>
-            <tr><th scope="row" class="cell-title">Синоличка</th><td class="cell-perf">М. Станојковиќ</td><td class="cell-comp">Круме Јовановски</td><td class="dur">—</td><td class="sig">АЗ-47/14</td></tr>
-            <tr><th scope="row" class="cell-title">Сионото болеро</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Озборн</td><td class="dur">2:53</td><td class="sig">З-477/4</td></tr>
-            <tr><th scope="row" class="cell-title">Скитник</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Христо Крстевски</td><td class="dur">—</td><td class="sig">АЗ-61/27</td></tr>
-            <tr><th scope="row" class="cell-title">Скопје</th><td class="cell-perf">Импулси</td><td class="cell-comp">М. Мицев</td><td class="dur">3:19</td><td class="sig">З-3821/2</td></tr>
-            <tr><th scope="row" class="cell-title">Скопје младост моја</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">3:23</td><td class="sig">З-7747/2</td></tr>
-            <tr><th scope="row" class="cell-title">Со ноќта ме оставаш</th><td class="cell-perf">Зафир Хаџиманов</td><td class="cell-comp">Љубомир Бранѓолица</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Со сонце во око</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">М. Стамач</td><td class="dur">—</td><td class="sig">АЗ-51/7</td></tr>
-            <tr><th scope="row" class="cell-title">Со цвеќе да ме пречекаш</th><td class="cell-perf">Јанко Узунов</td><td class="cell-comp">Јанко Узунов</td><td class="dur">3:42</td><td class="sig">З-5486/1</td></tr>
-            <tr><th scope="row" class="cell-title">Сочувај ги бакнежите за мене</th><td class="cell-perf">група Македонија</td><td class="cell-comp"></td><td class="dur">2:46</td><td class="sig">З-5105/1</td></tr>
-            <tr><th scope="row" class="cell-title">Спиј ми ќерко, спиј</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">М. Стерн</td><td class="dur">—</td><td class="sig">АЗ-46/1</td></tr>
-            <tr><th scope="row" class="cell-title">Спомен</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-49/19</td></tr>
-            <tr><th scope="row" class="cell-title">Спомен</th><td class="cell-perf">Лена Трајковска</td><td class="cell-comp">Живоин Глишиќ</td><td class="dur">2:38</td><td class="sig">З-3866/2</td></tr>
-            <tr><th scope="row" class="cell-title">Спомен</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">В. Стијаски</td><td class="dur">—</td><td class="sig">З-9749/3</td></tr>
-            <tr><th scope="row" class="cell-title">Срамежлива серенада</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Реди</td><td class="dur">—</td><td class="sig">АЗ-49/8</td></tr>
-            <tr><th scope="row" class="cell-title">Срамежливи</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">3:25</td><td class="sig">З-1576/3</td></tr>
-            <tr><th scope="row" class="cell-title">Среќен сум што живеам</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Тага за југ</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Тажната кукла</th><td class="cell-perf">Лена Трајковска</td><td class="cell-comp">А. Морозо</td><td class="dur">—</td><td class="sig">З-5891/1</td></tr>
-            <tr><th scope="row" class="cell-title">Тајна љубов</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">С. Фејн</td><td class="dur">3:10</td><td class="sig">АЗ-45/1</td></tr>
-            <tr><th scope="row" class="cell-title">Танц на спомените</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">П. Педшев</td><td class="dur">—</td><td class="sig">АЗ-49/18</td></tr>
-            <tr><th scope="row" class="cell-title">Татковино</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">3:33</td><td class="sig">З-7886/1</td></tr>
-            <tr><th scope="row" class="cell-title">Татковино ќе ти се вратам</th><td class="cell-perf">Веле Матевски</td><td class="cell-comp">Кирил Милев</td><td class="dur">2:55</td><td class="sig">З-5901/2</td></tr>
-            <tr><th scope="row" class="cell-title">Твојата прегратка</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">G. Gershwin</td><td class="dur">—</td><td class="sig">АЗ-50/21</td></tr>
-            <tr><th scope="row" class="cell-title">Твојот прв валс</th><td class="cell-perf">—</td><td class="cell-comp">Григор Копров</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Те изгубив</th><td class="cell-perf">Љупка Димитровска</td><td class="cell-comp">Спрингфилд</td><td class="dur">2:32</td><td class="sig">З-479/2</td></tr>
-            <tr><th scope="row" class="cell-title">Те имам под кожа</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Кол Портер</td><td class="dur">3:15</td><td class="sig">З-8511-1</td></tr>
-            <tr><th scope="row" class="cell-title">Те сакам драга</th><td class="cell-perf">Импулси</td><td class="cell-comp">Бернс</td><td class="dur">4:10</td><td class="sig">З-2558/4</td></tr>
-            <tr><th scope="row" class="cell-title">Те чекам</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">М. Котлиќ</td><td class="dur">—</td><td class="sig">АЗ-55/16</td></tr>
-            <tr><th scope="row" class="cell-title">Тема бр. 1</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-51/14</td></tr>
-            <tr><th scope="row" class="cell-title">Теми</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Livingston / Evans</td><td class="dur">—</td><td class="sig">АЗ-45/18</td></tr>
-            <tr><th scope="row" class="cell-title">Ти и јас</th><td class="cell-perf">Зафир Хаџиманов</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-60/31</td></tr>
-            <tr><th scope="row" class="cell-title">Ти не си вистинска</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-61/26</td></tr>
-            <tr><th scope="row" class="cell-title">Ти пак сакаш некого</th><td class="cell-perf">Григор Копров</td><td class="cell-comp">Григор Копров</td><td class="dur">3:02</td><td class="sig">З-3881/2</td></tr>
-            <tr><th scope="row" class="cell-title">Ти си ми драга</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-51/21</td></tr>
-            <tr><th scope="row" class="cell-title">Ти си ми сè</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">2:44</td><td class="sig">З-3569/2</td></tr>
-            <tr><th scope="row" class="cell-title">Ти си тој</th><td class="cell-perf">Цветанка Ласкова</td><td class="cell-comp">Ванчо Тарабунов</td><td class="dur">3:05</td><td class="sig">З-6671/1</td></tr>
-            <tr><th scope="row" class="cell-title">Ти, ти, ти</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Тито секогаш во нас</th><td class="cell-perf">П. Христов</td><td class="cell-comp">Ванчо Димитров</td><td class="dur">3:00</td><td class="sig">З-5709/2</td></tr>
-            <tr><th scope="row" class="cell-title">Тој ден ќе дојде</th><td class="cell-perf">С. Варешановиќ</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">2:48</td><td class="sig">З-2471/1</td></tr>
-            <tr><th scope="row" class="cell-title">Три парички во фонтаната</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Г. Стаин</td><td class="dur">—</td><td class="sig">АЗ-49/5</td></tr>
-            <tr><th scope="row" class="cell-title">Туѓо</th><td class="cell-perf">Импулси</td><td class="cell-comp">Џ. Латус</td><td class="dur">2:07</td><td class="sig">З-14421</td></tr>
-            <tr><th scope="row" class="cell-title">Ќе дојде ден</th><td class="cell-perf">Т. Веселинов</td><td class="cell-comp">Ф. Квин</td><td class="dur">—</td><td class="sig">АЗ-62/18</td></tr>
-            <tr><th scope="row" class="cell-title">Ќе наминеш кај мене</th><td class="cell-perf">Даниела Панчетовиќ</td><td class="cell-comp">Димитар Масевски</td><td class="dur">3:10</td><td class="sig">З-2071/3</td></tr>
-            <tr><th scope="row" class="cell-title">Ќе се препознаеш</th><td class="cell-perf">Б. Петреска</td><td class="cell-comp">Морган</td><td class="dur">2:32</td><td class="sig">З-3531/1</td></tr>
-            <tr><th scope="row" class="cell-title">Убавата палавка</th><td class="cell-perf">Андреа Сопронов</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Убавице моја</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">4:35</td><td class="sig">З-6822/1</td></tr>
-            <tr><th scope="row" class="cell-title">Фиеста</th><td class="cell-perf">Импулси</td><td class="cell-comp">Жобим</td><td class="dur">3:00</td><td class="sig">З-2558/1</td></tr>
-            <tr><th scope="row" class="cell-title">Фламенко рок</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Малгони</td><td class="dur">—</td><td class="sig">АЗ-61/13</td></tr>
-            <tr><th scope="row" class="cell-title">Фолк соул</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Кочо Петровски</td><td class="dur">3:02</td><td class="sig">З-2059/2</td></tr>
-            <tr><th scope="row" class="cell-title">Честитки</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Мартин</td><td class="dur">2:25</td><td class="sig">З-1005/1</td></tr>
-            <tr><th scope="row" class="cell-title">Чувства</th><td class="cell-perf">Цветанка Ласкова</td><td class="cell-comp">А. Морис</td><td class="dur">4:00</td><td class="sig">З-5627/1</td></tr>
-            <tr><th scope="row" class="cell-title">Џезаел</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Провенте</td><td class="dur">2:41</td><td class="sig">З-2809/4</td></tr>
-            <tr><th scope="row" class="cell-title">Шармен</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">Полак</td><td class="dur">—</td><td class="sig">АЗ-50/22</td></tr>
-            <tr><th scope="row" class="cell-title">Што е љубов</th><td class="cell-perf">Голем забавен оркестар на Радио Скопје</td><td class="cell-comp">Кол Портер</td><td class="dur">—</td><td class="sig">АЗ-50/16</td></tr>
-            <tr><th scope="row" class="cell-title">Штом те видам</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Moon River</th><td class="cell-perf">Д. Поповска</td><td class="cell-comp">H. Mancini</td><td class="dur">2:20</td><td class="sig">З-186/1</td></tr>
-            <tr><th scope="row" class="cell-title">Secret love</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">F. Webster</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Something stupid</th><td class="cell-perf">—</td><td class="cell-comp">C. Parks</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Strangers in the night</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">B. Kaempfert</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Summer time</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">G. Gershwin</td><td class="dur">—</td><td class="sig">—</td></tr>
-            <tr><th scope="row" class="cell-title">Tammy</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Livingston / Evans</td><td class="dur">—</td><td class="sig">—</td></tr>
-          </tbody>
-        </table>
+      <div class="table-frame">
+        <div class="table-wrap doc-table" tabindex="0">
+          <table class="catalog-table">
+            <caption class="visually-hidden">Аранжмани на вокални творби од други автори во фонотеката на МРТВ</caption>
+            <thead><tr><th scope="col">Наслов</th><th scope="col">Изведувач</th><th scope="col">Автор</th><th scope="col">Времетраење</th><th scope="col">Сигнатура</th></tr></thead>
+            <tbody>
+              <tr><th scope="row" class="cell-title">Адиос</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Е. Мадригера</td><td class="dur">—</td><td class="sig">АЗ-53/5</td></tr>
+              <tr><th scope="row" class="cell-title">Ако животот</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">К. Сиари</td><td class="dur">3:32</td><td class="sig">З-1044/3</td></tr>
+              <tr><th scope="row" class="cell-title">Ако отидеш</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Ж. Брел</td><td class="dur">—</td><td class="sig">АЗ-45/20</td></tr>
+              <tr><th scope="row" class="cell-title">Ако отидеш</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">М. Емер</td><td class="dur">3:40</td><td class="sig">АЗ-51/1</td></tr>
+              <tr><th scope="row" class="cell-title">Алдила</th><td class="cell-perf">Блага Видец</td><td class="cell-comp">К. Донида</td><td class="dur">4:05</td><td class="sig">АЗ-60/10</td></tr>
+              <tr><th scope="row" class="cell-title">Ана</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Димитар Масевски</td><td class="dur">2:38</td><td class="sig">З-3531/3</td></tr>
+              <tr><th scope="row" class="cell-title">Ана бајон</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Варт</td><td class="dur">—</td><td class="sig">АЗ-53/6</td></tr>
+              <tr><th scope="row" class="cell-title">Андалузија</th><td class="cell-perf">Блага Видец</td><td class="cell-comp">Е. Лекуона</td><td class="dur">—</td><td class="sig">АЗ-51/5</td></tr>
+              <tr><th scope="row" class="cell-title">Аранхуез</th><td class="cell-perf">Благоја Чешларов</td><td class="cell-comp">Х. Родриго</td><td class="dur">4:05</td><td class="sig">З-1145/2</td></tr>
+              <tr><th scope="row" class="cell-title">Бакни ме</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">2:37</td><td class="sig">З-1721/3</td></tr>
+              <tr><th scope="row" class="cell-title">Бегај бегај Марија</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">3:23</td><td class="sig">З-3742/3</td></tr>
+              <tr><th scope="row" class="cell-title">Беше мој, беше мој</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Кочо Петровски</td><td class="dur">3:15</td><td class="sig">АЗ-15/8</td></tr>
+              <tr><th scope="row" class="cell-title">Бим бам бум</th><td class="cell-perf">Импулси</td><td class="cell-comp">Х. Адамсон</td><td class="dur">2:00</td><td class="sig">З-2219/4</td></tr>
+              <tr><th scope="row" class="cell-title">Благодарам</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Љубомир Бранѓолица</td><td class="dur">2:45</td><td class="sig">З-1222/1</td></tr>
+              <tr><th scope="row" class="cell-title">Буквар мамбо</th><td class="cell-perf">Катица Ѓаконовска</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-60/13</td></tr>
+              <tr><th scope="row" class="cell-title">Вардарска</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">2:43</td><td class="sig">З-2470/1</td></tr>
+              <tr><th scope="row" class="cell-title">Ватерло</th><td class="cell-perf">Верица Ристевска</td><td class="cell-comp">Б. Андерсон</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Везден чекам бистри води</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Кочо Петровски</td><td class="dur">3:07</td><td class="sig">З-3814/1</td></tr>
+              <tr><th scope="row" class="cell-title">Вејка скршена</th><td class="cell-perf">—</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Ветерница во моите мисли</th><td class="cell-perf">Импулси</td><td class="cell-comp">Легран</td><td class="dur">3:25</td><td class="sig">З-2812/3</td></tr>
+              <tr><th scope="row" class="cell-title">Ветрој ќе ме кинат</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Љубомир Бранѓолица</td><td class="dur">2:21</td><td class="sig">З-1365/1</td></tr>
+              <tr><th scope="row" class="cell-title">Ветрот и старите ѕидишта</th><td class="cell-perf">—</td><td class="cell-comp">Љубомир Бранѓолица</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Види ја Адела</th><td class="cell-perf">Велко Трпчевски</td><td class="cell-comp">М. Гилар</td><td class="dur">—</td><td class="sig">АЗ-49/9</td></tr>
+              <tr><th scope="row" class="cell-title">Визија на мојата среќа</th><td class="cell-perf">Забавен оркестар на Радио Скопје</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-48/20</td></tr>
+              <tr><th scope="row" class="cell-title">Вљуби се во мене</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Клуни</td><td class="dur">—</td><td class="sig">АЗ-55/20</td></tr>
+              <tr><th scope="row" class="cell-title">Во една пролет</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Во ноќта</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Кочо Петровски</td><td class="dur">2:57</td><td class="sig">З-3815/2</td></tr>
+              <tr><th scope="row" class="cell-title">Врати се</th><td class="cell-perf">С. Сариевска</td><td class="cell-comp">Ј. Велинов</td><td class="dur">3:52</td><td class="sig">З-4029/1</td></tr>
+              <tr><th scope="row" class="cell-title">Врне</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Д. Модуњо</td><td class="dur">—</td><td class="sig">АЗ-51/26</td></tr>
+              <tr><th scope="row" class="cell-title">Го љубам до најмалите ѕвезди</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Димитар Масевски</td><td class="dur">2:49</td><td class="sig">З-3904/2</td></tr>
+              <tr><th scope="row" class="cell-title">Гога</th><td class="cell-perf">Кирил Рибарски</td><td class="cell-comp">Б. Танев</td><td class="dur">6:05</td><td class="sig">З-7962/2</td></tr>
+              <tr><th scope="row" class="cell-title">Гордата Мери</th><td class="cell-perf">Андреа Сопронов</td><td class="cell-comp">Форгети</td><td class="dur">2:31</td><td class="sig">З-2061/4</td></tr>
+              <tr><th scope="row" class="cell-title">Да ме љубиш</th><td class="cell-perf">—</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">2:46</td><td class="sig">З-1714/2</td></tr>
+              <tr><th scope="row" class="cell-title">Да потонам во твоите коси</th><td class="cell-perf">Веле Матевски</td><td class="cell-comp">Григор Копров</td><td class="dur">3:26</td><td class="sig">З-5626/1</td></tr>
+              <tr><th scope="row" class="cell-title">Да си близу мила моја</th><td class="cell-perf">Ванчо Тарабунов</td><td class="cell-comp">Ванчо Тарабунов</td><td class="dur">3:18</td><td class="sig">З-3995/1</td></tr>
+              <tr><th scope="row" class="cell-title">Далеку во далечина</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">—</td><td class="sig">З-2093/3</td></tr>
+              <tr><th scope="row" class="cell-title">Далеку некаде на југ</th><td class="cell-perf">Ревиски оркестар</td><td class="cell-comp">Григор Копров</td><td class="dur">3:20</td><td class="sig">З-2649/1</td></tr>
+              <tr><th scope="row" class="cell-title">Две реки</th><td class="cell-perf">—</td><td class="cell-comp">Сотир Голабовски</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Девојката од Ипанема</th><td class="cell-perf">Импулси</td><td class="cell-comp">Жобим</td><td class="dur">2:21</td><td class="sig">З-1442/3</td></tr>
+              <tr><th scope="row" class="cell-title">Девојката од 3 смена</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Христо Крстевски</td><td class="dur">2:30</td><td class="sig">З-2012/1</td></tr>
+              <tr><th scope="row" class="cell-title">Детство</th><td class="cell-perf">Ревиски оркестар Зоран Милосављевиќ</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">3:44</td><td class="sig">З-3527/3</td></tr>
+              <tr><th scope="row" class="cell-title">Див цвет</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Д. Тјомкин</td><td class="dur">—</td><td class="sig">АЗ-55/17</td></tr>
+              <tr><th scope="row" class="cell-title">Дожд а по него ништо</th><td class="cell-perf">Сашка Петковска</td><td class="cell-comp">Димитар Масевски</td><td class="dur">2:50</td><td class="sig">З-2071/2</td></tr>
+              <tr><th scope="row" class="cell-title">Дождот нека плисне</th><td class="cell-perf">Верица Ристевска</td><td class="cell-comp">К. Костадиновски</td><td class="dur">—</td><td class="sig">З-5106/1</td></tr>
+              <tr><th scope="row" class="cell-title">Дојди</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">3:05</td><td class="sig">З-262/3</td></tr>
+              <tr><th scope="row" class="cell-title">Дојди ми</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Слободан Николовски</td><td class="dur">—</td><td class="sig">АЗ-55/1</td></tr>
+              <tr><th scope="row" class="cell-title">Држи ме цврсто</th><td class="cell-perf">Импулси</td><td class="cell-comp">Ванчо Димитров</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Друг љубиш</th><td class="cell-perf">Импулси</td><td class="cell-comp">Славе Димитров</td><td class="dur">3:20</td><td class="sig">З-3783/3</td></tr>
+              <tr><th scope="row" class="cell-title">Еден бакнеж</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Петар Пешев</td><td class="dur">—</td><td class="sig">АЗ-10/3</td></tr>
+              <tr><th scope="row" class="cell-title">Еден човек една сказна</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Палавичини</td><td class="dur">2:05</td><td class="sig">З-336/2</td></tr>
+              <tr><th scope="row" class="cell-title">Еден човек, една жена</th><td class="cell-perf">—</td><td class="cell-comp">Баро Импулси</td><td class="dur">3:13</td><td class="sig">З-2934/1</td></tr>
+              <tr><th scope="row" class="cell-title">Езерска тајна</th><td class="cell-perf">Ј. Митревска</td><td class="cell-comp">Димитар Масевски</td><td class="dur">3:23</td><td class="sig">З-2056/2</td></tr>
+              <tr><th scope="row" class="cell-title">Есен во Рим</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">С. Кил</td><td class="dur">—</td><td class="sig">АЗ-49/3</td></tr>
+              <tr><th scope="row" class="cell-title">Животот тече како река</th><td class="cell-perf">Сашка Петковска</td><td class="cell-comp">Григор Копров</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Жозефина</th><td class="cell-perf">Зорица Милисављевиќ - Попанкова</td><td class="cell-comp">Л. Митревски</td><td class="dur">2:42</td><td class="sig">З-7700/1</td></tr>
+              <tr><th scope="row" class="cell-title">За дружба и мир</th><td class="cell-perf">—</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">За еден цвет господине</th><td class="cell-perf">Марија Арсова</td><td class="cell-comp"></td><td class="dur">2:42</td><td class="sig">З-1947/3</td></tr>
+              <tr><th scope="row" class="cell-title">За мене сега си сè</th><td class="cell-perf">Томислав Маниќ</td><td class="cell-comp"></td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">За тебе за мене</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">З-230/3</td></tr>
+              <tr><th scope="row" class="cell-title">За тебе и за мене</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Запомни ја мојата љубов</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">3:42</td><td class="sig">З-7747/1</td></tr>
+              <tr><th scope="row" class="cell-title">Запри</th><td class="cell-perf">Сашка Петковска</td><td class="cell-comp">Димитар Масевски</td><td class="dur">2:46</td><td class="sig">З-1721/2</td></tr>
+              <tr><th scope="row" class="cell-title">Заспаниот град</th><td class="cell-perf">Блага Видец</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-50/19</td></tr>
+              <tr><th scope="row" class="cell-title">Здодевно е</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Ванчо Димитров</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Земјо родна</th><td class="cell-perf">Даниела Панчетовиќ</td><td class="cell-comp">П. Сидовски</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Земјо се враќам</th><td class="cell-perf">—</td><td class="cell-comp">Григор Копров</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Зимски здив</th><td class="cell-perf">Голем забавен оркестар на Радио Скопје</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-60/2</td></tr>
+              <tr><th scope="row" class="cell-title">Златна месечина</th><td class="cell-perf">—</td><td class="cell-comp">В. Гомез</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Знаеш ли што се дни без надеж</th><td class="cell-perf">Григор Копров</td><td class="cell-comp">Григор Копров</td><td class="dur">2:15</td><td class="sig">З-3012/1</td></tr>
+              <tr><th scope="row" class="cell-title">Знам скоро ќе ме намразиш</th><td class="cell-perf">Јанко Узунов</td><td class="cell-comp">Јанко Узунов</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Зомби</th><td class="cell-perf">—</td><td class="cell-comp">К. Кугат</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Зошто</th><td class="cell-perf">Зафир Хаџиманов</td><td class="cell-comp">Зафир Хаџиманов</td><td class="dur">4:26</td><td class="sig">З-3674/1</td></tr>
+              <tr><th scope="row" class="cell-title">Зошто комплименти за љубов</th><td class="cell-perf">Никола Комовски</td><td class="cell-comp"></td><td class="dur">—</td><td class="sig">З-7686/2</td></tr>
+              <tr><th scope="row" class="cell-title">Зошто си во мојата близина</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-51/18</td></tr>
+              <tr><th scope="row" class="cell-title">И можеби</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Христо Крстевски</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">И утре че е ден</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">3:36</td><td class="sig">З-984/4</td></tr>
+              <tr><th scope="row" class="cell-title">Играјте сенки</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">И. Стамаќ</td><td class="dur">—</td><td class="sig">АЗ-45/22</td></tr>
+              <tr><th scope="row" class="cell-title">Илинденска</th><td class="cell-perf">Т. Веселинов</td><td class="cell-comp">Круме Јовановски</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Има ли ѕвезди</th><td class="cell-perf">Копров и Верица Ристевска</td><td class="cell-comp">Григор Копров</td><td class="dur">2:42</td><td class="sig">З-7176/2</td></tr>
+              <tr><th scope="row" class="cell-title">Интимна румба</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-60/19</td></tr>
+              <tr><th scope="row" class="cell-title">Јас не сум Џон Траволта</th><td class="cell-perf">К. Манев</td><td class="cell-comp">К. Манев</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Јас чекам</th><td class="cell-perf">Импулси</td><td class="cell-comp">Димитар Масевски</td><td class="dur">2:25</td><td class="sig">З-2534/1</td></tr>
+              <tr><th scope="row" class="cell-title">Јужна ѕвезда</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">3:07</td><td class="sig">З-1365/3</td></tr>
+              <tr><th scope="row" class="cell-title">Кажи зошто ме остави</th><td class="cell-perf">Томислав Маниќ</td><td class="cell-comp">Н. Гунарис</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Кај си мајко</th><td class="cell-perf">Даниела Панчетовиќ</td><td class="cell-comp">Григор Копров</td><td class="dur">3:01</td><td class="sig">З-2740/1</td></tr>
+              <tr><th scope="row" class="cell-title">Калу</th><td class="cell-perf">Б. Автовски</td><td class="cell-comp"></td><td class="dur">—</td><td class="sig">АЗ-53/1</td></tr>
+              <tr><th scope="row" class="cell-title">Кејовите на Вардар</th><td class="cell-perf">Веле Матевски</td><td class="cell-comp">А. Лековски</td><td class="dur">3:20</td><td class="sig">З-2733/1</td></tr>
+              <tr><th scope="row" class="cell-title">Кога бев млад</th><td class="cell-perf">М. Станојковиќ</td><td class="cell-comp">Петар Пешев</td><td class="dur">—</td><td class="sig">АЗ-47/10</td></tr>
+              <tr><th scope="row" class="cell-title">Кога ти не би постоела</th><td class="cell-perf">Зоран Јовановиќ</td><td class="cell-comp"></td><td class="dur">3:20</td><td class="sig">З-5828/2</td></tr>
+              <tr><th scope="row" class="cell-title">Кога ќе се вљубам</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Панцери</td><td class="dur">3:15</td><td class="sig">З-867/2</td></tr>
+              <tr><th scope="row" class="cell-title">Кога цветаат липите</th><td class="cell-perf">П. Христов</td><td class="cell-comp">К. Мицевски</td><td class="dur">—</td><td class="sig">З-5899/1</td></tr>
+              <tr><th scope="row" class="cell-title">Кој да те колне</th><td class="cell-perf">С. Грнчаровски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">3:11</td><td class="sig">З-3770/1</td></tr>
+              <tr><th scope="row" class="cell-title">Крајот на нашата љубов</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Славе Димитров</td><td class="dur">3:25</td><td class="sig">З-1704/3</td></tr>
+              <tr><th scope="row" class="cell-title">Крајот на нашата љубов</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Славе Димитров</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Кристина</th><td class="cell-perf">Сефедин Бајрамов</td><td class="cell-comp">Петар Лукиќ</td><td class="dur">4:00</td><td class="sig">З-7590/2</td></tr>
+              <tr><th scope="row" class="cell-title">Лихнида</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Димитар Масевски</td><td class="dur">2:47</td><td class="sig">З-2055/3</td></tr>
+              <tr><th scope="row" class="cell-title">Луд бев по тебе</th><td class="cell-perf">М. Колев</td><td class="cell-comp">Миљачи</td><td class="dur">3:27</td><td class="sig">З-4079/1</td></tr>
+              <tr><th scope="row" class="cell-title">Лудо младо</th><td class="cell-perf">Андреа Сопронов</td><td class="cell-comp">Григор Копров</td><td class="dur">2:32</td><td class="sig">З-3212/1</td></tr>
+              <tr><th scope="row" class="cell-title">Луција</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">А. Бељан</td><td class="dur">—</td><td class="sig">АЗ-55/2</td></tr>
+              <tr><th scope="row" class="cell-title">Љубам</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Христо Крстевски</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Љубен си?</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-61/8</td></tr>
+              <tr><th scope="row" class="cell-title">Љуби ме</th><td class="cell-perf">Даниела Панчетовиќ</td><td class="cell-comp">Р. Пајдаков</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Љубов во Портофино</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Бускаљоне</td><td class="dur">—</td><td class="sig">АЗ-59/23</td></tr>
+              <tr><th scope="row" class="cell-title">Љубов врати се</th><td class="cell-perf">С. Сариевска</td><td class="cell-comp">Ј. Велинов</td><td class="dur">—</td><td class="sig">З-4029/1</td></tr>
+              <tr><th scope="row" class="cell-title">Љубов и мотор</th><td class="cell-perf">М. Станојковиќ</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-47/15</td></tr>
+              <tr><th scope="row" class="cell-title">Љубов како река</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Слободан Николовски</td><td class="dur">—</td><td class="sig">АЗ-46/2</td></tr>
+              <tr><th scope="row" class="cell-title">Љубов ти сладок сон</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Ј. Вељановски</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Љубовнта е син</th><td class="cell-perf">Љупка Димитровска</td><td class="cell-comp">А. Поп</td><td class="dur">3:10</td><td class="sig">З-452/3</td></tr>
+              <tr><th scope="row" class="cell-title">Љубовта се раѓа</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Химел</td><td class="dur">2:28</td><td class="sig">З-1112/2</td></tr>
+              <tr><th scope="row" class="cell-title">Македонка</th><td class="cell-perf">А. Сурмеан</td><td class="cell-comp">Христо Крстевски</td><td class="dur">3:12</td><td class="sig">З-1146/3</td></tr>
+              <tr><th scope="row" class="cell-title">Македонски кавал</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Христо Крстевски</td><td class="dur">4:00</td><td class="sig">З-1720/3</td></tr>
+              <tr><th scope="row" class="cell-title">Мама</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Моранди</td><td class="dur">—</td><td class="sig">АЗ-45/19</td></tr>
+              <tr><th scope="row" class="cell-title">Мама Калипсо</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">М. Гилар</td><td class="dur">—</td><td class="sig">АЗ-55/18</td></tr>
+              <tr><th scope="row" class="cell-title">Марина</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Димитар Масевски</td><td class="dur">2:47</td><td class="sig">З-3904/1</td></tr>
+              <tr><th scope="row" class="cell-title">Маскарада</th><td class="cell-perf">Импулси</td><td class="cell-comp">Бен</td><td class="dur">2:45</td><td class="sig">З-2534/2</td></tr>
+              <tr><th scope="row" class="cell-title">Ме подмладуваш</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">А. Вучер</td><td class="dur">—</td><td class="sig">АЗ-45/17</td></tr>
+              <tr><th scope="row" class="cell-title">Меги</th><td class="cell-perf">Григор Копров</td><td class="cell-comp">Григор Копров</td><td class="dur">2:50</td><td class="sig">З-1572/2</td></tr>
+              <tr><th scope="row" class="cell-title">Мелодија за нас</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Христо Крстевски</td><td class="dur">3:28</td><td class="sig">З-2033/3</td></tr>
+              <tr><th scope="row" class="cell-title">Место за нас</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Кочо Петровски</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Мила моја</th><td class="cell-perf">Андреа Сопронов</td><td class="cell-comp">М. Божиновски</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Мил мој</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Ги Боне</td><td class="dur">3:10</td><td class="sig">З-3740/3</td></tr>
+              <tr><th scope="row" class="cell-title">Мисисипи линија</th><td class="cell-perf">С. Грнчаровски</td><td class="cell-comp"></td><td class="dur">2:42</td><td class="sig">З-1845/2</td></tr>
+              <tr><th scope="row" class="cell-title">Млади луди години</th><td class="cell-perf">Божидар Ноев</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Моето поле</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Петар Лукиќ</td><td class="dur">4:20</td><td class="sig">З-5910/1</td></tr>
+              <tr><th scope="row" class="cell-title">Мојата гитара</th><td class="cell-perf">Бл. Петров-Караѓуле</td><td class="cell-comp">Пичини</td><td class="dur">—</td><td class="sig">АЗ-52/7</td></tr>
+              <tr><th scope="row" class="cell-title">Мојот јуни</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-46/4</td></tr>
+              <tr><th scope="row" class="cell-title">Мојот јуни</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-62/11</td></tr>
+              <tr><th scope="row" class="cell-title">Море в кутивче</th><td class="cell-perf">Блага Видец</td><td class="cell-comp"></td><td class="dur">—</td><td class="sig">АЗ-60/11</td></tr>
+              <tr><th scope="row" class="cell-title">Моретп и јас</th><td class="cell-perf">Б. Николовски</td><td class="cell-comp">Ди Капуа</td><td class="dur">4:30</td><td class="sig">З-6062/1</td></tr>
+              <tr><th scope="row" class="cell-title">Мост на нашата љубов</th><td class="cell-perf">Веле Матевски</td><td class="cell-comp">Јанко Узунов</td><td class="dur">—</td><td class="sig">З-5626/2</td></tr>
+              <tr><th scope="row" class="cell-title">Мртви лиска</th><td class="cell-perf">Блага Видец</td><td class="cell-comp">Ж. Козма</td><td class="dur">—</td><td class="sig">АЗ-51/6</td></tr>
+              <tr><th scope="row" class="cell-title">На последната средба</th><td class="cell-perf">Љупчо Босилков</td><td class="cell-comp">Т. Органџиев</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Најмила</th><td class="cell-perf">Ванчо Тарабунов</td><td class="cell-comp">Ванчо Тарабунов</td><td class="dur">2:48</td><td class="sig">З-3994/1</td></tr>
+              <tr><th scope="row" class="cell-title">Нани, нуни, нина</th><td class="cell-perf">С. Камџијаш</td><td class="cell-comp">З. Запров</td><td class="dur">2:25</td><td class="sig">З-5100/3</td></tr>
+              <tr><th scope="row" class="cell-title">Не буди ја првата љубов</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Христо Крстевски</td><td class="dur">3:21</td><td class="sig">З-2012/3</td></tr>
+              <tr><th scope="row" class="cell-title">Не ми верувај</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Л. Дугнас</td><td class="dur">—</td><td class="sig">АЗ-54/9</td></tr>
+              <tr><th scope="row" class="cell-title">Нежно ноктурно</th><td class="cell-perf">Зафир Хаџиманов</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-60/21</td></tr>
+              <tr><th scope="row" class="cell-title">Нежност кон Мими</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Петар Пешев</td><td class="dur">—</td><td class="sig">АЗ-61/24</td></tr>
+              <tr><th scope="row" class="cell-title">Незавршена балада</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Димитар Масевски</td><td class="dur">3:03</td><td class="sig">З-1365/2</td></tr>
+              <tr><th scope="row" class="cell-title">Незнаена сестра</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">3:11</td><td class="sig">З-2471/2</td></tr>
+              <tr><th scope="row" class="cell-title">Незнам кај си сега</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">К. Костов</td><td class="dur">4:21</td><td class="sig">З-4917/1</td></tr>
+              <tr><th scope="row" class="cell-title">Нејќам срце што затајува</th><td class="cell-perf">Сашка Петковска</td><td class="cell-comp">Ванчо Тарабунов</td><td class="dur">3:52</td><td class="sig">З-5901/1</td></tr>
+              <tr><th scope="row" class="cell-title">Нека е крај</th><td class="cell-perf">Сефедин Бајрамов</td><td class="cell-comp">Тодор Бојаџиев</td><td class="dur">2:55</td><td class="sig">З-6986/2</td></tr>
+              <tr><th scope="row" class="cell-title">Нешто глупаво</th><td class="cell-perf">Љупка Димитровска</td><td class="cell-comp">C. Parks</td><td class="dur">2:22</td><td class="sig">З-479/2</td></tr>
+              <tr><th scope="row" class="cell-title">Никогаш помалку од вчера</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Бакарак</td><td class="dur">—</td><td class="sig">АЗ-45/21</td></tr>
+              <tr><th scope="row" class="cell-title">Ноември во Скопје</th><td class="cell-perf">Импулси</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">2:29</td><td class="sig">З-2413/1</td></tr>
+              <tr><th scope="row" class="cell-title">Носталгична балада</th><td class="cell-perf">Лена Трајковска</td><td class="cell-comp">Петар Лукиќ</td><td class="dur">4:10</td><td class="sig">З-5625/1</td></tr>
+              <tr><th scope="row" class="cell-title">Ноќеска шумеа брезите</th><td class="cell-perf">Зафир Хаџиманов</td><td class="cell-comp">Петар Пешев</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">О галеби бели</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">2:56</td><td class="sig">З-3530/2</td></tr>
+              <tr><th scope="row" class="cell-title">О каква девојка</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Низа</td><td class="dur">—</td><td class="sig">АЗ-61/18</td></tr>
+              <tr><th scope="row" class="cell-title">Облаче</th><td class="cell-perf">Х. Пирганова</td><td class="cell-comp">К. Тодоровски</td><td class="dur">—</td><td class="sig">З-5096/2</td></tr>
+              <tr><th scope="row" class="cell-title">Оставам сè</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Димитар Масевски</td><td class="dur">4:10</td><td class="sig">З-2070/3</td></tr>
+              <tr><th scope="row" class="cell-title">Остани</th><td class="cell-perf">Јанко Узунов</td><td class="cell-comp">Кирил Милев</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Остани мој</th><td class="cell-perf">Маја Оџаклиевска</td><td class="cell-comp">Живоин Глишиќ</td><td class="dur">3:00</td><td class="sig">З-3818/2</td></tr>
+              <tr><th scope="row" class="cell-title">Охрид син</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Слободан Николовски</td><td class="dur">—</td><td class="sig">АЗ-54/2</td></tr>
+              <tr><th scope="row" class="cell-title">Охрид син</th><td class="cell-perf">Импулси</td><td class="cell-comp">Слободан Николовски</td><td class="dur">2:57</td><td class="sig">З-3880/1</td></tr>
+              <tr><th scope="row" class="cell-title">Охридски гердан</th><td class="cell-perf">Љупка Димитровска</td><td class="cell-comp">Димитар Масевски</td><td class="dur">3:10</td><td class="sig">З-2055/2</td></tr>
+              <tr><th scope="row" class="cell-title">Париски мангуп</th><td class="cell-perf">В. Сиљановска</td><td class="cell-comp"></td><td class="dur">2:23</td><td class="sig">З-1364/1</td></tr>
+              <tr><th scope="row" class="cell-title">Песна за Ана</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">3:20</td><td class="sig">З-2142/2</td></tr>
+              <tr><th scope="row" class="cell-title">Песна за враќањето</th><td class="cell-perf">Катица Ѓаконовска</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-59/19</td></tr>
+              <tr><th scope="row" class="cell-title">Песна на враќањето</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-45/25</td></tr>
+              <tr><th scope="row" class="cell-title">Писмо</th><td class="cell-perf">Ј. Катерина</td><td class="cell-comp">Д. Ортаков</td><td class="dur">2:25</td><td class="sig">З-3967/1</td></tr>
+              <tr><th scope="row" class="cell-title">Планино моја рудино</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">3:00</td><td class="sig">З-2033/2</td></tr>
+              <tr><th scope="row" class="cell-title">Пожелување</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Е. Гарнер</td><td class="dur">2:38</td><td class="sig">АЗ-45/16</td></tr>
+              <tr><th scope="row" class="cell-title">Поздрав на Марија</th><td class="cell-perf">Томислав Маниќ</td><td class="cell-comp">Томислав Маниќ</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">После оваа љубов</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Кочо Петровски</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Последна солза</th><td class="cell-perf">Блага Видец</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Последна солза</th><td class="cell-perf">Благоја Чешларов</td><td class="cell-comp">Димитар Масевски</td><td class="dur">3:20</td><td class="sig">З-3905/1</td></tr>
+              <tr><th scope="row" class="cell-title">Почекај ме</th><td class="cell-perf">Григор Копров</td><td class="cell-comp">Т. Органџиев</td><td class="dur">3:15</td><td class="sig">З-1445/1</td></tr>
+              <tr><th scope="row" class="cell-title">Празно е без оваа љубов</th><td class="cell-perf">Верица Ристевска</td><td class="cell-comp">М. Божиновски</td><td class="dur">3:40</td><td class="sig">З-3772/3</td></tr>
+              <tr><th scope="row" class="cell-title">Празно е без оваа љубов</th><td class="cell-perf">Верица Ристевска</td><td class="cell-comp">Тодор Бојаџиев</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Прегрни ме</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">G. Gershwin</td><td class="dur">—</td><td class="sig">АЗ-46/5</td></tr>
+              <tr><th scope="row" class="cell-title">Пред бранови?</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-60/27</td></tr>
+              <tr><th scope="row" class="cell-title">Предчувство</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">А. Влатковиќ</td><td class="dur">—</td><td class="sig">АЗ-45/23</td></tr>
+              <tr><th scope="row" class="cell-title">Приказна незаборавна</th><td class="cell-perf">Веле Матевски</td><td class="cell-comp">Кирил Милев</td><td class="dur">3:23</td><td class="sig">З-3530/1</td></tr>
+              <tr><th scope="row" class="cell-title">Пролетен Бајон</th><td class="cell-perf">Катица Ѓаконовска</td><td class="cell-comp">Кочо Петровски</td><td class="dur">—</td><td class="sig">АЗ-59/17</td></tr>
+              <tr><th scope="row" class="cell-title">Пролетно сеќавање</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-45/24</td></tr>
+              <tr><th scope="row" class="cell-title">Прости ми</th><td class="cell-perf">Сефедин Бајрамов</td><td class="cell-comp">М. Манев</td><td class="dur">3:26</td><td class="sig">З-6626/1</td></tr>
+              <tr><th scope="row" class="cell-title">Прости ми</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">3:45</td><td class="sig">З-30061</td></tr>
+              <tr><th scope="row" class="cell-title">Разговор</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-51/13</td></tr>
+              <tr><th scope="row" class="cell-title">Река на спомените</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">2:44</td><td class="sig">З-2470/2</td></tr>
+              <tr><th scope="row" class="cell-title">Романтична</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Р. Рашел</td><td class="dur">—</td><td class="sig">АЗ-49/12</td></tr>
+              <tr><th scope="row" class="cell-title">Рубин</th><td class="cell-perf">Благоја Чешларов</td><td class="cell-comp">Периш</td><td class="dur">—</td><td class="sig">АЗ-51/24</td></tr>
+              <tr><th scope="row" class="cell-title">Само едни очи помнам</th><td class="cell-perf">Сашка Петковска</td><td class="cell-comp">Петар Лукиќ</td><td class="dur">3:24</td><td class="sig">З-3677/1</td></tr>
+              <tr><th scope="row" class="cell-title">Сарабанда</th><td class="cell-perf">Томислав Маниќ</td><td class="cell-comp">Томислав Маниќ</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Се руши еден свет</th><td class="cell-perf">Импулси</td><td class="cell-comp">Мандел</td><td class="dur">2:15</td><td class="sig">З-2813/1</td></tr>
+              <tr><th scope="row" class="cell-title">Секогаш задоволна</th><td class="cell-perf">Катица Ѓаконовска</td><td class="cell-comp">Петар Пешев</td><td class="dur">—</td><td class="sig">АЗ-60/14</td></tr>
+              <tr><th scope="row" class="cell-title">Секој од нас</th><td class="cell-perf">Верица Ристевска</td><td class="cell-comp">Тодор Бојаџиев</td><td class="dur">—</td><td class="sig">З-4704/3</td></tr>
+              <tr><th scope="row" class="cell-title">Село мое</th><td class="cell-perf">Блага Видец</td><td class="cell-comp">Слободан Николовски</td><td class="dur">—</td><td class="sig">АЗ-60/12</td></tr>
+              <tr><th scope="row" class="cell-title">Сењорита Калипсо</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Е. Халец</td><td class="dur">—</td><td class="sig">АЗ-49/7</td></tr>
+              <tr><th scope="row" class="cell-title">Сењорита Калипсо</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">Е. Халец</td><td class="dur">—</td><td class="sig">АЗ-55/19</td></tr>
+              <tr><th scope="row" class="cell-title">Септемвриска песна</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">К. Вајл</td><td class="dur">—</td><td class="sig">АЗ-49/4</td></tr>
+              <tr><th scope="row" class="cell-title">Серенада во ноќта</th><td class="cell-perf">Велко Трпчевски</td><td class="cell-comp">М. Мицев</td><td class="dur">—</td><td class="sig">АЗ-54/1</td></tr>
+              <tr><th scope="row" class="cell-title">Сеќавање</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Кирил Милев</td><td class="dur">—</td><td class="sig">ПК-2223/10</td></tr>
+              <tr><th scope="row" class="cell-title">Симона</th><td class="cell-perf">Ванчо Тарабунов</td><td class="cell-comp">П. Галев</td><td class="dur">—</td><td class="sig">З-5625/2</td></tr>
+              <tr><th scope="row" class="cell-title">Сината лагуна</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">Е. Хоуц</td><td class="dur">—</td><td class="sig">АЗ-50/23</td></tr>
+              <tr><th scope="row" class="cell-title">Сини очи во октомври</th><td class="cell-perf">Маја Оџаклиевска</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Сино во сино</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Д. Модуњо</td><td class="dur">—</td><td class="sig">АЗ-51/22</td></tr>
+              <tr><th scope="row" class="cell-title">Синови на партизани</th><td class="cell-perf">Јанко Узунов</td><td class="cell-comp">Јанко Узунов</td><td class="dur">2:54</td><td class="sig">З-5707/1</td></tr>
+              <tr><th scope="row" class="cell-title">Синоличка</th><td class="cell-perf">М. Станојковиќ</td><td class="cell-comp">Круме Јовановски</td><td class="dur">—</td><td class="sig">АЗ-47/14</td></tr>
+              <tr><th scope="row" class="cell-title">Сионото болеро</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Озборн</td><td class="dur">2:53</td><td class="sig">З-477/4</td></tr>
+              <tr><th scope="row" class="cell-title">Скитник</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Христо Крстевски</td><td class="dur">—</td><td class="sig">АЗ-61/27</td></tr>
+              <tr><th scope="row" class="cell-title">Скопје</th><td class="cell-perf">Импулси</td><td class="cell-comp">М. Мицев</td><td class="dur">3:19</td><td class="sig">З-3821/2</td></tr>
+              <tr><th scope="row" class="cell-title">Скопје младост моја</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">3:23</td><td class="sig">З-7747/2</td></tr>
+              <tr><th scope="row" class="cell-title">Со ноќта ме оставаш</th><td class="cell-perf">Зафир Хаџиманов</td><td class="cell-comp">Љубомир Бранѓолица</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Со сонце во око</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">М. Стамач</td><td class="dur">—</td><td class="sig">АЗ-51/7</td></tr>
+              <tr><th scope="row" class="cell-title">Со цвеќе да ме пречекаш</th><td class="cell-perf">Јанко Узунов</td><td class="cell-comp">Јанко Узунов</td><td class="dur">3:42</td><td class="sig">З-5486/1</td></tr>
+              <tr><th scope="row" class="cell-title">Сочувај ги бакнежите за мене</th><td class="cell-perf">група Македонија</td><td class="cell-comp"></td><td class="dur">2:46</td><td class="sig">З-5105/1</td></tr>
+              <tr><th scope="row" class="cell-title">Спиј ми ќерко, спиј</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">М. Стерн</td><td class="dur">—</td><td class="sig">АЗ-46/1</td></tr>
+              <tr><th scope="row" class="cell-title">Спомен</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-49/19</td></tr>
+              <tr><th scope="row" class="cell-title">Спомен</th><td class="cell-perf">Лена Трајковска</td><td class="cell-comp">Живоин Глишиќ</td><td class="dur">2:38</td><td class="sig">З-3866/2</td></tr>
+              <tr><th scope="row" class="cell-title">Спомен</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">В. Стијаски</td><td class="dur">—</td><td class="sig">З-9749/3</td></tr>
+              <tr><th scope="row" class="cell-title">Срамежлива серенада</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Реди</td><td class="dur">—</td><td class="sig">АЗ-49/8</td></tr>
+              <tr><th scope="row" class="cell-title">Срамежливи</th><td class="cell-perf">Виолета Томовска</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">3:25</td><td class="sig">З-1576/3</td></tr>
+              <tr><th scope="row" class="cell-title">Среќен сум што живеам</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Тага за југ</th><td class="cell-perf">Зоран Георгиев</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Тажната кукла</th><td class="cell-perf">Лена Трајковска</td><td class="cell-comp">А. Морозо</td><td class="dur">—</td><td class="sig">З-5891/1</td></tr>
+              <tr><th scope="row" class="cell-title">Тајна љубов</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">С. Фејн</td><td class="dur">3:10</td><td class="sig">АЗ-45/1</td></tr>
+              <tr><th scope="row" class="cell-title">Танц на спомените</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">П. Педшев</td><td class="dur">—</td><td class="sig">АЗ-49/18</td></tr>
+              <tr><th scope="row" class="cell-title">Татковино</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">3:33</td><td class="sig">З-7886/1</td></tr>
+              <tr><th scope="row" class="cell-title">Татковино ќе ти се вратам</th><td class="cell-perf">Веле Матевски</td><td class="cell-comp">Кирил Милев</td><td class="dur">2:55</td><td class="sig">З-5901/2</td></tr>
+              <tr><th scope="row" class="cell-title">Твојата прегратка</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">G. Gershwin</td><td class="dur">—</td><td class="sig">АЗ-50/21</td></tr>
+              <tr><th scope="row" class="cell-title">Твојот прв валс</th><td class="cell-perf">—</td><td class="cell-comp">Григор Копров</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Те изгубив</th><td class="cell-perf">Љупка Димитровска</td><td class="cell-comp">Спрингфилд</td><td class="dur">2:32</td><td class="sig">З-479/2</td></tr>
+              <tr><th scope="row" class="cell-title">Те имам под кожа</th><td class="cell-perf">Танцов оркестар на Радио-телевизија Скопје</td><td class="cell-comp">Кол Портер</td><td class="dur">3:15</td><td class="sig">З-8511-1</td></tr>
+              <tr><th scope="row" class="cell-title">Те сакам драга</th><td class="cell-perf">Импулси</td><td class="cell-comp">Бернс</td><td class="dur">4:10</td><td class="sig">З-2558/4</td></tr>
+              <tr><th scope="row" class="cell-title">Те чекам</th><td class="cell-perf">Љупка Апостолова</td><td class="cell-comp">М. Котлиќ</td><td class="dur">—</td><td class="sig">АЗ-55/16</td></tr>
+              <tr><th scope="row" class="cell-title">Тема бр. 1</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-51/14</td></tr>
+              <tr><th scope="row" class="cell-title">Теми</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Livingston / Evans</td><td class="dur">—</td><td class="sig">АЗ-45/18</td></tr>
+              <tr><th scope="row" class="cell-title">Ти и јас</th><td class="cell-perf">Зафир Хаџиманов</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-60/31</td></tr>
+              <tr><th scope="row" class="cell-title">Ти не си вистинска</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">АЗ-61/26</td></tr>
+              <tr><th scope="row" class="cell-title">Ти пак сакаш некого</th><td class="cell-perf">Григор Копров</td><td class="cell-comp">Григор Копров</td><td class="dur">3:02</td><td class="sig">З-3881/2</td></tr>
+              <tr><th scope="row" class="cell-title">Ти си ми драга</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Димитар Масевски</td><td class="dur">—</td><td class="sig">АЗ-51/21</td></tr>
+              <tr><th scope="row" class="cell-title">Ти си ми сè</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">2:44</td><td class="sig">З-3569/2</td></tr>
+              <tr><th scope="row" class="cell-title">Ти си тој</th><td class="cell-perf">Цветанка Ласкова</td><td class="cell-comp">Ванчо Тарабунов</td><td class="dur">3:05</td><td class="sig">З-6671/1</td></tr>
+              <tr><th scope="row" class="cell-title">Ти, ти, ти</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Тито секогаш во нас</th><td class="cell-perf">П. Христов</td><td class="cell-comp">Ванчо Димитров</td><td class="dur">3:00</td><td class="sig">З-5709/2</td></tr>
+              <tr><th scope="row" class="cell-title">Тој ден ќе дојде</th><td class="cell-perf">С. Варешановиќ</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">2:48</td><td class="sig">З-2471/1</td></tr>
+              <tr><th scope="row" class="cell-title">Три парички во фонтаната</th><td class="cell-perf">Христо Крстевски</td><td class="cell-comp">Г. Стаин</td><td class="dur">—</td><td class="sig">АЗ-49/5</td></tr>
+              <tr><th scope="row" class="cell-title">Туѓо</th><td class="cell-perf">Импулси</td><td class="cell-comp">Џ. Латус</td><td class="dur">2:07</td><td class="sig">З-14421</td></tr>
+              <tr><th scope="row" class="cell-title">Ќе дојде ден</th><td class="cell-perf">Т. Веселинов</td><td class="cell-comp">Ф. Квин</td><td class="dur">—</td><td class="sig">АЗ-62/18</td></tr>
+              <tr><th scope="row" class="cell-title">Ќе наминеш кај мене</th><td class="cell-perf">Даниела Панчетовиќ</td><td class="cell-comp">Димитар Масевски</td><td class="dur">3:10</td><td class="sig">З-2071/3</td></tr>
+              <tr><th scope="row" class="cell-title">Ќе се препознаеш</th><td class="cell-perf">Б. Петреска</td><td class="cell-comp">Морган</td><td class="dur">2:32</td><td class="sig">З-3531/1</td></tr>
+              <tr><th scope="row" class="cell-title">Убавата палавка</th><td class="cell-perf">Андреа Сопронов</td><td class="cell-comp">Јане Коџабашија</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Убавице моја</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Драган Мијалковски</td><td class="dur">4:35</td><td class="sig">З-6822/1</td></tr>
+              <tr><th scope="row" class="cell-title">Фиеста</th><td class="cell-perf">Импулси</td><td class="cell-comp">Жобим</td><td class="dur">3:00</td><td class="sig">З-2558/1</td></tr>
+              <tr><th scope="row" class="cell-title">Фламенко рок</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Малгони</td><td class="dur">—</td><td class="sig">АЗ-61/13</td></tr>
+              <tr><th scope="row" class="cell-title">Фолк соул</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Кочо Петровски</td><td class="dur">3:02</td><td class="sig">З-2059/2</td></tr>
+              <tr><th scope="row" class="cell-title">Честитки</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Мартин</td><td class="dur">2:25</td><td class="sig">З-1005/1</td></tr>
+              <tr><th scope="row" class="cell-title">Чувства</th><td class="cell-perf">Цветанка Ласкова</td><td class="cell-comp">А. Морис</td><td class="dur">4:00</td><td class="sig">З-5627/1</td></tr>
+              <tr><th scope="row" class="cell-title">Џезаел</th><td class="cell-perf">Драган Мијалковски</td><td class="cell-comp">Провенте</td><td class="dur">2:41</td><td class="sig">З-2809/4</td></tr>
+              <tr><th scope="row" class="cell-title">Шармен</th><td class="cell-perf">Забавен оркестар</td><td class="cell-comp">Полак</td><td class="dur">—</td><td class="sig">АЗ-50/22</td></tr>
+              <tr><th scope="row" class="cell-title">Што е љубов</th><td class="cell-perf">Голем забавен оркестар на Радио Скопје</td><td class="cell-comp">Кол Портер</td><td class="dur">—</td><td class="sig">АЗ-50/16</td></tr>
+              <tr><th scope="row" class="cell-title">Штом те видам</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">Александар Џамбазов</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Moon River</th><td class="cell-perf">Д. Поповска</td><td class="cell-comp">H. Mancini</td><td class="dur">2:20</td><td class="sig">З-186/1</td></tr>
+              <tr><th scope="row" class="cell-title">Secret love</th><td class="cell-perf">Диме Поповски</td><td class="cell-comp">F. Webster</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Something stupid</th><td class="cell-perf">—</td><td class="cell-comp">C. Parks</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Strangers in the night</th><td class="cell-perf">Зоран Милосављевиќ</td><td class="cell-comp">B. Kaempfert</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Summer time</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">G. Gershwin</td><td class="dur">—</td><td class="sig">—</td></tr>
+              <tr><th scope="row" class="cell-title">Tammy</th><td class="cell-perf">Нина Спирова</td><td class="cell-comp">Livingston / Evans</td><td class="dur">—</td><td class="sig">—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pan-cue left" aria-hidden="true"></div>
+        <div class="pan-cue right" aria-hidden="true"></div>
       </div>
     </section>
 
@@ -555,8 +593,32 @@
     <p class="footer-credit">
       Изработено од
       <a href="https://www.gocemitevski.com" target="_blank" rel="noopener">Гоце Митевски</a>.
+      <span class="link-btn footer-current" aria-current="page">Целосен список</span>
       <a class="link-btn" href="index.html#tab=privacy">Приватност</a>
     </p>
+    <div class="footer-share" role="group" aria-label="Сподели">
+      <a id="share-x" target="_blank" rel="noopener" aria-label="Сподели на „X“">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/>
+        </svg>
+      </a>
+      <a id="share-facebook" target="_blank" rel="noopener" aria-label="Сподели на „Facebook“">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/>
+        </svg>
+      </a>
+      <a id="share-linkedin" target="_blank" rel="noopener" aria-label="Сподели на „LinkedIn“">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+      <a id="share-bluesky" target="_blank" rel="noopener" aria-label="Сподели на „Bluesky“">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"/>
+        </svg>
+      </a>
+    </div>
   </footer>
+  <script src="assets/doc.min.js"></script>
 </body>
 </html>

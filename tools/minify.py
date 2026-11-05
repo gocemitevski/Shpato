@@ -36,6 +36,7 @@ TARGETS = [
     ("assets/styles.css", "assets/styles.min.css"),
     ("assets/i18n.js", "assets/i18n.min.js"),
     ("assets/app.js", "assets/app.min.js"),
+    ("assets/doc.js", "assets/doc.min.js"),
 ]
 
 
