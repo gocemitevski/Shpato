@@ -317,7 +317,7 @@ a { color: var(--accent-2); }
   box-shadow: inset 0 -1px 0 var(--line);
   overflow-x: auto;
 }
-.tabs .tab {
+.tabs button {
   border: 0;
   background: transparent;
   color: var(--muted);
@@ -329,19 +329,13 @@ a { color: var(--accent-2); }
   cursor: pointer;
   border-bottom: 2px solid transparent;
   white-space: nowrap;
-  text-decoration: none;
   transition: color .15s ease, border-color .15s ease;
 }
-.tabs .tab:hover { color: var(--ink); }
-/* The app's selected tab is a button with aria-selected; catalog.html is a
-   document whose catalogue tab is the page it is on, so that one is a span with
-   aria-current. Both read the same. */
-.tabs .tab[aria-selected="true"],
-.tabs .tab[aria-current="page"] {
+.tabs button:hover { color: var(--ink); }
+.tabs button[aria-selected="true"] {
   color: var(--ink);
   border-bottom-color: var(--accent);
 }
-.tabs .tab[aria-current="page"] { cursor: default; }
 /* The four tabs need 443px and a phone offers 361 of them, so at the full gap
    and size the last one hangs off the edge: swipeable, but with nothing showing
    that it is. Tighter labels, sharing the row between them, keep it whole from
@@ -349,14 +343,14 @@ a { color: var(--accent-2); }
    still lines up with the table. */
 @media (max-width: 620px) {
   .tabs { gap: 1.25rem; }
-  .tabs .tab { font-size: .78rem; padding: .9rem 0; flex-grow: 1; }
+  .tabs button { font-size: .78rem; padding: .9rem 0; flex-grow: 1; }
 }
 /* The 1.25rem gap above needs 386px of strip to sit in — measured, labels and
    gaps together — so the smallest phones (a 320px phone, or a window at 200%
    zoom) get the tight pair back, which needs about 315px and fits. */
 @media (max-width: 385px) {
   .tabs { gap: .4rem; }
-  .tabs .tab { font-size: .7rem; }
+  .tabs button { font-size: .7rem; }
 }
 /* A phone turns the footer's row into two centred ones rather than letting the
    share links drop to the start of a line of their own. The static page has the
@@ -1403,11 +1397,6 @@ body.player-open .view { padding-bottom: 18rem; }
 .doc-count { color: var(--muted); font-weight: 500; font-variant-numeric: tabular-nums; }
 
 .doc-section h2 { margin: 2.5rem 0 .75rem; font-size: 1.15rem; }
-/* The tab strip is sticky, so an in-page link has to stop below it; without
-   this the section it points at lands underneath the strip and its heading is
-   the first thing hidden. 4rem is the strip's height plus a line of air. */
-.doc-section,
-.catalog-doc main { scroll-margin-top: 4rem; }
 /* The table is the app's card, in a .table-frame so the pan cue has its layer
    above it: a phone shows 361px of a 600px table, and the cue is how the app
    says so. The card holds no vertical scroll here, so the frame draws the cue

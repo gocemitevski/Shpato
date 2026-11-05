@@ -870,13 +870,11 @@ PAGE_TEXT = {
     "none": "—",
     "selfAuthor": "Драган Ѓаконовски – Шпато",
     # The shell around the list, so the page reads as the same site as the app.
-    # The tabs are the app's four; the first is this page and the other three
-    # open the app's views. There is no language switch here on purpose: the
-    # page and everything it lists are Macedonian.
+    # It is the header and the footer; the tab strip is not here, because this
+    # is one document rather than four views, and its TOC already lists what is
+    # on it. There is no language switch either: the page and everything it
+    # lists are Macedonian.
     "skip": "Прескокни до содржината",
-    "sections": "Секции",
-    "tabCatalog": "Каталог",
-    "tabs": [("stats", "Статистика"), ("notes", "Забелешки"), ("about", "За Шпато")],
     "theme": "Тема",
     "themeLight": "Светла",
     "themeDark": "Темна",
@@ -1141,20 +1139,6 @@ def write_catalog_page(records, meta):
         "      </div>",
         "    </div>",
         "  </header>",
-        "",
-        '  <nav class="tabs-nav" aria-label="{}">'.format(esc(PAGE_TEXT["sections"])),
-        '    <div class="tabs">',
-        # This page is the catalogue, so its tab is the current one and is not a
-        # link; the other three open the app's views.
-        '      <span class="tab" aria-current="page">{}</span>'.format(
-            esc(PAGE_TEXT["tabCatalog"])),
-    ])
-    for tab, label in PAGE_TEXT["tabs"]:
-        lines.append('      <a class="tab" href="index.html#tab={}">{}</a>'.format(
-            tab, esc(label)))
-    lines.extend([
-        "    </div>",
-        "  </nav>",
         "",
         '  <main id="main" tabindex="-1">',
         "    <h1>{}</h1>".format(esc(PAGE_TEXT["heading"])),

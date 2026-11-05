@@ -499,10 +499,10 @@ Its Macedonian prose is the one place the rule that every string comes from
 `assets/i18n.js` cannot hold — the page must carry text with no script to put it
 there. The labels live in `PAGE_TEXT` at the top of the page generator and mirror
 the mk values of `app.title`, `app.subtitle`, `app.credit`, `footer.fullList`,
-`tab.*`, `theme.*`, `share.*`, `a11y.skip`, `a11y.sections`, `cat.*`, `col.*`,
-`privacy.link` and `common.none`; change both together. Its icons are the same
-rule applied to markup: `PAGE_THEME_ICONS` and `PAGE_SHARE_ICONS` are the paths
-`index.html` carries inline, because the page has no `app.js` to draw them.
+`theme.*`, `share.*`, `a11y.skip`, `cat.*`, `col.*`, `privacy.link` and
+`common.none`; change both together. Its icons are the same rule applied to
+markup: `PAGE_THEME_ICONS` and `PAGE_SHARE_ICONS` are the paths `index.html`
+carries inline, because the page has no `app.js` to draw them.
 
 The page links `assets/styles.min.css` and carries two scripts. The first is the
 theme line from `index.html`, without the boot classes, so a reader who chose the
@@ -521,26 +521,27 @@ the crawl path. Its links back name `index.html` rather than `./`: the page is
 read from disk too, where `./` is a directory listing; on the web the app's
 canonical folds that URL into the root.
 
-The header, the tab strip and the footer are the app's, so a reader who follows a
-link between the two does not arrive somewhere that looks like another site. The
-header has the same brand, the same full subtitle and the app's theme switch. The
-strip has the same four labels, with Каталог current (a `<span>`, since this *is*
-the catalogue) and the other three linking into the app's views. The footer has
+The header and the footer are the app's, so a reader who follows a link between
+the two does not arrive somewhere that looks like another site. The header has
+the same brand, the same full subtitle and the app's theme switch. The footer has
 the app's credit line, the four share intents and the same `space-between` to
 `center` wrap at 620px; `Целосен список` is where the reader already is, so it is
-a span rather than a link to itself. Both pages draw those from the same CSS:
-`.tabs .tab` is what the strip styles, which is why `index.html`'s buttons carry
-the class too.
+a span rather than a link to itself. Both pages draw those from the same CSS.
+
+The tab strip is deliberately absent. It is not navigation on this page: it would
+be a current tab for a view the reader is already in, beside three that leave for
+another document. The page's own `Содржина` list is what moves a reader around
+it, and the brand and the `Отвори го интерактивниот каталог` button are how they
+reach the app and its other views. A strip here would also be sticky over a
+38,000px document, which is a scroll aid the TOC already does better.
 
 There is deliberately no language switch. The page and every work in it are
 Macedonian, and the app's switch changes only its own labels; a switch here would
 have to make the whole document bilingual to be honest about what it did. The
 theme switch is different: it is one stored preference that both pages share.
 
-Two things the app gets for free need a line here. The tab strip is sticky, so
-`.doc-section` carries a `scroll-margin-top` — without it an in-page link lands
-with the section's own `<h2>` underneath the strip. And the table card cannot
-scroll vertically (its box is the whole table), so
+One thing the app gets for free needs a line here: the table card cannot scroll
+vertically (its box is the whole table), so
 `.catalog-doc .table-wrap { overscroll-behavior-y: auto }` keeps a drag over it
 scrolling the page; leaving the base `contain` would swallow the gesture over
 most of a phone screen.
